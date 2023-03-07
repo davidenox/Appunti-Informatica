@@ -11,12 +11,8 @@
             "id": "adf0558731c3af6f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Fondamenti di Informatica 2/Lezioni.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezioni.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,9 +107,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Fondamenti di Informatica 2/Lezioni.md"
-              }
+              "state": {}
             }
           },
           {
@@ -131,7 +124,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezioni.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,53 +146,52 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "adf0558731c3af6f",
+  "active": "22e239e9db73d132",
   "lastOpenFiles": [
+    "Fondamenti di Informatica 2/Lezioni.md",
+    "Fondamenti di Informatica 2/Lezioni",
+    "Ricerca Operativa/Immagini.md",
+    "Logica e reti logiche/Immagini",
+    "Logica e reti logiche/Lezioni",
+    "Ricerca Operativa/Lezioni",
+    "Ricerca Operativa/Immagini",
+    "Ricerca Operativa/Lezioni.md",
+    "Fondamenti di Informatica 2/Immagini/tabellina.png",
+    "Ricerca Operativa",
+    "Appunti Franco",
+    "Fondamenti di Informatica 2/Immagini",
+    "Fondamenti di Informatica 2/Immagini/tabellina 1.png",
     "Logica e reti logiche/Lezioni.md",
-    "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
-    "Appunti CPS/Lezione 3.md",
+    "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
+    "Appunti Franco/Appunti CPS/Lezione 3.md",
     "README.md",
-    "Appunti LRL/Indice delle lezioni.md",
-    "Appunti LRL/Lezione 1.md",
-    "Appunti LRL",
-    "Appunti LMP/MOD I/Immagini/Pasted image 20221221111833.png",
-    "Appunti LMP/MOD I/Immagini/Pasted image 20221216132704.png",
-    "Appunti LMP/MOD I/Immagini/Pasted image 20221016174127.png",
-    "Appunti LMP/MOD I/Immagini/Pasted image 20221011174606.png",
-    "Appunti LMP/MOD I/Immagini/objects-tenElementArray.gif",
-    "Appunti LMP/MOD I/Immagini/objects-oneRef.gif",
-    "Appunti LMP/MOD I/Immagini/objects-null.gif",
-    "Appunti LMP/MOD I/Immagini/objects-multipleRefs.gif",
-    "Appunti LMP/MOD I/Immagini/io-symlink.gif",
-    "Appunti LMP/MOD I/Immagini/io-spec.gif",
-    "Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
-    "Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",
-    "Appunti LMP/MOD I/Esercitazioni/LMP 4.md",
-    "Appunti LMP/MOD I/Esercitazioni/LMP 3.md",
-    "Appunti LMP/MOD I/Esercitazioni/LMP 2.md",
-    "Appunti LMP/MOD I/Esercitazioni/LMP 1.md",
-    "Appunti LMP/MOD I/Esercitazioni/LMP 0.md",
-    "Appunti LMP/MOD I/Esercitazioni/Indice delle esercitazioni.md",
-    "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
-    "Appunti LMP/MOD II/Indice delle lezioni.md",
-    "Appunti LMP/MOD I/Lezione 9 - Metaprogrammazione.md",
-    "Appunti LMP/MOD I/Lezione 8 - Classi Anonime, Enum.md",
-    "Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
-    "Appunti LMP/MOD I/Lezione 6 - Classi.md",
-    "Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md",
-    "Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
-    "Appunti LMP/MOD I/Lezione 4 - Basi del linguaggio.md",
-    "Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
-    "Appunti LMP/MOD I/Lezione 14 - Input-Output.md",
-    "Appunti LMP/MOD I/Lezione 13 - Collections.md",
-    "Appunti LMP/MOD I/Immagini",
-    "Appunti LMP/MOD I/Esercizi",
-    "Appunti LMP/MOD I/Esercitazioni",
-    "Appunti LMP/MOD II",
-    "Appunti LMP/MOD I",
-    "Appunti LMP",
-    "Appunti FI/MOD I/Esercizi/ImgEs",
-    "Appunti FI/MOD I/Esercizi/Esercizi_ASF_2_nov_2022.pdf",
-    "Appunti FI/MOD II/Immagini"
+    "Appunti Franco/Appunti LRL/Indice delle lezioni.md",
+    "Appunti Franco/Appunti LRL/Lezione 1.md",
+    "Appunti Franco/Appunti LRL",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221221111833.png",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221216132704.png",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221016174127.png",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221011174606.png",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-tenElementArray.gif",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-oneRef.gif",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-null.gif",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-multipleRefs.gif",
+    "Appunti Franco/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
+    "Appunti Franco/Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",
+    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 4.md",
+    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 3.md",
+    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 2.md",
+    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 1.md",
+    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 0.md",
+    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/Indice delle esercitazioni.md",
+    "Appunti Franco/Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
+    "Appunti Franco/Appunti LMP/MOD II/Indice delle lezioni.md",
+    "Appunti Franco/Appunti LMP/MOD I/Lezione 9 - Metaprogrammazione.md",
+    "Appunti Franco/Appunti LMP/MOD I/Lezione 8 - Classi Anonime, Enum.md",
+    "Appunti Franco/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
+    "Appunti Franco/Appunti LMP/MOD I/Lezione 6 - Classi.md",
+    "Appunti Franco/Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md",
+    "Appunti Franco/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
+    "Appunti Franco/Appunti LMP/MOD I/Immagini"
   ]
 }
