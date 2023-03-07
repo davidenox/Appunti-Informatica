@@ -63,8 +63,4 @@ Pensandoci bene, per eseguire questo procedimento non è necessario nemmeno sape
 ## Risolvere automaticamente un problema
 Informalmente, risolvere automaticamente un problema significa progettare un procedimento che risolve tutte le istanze di quel problema e che può essere eseguito da un automa, ossia da un esecutore che può non avere alcuna idea del problema né del significato delle istruzioni contenute nel procedimento.
 #### Un nuovo linguaggio...
-
-
-
-
-
+Cazzo

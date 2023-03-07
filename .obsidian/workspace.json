@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CPS/Lezione 3.md",
+                "file": "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti CPS/Lezione 3.md",
+                "file": "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti CPS/Lezione 3.md"
+                "file": "Fondamenti di Informatica 2/Lezione 1 7_03_23.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti CPS/Lezione 3.md",
+                "file": "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,8 +154,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "22e239e9db73d132",
+  "active": "adf0558731c3af6f",
   "lastOpenFiles": [
+    "Appunti CPS/Lezione 3.md",
     "README.md",
     "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
     "Appunti LRL/Indice delle lezioni.md",
@@ -192,7 +193,6 @@
     "Appunti LMP/MOD I/Lezione 14 - Input-Output.md",
     "Appunti LMP/MOD I/Lezione 13 - Collections.md",
     "Appunti LMP/MOD I/Lezione 12 - Interfacce parte 2, Generics.md",
-    "Appunti LMP/MOD I/Lezione 11 - Eccezioni.md",
     "Appunti LMP/MOD I/Immagini",
     "Appunti LMP/MOD I/Esercizi",
     "Appunti LMP/MOD I/Esercitazioni",
