@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "e4f52ba1b50c637f",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f9ff446ce6b5d32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "adf0558731c3af6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Appunti CPS/Lezione 3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "18dce009d61c0b7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "c957f1d7060f2112",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d1cc2cbf4f940f27",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse"
+              }
+            }
+          },
+          {
+            "id": "0604bcb83a146cc2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "650cdc7bbb8637fe",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3373f41afc1aa408",
+    "type": "split",
+    "children": [
+      {
+        "id": "813deaf30e7b3c8e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1c0c5aa9cfc808eb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Appunti CPS/Lezione 3.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "08be8cc279a49942",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5bd044c3cc02a913",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Appunti CPS/Lezione 3.md"
+              }
+            }
+          },
+          {
+            "id": "22e239e9db73d132",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "7e9abb449e1b42bb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Appunti CPS/Lezione 3.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false
+    }
+  },
+  "active": "22e239e9db73d132",
+  "lastOpenFiles": [
+    "README.md",
+    "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
+    "Appunti LRL/Indice delle lezioni.md",
+    "Appunti LRL/Lezione 1.md",
+    "Appunti LRL",
+    "Appunti LMP/MOD I/Immagini/Pasted image 20221221111833.png",
+    "Appunti LMP/MOD I/Immagini/Pasted image 20221216132704.png",
+    "Appunti LMP/MOD I/Immagini/Pasted image 20221016174127.png",
+    "Appunti LMP/MOD I/Immagini/Pasted image 20221011174606.png",
+    "Appunti LMP/MOD I/Immagini/objects-tenElementArray.gif",
+    "Appunti LMP/MOD I/Immagini/objects-oneRef.gif",
+    "Appunti LMP/MOD I/Immagini/objects-null.gif",
+    "Appunti LMP/MOD I/Immagini/objects-multipleRefs.gif",
+    "Appunti LMP/MOD I/Immagini/io-symlink.gif",
+    "Appunti LMP/MOD I/Immagini/io-spec.gif",
+    "Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
+    "Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",
+    "Appunti LMP/MOD I/Esercitazioni/LMP 4.md",
+    "Appunti LMP/MOD I/Esercitazioni/LMP 3.md",
+    "Appunti LMP/MOD I/Esercitazioni/LMP 2.md",
+    "Appunti LMP/MOD I/Esercitazioni/LMP 1.md",
+    "Appunti LMP/MOD I/Esercitazioni/LMP 0.md",
+    "Appunti LMP/MOD I/Esercitazioni/Indice delle esercitazioni.md",
+    "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
+    "Appunti LMP/MOD II/Indice delle lezioni.md",
+    "Appunti LMP/MOD I/Lezione 9 - Metaprogrammazione.md",
+    "Appunti LMP/MOD I/Lezione 8 - Classi Anonime, Enum.md",
+    "Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
+    "Appunti LMP/MOD I/Lezione 6 - Classi.md",
+    "Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md",
+    "Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
+    "Appunti LMP/MOD I/Lezione 4 - Basi del linguaggio.md",
+    "Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
+    "Appunti LMP/MOD I/Lezione 14 - Input-Output.md",
+    "Appunti LMP/MOD I/Lezione 13 - Collections.md",
+    "Appunti LMP/MOD I/Lezione 12 - Interfacce parte 2, Generics.md",
+    "Appunti LMP/MOD I/Lezione 11 - Eccezioni.md",
+    "Appunti LMP/MOD I/Immagini",
+    "Appunti LMP/MOD I/Esercizi",
+    "Appunti LMP/MOD I/Esercitazioni",
+    "Appunti LMP/MOD II",
+    "Appunti LMP/MOD I",
+    "Appunti LMP",
+    "Appunti FI/MOD I/Esercizi/ImgEs",
+    "Appunti FI/MOD I/Esercizi/Esercizi_ASF_2_nov_2022.pdf",
+    "Appunti FI/MOD II/Immagini"
+  ]
+}
