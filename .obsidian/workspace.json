@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8f9ff446ce6b5d32",
+        "id": "901369f7f419177c",
         "type": "tabs",
         "children": [
           {
-            "id": "adf0558731c3af6f",
+            "id": "191e3c69c5384290",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
+                "file": "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
+                "file": "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ricerca Operativa/Lezioni/Lezione 1.md"
+                "file": "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
+                "file": "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,8 +154,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "adf0558731c3af6f",
+  "active": "191e3c69c5384290",
   "lastOpenFiles": [
+    "touring.png",
+    "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
     "Fondamenti di Informatica 2/Lezioni.md",
     "Fondamenti di Informatica 2/Lezioni",
@@ -171,7 +173,6 @@
     "Fondamenti di Informatica 2/Immagini",
     "Fondamenti di Informatica 2/Immagini/tabellina 1.png",
     "Logica e reti logiche/Lezioni.md",
-    "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
     "Appunti Franco/Appunti CPS/Lezione 3.md",
     "README.md",
     "Appunti Franco/Appunti LRL/Indice delle lezioni.md",
@@ -200,7 +201,6 @@
     "Appunti Franco/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
     "Appunti Franco/Appunti LMP/MOD I/Lezione 6 - Classi.md",
     "Appunti Franco/Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md",
-    "Appunti Franco/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
     "Appunti Franco/Appunti LMP/MOD I/Immagini"
   ]
 }
