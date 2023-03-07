@@ -15,11 +15,11 @@ Un procedimento è la descrizione di un insieme di azioni unita alla specifica d
 #### E che cos’è una azione? 
 Qualcosa che deve esser fatto, ovvio! Tuttavia, anche “data un’istanza del problema, trova la soluzione di quell’istanza” è una azione. Allora, dobbiamo dire che le azioni indicate in un procedimento, devono essere azioni semplici, azioni, cioè, che possono essere eseguite con facilità.
 #### Esempio
--
-
+Data una funzione $f:\mathbb R \to\mathbb R^+$ e dati due numeri reali a e b, calcolare la misura dell'area della regione di piano compresa fra la funzione, l'asse x e le rette y=a e y=b.
+###### Procedimento
+1. Calcola la funzione primitiva F(x) di f(x);
+2. Calcola F(b)-F(a).
 Un **procedimento** è la descrizione di un insieme di azioni unita alla specifica dell’ordine con il quale le azioni devono essere eseguite e, a ciascuna di quelle azioni, viene dato il nome di *istruzione*. Le istruzioni indicate in un procedimento devono essere ***elementari***, devono, cioè, essere azioni che possono essere eseguite con facilità.
-#### Esempio
--
 ## L'istruzione elementare
 Se vogliamo svincolare la definizione di procedimento risolutivo di un problema da quello di esecutore delle azioni in esso indicate, è necessario, prima di tutto, chiarire formalmente cosa si intende con istruzione elementare. Vediamo, a tal proposito, la soluzione individuata da Alan Turing a questa questione:
 Turing, osservò che, indipendentemente dall’esecutore, qualunque istruzione, per potere essere definita elementare, deve avere le seguenti caratteristiche: 
@@ -71,19 +71,19 @@ Ripensiamo alla somma di due numeri naturali:
 2. Le due cifre da sommare.
 In virtù delle osservazioni 1), 2) e 3), possiamo scrivere il nostro procedimento in forma più compatta, come ad esempio l'istruzione:
 "se r = 0 e le due cifre sono 4 e 6, allora scrivi 0, poni r = 1, e spostati di una posizione a sinistra"
-diventa: $$〈 , (4, 6), 0, , sinistra 〉$$
+diventa: $$〈q_0 , (4, 6), 0,q_1 , sinistra 〉$$
 e l’istruzione:
 "se r = 1 e l’unica cifra è 5, allora scrivi 6, poni r = 0, e spostati di una posizione a sinistra"
 nella quale le cifre di uno degli operandi sono terminate, diventa la coppia di istruzioni
-$$〈 , (5, ◻), 6, , sinistra 〉$$
+$$〈q_1 , (5, ◻), 6,q_0 , sinistra 〉$$
 
-$$〈 , (◻, 5), 6, , sinistra 〉$$
+$$〈 q_1, (◻, 5), 6,q_0 , sinistra 〉$$
 
 dove il simbolo ◻ indica che non viene letto alcunché o che non deve essere scritto alcunché, e abbiamo due diverse istruzioni perché l’operando le cui cifre sono terminate può essere il primo o il secondo.
 Infine, le istruzioni "se r = 1 e le cifre di entrambi i numeri sono terminate, allora scrivi 1 e termina" e "se r = 0 e le cifre di entrambi i numeri sono terminate, allora termina" diventano, rispettivamente
-$$〈 , (◻, ◻), 1, , fermo 〉$$
+$$〈 q_1, (◻, ◻), 1,q_F , fermo 〉$$
 
-$$〈 , (◻, ◻), ◻, , fermo 〉$$
+$$〈q_0 , (◻, ◻), ◻,q_F , fermo 〉$$
 
 dove è lo “stato interiore” che permette all’esecutore di comprendere che non deve più eseguire alcuna azione (ossia, non si deve “tornare al punto 2)”), e qui l’utilizzo di “fermo” mostra anche perché è necessario specificare come ci si deve muovere.
 #### ... e una macchina che lo comprende
@@ -93,7 +93,7 @@ Non appena viene scritto qualcosa sui nastri, dipendentemente dallo “stato int
 #### Quasi una macchina di Turing
 Quella che abbiamo visto è quasi una descrizione informale di una macchina di Turing; *quasi*, perché abbiamo utilizzato tre nastri e in una macchina di Turing occorre descrivere cosa viene letto (nelle condizioni) e cosa viene scritto (nelle azioni) su ogni nastro, così che l’istruzione 
 **se r = 0 e le due cifre sono 4 e 6, allora scrivi 0, poni r = 1, spostati di una posizione a sinistra e torna al punto 2)**
-diventa $$〈 , (4, 6, ◻), (4, 6, 0), , sinistra 〉$$
+diventa $$〈 q_0, (4, 6, ◻), (4, 6, 0),q_1 , sinistra 〉$$
 
 che specifica cosa deve essere scritto sui 3 nastri (4, 6, ◻) e con cosa questi tre elementi devono essere sovrascritti (4, 6, 0). Poiché specifica 2 condizioni e 3 azioni, essa prende il nome di **quintupla** e, quelli che abbiamo chiamato sino ad ora *“stati interiori”*, si chiamano propriamente **stati interni**, e l’esecuzione delle quintuple su un insieme fissato di dati (come nella figura) si chiama **computazione**.
 #### Calcolabilità
