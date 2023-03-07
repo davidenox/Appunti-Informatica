@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md"
+                "file": "README.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,8 +156,8 @@
   },
   "active": "191e3c69c5384290",
   "lastOpenFiles": [
-    "touring.png",
     "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
+    "Fondamenti di Informatica 2/Immagini/touring.png",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
     "Fondamenti di Informatica 2/Lezioni.md",
     "Fondamenti di Informatica 2/Lezioni",
@@ -185,7 +185,6 @@
     "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-tenElementArray.gif",
     "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-oneRef.gif",
     "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-null.gif",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-multipleRefs.gif",
     "Appunti Franco/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
     "Appunti Franco/Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",
     "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 4.md",
