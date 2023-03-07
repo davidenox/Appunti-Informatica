@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
+                "file": "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni CPS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
+                "file": "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni CPS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md"
+                "file": "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni CPS.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
+                "file": "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni CPS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,6 +156,18 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Calcolo delle Probabilità e Statistica/Lezioni",
+    "Calcolo delle Probabilità e Statistica",
+    "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 4.md",
+    "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5.md",
+    "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 3.md",
+    "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 2.md",
+    "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 1.md",
+    "Logica e Reti Logiche/Lezione 1.md",
+    "Logica e Reti Logiche/Indice delle lezioni.md",
+    "Logica e reti logiche/Lezioni/Lezione 1 6_03_23.md",
+    "Logica e Reti Logiche",
+    "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
     "Fondamenti di Informatica/Modulo 2",
@@ -172,14 +184,8 @@
     "Ricerca Operativa/Lezioni.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/tabellina.png",
     "Ricerca Operativa",
-    "Appunti Franco",
-    "Fondamenti di Informatica/Modulo 2/Immagini",
     "Fondamenti di Informatica/Modulo 2/Immagini/tabellina 1.png",
     "Logica e reti logiche/Lezioni.md",
-    "Appunti Franco/Appunti CPS/Lezione 3.md",
-    "Appunti Franco/Appunti LRL/Indice delle lezioni.md",
-    "Appunti Franco/Appunti LRL/Lezione 1.md",
-    "Appunti Franco/Appunti LRL",
     "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221221111833.png",
     "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221216132704.png",
     "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221016174127.png",
@@ -195,12 +201,6 @@
     "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 1.md",
     "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 0.md",
     "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/Indice delle esercitazioni.md",
-    "Appunti Franco/Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
-    "Appunti Franco/Appunti LMP/MOD II/Indice delle lezioni.md",
-    "Appunti Franco/Appunti LMP/MOD I/Lezione 9 - Metaprogrammazione.md",
-    "Appunti Franco/Appunti LMP/MOD I/Lezione 8 - Classi Anonime, Enum.md",
-    "Appunti Franco/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
-    "Appunti Franco/Appunti LMP/MOD I/Lezione 6 - Classi.md",
-    "Appunti Franco/Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md"
+    "Appunti Franco/Appunti LMP/MOD II/Lezione 1 - Introduzione.md"
   ]
 }

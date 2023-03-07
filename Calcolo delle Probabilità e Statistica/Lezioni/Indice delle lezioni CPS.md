@@ -1,7 +1,7 @@
 # Indice delle lezioni
 
-- [[Appunti Franco/Appunti CPS/Lezione 1|Introduzione]]
-- [[Appunti Franco/Appunti CPS/Lezione 2|Lezione 2]]
+- [[Calcolo delle Probabilità e Statistica/Lezioni/Lezione 1|Introduzione]]
+- [[Calcolo delle Probabilità e Statistica/Lezioni/Lezione 2|Lezione 2]]
 - [[Lezione 3|Lezione 3]]
 - [[Lezione 4|Lezione 4]]
 - [[Lezione 5|Lezione 5]]
