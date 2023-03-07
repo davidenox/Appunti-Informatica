@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 327.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,27 +154,29 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "191e3c69c5384290",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Fondamenti di Informatica 2/Lezioni/Lezione 1 7_03_23.md",
-    "Fondamenti di Informatica 2/Immagini/touring.png",
+    "Fondamenti di Informatica/Modulo 1/Lezioni",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
+    "Fondamenti di Informatica/Modulo 2",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
+    "README.md",
+    "Fondamenti di Informatica/Modulo 2/Immagini/touring.png",
     "Fondamenti di Informatica 2/Lezioni.md",
-    "Fondamenti di Informatica 2/Lezioni",
+    "Fondamenti di Informatica/Modulo 2/Lezioni",
     "Ricerca Operativa/Immagini.md",
     "Logica e reti logiche/Immagini",
     "Logica e reti logiche/Lezioni",
     "Ricerca Operativa/Lezioni",
     "Ricerca Operativa/Immagini",
     "Ricerca Operativa/Lezioni.md",
-    "Fondamenti di Informatica 2/Immagini/tabellina.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/tabellina.png",
     "Ricerca Operativa",
     "Appunti Franco",
-    "Fondamenti di Informatica 2/Immagini",
-    "Fondamenti di Informatica 2/Immagini/tabellina 1.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini",
+    "Fondamenti di Informatica/Modulo 2/Immagini/tabellina 1.png",
     "Logica e reti logiche/Lezioni.md",
     "Appunti Franco/Appunti CPS/Lezione 3.md",
-    "README.md",
     "Appunti Franco/Appunti LRL/Indice delle lezioni.md",
     "Appunti Franco/Appunti LRL/Lezione 1.md",
     "Appunti Franco/Appunti LRL",
@@ -199,7 +201,6 @@
     "Appunti Franco/Appunti LMP/MOD I/Lezione 8 - Classi Anonime, Enum.md",
     "Appunti Franco/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
     "Appunti Franco/Appunti LMP/MOD I/Lezione 6 - Classi.md",
-    "Appunti Franco/Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini"
+    "Appunti Franco/Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md"
   ]
 }
