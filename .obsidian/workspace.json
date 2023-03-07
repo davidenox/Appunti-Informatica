@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
+                "file": "Fondamenti di Informatica 2/Lezioni.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
+                "file": "Fondamenti di Informatica 2/Lezioni.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezione 1 7_03_23.md"
+                "file": "Fondamenti di Informatica 2/Lezioni.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
+                "file": "Fondamenti di Informatica 2/Lezioni.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,9 +156,10 @@
   },
   "active": "adf0558731c3af6f",
   "lastOpenFiles": [
+    "Logica e reti logiche/Lezioni.md",
+    "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
     "Appunti CPS/Lezione 3.md",
     "README.md",
-    "Fondamenti di Informatica 2/Lezione 1 7_03_23.md",
     "Appunti LRL/Indice delle lezioni.md",
     "Appunti LRL/Lezione 1.md",
     "Appunti LRL",
@@ -192,7 +193,6 @@
     "Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
     "Appunti LMP/MOD I/Lezione 14 - Input-Output.md",
     "Appunti LMP/MOD I/Lezione 13 - Collections.md",
-    "Appunti LMP/MOD I/Lezione 12 - Interfacce parte 2, Generics.md",
     "Appunti LMP/MOD I/Immagini",
     "Appunti LMP/MOD I/Esercizi",
     "Appunti LMP/MOD I/Esercitazioni",
