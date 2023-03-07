@@ -11,8 +11,12 @@
             "id": "adf0558731c3af6f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +112,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Ricerca Operativa/Lezioni/Lezione 1.md"
+              }
             }
           },
           {
@@ -124,6 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,8 +154,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "22e239e9db73d132",
+  "active": "adf0558731c3af6f",
   "lastOpenFiles": [
+    "Ricerca Operativa/Lezioni/Lezione 1.md",
     "Fondamenti di Informatica 2/Lezioni.md",
     "Fondamenti di Informatica 2/Lezioni",
     "Ricerca Operativa/Immagini.md",
