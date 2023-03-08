@@ -12,3 +12,36 @@ $Q = \{q_0 , q_p , q_d , q_{(F )}\}$ con stato iniziale $q_0$ e stato finale $q_
 $$\begin{align}&P  =  \{  〈 q_0 , 0, ◻, q_p , destra〉, 〈 q_0 , 1, ◻, q_d , destra〉, \\&  〈 q_p , 0, ◻, q_p , destra〉, 〈 q_d , 0, ◻, q_d , destra〉, \\&  〈 q_p , 1, ◻, q_d , destra〉, 〈 q_d , 1, ◻, q_p , destra〉, \\&  〈 q_p , ◻, p, q_F , fermo〉, 〈 q_d , ◻, d, q_F , fermo〉\}\end{align}
 $$
 La macchina $T_{parità}$ scandisce la sequenza di caratteri scritta sul suo nastro, cancellandoli via via che vengono scanditi, e verificando se tale sequenza contiene un numero pari o un numero dispari di ‘1’: al termine della scansione, nel primo caso scrive ‘p’ e termina, nel secondo caso scrive ‘d’ e termina.
+Vediamo ora la macchina  $T_{parità}$  in azione:
+1. Poniamo la macchina nello stato $q_0$;
+2. Scriviamo una sequenza di caratteri sul nastro – che era precedentemente vuoto;
+3. Posizioniamo la testina sul carattere più a sinistra fra quelli scritti sul nastro:
+![[turing.png|center]]
+Osserviamo che P contiene la quintupla $〈 q_0 , 1, ◻, q_d , destra〉$ e che essa può essere eseguita. 
+Eseguiamo, dunque, la quintupla $〈 q_0 , 1, ◻, q_d , destra〉$:
+![[turing_2.png|center]]
+Ora possiamo eseguire la quintupla $〈 q_d , 0, ◻, q_d , destra〉∈ P$:![[turing_3.png|center]]
+Ora possiamo eseguire la quintupla $〈 q_d , 1, ◻, q_p , destra〉∈ P$:
+![[turing_4.png|center]]
+Ora possiamo eseguire la quintupla $〈 q_p , ◻, p, q_F , ferma〉∈ P$:
+![[turing_5.png|center]]
+Computazione terminata!
+Naturalmente, sul nastro di  $T_{parità}$  possiamo scrivere ciò che vogliamo: ad esempio, possiamo scrivere la sequenza di caratteri p010, e vedere cosa succede facendo partire questa nuova computazione:
+![[turing_6.png|center]]P non contiene alcuna quintupla che inizia con la coppia $(q_0,p)$, quindi, nessuna quintupla può essere eseguita.
+*Riassumiamo*: una macchina di Turing ad un nastro è completamente caratterizzata dai cinque elementi:
+1. Σ, ossia, un insieme *finito* di caratteri che prende il nome di **alfabeto**;
+2. Q, ossia, un insieme *finito* di **stati interni**;
+3. Uno stato interno particolare (generalmente indicato come $q_0$) chiamato **stato iniziale**;
+4. Un sottoinsieme $Q_F$ di Q di **stati finali**;
+5. Un insieme $$P ⊆ Q × Σ × Σ × Q × \{sinistra, fermo, destra\}$$ di **quintuple** (che, sappiamo, deve essere non ambiguo, ossia,  non contiene coppie di quintuple che hanno uguali i primi due elementi, ossia, in effetti, **P è una funzione:   
+P: Q × Σ → Σ × Q × {sinistra, fermo, destra}**
+Ossia, possiamo dire che:   
+>[!important]
+>Una macchina di Turing (ad un nastro) è una quintupla $〈 Σ, Q. q_0, Q_F, P〉$
+
+e dare per assodata l’esistenza di unità di controllo e nastro.
+
+
+
+
+
