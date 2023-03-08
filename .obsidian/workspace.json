@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -168,7 +167,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "cc9e2bec70f1c121",
+  "active": "22e239e9db73d132",
   "lastOpenFiles": [
     "Logica e Reti Logiche/Lezione 1.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
