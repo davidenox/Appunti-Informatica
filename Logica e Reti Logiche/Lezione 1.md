@@ -33,7 +33,7 @@ Tutte le mosche volano $\to$ Io sono una mosca $\to$ Io volo
 
 Questi due sillogismi sono entrambi validi, perchè se sono vere le premesse, allora è vera anche la risposta
 
-Per la struttura del ragionamento in se, i due sillogismi sono entrambi **_validi_**
+Per la struttura del ragionamento in sè, i due sillogismi sono entrambi **_validi_**
 
 **Esempio**
 

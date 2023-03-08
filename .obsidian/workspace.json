@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni CPS.md",
+                "file": "Logica e Reti Logiche/Lezione 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cc9e2bec70f1c121",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.50152587890625
+    "width": 277.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni CPS.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni CPS.md"
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md"
               }
             }
           },
@@ -131,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni CPS.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +156,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,8 +169,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "cc9e2bec70f1c121",
   "lastOpenFiles": [
+    "Logica e Reti Logiche/Lezione 1.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
+    "Calcolo delle Probabilità e Statistica/Lezioni/Indice delle lezioni.md",
+    "README.md",
     "Calcolo delle Probabilità e Statistica/Lezioni",
     "Calcolo delle Probabilità e Statistica",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 4.md",
@@ -163,7 +182,6 @@
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 3.md",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 2.md",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 1.md",
-    "Logica e Reti Logiche/Lezione 1.md",
     "Logica e Reti Logiche/Indice delle lezioni.md",
     "Logica e reti logiche/Lezioni/Lezione 1 6_03_23.md",
     "Logica e Reti Logiche",
@@ -172,7 +190,6 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
     "Fondamenti di Informatica/Modulo 2",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
-    "README.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/touring.png",
     "Fondamenti di Informatica 2/Lezioni.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni",
@@ -183,24 +200,22 @@
     "Ricerca Operativa/Immagini",
     "Ricerca Operativa/Lezioni.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/tabellina.png",
-    "Ricerca Operativa",
     "Fondamenti di Informatica/Modulo 2/Immagini/tabellina 1.png",
     "Logica e reti logiche/Lezioni.md",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221221111833.png",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221216132704.png",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221016174127.png",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini/Pasted image 20221011174606.png",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-tenElementArray.gif",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-oneRef.gif",
-    "Appunti Franco/Appunti LMP/MOD I/Immagini/objects-null.gif",
-    "Appunti Franco/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
-    "Appunti Franco/Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",
-    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 4.md",
-    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 3.md",
-    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 2.md",
-    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 1.md",
-    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/LMP 0.md",
-    "Appunti Franco/Appunti LMP/MOD I/Esercitazioni/Indice delle esercitazioni.md",
-    "Appunti Franco/Appunti LMP/MOD II/Lezione 1 - Introduzione.md"
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Immagini/Pasted image 20221221111833.png",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Immagini/Pasted image 20221216132704.png",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Immagini/Pasted image 20221016174127.png",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Immagini/Pasted image 20221011174606.png",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Immagini/objects-tenElementArray.gif",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Immagini/objects-oneRef.gif",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Immagini/objects-null.gif",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 4.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 3.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 2.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 1.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 0.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/Indice delle esercitazioni.md"
   ]
 }
