@@ -65,6 +65,29 @@ Per capire quale sia il numero di nastri di una macchina di Turing $〈 Σ, Q, q
 Ad esempio, se le quintuple di una macchina di Turing hanno la forma $〈 q_1 , a_1, ... 〉$ allora si tratta di una macchina *ad un nastro*;
 Se le quintuple di una macchina di Turing hanno la forma $〈 q_1 , (a_1, a_2), ... 〉$ allora si tratta di una macchina *a due nastri*, e così via.
 ## Definizione di **M**acchina di Turing
+Dunque, possiamo dire che, in generale:
+**una macchina di Turing è una quintupla $〈 Σ, Q, q_0, Q_F, P〉$**
+e, come dovremmo aver compreso, una macchina di Turing è la descrizione di un procedimento di calcolo. Ossia, è un *algoritmo descritto utilizzando le regole introdotte da Alan Turing*. In qualche modo, dunque, un programma scritto nel linguaggio progettato da Turing.
+Le regole introdotte da Turing per descrivere procedimenti di calcolo costituiscono un modello di calcolo ( tanto quanto ciascun linguaggio di programmazione, ad esempio, è un modello di calcolo), un modello di calcolo che prende il nome di **Macchina di Turing**.
+## Esercizi: progetto di macchine di Turing
+**Esercizio**: 
+Progettare una macchina di Turing a due nastri che, avendo sul primo nastro due numeri interi della stessa lunghezza, calcola il valore della loro somma scrivendo il risultato sul secondo nastro – ossia, si richiede di progettare una macchina di Turing che esegua la somma “in riga” di due numeri.
+>[!important]- Osservazione 1 $\downarrow$
+
+Poiché i due numeri devono essere scritti entrambi sul primo nastro e ciascuno di essi è una sequenza di cifre ‘0’,‘1’, ... , ‘9’, è necessario utilizzare un ulteriore carattere (un carattere separatore) che permetta di separare i due numeri. Scegliamo, quindi, il ‘+’ come carattere separatore e, di conseguenza, assumiamo che sul primo nastro siano scritte due sequenze di cifre ‘0’,‘1’, ... , ‘9’ separate da un ‘+’.
+>[!important]- Osservazione 2 $\downarrow$
+´nella macchina che stiamo per progettare, i due nastri hanno funzioni (e, dunque, significati) differenti
+
+Il secondo nastro serve soltanto a contenere il risultato – è il **nastro di output**. Il primo nastro serve a contenere i dati del problema e a svolgere le azioni richieste per ottenere il risultato – è il **nastro di input e di lavoro**.
+**Esercizio**:
+Progettare una macchina di Turing a due nastri che, avendo sul primo nastro due sequenze di cifre ‘0’,‘1’, ... , ‘9’ $\underline{della\space stessa\space lunghezza}$ separate da un ‘+’, calcola il valore della loro somma scrivendo il risultato sul secondo nastro.
+*Idea della soluzione*:
+1. A partire dallo stato iniziale e con la testina posizionata sul carattere più a sinistra sul primo nastro, ci posizioniamo sul carattere più a destra del primo numero ossia, sul carattere che si trova immediatamente a sinistra di ‘+’, senza mai muovere la testina sul secondo nastro;
+2. (°) poi, ricordando la cifra letta e il valore del riporto, cancelliamo quella cifra sostituendola con un ‘+’ e ci posizioniamo sul carattere più a destra del secondo numero (che si trova a sinistra del ◻);
+3. Poi, eseguiamo la somma fra la cifra del primo numero che ci stiamo ricordando e quello che stiamo leggendo: cancelliamo la cifra che stiamo leggendo sul primo nastro sostituendola con un ◻ e scriviamo sul secondo nastro la cifra appena calcolata muovendo, in seguito, la sua testina a sinistra e ricordando il nuovo riporto;
+4. Poi, ricordando il valore del riporto della somma delle due cifre appena calcolata, spostiamo la testina sul primo nastro a sinistra dell’ultimo ‘+’;
+5. E ripetiamo da (°).
+(slide 17)
 
 
 
