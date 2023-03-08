@@ -40,6 +40,31 @@ Ossia, possiamo dire che:  
 >Una macchina di Turing (ad un nastro) è una quintupla $〈 Σ, Q. q_0, Q_F, P〉$
 
 e dare per assodata l’esistenza di unità di controllo e nastro.
+## Definizione di **m**acchina di Turing
+E che dire di una macchina di Turing a più nastri? È (quasi) la stessa cosa:
+-Una macchina di Turing a k nastri è completamente caratterizzata da:
+1. Un **alfabeto** $Σ$, ossia, un insieme *finito* di caratteri;
+2. Un insieme *finito* Q di **stati interni**;
+3. Uno stato interno **iniziale**;
+4. Un sottoinsieme $Q_F$ di Q di **stati finali**;
+5. Un insieme P di **quintuple**, ove in questo caso una quintupla ha la forma: $$ ´〈 q_1 , (a_1, a_2, ... , a_k), (b_1, b_2, ... , b_k),  q_2 , (m_1, m_2, ... , m_k) 〉 $$
+	1. $(a_1, a_2, ... , a_k)$ sono i caratteri che devono essere letti sui k nastri:
+			$a_1$ è il carattere che deve essere letto sul nastro 1, $a_2$ è il carattere che deve essere letto sul nastro 2, ...
+	2.  $(b_1, b_2, ... , b_k)$ sono i caratteri che devono essere scritti sui k nastri (sovrascrivendo $(a_1, a_2, ... , a_k)$ ):
+			$b_1$ è il carattere che deve essere scritto sul nastro 1, ...
+	3.  $(m_1, m_2, ... , m_k)$, sono i movimenti che devono essere eseguiti dalle k testine:
+			$m_1$ è il movimento che deve essere compiuto dalla testina sul nastro 1, ...
+Dunque, possiamo dire che, in generale:
+>[!important]
+>Una macchina di Turing è una **quintupla** $〈 Σ, Q, q_0, Q_F, P〉$
+
+>[!important]- Osservazione
+
+Per capire quale sia il numero di nastri di una macchina di Turing $〈 Σ, Q, q_0, Q_F, P〉$ è sufficiente osservare le quintuple contenute in P:
+1. Il numero di componenti del secondo elemento di una quintupla in P (che specifica ciò che deve essere letto sul/sui nastro/nastri per poter eseguire una quintupla) corrisponde al numero di nastri!
+Ad esempio, se le quintuple di una macchina di Turing hanno la forma $〈 q_1 , a_1, ... 〉$ allora si tratta di una macchina *ad un nastro*;
+Se le quintuple di una macchina di Turing hanno la forma $〈 q_1 , (a_1, a_2), ... 〉$ allora si tratta di una macchina *a due nastri*, e così via.
+## Definizione di **M**acchina di Turing
 
 
 
