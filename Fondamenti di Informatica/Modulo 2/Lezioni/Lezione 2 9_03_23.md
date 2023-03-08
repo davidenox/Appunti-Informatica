@@ -55,10 +55,10 @@ E che dire di una macchina di Turing a più nastri? È (quasi) la stessa cosa:
 	3.  $(m_1, m_2, ... , m_k)$, sono i movimenti che devono essere eseguiti dalle k testine:
 			$m_1$ è il movimento che deve essere compiuto dalla testina sul nastro 1, ...
 Dunque, possiamo dire che, in generale:
->[!important]
+>[!important] 
 >Una macchina di Turing è una **quintupla** $〈 Σ, Q, q_0, Q_F, P〉$
 
->[!important]- Osservazione
+>[!important]- Osservazione $\downarrow$
 
 Per capire quale sia il numero di nastri di una macchina di Turing $〈 Σ, Q, q_0, Q_F, P〉$ è sufficiente osservare le quintuple contenute in P:
 1. Il numero di componenti del secondo elemento di una quintupla in P (che specifica ciò che deve essere letto sul/sui nastro/nastri per poter eseguire una quintupla) corrisponde al numero di nastri!
