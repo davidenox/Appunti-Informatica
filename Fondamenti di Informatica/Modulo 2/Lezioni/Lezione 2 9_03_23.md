@@ -87,9 +87,31 @@ Progettare una macchina di Turing a due nastri che, avendo sul primo nastro due 
 3. Poi, eseguiamo la somma fra la cifra del primo numero che ci stiamo ricordando e quello che stiamo leggendo: cancelliamo la cifra che stiamo leggendo sul primo nastro sostituendola con un ◻ e scriviamo sul secondo nastro la cifra appena calcolata muovendo, in seguito, la sua testina a sinistra e ricordando il nuovo riporto;
 4. Poi, ricordando il valore del riporto della somma delle due cifre appena calcolata, spostiamo la testina sul primo nastro a sinistra dell’ultimo ‘+’;
 5. E ripetiamo da (°).
-(slide 17)
+A partire dallo stato iniziale e con la testina posizionata sul carattere più a sinistra sul primo nastro, ci posizioniamo sul carattere più a destra del primo numero ossia, sul carattere che si trova immediatamente a sinistra di ‘+’, senza mai muovere la testina sul secondo nastro:
+1. Chiamiamo $q_i$ lo stato iniziale;
+2. Indichiamo (in breve) con con s sinistra, con f fermo e con d destra;
+3. Utilizziamo le quintuple $〈 q_i , (0,◻), (0,◻), q_i , (d,f)〉, ... , 〈 q_i , (9,◻), (9,◻), q_i , (d,f)〉$,
+che abbreviamo con: per ogni $x ∈ \{0, ... , 9\} 〈 q_i , (x,◻), (x,◻), q_i , (d,f)〉$
+e la quintupla $〈 q_i , (+,◻), (+,◻), q_{is} , (s,f)〉$
+4. Osserviamo che lo stato q_i corrisponde all’azione “vai a destra finché incontri ‘+’ “;
+5. Quando incontriamo ‘+’ dobbiamo smettere di muoverci a destra sul primo nastro e tornare indietro di una posizione: dobbiamo, cioè, eseguire un’azione diversa da quella regolata da $q_i$;
+6. Per questo, quando sul primo nastro leggiamo ‘+’, entriamo nello stato $q_{is}$ al quale corrisponde l’azione “muoviti a sinistra sul primo nastro”.
+(°) Poi, ricordando la cifra letta e il valore del riporto, cancelliamo quella cifra sostituendola con un ‘+’ e ci posizioniamo sul carattere più a destra del secondo numero (che si trova a sinistra del $◻$).
+1. Memorizziamo la cifra letta e il valore del riporto nello stato: per ogni x ∈ {0, ... , 9} , entriamo nello stato $q_x^0$ se leggiamo x e il riporto è 0, entriamo nello stato $q_x^1$ se leggiamo x e il riporto è 1.
+2. Utilizziamo le quintuple: per ogni x ∈ {0, ... , 9} $〈 q_{is} , (x,◻), (+,◻),q_x^0, (d,f)〉$
+(in questo modo, si crea una sequenza di ‘+’ via via che le cifre del primo numero vengono cancellate)
+3. Poi, per posizionarci sul carattere più a destra del secondo numero (che si trova a sinistra del $◻$) utilizziamo le quintuple:   per ogni x ∈ {0, ... , 9} $〈q_x^0, (x,◻), (x,◻),q_x^0, (d,f)〉$ e$〈q_x^1, (x,◻), (x,◻),q_x^1, (d,f)〉$.
+4. Poi le quintuple $〈q_x^0, (◻,◻), (◻,◻),q_xs^0, (s,f)〉$  e $〈q_x^1, (◻,◻), (◻,◻),q_xs^1, (s,f)〉$
+5. Di nuovo: l’azione corrispondente a $q_x^0$ e a $q_x^1$ è **““vai a destra finché incontri $◻$”**
+6. Quando incontriamo $◻$ dobbiamo smettere di muoverci a destra sul primo nastro e tornare indietro di una posizione: dobbiamo, cioè, eseguire un’azione diversa da quella regolata da $q_x^0$ e a $q_x^1$ e per questo, quando sul primo nastro leggiamo $◻$, entriamo in uno degli stati $q_{xs}^0$ o $q_{xs}^1$ ai quale corrisponde l’azione __“muoviti a sinistra sul primo nastro”__.
+Poi, ricordando il valore del riporto della somma delle due cifre appena calcolata, spostiamo la testina sul primo nastro a sinistra dell’ultimo ‘+’:
+1. Utilizziamo le quintuple:   per ogni x ∈ {0, ... , 9} $〈q^0, (x,◻), (x,◻),q^0, (s,f)$ e $〈q^1, (x,◻), (x,◻),q^1, (s,f)〉$;
+2. Non appena viene letto un ‘+’ sul primo nastro, è necessario cambiare stato e continuare a muoversi a sinistra: $〈 q^0, (+,◻), (+,◻), q_s^0, (s,f)〉$ e $〈q^1, (+,◻), (+,◻),q_s^1, (s,f)〉$;
 
-
+3. Per fare in modo che la prima cifra incontrata al termine della sequenza di ‘1’ venga riconosciuta;
+4. Quando, poi, viene letta una cifra sul primo nastro, si ricomincia dal passo (°):   per ogni x ∈ {0, ... , 9} $〈q_s^0, (x,◻), (+,◻),q_x^0, (d,f)〉$ e $〈q_s^1, (x,◻), (+,◻),q_x^1, (d,f)〉$  $(⊙)$
+5. Se, invece, sul primo nastro viene letto un $◻$ allora la somma è terminata (perché i due numeri hanno lo stesso numero di cifre) e, dunque, viene scritto ’1’ sul nastro di output se il riporto è 1 e poi la macchina termina la computazione:   $〈q_s^0, (◻,◻), (◻,◻),q_F , (d,f)〉$ e $〈q_s^1, (◻,◻), (◻,1),q_F , (d,f)〉$.
+Osserviamo che il punto  “e ripetiamo da (°)” si realizza tornando in uno degli stati $q_x^0$ o $q_x^1$ al passo $(⊙)$.
 
 
 
