@@ -160,3 +160,11 @@ Naturalmente, possiamo definire anche lo stato globale di una macchina a k nastr
 ## Transizioni
 Una transizione dallo stato globale $SG_1$ allo stato globale $SG_2$ avviene quando viene eseguita una quintupla che trasforma $SG_1$ in $SG_2$. 
 Formalmente, se $T =〈 Σ, Q, q_0, Q_F, P〉$ è una macchina di Turing ad un nastro, esiste una transizione da $SG_1$ a $SG_2$ se esiste una quintupla $〈q, x, x’, q’, m〉∈ P$ tale che:
+1. In $SG_1$ T si trova nello stato interno q ∈ Q;
+2. In $SG_1$ la testina di T sta scandendo una cella che contiene il carattere x ∈ $\Sigma$;
+3. In $SG_2$ la cella che in $SG_1$conteneva il carattere x contiene il carattere x’ ∈ $\Sigma$;
+4. In $SG_2$ T si trova nello stato interno q’ ∈ Q;
+5. In $SG_2$ la testina di T sta scandendo la cella che si trova in posizione m rispetto a quella che stava scandendo in $SG_1$.
+Il concetto può essere facilmente esteso a macchine a più nastri, con qualche tecnicismo in più, che non affrontiamo.
+### Esempi: transizioni
+
