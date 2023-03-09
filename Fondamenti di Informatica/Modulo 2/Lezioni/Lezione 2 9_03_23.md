@@ -140,6 +140,23 @@ Fuor di metafora (di lampadine e bulloni), il punto è che la forma abbreviata �
 2. Non possiamo, ribadiamo, scrivere per ogni n ∈ $\mathbb{N}$  $〈q_i, (n,◻), (n,◻),q_n, (d,f)〉$.
 Ossia, è necessario che numero di stati, numero di simboli dell’alfabeto, numero di quintuple e numero di nastri siano **costanti**, ossia, ***indipendenti dall’input***.
 ## Tante definizioni per le macchine di Turing
-
-
-
+Nel paragrafo 2.1 della dispensa 2 vengono presentate alcune definizioni formali relative alle macchine di Turing:
+1. Parole
+2. Stati globali
+3. Transizioni
+4. Computazioni
+Queste definizioni devono essere tenute sempre presenti. Viene utilizzata la parola deterministica: questo significa che P è una funzione (avremo tempo e modo di affrontarla bene e a lungo, questa questione)
+Innanzi tutto: dato un alfabeto finito $\Sigma$, una **parola** su $\Sigma$ è una sequenza **finita** di elementi di $\Sigma$ (ad esempio, aba è una parola sull’alfabeto $\Sigma$ = { a, b, c }).
+L’**insieme della parole** su un alfabeto $\Sigma$ si indica con $\Sigma^*$. 
+## Stati globali
+Uno stato globale **SG** di una macchina di Turing è una “fotografia” della macchina ad un certo istante. Formalmente, uno *stato globale* di una macchina ad un nastro T ad un certo istante:
+1. Contiene una descrizione della porzione non blank del nastro di T, della posizione della testina (e, dunque, del carattere da essa letto) e dello stato interno;  
+2. Ed é rappresentato mediante la sequenza di caratteri (non blank) contenuti sul nastro in cui al carattere letto dalla testina è premesso lo stato interno.
+Naturalmente, possiamo definire anche lo stato globale di una macchina a k nastri (con k costante).
+### Esempi: Stati Globali
+![[turing_7.png|center]]
+(a): Lo stato globale iniziale $SG_0$ di una computazione della macchina che calcola la somma di due numeri vista a lezione:  $q_0= 812+53$;
+(b): Uno stato globale successivo SG della stessa computazione: $= 812 + q_0^3 5$
+## Transizioni
+Una transizione dallo stato globale $SG_1$ allo stato globale $SG_2$ avviene quando viene eseguita una quintupla che trasforma $SG_1$ in $SG_2$. 
+Formalmente, se $T =〈 Σ, Q, q_0, Q_F, P〉$ è una macchina di Turing ad un nastro, esiste una transizione da $SG_1$ a $SG_2$ se esiste una quintupla $〈q, x, x’, q’, m〉∈ P$ tale che:
