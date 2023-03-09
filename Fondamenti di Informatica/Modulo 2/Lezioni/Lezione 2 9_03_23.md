@@ -112,6 +112,34 @@ Poi, ricordando il valore del riporto della somma delle due cifre appena calcola
 4. Quando, poi, viene letta una cifra sul primo nastro, si ricomincia dal passo (°):   per ogni x ∈ {0, ... , 9} $〈q_s^0, (x,◻), (+,◻),q_x^0, (d,f)〉$ e $〈q_s^1, (x,◻), (+,◻),q_x^1, (d,f)〉$  $(⊙)$
 5. Se, invece, sul primo nastro viene letto un $◻$ allora la somma è terminata (perché i due numeri hanno lo stesso numero di cifre) e, dunque, viene scritto ’1’ sul nastro di output se il riporto è 1 e poi la macchina termina la computazione:   $〈q_s^0, (◻,◻), (◻,◻),q_F , (d,f)〉$ e $〈q_s^1, (◻,◻), (◻,1),q_F , (d,f)〉$.
 Osserviamo che il punto  “e ripetiamo da (°)” si realizza tornando in uno degli stati $q_x^0$ o $q_x^1$ al passo $(⊙)$.
+>[!important]- Osservazione
+>La macchina che calcola la “somma in riga” di due numeri funziona soltanto se i due numeri hanno lo stesso numero di cifre.
+
+>[!info]- ESERCIZIO(complesso)
+>Progettare una macchina di Turing ad un solo nastro che, avendo sul nastro due sequenze di cifre ‘0’,‘1’, ... , ‘9’ separate da un ‘+’ , scrive (in una posizione opportuna) il valore della somma dei due numeri rappresentati dalle due sequenze – ossia, si richiede di progettare una macchina di Turing che esegua la somma “in riga” di due numeri.
+
+>[!info]- ESERCIZIO(facile)
+>Progettare una macchina di Turing ad un solo nastro che, avendo sul nastro una sequenza di ‘a’ e di ‘b’, scrive (in una posizione opportuna) il valore 1 se la sequenza è palindroma, 0 altrimenti
+
+## **m**acchine di Turing
+Il modello di calcolo *M*acchina di Turing richiede che in ogni macchina l’insieme degli stati e l’alfabeto abbiano cardinalità finita – e lo stesso vale per il numero di nastri. Cerchiamo di capire perché ripensando, ancora una volta, alla somma di due numeri.
+Se fosse possibile avere un numero infinito di stati interni e un numero infinito di caratteri dell’alfabeto, il progetto di una macchina di Turing che esegue la “somma in riga” di due numeri (scrivendo il risultato sul secondo nastro) sarebbe banale: basterebbe porre $$ Σ = N ∪ \{+\} $$ e $$Q = \{q_x : x ∈  N\} ∪ \{q_i , q_F  \}$$ e utilizzare le quintuple:
+1. Per ogni n ∈ $\mathbb{N}$ $〈q_i, (n,◻), (n,◻),q_n, (d,f)〉$, che legge il primo numero (scritto in una singola cella del primo nastro), entra nello stato interno corrispondente e muove la testina del primo nastro a destra per andare a cercare il secondo numero;
+2. Per ogni n ∈ $\mathbb{N}$ $〈q_n , (+,◻), (+,◻),q_n , (d,f)〉$,  che “scavalca” il ‘+’;
+3. Per ogni n, m ∈ $\mathbb{N}$ $〈q_n , (m,◻), (m,h),q_F , (d,f)〉$, dove *h = m+n*;
+Se fosse possibile avere un numero infinito di stati interni e un numero infinito di caratteri dell’alfabeto, il progetto di una macchina di Turing che esegue la “somma in riga” di due numeri (scrivendo il risultato sul secondo nastro) sarebbe banale: basterebbe porre $\Sigma = \mathbb{N}$ e $Q = \mathbb{N} ∪ \{q_i , q_F \}$ e utilizzare le quintuple:
+1. per ogni n ∈ $\mathbb{N}$ $〈q_i, (n,◻), (n,◻),q_n, (d,f)〉$,         
+2. per ogni n ∈ $\mathbb{N}$ $〈q_n , (+,◻), (+,◻),q_n^, (d,f)〉$,         
+3. per ogni n, m ∈ $\mathbb{N}$ $〈q_n, (m,◻), (m,h),q_F, (d,f)〉$, dove h = m+n.
+Facile! Troppo facile... E, infatti, la cosa non funziona. Il punto è che questa “macchina” non potremmo *costruirla*.
+1. Possiamo pensare che gli stati siano realizzati, ad esempio, mediante lampadine: a ciascuno stato corrisponde una lampadina (che è accesa o spenta a seconda che la macchina si trovi o meno in quello stato);
+2. E che ciascuna quintupla sia una sorta di circuito che si occupa, fra l’altro, di controllare, accendere e spegnere le lampadine;
+3. Dovremmo, dunque, predisporre tante lampadine e tanti circuiti quanti sono i numeri naturali... e mi sa che non ce la faremmo nel corso della nostra vita.
+Fuor di metafora (di lampadine e bulloni), il punto è che la forma abbreviata “per ogni x ∈ A” dobbiamo poterla scrivere in forma esplicita (ossia, anche se la notazione implicita “per ogni x ∈ A”  è parecchio comoda; dobbiamo poter scrivere esplicitamente *tutti* gli stati e *tutte* le quintuple che occorrono a descrivere completamente una macchina di Turing, e lo stesso vale per il numero di nastri). Affinché questo sia possibile è necessario che il numero di stati, il numero di simboli dell’alfabeto, il numero di quintuple e il numero di nastri siano **finiti**. Ossia, che numero di stati, numero di simboli dell’alfabeto, numero di quintuple e numero di nastri siano scelti una volta per tutte:
+1. E non di volta in volta a seconda del dato particolare sul quale vogliamo operare
+2. Non possiamo, ribadiamo, scrivere per ogni n ∈ $\mathbb{N}$  $〈q_i, (n,◻), (n,◻),q_n, (d,f)〉$.
+Ossia, è necessario che numero di stati, numero di simboli dell’alfabeto, numero di quintuple e numero di nastri siano **costanti**, ossia, ***indipendenti dall’input***.
+## Tante definizioni per le macchine di Turing
 
 
 
