@@ -36,8 +36,8 @@ Naturalmente, sul nastro di  $T_{parità}$  possiamo scrivere ciò che vogliam
 5. Un insieme $$P ⊆ Q × Σ × Σ × Q × \{sinistra, fermo, destra\}$$ di **quintuple** (che, sappiamo, deve essere non ambiguo, ossia,  non contiene coppie di quintuple che hanno uguali i primi due elementi, ossia, in effetti, **P è una funzione:   
 P: Q × Σ → Σ × Q × {sinistra, fermo, destra}**
 Ossia, possiamo dire che:   
->[!important]
->Una macchina di Turing (ad un nastro) è una quintupla $〈 Σ, Q. q_0, Q_F, P〉$
+>[!important]- Definizione
+>Una macchina di Turing (ad un nastro) è una quintupla $〈 Σ, Q, q_0, Q_F, P〉$
 
 e dare per assodata l’esistenza di unità di controllo e nastro.
 ## Definizione di **m**acchina di Turing
@@ -47,7 +47,7 @@ E che dire di una macchina di Turing a più nastri? È (quasi) la stessa cosa:
 2. Un insieme *finito* Q di **stati interni**;
 3. Uno stato interno **iniziale**;
 4. Un sottoinsieme $Q_F$ di Q di **stati finali**;
-5. Un insieme P di **quintuple**, ove in questo caso una quintupla ha la forma: $$ ´〈 q_1 , (a_1, a_2, ... , a_k), (b_1, b_2, ... , b_k),  q_2 , (m_1, m_2, ... , m_k) 〉 $$
+5. Un insieme P di **quintuple**, ove in questo caso una quintupla ha la forma: $$ 〈 q_1 , (a_1, a_2, ... , a_k), (b_1, b_2, ... , b_k),  q_2 , (m_1, m_2, ... , m_k) 〉 $$
 	1. $(a_1, a_2, ... , a_k)$ sono i caratteri che devono essere letti sui k nastri:
 			$a_1$ è il carattere che deve essere letto sul nastro 1, $a_2$ è il carattere che deve essere letto sul nastro 2, ...
 	2.  $(b_1, b_2, ... , b_k)$ sono i caratteri che devono essere scritti sui k nastri (sovrascrivendo $(a_1, a_2, ... , a_k)$ ):
@@ -73,10 +73,10 @@ Le regole introdotte da Turing per descrivere procedimenti di calcolo costituisc
 **Esercizio**: 
 Progettare una macchina di Turing a due nastri che, avendo sul primo nastro due numeri interi della stessa lunghezza, calcola il valore della loro somma scrivendo il risultato sul secondo nastro – ossia, si richiede di progettare una macchina di Turing che esegua la somma “in riga” di due numeri.
 >[!important]- Osservazione 1 $\downarrow$
-
 Poiché i due numeri devono essere scritti entrambi sul primo nastro e ciascuno di essi è una sequenza di cifre ‘0’,‘1’, ... , ‘9’, è necessario utilizzare un ulteriore carattere (un carattere separatore) che permetta di separare i due numeri. Scegliamo, quindi, il ‘+’ come carattere separatore e, di conseguenza, assumiamo che sul primo nastro siano scritte due sequenze di cifre ‘0’,‘1’, ... , ‘9’ separate da un ‘+’.
+
 >[!important]- Osservazione 2 $\downarrow$
-´nella macchina che stiamo per progettare, i due nastri hanno funzioni (e, dunque, significati) differenti
+Nella macchina che stiamo per progettare, i due nastri hanno funzioni (e, dunque, significati) differenti.
 
 Il secondo nastro serve soltanto a contenere il risultato – è il **nastro di output**. Il primo nastro serve a contenere i dati del problema e a svolgere le azioni richieste per ottenere il risultato – è il **nastro di input e di lavoro**.
 **Esercizio**:
