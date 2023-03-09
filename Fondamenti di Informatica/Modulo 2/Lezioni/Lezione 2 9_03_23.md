@@ -67,15 +67,15 @@ Se le quintuple di una macchina di Turing hanno la forma $〈 q_1 , (a_1, a_2), 
 ## Definizione di **M**acchina di Turing
 Dunque, possiamo dire che, in generale:
 **una macchina di Turing è una quintupla $〈 Σ, Q, q_0, Q_F, P〉$**
-e, come dovremmo aver compreso, una macchina di Turing è la descrizione di un procedimento di calcolo. Ossia, è un *algoritmo descritto utilizzando le regole introdotte da Alan Turing*. In qualche modo, dunque, un programma scritto nel linguaggio progettato da Turing.
+e, come dovremmo aver compreso, una macchina di Turing è la descrizione di un procedimento di calcolo. Ossia, è un ***algoritmo descritto utilizzando le regole introdotte da Alan Turing***. In qualche modo, dunque, un programma scritto nel linguaggio progettato da Turing.
 Le regole introdotte da Turing per descrivere procedimenti di calcolo costituiscono un modello di calcolo ( tanto quanto ciascun linguaggio di programmazione, ad esempio, è un modello di calcolo), un modello di calcolo che prende il nome di **Macchina di Turing**.
 ## Esercizi: progetto di macchine di Turing
 **Esercizio**: 
 Progettare una macchina di Turing a due nastri che, avendo sul primo nastro due numeri interi della stessa lunghezza, calcola il valore della loro somma scrivendo il risultato sul secondo nastro – ossia, si richiede di progettare una macchina di Turing che esegua la somma “in riga” di due numeri.
->[!important]- Osservazione 1 $\downarrow$
+>[!important]- Osservazione 1 
 Poiché i due numeri devono essere scritti entrambi sul primo nastro e ciascuno di essi è una sequenza di cifre ‘0’,‘1’, ... , ‘9’, è necessario utilizzare un ulteriore carattere (un carattere separatore) che permetta di separare i due numeri. Scegliamo, quindi, il ‘+’ come carattere separatore e, di conseguenza, assumiamo che sul primo nastro siano scritte due sequenze di cifre ‘0’,‘1’, ... , ‘9’ separate da un ‘+’.
 
->[!important]- Osservazione 2 $\downarrow$
+>[!important]- Osservazione 2 
 Nella macchina che stiamo per progettare, i due nastri hanno funzioni (e, dunque, significati) differenti.
 
 Il secondo nastro serve soltanto a contenere il risultato – è il **nastro di output**. Il primo nastro serve a contenere i dati del problema e a svolgere le azioni richieste per ottenere il risultato – è il **nastro di input e di lavoro**.
