@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -157,6 +156,7 @@
   },
   "active": "cc9e2bec70f1c121",
   "lastOpenFiles": [
+    "turing_9.png",
     "turing_8.png",
     "turing_7.png",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 17 - Macchine di Turing.md",
@@ -196,7 +196,6 @@
     "Ricerca Operativa/Immagini",
     "Ricerca Operativa/Lezioni.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/tabellina.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/tabellina 1.png",
     "Logica e reti logiche/Lezioni.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",

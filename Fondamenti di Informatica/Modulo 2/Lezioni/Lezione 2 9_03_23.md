@@ -178,5 +178,27 @@ Formalmente: una **computazione** di una macchina di Turing T è una sequenza $S
 4. Se esiste un indice h tale che $SG_{h+1}$ non è definito allora $SG_j$ non è definito per ogni j ≥ h+1.
 Se esiste un indice h tale che $SG_h$ è uno stato globale dal quale non può avvenire alcuna transizione allora la computazione **termina**, e questo accade quando lo stato interno nel quale T si trova in  $SG_h$ è uno stato finale oppure P non contiene una quintupla che possa essere eseguita in $SG_h$.
 Oppure, se esiste un indice h tale che $SG_{h+1}$ non è definito allora $SG_h$ è uno stato globale dal quale non può avvenire alcuna transizione e la computazione termina, e questo accade quando lo stato interno nel quale T si trova in  $SG_h$ è uno stato finale oppure P non contiene una quintupla che possa essere eseguita in $SG_h$.
+![[turing_9.png|center]]
+Una computazione dallo stato globale $(5,2,◻)q_0(3,8,◻)$ (a)             
+allo stato globale $q_1(5,2,◻)(3,8,1)$  (b)          
+allo stato globale $q_0 (◻,◻,◻)(5,2,8) (3,8,1)$   (c)           
+allo stato globale $q_F (◻,◻,◻) (5,2,8)(3,8,1)$   (d).
+E così, abbiamo visto anche un modo di rappresentare uno stato globale in una macchina a più nastri.
+## Trasduttori e Riconoscitori
+Nel paragrafo 2.2 della dispensa 2 vengono definiti due tipi di macchine di Turing. 
+1. Le macchine di tipo **trasduttore** sanno calcolare il valore di una funzione qualsiasi (ad esempio, un trasduttore sa calcolare la funzione f(a,b)=a+b).
+Assumeremo sempre che le macchine di Turing di tipo trasduttore dispongano di un *nastro di output* sul quale scrivono il valore della funzione che hanno calcolato.
+Un trasduttore ha _un solo stato finale_ con il quale terminare la computazione: lo stato $q_F$.
+2. Le macchine di tipo **riconoscitore** sanno calcolare soltanto il  valore di funzioni booleane (ossia, funzioni il cui valore è 0 oppure 1) e non dispongono di un nastro di output.
+**Il valore calcolato da un riconoscitore viene memorizzato nello stato interno con il quale la macchina termina la computazione**: $q_A$ se il valore della funzione è 1, $q_R$ se il valore della funzione è 0.
+Quindi, ogni riconoscitore ha due stati finali: $q_A$  e $q_R$.
+Diciamo che un riconoscitore T accetta x se la computazione T(x) termina in $q_A$ e che la macchina T rigetta x se la computazione T(x) termina in $q_R$.
+### Esito di una computazione
+Sempre nel paragrafo 2.2 della dispensa 2 viene introdotto il concetto di esito di una computazione.
+Data una macchina di Turing T ed un suo input x, l’esito della computazione T(x) è indicato con $o_T(x)$ – informalmente è “il risultato” della computazione, la risposta che ci dà la macchina rispetto all’istanza x del problema che le abbiamo chiesto di risolvere.
+Se T è una macchina di tipo **trasduttore, allora $o_T(x)$ è la parola scritta da T sul nastro di output al termine della computazione** T(x) (ossia, quando T ha raggiunto lo stato $q_F$): ad esempio, se T è il trasduttore che calcola la funzione f(a,b)=a+b. Allora $o_T(15,6)= 21$.
+Se T è una macchina di tipo **riconoscitore, allora $o_T(x)$ è lo stato interno con il quale la macchina termina la computazione** T(x): ad esempio, se T è la macchina che decide se una parola è palindroma, allora $o_T(abba) =q_A$ e $o_T(baaba) =q_R$.
+#### Delucidazioni
+Quando si menzionerà “macchina di Turing” ci si riferirà sempre ad una macchina di tipo riconoscitore. Se invece si farà riferimento ad un trasduttore si dirà “macchina di Turing di tipo trasduttore”.
 
 
