@@ -167,4 +167,16 @@ Formalmente, se $T =〈 Σ, Q, q_0, Q_F, P〉$ è una macchina di Turing ad un n
 5. In $SG_2$ la testina di T sta scandendo la cella che si trova in posizione m rispetto a quella che stava scandendo in $SG_1$.
 Il concetto può essere facilmente esteso a macchine a più nastri, con qualche tecnicismo in più, che non affrontiamo.
 ### Esempi: transizioni
+![[turing_8.png|center]]
+Un esempio di transizione dallo stato globale $=812+ q_0^3 5$ (in figura (a)) allo stato globale $=812 q_0^3 +5$  (in figura (b)) a seguito dell’esecuzione della quintupla $〈 q_0^3 , 5, 5, q_0^3 , sinistra 〉$.
+## Computazione
+Informalmente, una computazione di una macchina di Turing **deterministica** a un nastro   $T =〈 \Sigma, Q, q_0, Q_F, P〉$ è l’esecuzione delle quintuple di T su una sequenza di caratteri scritti sul suo nastro (e analogamente per le macchine a più nastri)
+Formalmente: una **computazione** di una macchina di Turing T è una sequenza $SG_0, SG_1, SG_2, ... , SG_h, ...$di stati globali di T tali che:
+1. $SG_0$ è uno stato globale iniziale, ossia, uno stato globale nel quale lo stato interno è $q_0$ e la testina è posizionata sul carattere più a sinistra scritto sul nastro;
+2. Per ogni 0 ≤ i ≤ h-1, esiste una transizione da $SG_i$ a $SG_{i+1}$ oppure per ogni h ≥ i+1 $SG_h$ non è definito;
+3. Per ogni i ≥ 0 esiste una transizione da $SG_i$ a $SG_{i+1}$ oppure $SG_{i+1}$ non è definito;
+4. Se esiste un indice h tale che $SG_{h+1}$ non è definito allora $SG_j$ non è definito per ogni j ≥ h+1.
+Se esiste un indice h tale che $SG_h$ è uno stato globale dal quale non può avvenire alcuna transizione allora la computazione **termina**, e questo accade quando lo stato interno nel quale T si trova in  $SG_h$ è uno stato finale oppure P non contiene una quintupla che possa essere eseguita in $SG_h$.
+Oppure, se esiste un indice h tale che $SG_{h+1}$ non è definito allora $SG_h$ è uno stato globale dal quale non può avvenire alcuna transizione e la computazione termina, e questo accade quando lo stato interno nel quale T si trova in  $SG_h$ è uno stato finale oppure P non contiene una quintupla che possa essere eseguita in $SG_h$.
+
 
