@@ -142,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 218.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,11 +154,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "cc9e2bec70f1c121",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "turing_9.png",
-    "turing_8.png",
-    "turing_7.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/turing_9.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/turing_8.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/turing_7.png",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 17 - Macchine di Turing.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
     "Logica e Reti Logiche/Lezione 1.md",
