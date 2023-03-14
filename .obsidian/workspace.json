@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625
+    "width": 277.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -154,8 +155,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "b9b02120ac0b4e5d",
   "lastOpenFiles": [
+    "turing_23.png",
+    "turing_22.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_21.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_20.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_19.png",
@@ -165,8 +168,6 @@
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_15.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_14.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_13.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/turing_12.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/turing_11.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
     "README.md",
