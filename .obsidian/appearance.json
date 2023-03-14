@@ -1,4 +1,7 @@
 {
   "accentColor": "",
-  "cssTheme": "Clair de Lune"
+  "cssTheme": "Clair de Lune",
+  "enabledCssSnippets": [
+    "center"
+  ]
 }
