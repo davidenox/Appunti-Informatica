@@ -2,6 +2,7 @@
   "accentColor": "",
   "cssTheme": "Clair de Lune",
   "enabledCssSnippets": [
-    "center"
+    "center",
+    "highlights"
   ]
 }
