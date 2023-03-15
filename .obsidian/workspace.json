@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "901369f7f419177c",
+        "id": "f8b9479aaf564646",
         "type": "tabs",
         "children": [
           {
-            "id": "cd8f3f7ce48acb91",
+            "id": "7d13b01120aa1e28",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md"
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md"
               }
             }
           },
@@ -132,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,10 +154,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "cd8f3f7ce48acb91",
+  "active": "7d13b01120aa1e28",
   "lastOpenFiles": [
-    "Ricerca Operativa/Lezioni/Lezione 1.md",
     "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
+    "Ricerca Operativa/Lezioni/Lezione 1.md",
     "Logica e Reti Logiche/Esercizi",
     "Logica e Reti Logiche/Immagini",
     "Logica e Reti Logiche/Lezioni",
