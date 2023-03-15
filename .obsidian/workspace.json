@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logica e Reti Logiche/Lezione 2.md",
+                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Lezione 2.md",
+                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logica e Reti Logiche/Lezione 2.md"
+                "file": "Ricerca Operativa/Lezioni/Lezione 1.md"
               }
             }
           },
@@ -132,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Lezione 2.md",
+                "file": "Ricerca Operativa/Lezioni/Lezione 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,12 +154,15 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "22e239e9db73d132",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Logica e Reti Logiche/Esercizi",
+    "Logica e Reti Logiche/Immagini",
+    "Logica e Reti Logiche/Lezioni",
+    "Logica e Reti Logiche/Lezioni/Lezione 2.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
-    "Logica e Reti Logiche/Lezione 2.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
-    "Logica e Reti Logiche/Lezione 1.md",
+    "Logica e Reti Logiche/Lezioni/Lezione 1.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_24.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_23.png",
@@ -183,7 +185,7 @@
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 3.md",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 2.md",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 1.md",
-    "Logica e Reti Logiche/Indice delle lezioni.md",
+    "Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
     "Logica e reti logiche/Lezioni/Lezione 1 6_03_23.md",
     "Logica e Reti Logiche",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
@@ -195,13 +197,10 @@
     "Ricerca Operativa/Immagini.md",
     "Logica e reti logiche/Immagini",
     "Logica e reti logiche/Lezioni",
-    "Ricerca Operativa/Lezioni",
-    "Ricerca Operativa/Immagini",
     "Ricerca Operativa/Lezioni.md",
     "Logica e reti logiche/Lezioni.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 4.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 3.md"
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 4.md"
   ]
 }
