@@ -5,7 +5,7 @@ Il corso si distingue in due parti principali:
 2. La parte di complessità (ovvero quali problemi so risolvere per davvero).
 Un **problema** è la descrizione di un insieme di parametri, che chiameremo *dati*, collegati da un certo insieme di relazioni, associata alla richiesta di derivare da essi un altro insieme di parametri, che costituiscono la **soluzione**. Un’**istanza** di un problema è un particolare insieme di valori associati ai dati.
 
-## Trovare la soluzione di un’istanza
+## Trovare la soluzione di un'istanza
 Per trovare la soluzione di talune istanze di taluni problemi posso sfruttare le caratteristiche di quelle istanze. D’altra parte, a volte non è così semplice, altre volte è impossibile.
 Quando l’istanza di un problema non ha soluzione diciamo che essa è una **istanza negativa**.
 ## Risolvere un problema 

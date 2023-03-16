@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md"
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md"
               }
             }
           },
@@ -154,8 +154,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "323299a3dd2b1a27",
+  "active": "8dccd84a95ccc759",
   "lastOpenFiles": [
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/comp_no_fine.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing5.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing4.png",
@@ -165,19 +167,16 @@
     "Fondamenti di Informatica/Modulo 2/Immagini/m_parallela.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230316100105.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
     "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
     "Logica e Reti Logiche/Esercizi",
     "Logica e Reti Logiche/Immagini",
     "Logica e Reti Logiche/Lezioni",
     "Logica e Reti Logiche/Lezioni/Lezione 2.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
     "Logica e Reti Logiche/Lezioni/Lezione 1.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_24.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_23.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/turing_22.png",
     "README.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 17 - Macchine di Turing.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 10 - Minimizzazione di ASF.md",
