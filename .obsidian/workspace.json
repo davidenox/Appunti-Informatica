@@ -108,24 +108,6 @@
             }
           },
           {
-            "id": "5bd044c3cc02a913",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md"
-              }
-            }
-          },
-          {
-            "id": "22e239e9db73d132",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
-            }
-          },
-          {
             "id": "7e9abb449e1b42bb",
             "type": "leaf",
             "state": {
@@ -136,9 +118,27 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "5bd044c3cc02a913",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md"
+              }
+            }
+          },
+          {
+            "id": "323299a3dd2b1a27",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -154,7 +154,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "323299a3dd2b1a27",
   "lastOpenFiles": [
     "Fondamenti di Informatica/Modulo 2/Immagini/comp_no_fine.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing5.png",
