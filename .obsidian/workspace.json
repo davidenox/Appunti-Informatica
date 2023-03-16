@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d13b01120aa1e28",
+            "id": "8dccd84a95ccc759",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md"
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,8 +154,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "7d13b01120aa1e28",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Fondamenti di Informatica/Modulo 2/Immagini/m_parallela.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230316100105.png",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
     "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
     "Logica e Reti Logiche/Esercizi",
@@ -165,7 +169,6 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
     "Logica e Reti Logiche/Lezioni/Lezione 1.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_24.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_23.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_22.png",
@@ -175,7 +178,6 @@
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_18.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_17.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/turing_16.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/turing_15.png",
     "README.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 17 - Macchine di Turing.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 10 - Minimizzazione di ASF.md",
@@ -199,8 +201,6 @@
     "Logica e reti logiche/Immagini",
     "Ricerca Operativa/Lezioni.md",
     "Logica e reti logiche/Lezioni.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Esercizio 1 - CardReader.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercitazioni/LMP 4.md"
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md"
   ]
 }
