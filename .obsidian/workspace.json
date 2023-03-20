@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f8b9479aaf564646",
+        "id": "dd8d52a0f682e974",
         "type": "tabs",
         "children": [
           {
-            "id": "58980cb4708bb7f8",
+            "id": "639087b77ab94088",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625
+    "width": 277.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -154,20 +155,24 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "58980cb4708bb7f8",
+  "active": "639087b77ab94088",
   "lastOpenFiles": [
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
+    "Pasted image 20230320172146.png",
+    "Pasted image 20230320171405.png",
+    "Pasted image 20230320151226.png",
+    "Pasted image 20230320150758.png",
+    "Pasted image 20230320145124.png",
+    "Pasted image 20230320144516.png",
+    "Pasted image 20230320144424.png",
+    "Pasted image 20230320144230.png",
+    "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
     "Logica e Reti Logiche/Lezioni/Lezione 3.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/comp_no_fine.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing5.png",
     "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing4.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing3.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing_2.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/alberi_touring.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/m_parallela.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230316100105.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
     "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
@@ -176,8 +181,6 @@
     "Logica e Reti Logiche/Lezioni",
     "Logica e Reti Logiche/Lezioni/Lezione 2.md",
     "Logica e Reti Logiche/Lezioni/Lezione 1.md",
-    "Fondamenti di Informatica/Modulo 2/Immagini/turing_24.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/turing_23.png",
     "README.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 17 - Macchine di Turing.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 10 - Minimizzazione di ASF.md",
@@ -192,7 +195,6 @@
     "Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
     "Logica e reti logiche/Lezioni/Lezione 1 6_03_23.md",
     "Logica e Reti Logiche",
-    "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni",
     "Fondamenti di Informatica/Modulo 2",
     "Fondamenti di Informatica 2/Lezioni.md",
@@ -200,7 +202,6 @@
     "Ricerca Operativa/Immagini.md",
     "Logica e reti logiche/Immagini",
     "Ricerca Operativa/Lezioni.md",
-    "Logica e reti logiche/Lezioni.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Esercizi/Indice degli esercizi LMP.md"
+    "Logica e reti logiche/Lezioni.md"
   ]
 }
