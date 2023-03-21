@@ -123,7 +123,10 @@ Oltre a $\downarrow$, c'è un altro connettivo che, da solo, può essere usato p
 >[!danger]- Esercizio 12
 >Definire i connettivi $\wedge$ e $\sim$ in termini del connettivo $|$.
 
-
+# Riepilogo
+In questo episodio abbiamo iniziato a studiare la logica proposizionale, introducendone la *sintassi* (ossia, qual è la "forma" degli oggetti che studiamo: lettere proposizionali,
+connettivi, formule ben formate) e la *semantica* (ossia, qual è il loro "signicato": tabelle di verità, interpretazioni). Abbiamo classificato le formule della logica proposizionale in **tautologie**, **contingenze** e **contraddizioni**. Abbiamo osservato che i connettivi non sono indipendenti fra loro e ne abbiamo individuato due "speciali". Inne abbiamo accennato
+alle formule in notazione polacca e ne abbiamo visto qualche proprietà.
 
 
  
