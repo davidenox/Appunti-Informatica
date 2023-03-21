@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -155,16 +154,16 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "639087b77ab94088",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Pasted image 20230320172146.png",
-    "Pasted image 20230320171405.png",
-    "Pasted image 20230320151226.png",
-    "Pasted image 20230320150758.png",
-    "Pasted image 20230320145124.png",
-    "Pasted image 20230320144516.png",
-    "Pasted image 20230320144424.png",
-    "Pasted image 20230320144230.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230320172146.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230320171405.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230320151226.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230320150758.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230320145124.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230320144516.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230320144424.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230320144230.png",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
     "Logica e Reti Logiche/Lezioni/Lezione 3.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
