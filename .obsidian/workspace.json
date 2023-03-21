@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "639087b77ab94088",
+            "id": "e573d6841570942d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 3.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 21_03_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625
+    "width": 277.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 3.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 21_03_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 3.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 21_03_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 3.md"
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 21_03_23.md"
               }
             }
           },
@@ -154,8 +155,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "e573d6841570942d",
   "lastOpenFiles": [
+    "Pasted image 20230321114313.png",
+    "Pasted image 20230321114101.png",
+    "Logica e Reti Logiche/Lezioni/Lezione 3.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 21_03_23.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230320172146.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230320171405.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230320151226.png",
@@ -165,13 +170,10 @@
     "Logica e Reti Logiche/Immagini/Pasted image 20230320144424.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230320144230.png",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 3.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/comp_no_fine.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing5.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/alberi_turing4.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
     "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
@@ -200,7 +202,6 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni",
     "Ricerca Operativa/Immagini.md",
     "Logica e reti logiche/Immagini",
-    "Ricerca Operativa/Lezioni.md",
-    "Logica e reti logiche/Lezioni.md"
+    "Ricerca Operativa/Lezioni.md"
   ]
 }
