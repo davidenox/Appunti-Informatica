@@ -113,35 +113,17 @@ Si osserva che:
 1. $p\downarrow p$ è **F** quando $p$ è **T** ed è **T** quando $p$ è **F**. In altri termini, $p\downarrow p$ è equivalente a $\sim p$;
 2. La tabella di verità di $\downarrow$ è la negazione di quella di $\vee$, ossia $p\downarrow q$ è equivalente a $\sim(p\vee q)$. Ma allora $p\vee q$ deve essere equivalente a $\sim(p\downarrow q)$, che a sua volta, per il punto precedente, deve essere equivalente a $(p\downarrow q)\downarrow(p\downarrow q)$.
 >[!danger]- Esercizio 11 
->Vericare che (p # q) # (p # q) ha la stessa tabella di verita di p _ q. 
+>Verificare che $(p\downarrow q)\downarrow (p\downarrow q)$ ha la stessa tabella di verità di $p\vee q$. 
 
-Siccome possiamo denire i connettivi  e _ in termini del connettivo # per quanto visto
-all'inizio di questa sezione, possiamo denire anche tutti gli altri connettivi in termini del
-connettivo #.
-Oltre a #, c'e un altro connettivo che, da solo, puo essere usato per denire tutti gli
-gli altri: lo indichiamo con j e lo chiamiamo alternative denial (oppure nand).
+Siccome possiamo definire i connettivi $\sim$ e $\vee$ in termini del connettivo $\downarrow$ per quanto visto all'inizio di questa sezione, possiamo definire anche tutti gli altri connettivi in termini del
+connettivo $\downarrow$.
+Oltre a $\downarrow$, c'è un altro connettivo che, da solo, può essere usato per definire tutti gli altri: lo indichiamo con $|$ e lo chiamiamo *alternative denial* (oppure **NAND**).
 ![[Pasted image 20230320172146.png|center|400]]
 
 >[!danger]- Esercizio 12
->Denire i connettivi ^ e  in termini del connettivo j.
+>Definire i connettivi $\wedge$ e $\sim$ in termini del connettivo $|$.
 
 
-
-
-
-
-
-
-
-
-
-p,q,r simboli proposizionali (variabili), con valori vero o falso({T,F}), abbinati con i connettivi logici:
-$\wedge,\vee,\equiv,\rightarrow,\otimes,\neg$, associate alle tabelle di verità.
-And, or = connettivi binari;
-- p,q,ecc.. è una formula ben formata;
-- Sia $\mathcal F$ una formula ben formata, allora $\neg\mathcal F$ è ben formata
-- Siano $\mathcal F$ e $\mathcal G$ f.b.f. allora $\mathcal F\circ\mathcal G$ è ben formata.
-- $\circ = \wedge,\vee,\equiv,\rightarrow,\otimes$, nient'altro è una f.b.f.
 
 
  
