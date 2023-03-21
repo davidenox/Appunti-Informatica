@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -155,10 +154,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "e573d6841570942d",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Pasted image 20230321114313.png",
-    "Pasted image 20230321114101.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230321135007.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230321114313.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230321114101.png",
     "Logica e Reti Logiche/Lezioni/Lezione 3.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 21_03_23.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230320172146.png",
@@ -173,7 +173,6 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 16_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
-    "Fondamenti di Informatica/Modulo 2/Immagini/comp_no_fine.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
     "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
