@@ -46,7 +46,8 @@ Abbiamo bisogno di una denizione di **formula ben formata**.
 >Trovare un metodo per costruire una formula con una data tabella di verità. (Suggerimento: Se avete una tabella con una sola linea T e tutte le altre F, qual è una formula che fa al caso vostro? Trovata? Bene. Ora, se avete una formula con due linee T?. . . )
 ## 3. Tautologie, contraddizioni e contingenze
 >[!abstract]- Formule di De Morgan
->![[Pasted image 20230320151226.png]]
+>![[Pasted image 20230320151226.png|center]]
+>
 
 Come sarà fatta la tabella di verità della formula (2) ?
 $$\sim(p\vee q)\equiv(\sim p\wedge \sim q)\space\space\space\space\space\space(2)$$
