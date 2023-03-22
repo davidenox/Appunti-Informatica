@@ -36,7 +36,7 @@ Abbiamo bisogno di una denizione di **formula ben formata**.
 >3. Nient'altro è una f.b.f.
 
 >[!danger]- Esercizio 3
->Si osservi che tutte le formule dell'Esercizio 2 sono f.b.f. secondo la definizione precedente, mentre la sequenza di simboli in (1) non lo è. Ogni formula ben formata ha la sua tabella di verità. Viceversa, data una qualunque tabella di verità possiamo sempre trovare una formula (tante, in realtà) che ha quella data come tabella di verità.
+>Si osservi che tutte le formule dell'Esercizio 2 sono f.b.f. secondo la definizione precedente, mentre la sequenza di simboli in (1) non lo è. Ogni formula ben formata ha la sua tabella di verità. Viceversa, data una qualunque tabella di verità possiamo sempre trovare una formula (tante, in realtà) che ha quella data come tabella di verità.
 
 >[!danger]- Esercizio 4
 >Per ognuna delle seguenti tabelle di verità, trovare una formula corrispondente:
