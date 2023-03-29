@@ -36,3 +36,18 @@ Non c'è più niente da scomporre e abbiamo un albero con tutti i rami chiusi. C
 ![[Pasted image 20230328151406.png|center]]
 
 ## 2 Le regole del gioco
+Nell’esempio visto in dettaglio nella sezione precedente, abbiamo costruito un “albero” (il *tableaux* ) in cui, scendendo dalla radice $\sim\mathcal F$ alle foglie troviamo via via formule con meno simboli, fino ad arrivare a formule che sono o variabili o variabili negate. Ogni volta che abbiamo “sviluppato” una formula in formule più semplici, l’abbiamo fatto preservandone la **soddisfacibilità** (l’esistenza di interpretazioni che rendono vere le formule).
+Cerchiamo ora di derivare le regole che ci consentono di costruire “meccanicamente” un *tableaux* come quello della sezione precedente per ogni formula $\mathcal F$ , in modo da poter eventualmente istruire un computer a farlo per noi.
+Osserviamo che ogni formula ben formata $\mathcal F$(vedi la Definizione 1 nell’episodio precendente) che non è una variabile o una variabile negata è sempre, tranne un paio di casi particolari, equivalente all’$AND$ di due formule o all’$OR$ di due formule. Per esempio,
+$\mathcal F_1 \Rightarrow \mathcal F_2$ è equivalente a $\sim\mathcal F_1\vee\mathcal F_2$ mentre $\sim(\mathcal F_1 \Rightarrow \mathcal F_2 )$ è equivalente a $\mathcal F_1 \wedge \sim\mathcal F_2$ .
+Nella costruzione del tableaux si procede come segue: se abbiamo una formula $\alpha$ equivalente all’$AND$ di due formule $\alpha_1\wedge\alpha_2$ , la sostituiamo con $\alpha_1$ e $\alpha_2$ , messe una sotto l’altra, mentre se abbiamo una formula $\beta$ equivalente all’$OR$ di due formule $\beta_1\vee\beta_2$ , la sostuiamo con due “rami”, uno con $\beta_1$ e l’altro con $\beta_2$ .
+![[Pasted image 20230329101518.png|center]]
+
+>[!danger]- Esercizio 2
+>Ripercorrere l’esempio della sezione precedente indicando quali formule sono α, quali β e quali né α né β.
+
+>[!danger]- Esercizio 3
+>Esercizio 3. Per ognuna delle formule seguenti, dire se è una formula α o β e individuare chi sono α1 e α2 , nel primo caso, e β1 e β2 nel secondo: 
+>1. p ↓ q, 2. p|q, 3. (p ∧ q) ⇒ (∼p ∨ q), 4. p ⇒ ((q ∨ p) ⇒ r) 
+>Alla classificazione α-β sfuggono due casi: il primo è quello in cui la formula F è ∼F1 e a sua volta F1 è ∼F2 , per qualche formula F2 . In questo caso, siccome F è ∼∼F2 , nel tableaux possiamo semplicemente sostituire F con F2 . Il secondo caso è quello in cui la formula F è F1 ≡ F2 .
+
