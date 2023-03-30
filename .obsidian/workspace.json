@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d0faaf971eba84b0",
+        "id": "d62300fca38018f3",
         "type": "tabs",
         "children": [
           {
-            "id": "79ef649db6173625",
+            "id": "5850bfa169361408",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 4.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 4.md"
-              }
+              "state": {}
             }
           },
           {
@@ -157,6 +148,11 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
+    "Pasted image 20230330100330.png",
+    "Pasted image 20230330100328.png",
+    "Pasted image 20230330100322.png",
+    "Logica e Reti Logiche/Lezioni/Lezione 4.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230329101518.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230328151406.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230328151150.png",
@@ -165,15 +161,10 @@
     "Logica e Reti Logiche/Immagini/Pasted image 20230328150853.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230328150818.png",
     "LRL/img/img7.png.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 4.md",
     "LRL/img",
     "LRL",
     "Logica e Reti Logiche/Lezioni/Lezione 3.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 7 28_03_23.md",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230328114236.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230328114155.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230328114017.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230328113333.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 23_03_23.md",
     "prova.md",
     "prova.txt",
@@ -200,7 +191,6 @@
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5.md",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 3.md",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 2.md",
-    "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 1.md",
     "Logica e Reti Logiche",
     "Fondamenti di Informatica/Modulo 1/Lezioni"
   ]
