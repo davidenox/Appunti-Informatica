@@ -11,8 +11,12 @@
             "id": "5850bfa169361408",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md"
+              }
             }
           },
           {
@@ -146,12 +154,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "5850bfa169361408",
   "lastOpenFiles": [
+    "Pasted image 20230330100322.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
     "Pasted image 20230330100330.png",
     "Pasted image 20230330100328.png",
-    "Pasted image 20230330100322.png",
     "Logica e Reti Logiche/Lezioni/Lezione 4.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230329101518.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230328151406.png",
