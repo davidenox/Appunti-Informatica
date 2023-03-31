@@ -137,8 +137,8 @@ Quindi
 
 ### Schemi successo-fallimento su un numero finito di prove
 Si tratta di una premessa comune per due casi che vedremo nella prossima lezione:
-- [[Lezione 5#Il caso 1: Distribuzione Binomiale|Distribuzione Binomiale]] (caso di n prove indipendenti, tutte con la stessa probabilità di successo P)
-- [[Lezione 5#Il caso 2: Distribuzione Ipergeometrica|Distribuzione Ipergeometrica]] (caso di n estrazioni casuali di un oggetto alla volta, senza reinserimento (un caso particolare senza avere prove indipendenti))
+- [[Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5#Il caso 1: Distribuzione Binomiale|Distribuzione Binomiale]] (caso di n prove indipendenti, tutte con la stessa probabilità di successo P)
+- [[Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5#Il caso 2: Distribuzione Ipergeometrica|Distribuzione Ipergeometrica]] (caso di n estrazioni casuali di un oggetto alla volta, senza reinserimento (un caso particolare senza avere prove indipendenti))
 
 In entrambi i casi si vuole studiare la v.a X che conta il numero di successi
 Nel caso 2 gli oggetti sono di due tipi, e si ha successo con l'estrazione di oggetti di un certo tipo. Ad esempio: oggetti colorati con un certo colore, oggetti numerati con un certo numero,ecc...

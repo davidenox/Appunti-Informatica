@@ -4,7 +4,7 @@
 - [[Calcolo delle Probabilità e Statistica/Lezioni/Lezione 2|Lezione 2]]
 - [[Calcolo delle Probabilità e Statistica/Lezioni/Lezione 3|Lezione 3]]
 - [[Calcolo delle Probabilità e Statistica/Lezioni/Lezione 4|Lezione 4]]
-- [[Lezione 5|Lezione 5]]
+- [[Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5|Lezione 5]]
 - 
 
 

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d62300fca38018f3",
+        "id": "05f7dfd624d524da",
         "type": "tabs",
         "children": [
           {
-            "id": "5850bfa169361408",
+            "id": "a1f07c40f3e45932",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 5.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 5.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md"
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 5.md"
               }
             }
           },
@@ -156,8 +156,9 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Pasted image 20230330100322.png",
+    "Logica e Reti Logiche/Lezioni/Lezione 5.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
+    "Pasted image 20230330100322.png",
     "Pasted image 20230330100330.png",
     "Pasted image 20230330100328.png",
     "Logica e Reti Logiche/Lezioni/Lezione 4.md",
