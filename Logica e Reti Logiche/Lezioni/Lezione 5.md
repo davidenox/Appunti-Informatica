@@ -42,3 +42,12 @@ Se F è una $\alpha$-formula (rispettivamente, $\beta$-formula) chiamiamo le for
 L’insieme delle tautologie è definito in termini *semantici* (una tautologia è una formula “vera” in ogni interpretazione). In questo episodio abbiamo analizzato il metodo dei *tableaux* e abbiamo visto che, facendo soltanto operazioni sintattiche sulle formule (applicazioni delle regole $\alpha$ e $\beta$) ci consente di decidere se una data formula è una tautologia oppure no. Perchè questo è importante per noi informatici? Beh, osservate che è difficile
 spiegare a un computer come distinguere ciò che è vero da ciò che è falso, ma è facile fargli eseguire delle istruzioni. . .
 Il metodo dei *tableaux* è un metodo di *refutazione*: per dimostrare che $\mathcal F$ è una tautologia, partiamo da $\sim\mathcal F$ e verifichiamo che non è soddisfacibile (si noti l’analogia con le dimostrazioni per assurdo).
+# Bonus Track
+Il metodo dei *tableaux* non è l’unico metodo automatico che ci consente di decidere se una formula $X$ è una tautologia. Vediamone sinteticamente un altro, che si applica a formule $X$ in *forma normale*.
+## Forme normali e il metodo *Resolution*
+ùUna formula si dice in *forma normale congiuntiva* (CNF) se è una congiunzione di **clausole disgiuntive** (dette anche semplicemente *clausole*) $D_1 \wedge D_2 \wedge . . . \wedge D_n$ dove ogni clausola è una disgiunzione di *letterali* $D_i = l_{i,1} \vee l_{i,2} \vee . . . \vee l_{i,k_i}$ e ogni letterale è una variabile oppure una variabile negata. Per esempio:
+$$(p \vee q \vee\sim r) \wedge (\sim p \vee q \vee\sim r)$$
+È in forma normale congiuntiva. Data una formula $X$ esiste sempre una formula $Y$ equivalente a $X$ in forma normale congiuntiva.
+>[!danger]- Esercizi 8-12
+
+
