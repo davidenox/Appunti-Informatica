@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625
+    "width": 277.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -156,6 +157,7 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Logica e Reti Logiche/Immagini/Pasted image 20230403111226.png",
     "Logica e Reti Logiche/Lezioni/Lezione 5.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
     "Pasted image 20230330100322.png",
@@ -199,7 +201,6 @@
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 4.md",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5.md",
     "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 3.md",
-    "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 2.md",
     "Logica e Reti Logiche",
     "Fondamenti di Informatica/Modulo 1/Lezioni"
   ]
