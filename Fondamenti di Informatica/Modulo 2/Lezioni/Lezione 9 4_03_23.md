@@ -52,3 +52,41 @@ Con una dimostrazione simile (che vi fate per esercizio) si dimostra che dato un
 https://uniroma2.sharepoint.com/:p:/r/sites/DI_IANNI-8066834-FONDAMENTI_DI_INFORMATICA_1/Materiale%20del%20corso/Lezione09-riduzioni-IntroComplessita%CC%80.pptx?d=wce90e2d940284c36a2f47eb03310b906&csf=1&web=1&e=kCCw3K
 
 # Complessità
+## La Torre di Hanoi
+Consideriamo una torre di 3 soli dischi impilata, diciamo, sull’asta a sinistra: l’obiettivo è spostarla sull’asta a destra. L’asta centrale avrà la funzione di “asta d’appoggio”. 
+![[Pasted image 20230404145148.png|center]]
+Portiamo a termine il compito eseguendo le seguenti mosse : 
+1) poiché possiamo spostare un solo disco alla volta, spostiamo il disco più  piccolo sull’asta a destra; 
+2) ora possiamo spostare il disco di grandezza intermedia e, poiché non possiamo appoggiarlo sul disco più piccolo, lo impiliamo nell’asta al centro;
+3) a questo punto, spostiamo il disco più piccolo sull’asta al centro, appoggiandolo sul disco di grandezza intermedia;
+4) spostiamo il disco più grande sull’asta a destra; 
+5) spostiamo il disco più piccolo dall’asta centrale sull’asta a sinistra ; 
+6) spostiamo il disco di grandezza intermedia sull’asta a destra, appoggiandolo sul disco più grande
+7) Infine, spostiamo il disco più piccolo sull’asta a destra, appoggiandolo sul disco di grandezza intermedia: fatto! 
+Dunque, abbiamo spostato una torre di 3 dischi utilizzando 7 spostamenti di dischi singoli, e non è possibile realizzare il nostro compito utilizzando un numero inferiore di spostamenti di dischi singoli. 
+Per spostare una torre di 4 dischi è necessario:
+spostare la sotto-torre costituita dai 3 dischi più piccoli dall’asta di sinistra a quella centrale, poi spostare il disco più grande sull’asta di destra ,
+e, infine, spostare la sotto-torre costituita dai 3 dischi più piccoli dall’asta centrale a quella di destra. E *non* possiamo far di meglio.
+Questo procedimento è generalizzabile. Per spostare una torre di n dischi è necessario:
+1. spostare la sotto-torre costituita dagli n-1 dischi più piccoli dall’asta di sinistra a quella centrale (configurazione 4) nella figura); 
+2. poi spostare il disco più grande sull’asta di destra (configurazione 5) nella figura);
+3. infine, spostare la sotto-torre costituita dagli n-1 dischi più piccoli dall’asta centrale a quella di destra (configurazione 7) nella figura).
+E non possiamo far di meglio.
+Quindi, se indichiamo con $M(n)$ il numero di spostamenti di dischi singoli necessario a spostare una torre di n dischi, vale la seguente relazione di ricorrenza: $$M(n) = 2 M(n-1) +1$$
+Che ha come soluzione $M(n) = 2^n-1$
+E non possiamo far di meglio.
+Quindi, se indichiamo con $M(n)$ il numero di spostamenti di dischi singoli necessario a spostare una torre di n dischi, abbiamo che	$M(n) = 2^n-1$
+E non possiamo far di meglio. Ma che significa?
+Che per spostare la Torre di Hanoi occorrono (sono necessari) $2^{64} - 1 = 18.446.744.073.709.551.615$ spostamenti di dischi e che, anche se i monaci riuscissero a spostare un disco in 1 secondo, occorrerebbero  almeno 18.446.744.073.709.551.615  secondi per spostare la torre, che corrispondono a circa 5.845.580.504 secoli. Un tempo così lungo che quando il sole diverrà una gigante rossa e brucerà la Terra, il gioco non sarà ancora stato completato. 
+lo sappiamo risolvere o no il problema della torre di Hanoi? Certo, che lo sappiamo risolvere!
+Vi ho mostrato il procedimento che sposta una torre di n dischi da un’asta all’altra. Tuttavia, anche se sappiamo come fare a spostare una torre grande quanto ci pare, se la torre è abbastanza grande l’intera nostra vita non sarà sufficiente a vedere la torre spostata.
+Se il tempo necessario a calcolare la soluzione di  (un’istanza di) un problema è troppo elevato, saper calcolare quella soluzione è equivalente a non saperla calcolare.
+## La teoria della complessità computazionale
+Studia la “quantità di risorse” **necessarie** a risolvere un problema, o meglio: a decidere un linguaggio, e suddivide i problemi in *“trattabili”* e *“intrattabili”* dipendentemente dal fatto che la “quantità di risorse” necessarie cresca come un polinomio o più di un polinomio.
+Ma perché la crescita polinomiale è discriminante fra trattabilità e intrattabilità?
+Beh, lo avete visto quanto è grande $2^{64}$: un numero di 20 (venti!) cifre. Invece, $64^2$ è il minuscolo 4096. Piccolo.
+Chiara l’idea?
+Una funzione più che polinomiale cresce infinitamente più velocemente di una funzione polinomiale, e, se quella funzione rappresenta la “quantità di risorse” necessaria a risolvere un problema..
+Sì, ma qui stiamo parlando di funzioni che rappresentano la “quantità di risorse” necessaria a risolvere un problema. Ma qual è l’argomento di queste funzioni?
+Cioè: in funzione di cosa esprimiamo la complessità di un problema?
+E, poi, quali sono le “risorse” che prendiamo in considerazione?
