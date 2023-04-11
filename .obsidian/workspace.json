@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1c4c1e3c24679095",
+        "id": "0dfa46392648c240",
         "type": "tabs",
         "children": [
           {
-            "id": "a399506d533c0633",
+            "id": "dc51d924c1d9b0dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -154,10 +154,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "a399506d533c0633",
+  "active": "dc51d924c1d9b0dd",
   "lastOpenFiles": [
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 9 4_04_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 6_04_23.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 9 4_04_23.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230404145148.png",
     "Logica e Reti Logiche/Lezioni/Lezione 5.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230403111226.png",
