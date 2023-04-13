@@ -3,11 +3,11 @@
 Una sistema formale consiste in *schemi di assiomi* e *regole di inferenza*, oltre che dell’insieme dei simboli che vengono usati e delle definizioni che stabiliscono quali sequenze di simboli sono “formula”. Nel caso della logica proposizionale gli schemi di assiomi sono un insieme di formule ben formate e le regole di inferenza sono relazioni di formule di questo tipo: *“Dalle formule $X_1 , . . . , X_n$ segue la formula $Y$ ”*. Vediamo subito un esempio.
 Consideriamo i due assiomi seguenti:
 $$\begin{align}
-A_1:X\Rightarrow (Y\Rightarrow X) \\&\\ A_2:(X\Rightarrow (Y\Rightarrow Z))\Rightarrow((X\Rightarrow Y)\Rightarrow(X\Rightarrow Z))
+&A_1:X\Rightarrow (Y\Rightarrow X) \\ \\ &A_2:(X\Rightarrow (Y\Rightarrow Z))\Rightarrow((X\Rightarrow Y)\Rightarrow(X\Rightarrow Z))
 \end{align}$$
 >[!danger]- Esercizio 1
 >Verificare che $A_1$ e $A_2$ sono tautologie.
-
+<
 La regola di inferenza che usiamo si chiama *Modus Ponens*: “Dalle formule $X$ e $X\Rightarrow Y$ segue la foruma $Y$ ”. In simboli la scriviamo cosı̀
 $$\begin{align}
 X,X\Rightarrow Y &\\----- &\\Y\space\space\space\space\space\space\space
