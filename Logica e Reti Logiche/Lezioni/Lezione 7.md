@@ -47,6 +47,57 @@ Ora possiamo dare una definizione precisa di *formula ben formata*.
 >[!important]- Definizione 2.2 (Formule ben formate)
 >Se $t_1 , . . . , t_n$ sono termini e $P (n)$ è una lettera predicativa con $n$ argomenti, allora $P^{(n)}(t_1 , . . . , t_n )$ è una **formula ben formata** *(f.b.f.)*. Queste si chiamano formule **atomiche**. Inoltre:
 >1. Se $\mathcal F$ è una $f.b.f.$, allora anche $\lnot\mathcal F$ è una $f.b.f$.
->2. Se $mathcal F$ e $\mathcal G$ sono f.b.f. allora anche F ◦ G è una f.b.f., dove con ◦ abbiamo indicato uno qualunque dei connettivi ∧, ∨, →, ≡.
->3. Infine, se F è una f.b.f. e x è una variabile, allora anche ∀xF e ∃xF sono f.b.f.
->4. Nient’altro è una f.b.f.
+>2. Se $\mathcal F$ e $\mathcal G$ sono $f.b.f.$ allora anche $\mathcal F\bullet\mathcal G$ è una $f.b.f.$, dove con $\bullet$ abbiamo indicato uno qualunque dei connettivi $\wedge,\vee,\rightarrow,\equiv$.
+>3. Infine, se $\mathcal F$ è una $f.b.f.$ e $x$ è una variabile, allora anche $\forall x\mathcal F$ e $\exists x\mathcal F$ sono $f.b.f.$
+>4. Nient’altro è una $f.b.f$.
+
+>[!danger]- Esercizio 5
+
+>[!important]- Definizione 2.3 (Interpretazione)
+>Data una f.b.f. F, una sua interpretazione consiste in
+>1. Un insieme non vuoto $D$ che chiamiamo *dominio*;
+>2. Una proprietà o una relazione per ogni lettera predicativa $P$ in $\mathcal F$;
+>3. Una funzione per ogni lettera funzionale $f$ in $\mathcal F$;
+>4. Un elemento del dominio per ogni costante $a$ in $\mathcal F$.
+
+Nel determinare la verità o meno di una formula in una data interpretazione, il significato dei connettivi che hanno nella logica proposizionale, il significato dei quantificatori è quello usuale.
+### Esempio
+Consideriamo la formula $$\forall x\exists yP(f(x,a),y)\space\space\space(6)$$
+<u>Interpretazione 1</u>. Dominio $\mathbb N$; $P (x, y) =$*“x è uguale a y”*; $f (x, y) = x^y$ ; $a = 2$. In questa interpretazione la formula si legge **“Per ogni numero naturale $x$ esiste un numero naturale $y$ tale che $x^2 = y$”**. Direi che è $T$.
+<u>Interpretazione 2</u>. Tutto come nell’Interpretazione 1, tranne che $P (x, y) =$ *“x è maggiore di y”*. In questa interpretazione la (6) si legge, **“Per ogni numero naturale $x$ esiste un numero naturale $y$ tale che $x_2$ è maggiore di $y$”**. Quindi è $F$, perché non è vera per $x = 1$.
+
+>[!danger]- Esercizio 6 
+>Trovare altre due interpretazioni della (6), una in cui è $T$, l’altra in cui è $F$.
+
+
+## 3 Variabili libere e vincolate. Formule chiuse
+Per tutte le formule viste finora, una volta data una interpretazione $I$, la formula risultava $T$ o $F$ nell’interpretazione $I$. Tuttavia, questo non è vero per ogni $f.b.f.$ in accordo alla *Definizione 2.2*. Per esempio, osservate che la formula $\forall xP(x,y)$ è una $f.b.f.$ secondo la *Definizione 2.2*. Proviamo a darne una interpretazione: dominio $\mathbb N$ e $P (x, y) =$*“x è maggiore di y”*. In questa interpretazione la formula si legge **“Per ogni numero naturale $x$ si ha che $x$ è maggiore di $y$”**. Vera o falsa? Non si può dire perché non sappiamo chi è
+$y$. In quella formula si dice che $x$ è una **variabile vincolata**, mentre $y$ è **libera**.
+>[!important]- Definizione 3.1 (Variabili libere e vincolate)
+>In una $f.b.f.$ si dice **vincolata** una variabile che sta nel campo d’azione di un quantificatore. Altrimenti la variabile si dice **libera**.
+
+>[!danger]- Esercizio 7
+
+>[!important]- Definizione 3.2 (Formule chiuse)
+>Una f.b.f. senza variabili libere si dice chiusa.
+
+>[!danger]- Esercizi 8-9
+
+## Formule Valide vs Tautologie
+Nella Sezione 1 abbiamo visto che ci sono delle formule che sono vere in ogni interpretazione.
+>[!important]- Definizione 4.1. (Formule valide) 
+>Una formula $\mathcal F$ vera in ogni interpretazione si dice **valida**.
+
+Perchè non le chiamiamo *tautologie*, come nel caso della logica proposizionale? Perché vogliamo riservare il termine tautologie per un sottoinsieme delle formule valide. Per esempio, considerate la formula seguente:$$\forall xP(x)\vee\lnot(\forall xP(x))$$
+Questa formula del tipo $\mathcal F\vee\lnot\mathcal F$, quindi chiaramente deve essere vera in ogni interpretazione. Nella logica del primo ordine si chiamano *tautologie* le formule che sono istanze di tautologie della logica proposizionale. Per esempio, la formula$$\forall xP(x)\rightarrow(\exists xQ(x)\rightarrow\forall xP(x))\space\space\space(7)$$
+Si ottiene dalla formula $X \rightarrow (Y\rightarrow X)$ sostituendo $\forall xP(x)$ a $X$ e $\exists xQ(x)$. La formula (7) pertanto è una tautologia mentre, per esempio la (3), pur essendo valida, non è una tautologia.
+Si noti che una tautologia è vera in ogni interpretazione *indipendentemente* dal significato che hanno i quantificatori, mentre una formula valida che non è una tautologia è vera in ogni interpretazione *per* il significato che hanno i quantificatori.
+## 5 Interdipendenza dei quantificatori
+I due quantificatori $\forall$ e $\exists$ non sono indipendenti, nel senso che si può “definire” uno in funzione dell’altro. Per esempio, la formula $\lnot\exists xP(x)$ è equivalente alla formula $\forall x\lnot P(x)$.
+Infatti, data una qualunque interpretazione, la prima sta dicendo che “non esiste un elemento del dominio per cui vale la proprietà $P$ ”, la seconda sta dicendo che “per ogni elemento del dominio non vale la proprietà $P$ ”.
+>[!danger]- Esercizio 10
+
+## Conclusioni
+In questo episodio abbiamo introdotto sintassi e semantica della logica del primo ordine, abbiamo osservato che ogni formula chiusa è $T$ o $F$ in una data interpretazione e abbiamo definito *valide* le formule che risultano $T$ in ogni interpretazione.
+Se vogliamo mostrare che una certa formula non è valida, ci basta dare un *controesempio*, ossia una interpretazione in cui è falsa. E se vogliamo mostrare che è valida? Non possiamo certo elencare tutte le possibili interpretazioni (come in una tabella di verità per una formula della logica proposizionale), perché le possibili interpretazioni di una formula della logica del primo ordine sono infinite! 
+Nel prossimo episodio vedremo che invece il metodo dei *tableaux*, che abbiamo introdotto per la logica proposizionale, può essere facilmente esteso anche alla logica del primo ordine per dimostrare che una data formula è valida.
