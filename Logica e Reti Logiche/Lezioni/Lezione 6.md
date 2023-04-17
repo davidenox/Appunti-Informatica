@@ -7,7 +7,7 @@ $$\begin{align}
 \end{align}$$
 >[!danger]- Esercizio 1
 >Verificare che $A_1$ e $A_2$ sono tautologie.
-<
+
 La regola di inferenza che usiamo si chiama *Modus Ponens*: “Dalle formule $X$ e $X\Rightarrow Y$ segue la foruma $Y$ ”. In simboli la scriviamo cosı̀
 $$\begin{align}
 X,X\Rightarrow Y &\\----- &\\Y\space\space\space\space\space\space\space
@@ -60,7 +60,7 @@ La sequenza di formule $(1), . . . , (7)$ qui sopra è una derivazione della for
 >[!danger]- Esercizi 6-9
 
 >[!important]- Teorema 3.2 (Deduzione)
->Sia $\Gamma$ un insieme di formule e siano $\mathcal F$ e $\mathcal G$ due formule. Nel sistema $\mathcal S_0$ se $\Gamma\cup\{\mathcal F\}\vdash\mathcal G$ allora $\gamma\vdash\mathcal F\Rightarrow\mathcal G$.
+>Sia $\Gamma$ un insieme di formule e siano $\mathcal F$ e $\mathcal G$ due formule. Nel sistema $\mathcal S_0$ se $\Gamma\cup\{\mathcal F\}\vdash\mathcal G$ allora $\Gamma\vdash\mathcal F\Rightarrow\mathcal G$.
 
 ## 4 Conclusioni
 In questo episodio abbiamo introdotto i *sistemi assiomatici* per la logica proposizionale.
