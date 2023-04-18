@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d09f79ec67478dbf",
+        "id": "1855ee0b969e2bcf",
         "type": "tabs",
         "children": [
           {
-            "id": "f06325ed740180b0",
+            "id": "f2cff86aad24e336",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 7.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625
+    "width": 277.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 7.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 7.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 7.md"
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md"
               }
             }
           },
@@ -154,8 +155,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "f06325ed740180b0",
+  "active": "f2cff86aad24e336",
   "lastOpenFiles": [
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
     "Logica e Reti Logiche/Lezioni/Lezione 7.md",
     "Logica e Reti Logiche/Lezioni/Lezione 6.md",
     "Logica e Reti Logiche/Lezioni/Lezione 5.md",
@@ -197,7 +199,6 @@
     "Logica e Reti Logiche/Lezioni",
     "README.md",
     "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 17 - Macchine di Turing.md",
-    "Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 10 - Minimizzazione di ASF.md",
     "Calcolo delle Probabilità e Statistica/Lezioni",
     "Calcolo delle Probabilità e Statistica",
     "Logica e Reti Logiche",
