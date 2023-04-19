@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1855ee0b969e2bcf",
+        "id": "345496e06230597f",
         "type": "tabs",
         "children": [
           {
-            "id": "f2cff86aad24e336",
+            "id": "db00591a3af1b4e3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 7.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 7.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md"
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 7.md"
               }
             }
           },
@@ -155,7 +154,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "f2cff86aad24e336",
+  "active": "db00591a3af1b4e3",
   "lastOpenFiles": [
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
     "Logica e Reti Logiche/Lezioni/Lezione 7.md",
