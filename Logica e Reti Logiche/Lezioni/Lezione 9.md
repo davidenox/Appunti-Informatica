@@ -36,3 +36,4 @@ Ci manca un solo pezzo per completare il puzzle: dobbiamo dimostrare il punto (2
 
 >[!danger]-  Esercizi 4-7
 
+Da completare e correggere
