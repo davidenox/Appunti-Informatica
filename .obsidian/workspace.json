@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -155,17 +154,17 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "9b7ad89978566e57",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Pasted image 20230426111908.png",
-    "Pasted image 20230426111531.png",
-    "Pasted image 20230426110110.png",
-    "Pasted image 20230426105654.png",
-    "Pasted image 20230426105150.png",
-    "Pasted image 20230426102421.png",
-    "Pasted image 20230426101756.png",
-    "Pasted image 20230426101616.png",
-    "Pasted image 20230426101527.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426111908.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426111531.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426110110.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426105654.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426105150.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426102421.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426101756.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426101616.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230426101527.png",
     "Logica e Reti Logiche/Lezioni/Lezione 7.md",
     "Logica e Reti Logiche/Lezioni/Lezione 8.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 20_04_23.md",
