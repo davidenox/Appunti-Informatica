@@ -151,8 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,7 +163,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "323299a3dd2b1a27",
   "lastOpenFiles": [
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 9_05_23.md",
