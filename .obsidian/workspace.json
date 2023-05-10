@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7bcc17364bf8b57d",
+        "id": "67c1f5164dd52173",
         "type": "tabs",
         "children": [
           {
-            "id": "9f06135408773518",
+            "id": "cd6dce4aa4fdd82e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -163,9 +162,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "323299a3dd2b1a27",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Pasted image 20230509155657.png",
+    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230509155657.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 9_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
