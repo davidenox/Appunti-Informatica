@@ -18,3 +18,4 @@ I componenti elementari di un computer sono progettati per distinguere la differ
 di potenziale agli estremi di un conduttore, e il modo più affidabile per farlo è distinguere
 soltanto fra due valori: alto e basso. La codifica privilegiata dai computer perciò è quella
 binaria.
+-in costruzione
