@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a8b190a56ea184af",
+        "id": "a51164ec19efa2a2",
         "type": "tabs",
         "children": [
           {
-            "id": "43c62cc6233e3c62",
+            "id": "d04545276a823c7d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 11.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 11.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 11.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 11.md"
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md"
               }
             }
           },
@@ -163,8 +163,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "d04545276a823c7d",
   "lastOpenFiles": [
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 11 - Eccezioni.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230516113305.png",
+    "Logica e Reti Logiche/Lezioni/Lezione 11.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230511172343.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230511172129.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230511171631.png",
@@ -174,7 +178,6 @@
     "Logica e Reti Logiche/Immagini/Pasted image 20230511165231.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230511164924.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230511164121.png",
-    "Logica e Reti Logiche/Lezioni/Lezione 11.md",
     "Logica e Reti Logiche/Lezioni/Lezione 10.md",
     "README.md",
     "Logica e Reti Logiche/Lezioni/Lezione 6.md",
@@ -183,9 +186,7 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 9_05_23.md",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230509155657.png",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 27_04_23.md",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230508122948.png",
     "Logica e Reti Logiche/Lezioni/Lezione 9.md",
     "Logica e Reti Logiche/Lezioni/Lezione 8.md",
     "Logica e Reti Logiche/Lezioni/Lezione 5.md",
@@ -202,7 +203,6 @@
     "LRL",
     "Logica e Reti Logiche/Lezioni/Lezione 3.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 7 28_03_23.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 23_03_23.md",
     "prova.txt",
     "Logica e Reti Logiche/Esercizi",
     "Logica e Reti Logiche/Immagini",
