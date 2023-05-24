@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md"
+                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md"
               }
             }
           },
@@ -165,8 +164,11 @@
   },
   "active": "d04545276a823c7d",
   "lastOpenFiles": [
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 11 - Eccezioni.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 27_04_23.md",
+    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 11 - Eccezioni.md",
     "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230516113305.png",
     "Logica e Reti Logiche/Lezioni/Lezione 11.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230511172343.png",
@@ -183,10 +185,7 @@
     "Logica e Reti Logiche/Lezioni/Lezione 6.md",
     "Logica e Reti Logiche/Lezioni/Lezione 7.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 11_05_23.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 9_05_23.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 27_04_23.md",
     "Logica e Reti Logiche/Lezioni/Lezione 9.md",
     "Logica e Reti Logiche/Lezioni/Lezione 8.md",
     "Logica e Reti Logiche/Lezioni/Lezione 5.md",
