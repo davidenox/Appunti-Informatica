@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625
+    "width": 277.50152587890625,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -162,7 +163,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "d04545276a823c7d",
   "lastOpenFiles": [
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 27_04_23.md",
