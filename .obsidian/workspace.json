@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fd752a0af18a4585",
+            "id": "7e8fa321fe03cbf7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 14.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 15.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 14.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 14.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 14.md"
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 15.md"
               }
             }
           },
@@ -164,21 +164,22 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531144222.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531144139.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531144115.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531144057.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531144028.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531143957.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531143828.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531143807.png",
-    "LRL/img/img65.png.md",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531151240.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531151144.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531151103.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531145829.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531145755.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531145724.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531145655.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531145611.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531145605.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531145538.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531145515.png",
     "Logica e Reti Logiche/Lezioni/Lezione 14.md",
+    "Logica e Reti Logiche/Lezioni/Lezione 15.md",
+    "LRL/img/img65.png.md",
     "LRL/img",
     "LRL",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531143729.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531143656.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531143626.png",
     "Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
     "Logica e Reti Logiche/Lezioni/Lezione 13.md",
     "README.md",
@@ -204,7 +205,6 @@
     "Logica e Reti Logiche/Lezioni/Lezione 7.md",
     "Logica e Reti Logiche/Lezioni/Lezione 9.md",
     "Logica e Reti Logiche/Lezioni/Lezione 8.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 5.md",
     "prova.txt",
     "Logica e Reti Logiche/Esercizi",
     "Logica e Reti Logiche/Immagini",
