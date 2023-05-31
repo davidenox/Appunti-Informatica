@@ -46,4 +46,3 @@ Il simbolo con cui in genere si indica un multiplexer è questo qui
 
 Con un MULTIPLEXER $2^{n}:1$ si può implementare una qualunque funzione con $n$ variabili, associando agli input di selezione $s_{0},....,s_{n-1}$ del multiplexer le variabili della funzione, e agli input $x_{0},....,x_{2^n-1}$ del multiplexer i valori Booleani che la funzione assume nelle righe corrispondenti della tabella di verità. Per esempio, la funzione $y=ab +\bar a\bar b$ si può implementare così
 ![[Pasted image 20230531113033.png|center]]
-ww

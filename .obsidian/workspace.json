@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "064a027b2b8966fa",
+            "id": "3290f83888d87bf9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 13.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 14.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 13.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 13.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 13.md"
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 14.md"
               }
             }
           },
@@ -162,11 +162,15 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "064a027b2b8966fa",
+  "active": "3290f83888d87bf9",
   "lastOpenFiles": [
+    "Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
+    "Logica e Reti Logiche/Lezioni/Lezione 14.md",
+    "Logica e Reti Logiche/Lezioni/Lezione 13.md",
+    "README.md",
+    "Calcolo delle Probabilità e Statistica/Lezioni/Lezione 2.md",
     "Ricerca Operativa/Lezioni/Lezione 1.md",
     "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 13.md",
     "appunti fi/mod ii/immagini/Pasted image 20230526130226.png.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230531113033.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230531113005.png",
@@ -192,7 +196,6 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 27_04_23.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 11 - Eccezioni.md",
     "Logica e Reti Logiche/Lezioni/Lezione 10.md",
-    "README.md",
     "Logica e Reti Logiche/Lezioni/Lezione 6.md",
     "Logica e Reti Logiche/Lezioni/Lezione 7.md",
     "Logica e Reti Logiche/Lezioni/Lezione 9.md",
@@ -200,9 +203,6 @@
     "Logica e Reti Logiche/Lezioni/Lezione 5.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 20_04_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 6_04_23.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
-    "Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
     "LRL/img",
     "LRL",
     "prova.txt",
