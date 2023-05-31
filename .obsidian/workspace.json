@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "11946c2f39a02ba0",
+        "id": "987da7e2d0768d33",
         "type": "tabs",
         "children": [
           {
-            "id": "549eea2800e83392",
+            "id": "064a027b2b8966fa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 12.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md"
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 12.md"
               }
             }
           },
@@ -162,11 +162,22 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "064a027b2b8966fa",
   "lastOpenFiles": [
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230529141804.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230529141634.png",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230529141519.png",
+    "Logica e Reti Logiche/Lezioni/Lezione 13.md",
+    "Logica e Reti Logiche/Lezioni/Lezione 12.md",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110548.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110530.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110510.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110433.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110357.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110329.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110259.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110230.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110206.png",
+    "Logica e Reti Logiche/Immagini/Pasted image 20230531110123.png",
+    "Logica e Reti Logiche/Lezioni/Lezione 11.md",
+    "Logica e Reti Logiche/Esercizi/Raccolta esercizi lez.2.md",
     "appunti fi/mod ii/immagini/Pasted image 20230526130226.png.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
     "appunti fi/mod ii/immagini",
@@ -178,15 +189,6 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 27_04_23.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 11 - Eccezioni.md",
-    "Fondamenti di Informatica/Modulo 2/Immagini/Pasted image 20230516113305.png",
-    "Logica e Reti Logiche/Lezioni/Lezione 11.md",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230511172343.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230511172129.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230511171631.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230511171448.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230511171055.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230511170828.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230511165231.png",
     "Logica e Reti Logiche/Lezioni/Lezione 10.md",
     "README.md",
     "Logica e Reti Logiche/Lezioni/Lezione 6.md",
@@ -200,9 +202,6 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
     "Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 9 4_04_23.md",
-    "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 30_03_23.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 4.md",
-    "LRL/img/img7.png.md",
     "LRL/img",
     "LRL",
     "prova.txt",
