@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 15.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 11.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 15.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 15.md",
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logica e Reti Logiche/Lezioni/Lezione 15.md"
+                "file": "Logica e Reti Logiche/Lezioni/Lezione 11.md"
               }
             }
           },
@@ -162,8 +162,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "7e8fa321fe03cbf7",
   "lastOpenFiles": [
+    "Logica e Reti Logiche/Lezioni/Lezione 10.md",
+    "Logica e Reti Logiche/Lezioni/Lezione 11.md",
+    "Logica e Reti Logiche/Lezioni/Lezione 9.md",
+    "Logica e Reti Logiche/Lezioni/Lezione 15.md",
     "Logica e Reti Logiche/Immagini/Pasted image 20230531151240.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230531151144.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230531151103.png",
@@ -174,9 +178,7 @@
     "Logica e Reti Logiche/Immagini/Pasted image 20230531145611.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230531145605.png",
     "Logica e Reti Logiche/Immagini/Pasted image 20230531145538.png",
-    "Logica e Reti Logiche/Immagini/Pasted image 20230531145515.png",
     "Logica e Reti Logiche/Lezioni/Lezione 14.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 15.md",
     "LRL/img/img65.png.md",
     "LRL/img",
     "LRL",
@@ -189,7 +191,6 @@
     "appunti fi/mod ii/immagini/Pasted image 20230526130226.png.md",
     "LRL/img/img51.png.md",
     "Logica e Reti Logiche/Lezioni/Lezione 12.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 11.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
     "appunti fi/mod ii/immagini",
     "appunti fi/mod ii",
@@ -200,10 +201,8 @@
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
     "Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 27_04_23.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 11 - Eccezioni.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 10.md",
     "Logica e Reti Logiche/Lezioni/Lezione 6.md",
     "Logica e Reti Logiche/Lezioni/Lezione 7.md",
-    "Logica e Reti Logiche/Lezioni/Lezione 9.md",
     "Logica e Reti Logiche/Lezioni/Lezione 8.md",
     "prova.txt",
     "Logica e Reti Logiche/Esercizi",

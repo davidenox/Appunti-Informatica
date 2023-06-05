@@ -14,7 +14,7 @@ In tutta la seconda parte del corso assumeremo di avere a disposizione delle por
 
 ![[Pasted image 20230511164924.png|center]]
 
-Data una qualunque formula $\mathcal F$ della logica proposizionale, possiamo sempre costruire un circuito che implementi $\mathcal F$ usando le porte logiche elementari. Per esempio, la formula $x_0\Rightarrow (x_1\land x_2 )$ è equivalente alla formula $\bar{x}_0 \lor(x_1 1\land x_2)$, quindi un circuito che la implementa è
+Data una qualunque formula $\mathcal F$ della logica proposizionale, possiamo sempre costruire un circuito che implementi $\mathcal F$ usando le porte logiche elementari. Per esempio, la formula $x_0\Rightarrow (x_1\land x_2 )$ è equivalente alla formula $\bar{x}_0 \lor(x_1\land x_2)$, quindi un circuito che la implementa è
 
 ![[Pasted image 20230511165231.png|center]]
 
