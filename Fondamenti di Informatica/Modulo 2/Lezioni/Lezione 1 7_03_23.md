@@ -30,7 +30,7 @@ Osserviamo che le caratteristiche individuate da Turing indicano come istruzione
 #### Esempio
 Consideriamo il PROBLEMA SOMMA: dati due interi n e k, ci viene richiesto di calcolare s=n+k. Vogliamo progettare un procedimento che risolva questo problema. Ebbene: calcolare la somma di due interi è certamente facile; allora, potremmo pensare che l’istruzione “calcola n + k” sia un’istruzione elementare.
 **ATTENZIONE**: stiamo cercando un procedimento che risolva un problema (il PROBLEMA SOMMA), quindi “calcola n + k” deve essere un’istruzione elementare qualunque valore venga assegnato a n e k. Però, se n = 37895 e k = 441238 ... a nessuno di noi, soltanto guardando i due addendi, salta in mente il risultato, anche se le addizioni le sappiamo fare benissimo!
-Ma se disponessimo di una tabella sufficientemente grande che indica le somme di tutti i numeri naturali compresi fra 0 e 1000000 (ad esempio), ci basterebbe guardare nella cella opportuna e avremmo la somma cercata:
+Ma se disponessimo di una tabella sufficientemente grande che indica le somme di tutti i numeri naturali compresi fra 0 e 1'000'000 (ad esempio), ci basterebbe guardare nella cella opportuna e avremmo la somma cercata:
 
 ![[tabellina 1.png|center]]
 Il problema è che, per risolvere il PROBLEMA SOMMA, occorre indicare un procedimento che sappia addizionare qualunque coppia di numeri naturali, per quanto grandi essi siano, e, quindi, se volessimo considerare istruzione elementare la somma di qualunque coppia di numeri, dovremmo costruire una tabella infinita!
