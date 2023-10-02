@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625,
-    "collapsed": true
+    "width": 277.50152587890625
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md"
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md"
               }
             }
           },
@@ -163,10 +162,13 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "5b90bb0073efaa06",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Terzo Anno/Calcolo Numerico/Lezione 1.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Immagini",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Immagini/Pasted image 20231002153940.png",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md",
+    "Terzo Anno/Calcolo Numerico/Lezione 1.md",
     "Primo Anno/Programmazione dei calcolatori/struct_nome_voto.c",
     "Primo Anno/Programmazione dei calcolatori/sort.py",
     "Primo Anno/Geometria ed algebra/lezioni",
@@ -176,9 +178,8 @@
     "Primo Anno/Geometria ed algebra/Lezione 24.pdf",
     "Primo Anno/Geometria ed algebra/Lezione 23.pdf",
     "Primo Anno/Geometria ed algebra/Lezione 22.pdf",
-    "Primo Anno/Geometria ed algebra/Lezione 21.pdf",
     "Secondo Anno/Algoritmi e Strutture Dati/Lezione 1.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezione 1.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezione 1.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
     "README.md",
@@ -200,7 +201,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 1.md",
-    "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 12.md",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151240.png",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151144.png",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151103.png",
@@ -209,7 +209,6 @@
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531145724.png",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531145655.png",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531145611.png",
-    "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531145605.png",
-    "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531145538.png"
+    "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531145605.png"
   ]
 }
