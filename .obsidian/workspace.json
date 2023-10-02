@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4c34e6de69b58816",
+        "id": "896b8aacaecf5180",
         "type": "tabs",
         "children": [
           {
-            "id": "7cacb318d55f239f",
+            "id": "f6ce276e0993011f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md"
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md"
               }
             }
           },
@@ -162,25 +162,28 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "323299a3dd2b1a27",
+  "active": "f6ce276e0993011f",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Lezione 1.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezione 1.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezione 1.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezione 1.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+    "Secondo Anno/Algoritmi e Strutture Dati",
+    "Terzo Anno/Calcolo Numerico",
+    "Secondo Anno/Sistemi Operativi e Reti",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione",
+    "Secondo Anno/Basi di Dati e Conoscenze",
+    "Terzo Anno",
     "Secondo Anno/Ricerca Operativa/testi_lezione_AMPL.docx",
     "Secondo Anno/Ricerca Operativa/olii_curve_fitting.pdf",
     "Secondo Anno/Ricerca Operativa/lab03.mod",
     "Secondo Anno/Ricerca Operativa/lab03.dat",
-    "Secondo Anno/Ricerca Operativa/lab02.run",
-    "Secondo Anno/Ricerca Operativa/lab02.mod",
-    "Secondo Anno/Ricerca Operativa/lab02.lp",
-    "Secondo Anno/Ricerca Operativa/lab02.dat",
-    "Secondo Anno/Ricerca Operativa/lab01.run~",
-    "Secondo Anno/Ricerca Operativa/lab01.run",
-    "Secondo Anno/Ricerca Operativa/lab01.mod",
     "README.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 9_05_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 11_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 20_04_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 6_04_23.md",
@@ -197,9 +200,6 @@
     "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 1.md",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 12.md",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 10.md",
-    "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 13.md",
-    "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 4.md",
-    "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 9.md",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151240.png",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151144.png",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151103.png",
