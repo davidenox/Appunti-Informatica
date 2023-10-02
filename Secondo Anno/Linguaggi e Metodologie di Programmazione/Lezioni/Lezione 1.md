@@ -41,17 +41,28 @@ Tali blocchi assumono il nome di:
 Tali nomi implicano differenze dipendenti dal contesto del modello di linguaggio usato.
 # Programmazione orientata agli oggetti
 ## Principi fondamentali dell'OOP 
-1. Encapsulation
+1. **Encapsulation**:
 • Nascondere dettagli implementativi, permettendo di raggiungere solo alcune
 informazioni tramite accessors e mutators.
-2. Abstraction
-• Direttamente correlata alla precedente
+2. **Abstraction**:
+• Direttamente correlata alla precedente;
 • La Abstraction ha a che fare con la definizione di modelli, viste etc.. per gli oggetti
-che si vogliono rappresentare
+che si vogliono rappresentare;
 • …mentre la encapsulation garantisce che le implementazioni di tali modelli
-rimangano opache ai loro utilizzatori
+rimangano opache ai loro utilizzatori;
 • “An abstraction denotes the essential characteristics of an object that distinguish it
 from all other kinds of object and thus provide crisply defined conceptual
 boundaries, relative to the perspective of the viewer.” — G. Booch, Object-
 Oriented Design With Applications, Benjamin/Cummings, MenloPark, California,
 1991.
+3. **Inheritance**:
+• La ereditarietà permette di raccogliere a fattor comune caratteristiche condivise da
+oggetti simili, definendo dei modelli che rappresentino tali caratteristiche, e
+specializzando tali modelli per insiemi di oggetti via via più ristretti, ma accomunati
+da una similarità maggiore (ossia, più caratteristiche comuni).
+>[!info]- Esempio: 
+>la classe delle autovetture accomuna tutti gli oggetti con 3 o 4 ruote dotate di un qualche sistema di propulsione e che permettano a delle persone di spostarsi. La classe delle citycar può essere definita come una specializzazione della precedente (quindi eredita dalla precedente) perché comprende tutte le sue caratteristiche, ed ha in più caratteristiche aggiuntive, o restrizioni su quelle già definite (e.g. avere dimensioni ridotte, o bassi consumi etc..)
+
+4. **Polymorphism** (la capacità di assumere diverse forme):
+• Overriding (run-time polymorphism);
+• Overloading (compile-time polymorphism).
