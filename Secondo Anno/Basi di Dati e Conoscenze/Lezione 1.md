@@ -1,6 +1,3 @@
-
-
-
 # Programma del corso
 
 1. *Nozioni di base*: Caratteristiche di un sistema di basi di dati. Sistemi informativi e basi di dati. Indipedenza logica e fisica dei dati.
