@@ -41,3 +41,19 @@ Si hanno *n* monete, tutte identiche d'aspetto. Una delle monete è **Falsa**, e
 *Complessità temporale dell'algoritmo* : # di pesate che esegue prima di individuare la moneta falsa. Dipende dalla dimensione dell'istanza e dall'istanza stessa.
 *Complessità temporale nel caso peggiore* : **massimo** di pesate che esegue su una istanza di una certa dimensione. È una delimitazione superiore a quanto "costa" risolvere una *generica* istanza. Espressa come funzione della dimensione dell'istanza.
 *Efficienza dell'algoritmo* : L'algoritmo deve fare poche pesare, deve essere *veloce*. Ma veloce rispetto a cosa? Quando si può dire che un algoritmo è veloce?
+
+
+... continua ...
+
+### Lower bound
+
+>[!important]- Teorema
+>Un qualsiasi algoritmo che correttamente individua la moneta falsa fra *n* monete deve effettuare nel caso peggiore $\log_3 n$ pesate.
+
+La dimostrazione usa argomentazioni matematiche per mostrare che un *generico* algoritmo se è corretto deve avere almeno una certa complessità temporale nel caso peggiore.
+Dimostrazione elegante e non banale che usa la tecnica dell'*albero di decisione* di un problema
+
+>[!info]- Alg4 è un algoritmo ottimo per il problema.
+
+## Esercizio
+Si devono cuocere *n* fritttelle. Si ha a disposizione una *padella* che riesce a contenere due frittelle alla volta. Ogni frittella va cotta su tutti e due i lati e ogni lato richiede un minuto. Progettare un algoritmi che frigge le frittelle nel *minor tempo possibile*. Si argomenti, se possibile, sulla *ottimalità* dell'algoritmo proposto.
