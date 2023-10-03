@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5b90bb0073efaa06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ecad6026ad8849be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md"
               }
             }
           },
@@ -175,10 +162,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "ecad6026ad8849be",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
     "Terzo Anno/Intelligenza Artificiale 1",
     "Terzo Anno/Ingegneria de Software",
     "Senza nome.md",
@@ -194,7 +182,7 @@
     "Primo Anno/Programmazione dei calcolatori/struct_nome_voto.c",
     "Primo Anno/Programmazione dei calcolatori/sort.py",
     "Secondo Anno/Algoritmi e Strutture Dati/Lezione 1.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezione 1.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
     "README.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
@@ -213,7 +201,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 14_03_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 9_03_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 7_03_23.md",
-    "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151240.png",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151144.png",
     "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151103.png",
