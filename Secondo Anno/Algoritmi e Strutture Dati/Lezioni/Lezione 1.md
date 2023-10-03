@@ -41,9 +41,23 @@ Si hanno *n* monete, tutte identiche d'aspetto. Una delle monete è **Falsa**, e
 *Complessità temporale dell'algoritmo* : # di pesate che esegue prima di individuare la moneta falsa. Dipende dalla dimensione dell'istanza e dall'istanza stessa.
 *Complessità temporale nel caso peggiore* : **massimo** di pesate che esegue su una istanza di una certa dimensione. È una delimitazione superiore a quanto "costa" risolvere una *generica* istanza. Espressa come funzione della dimensione dell'istanza.
 *Efficienza dell'algoritmo* : L'algoritmo deve fare poche pesare, deve essere *veloce*. Ma veloce rispetto a cosa? Quando si può dire che un algoritmo è veloce?
+Proviamo con il primo algoritmo : confronto le monete una alla volta.
+
+![[Pasted image 20231003163244.png]]
+![[Pasted image 20231003163301.png]]
+![[Pasted image 20231003163315.png]]
+![[Pasted image 20231003163328.png]]
+![[Pasted image 20231003163345.png]]
+![[Pasted image 20231003163354.png]]
+![[Pasted image 20231003163420.png]]
+![[Pasted image 20231003163432.png]]
 
 
-... continua ...
+
+
+
+
+
 
 ### Lower bound
 
