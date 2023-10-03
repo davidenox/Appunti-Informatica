@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ecad6026ad8849be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md"
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md"
               }
             }
           },
@@ -162,12 +175,13 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "ecad6026ad8849be",
   "lastOpenFiles": [
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
     "Terzo Anno/Intelligenza Artificiale 1",
     "Terzo Anno/Ingegneria de Software",
     "Senza nome.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
     "Terzo Anno/Fisica",
     "Terzo Anno/Algoritmi per i Big Data",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
@@ -179,7 +193,6 @@
     "Terzo Anno/Calcolo Numerico/Lezione 1.md",
     "Primo Anno/Programmazione dei calcolatori/struct_nome_voto.c",
     "Primo Anno/Programmazione dei calcolatori/sort.py",
-    "Primo Anno/Geometria ed algebra/lezioni",
     "Secondo Anno/Algoritmi e Strutture Dati/Lezione 1.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezione 1.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
