@@ -48,7 +48,7 @@ Si hanno *n* monete, tutte identiche d'aspetto. Una delle monete è **Falsa**, e
 ### Lower bound
 
 >[!important]- Teorema
->Un qualsiasi algoritmo che correttamente individua la moneta falsa fra *n* monete deve effettuare nel caso peggiore $\log_3 n$ pesate.
+>Un qualsiasi algoritmo che correttamente individua la moneta falsa fra *n* monete deve effettuare nel caso peggiore $\lceil\log_3 n\rceil$ pesate.
 
 La dimostrazione usa argomentazioni matematiche per mostrare che un *generico* algoritmo se è corretto deve avere almeno una certa complessità temporale nel caso peggiore.
 Dimostrazione elegante e non banale che usa la tecnica dell'*albero di decisione* di un problema
