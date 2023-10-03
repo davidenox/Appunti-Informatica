@@ -56,4 +56,4 @@ Dimostrazione elegante e non banale che usa la tecnica dell'*albero di decisione
 >[!info]- Alg4 è un algoritmo ottimo per il problema.
 
 ## Esercizio
-Si devono cuocere *n* fritttelle. Si ha a disposizione una *padella* che riesce a contenere due frittelle alla volta. Ogni frittella va cotta su tutti e due i lati e ogni lato richiede un minuto. Progettare un algoritmi che frigge le frittelle nel *minor tempo possibile*. Si argomenti, se possibile, sulla *ottimalità* dell'algoritmo proposto.
+Si devono cuocere *n* frittelle. Si ha a disposizione una *padella* che riesce a contenere due frittelle alla volta. Ogni frittella va cotta su tutti e due i lati e ogni lato richiede un minuto. Progettare un algoritmi che frigge le frittelle nel *minor tempo possibile*. Si argomenti, se possibile, sulla *ottimalità* dell'algoritmo proposto.
