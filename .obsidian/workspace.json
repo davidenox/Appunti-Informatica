@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "e336d86dce412441",
+        "id": "c39cbda2d98b91c3",
         "type": "tabs",
         "children": [
           {
-            "id": "ed21ac07fdebbed5",
+            "id": "92b50343bdad2232",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0d3613b9cb38082a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +116,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md"
-              }
+              "state": {}
             }
           },
           {
@@ -175,11 +154,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "92b50343bdad2232",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Immagini/Pasted image 20231004130713.png",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 14 - Input-Output.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
@@ -221,7 +200,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 11_05_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 20_04_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 6_04_23.md",
-    "Primo Anno/Logica e Reti Logiche/Immagini/Pasted image 20230531151240.png"
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 6_04_23.md"
   ]
 }
