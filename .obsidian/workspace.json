@@ -11,11 +11,9 @@
             "id": "ed21ac07fdebbed5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Immagini/Pasted image 20231002153940.png"
               }
             }
           }
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Immagini/Pasted image 20231002153940.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Immagini/Pasted image 20231002153940.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md"
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Immagini/Pasted image 20231002153940.png"
               }
             }
           },
@@ -162,13 +160,14 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "ed21ac07fdebbed5",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
     "Terzo Anno/Calcolo Numerico/Lezioni",
     "Senza nome",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 2.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Lezioni/Lezione 1.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
@@ -194,9 +193,7 @@
     "Terzo Anno/Intelligenza Artificiale 1",
     "Terzo Anno/Ingegneria de Software",
     "Terzo Anno/Fisica",
-    "Terzo Anno/Algoritmi per i Big Data",
-    "Secondo Anno/Basi di Dati e Conoscenze/Immagini",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Immagini/Pasted image 20231002153940.png",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Immagini/Pasted image 20231002153940.png",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
     "README.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
