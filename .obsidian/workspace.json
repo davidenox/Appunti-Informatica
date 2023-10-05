@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "c39cbda2d98b91c3",
+        "id": "5a4c8690b1712b10",
         "type": "tabs",
         "children": [
           {
-            "id": "92b50343bdad2232",
+            "id": "e337b1f11ee95681",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md"
+              }
             }
           },
           {
@@ -154,8 +162,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "323299a3dd2b1a27",
+  "active": "e337b1f11ee95681",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
@@ -182,7 +192,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163315.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163301.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163244.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
     "Senza nome 2.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini",
     "Senza nome 1.md",
@@ -192,7 +201,6 @@
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
     "Terzo Anno/Intelligenza Artificiale 1",
     "Terzo Anno/Ingegneria de Software",
-    "Terzo Anno/Fisica",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
     "README.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
