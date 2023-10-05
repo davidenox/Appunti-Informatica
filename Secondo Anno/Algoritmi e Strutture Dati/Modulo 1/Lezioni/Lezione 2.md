@@ -94,6 +94,7 @@ Algoritmo**Fibonacci3**$(intero \ n )\rightarrow intero$
 3. $for$ i=3 $to$ n $do$
 4. Fib[i]$\leftarrow$Fib[i-1]+Fib[i-2] 
 5. $return$ Fib[n]  
+(Tecnica della programmazione dinamica)
 Corretto? Si. 
 ##### Calcolo del tempo di esecuzione
  - Linee 1, 2 e 5 eseguite una sola volta
