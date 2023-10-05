@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5a4c8690b1712b10",
+        "id": "bc6e209311de5878",
         "type": "tabs",
         "children": [
           {
-            "id": "e337b1f11ee95681",
+            "id": "de0327717d0b76c0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md"
               }
             }
           },
@@ -162,10 +162,22 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "e337b1f11ee95681",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231005143334.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231005143249.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231005143107.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231005142600.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231005142532.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231005135658.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231005135536.png",
+    "img0_1.jpg.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231005135405.png",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
@@ -181,17 +193,8 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
     "Terzo Anno/Calcolo Numerico/Lezioni",
     "Senza nome",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163432.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163420.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163354.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163345.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163328.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163315.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163301.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231003163244.png",
     "Senza nome 2.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini",
     "Senza nome 1.md",
@@ -206,9 +209,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 9_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 11_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 20_04_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 18_04_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 6_04_23.md"
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 11_05_23.md"
   ]
 }
