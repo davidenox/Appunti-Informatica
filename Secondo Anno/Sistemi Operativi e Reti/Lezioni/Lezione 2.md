@@ -37,4 +37,24 @@ Non solo hardware: File, database, ...
 ### Storia dei sistemi operativi
 Libro
 
-continua
+## Uno sguardo all'Hardware
+![[Pasted image 20231006164824.png|center]]
+
+### Il processore
+La CPU è il cervello del computer, esegue istruzioni della memoria.
+- Il ciclo base della CPU: **preleva**(*fetch*), **decodifica**(*code*), **esegue**(*execute*) istruzioni.
+- I programmi vengono eseguiti in questo ciclo.
+![[Pasted image 20231006165017.png|center|700]]
+
+Le CPU eseguono un set specifico di istruzioni.
+- Registri interni memorizzano dati importanti e risultati.
+- I set di istruzioni includono funzione per il caricamento/salvataggio dati dalla memoria.
+Registri speciali come il *program counter* indicano l'istruzione successiva.
+Lo *stack pointer* punta alla cima dello stack in memoria.
+- Lo stack contiene frame di procedure con parametri e variabili locali.
+Il *registro Program Status Word* (PSW) contiene informazioni sullo stato del programma.
+- Il PSW è fondamentale per chiamate di sistema e I/O.
+Il sistema operativo gestisce il *multiplexing* temporale della CPU.
+- Durante il *multiplexing*, il sistema operativo salva e ripristina i registri.
+- Ciò permette al sistema operativo di eseguire programmi in modo efficiente.
+Programmazioni avanzate: **Pipeline** (non del tutto)
