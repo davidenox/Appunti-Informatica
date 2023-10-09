@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ee681a9d4e6a1d86",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md"
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md"
               }
             }
           },
@@ -162,8 +174,14 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "de0327717d0b76c0",
   "lastOpenFiles": [
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
+    "Pasted image 20231009121915.png",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008173528.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008172841.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008171105.png",
@@ -174,23 +192,17 @@
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008165919.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231006165017.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231006164824.png",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 1.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231005155210.png",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
     "img0_1.jpg.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 14 - Input-Output.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 6 - Classi.md",
@@ -208,7 +220,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
     "README.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 9_05_23.md"
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md"
   ]
 }
