@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c506513e2de6b813",
+        "id": "4fcecbdea41ee614",
         "type": "tabs",
         "children": [
           {
-            "id": "808e0d3b5fb774af",
+            "id": "74884c332a2958f8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -171,7 +167,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "808e0d3b5fb774af",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
