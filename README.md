@@ -1,7 +1,6 @@
 # Appunti-Informatica
 Questo è un vault scritto su Obsidian riguardante appunti su ogni materia del corso di informatica di cui ho bisogno. Alcuni appunti sono incompleti a causa della successiva riorganizzazione del metodo di studio.
 Appunti di:
-
 1° anno:
 	- Geometria ed Algebra (GA)
  	- Logica e Reti Logiche (LRL)
