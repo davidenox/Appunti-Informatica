@@ -11,8 +11,12 @@
             "id": "74884c332a2958f8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md"
+              }
             }
           },
           {
@@ -163,8 +171,16 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "323299a3dd2b1a27",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009164322.png",
+    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009163909.png",
+    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009163819.png",
+    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009163742.png",
+    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009163218.png",
+    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009162330.png",
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md",
     "README.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
@@ -176,14 +192,8 @@
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008172841.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008171105.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008171013.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008170635.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008170550.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008170204.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231008165919.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231006165017.png",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 1.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md",
@@ -208,7 +218,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni",
     "Terzo Anno/Intelligenza Artificiale 1",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md"
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md"
   ]
 }
