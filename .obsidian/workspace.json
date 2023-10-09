@@ -89,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +116,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -167,8 +163,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "323299a3dd2b1a27",
   "lastOpenFiles": [
+    "README.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Immagini/Pasted image 20231009121915.png",
@@ -211,7 +208,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni",
     "Terzo Anno/Intelligenza Artificiale 1",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
-    "README.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 2_05_23.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 4_05_23.md"
   ]
