@@ -60,3 +60,4 @@ class Bicycle {
 	}
 }
 ```
+I campi *cadence*, *speed* e *gear* rappresentano gli stati d'oggetto, e i metodi (*changeCadence*, *changeGear*, *speedUp* ecc.) definiscono le sue interazioni con il mondo reale.
