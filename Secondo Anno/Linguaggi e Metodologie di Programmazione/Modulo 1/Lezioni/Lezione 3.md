@@ -60,4 +60,36 @@ class Bicycle {
 	}
 }
 ```
-I campi *cadence*, *speed* e *gear* rappresentano gli stati d'oggetto, e i metodi (*changeCadence*, *changeGear*, *speedUp* ecc.) definiscono le sue interazioni con il mondo reale.
+I campi *cadence*, *speed* e *gear* rappresentano gli stati d'oggetto, e i metodi (*changeCadence*, *changeGear*, *speedUp* ecc.) definiscono le sue interazioni con il mondo reale. La classe *Bicycle* non contiene un metodo *main*. Questo perché non è un'applicazione completa.
+Ecco una classe *BicycleDemo* che crea due oggetti *Bicycle* separati e invoca i suoi metodi:
+```Java
+class BicycleDemo {
+    public static void main(String[] args) {
+
+        // Create two different 
+        // Bicycle objects
+        Bicycle bike1 = new Bicycle();
+        Bicycle bike2 = new Bicycle();
+
+        // Invoke methods on 
+        // those objects
+        bike1.changeCadence(50);
+        bike1.speedUp(10);
+        bike1.changeGear(2);
+        bike1.printStates();
+
+        bike2.changeCadence(50);
+        bike2.speedUp(10);
+        bike2.changeGear(2);
+        bike2.changeCadence(40);
+        bike2.speedUp(10);
+        bike2.changeGear(3);
+        bike2.printStates();
+    }
+}
+```
+L'output di questo test stampa la cadenza a fine pedale, velocità e marcia per le due biciclette:
+```java
+cadence:50 speed:10 gear:2
+cadence:40 speed:20 gear:3
+```

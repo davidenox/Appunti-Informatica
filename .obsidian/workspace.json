@@ -18,18 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "ee681a9d4e6a1d86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -156,6 +144,14 @@
               "type": "git-view",
               "state": {}
             }
+          },
+          {
+            "id": "893b684e3bd9c5e8",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
         "currentTab": 4
@@ -166,6 +162,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "canvas:Crea nuova lavagna": false,
@@ -174,11 +171,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "de0327717d0b76c0",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
-    "Pasted image 20231009121915.png",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Immagini/Pasted image 20231009121915.png",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
