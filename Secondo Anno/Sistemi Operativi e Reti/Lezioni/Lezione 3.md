@@ -13,7 +13,7 @@
 	- Astrazione dell'hardware
 	- Nascondere i dettagli al programmatore
 2. Resource Manager
-
+	- Protegge l'uso simultaneo
 ## Concetti 'base' di un sistema operativo
 Il sistema operativo offre funzionalità attraverso le chiamate di sistema. Gruppi di chiamate di sistema implementano servizi, ad esempio
 I processori sono astrazioni a livello utente per eseguire un programma per conto dell'utente. Ogni processo ha il proprio spazio di indirizzamento. i dati coinvolti nell'elaborazione
