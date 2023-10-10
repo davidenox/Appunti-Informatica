@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md"
               }
             }
           },
@@ -183,11 +184,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "74884c332a2958f8",
+  "active": "20b05346a4d867a3",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231010095129.png",
