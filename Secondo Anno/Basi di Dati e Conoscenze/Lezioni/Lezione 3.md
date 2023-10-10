@@ -109,5 +109,85 @@ from orario
 where aula = 'N1'
 ```
 ## Linguaggi per basi di dati
-I DBMS dispongono di vari linguaggi e interfacce diverse
-(slide 34)
+I DBMS dispongono di vari linguaggi e interfacce diverse.
+- *Linguaggi testuali interattivi*(SQL);
+- *Comandi* (come quelli del linguaggio interattivo), immersi in un linguaggio *ospite* (Java, C, Spark, ecc.);
+- *Comandi* (come quelli del linguaggio interattivo) immersi in un linguaggio ad hoc, con anche altre funzionalità ( per esempio per grafici o stampe strutturate ), anche con l'ausilio di strumenti di sviluppo ( per esempio per la gestione di maschere );
+- *Con interfacce amichevoli* ( senza linguaggio testuale ).
+### SQL, linguaggio interattivo
+```SQL
+SELECT Corso, Aula, Piano
+FROM Aule, Corsi
+WHERE Aula = 'N3'
+AND Piano = 'terra';
+```
+![[Pasted image 20231010093436.png|center|500]]
+### SQL immerso in in linguaggio ad alto livello
+```SQL
+write('nome della citta''?'); readln(citta);
+EXEC SQL DECLARE P CURSOR FOR
+	SELECT NOME, REDDITO
+	FROM PERSONE
+	WHERE CITTA = :citta ;
+EXEC SQL OPEN P;
+EXEC SQL FETCH P INTO :nome, :reddito ;
+while SQLCODE = 0 do begin
+	write('nome della persona:', nome, 'aumento?');
+	readln(aumento);
+	EXEC SQL UPDATE PERSONE SET REDDITO = REDDITO + :aumento
+		WHERE CURRENT OF P
+	EXEC SQL FETCH P INTO :nome, :reddito
+	end;
+EXEC SQL CURSOR P 
+```
+### SQL immerso in un linguaggio ad hoc ( Oracle PL/SQL )
+```SQL
+declare Stip number;
+begin
+	select Stipendio into Stip
+	from Impiegato
+	where Matricola = '575488'
+	for updaye of Stipendio;
+	if Stip > 30 then
+		update Impiegato set Stipendio = Stipendio * 1.1 where Matricola = '575488';
+	else
+		update Impiegato set Stipendio = Stipendio * 1.15 where Matricola = '575488';
+	end if;
+	commit;
+exception
+	when no_data_found then
+		insert into Errori
+		values('Non esiste la matricola specificata', sysdate);
+end;
+```
+#### Interazione non testuale
+![[Pasted image 20231010095129.png|center]]
+## Basi di dati : professionalità
+1. *Progettisti* e realizzatori di *DBMS*;
+2. *Progettisti della base di dati* e amministratori della base di dati (*DBA*);
+3. *Progettisti* e programmatori di *applicazioni*;
+4. *Utenti*:
+	- - Utenti *finali* ( terminalisti ): eseguono applicazioni predefinite ( *transazioni* );
+	- - Utenti *casuali* : eseguono operazioni non previste a priori, usando linguaggi interattivi.
+### Database administrator
+- Persona o gruppo di persone responsabile del controllo centralizzato e della gestione del sistema, delle prestazioni, dell'affidabilità delle autorizzazioni.
+- Le funzioni del DBA includono quelle di progettazione, anche se in progetti complessi ci possono essere distinzioni
+### Transazioni
+- Programmi che realizzano attività frequenti e predefinite, con poche eccezioni, previste a priori.
+Esempi:
+- - Versamento presso uno sportello bancario;
+- - Emissione di certificato anagrafico;
+- - Dichiarazione presso l'ufficio di stato civile;
+- - Prenotazione aerea
+Le transazioni sono di solito realizzate con programmi in linguaggio ospite ( tradizionale o ad hoc ).
+*N.B.* Il termine *transazione* ha un'altra eccezione, più specifica : sequenza indivisibile di operazioni ( o vengono eseguite tutte o nessuna ).
+### Vantaggi e svantaggi dei DBMS
+*Pro*:
+1. Dati come risorsa comune, base di dati come modello della realtà;
+2. Gestione centralizzata con possibilità di standardizzazione ed “economia di scala”;
+3. Disponibilità di servizi integrati;
+4. Riduzione di ridondanze e inconsistenze;
+5. Indipendenza dei dati ( favorisce lo sviluppo e la manutenzione delle applicazioni ).
+*Contro*:
+1. Costo dei prodotti e della transizione verso di essi;
+2. Non scorporabilità delle funzionalità (con riduzione di efficienza).
