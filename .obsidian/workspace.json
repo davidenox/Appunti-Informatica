@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dd0683418edcfcf2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -171,25 +184,27 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "20b05346a4d867a3",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010162142.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010162056.png",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 3 - Capitolo 2.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010161012.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010160742.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010145001.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010144443.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010144122.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010143935.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010140309.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231010140644.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231010095129.png",
-    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231010093436.png",
-    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009164322.png",
-    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009163909.png",
-    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231009163819.png",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
     "README.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
@@ -203,7 +218,6 @@
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
     "img0_1.jpg.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 14 - Input-Output.md",
@@ -215,7 +229,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1.md",
     "Senza nome 2.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini",
-    "Senza nome 1.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni",
     "Terzo Anno/Intelligenza Artificiale 1"

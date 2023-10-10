@@ -13,10 +13,14 @@
 	- Astrazione dell'hardware
 	- Nascondere i dettagli al programmatore
 2. Resource Manager
-	- Protegge l'uso simultaneo
+	- Protegge l'uso simultaneo/non sicuro delle risorse
+	- Condivisione equa delle risorse
+	- Resource accounting/limiting
 ## Concetti 'base' di un sistema operativo
-Il sistema operativo offre funzionalità attraverso le chiamate di sistema. Gruppi di chiamate di sistema implementano servizi, ad esempio
-I processori sono astrazioni a livello utente per eseguire un programma per conto dell'utente. Ogni processo ha il proprio spazio di indirizzamento. i dati coinvolti nell'elaborazione
+Il sistema operativo offre funzionalità attraverso le chiamate di sistema. Gruppi di chiamate di sistema implementano servizi, ad esempio:
+- File System Service
+- Process Management Service
+I processori sono astrazioni a livello utente per eseguire un programma per conto dell'utente. Ogni processo ha il proprio spazio di indirizzamento. i dati coinvolti nell'elaborazione vengono recuperati e memorizzati in file. I file persistono rispetto ai processi.
 ## Che cos'è un processo?
 *Def*: Programma in esecuzione
 Il processo è associato:

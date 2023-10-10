@@ -83,6 +83,97 @@ $f(n) = O(g(n))$ se $\exists$ due costanti $c>0$ e $n_0\geq 0$ tali che $0\leq f
 >![[Pasted image 20231010145001.png|center]]
 
 ### Notazione asintotica $\ohm$ 
-Vedere tutte le notazioni asintotiche
+$f(n)=\ohm(g(n))$ se $\exists$ due costanti $c\gt 0$ e $n_0\geq 0$ tali che $f(n)\geq c\cdot g(n)\geq 0$ per ogni $n\geq n_0$
 
+![[Pasted image 20231010160742.png|center]]
 
+>[!info]- Esempi
+>$f(n)=\ohm(n)\space (c=1,n_0=2)$
+>$f(n)=\ohm(n^2)\space (c=1,n_0=3$
+>$f(n)\not=\ohm(n^3)$
+
+>[!note]- Refreshing
+>![[Pasted image 20231010161012.png|center]]
+
+### Notazione asintotica $\Theta$
+
+$f(n)=\Theta(g(n))$ se $\exists c_1,c_2\gt0,n_0\geq0$ tale che $c_1\cdot g(n)\leq f(n)\leq c_2\cdot g(n)$
+
+![[Pasted image 20221014161512.png|center]]
+
+**Esempi**
+
+Sia $f(n)=2n^2-3n$ allora
+- $f(n)=\Theta(n^2)$
+- $f(n)\neq\Theta(n)$
+- $f(n)\neq\Theta(n^3)$
+
+In generale
+$$\begin{cases}f(n)=\Theta(g(n))& \implies f(n)=O(g(n))\\
+f(n)=O(g(n))& \centernot\implies f(n)=\Theta(g(n))\\
+f(n)=\Theta(g(n))& \implies f(n)=\Omega(g(n))\\
+f(n)=\Omega(g(n))& \centernot\implies f(n)=\Theta(g(n))\end{cases}$$
+
+>$f(n)=\Theta(g(n))\iff f(n)=\Omega(g(n))\wedge f(n)=O(g(n))$
+
+#### Notazione asintotica o
+
+Simile a O(g(n)) ma con $f(n)\lt c\cdot g(n)$
+defizione alternativa:
+$$f(n)=o(g(n))\iff lim_{n\to\infty}\frac{f(n)}{g(n)}=0$$
+#### Notazione asintotica $\omega$
+
+Simile a $\Omega(g(n))$ ma con $f(n)\gt c\cdot g(n)$
+definizione alternativa:
+$$f(n)=\omega(g(n))\iff lim_{n\to\infty}\frac{f(n)}{g(n)}=\infty$$
+### Analogie
+
+$$\begin{cases}O & \leq\\
+\Omega & \geq\\
+\Theta & =\\
+o & \lt\\
+\omega & \gt\end{cases}$$
+
+#### Graficamente
+
+![[Pasted image 20231010162056.png|center]]
+
+#### Proprietà deòòa notazione asintotica
+
+![[Pasted image 20231010162142.png|center]]
+
+## Usare la notazione asintotica nelle analisi
+### Upped Bound
+>algoritmo fibonacci3(intero n)$\rightarrow$ intero
+>1. sia Fib un array di n interi
+>2. $Fib[1]=Fib[2]=1$
+>3. for i = 3 to n do
+>	4. $Fib[i]=Fib[i-1]+Fib[i-2]$
+>5. return $Fib[n]$
+
+T(n): complessità computazionale nel caso peggiore con input n
+$c_j$:#passi elementari eseguiti su una RAM quando è eseguita la linea di codice j
+- linea 1,2,5 eseguite una volta
+- linee 3 e 4 eseguite aò più n volte
+$T(n)\leq c_1+c_2+c_5+(c_3+c_4)n=\Theta(n)\implies T(n)=O(n)$
+
+### Lower Bound
+
+>algoritmo fibonacci3(intero n)$\rightarrow$ intero
+>1. sia Fib un array di n interi
+>2. $Fib[1]=Fib[2]=1$
+>3. for i = 3 to n do
+>	4. $Fib[i]=Fib[i-1]+Fib[i-2]$
+>5. return $Fib[n]$
+
+T(n): complessità computazionale nel caso peggiore con input n
+$c_j$:#passi elementari eseguiti su una RAM quando è eseguita la linea di codice j
+- linea 4 eseguita almeno n-3 volte
+$T(n)\geq c_4(n-3)=c_4n-3c_4=\Theta(n)\implies T(n)=\Omega(n)$
+
+Quindi tra upper bound e lower bound possimao dedurre che $$T(n)=\Theta(n)$$
+## Notazione asintotica: perchè è una grande idea
+**Misura indipendente** dall'implementazione dell'algoritmo e dalla macchina reale su cui è eseguito.
+I "dettagli" nascosti sono **poco rilevanti** quando n è grande per funzioni asintoticamente diverse.
+**Analisi dettagliata** del numero di passi realmente eseguiti sarebbe difficile, noiosa e **non direbbe molto di più**.
+Si è visto come descrive bene **in pratica** la velocità degli algoritmi.
