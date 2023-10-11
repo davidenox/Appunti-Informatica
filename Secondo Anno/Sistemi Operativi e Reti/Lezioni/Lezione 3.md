@@ -217,3 +217,24 @@ Gli svantaggi dei container:
 3. I container sono isolati a livello di processo ( se un container altera la stabilità del kernel sottostante, ciò può influire sugli altri container ).
 ## Struttura di un sistema operativo : EXOKERNEL
 *Idea*: Separare il controllo delle risorse dalla macchina estesa.
+Simile ad un VMM/Hypervisor, ma:
+- Exokernel non emula l'hardware.
+- Fornisce solo una condivisione sicura delle risorse a basso livello.
+Ogni macchina virtuale a livello utente esegue il suo sistema operativo, ma è limitata a utilizzare solo le risorse assegnate.
+Rispetto ad altri approcci, l'exokernel elimina la necessità di mappature complesse, concentrandosi solo su quale macchina virtuale ha accesso a quali risorse.
+## Struttura di un sistema operativo : UNIKERNEL
+Gli Unikernel sono sistemi minimi basati su LibOS, progettati per eseguire una singola applicazione su una macchina virtuale ( es. WebServer ). Questi sistemi contengono solo la funzionalità necessaria per supportare l'applicazione specifica, come un server web, su una macchina virtuale. Gli unikernel sono altamente efficienti poiché non richiedono protezione tra il sistema operativo (LibOS). Esiste solo un'applicazione per macchina virtuale.
+Il concetto degli unikernel è stato recentemente riscoperto, offrendo una soluzione leggera ed efficiente per eseguire applicazioni isolate su macchine virtuali.
+## Struttura di un sistema operativo: MicroKernel-based client/server
+Organizza le *service procedure* che vengono eseguiti in modo separato.
+	processes $\implies$ *System Servers/Drivers*
+I processi di sistema comunicano attraverso il passaggio di messaggi. Le chiamate di sistema si basano sullo stesso meccanismo di messaggistica. Meccanismo di messaggistica implementato nel kernel minimale $\implies$ *Microkernel*.
+![[Pasted image 20231011151534.png|center]]
+
+*Pro*: è più facile aderire al Principle of Least Authority (POLA):
+- - Trusted Computing Base ( TCB ) relativamente "piccolo";
+- - Ogni processo del sistema operativo può fare solo ciò che è necessario per svolgere il proprio compito;
+- - La compromissione, ad esempio, del driver di stampa non influisce sul resto del sistema operativo.
+*Contro*: 
+- - Il passaggio di messaggi è più lento di una chiamata di funzione (come in un kernel monolitico).
+
