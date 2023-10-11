@@ -1,6 +1,6 @@
-# Basi del linguaggio
+# Variabili e Operatori
 ## Variabili
-Come hai appreso nella lezione precedente, un oggetto memorizza il suo stato nei campi.
+Come appreso nella lezione precedente, un oggetto memorizza il suo stato nei campi.
 ```java
 int cadence = 0;
 int speed = 0;
@@ -17,9 +17,7 @@ Ogni linguaggio di programmazione ha il proprio insieme di regole e convenzioni 
 - I nomi delle variabili fanno distinzione tra maiuscole e minuscole(**Case Sensitive**). Il nome di una variabile può essere qualsiasi identificatore legale: una sequenza illimitata di lettere e cifre Unicode, che inizia con una lettera, il simbolo del dollaro $ o il carattere di sottolineatura(underscore). La convenzione, tuttavia, è di iniziare sempre i nomi delle variabili con una lettera, non con "$" o underscore. Gli spazi bianchi non sono consentiti.
 - I caratteri successivi possono essere lettere, cifre, segni di dollaro o caratteri di sottolineatura. Anche a questa regola valgono le convenzioni (e il buon senso). Quando scegli un nome per le tue variabili, usa parole complete invece di abbreviazioni criptiche. In questo modo il tuo codice sarà più facile da leggere e capire. In molti casi renderà anche il tuo codice auto-documentante;Tieni inoltre presente che il nome che scegli non deve essere una parola [chiave o una parola riservata](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html).
 - Se il nome che scegli è composto da una sola parola, scrivi quella parola in tutte le lettere minuscole. Se è composta da più di una parola, metti in maiuscolo la prima lettera di ogni parola successiva. I nomi gearRatio e currentGear sono ottimi esempi di questa convenzione. Se la tua variabile memorizza un valore costante, come `static final int NUM_GEARS = 6`, la convenzione cambia leggermente, mettendo in maiuscolo ogni lettera e separando le parole successive con il carattere di sottolineatura. Per convenzione, il carattere di sottolineatura non viene mai utilizzato altrove.
-
 ### Tipi di dato primitivi
-
 Il tipo di dati di una variabile determina i valori che può contenere, oltre alle operazioni che possono essere eseguite su di essa. Oltre a int, il linguaggio di programmazione Java supporta altri sette tipi di dati primitivi. Un tipo primitivo è predefinito dal linguaggio ed è denominato da una parola chiave riservata. I valori primitivi non condividono lo stato con altri valori primitivi. Gli otto tipi di dati primitivi supportati dal linguaggio di programmazione Java sono:
 - **byte**: il tipo di dati byte è un intero in complemento a due con segno a 8 bit. Ha un valore minimo di -128 e un valore massimo di 127 (incluso). Il tipo di dati byte può essere utile per risparmiare memoria in array di grandi dimensioni, dove il risparmio di memoria è davvero importante. Possono anche essere usati al posto di int dove i loro limiti aiutano a chiarire il tuo codice; il fatto che l'intervallo di una variabile sia limitato può servire come forma di documentazione.
 - **short**: il tipo di dati short è un intero in complemento a due con segno a 16 bit. Ha un valore minimo di -32.768 e un valore massimo di 32.767 (incluso). Come per byte, si applicano le stesse linee guida: puoi usare un short per risparmiare memoria in grandi array, in situazioni in cui il risparmio di memoria è davvero importante.
@@ -41,7 +39,6 @@ Il tipo di dati di una variabile determina i valori che può contenere, oltre al
 | char                  | `\u0000`      |
 | String(or any object) | null          |
 | boolean               | false         |
-
 ### Array
 _Def_
 Un array è un oggetto contenitore che contiene un numero fisso di valori di un singolo tipo. La lunghezza di un array viene stabilita al momento della creazione dell'array. Dopo la creazione, la sua lunghezza è fissata. Hai già visto un esempio di array, nel metodo principale di "Hello World!" applicazione.
@@ -139,7 +136,6 @@ class MultiDimArrayDemo {
     }
 }
 ```
-
 ## Operatori
 Gli operatori nella tabella seguente sono elencati in base all'ordine di precedenza. Più un operatore appare vicino alla parte superiore della tabella, maggiore è la sua precedenza. Gli operatori con una precedenza più alta vengono valutati prima degli operatori con una precedenza relativamente più bassa. Gli operatori sulla stessa linea hanno la stessa precedenza. Quando nella stessa espressione compaiono operatori di uguale precedenza, deve governare una regola che viene valutata per prima. Tutti gli operatori binari, ad eccezione degli operatori di assegnazione, vengono valutati da sinistra a destra; gli operatori di assegnazione vengono valutati da destra a sinistra.
 
