@@ -234,7 +234,8 @@ I processi di sistema comunicano attraverso il passaggio di messaggi. Le chiamat
 *Pro*: è più facile aderire al Principle of Least Authority (POLA):
 - - Trusted Computing Base ( TCB ) relativamente "piccolo";
 - - Ogni processo del sistema operativo può fare solo ciò che è necessario per svolgere il proprio compito;
-- - La compromissione, ad esempio, del driver di stampa non influisce sul resto del sistema operativo.
+- - La compromissione, ad esempio, del driver di stampa non influisce sul resto del sistema operativo. 
+ 
 *Contro*: 
 - - Il passaggio di messaggi è più lento di una chiamata di funzione (come in un kernel monolitico).
 
