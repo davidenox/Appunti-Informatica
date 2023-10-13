@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md"
               }
             }
           },
@@ -173,11 +173,14 @@
   },
   "active": "d9109f999ec606e7",
   "lastOpenFiles": [
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2 - Sistemi Operativi.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3 - Concetti SO.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012152330.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012152317.png",
@@ -189,9 +192,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012143832.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012142637.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012141152.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 4.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 4 - Basi del linguaggio.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
@@ -206,7 +206,7 @@
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 1.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md",

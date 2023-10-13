@@ -1,4 +1,4 @@
-# Intro al corso
+# Introduzione al corso
 Il corso è diviso in due moduli (Sistemi Operativi & Reti dei calcolatori).
 Parte I: Sistemi operativi (Primo semestre) 
 - Introduzione ai sistemi operativi. 
