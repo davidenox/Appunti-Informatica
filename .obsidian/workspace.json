@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md"
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md"
               }
             }
           },
@@ -173,15 +173,18 @@
   },
   "active": "d9109f999ec606e7",
   "lastOpenFiles": [
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3 - Modelli.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2 - Basi di dati.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1 - Intro.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2 - Sistemi Operativi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012152330.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012152317.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012151849.png",
@@ -200,17 +203,14 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2.md",
     "README.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 1.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",

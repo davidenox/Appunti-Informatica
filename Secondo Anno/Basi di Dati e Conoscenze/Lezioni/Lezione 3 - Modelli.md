@@ -2,7 +2,7 @@
 ## DBMS vs File System
 L'efficienza di un sistema si misura ( come in tutti i sistemi informatici ) in termini:
 - - Di *tempo* di esecuzione ( tempo di risposta ) e spazio;
-- -Di *memoria* ( principale e secondaria ).
+- - Di *memoria* ( principale e secondaria ).
 I DBMS, a causa della varietà di funzioni, non sono necessariamente più efficienti dei file system. L'efficienza è il risultato della qualità del DBMS e delle applicazioni che lo utilizzano.
 La gestione di insiemi di dati grandi e persistenti è possibile anche attraverso problemi più semplici ( gli ordinari *file system* dei sistemi operativi ). I file system prevedono forme rudimentali di condivisione: " tutto o niente ". Nei DBMS, è consentita una maggiore flessibilità. I DBMS estendono le funzionalità dei file system, fornendo più servizi ed in maniera integrata ( efficacia ).
 Nei programmi tradizionali che accedono a file, ogni programma contiene una descrizione della struttura del file stesso, con i conseguenti rischi di incoerenza fra le descrizioni ( ripetute in ciascun programma ) e i file stessi. Nei DBMS, esiste una porzione della base di dati ( il *catalogo* o *dizionario* ) che contiene una descrizione centralizzata dei dati, che può essere utilizzata da vari programmi.
