@@ -140,3 +140,16 @@ Non conviene ( anche se spesso si fa ) usare i valori del dominio ( 0, stringa n
 - - Valori "non utilizzati" potrebbero diventare significativi;
 - - In fase di utilizzo ( nei programmi ) sarebbe necessario ogni volta tener conto del "significato" di questi valori.
 
+## Informazione incompleta nel modello relazionale
+Si adotta una tecnica rudimentale ma efficace:
+- - *Valore nullo* : denota l'assenza di un valore nel dominio ( e non è un valore del dominio ).
+$t[A]$, per ogni attributo $A$, è un valore del dominio $dom(A)$ oppure il valore nullo $\texttt{NULL}$.
+Si possono ( e devono ) imporre restrizioni sulla presenza di valori nulli.
+### Troppi valori nulli
+![[Pasted image 20231016111502.png|center|600]]
+## Tipi di valore nullo
+	Almeno tre casi differenti
+1. Valore *sconosciuto*;
+2. Valore *inesistente*;
+3.  Valore *senza informazione*.
+I DBMS non distinguono i tipi di valore nullo.
