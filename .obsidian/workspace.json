@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md"
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4.md"
               }
             }
           },
@@ -173,6 +173,12 @@
   },
   "active": "35ad8bcdfba55520",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3 - Concetti di OOP.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2 - Java.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1 - Programmazione Orientata agli Oggetti.md",
+    "Secondo Anno/Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5.md",
+    "Secondo Anno/Calcolo delle Probabilità e Statistica/Lezioni/Lezione 4.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2 - Alg. Fibonacci.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
@@ -198,19 +204,13 @@
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2 - Sistemi Operativi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231012152330.png",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 3 - Capitolo 2.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 4 - Capitolo 2.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 4 - Basi del linguaggio.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1.md",
-    "README.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 3 - Concetti dell'OOP.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 2 - Il linguaggio Java.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
