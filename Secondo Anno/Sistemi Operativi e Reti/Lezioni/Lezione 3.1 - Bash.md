@@ -89,6 +89,7 @@ man date
 >Il comando 'man' risponde generalmente mandando in output un manuale
 
 # Reindirizzamento I/O
+da fare
 # Navigazione nel file system
 # Processi e controllo del lavoro
 # Editors
