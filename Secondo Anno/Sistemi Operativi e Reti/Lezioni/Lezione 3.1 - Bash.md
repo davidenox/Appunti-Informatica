@@ -92,5 +92,6 @@ man date
 da fare
 # Navigazione nel file system
 # Processi e controllo del lavoro
+fino a qui
 # Editors
 # Hello World in C
