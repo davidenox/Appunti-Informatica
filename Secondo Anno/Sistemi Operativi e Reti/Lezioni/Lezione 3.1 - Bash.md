@@ -85,12 +85,74 @@ Digita:
 date --help
 man date
 ```
+
 >[!important] Man
 >Il comando 'man' risponde generalmente mandando in output un manuale
 
 # Reindirizzamento I/O
-da fare
+Molti comandi Linux vengono stampati sullo "standard output", che per impostazione predefinita viene visualizzato sullo schermo del terminale. Il carattere '|'( *pipe* ) può essere usato per deviare o reindirizzare l'output ad un altro programma o filtro.
+```Bash
+
+w                                       #Mostra chi è loggato
+w | less                                #Si reindirizza alla pagina "minore"
+w | grep 'mario'                        # Si reindirizza a grep, che quindi stamperà solo le linee contenenti 'mario'
+w | grep -v 'mario'                     #Stampa le sole linee che non contengono 'tuta'
+w | grep 'mario' | sed s/tuta/scholar/g # Rimpiazza tutti 'mario' con 'scholar'
+```
 # Navigazione nel file system
+- La struttura assomiglia ad un albero rovesciato. Le Directories ( cartelle ) sono collezioni di file e di altre cartelle. 
+- Ogni cartella ha una radice, ad eccezione della cartella root. Molte cartelle hanno sottocartelle.
+- A differenza di Windows, che può avere molteplici percorsi e molteplici file system, un sistema Unix/Linux ha un *unico* file system.
+- ![[Pasted image 20231017155755.png|center]]
+I principali comandi di navigazione sono:
+
+```Bash
+pwd # Stampa la directory corrente
+ls  # Mostra una lista dei file
+cd  # Cambia directory
+```
+
+Si utilizzano i "*pathnames*" ( nomi di percorsi ) per fare riferimento a file e cartelle nel file system Linux. Ci sono due tipi di *pathnames* :
+1. *Assoluti* - Il percorso completo per una directory o file; Inizia con /
+2. *Relativi* - Un percorso parziale relativo alla directory corrente; Non inizia con /
+I caratteri speciali sono interpretati dalla shell come espansioni dei nomi dei file:
+1. ~      La cartella home
+2. .       Directory corrente
+3. ..      Directory precedente
+4. *      Carattere che corrisponde a tutti i filename 
+5. ?      Carattere che corrisponde a tutti i caratteri
+6. $\texttt{TAB}$  Prova l'autocompletamento di un filename
+## Il comando ls
+Utili opzioni per il comando 'ls':
+
+```Bash
+ls -a    #Lista tutti i file, inclusi i file nascosti che iniziano con "."
+ls -ld * #Lista i dettagli di una directory e non il suo contenuto
+ls -F    #Mette un carattere di indicatore alla fine di ogni nome
+ls -l    #Semplice lista lunga
+ls -lR   #Lista lunga ricorsiva
+ls -lh   #Da dimensioni del file leggibili dall'uomo
+ls -lS   #Ordina i file dalla dimensione
+ls -lt   #Ordina i file in base alla data di modifica
+```
+## Alcuni comandi utili
+```Bash
+cp [file 1] [file 2]
+mkdir [name]
+rmdir [name]
+mv [file] [destination]
+rm [file]
+file [file]
+less [file]
+head -n [file]
+tail -n [file]
+
+```
+
+
+
+
+
 # Processi e controllo del lavoro
 fino a qui
 # Editors
