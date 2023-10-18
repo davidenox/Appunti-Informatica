@@ -137,23 +137,57 @@ ls -lt   #Ordina i file in base alla data di modifica
 ```
 ## Alcuni comandi utili
 ```Bash
-cp [file 1] [file 2]
-mkdir [name]
-rmdir [name]
-mv [file] [destination]
-rm [file]
-file [file]
-less [file]
-head -n [file]
-tail -n [file]
-
+cp [file 1] [file 2]    # Copia file
+mkdir [name]            # Crea una directory
+rmdir [name]            # Rimuove una directory ( vuota )
+mv [file] [destination] # Sposta/Rinomina file
+rm [file]               # Rimuove (-r per la ricorsione)
+file [file]             # Identifica il tipo di file
+less [file]             # Sfoglia i file
+head -n [file]          # Mostra le prime n linee
+tail -n [file]          # Mostra le ultime n linee
+ln -s [file] [new]      # Crea un link simbolico
+cat [file] [file 2...]  # Mostra file
+tac [file] [file 2...]  # Mostra file in ordine inverso
+touch [file]            # Aggiorna l'orario di modifica / Crea file
+od [file]               # Mostra i contenuti di un file
 ```
+## Permesso di accesso ai file
+I file Linux hanno un set di *permessi* associati che dirigono il *read* ( Lettura), *write* ( Scrittura) ed *execute* ( Esecuzione ) per il proprietario, i membri del gruppo del proprietario, e chiunque altro. Per vedere i permessi di un file, si usa l'appellativo `-l` da `ls` :
+![[Pasted image 20231018092726.png|center]]
+Si possono modificare i permessi di accesso di un file con il comando `chmod`, con gli appellativi:
+- u = 'owner' 
+- g = 'group'
+- o = 'other'
+- r = 'read'
+- w = 'write'
+- x = 'execute' :
+![[Pasted image 20231018093528.png|center]]
 
+Il comando `chmod` funziona anche con il seguente mappaggio, *read* = 4,*write* = 2,*execute* = 1:
+![[Pasted image 20231018093827.png|center]]
 
+Tabella : 
+![[Pasted image 20231018093936.png|center]]
 
-
-
+## File di avvio di Bash - dot files
+*Inizializzazione Bash*:
+- Bash legge molteplici file di avvio durante il login.
+- Alcuni file sono protetti dal sistema.
+- Altri risiedono nella cartella home per personalizzazione diretta.
+*File nascosti*:
+- Iniziano con .
+- Nascosti di default
+*Rivelare i file nascosti*:
+- Si utilizza `ls -al` per mostrarli.
+## .bash_profile, .bashrc, alias
+`.bash_profile`:
+- Questo file viene eseguito al login.
+- PATH è posizionato qui
+`.bashrc`:
+- Questo file viene eseguito quando viene creata una nuova shell.
+- Qui è possibile creare degli alias
 # Processi e controllo del lavoro
-fino a qui
+
 # Editors
 # Hello World in C

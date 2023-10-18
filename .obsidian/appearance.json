@@ -1,6 +1,6 @@
 {
-  "accentColor": "#0300b3",
-  "cssTheme": "Clair de Lune",
+  "accentColor": "#7875ff",
+  "cssTheme": "Catppuccin",
   "enabledCssSnippets": [
     "center",
     "highlights"
