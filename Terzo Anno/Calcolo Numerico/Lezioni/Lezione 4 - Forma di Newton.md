@@ -1,4 +1,3 @@
-
 - La forma canonica: 
 	- forma associata alla base canonica di $\mathbb R_{n}[x]$ $\to$ $1,\: x,\:x^{2},\dots,\:x^{n}$
 - La forma di Lagrange: 

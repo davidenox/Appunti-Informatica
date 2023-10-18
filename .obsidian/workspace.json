@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5.md"
               }
             }
           },
@@ -171,8 +171,18 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "a9a6b4dc5ffeec0b",
   "lastOpenFiles": [
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 6 - Classi.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 5 - Espressioni, Blocchi e Statements.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 5 - Espressioni,Blocchi e Statement.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4 - Variabili e Operatori.md",
+    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 4 - Basi del linguaggio.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231018093936.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231018093827.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231018093528.png",
@@ -183,10 +193,7 @@
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 4 - Capitolo 2.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231017144445.png",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4 - Variabili e Operatori.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3 - Concetti di OOP.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2 - Java.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1 - Programmazione Orientata agli Oggetti.md",
@@ -195,7 +202,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2 - Alg. Fibonacci.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
@@ -203,14 +209,8 @@
     "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231016105019.png",
     "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231016104959.png",
     "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231016104754.png",
-    "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231016104730.png",
     "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 3 - Modello Relazionale.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3 - Modelli.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 2 - Basi di dati.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 1 - Intro.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 1 - Intro.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 2 - Sistemi Operativi.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
