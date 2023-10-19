@@ -85,7 +85,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -105,7 +106,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,16 +143,6 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md"
-              }
-            }
-          },
-          {
-            "id": "323299a3dd2b1a27",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
               "state": {}
             }
           },
@@ -170,7 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 466
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,10 +172,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "650cdc7bbb8637fe",
   "lastOpenFiles": [
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231019151528.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231019151432.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231019150939.png",
