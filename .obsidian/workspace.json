@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a7b248f0e2ab55e6",
+        "id": "04599225c8b7eb4b",
         "type": "tabs",
         "children": [
           {
-            "id": "a9a6b4dc5ffeec0b",
+            "id": "cdf5eb1d4cebf296",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +116,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md"
-              }
+              "state": {}
             }
           },
           {
@@ -171,11 +163,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "323299a3dd2b1a27",
+  "active": "cdf5eb1d4cebf296",
   "lastOpenFiles": [
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 6 - Classi.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 5 - Espressioni, Blocchi e Statements.md",
@@ -202,7 +195,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2 - Alg. Fibonacci.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231016111502.png",
@@ -210,7 +202,6 @@
     "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231016104959.png",
     "Secondo Anno/Basi di Dati e Conoscenze/Immagini/Pasted image 20231016104754.png",
     "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 3 - Modello Relazionale.md",
-    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 3 - Modelli.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
