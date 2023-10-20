@@ -88,4 +88,53 @@ Queste informazioni sono memorizzate nella tabella dei processi del sistema oper
 *Tipi di interruzione* : sw, *dispositivo hw(async)*, eccezioni.
 ## Implementazione dei processi
 >Schema di ciò che fa il livello più basso del SO quando si verifica un'interruzione
-1. L
+1. L'hardware impila il Program Counter e le altre informazioni del processo.
+2. L'hardware carica il nuovo contatore di programma dal vettore di interrupt.
+3. La procedura in linguaggio `assembly` salva i registri.
+4. La procedura in linguaggio `assembly` imposta un nuovo stack.
+5. Il servizio di interrupt `C` viene eseguito ( tipicamente legge ed esegue il buffer dell'input).
+6. Lo scheduler decide quale processo deve essere eseguito successivamente.
+7. La procedura `C` ritorna al codice `assembly`.
+8. La procedura in linguaggio `assembly` avvia un nuovo processo ( corrente ).
+
+>[!important]- Ogni volta che si verifica un'interruzione, lo scheduler ottiene il controllo e agisce come mediatore.
+
+*Un processo non può cedere la CPU ad un altro processo* ( Context Switch ) senza passare attraverso lo scheduler.
+## Gestione dei segnali (1)
+*Tipi di segnali*:
+- Hardware-induced ( es. `SIGILL` )
+- Software-induced ( es. `SIGQUIT` oppure `SIGPIPE` )
+*Azioni possibili*:
+- `Term`, `Ign`, `Core`, `Stop`, `Cont`.
+- Azione predefinita per ogni segnale, tipicamente sovrascrivibile.
+- I segnali possono essere tipicamente bloccati e le azioni ritardate.
+*Gestione ( catching ) dei segnali*:
+- Il processo registra il gestore del segnale.
+- Il SO invia il segnale e consente al processo di eseguire l'handler.
+- Il contesto di esecuzione di corrente deve essere salvato/ripristinato.
+### Gestire il segnale indotto da Ctrl+C
+
+```C
+void signalHandler ( int signum ){
+	printf("interrupt signal &d received\n", signum );
+	// ripulisce e termina il progra,,a
+	exit(signum);
+}
+int main(){
+	// registra il signal SIGINT e signal handler
+	signal(SIGINT, signalHandler);
+	while(1){
+		printf("Going to sleep...\n");;
+		sleep(1);
+	}
+	return 0;
+}
+```
+
+## Gestione dei segnali (2)
+- Il kernel invia un segnale
+- Interrompe il codice in esecuzione
+- Salva il contesto
+- Esegue il codice di gestione del segnale
+- Ripristina il contesto originale
+# Thread
