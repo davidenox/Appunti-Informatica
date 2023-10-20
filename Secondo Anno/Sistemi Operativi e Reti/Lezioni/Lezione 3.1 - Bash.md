@@ -188,6 +188,40 @@ Tabella :
 - Questo file viene eseguito quando viene creata una nuova shell.
 - Qui è possibile creare degli alias
 # Processi e controllo del lavoro
+Interagendo con Linux, vengono create istanze numerate di programmi in esecuzione, che prendono il nome di *processi*. Utilizzando il comando `ps` verrà stampata sul terminale la lista dei processi in esecuzione. Per vedere una lista ampliata, viene utilizzato il comando `ps -ef`.
+Per vedere i processi che consumano più CPU, si utilizza il comando `top`.
+## Foreground/Background
+Fino ad ora sono stati mostrati comandi lanciati ed eseguiti. Questi comandi sono chiamati *Foreground* ( in primo piano ). È possibile inoltre, utilizzando l'operatore `&`, eseguire programmi in background, con il risultato stampato immediatamente, senza l'attesa che il comando sia completato.
+## Process control
+Avendo a disposizione uno script, che può essere semplicemente lo script `coutdown.sh`, si può lavorare:
+```Shell
+#!/bin/bash
 
+# Check if a parameter is given
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <starting_number>"
+    exit 1
+fi
+
+START_NUM=$1
+
+for i in $(seq $START_NUM -1 1); do
+    echo $i
+    sleep $((RANDOM % 3))
+done
+```
+
+Si può rendere lo script eseguibile con `chmod`:
+```Bash
+chmod +x countdown
+```
+
+Si può eseguire per qualche secondo, e poi terminarlo con `Ctrl+C`
+## Spostare in Background ed eseguire un lavoro con `bg`
+È possibile che, eseguendo un programma in Foreground, si decida di eseguirlo in Background. Ecco come:
+- `countdown 200 > c.out`
+- Premere `Ctrl + z` per sospendere il programma.
+- Digitare `bg` sul terminale.
+Il programma si sta eseguendo ora in Background. Per riportarlo in Foreground, basta digitare `fg` sul terminale.
 # Editors
 # Hello World in C
