@@ -138,3 +138,101 @@ int main(){
 - Esegue il codice di gestione del segnale
 - Ripristina il contesto originale
 # Thread
+Un'assunzione implicita fatta fin'ora è stata:
+- $1\text{ processo}\implies 1\text{ thread in esecuzione}$ 
+*Multithreaded* Execution:
+- $1\text{ processo}\implies N\text{ thread in esecuzione}$ 
+Perché consentire più thread per processo?
+- *Lightweight processes* ( processi leggeri).
+- Consentire un parallelismo efficiente in termini di tempo e spazio.
+- *Una comunicazione e una sicronizzazione semplici*.
+## Utilizzo dei Thread
+![[Pasted image 20231022115218.png|center]]
+![[Pasted image 20231022115305.png|center]]
+![[Pasted image 20231022115411.png|center]]
+## Thread, processo, macchina a stati finiti
+| Modello                   | Caratteristiche                                            |
+| ------------------------- | ---------------------------------------------------------- |
+| Thread                    | Parallelismo, chiamate di sistema bloccanti                |
+| Processo a Thread singolo | Nessun parallelismo, chiamate di sistema bloccanti         |
+| Macchina a stati finiti   | Parallelismo, chiamate di sistema non bloccanti, interrupt |
+
+## Thread e processi
+I thread *risiedono nello stesso spazio degli indirizzi in un singolo processo*. Tutti gli *scambi* di informazioni avvengono *tramite dati condivisi* tra i thread. I thread si sincronizzano tramite semplici primitive.
+Ogni thread ha:
+- Il *proprio stack*;
+- I *propri registri hardware*;
+- Il *proprio stato*.
+Tabella/interrupt dei thread:
+- Una tabella/interrupt di processo più leggera.
+Ciascun *thread puù chiamare qualsiasi chiamata* di sistema supportata dal sistema operativo *per conto de processo a cui appartiene*.
+![[Pasted image 20231022120150.png|center|400]]
+### Il modello di thread classico
+![[Pasted image 20231022120326.png|center]]
+
+| Per processo                   | Per thread        |
+| ------------------------------ | ----------------- |
+| - Spazi di indirizzi           | - Program counter |
+| - Variabili globali            | - Registri        |
+| - File aperti                  | - Stack           |
+| - Processi figli               | - Stati           |
+| - Allarmi in attesa            |                   |
+| - Segnali e gestore di segnali |                   |
+| - Informazioni contabili       |                   |
+$\underbrace{------------}_\text{Elementi condivisi dai thread di un processo }$$\underbrace{-------}_{Elementi privati di ogni thread}$  
+### I thread in POSIX
+>Alcune chiamate di funzione di `pthreads`
+
+| Chiamata thread        | Descrizione                                               |
+| ---------------------- | --------------------------------------------------------- |
+| `pthread_create`       | Crea un nuovo thread                                      |
+| `pthread_exit`         | Termina il thread chiamante                               |
+| `pthread_join`         | Attende l'uscita di uno specifico thread                  |
+| `pthread_yield`        | Rilascia la CPU per consentire l'exec di un altro thread  |
+| `pthread_attr_init`    | Crea e inizializza la struttura di attributi di un thread |
+| `pthread_attr_destroy` | Rimuove la struttura di attributi di un thread                                                          |
+
+### Pthreads
+```C
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define NUMBER_OF_THREADS 10
+void *print_hello_world(void *tid){
+	printf("Hello World. Greetings from thread %d\n", tid);
+	pthread_exit(NULL);
+}
+int main( int argc, char *argv[]){
+	pthread_t threads[NUMBER_OF_THREADS];
+	int status, i;
+	for(i=0;i<NUMBER_OF_THREADS;i++){
+		status = pthread_create(&threads[i], NULL, print_hello_world, (void *)i);
+		if(status != 0){
+		exit(-1);
+		}
+	}
+	return 0;
+}
+```
+
+## Implementazione dei thread nello spazio utente
+Esisono tre luoghi di implementazione dei *thread*:
+1. Nello *spazio utente*;
+2. Nel *kernel*;
+3. *Implementazione ibrida*.
+![[Pasted image 20231022122904.png|center]]
+
+### Pro
+I **thread nello spazio utente** *sono gestiti dal kernel* come processi ordinari a singolo thread.
+- *Possono essere eseguiti sui sistemi operativi che non supportano* direttamente i thread.
+- Sono *gestiti tramite una libreria*.
+Ogni processo che usa thread a livello utente *necessita di una propria tabella* dei thread per tracciare lo stato e altre proprietà dei suoi thread.
+L'interruzione e il cambio tra thread a livello utente *non richiedono un cambiamento di contesto* completo, sono *molto più veloci* rispetto alle operazioni nel kernel. Offrono l'abilità di *personalizzare l'algoritmo di scheduling* per ogni processo e una maggiore scalabilità.
+### Contro
+Tuttavia, ci sono *problemi*  con le chiamate di *sistema bloccanti*:
+- Se *un thread fa una chiamata che lo blocca, tutti gli altri thread nel processo vengono fermati*.
+- Gli *errori di pagina*, dove un prohtramma accede a memoria non presente, *possono bloccare l'intero processo* quando sono causati da un thread a livello utente.
+I thread nello spazio utente non hanno *interrupt del clock*, rendendo impossibile uno scheduling di tipo **round-robin** ( prossimamente ).
+Sebbene i thread a livello utente siano più veloci e flessibili, *sono meno adatti per applicazioni in cui i thread si bloccano frequentemente*, come i web server multithread. I thread a livello utente possono fermarsi completamente se un singolo thread effettua una chiamata di sistema bloccante, influenzando tutti gli altri nel processo.
+## Implementazione dei thread nello spazio Kernel
