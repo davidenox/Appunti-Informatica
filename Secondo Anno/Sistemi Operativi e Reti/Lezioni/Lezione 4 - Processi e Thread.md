@@ -236,3 +236,20 @@ Tuttavia, ci sono *problemi*  con le chiamate di *sistema bloccanti*:
 I thread nello spazio utente non hanno *interrupt del clock*, rendendo impossibile uno scheduling di tipo **round-robin** ( prossimamente ).
 Sebbene i thread a livello utente siano più veloci e flessibili, *sono meno adatti per applicazioni in cui i thread si bloccano frequentemente*, come i web server multithread. I thread a livello utente possono fermarsi completamente se un singolo thread effettua una chiamata di sistema bloccante, influenzando tutti gli altri nel processo.
 ## Implementazione dei thread nello spazio Kernel
+Il *kernel* che gestisce i thread *elimina la necessità di un sistema run-time* per processo. La tabella dei thread del kernel conserva informazioni simili a quelle dei thread a livello utente.
+Le *chiamate che potrebbero bloccare un thread* vengono implementate come chiamate di sistema:
+- *Hanno costi più elevati* rispetto alle chiamate di procedura dei sistemi run-time.
+- Se un thread si blocca, il kernel può eseguire un altro thread, sia dello stesso processo sia di un altro.
+Alcuni sistemi "riciclano" i thread per ridurre i costi, invece che terminarli. Se un thread *causa un errore di pagina*, il *kernel verifica la disponibilità di altri thread eseguibili* nel processo e può eseguire uno di essi.
+La programmazione con *thread richiede cautela per evitare errori*.
+## Implementazioni ibride
+Alcuni sistemi effetttuano il **multiplexing** *dei thread utente sui thread del kernel* ( combinano i vantaggi dei due approcci ). I programmatori *decidono quanti thread del kernel utilizzare* e quanti thread utente multiplexare per maggiore flessibilità. Il kernel è consapevole solo dei thread del kernel, ma ogni thread del kernel può gestire più thread a livello utente.
+![[Pasted image 20231023102143.png|center|500]]
+## Threads : problemi aperti
+Molte *procedure di libreria possono causare conflitti* se un thread sovrascrive dati cruciali per un altro, ad esempio:
+- L'invio di un messaggio sulla rete potrebbe essere programmato assemblando il messaggio in un buffer fisso nella libreria e poi eseguendo una trap nel kernel per spedirlo.
+- Che cosa accade se un thread ha preparato il suo messaggio nel buffer e poi un interrupt del clock forza uno scambio con un secondo thread, che sovrascrive immediatamente il buffer con un suo messaggio?
+L'implementazione di wrappers ( impostare un bit per segnalare che la libreria è in uso ) può evitare conflitti, ma limita il parallelismo.
+La gestione dei segnali è complicata:
+- Alcuni sono specifici per un thread, altri no.
+- Decidere chi deve gestire questi segnali e come gestire conflitti tra thread può essere sfidante.
