@@ -52,12 +52,14 @@ $$n\geq 1+\sum_{i=0}^{h-1}2^i=1+2^h-1=2^h\implies h\leq log_2n$$
 
 Sia v la radice di H. Assume che i sottoalberi radicati nel figlio sinistro e destro di v sono heap,ma la proprietà di ordinamento delle chiavi non vale per v. Posso ripristinarla così:
 
-> **fixHeap**(nodo v,heap H)
-> if (v non è una foglia) then
-> 	sia u il figlio di v con chiave massima
-> 	if (chiave(v)$\lt$chiave(u)) then
-> 		scambia chiave(v) e chiave(u)
-> 		**fixHeap**(u,H)
+```Pseudo-codice
+fixHeap(nodo v,heap H)
+	if (v non è una foglia) then
+		sia u il figlio di v con chiave massima
+		if (chiave(v)$\lt$chiave(u)) then
+			scambia chiave(v) e chiave(u)
+			**fixHeap**(u,H)
+```
 
 Tempo di esecuzione: $O(log(n))$
 
