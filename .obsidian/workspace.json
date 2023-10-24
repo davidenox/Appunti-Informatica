@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.50152587890625
+    "width": 200
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md"
               }
             }
           },
@@ -171,10 +171,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "aecb27ce0ae43a8c",
   "lastOpenFiles": [
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 6 - HeapSort.md",
+    "Pasted image 20231024160726.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 6 - HeapSort.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141935.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141523.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141501.png",
@@ -208,8 +210,6 @@
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1 - Programmazione Orientata agli Oggetti.md",
     "Secondo Anno/Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5.md",
     "Secondo Anno/Calcolo delle Probabilità e Statistica/Lezioni/Lezione 4.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 2 - Alg. Fibonacci.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
