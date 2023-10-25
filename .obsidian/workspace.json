@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
-                "mode": "preview",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md"
               }
             }
           },
@@ -171,12 +171,16 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Calcolo Numerico/Immagini",
+    "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231025154750.png",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - esercizio_processi.c",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231024160726.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 6 - HeapSort.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141935.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141523.png",
@@ -187,7 +191,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231022122904.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231022120326.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231022120150.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231022115411.png",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
@@ -195,7 +198,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 5 - Ricorsione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 6 - Classi.md",
@@ -209,7 +211,6 @@
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2 - Java.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1 - Programmazione Orientata agli Oggetti.md",
     "Secondo Anno/Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5.md",
-    "Secondo Anno/Calcolo delle Probabilità e Statistica/Lezioni/Lezione 4.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
@@ -217,7 +218,6 @@
     "Terzo Anno/Calcolo Numerico/Lezioni",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni",
-    "Terzo Anno/Intelligenza Artificiale 1"
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni"
   ]
 }
