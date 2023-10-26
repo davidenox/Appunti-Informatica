@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "ce2376f6065e253d",
+        "id": "df3fbcaec6fa549f",
         "type": "tabs",
         "children": [
           {
-            "id": "bcb06278574bbf30",
+            "id": "fe6ce362446e3f14",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9400a82aa4156b55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md"
               }
             }
           },
@@ -171,12 +183,21 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "fe6ce362446e3f14",
   "lastOpenFiles": [
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 14 - Capitolo 11.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 15 - Capitolo 11.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 16 - Capitolo 13.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
     "Terzo Anno/Calcolo Numerico/Immagini",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231025154750.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - esercizio_processi.c",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231024160726.png",
@@ -196,8 +217,6 @@
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 4 - Capitolo 2.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 5 - Ricorsione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 6 - Classi.md",
@@ -206,18 +225,11 @@
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 4 - Variabili e Operatori.md",
     "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 4 - Basi del linguaggio.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Lezioni/Lezione 1 - Insiemi infiniti, Linguaggi.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 3 - Concetti di OOP.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 2 - Java.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 1 - Programmazione Orientata agli Oggetti.md",
-    "Secondo Anno/Calcolo delle Probabilità e Statistica/Lezioni/Lezione 5.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
     "Terzo Anno/Calcolo Numerico/Lezioni",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni"
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni"
   ]
 }
