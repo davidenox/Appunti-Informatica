@@ -125,15 +125,12 @@ Dimostrare usando la tecnica dell'albero di decisione che l'algoritmo di pesatur
 >Può un algoritmo basato su confronti ordinare n interi piccoli, diciamo compresi fra 1 e k=$O(n)$, in (asintoticamente) meno di $nlog(n)$
 
 ...no, la dimostrazione funziona anche sotto questa ipotesi
-
 ## IntegerSort
 ### IntegerSort: fase 1
-
 Per ordinare n interi con valori in $[1,k]$
 Mantiene un array Y di k contatori tale che $Y[x]=$numero di volte che il valore x compare nell'array di input X
 
 ![[Pasted image 20221103102304.png|center|700]]
-
 ### IntegerSort: fase 2
 Scorre Y da sinistra a destrae, se $Y[x]=k$, scrive in X il valore x per k volte
 
