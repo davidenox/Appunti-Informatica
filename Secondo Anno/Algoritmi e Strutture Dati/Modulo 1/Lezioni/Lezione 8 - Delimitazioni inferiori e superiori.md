@@ -43,7 +43,7 @@ Abbiamo quindi un **gap di log(n)** tra upper bound e lower bound
 
 ## Sui limiti della velocità: una delimitazione inferiori alla complessità del problema
 
->**Ordinamento per confronti**
+>[!important]- **Ordinamento per confronti**
 >Dati due elementi $a_i,a_j$, per determinare l'ordinamento relativo effettuiamo una delle seguenti operazioni di confronto:
 >$$a_i\lt a_j\:;\:a_i\leq a_j\:;\:a_i=a_j\:;\:a_i\geq a_j\:;\:a_i\gt a_j$$
 >Non si possono esaminare i valori degli elementi o ottenere informazioni sul loro ordine in altro modo
@@ -53,9 +53,9 @@ Abbiamo quindi un **gap di log(n)** tra upper bound e lower bound
 >**Teorema**:
 >**Ogni** algoritmo basato su confronti che ordina n elementi deve fare nel caso peggiore $\Omega(nlog(n))$ confronti
 
-**Oss**: il **num. di passi** che un algoritmo esegue è un lower bound al **num. di passi elementari** che esegue
+**Oss**: il **numero di passi** che un algoritmo esegue è un lower bound al **numero di passi elementari** che esegue
 
->**Corollario**
+>[!note]- **Corollario**
 >Il MergeSort e l'HeapSort sono algoritmi ottimi (almeno dentro la classe di algoritmi basati su confronti)
 
 ## Uno strumento utile: albero di decisione
@@ -90,14 +90,13 @@ Fornire l'albero di decisione del seguente algoritmo per istanze di dimensione 3
 PSEUDO CODICE INSERTIONSORT
 
 **Proprietà**
-- Per una particolare istanza, i confronti eseguiti dall'algoritmo su quella istanza rappresentano unn **cammino radice-foglia**
+- Per una particolare istanza, i confronti eseguiti dall'algoritmo su quella istanza rappresentano un **cammino radice-foglia**
 - L'algoritmo segue un cammino diverso a seconda delle caratteristiche dell'istanza:
 	- **Caso peggiore**: cammino più lungo
 - Il numero di confronti nel caso peggiore è pari **all'altezza dell'albero di decisione**
 - Un albero di decisione di un algoritmo (corretto) che risolve il problema dell'ordinamento di n elementi deve avere necessariamente **almeno n! foglie**
 
->**Lemma**
->Un albero binario T con k foglie, ha altezza almeno $log_2k$
+>[!note]- **Lemma**: Un albero binario T con k foglie, ha altezza almeno $log_2k$
 
 **dim** (per induzione su k)
 **caso base**: k=1, altezza almeno $log_21=0$
