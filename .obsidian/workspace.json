@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Comunicazione dei processi.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Comunicazione dei processi.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Comunicazione dei processi.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Comunicazione dei processi.md"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort.md"
               }
             }
           },
@@ -173,15 +173,19 @@
   },
   "active": "dba347ba1a84ff32",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 8 - Capitolo 4.md",
+    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
+    "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 7 - Metodologie di progettazione della base di dati.md",
+    "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 8 - Algebra relazionale,query,visite.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Comunicazione dei processi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 4 - Processi e Thread.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Comunicazione dei processi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3 - Concetti SO.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 5 - Vincoli d'integrità.md",
     "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 4 - Vincoli d'integrità.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 14 - Capitolo 11.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 15 - Capitolo 11.md",
@@ -209,10 +213,6 @@
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
     "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 4 - Capitolo 2.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 5 - Ricorsione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
-    "Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 6 - Classi.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 5 - Espressioni, Blocchi e Statements.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
