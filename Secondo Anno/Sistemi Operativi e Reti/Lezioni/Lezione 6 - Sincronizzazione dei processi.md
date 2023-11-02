@@ -35,3 +35,5 @@ Requisiti per evitare "race conditions":
 ## Critical region
 ![[Pasted image 20231102103623.png|center|500]]
 ## Esclusione reciproca con *busy waiting*: Alternanza rigorosa
+```
+```
