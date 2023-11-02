@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Esercitazione 1 - 2 Novembre.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Esercitazione 1 - 2 Novembre.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Esercitazione 1 - 2 Novembre.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Esercitazione 1 - 2 Novembre.md"
               }
             }
           },
@@ -171,10 +171,20 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "dba347ba1a84ff32",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "_temp/Appunti ASD/MOD I/Lezione 9 - Capitolo 5.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231102144408.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231102142325.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Esercitazione 1 - 2 Novembre.md",
+    "_temp/Appunti ASD/MOD I/Esercizi/Esercizi sul metodo della ricorsione.md",
+    "_temp/Appunti ASD/MOD I/Esercizi/Esercizi Pseudo-codice e complessità temporale.md",
+    "_temp/Appunti ASD/MOD I/Esercizi/Esercizi Algoritmi di visita su alberi.md",
+    "_temp/Appunti ASD/MOD I/Esercizi/Esercitazioni.md",
+    "_temp/Appunti ASD/MOD I/Esercizi/Esercizio 1.md",
+    "_temp/Appunti ASD/MOD I/Esercizi/Indice degli esercizi ASD.md",
+    "_temp/Appunti ASD/MOD I/Esercizi/Search,Insert,Delete su BTS.md",
+    "_temp/Appunti ASD/MOD I/Lezione 9 - Capitolo 5.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
@@ -192,27 +202,17 @@
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 5 - Vincoli d'integrità.md",
     "_temp/Appunti BSD/MOD I/Lezione 4 - Vincoli d'integrità.md",
     "_temp/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
-    "_temp/Appunti ASD/MOD I/Lezione 14 - Capitolo 11.md",
-    "_temp/Appunti ASD/MOD I/Lezione 15 - Capitolo 11.md",
-    "_temp/Appunti ASD/MOD I/Lezione 16 - Capitolo 13.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231025154750.png",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - esercizio_processi.c",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231024160726.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
-    "_temp/Appunti ASD/MOD I/Lezione 6 - HeapSort.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141935.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141523.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141501.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141220.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231023102143.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231022122904.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
-    "_temp/Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
