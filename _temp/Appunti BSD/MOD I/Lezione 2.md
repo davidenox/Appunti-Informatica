@@ -1,11 +1,11 @@
 
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2#DBMS vs file system|DBMS vs file system]]
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2#Modello di rappresentazione dei dati|Modello di rappresentazione dei dati]]
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2#Schemi ed istanze|Schemi ed istanze]]
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2#Architettura di un DBMS|Architettura di un DBMS]]
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2#Indipendenza logica e fisica|Indipendenza logica e fisica]]
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2#Linguaggi per basi di dati|Linguaggi per basi di dati]]
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2#Attori del sistema|Attori del sistema]]
+- [[_temp/Appunti BSD/MOD I/Lezione 2#DBMS vs file system|DBMS vs file system]]
+- [[_temp/Appunti BSD/MOD I/Lezione 2#Modello di rappresentazione dei dati|Modello di rappresentazione dei dati]]
+- [[_temp/Appunti BSD/MOD I/Lezione 2#Schemi ed istanze|Schemi ed istanze]]
+- [[_temp/Appunti BSD/MOD I/Lezione 2#Architettura di un DBMS|Architettura di un DBMS]]
+- [[_temp/Appunti BSD/MOD I/Lezione 2#Indipendenza logica e fisica|Indipendenza logica e fisica]]
+- [[_temp/Appunti BSD/MOD I/Lezione 2#Linguaggi per basi di dati|Linguaggi per basi di dati]]
+- [[_temp/Appunti BSD/MOD I/Lezione 2#Attori del sistema|Attori del sistema]]
 
 
 # DBMS vs file system
@@ -28,7 +28,7 @@ Lo schema viene costruito secondo un modello di dati ben definito. Un Modello di
 Tramite questo schema dei dati fornisce al DBMS una rappresentazione dei dati, in modo tale da permettere l'organizzazione della gestione
 Le descrizioni e rappresentazioni dei dati a livelli diversi permettono l'indipendenza dei dati dalla rappresentazione fisica:
 - i programmi fanno riderimento alla struttura a livello più alto, e le rappresentazioni sottostanti possono essere modificate senza necessità di modifica dei programmi
-- QUesto concetto viene realizzato tramite il [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2#Modello dei dati|Modello dei dati]]
+- QUesto concetto viene realizzato tramite il [[_temp/Appunti BSD/MOD I/Lezione 2#Modello dei dati|Modello dei dati]]
 ## Modello dei dati
 Un Modello dei dati è un insieme di concetti utilizzati per organizzare i dati di interesse e descriverne la struttura in modo che essa risulti comprensibile ad un elaboratore
 

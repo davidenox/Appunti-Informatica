@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md"
               }
             }
           },
@@ -173,23 +173,24 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 8 - Capitolo 4.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
-    "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 7 - Metodologie di progettazione della base di dati.md",
-    "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 8 - Algebra relazionale,query,visite.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Comunicazione dei processi.md",
+    "_temp/Appunti ASD/MOD I/Lezione 9 - Capitolo 5.md",
+    "_temp/Appunti ASD/MOD I/Lezione 8 - Capitolo 4.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
+    "_temp/Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
+    "_temp/Appunti BSD/MOD I/Lezione 7 - Metodologie di progettazione della base di dati.md",
+    "_temp/Appunti BSD/MOD I/Lezione 8 - Algebra relazionale,query,visite.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 4 - Processi e Thread.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 5 - Vincoli d'integrità.md",
-    "Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 4 - Vincoli d'integrità.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 14 - Capitolo 11.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 15 - Capitolo 11.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 16 - Capitolo 13.md",
+    "_temp/Appunti BSD/MOD I/Lezione 4 - Vincoli d'integrità.md",
+    "_temp/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
+    "_temp/Appunti ASD/MOD I/Lezione 14 - Capitolo 11.md",
+    "_temp/Appunti ASD/MOD I/Lezione 15 - Capitolo 11.md",
+    "_temp/Appunti ASD/MOD I/Lezione 16 - Capitolo 13.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
@@ -200,7 +201,7 @@
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - esercizio_processi.c",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231024160726.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 6 - HeapSort.md",
+    "_temp/Appunti ASD/MOD I/Lezione 6 - HeapSort.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141935.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141523.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini/Pasted image 20231024141501.png",
@@ -210,9 +211,8 @@
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231022120326.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231022120150.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
-    "Appunti da riorganizzare (Franco)/Appunti ASD/MOD I/Lezione 4 - Capitolo 2.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 5 - Ricorsione.md",
+    "_temp/Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
+    "_temp/Appunti ASD/MOD I/Lezione 4 - Capitolo 2.md",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",

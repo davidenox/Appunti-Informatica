@@ -1,6 +1,6 @@
 # Indice
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 1|Lezione 1]]
-- [[Appunti da riorganizzare (Franco)/Appunti BSD/MOD I/Lezione 2|Lezione 2]]
+- [[_temp/Appunti BSD/MOD I/Lezione 1|Lezione 1]]
+- [[_temp/Appunti BSD/MOD I/Lezione 2|Lezione 2]]
 - [[Lezione 3 - Modello Relazionale|Lezione 3]]
 - [[Lezione 4 - Vincoli d'integrità]]
 - [[Lezione 5 - Modello Concettuale, Modello ER]]

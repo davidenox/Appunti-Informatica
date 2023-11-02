@@ -63,5 +63,4 @@ Quindi:
 $$O((n+b)log_bk)$$
 Se $b=\Theta(n)$, si ha $O(nlog_nk)=O[n\frac{log(k)}{log(n)}]$
 
-Tempo lineare se $k=O(n^c)$, c costante
-
+Tempo lineare se $k=O(n^c)$, c costante.

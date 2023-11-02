@@ -110,7 +110,7 @@ Qualsiasi classe può implementare Relatable se esiste un modo per confrontare l
 Se sai che una classe implementa Relatable, allora sai che puoi confrontare la dimensione degli oggetti istanziati da quella classe.
 
 #### Implementazione dell'interfaccia Relatable
-Ecco la classe Rectangle che è stata presentata nella sezione [[Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 6 - Classi#Creare oggetti|Lezione 6 - Creare oggetti]], riscritta per implementare Relatable.
+Ecco la classe Rectangle che è stata presentata nella sezione [[_temp/Appunti LMP/MOD I/Lezione 6 - Classi#Creare oggetti|Lezione 6 - Creare oggetti]], riscritta per implementare Relatable.
 ```java
 public class RectanglePlus 
     implements Relatable {

@@ -6,7 +6,7 @@
 - [[Lezione 3 - Concetti dell'OOP]]
 - [[Lezione 4 - Basi del linguaggio]]
 - [[Lezione 5 - Espressioni,Blocchi e Statement]]
-- [[Appunti da riorganizzare (Franco)/Appunti LMP/MOD I/Lezione 6 - Classi]]
+- [[_temp/Appunti LMP/MOD I/Lezione 6 - Classi]]
 - [[Lezione 7 - Classi Nidificate]]
 - [[Lezione 8 - Classi Anonime, Enum]]
 - [[Lezione 9 - Metaprogrammazione]]
