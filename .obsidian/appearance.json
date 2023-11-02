@@ -4,5 +4,6 @@
   "enabledCssSnippets": [
     "center",
     "highlights"
-  ]
+  ],
+  "baseFontSize": 18
 }

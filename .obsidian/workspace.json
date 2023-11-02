@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md"
               }
             }
           },
@@ -173,8 +173,8 @@
   },
   "active": "ccd82f9d948fde06",
   "lastOpenFiles": [
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231102150824.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
