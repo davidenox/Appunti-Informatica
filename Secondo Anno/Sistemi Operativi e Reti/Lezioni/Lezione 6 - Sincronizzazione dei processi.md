@@ -250,4 +250,98 @@ void consumer(void){
 *Regola base*: In ogni momento, possono essere ammessi:
 - R lettori;
 - Solo 1 Scrittore.
-slide 33
+*Esempio*: Si possono avere mollteplici letture in un database, ma solo un singolo scrittore.
+*Funzionamento sintetico*:
+- Il primo lettore blocca l'accesso al database.
+- Lettori successivi incrementano un contatore.
+- L'ultimo lettore libera l'accesso al database così gli scrittori possono fare il loro lavoro.
+### Readers/Writers
+N processi accedono ( cioè leggono o scrivono ) ad alcuni dati condivisi. In qualsiasi momento: *R lettori o 1 scrittore ammessi*. Soluzione di base:
+```C
+typedef int sema;
+sema mutex = 1;
+sema db = 1;
+int rc = 0;
+
+void reader(){
+	while(TRUE){
+		down(&mutex);
+		rc++;
+		if(rc==1) down(&db);
+		up(&mutex);
+		read_db();
+		down(&mutex):
+		rc--;
+		if(rc==0) up(&db);
+		up(&mutex):
+		use_data_read();
+	}
+}
+
+void writer(){
+	while(TRUE){
+		think_up_data();
+		down(&db);
+		write_db();
+		up(&db);
+	}
+}
+```
+
+*Problema*: Se nuovi lettori arrivano mentre uno scrittore è in attesa, lo scrittore potrebbe mai ottenere l'accesso, portando a un blocco perpetuo.
+*Soluzione proposta*: 
+- Nuovi lettori vengono posti in coda dietro gli scrittori in attesa.
+- Gli scrittori ottengono accesso dopo i lettori già attivi.
+*Implicazioni*:
+- Questo metodo riduce la concorrenza.
+- Potenziale impatto sulle prestazioni.
+*Alternative*:
+- Esistono soluzioni che danno priorità agli scrittori.
+- Ogni strategia ha i suoi vantaggi e svantaggi
+## La mutua esclusione: Mutex e Pthreads
+### Introduzione ai Mutex
+Un "mutex" è *una versione esplicita e semplificata dei semafori*, usata per gestire la mutua esclusione di risorse o codice condiviso, quando *non bisogna contare* accessi o altri fenomeni.
+Può essere in due stati:
+- *Locked* ( Bloccato );
+- *Unlocked* ( Sbloccato);
+Un bit basta per rappresentarlo, ma spesso viene usato un intero ( 0 = unlocked, altri valori = locked ). Due procedure principali: `mutex_lock` e `mutex_unlock`.
+### Funzionamento dei mutex
+Quando un thread vuole accedere a una regione critica, chiama `mutex_lock`. Se il mutex è unlocked, il thread può entrare; se è locked, il thread attende. Al termine dell'accesso, il thread chiama `mutex_unlock` per liberare la risorsa. *Importante*: **Non si utilizza il "busy waiting"**. Se un thread non può acquisire un lock, chiama `thread_yield` per cedere la CPU ad un altro thread.
+#### Considerazioni aggiuntive
+I mutex possono essere implementati nello spazio utente con istruzioni come $\texttt{TLS}$ o $\texttt{XCHG}$. Alcuni pacchetti di thread offrono `mutex_trylock` ( tenta di acquisire il lock o restituisce un errore, senza bloccare). I mutex sono efficaci quando i thread operano in uno spazio degli indirizzi comune.
+La condivisione di memoria tra processi può essere gestita tramite il kernel o con l'aiuto di sistemi operativi che permettono la condivisione di parti dello spazio degli indirizzi.
+### Parallelismo e prestazioni
+L'efficienza nella sincronizzazione diventa cruciale con l'aumento del parallelismo. Spin lock e mutex con busy waiting: efficaci per attese brevi, ma sprecano CPU per attese lunghe. Passaggio al kernel per bloccare processi è oneroso se le contese sono poche. 
+Soluzione: *Futex* (Fast User Space Mutex) - combina il meglio di entrambi gli approcci.
+### Cos'è un Futex?
+Caratteristica di Linux per *implementare lock elementari evitando il kernel finché non è necessario*.
+- Migliora le prestazioni riducendo il passaggio al kernel.
+- Non standard ( serve `#include <inux/futex.h>`)
+*Due parti*:
+- Servizio kernel.
+- Libreria utente.
+*Operazione*:
+- Variabile condivisa nello spazio utente usata come lock.
+- Il passaggio al kernel avviene solo quando un *thread* è bloccato da un altro.
+Quando il lock è rilasciato, il kernel può essere chiamato per svegliare altri processi in attesa.
+### Pthread e Mutex
+*Pthread*: Fornisce funzioni per sincronizzare i thread.
+*Mutex*:
+- Variabile che può essere *locked* o *unlocked*.
+- Protegge le regioni critiche.
+*Funzionamento*:
+- Thread tenta di bloccare ( lock ) un mutex per accedere alla regione critica.
+- Se mutex è unlocked, l'accesso è immediato e atomico.
+- Se locked, il thread attende.
+#### Mutex in Pthreads
+
+| Thread Call             | Descrizione                  |
+| ----------------------- | ---------------------------- |
+| `pthread_mutex_init`    | Crea un Mutex                |
+| `pthread_mutex_destroy` | Distrugge un Mutex esistente |
+| `pthread_mutex_lock`    | Acquisisce un lock o blocca  |
+| `pthread_mutex_trylock` | Acquisice un lock o fallisce |
+| `pthread_mutex_unlock`  | Rilascia un lock             |
+
+
+
