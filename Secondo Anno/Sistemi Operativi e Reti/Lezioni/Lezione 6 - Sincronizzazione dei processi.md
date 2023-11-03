@@ -343,5 +343,4 @@ Quando il lock è rilasciato, il kernel può essere chiamato per svegliare altri
 | `pthread_mutex_trylock` | Acquisice un lock o fallisce |
 | `pthread_mutex_unlock`  | Rilascia un lock             |
 
-
-
+(Slide 48)
