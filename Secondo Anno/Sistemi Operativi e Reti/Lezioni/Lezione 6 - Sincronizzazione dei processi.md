@@ -335,12 +335,27 @@ Quando il lock è rilasciato, il kernel può essere chiamato per svegliare altri
 - Se locked, il thread attende.
 #### Mutex in Pthreads
 
-| Thread Call             | Descrizione                  |
-| ----------------------- | ---------------------------- |
-| `pthread_mutex_init`    | Crea un Mutex                |
-| `pthread_mutex_destroy` | Distrugge un Mutex esistente |
-| `pthread_mutex_lock`    | Acquisisce un lock o blocca  |
-| `pthread_mutex_trylock` | Acquisice un lock o fallisce |
-| `pthread_mutex_unlock`  | Rilascia un lock             |
+| Thread Call              | Descrizione                           |
+| ------------------------ | ------------------------------------- |
+| `pthread_mutex_init`     | Crea un Mutex                         |
+| `pthread_mutex_destroy`  | Distrugge un Mutex esistente          |
+| `pthread_mutex_lock`     | Acquisisce un lock o blocca           |
+| `pthread_mutex_trylock`  | Acquisice un lock o fallisce          |
+| `pthread_mutex_unlock`   | Rilascia un lock                      |
+| `pthread_cond_init`      | Crea una variabile di condizione      |
+| `pthread_cond_destroy`   | Distrugge una variabile di condizione |
+| `pthread_cond_wait`      | Blocca il waiting per un segnale      |
+| `pthread_cond_signal`    | Segnala un nuovo thread e lo sveglia  |
+| `pthread_cond_broadcast` | Segnala thread multipli e li sveglia                                      |
 
-(Slide 48)
+### Semafori o Mutex?
+**Finalità**:
+- *Mutex*: È utilizzato principalmente per *garantire l'esclusione mutua*. È destinato a proteggere l'accesso a una risorsa condivisa, garantendo che una sola thrread possa accedervi alla volta.
+- *Semaforo*: Può essere utilizzato per *controllare l'accesso a una risorsa condivisa*, ma è anche spesso usato per la sincronizzazione tra thread (vedi esempio produttore/consumatore).
+**Semantica**:
+- *Mutex*: Di solito ha una semantica di "proprietà", il che significa che solo il thread che ha acquisito il mutex può rilasciarlo.
+- *Semaforo*: Non ha una semantica di "proprietà". Qualsiasi thread può aumentare o diminuire il conteggio del semaforo, indipendentemente da chi lo ha modificato l'ultima volta.
+**Casistica**:
+- *Per l'esclusione mutua*: Un *Mutex* è *generalmente preferibile*. È più semplice ( di solito ha solo operazioni di lock e unlock ) e spesso offre una semantica più rigorosa e un comportamento più prevedibile.
+- *Per la sincronizzazione tra thread*: Un *Semaforo* può essere *più adatto*, specialmente quando si tratta di coordinare tra diversi thread o di gestire risorse con un numero limitato di istanze disponibili.
+(slide 50)
