@@ -358,4 +358,172 @@ Quando il lock è rilasciato, il kernel può essere chiamato per svegliare altri
 **Casistica**:
 - *Per l'esclusione mutua*: Un *Mutex* è *generalmente preferibile*. È più semplice ( di solito ha solo operazioni di lock e unlock ) e spesso offre una semantica più rigorosa e un comportamento più prevedibile.
 - *Per la sincronizzazione tra thread*: Un *Semaforo* può essere *più adatto*, specialmente quando si tratta di coordinare tra diversi thread o di gestire risorse con un numero limitato di istanze disponibili.
-(slide 50)
+#### Nota esempio
+```C
+...
+for(i=1;i<=MAX;i++){
+	pthread_mutex_lock(&the_mutex);
+	while(buffer!=0){
+		pthread_cond_wait(&condp, &the_mutex);
+	}
+}
+...
+```
+- *Protezione della risorsa condivisa*:`pthread_mutex_lock` assicura che solo un thread alla volta possa accedere e modificare la risorsa condivisa ( in questo caso, il buffer ).
+- *Attesa condizionale*: Quando un thread chiama `pthread_cond_wait`, due operazioni avvengono atomicamente. Il thread:
+	- Rilascia il mutex;
+	- Mette il thread in uno stato di attesa sulla variabile condizionale.
+Quindi, anche se il produttore ha acquisito il mutex, non lo detiene mentre è in attesa sulla variabile condizionale.
+- Questo permette al consumatore ( o a un altro thread ) di acquisire il mutex, fare le sue operazioni, e poi mandare un segnale alla variabile condizionale usando `pthread_cond_signal`.
+# La mutua esclusione : i Monitor
+La comunicazione tra processi usando *mutex* e *semafori* non è semplice come potrebbe sembrare. 
+- *Programmare con semafori richiede estrema attenzione*: piccoli errori possono causare comportamenti imprevisti come *race conditions* o *deadlocks*.
+Brinch Hansen e Hoare proposero un concetto di sincronizzazione ad alto livello chiamato "**monitor**" per semplificare la scrittura dei programmi.
+Un **monitor** *raggruppa procedure*, variabili e strutture dati. I processi possono chiamare le procedure di un monitor ma non possono accedere direttamente alle sue strutture dati interne.
+- *Solo un processo può essere attivo in un monitor in un dato momento*, garantendo la mutua esclusione.
+- *Il compilatore gestisce la mutua esclusione dei monitor*, riducendo la probabilità di errori da parte del programmatore.
+Per gestire situazioni in cui i processi devono attendere, i *monitor utilizzano variabili condizionali e due operazioni su di esse: `wait` e `signal`*.
+- A differenza dei semafori, le variabili condizionali *non accumulano segnali*.
+- Se un segnale viene inviato e non c'è un processo in attesa, il segnale viene perso.
+*Linguaggi come Java* supportano i monitor, permettendo una sincronizzazione e mutua esclusione più sicura e semplice in contesti mutithreading.
+- I metodi sono dichiarati `synchronized` in modo che un solo thread ( in Java la programmazione concorrente è basata su thread ) può accedervi.
+```Monitor
+monitor example
+	integer i;
+	condition c;
+
+	procedure producer();
+	.
+	.
+	.
+	end;
+
+	procedure consumer()
+	.
+	end;
+end monitor;
+```
+## Monitor: Produttore-Consumatore
+```C
+monitor ProdCons{
+	condition full, empty;
+	int count=0;
+	void enter(int item){
+		if(count==N) wait(full);
+		insert_item(item);
+		count++;
+		if(count==1) signal(empty);
+	}
+	void remove(int *item){
+		if(count==0) wait(empty);
+		*item=remove_item();
+		count--;
+		if(count==N-1) signal(full);
+	}
+}
+
+void producer(){
+	int item;
+	while(TRUE){
+		item=produce_item();
+		ProdCons.enter(item);
+	}
+}
+
+void consumer(){
+	int item;
+	while(TRUE){
+		ProdCons.remove(&item);
+		consume_item(item);
+	}
+}
+```
+### Differenze tra Sleep/WakeUp e Wait/Signal
+**sleep/wakeup**:
+- Meccanismi più primitivi utilizzati per mettere un processo/thread in attesa( `sleep` ) e poi svegliarlo( `wakeup` ).
+- *Problema*: Posso portare a delle *race condition*.
+	- Immagina che il processo A voglia svegliare il processo B.
+	- Se il processo A chiama `wakeup` per il processo B proprio mentre B sta per chiamare `sleep`...
+	- ... B potrebbe finire per dormire indeterminatamente perché ha perso il segnale di sveglia.
+**wait/signal** ( nel monitor):
+- Differenza cruciale: `wait` e `signal` sono protetti dalla mutua esclusione all'interno del monitor.
+	- Una volta che un thread/processo entra in una procedura del monitor, ha l'esclusività completa di quella procedura fino a quando non termina o chiama `wait`.
+	- In Java la procedura ha il modificatore `synchronized`.
+- Se un thread/processo chiama wait all'interno di un monitor, può essere certo che non verrà interrotto ( ad esempio, dallo scheduler ) finché non ha terminato di posizionarsi in uno stato di attesa.
+- Questo elimina la possibilità di perdere un segnale come poteva accadere con `sleep/wakeup`.
+### Monitor e Semafori
+I monitor sono costrutti di linguaggio, riconosciuti dal compilatore per garantire la mutua esclusione. Molti linguaggi, come C e Pascal, non hanno monitor o semafori ( ma, si possono aggiungere semafori attraverso routine in assembly ). 
+I semafori sono pratici per risolvere la mutua esclusione in sistemi con memoria condivisa, ma non in sistemi distruttibili.
+Conclusione: I semafori sono a basso livello; I monitor sono limitati ai linguaggi che li supportano.
+# La mutua esclusione: Scambi di messaggi
+Metodo di comunicazione tra processi utilizzando due primitive: `send` e `receive`.
+Può essere utilizzato in diversi scenari, compresi sistemi distribuiti.
+**Problemi**:
+- Messaggi persi dalla rete.
+- Necessità di *acknowledgement* per confermare la ricezione.
+- Gestione dei messaggi duplicati usando numeri sequenziali.
+- Autenticazione e denominazione dei processi.
+Malgrado l'inaffidabilità, lo scambio di messaggi è cruciale nello studio delle reti.
+## Problema Produttore-Consumatore e Messaggi
+Soluzione *senza memoria condivisa utilizzando solo messaggi*. Utilizza un totale di $N$ messaggi, simili agli $N$ posti del buffer nella memoria condivisa.
+- Il consumatore invia al produttore $N$ messaggi vuoti.
+- Il produttore prende un messaggio vuoto, lo riempie e lo invia.
+Il numero totale di messaggi rimane costante, gestito dal SO. Questa soluzione garantisce efficienza e memoria predeterminata.
+### Message passing: Produttore-Consumatore
+```C
+#define N 100
+
+void producer(){
+	int item;
+	message msg;
+
+	while(TRUE){
+		item=produce_item();
+		receive(consumer, &msg);
+		build_message(&msg, item);
+		send(consumer, &msg);
+	}
+}
+
+void consumer(){
+	int item, i;
+	message msg;
+	for(i=0;i<N;i++){
+		send(producer, &msg);
+	}
+	while(TRUE){
+		receive(producer, &msg);
+		item = extract_item();
+		send(producer, &msg);
+		consume_item(item);
+	}
+}
+```
+## Meccanismo di scambio di messaggi e problematiche
+*Dinamica Produttore-Consumatore*:
+- Se il produttore è più veloce, tutti i messaggi saranno pieni, costringendo il produttore ed attendere.
+- Se il consumatore è più veloce, tutti i  messaggi saranno vuoti, e il consumatore aspetta un messaggio pieno.
+*Indirizzamento dei Messaggi*:
+- Ogni processo può avere un indirizzo univoco.
+- Introduzione di "mailbox" come buffer per i messaggi.
+	- `send` e `receive` fanno riferimento alle mailbox, non ai processi.
+*Applicazioni*:
+- Scambio di messaggi usato in programmazione parallela.
+- **MPI** ( Message Passing Interface ) è un esempio ben conosciuto usato in elaborazioni scientifiche.
+## Meccanismi di sincronizzazione e barriere
+Le *barriere* sono utilizzate per sincronizzare processi in fasi diverse. Quando un processo raggiunge una barriera, attende fino a quando tutti gli altri processi la raggiungono.
+Es. In calcoli paralleli sulle matrici, i processi non possono avanzare a un'iterazione successiva finché tutti non hanno determinato l'iterazione attuale.
+### Barriere
+Le *barriere* sono utilizzate per *sincronizzaee processi in fasi diverse*. Quando un processo raggiunge una barriera, attende fino a quando tutti gli altri processi la raggiungono.
+![[Pasted image 20231106123745.png|center|700]]
+
+# Inversione delle priorità: Read-Copy-Update
+## Problema del Mars Pathfinder
+*Veicolo robotico su Marte*.
+3 thread:
+- Dati meteorologici ( bassa priorità );
+- Gestione bus informativo ( alta priorità );
+- Comunicazioni ( media priorità ).
+Bus informativo: Memoria condivisa utilizzata per passare informazioni.
+Mutex: Utilizzato per controllare l'accesso al bus informativo.
+### Cosa è successo?
