@@ -1,0 +1,3 @@
+# Lo scheduling dei Processi/Thread
+In un computer multiprogrammato, molteplici processi/thread possono competere per la CPU contemporaneamente.
+Lo scheduler decide quale processo/thread eseguire successivamente seguendo un algoritmo di scheduling ( molti problemi di scheduling per processi valgono anche per i thread ). Lo scheduling al livello del kernel avviene per thread, indipendentememte dal processo di appartenenza. Sfide specifiche emergono nello scheduling dei thread.
