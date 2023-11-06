@@ -527,3 +527,49 @@ Le *barriere* sono utilizzate per *sincronizzaee processi in fasi diverse*. Quan
 Bus informativo: Memoria condivisa utilizzata per passare informazioni.
 Mutex: Utilizzato per controllare l'accesso al bus informativo.
 ### Cosa è successo?
+- Il thread dei dati meteorologici ( bassa priorità ) acquisisce il mutex.
+- Il thread di comunicazione ( media priorità ) prenota il thread dei dati meteorologici.
+- Il thread di gestione bus ( alta priorità ) cerca di eseguire, ma si blocca perché non può acquisire il mutex
+- *Risultato:* **Inversione delle priorità** 
+	- Il thread di comunicazione non funziona come se avesse alta priorità, causando interruzioni nelle trasmissioni.
+### Possibili soluzioni all'inversione delle priorità
+*Disattivazione degli interrupt*:
+- Semplice ma rischioso;
+- Gli interrupt potrebbero non essere riattivati.
+*Priority Ceiling ( Limite della priorità )*:
+- Assegnare una *priorità al mutex*.
+- La priorità viene assegnata al processo che detiene il mutex.
+- Fintanto che nessun processo che deve acquisire il mutex ha una priorità superiore al limite, l'inversione non è più possibile.
+*Priority Inheritance ( Ereditarietà della Priorità )*:
+- Task a bassa priorità che detiene il mutex eredita temporaneamente la priorità del task ad alta priorità.
+- Adottato per risolvere i problemi del Mars Pathfinder.
+*Random Boosting ( Potenziamento Casuale )*:
+- Aumenta la priorità di thread casuali che detengono un mutex.
+### Read-Copy-Update
+I migliori lock sono quelli che non si usano. 
+*Obiettivo*: Accessi concorrenti senza lock.
+*Problema*: Possibile inconsistenza dei dati.
+**Principio base di Read-Copy-Update**:
+- Aggiornare strutture dati consentendo letture simultanee senza incappare in versioni inconsistenti dei dati.
+- Lettori vedono: o la versione vecchia o la nuova, mai un mix delle due.
+#### Avoiding locks
+*Inserimento*:
+- Nodo X preparato e reso visibile in modo atomico.
+- Nessuna versione non coerente letta.
+![[Pasted image 20231106140733.png|center|600]]
+*Rimozione*:
+- Nodo B o D eliminati senza bisogno di lock.
+- Lettori vedono o la nuova o la vecchia struttura, mai entrambe.
+![[Pasted image 20231106140853.png|center|600]]
+### Read-Copy-Update
+**Problema e soluzione**:
+- *Quando liberare B e D?* Finché ci sono lettori, non si possono liberare.
+- *Operazioni RCU*: Determina il tempo massimo per trattenere un riferimento.
+- *Grace Period*: Tempo in cui ogni thread esce almeno una volta dalla sezione critica.
+	- Aspetta un periodo $\ge$ grace period prima di liberare la memoria.
+	- I thread nella sezione critica non si bloccano né vanno in sleep, quindi si aspetta un cambio di contesto.
+**Applicazione nell'Informatica**:
+- RCU non comune nei processi utente;
+- Diffuso nei kernel dei SO;
+- Kernel Linux: API RCU usata in molti sottosistemi.
+	- Rete, file system, driver, gestione della memoria.
