@@ -9,7 +9,7 @@ Eseguita la prima quintupla, si cerca un’altra quintupla da eseguire (ossia, u
 ## Esempio di macchina di Turing
 Consideriamo una macchina di Turing ad un nastro, $T_{parità}$ , definita sull’alfabeto    $Σ = \{ 0, 1, p, d\}$ e sull’insieme di stati 
 $Q = \{q_0 , q_p , q_d , q_{(F )}\}$ con stato iniziale $q_0$ e stato finale $q_F$ il cui insieme delle quintuple è
-$$\begin{align}&P  =  \{  〈 q_0 , 0, ◻, q_p , destra〉, 〈 q_0 , 1, ◻, q_d , destra〉, \\&  〈 q_p , 0, ◻, q_p , destra〉, 〈 q_d , 0, ◻, q_d , destra〉, \\&  〈 q_p , 1, ◻, q_d , destra〉, 〈 q_d , 1, ◻, q_p , destra〉, \\&  〈 q_p , ◻, p, q_F , fermo〉, 〈 q_d , ◻, d, q_F , fermo〉\}\end{align}
+$$\begin{align}&P  =  \{  〈 q_0 , 0, ◻, q_p , destra〉, 〈 q_0 , 1, ◻, q_d , destra〉, \\&  〈 q_p , 0, ◻, q_p , destra〉, 〈 q_d , 0, ◻, q_p , destra〉, \\&  〈 q_p , 1, ◻, q_d , destra〉, 〈 q_d , 1, ◻, q_d , destra〉, \\&  〈 q_p , ◻, p, q_F , fermo〉, 〈 q_d , ◻, d, q_F , fermo〉\}\end{align}
 $$
 La macchina $T_{parità}$ scandisce la sequenza di caratteri scritta sul suo nastro, cancellandoli via via che vengono scanditi, e verificando se tale sequenza contiene un numero pari o un numero dispari di ‘1’: al termine della scansione, nel primo caso scrive ‘p’ e termina, nel secondo caso scrive ‘d’ e termina.
 Vediamo ora la macchina  $T_{parità}$  in azione:
