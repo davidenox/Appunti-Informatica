@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5b786e19b7e9ead0",
+        "id": "2eae96185aad7f3b",
         "type": "tabs",
         "children": [
           {
-            "id": "b214dff4eb604afb",
+            "id": "7e3779b0761620b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 7 - Scheduling.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 7 - Scheduling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 7 - Scheduling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 7 - Scheduling.md"
               }
             }
           },
@@ -171,8 +171,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "b214dff4eb604afb",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231107101122.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231107100547.png",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 - Intro e Princìpi.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
@@ -206,13 +209,10 @@
     "_temp/Appunti BSD/MOD I/Lezione 8 - Algebra relazionale,query,visite.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 4 - Processi e Thread.md",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3.1 - Bash.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 3 - Concetti SO.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231025154750.png",
     "Secondo Anno/Sistemi Operativi e Reti/Lezioni/Lezione 5 - esercizio_processi.c",
-    "Secondo Anno/Sistemi Operativi e Reti/Immagini/Pasted image 20231024160726.png",
     "Secondo Anno/Sistemi Operativi e Reti/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
