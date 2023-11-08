@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "45bc9aad44b5950a",
+        "id": "e5da63b72d9a6d20",
         "type": "tabs",
         "children": [
           {
-            "id": "3fd736433ac738a8",
+            "id": "143f8716d761e72d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -171,10 +167,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "3fd736433ac738a8",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",
@@ -209,8 +207,6 @@
     "_temp/Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
     "_temp/Appunti BSD/MOD I/Lezione 7 - Metodologie di progettazione della base di dati.md",
     "_temp/Appunti BSD/MOD I/Lezione 8 - Algebra relazionale,query,visite.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 4 - Processi e Thread.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 5 - Elementi di programmazione nei SO.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 5 - esercizio_processi.c",
