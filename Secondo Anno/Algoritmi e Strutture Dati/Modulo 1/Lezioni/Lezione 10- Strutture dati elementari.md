@@ -120,6 +120,7 @@ Una generica cella i contiene una coppia (**info,parent**) dove:
 Algoritmi che consentono l'**accesso sistematico ai nodi e agli archi** di un albero.
 Gli algoritmi di visita si distinguono in nodi base al particolare ordine di accesso ai nodi.
 ## Algoritmo di visita in profondità (DFS)
+	Depht First Search
 *Def*: L'algoritmo di visita in profondità (**DFS**) parte da r (*radice*) e procede visitando nodi di figlio in figlio fino a raggiungere una foglia.
 Retrocede poi al primo antenato che ha ancora figli non visitati (se esiste) e ripete il procedimento a partire da uno di quei figli.
 ![[Pasted image 20221117102555.png|center|600]]
@@ -154,7 +155,7 @@ Quindi $T(n)=O(n)$
 Come la versione iterativa
 
 ## Algoritmo di visita in ampiezza (BFS)
-
+	Breadht First Search
 *Def*: L'algoritmo di visita in ampiezza (BFS) parte da r (radice) e procede visitando nodi per livelli successivi.
 Un nodo sul livello i può essere visitato solo se tutti i nodi sul livello i-1 sono stati visitati
 ![[Pasted image 20221117104456.png|center|600]]
