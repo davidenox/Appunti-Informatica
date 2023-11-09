@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4e3f66aee001c7a7",
+        "id": "d814fc1d5d203578",
         "type": "tabs",
         "children": [
           {
-            "id": "131408716a6bb229",
+            "id": "5c8e3ff587e93f8c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 6 - Modello concettuale e Modello ER.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 6 - Modello concettuale e Modello ER.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 6 - Modello concettuale e Modello ER.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 6 - Modello concettuale e Modello ER.md"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md"
               }
             }
           },
@@ -171,10 +171,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "131408716a6bb229",
+  "active": "5c8e3ff587e93f8c",
   "lastOpenFiles": [
-    "_temp/Appunti BSD/MOD I/Lezione 5 - Modello Concettuale, Modello ER.md",
+    "_temp/Appunti SOR/MOD I/Lezione 4 - Operazioni dei processi.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 6 - Modello concettuale e Modello ER.md",
+    "_temp/Appunti BSD/MOD I/Lezione 5 - Modello Concettuale, Modello ER.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
@@ -210,7 +211,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231102101528.png",
     "_temp/Appunti ASD/MOD I/Lezione 8 - Capitolo 4.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
-    "_temp/Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 5 - esercizio_processi.c",

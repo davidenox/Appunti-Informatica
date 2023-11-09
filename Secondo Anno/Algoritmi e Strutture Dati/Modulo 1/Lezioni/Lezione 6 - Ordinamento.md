@@ -167,9 +167,9 @@ x=A[i]
 inf=i
 sup=f+1
 while(true) do
-	do (inf=inf+1) while (inf\>=f e A[inf]<=x)
+	do (inf=inf+1) while (inf>=f e A[inf]<=x)
 	do (sup=sup-1) while (A[sup]>=x)
-	if (inf\<=sup) then scambia A[inf] e A[sup]
+	if (inf<=sup) then scambia A[inf] e A[sup]
 	else break
 scambia A[i] e A[sup]
 return sup
