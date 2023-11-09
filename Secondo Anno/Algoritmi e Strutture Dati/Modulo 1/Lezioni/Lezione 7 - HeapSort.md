@@ -86,12 +86,14 @@ Complessità $O(log(n))$
 ## Costruzione dell'heap
 
 Algoritmo ricorsivo basato sulla tecnica del divide et impera
->**heapify**(heap H)
->if (H non è vuoto) then
->	heapify (sottoalbero sinistro di H)
->	heapify (sottoalbero destro di H)
->	fixHeap (radice di H,H)
 
+```PseudoCodice
+heapify(heap H)
+if (H non è vuoto) then
+	heapify (sottoalbero sinistro di H)
+	heapify (sottoalbero destro di H)
+	fixHeap (radice di H,H)
+```
 ![[Pasted image 20221028113058.png|center|500]]
 ![[Pasted image 20221028113117.png|center|500]]
 ![[Pasted image 20221028113132.png|center|500]]
