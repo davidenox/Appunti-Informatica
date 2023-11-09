@@ -61,6 +61,8 @@ Metodo più semplice: **array non ordinato** (sovradimensionamento)
 - **Insert**: costa $O(n)$ - devo manterene ordinata la lista
 - **Search**: costa $O(n)$ - non posso usare la ricerca binaria
 - **Delete**: costa $O(n)$
+
+>[!danger]- Esercizio : Progettare due strutture dati ( una indicizzata e una collegata ) che implementino il tipo di dato pila e il tipo di dato coda. Le operazioni devono avere complessità temporale costante.
 # Alberi
 ## Organizzazione gerarchica dei dati
 
@@ -73,12 +75,10 @@ Dati contenuti nei **nodi**, relazioni gerarchiche definite dagli **archi** che 
 - **grado di un nodo**: numero dei suoi figli
 - **albero d-ario,albero d-ario completo**
 
->[!important]- Def
->u si dice **antenato** di v se u è raggiungibile da v risalendo di padre in padre
->v si dice **discendente** di u se u è un antenato di v
-
+*Def*:
+- u si dice **antenato** di v se u è raggiungibile da v risalendo di padre in padre;
+- v si dice **discendente** di u se u è un antenato di v.
 ## Rappresentazioni indicizzate di alberi
-
 **Idea**: ogni cella dell'array contiene:
 - le informazioni di un nodo
 - eventualmente altri indici per raggiungere altri nodi

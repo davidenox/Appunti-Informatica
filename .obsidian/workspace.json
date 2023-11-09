@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md"
               }
             }
           },
@@ -173,13 +173,15 @@
   },
   "active": "5c8e3ff587e93f8c",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 11 - Il problema del dizionario.md",
+    "_temp/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
     "_temp/Appunti SOR/MOD I/Lezione 4 - Operazioni dei processi.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 6 - Modello concettuale e Modello ER.md",
     "_temp/Appunti BSD/MOD I/Lezione 5 - Modello Concettuale, Modello ER.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",
@@ -209,8 +211,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231102103623.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231102101528.png",
-    "_temp/Appunti ASD/MOD I/Lezione 8 - Capitolo 4.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 5 - esercizio_processi.c",
