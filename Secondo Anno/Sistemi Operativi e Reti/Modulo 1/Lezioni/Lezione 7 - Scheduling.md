@@ -88,3 +88,5 @@ Se ci sono più processi pronti che CPU disponibili:
 L'equitò è fondamentale in ogni scenario. In un sistema Batch, è ideale combinare i processi CPU-bound e I/O-bound, e nei sistemi Real-Time è cruciale rispettare le scadenze e garantire la prevedibilità.
 # Scheduling nei sistemi Batch
 work in progress
+
+## Sincronizzazione, stati e scheduling
