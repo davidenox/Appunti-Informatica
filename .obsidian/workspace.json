@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md"
               }
             }
           },
@@ -171,8 +171,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "5c8e3ff587e93f8c",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231110104344.png",
+    "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231110104305.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 11 - Il problema del dizionario.md",
     "_temp/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
@@ -207,10 +210,7 @@
     "_temp/Appunti ASD/MOD I/Esercizi/Indice degli esercizi ASD.md",
     "_temp/Appunti ASD/MOD I/Esercizi/Search,Insert,Delete su BTS.md",
     "_temp/Appunti ASD/MOD I/Lezione 9 - Capitolo 5.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231102103623.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231102101528.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 5 - esercizio_processi.c",
