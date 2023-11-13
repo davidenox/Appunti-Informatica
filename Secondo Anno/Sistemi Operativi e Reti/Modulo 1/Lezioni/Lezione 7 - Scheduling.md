@@ -291,6 +291,7 @@ Per esempio, se ci sono $m$ eventi periodici, l'evento $i$ avviene con un period
 - Chiamata di sistema permette a un processo di impostare le priorità dei suoi figli.
 - Il genitore può influenzare lo scheduling dei suoi figli senza controllarlo direttamente.
 **Conclusione**:
+(Slide 39)
 
 
 
