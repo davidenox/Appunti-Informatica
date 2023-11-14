@@ -290,9 +290,30 @@ Per esempio, se ci sono $m$ eventi periodici, l'evento $i$ avviene con un period
 - Kernel con algoritmo di scheduling a priorità.
 - Chiamata di sistema permette a un processo di impostare le priorità dei suoi figli.
 - Il genitore può influenzare lo scheduling dei suoi figli senza controllarlo direttamente.
-**Conclusione**:
-(Slide 39)
-
+**Conclusione**: Il meccanismo sta nel kernel, la policy è determinata dal processo utente.
+### Parallelismo : Processi e Thread
+Due livelli di parallelismo : *processi* e *thread*. Lo scheduling differisce in base al tipo di thread: *livello utente* vs. *livello kernel*.
+*Thread a livello utente*:
+- Il kernel ignora l'esistenza dei thread; sceglie un processo per il suo quanto.
+- Il thread interno decide quale thread eseguire senza interruzione del clock.
+- *Risultato*: Un thread può consumare l'intero quanto del processo, influenzando solo il processo interno e non gli altri.
+#### Scheduling dei Thread a livello utente
+Possibile ordine di esecuzione: $A1, A2, A3, A1, A2...$
+- Scheduling del sistema run-time può variare: spesso *round-robin* o *a priorità*.
+- Cooperazione tra thread; nessuna interruzione forzata.
+![[Pasted image 20231114102032.png|center|500]]
+Possibile scheduling dei thread a livello utente con un quanto per un processo di 50ms e thread che eseguono 5ms per burst della CPU.
+*Thread del kernel*: Il kernel seleziona un thread specifico per l'esecuzione.
+- Ordine potenziale: A1,B1,A2,B2...(Figura b).
+- Se un thread eccede il quanto, viene sospeso.
+![[Pasted image 20231114102734.png|center|400]]
+Possibile schedulazione di thread a livello kernel con le stesse caratteristiche della figura A.
+#### Differenze prestazionali e Considerazioni
+*Thread a livello utente vs. Thread del kernel*:
+- Scambio thread utente: poche istruzioni.
+- Scambio thread kernel: scambio completo di contesto $\implies$ più lento.
+- Blocc0 su I/O:
+	- Slide 43
 
 
 
