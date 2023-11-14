@@ -313,11 +313,30 @@ Possibile schedulazione di thread a livello kernel con le stesse caratteristiche
 - Scambio thread utente: poche istruzioni.
 - Scambio thread kernel: scambio completo di contesto $\implies$ più lento.
 - Blocc0 su I/O:
-	- Slide 43
-
-
-
-
-
-
-## Sincronizzazione, stati e scheduling
+	- Con thread utente, intero processo sospeso;
+	- Con thread kernel, solo il thread specifico.
+*Decisioni del kernel*:
+- Considera i costi per passare da un thread all'altro;
+- Può dare preferenza ai thread dello stesso processo.
+*Scheduling specifico dell'applicazione*:
+- Permette maggiore controllo e ottimizzazione dell'applicazione rispetto allo scheduling del kernel.
+# Breve Recap
+## Modelli di esecuzione e gestione dei processi
+**Concetti base**: Processi sequenziali eseguiti in parallelo per nascondere gli effetti degli interrupt.
+**Caratteristiche dei processi**:
+- Creati e terminati dinamicamente.
+- Spazio di indirizzi unico per ogni processo.
+**Thread**:
+- Multipli thread di controllo in un singolo processo.
+- < Schedulati > indipendentemente con stack propri.
+- Condivisione dello spazio di indirizzi.
+- Possono essere implementati nello spazio utente o nel kernel.
+## Sincronizzazione, Stati e Scheduling
+ **Sincronizzazione e Comunicazione**:
+ - Utilizzo di semafori, monitor, messaggi.
+ - Prevengono l'accesso simultaneo a regioni critiche per evitare caos.
+ - I processi possono essere : in esecuzione, eseguibili o bloccati.
+ - Cambiamento di stato causati da primitive di comunicazione.
+ **Algoritmi di Scheduling**:
+ - Varietà studiata: SJF, RoundRobin, Scheduling a Priorità, code multilivello e molti altri.
+ - Distinzione in alcuni sistemi tra meccanismo di Scheduling e policy, permettendo agli utenti di influenzare l'algoritmo di Scheduling.

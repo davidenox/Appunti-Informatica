@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Gestione della Memoria.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Gestione della Memoria.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Gestione della Memoria.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Gestione della Memoria.md"
               }
             }
           },
@@ -171,8 +171,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "edf3cf51b0308029",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Gestione della Memoria.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231114102734.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231114102032.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231113134639.png",
@@ -194,7 +196,6 @@
     "_temp/Appunti BSD/MOD I/Lezione 5 - Modello Concettuale, Modello ER.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231107101122.png",
@@ -202,7 +203,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 - Intro e Princìpi.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231106140853.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Esercitazione 1 - 2 Novembre.md",
     "_temp/Appunti ASD/MOD I/Esercizi/Esercizi sul metodo della ricorsione.md",
