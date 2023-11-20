@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "edf3cf51b0308029",
+            "id": "a8a9660315299111",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md"
               }
             }
           },
@@ -171,10 +171,14 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "edf3cf51b0308029",
+  "active": "a8a9660315299111",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Memory Abstraction.md",
+    "_temp/Appunti LMP/MOD I/Lezione 6 - Classi.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
+    "_temp/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
+    "_temp/Appunti ASD/MOD I/ProblemSet1/Problem Set.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Memory Abstraction.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231115142104.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231115141820.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231115141323.png",
@@ -207,10 +211,6 @@
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Esercitazione 1 - 2 Novembre.md",
     "_temp/Appunti ASD/MOD I/Esercizi/Esercizi sul metodo della ricorsione.md",
-    "_temp/Appunti ASD/MOD I/Esercizi/Esercizi Pseudo-codice e complessità temporale.md",
-    "_temp/Appunti ASD/MOD I/Esercizi/Esercizi Algoritmi di visita su alberi.md",
-    "_temp/Appunti ASD/MOD I/Esercizi/Esercitazioni.md",
-    "_temp/Appunti ASD/MOD I/Esercizi/Esercizio 1.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 5 - esercizio_processi.c",
