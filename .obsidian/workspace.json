@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md"
               }
             }
           },
@@ -171,10 +171,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Memory Abstraction.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Memory Abstraction.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231122153836.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231122120621.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231122114135.png",
@@ -188,7 +188,7 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 11 - Il problema del dizionario.md",
     "_temp/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
     "_temp/Appunti ASD/MOD I/Lezione 12 - Capitolo 8.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 -.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
     "_temp/Appunti LMP/MOD I/Lezione 6 - Classi.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",

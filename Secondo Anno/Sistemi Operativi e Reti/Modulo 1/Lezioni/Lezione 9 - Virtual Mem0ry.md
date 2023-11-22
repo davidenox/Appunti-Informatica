@@ -135,3 +135,22 @@ Ogni voce ha informazioni cruciali come il numero del frame, come:
 - Invece, si genera un errore di TLB e il SO deve intervenire.
 - Il SO cerca la pagina, aggiorna il TLB e riavvia l'istruzione.
 #### Tipologie di Miss e Implicazioni
+**Frequenza dei TLB Miss**:
+- I TLB Miss *sono comuni a causa del numero limitato di voci* nel TLB (es. 64 voci).
+- *Aumentare la dimensione del TLB è costoso* e richiede compromessi nella progettazione dei chip.
+**Soft Miss vs Hard Miss**:
+- *Soft Miss*: La pagina è in memoria ma non nel TLB. Richiede solo l'aggiornamento del TLB.
+- *Hard Miss*: La pagina non è in memoria e richiede un accesso alla memoria non volatile   ( disco o SSD ).
+	- Un hard miss è significativamente più lento di un soft miss.
+**Page Table Walk e diverse tipologie di Miss**:
+- La ricerca nella gerarchia delle tabelle delle pagine è chiamata "*page table walk*".
+- I miss possono *variare in "gravità"* da minori a maggiori.
+- Un *accesso a un indirizzo non valido* può portare a un ***Segmentation Fault*** e alla ***Terminazione del programma***.
+#### Page Table Size
+Pochi paragrafi fa: "Con 32 bit e pagine da 4Kb":
+- 12 bit per indirizzare 4096 byte per pagina;
+- Tabella delle pagine di 1.048.576 voci.
+Uno spazio di indirizzi virtuali molto grande porterebbe a una tabella di pagine molto grande- *Spreco di memoria* ( senza contare cosa succederebbe per 64 bit).
+*Possibili soluzioni*: Multi-level Page Table.
+#### Page table a due livelli (x86)
+(Slide 21)
