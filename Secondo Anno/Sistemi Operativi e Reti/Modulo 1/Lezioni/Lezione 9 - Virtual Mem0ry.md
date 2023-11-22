@@ -94,3 +94,44 @@ Ogni voce ha informazioni cruciali come il numero del frame, come:
 ### Velocizzare la paginazione - Problemi chiave
 *Mappatura Veloce*: Necessaria a ogni riferimento alla memoria. Ogni istruzione può richiedere più riferimenti alla tabella delle pagine.
 - *Sfida*: Se un'istruzione impiega 1 ns, la ricerca nella tabella delle pagine deve essere inferiore a 0,2 ns per evitare colli di bottiglia.
+**Dimensione della Tabella delle Pagine**:
+- *Contesto*: Con 48 bit di indirizzamento e pagine di 4Kb, ci sono 64 miliardi di pagine. Una tabella delle pagine per questo spazio di indirizzi richiederebbe voci enormi.
+- *Problema*: Usare centinaia di Gb solo per la tabella delle pagine è impraticabile. Ogni processo richiede una propria tabella delle pagine.
+#### Approcci alla soluzione
+**Tabella delle Pagine in Registri Hardware**:
+- *Funzionamento*: Un registro hardware per ogni pagina virtuale, caricato all'avvio del processo.
+- *Vantaggi*: Semplice, non richiede accessi alla memoria durante la mappatura.
+- *Svantaggi*: Costoso con tabelle delle pagine grandi, ricaricare l'intera tabella ad ogni cambio di contesto è inefficiente.
+**Tabella delle Pagine in Memoria Principale**:
+- *Funzionamento*: La tabella delle pagine è interamente in RAM, con un registro che punta al suo inizio.
+- *Vantaggi*: Facile da cambiare a ogni cambio di contesto, richiede solo il ricaricamento di un registro.
+- *Svantaggi*: Richiede accessi frequenti alla memoria, rendendo la mappatura più lenta.
+### Problema della paginazione e TLB
+**Problema di Prestazioni nella Paginazione**:
+- *Ogni istruzione richiede l'accesso alla memoria* per prelevare l'istruzione stessa e un ulteriore accesso per la tabella delle pagine.
+- Raddoppio degli accessi alla memoria *riduce le prestazioni* di metà.
+**Ma**:
+- I programmi tendono a fare *molti riferimenti a un piccolo numero di pagine*.
+- *Solo una parte limitata* delle boci della tabella delle pagine viene *utilizzata frequentemente*.
+**Introduzione del ***Translator Lookaside Buffer (TLB)***:
+- Dispositivo hardware che mappa indirizzi virtuali in fisici senza passare dalla tabella delle pagine.
+- Riduce gli accessi alla memoria durante la paginazione.
+### Funzionamento e gestione del TLB
+**Struttura**:
+- *Piccolo numero* di voci ( es. $8-256$), ciascuna con numero di pagina virtuale, *bit modificato*, *codice di protezione* e frame fisico.
+**Funzionamento**:
+- Alla richiesta di un indirizzo virtuale, la MMU controlla prima nel TLB.
+- Se trovato e valido, il frame è prelevato direttamente dal TLB.
+- Se non trovato (`TLB miss`), avviene una ricerca normale nella tabella delle pagine e la voce trovata rimpiazza una voce nel TLB.
+**Gestione delle Modifiche**:
+- Le modifiche ai permessi di una pagina nella tabella delle pagine richiedono l'aggiornamento del TLB.
+- Per garantire la coerenza, la voce corrispondente nel TLB viene eliminata o aggiornata.
+![[Pasted image 20231122153836.png|center|500]]
+### Gestione software del TLB
+*TLB in Architetture RISC*:
+- Alcune macchine RISC come SPARC, MIPS e HP PA gestiscono le voci del TLB tramite software.
+*Processo in Caso di TLB Miss*:
+- Un TLB miss non porta a una ricerca automatica nella tabella delle pagine da una parte della MMU.
+- Invece, si genera un errore di TLB e il SO deve intervenire.
+- Il SO cerca la pagina, aggiorna il TLB e riavvia l'istruzione.
+#### Tipologie di Miss e Implicazioni
