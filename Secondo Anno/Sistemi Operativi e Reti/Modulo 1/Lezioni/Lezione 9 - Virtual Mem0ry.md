@@ -153,4 +153,60 @@ Pochi paragrafi fa: "Con 32 bit e pagine da 4Kb":
 Uno spazio di indirizzi virtuali molto grande porterebbe a una tabella di pagine molto grande- *Spreco di memoria* ( senza contare cosa succederebbe per 64 bit).
 *Possibili soluzioni*: Multi-level Page Table.
 #### Page table a due livelli (x86)
-(Slide 21)
+Le Page Tables sono "attraversate" ( "walked" ) dal Memory Management Unit.
+*CR3* register: Registro speciale per puntare al vertice della gerarchia delle tabelle di pagina.
+
+>Esempio:
+>a) Un indirizzo a 32 bit con due campi (10+10 bit).
+>b) Una page table a due livelli.
+
+![[Pasted image 20231123151320.png|center|300]]![[Pasted image 20231123151338.png|center|200]]
+##### 64 bit : Page Table a 4 livelli
+- *PGD* : Page Global Directory;
+- *PUD* : Page Upper Directory;
+- *PMD* : Page Mid-Level Directory;
+- *PTE* : Page Table Entry.
+![[Pasted image 20231123151810.png|center|700]]
+
+>[!note]- Nota: $2^9\times 2^9\times 2^9\times 2^9\times 2^{12}=2^{48}$ byte.
+>Ricordate i 48 bit? Permettono di puntare, al momento, 256Tb di memoria.
+
+# Algoritmi di sostituzione delle pagine
+## Gestione della memoria : Outline
+- Memory Abstraction
+- Virtual Memory
+- *Algoritmi di Progettazione per Sistemi di Paging*
+- Problemi di Progettazione per Sistemi di Paging
+## Page Replacement
+Il computer potrebbe utilizzare più memoria virtuale di quanta ne abbia fisica. La paginazione crea l'illusione di una memoria praticamente illimitata a disposizione dei processi utente. Quando una pagina logica non è in memoria ( scambiata o "swapped" con un file/partizione ), il SO deve caricarla in memoria in caso di *page fault*. Un'altra pagina logica potrebbe essere scambiata, ma quale?
+## Algoritmi di sostituzione delle pagine
+- Algoritmo ottimale
+- Not Recently Used ( NRU )
+- First-In, First-Out ( FIFO ) algorithm
+- Second-chance algorithm
+- Clock algorithm
+- Least recently used ( LRU ) algorithm
+- Working set algorithm
+- WS Clock algorithm
+### Algoritmo di sostituzione delle pagine ottimale
+*Concetto*: Scegliere la pagina con in riferimento più distante nel futuro da rimuovere.
+*Idealmente*, si rimuove la pagina che non sarà usata per il maggior numero di istruzioni future.
+*Esempio*: "Se una pagina non sarà usata per 8 milioni di istruzioni e un'altra per 6 milioni, si rimuove la prima".
+*Problema*: È impossibile per il SO prevede il momento del prossimo riferimento per ciascuna pagina.
+#### Limiti pratici e valutazione degli algoritmi
+Il metodo ottimale *non è realizzabile* in pratica perché richiede la previsione del futuro utilizzo delle pagine. È possibile un'implementazione per valutare le prestazioni rispetto agli algoritmi reali.
+*Valutazione*: Se un sistema ha prestazioni inferiori dell'1% rispetto all'ottimale, il miglioramento massimo tecnico è dell'1%.
+Gli algoritmi reali devono essere valutati per la loro applicabilità pratica, non per l'ottimalità teorica.
+#### Un breve recap
+![[Pasted image 20231123160105.png|center|600]]
+Bit della Page Table Entry utili per gli algoritmi di sostituzione delle pagine:
+- *Modified (M)*: Impostato quando una pagina viene modificata ( conosciuto anche come "dirty bit" );
+- *Referenced (R)*: Impostato quando la pagina viene acceduta ( conosciuto anche come "accessed" bit).
+### Concetto e funzionamento di NRU 
+*Obiettivo*: Trovare le pagine non modificate che non sono state accedute "recentemente".
+Vengono usati i *Bit di Stato R e M*:
+- R indica l'accesso della pagina,
+- M segnala le modifiche.
+*Aggiornamento Hardware*: I bit vengono impostati dall'hardware a ogni accesso.
+*Reset periodico*: Il bit R viene periodicamente ripulito per identificare pagine non recentemente usate ( per esempio a ogni interrupt del clock ).
+*Classificazione delle pagine* in base ai bit R e M ( Le pagine sono divise in 4 pagine da 0 a 3 in funzione dell'uso e delle modifiche ).

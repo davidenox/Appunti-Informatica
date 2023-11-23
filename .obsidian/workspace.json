@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md"
               }
             }
           },
@@ -171,8 +171,13 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231123160105.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231123151810.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231123151338.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231123151320.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Memory Abstraction.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231122153836.png",
@@ -182,20 +187,16 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231122113548.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231122112823.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231122105024.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231122104849.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "_temp/Appunti ASD/MOD I/Lezione 11 - Capitolo 6.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 11 - Il problema del dizionario.md",
     "_temp/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
     "_temp/Appunti ASD/MOD I/Lezione 12 - Capitolo 8.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
     "_temp/Appunti LMP/MOD I/Lezione 6 - Classi.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
     "_temp/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
     "_temp/Appunti ASD/MOD I/ProblemSet1/Problem Set.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231115142104.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231115141820.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
