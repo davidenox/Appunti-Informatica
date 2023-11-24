@@ -210,3 +210,56 @@ Vengono usati i *Bit di Stato R e M*:
 *Aggiornamento Hardware*: I bit vengono impostati dall'hardware a ogni accesso.
 *Reset periodico*: Il bit R viene periodicamente ripulito per identificare pagine non recentemente usate ( per esempio a ogni interrupt del clock ).
 *Classificazione delle pagine* in base ai bit R e M ( Le pagine sono divise in 4 pagine da 0 a 3 in funzione dell'uso e delle modifiche ).
+#### Classificazione delle pagine e scelta di rimozione
+**Classi di pagine**:
+- *Classe 0*: Non referenziata, non modificata.
+- *Classe 1*: Non referenziata, modificata.
+- *Classe 2*: Referenziata, non modificata.
+- *Classe 3*: Referenziata, modificata.
+Le pagine di *classe 1* sembrano a prima vista *impossibili*, *ma* appaiono quando *un interrupt del clock azzera il bit R* di una pagina di classe 3.
+- Gli interrupt del clock non azzerano il bit M perché questa informazione è necessaria per sapere se la pagina deve essere riscritta su disco o meno.
+>**Selezione per Rimozione**:
+- NRU rimuove una pagina casuale dalla classe più bassa non vuota.
+- Azzerare R ma non M produce una pagina di classe 1: Una pagina di classe 1 è stata modificata molto tempo fa e da allora non è stata più toccata.
+**Vantaggi di NRU**: Semplicità, efficienza implementativa e prestazioni accettabili.
+### Algoritmo FIFO (First-In, First-Out)
+*Descrizione*: FIFO è un algoritmo di paginazione che elimina la pagina più vecchia in memoria.
+*Implementazione*: Il SO rimuove la pagina in testa alla lista ( la più vecchia ) durante un page fault, aggiungendo la nuova pagina in coda.
+*Problema di FIFO*: Nel contesto informatico, la pagina più vecchia potrebbe ancora essere frequentemente utilizzata, rendendo FIFO poco efficace.
+*Conclusione*: A causa di queste limitazioni, FIFO è raramente utilizzato nella sua forma più semplice.
+### Seconda Chance : Miglioramento di FIFO
+*Principio*: Controllo del bit R (di lettura) della pagina più vecchia per decidere la rimozione.
+*Funzionamento*:
+- Se R=0 la pagina è vecchia e non usata di recente, quindi viene sostituita.
+- Se R=1 il bit viene azzerato, la pagina è reinserita in fondo alla lista e considerata come appena caricata.
+![[Pasted image 20231124101847.png|center|500]]
+![[Pasted image 20231124101908.png|center|500]]
+a) Pagine ordinate in ordine FIFO
+b) Elenco delle pagine se si verifica un errore di pagina al tempo 20 e A ha il bit R impostato.
+I numeri sopra le pagine sono i loro tempi di caricamento.
+#### Operatività e caso peggiore del miglioramento
+*Azioni*:
+- Se A ha R=0, viene rimossa ( scritta su memoria non volatile se modificata, altrimenti scartata ).
+- Se A ha R=1, viene messa in fondo alla lista e il suo timestamp di caricamento aggiornato.
+**Scenari possibili**:
+- Se trova una pagina non referenziata, la rimuove.
+- Se tutte le pagine sono state referenziate, il miglioramento opera come un FIFO puro, con un ciclo completo di reset dei bit R prima di rimuovere la pagina iniziale.
+### Algoritmo di clock per la sostituzione delle pagine
+*Funzionamento*: Lista circolare dei frame di pagina con un puntatore simile a una lancetta di orologio per identificare la pagina più vecchia.
+*Page fault*:
+- Se il bit R della pagina puntata è 0, la pagina viene rimossa e sostituita con la nuova, poi il puntatore avanza.
+- Se R=1, il bit viene azzerato e il puntatore si sposta alla pagina successiva.
+*Concetto*: Ripete il processo finché non trova una pagina con R=0.
+*Vantaggio*: Elimina l'inefficienza della continua riallocazione delle pagine lungo la lista.
+> Efficiente e più performante rispetto a Seconda Chance e FIFO.
+![[Pasted image 20231124104402.png|center|400]]
+### Least Recently Used ( LRU ) - Tra teoria e "pratica"
+**Teoria**:
+- *Fondamento LRU*: Pagine non usate di recente sono candidate alla sostituzione
+- *Possibile implementazione*: Lista delle pagine  con quelle più usate in testa e quelle meno usate in coda.
+- *Aggiornamenti*: Ogni riferimento richiede l'aggiornamento della lista (uno stack) e copia di pagine intere, operazione costosa anche con hardware dedicato.
+Sebbene tendente all'ottimo, praticamente non efficiente e non utilizzato.
+Esistono però altri metodi per implementare l'LRU con hardware speciale:
+- Uso di un contatore a 64 bit per ogni riferimento a memoria.
+- *Selezione LRU*: alla generazione di un page fault, si rimuove la pagina con il contatore più basso, indicando l'uso meno recente.
+#### Simulazione Software di LRU : Algoritmo NFU
