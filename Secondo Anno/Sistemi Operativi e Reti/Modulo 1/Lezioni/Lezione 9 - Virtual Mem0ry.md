@@ -263,3 +263,67 @@ Esistono però altri metodi per implementare l'LRU con hardware speciale:
 - Uso di un contatore a 64 bit per ogni riferimento a memoria.
 - *Selezione LRU*: alla generazione di un page fault, si rimuove la pagina con il contatore più basso, indicando l'uso meno recente.
 #### Simulazione Software di LRU : Algoritmo NFU
+**NFU ( Not Frequently Used )**: Associa un contatore ad ogni pagina, incrementato con ogni interrupt del clock in base al bit R.
+- Tanti accessi ad una pagina $\implies$ Alto valore di "frequenza" assegnato alla pagina $\implies$ minore possibilità di rimozione.
+**Limite di NFU**: Non dimentica l'uso passato, può portare a scelte subottimali in ambienti multi-pass o in fase di boot.
+- Es: Una pagina utilizzata con altissima frequenza in un determinato periodo e poi "abbandonata" potrebbe non venire sostituita.
+**Miglioramento di NFU $\implies$ Aging**:
+- Numero di bit fisso, ad esempio 8 bit.
+- Ad ogni interrupt del clock i bit vengono spostati a destra.
+- Prima dello shift dei contatori, il bit R viene aggiunto al lato sinistro.
+*Effetto dell'Aging*: Emula LRU, dando meno peso agli usi passati e preferendo le pagine meno referenziate di recente.
+##### NFU e Aging in azione
+![[Pasted image 20231124114013.png|center|600]]
+Simula l'LRU via software, es: *Pagina 1*:
+a) NON è modificata ed ha valore `00000000`
+b) Viene modificata e diventa `10000000`
+c) Viene modificata e diventa `11000000`
+d) NON viene modificata e diventa `01100000`
+Consideriamo le *pagine 3 e 5*:
+*(c)* - Entrambe hanno avuto accesso.
+*(d) ed (e)* - Nessuna delle due ha avuto riferimenti.
+- Registrando un solo bit per intervallo di tempo non potremmo distinguere fra riferimenti in tempi recenti o meno.
+- Con NFU e Aging, la *pagina 3 viene rimossa* poiché la pagina 5 ha avuto riferimenti in (a) prima e la pagina 3 no.
+##### Limiti e praticità dell'Aging
+*Differenza da LRU*: Aging non distingue l'ordine esatto dei riferimenti recenti ed ha un orizzonte temporale limitato ( non è necessariamente un male, anzi ).
+*Fattibilità*: 8 bit sono generalmente sufficienti per un buon compromesso tra accuratezza e uso di memoria.
+### Il concetto di Working Set
+*Definizione di Working Set*: 
+- Insieme delle pagine attualmente usate da un processo.
+- Rappresenta la località di riferimento, ovvero le pagine a cui un processo fa riferimento durante una fase dell'esecuzione.
+*Demand Paging*:
+- Le pagine sono caricate in memoria "On demand", solo quando necessario.
+- Inizialmente molti page fault si verificano finché non vengono caricate tutte le pagine necessarie.
+#### Concetto e dinamica del WS
+*Definizione*: Working Set `w(k,t)` è l'insieme di pagine usate negli ultimi k riferimenti.
+*Monotonia*: `w(k,t)` è monotona non decrescente al crescere di `k`.
+*Asintoto*: Il limite di `w(k,t)` è finito, correlato allo spazio degli indirizzi del programma.
+*Implicazione*: C'è un ampio intervallo di `k` dove il WS resta invariato.
+![[Pasted image 20231124120900.png|center|600]]
+#### Working Set e Performance
+**Gestione della memoria e Page Fault**:
+- *Se* il WS di un processo è completamente *in memoria*, si verificano *pochi page fault*.
+- *Se* il WS è *più grande della memoria* disponibile, si verificano *frequenti page fault*, rallentando significativamente il processo ( fenomeno noto come ***thrashing***).
+**Working Set Model**:
+- Molti *SO cercano di tracciare il WS* di ogni processo e di mantenerlo in memoria per ridurre i page fault.
+- La *pre-paginazione carica in anticipo le pagine basandosi* sul WS del processo.
+#### Implementazione e algoritmi di sostituzione
+**Tracciamento del WS**:
+- Il WS è definito come l'insieme delle pagine usate negli ultimi `k` riferimenti alla memoria.
+- *In pratica*: è spesso definito *in termini di tempo*, ad esempio, le pagine usate negli ultimi $\tau$ secondi di tempo di esecuzione.
+**Algoritmo di Sostituzione basato sul WS**:
+- Alla verifica di un page fault, si ricerca una pagina fuori dal WS per rimuoverla.
+- Utilizza informazioni come il bit di riferimento e il tempo dell'ultimo utilizzo per determinare quali pagine rimuovere.
+#### Un esempio
+**Impostazione dei bit R e M**:
+- Un *interrupt periodico azzera il bit R* a ogni ciclo di clock.
+**Durante un Page Fault**:
+- Scansione delle pagine alla ricerca di una pagina da rimuovere.
+- *Controllo del bit R* per ogni pagina:
+	- *R=1*: Aggiornamento del tempo dell'ultimo utilizzo, la pagina è nel WS.
+	- *R=0 e Età $\gt\tau$*: La pagina non è nel WS e viene rimossa.
+	- *R=0 e Età $\le\tau$*: La pagina rimane, ma si contrassegna la più vechia per possibile rimozione.
+- Se nessuna pagina è rimovibile, viene selezionata la più vecchia con R=0 ( in caso contrario, una pagina a caso).
+![[Pasted image 20231124123957.png|center|600]]
+### Introduzione all'algoritmo WSClock
+(slide 45)
