@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md"
               }
             }
           },
@@ -171,8 +171,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "c671ff3e660be112",
   "lastOpenFiles": [
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231128112203.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231128111902.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124123957.png",
@@ -183,9 +186,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124101847.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231123160105.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231123151810.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231123151338.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Mem0ry.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Memory Abstraction.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "_temp/Appunti ASD/MOD I/Lezione 11 - Capitolo 6.md",
@@ -206,7 +206,6 @@
     "_temp/Appunti SOR/MOD I/Lezione 4 - Operazioni dei processi.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 6 - Modello concettuale e Modello ER.md",
     "_temp/Appunti BSD/MOD I/Lezione 5 - Modello Concettuale, Modello ER.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",

@@ -11,7 +11,7 @@ Sia $f:[a,b]\to \mathbb R$.
 $$f[y_{1},y_{2}]=\frac{f[y_{2}]-f[y_{1}]}{y_{2}-y_{1}}=\frac{f(y_{2})-f(y_{1})}{y_{2}-y_{1}}=\text{rapporto incrementale di }f\text{ relativo a }y_1,y_2$$
 
 **Teo.**
-Sia $f:[a,b]\to \mathbb R$ una funzione e siano $x_{0},\dots,x_{n}\in[a,b]$ punti distinti. Allora il polinomio di interpolazione di $f(x)$ sui nodi $x_{0},\dots,x_{1}$ è data da $$p(x)=f[x_{0}]+f[x_{0},x_{1}](x-x_{0})+\dots+f[x_{0},x_{1},\dots,x_{n}](x-x_{0})\dots(x-x_{n-1})\:\:\:(\star)$$
+Sia $f:[a,b]\to \mathbb R$ una funzione e siano $x_{0},\dots,x_{n}\in[a,b]$ punti distinti. Allora il polinomio di interpolazione di $f(x)$ sui nodi $x_{0},\dots,x_{n}$ è data da $$p(x)=f[x_{0}]+f[x_{0},x_{1}](x-x_{0})+\dots+f[x_{0},x_{1},\dots,x_{n}](x-x_{0})\dots(x-x_{n-1})\:\:\:(\star)$$
 *Corollario*
 Sia $f:[a,b]\to \mathbb R$ una funzione e siano $x_{0},\dots,x_{n}\in[a,b]$ punti distinti. Allora $f[x_{0},x_{1},\dots,x_{n}]$ non cambia se vengono permutati i suoi $n+1$ argomenti, ovvero $$f[x_{0},x_{1},\dots,x_{n}]=f[x_{\sigma(0)},x_{\sigma(1)},\dots,x_{\sigma(n)}]\:\:\: \forall \: \sigma \text{ permutazione di } \{0,1,\dots,n\}$$
 *Dim.*
