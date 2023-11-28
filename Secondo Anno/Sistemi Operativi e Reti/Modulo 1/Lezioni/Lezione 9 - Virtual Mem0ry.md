@@ -326,4 +326,65 @@ Consideriamo le *pagine 3 e 5*:
 - Se nessuna pagina è rimovibile, viene selezionata la più vecchia con R=0 ( in caso contrario, una pagina a caso).
 ![[Pasted image 20231124123957.png|center|600]]
 ### Introduzione all'algoritmo WSClock
-(slide 45)
+**Miglioramento dell'Algoritmo Working Set**:
+- WSClock è un'evoluzione dell'algoritmo Clock che integra informazioni del WS.
+- Popolare per la sua semplicità e buone prestazioni.
+**Struttura dati**:
+- Usa una lista circolare di frame, simile all'algoritmo Clock.
+- Ogni frame nella lista contiene:
+	- Il tempo dell'ultimo utilizzo;
+	- Il bit R ( Riferimento );
+	- Il bit M (Modificato ).
+#### WSClock : Un esempio
+![[Pasted image 20231128111902.png|center|500]]
+Ad ogni page fault è esaminata per prima la pagina indicata dalla lancetta dell'orologio.
+- Se oò *bit R=1*, la pagina ***NON** è la candidata ideale* alla rimozione ( è stata usata nel ciclo di clock).
+- Il bit R viene quindi impostato a 0
+- La lancetta avanza alla pagina successiva e l'algoritmo viene ripetuto per la nuova pagina.
+La situazione dopo questa sequenza è mostrata nella figura (b).
+![[Pasted image 20231128112203.png|center|500]]
+Se la pagina indicata ha R=0 (c) e se l'età è maggiore di $\tau$:
+- Se *M=0 ( pagina pulita )*:
+	- Non è nel set di lavoro e ne esiste una copia valida su memoria non volatile.
+	- Il frame viene semplicemente riciclato e vi viene posta la nuova pagina (d)
+- Se *M=1* invece la pagina è "sporca" ( ovvero modificata );
+	- Non ne esiste una copia valida in memoria non volatile.
+	- Non può essere sfrattata immediatamente.
+**Per evitare "rallentamenti"** ( come un cambio di processo ), **la scrittura su memoria non volatile viene schedulata** e rimandata:
+- Lungo la lista potrebbe esserci una pagina pulita e vecchia che può essere usata immediatamente;
+- La lancetta avanza e l'algoritmo procede con la pagina successiva.
+#### Gestione scritture e selezione pagina in WSClock
+**Limitazione scritture su Memoria Non Volatile**:
+- Possibilità di schedulare tutte le pagine per I/O su memoria non volatile in un ciclo di clock.
+- Per ridurre il traffico su disco/SSD, si imposta un limite massimo di scritture ( `n` pagine).
+- Una volta raggiunto il limite `n`, ulteriori scritture non vengono schedulate.
+***Comportamento al completamento del Giro di Orologio***:
+- **Quando ci sono scritture Pendenti**:
+	- La lancetta prosegue il suo giro *cercando pagine "pulite"* ( non modificate ).
+	- *Non appena una* scrittura pendente *viene completata*, la pagina associata diventa "pulita".
+	- La lancetta *seleziona la prima pagina pulita che incontra* e la rimuove dalla memoria.
+- **Quando <u>NON</u> ci sono Scritture Pendenti**:
+	- Significa che tutte le pagine sono attivamente utilizzate ( "nel set di lavoro" ).
+	- La strategia diventa quella di *scegliere e rimuovere una pagina pulita a caso*.
+	- Se non ci sono pagine pulite disponibili, la pagina corrente viene scelta per la rimozione e la sua copia viene scritta su disco.
+# Riepilogo
+
+| Algoritmo     | Commento                                                             |
+| ------------- | -------------------------------------------------------------------- |
+| Ottimale      | Non implementabile, ma utile come termine di confronto e valutazione |
+| LRU           | Eccellente, ma difficile da implementare con precisione              |
+| NRU           | Approssimazione molto rozza di LRU                                   |
+| FIFO          | Potrebbe eliminare pagine importanti                                 |
+| Second Chance | Deciso miglioramento rispetto al FIFO                                |
+| Clock         | Realistico                                                           |
+| NFU           | Approssimazione abbastanza rozza di LRU                              |
+| Aging         | Efficente che approssima bene LRU                                    |
+| Working Set   | Dispendioso da implementare                                          |
+| WSClock       | Algoritmo efficiente e buono                                                                     |
+
+**Algoritmi Preferiti**:
+- *Aging e WSClock* sono i "migliori" tra gli algoritmi analizzati.
+- Entrambi basati rispettivamente su LRU e WS, con buone prestazioni e implementazione efficiente.
+- La nozione di "migliore" è risultato del trade-off tra la complessità del metodo e i vincoli hardware che il SO deve comunque rispettare.
+**Implementazione nei SO**:
+Sistemi some Windows e Linux adottano varianti di questi algoritmi, a volte combinando diversi elementi per ottimizzare le prestazioni in base a specifiche esigenze al tipo di hardware.
