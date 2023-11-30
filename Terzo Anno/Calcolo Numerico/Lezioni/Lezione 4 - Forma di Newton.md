@@ -42,7 +42,7 @@ Supponiamo che siano dati i punti $(x_{0},y_{0}),\dots,(x_{n},y_{n})\in \mathbb 
 # Esercizi
 - Scrivere in forma canonica e in forma di Newton il polinomio di interpolazione di $f(x)=\cos(\frac{\pi}{2}x)\cdot\log_{2}(x)$ sui nodi $x_{0}=1,x_{1}=2,x_{2}=4,x_{3}=8$.
 
-- Scrivere in forma Lagrange e in forma di Newton il polinomio di interpolazione dei valori $y_{0}=0,y_{1}=3,y_{2}=-3$ sui nodi $x_{0},x_{1}=1,x_{2}=2$
+- Scrivere in forma Lagrange e in forma di Newton il polinomio di interpolazione dei valori $y_{0}=0,y_{1}=3,y_{2}=-3$ sui nodi $x_{0}=0,x_{1}=1,x_{2}=2$
 
 # Algoritmo di valutazione del polinomio di interpolazione in un punto
 Si basa sulla formadi Newton che è conveniente per questo scopo.
