@@ -45,7 +45,7 @@ Supponiamo che siano dati i punti $(x_{0},y_{0}),\dots,(x_{n},y_{n})\in \mathbb 
 - Scrivere in forma Lagrange e in forma di Newton il polinomio di interpolazione dei valori $y_{0}=0,y_{1}=3,y_{2}=-3$ sui nodi $x_{0}=0,x_{1}=1,x_{2}=2$
 
 # Algoritmo di valutazione del polinomio di interpolazione in un punto
-Si basa sulla formadi Newton che è conveniente per questo scopo.
+Si basa sulla forma di Newton che è conveniente per questo scopo.
 
 Sia $f:[a,b]\to \mathbb R$, siano $x_{0},\dots,x_{n}\in[a,b]$ punti distinti e sia $t\in \mathbb R$. Si vuole costruire un algoritmo per calcolare $p(t)$, dove $p(x)$ è il polinomio di interpolazione di $f(x)$ sui nodi $x_{0},\dots,x_{n}$.
 
