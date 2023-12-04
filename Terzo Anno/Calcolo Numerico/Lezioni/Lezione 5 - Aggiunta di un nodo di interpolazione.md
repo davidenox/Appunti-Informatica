@@ -28,6 +28,6 @@ Concludendo, la forma di Newton di $q(x)$ è $$q(x)=p(x)+ \frac{4}{3}(x+1)x(x-2)
 $f(t)=f(\frac{1}{2})=\frac{1}{4}=q(\frac{1}{2})$, l'aggiunta del nodo $x_{3}=1$ ha migliorato l'approssimazione in $t=\frac{1}{2}$ rendendola esatta, cioé $p(\frac{1}{2})=\frac{7}{4}$ non è un'approssimazione esatta di $f(1/2)$, mentre $q(\frac{1}{2})=\frac{1}{4}$ **è** un'approssimazione esatta di $f(1/2)$.
 
 # Esercizio
-Considerate $f(x)=\sin(2\pi x)$
+Considerare $f(x)=\sin(2\pi x)$
 1. Determinare il polinomio di interpolazione $p(x)$ di $f(x)$ sui nodi $x_{0}=0,x_{1}= \frac{1}{2},x_{2}=2$ e calcolare $p(t)$, per $t= \frac{1}{4}$ e $t= \frac{1}{3}$
 2. Determinare il polinomio di interpolazione $q(x)$ di $f(x)$ sui nodi $x_{0}=0,x_{1}= \frac{1}{2},x_{2}=2$ a cui si aggiunge $x_{3} = \frac{3}{4}$ e calcolare $q(t)$, per $t= \frac{1}{4}$ e $t= \frac{1}{3}$
