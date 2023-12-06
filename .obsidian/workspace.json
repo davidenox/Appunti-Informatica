@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md"
               }
             }
           },
@@ -173,8 +173,8 @@
   },
   "active": "c671ff3e660be112",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Memory.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Memory.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",

@@ -26,8 +26,7 @@ Consideriamo la funzione$z:[a,b]\to \mathbb R$, $$z(y)=\alpha(y)\int_{a}^{b}\ome
 Questa funzione è continua su $[a,b]$ perché $\alpha(y)$ è continua su $[a,b]$. Quindi per il teorema dei valori intermedi $z(y)$ assume su $[a,b]$ tutti i valori compresi tra il suo minimo $m \int_{a}^{b}\omega(x)dx$ e il suo massimo $M \int_{a}^{b}\omega(x)dx$. In particolare $z(y)$ assume il valore $\int_{a}^{b}\beta(x)\omega(x)dx$, ovvero esiste $\eta\in[a,b]$ tale che $$z(\eta)=\int_{a}^{b}\beta(x)\omega(x)dx\:\:\: \square.$$ 
 
 **Teorema**
-Sia $f:[a,b]\to \mathbb R$ di classe $C^{2}[a,b]$ e sia $I_{n}$ la formula dei trapezi di ordine $n$ e passo $h= \frac{b-a}{n}$ per approssimare $\int_{a}^{b}f(x)dx$. Allora esiste un punto $\eta\in[a,b]$ tale che $$\int_{a}^{b}f(x)dx-I_{n}=-\frac{(b-a)f^{''}(\eta)}{12}h^{2}$$ ^d9e450
-
+Sia $f:[a,b]\to \mathbb R$ di classe $C^{2}[a,b]$ e sia $I_{n}$ la formula dei trapezi di ordine $n$ e passo $h= \frac{b-a}{n}$ per approssimare $\int_{a}^{b}f(x)dx$. Allora esiste un punto $\eta\in[a,b]$ tale che $$\int_{a}^{b}f(x)dx-I_{n}=-\frac{(b-a)f^{''}(\eta)}{12}h^{2}$$
 **Dim.**
 Poniamo $x_j=a+jh$ per $j=0,\dots,n$ e indichiamo con $s(x)$ la funzione lineare a tratti in [[#^04a94e|figura]]. Osserviamo che $s(x)$ coincide sull'intervallo $[x_j,x_{j+1}]$ con il polinomio (retta) di interpolazione $f(x)$ sui nodi $x_j$ e $x_j+1$. Risulta $$\int_{a}^{b}f(x)dx - I_n=\int_{a}^{b}f(x)dx-\int_{a}^{b}s(x)dx=\int_{a}^{b}\big[f(x)-s(x)\big]dx$$ $$=\sum\limits_{j=0}^{n-1}\int_{x_{j}}^{x_{j+1}}\big[f(x)-s(x)\big]dx$$ $$=\sum\limits_{j=0}^{n-1}\int_{x_{j}}^{x_{j+1}}\frac{f^{''}(\xi_{j}(x))}{2}(x-x_{j})(x-x_{j+1})dx$$
 (per il [[Lezione 2 - Errore o resto dell'interpolazione polinomiale#^e77fd4|teorema]] applicato sull'intervallo $[x_{j},x_{j+1}]$; $\xi_{j}(x)$ è un punto in $(x_{j},x_{j+1})$ ) $$=-\sum\limits_{j=0}^{n-1}\int_{x_{j}}^{x_{j+1}}f^{''}(\xi_{j}(x))\frac{(x-x_{j})(x_{j+1}-x)}{2}dx$$ $$=-\sum\limits_{j=0}^{n-1}f^{''}(\eta_{j})\int_{x_{j}}^{x_{j+1}}\frac{(x-x_{j})(x_{j+1}-x)}{2}dx$$
@@ -35,10 +34,7 @@ Poniamo $x_j=a+jh$ per $j=0,\dots,n$ e indichiamo con $s(x)$ la funzione lineare
 $$=-\sum\limits_{j=0}^{n-1}f^{''}(\eta_{j})\int_{0}^{h}\frac{t(h-t)}{2}dt$$ (cambio di variabile $t=x-x_{j}\iff x=t+x_{j}$ e si ha $dt=dx$ )
 $$=-\sum\limits_{j=0}^{n-1}f^{''}(\eta_{j}) \frac{1}{2}\bigg[\frac{h}{2}t^{2}- \frac{1}{3}t^{3}\bigg]=-\sum\limits_{j=0}^{n-1}f^{''}(\eta_{j}) \frac{h^{3}}{12}=-\frac{h^3n}{12}\cdot\frac{1}{n}\sum\limits_{j=0}^{n-1}f^{''}(\eta_j)=-\frac{h^2(b-a)}{12}f^{''}(\eta)$$
 dove l'ultima uguaglianza vale perché, essendo $f^{''}(x)$ continua su $[a,b]$ per ipotesi ed essendo la media aritmetica $\frac{1}{n}\sum\limits_{j=0}^{n-1}f^{''}(\eta_{j})$ un valore compreso tra il minimo e il massimo di $f^{''}(x)$ su $[a,b]$, per il teorema dei valori inermedi esiste sicuramente un $\eta\in [a,b]$ tale che $f^{''}(\eta)= \frac{1}{n}\sum\limits_{j=0}^{n-1}f^{''}(\eta_{j})\:\:\:\square.$ 
-
-
-# Esericzi
-
+# Esercizi
 ## Esempio 1
 - Calcolare l'approssimazione di $\int_{0}^{1}\sqrt{\cos x}\:dx$ con $I_{10}$
 - Stimare l'errore $\bigg|\int_{0}^{1}\sqrt{\cos x}\:dx-I_{10}\bigg|$ 
@@ -61,7 +57,7 @@ Nell'[[#Esempio 1|esempio precedente]] abbiamo che $|f^{''}(x)|\le0.9458$ per og
 Poiché $$\frac{1}{12n^{2}}\le\epsilon\iff n\ge \sqrt{\frac{1}{12\epsilon}}=n(\epsilon)$$ si ha $$\left|\int_{0}^{1}\sqrt{\cos x}\: dx-I_{n}\right|\le\epsilon\:\:\:\: \forall n\ge n(\epsilon)$$ Nel nostro caso abbiamo $\epsilon=10^{-8}$ e quindi per garantire che $\left|\int_{0}^{1}\sqrt{\cos x}\: dx-I_{n}\right|\le10^{-8}$, basta prendere un qualsiasi $n \le n(10^{-8})=2886.75\dots$
 
 ## Esempio 3
-Fissato $\epsilon > 0$, determinare un $n$ tale $I_n$ fornisca un'approssimazione di $\left|\int_{0}^{1}\frac{x+2}{\log(x+2)}\:dx-I_{n}\right|\le \epsilon$. Quanto vale $n$ se $\epsilon=10^{-8}$?
+Fissato $\epsilon > 0$, determinare un $n$ tale che $I_n$ fornisca un'approssimazione di $\left|\int_{0}^{1}\frac{x+2}{\log(x+2)}\:dx-I_{n}\right|\le \epsilon$. Quanto vale $n$ se $\epsilon=10^{-8}$?
 
 **Soluzione**
 Posto $f(x)=\frac{x+2}{\log(x+2)}$, si ha $$\left|\int_{0}^{1}\frac{x+2}{\log(x+2)}\:\: dx-I_{n}\right|=\left|- \frac{1}{12n^{2}}f^{''}(\eta)\right|=\frac{f^{''}(\eta)}{12n^{2}}\:\:\:(\eta\in[0,1])$$ Calcoliamo $f^{''}(x)$:$$\begin{align}f^{'}(x)&=\frac{\log(x+2)-(x+2)\frac{1}{x+2}}{\log^{2}(x+2)}=\frac{\log(x+2)-1}{\log^2(x+2)}\\
