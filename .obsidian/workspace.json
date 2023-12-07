@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md"
               }
             }
           },
@@ -173,6 +173,7 @@
   },
   "active": "c671ff3e660be112",
   "lastOpenFiles": [
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Memory.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
@@ -208,7 +209,6 @@
     "_temp/Appunti SOR/MOD I/Lezione 4 - Operazioni dei processi.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 6 - Modello concettuale e Modello ER.md",
     "_temp/Appunti BSD/MOD I/Lezione 5 - Modello Concettuale, Modello ER.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 6 - Sincronizzazione dei processi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
