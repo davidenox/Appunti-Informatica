@@ -6,7 +6,7 @@ Il risultato è che $p(0)$ è un approssimazione di $\int_{a}^{b}f(x)\:dx$ **mol
 ![[Pasted image 20231102150824.png|center|500]]
 
 
-Il procedimento di valutare in $0$ il polinomio di interpolazione $p(x)$ si chiama **estrapolazione**, perché $p(x)$ viene valutato in un punto ($x=0$) che si trova all'esterno del più piccolo intervallo che contiene i nodi $h_{0}^{2},h_{1}^{2},\dots,h_{m}^{2}$; $p(0)$ è detto **valore estrapolato**. 
+l procedimento di valutare in $0$ il polinomio di interpolazione $p(x)$ si chiama **estrapolazione**, perché $p(x)$ viene valutato in un punto ($x=0$) che si trova all'esterno del più piccolo intervallo che contiene i nodi $h_{0}^{2},h_{1}^{2},\dots,h_{m}^{2}$; $p(0)$ è detto **valore estrapolato**. 
 
 # Esempio
 Si consideri la funzione $f(x)=xe^x$. Per ogni $n \ge 1$ indichiamo con $I_{n}$ la formula dei trapezi di ordine $n$ per approssimare $I=\int_{0}^{2}f(x)\:dx$.
