@@ -71,7 +71,7 @@ A\underline{x}=\lambda\underline{x}&\implies \underline{x}^{\star}A\underline{x}
 Sia $A \in \mathbb C^{n\times n}$ una matrice hermitiana e siano $A_{1},A_{2},\dots,A_{n}$ le sue sottomatrici principali di testa: $$A_{1}=[a_{11}],\:\:\:A_{2}=\begin{bmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{bmatrix},\:\:\:A_{3}=\begin{bmatrix}a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33}\end{bmatrix},\:\:\:\dots\:\:\:,\:\:\:A_{n}=A$$
 Le seguenti condizioni sono equivalenti: 
 - $A$ è definita positiva 
-- gli autovalori di $A$ sono reali e positivi
+- Gli autovalori di $A$ sono reali e positivi
 - $\det(A_{k})>0$ per ogni $k=1,\dots,n$ 
 
 ## Esempio 1
