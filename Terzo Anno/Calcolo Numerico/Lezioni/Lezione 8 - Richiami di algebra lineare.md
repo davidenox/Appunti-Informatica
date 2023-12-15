@@ -91,7 +91,7 @@ Se $p(\lambda)=a_{0}+a_{1}\lambda+\dots+a_{m}\lambda^{m}$ è un polinomio e $A \
 **Esempio** 
 Se $p(\lambda)=1-2\lambda^{2}+\lambda^{3}$, allora $$p(A)=I-2A^{2}+A^{3}$$ 
 **Teorema**
-Se $p(\lambda)$ è un polinomio e $A\in \mathbb C^{n\times n}$ è una matrice con autovalori $\lambda_{1},\lambda_{2},\dots,\lambda_{n}$, allora gli autovalori della matrie $p(A)$ sono $p(\lambda_{1}),\dots,p(\lambda_{n})$.
+Se $p(\lambda)$ è un polinomio e $A\in \mathbb C^{n\times n}$ è una matrice con autovalori $\lambda_{1},\lambda_{2},\dots,\lambda_{n}$, allora gli autovalori della matrice $p(A)$ sono $p(\lambda_{1}),\dots,p(\lambda_{n})$.
 
 **Dim.**
 Dimostriamo il teorema soltanto in tre casi.
@@ -113,8 +113,8 @@ A^{2}&=XDX^{-1}XDX^{-1}=XD^{2}X^{-1}\\
 A^{3}&=XDX^{-1}XDX^{-1}XDX^{-1}=XD^{3}X^{-1},\\
 &\vdots
 \end{align*}$$
-Pertanto fissato un polinomio $p(\lambda)=a_{0}+a_{1}\lambda+a_{2}\lambda^{2}+\dots+a_{m}\lambda^{m}$, si ha $$p(A)=a_{0}I+a_{1}A+a_{2}A^{2}+\dots+a_{m}A^{m}=X(a_{0}I+a_{1}D+a_{m}D^{m})X^{-1}=Xp(D)X^{-1},$$ dove $$p(D)=a_{0}I+a_{1}D+a_{2}D^{2}+\dots+a_{m}D^{m}=\begin{bmatrix}p(\lambda_{1}) &   &   &  \\  & p(\lambda_{2}) &   &  \\  &   & \ddots &  \\   &   &   & p(\lambda_{n})\end{bmatrix}$$
-In conclusione la forumal $p(A)=Xp(D)X^{-1}$ ci sta dicendo che $p(A)$ è diagonalizzabile con autovalori $p(\lambda_{1}),p(\lambda_{2}),\dots,p(\lambda_{n})$ (e con corrispondenti autovettori dati dalle colonne di $X$).
+Pertanto fissato un polinomio $p(\lambda)=a_{0}+a_{1}\lambda+a_{2}\lambda^{2}+\dots+a_{m}\lambda^{m}$, si ha $$p(A)=a_{0}I+a_{1}A+a_{2}A^{2}+\dots+a_{m}A^{m}=X(a_{0}I+a_{1}D+...+a_{m}D^{m})X^{-1}=Xp(D)X^{-1},$$ dove $$p(D)=a_{0}I+a_{1}D+a_{2}D^{2}+\dots+a_{m}D^{m}=\begin{bmatrix}p(\lambda_{1}) &   &   &  \\  & p(\lambda_{2}) &   &  \\  &   & \ddots &  \\   &   &   & p(\lambda_{n})\end{bmatrix}$$
+In conclusione la formula $p(A)=Xp(D)X^{-1}$ ci sta dicendo che $p(A)$ è diagonalizzabile con autovalori $p(\lambda_{1}),p(\lambda_{2}),\dots,p(\lambda_{n})$ (e con corrispondenti autovettori dati dalle colonne di $X$).
 # Matrici irriducibili
 Un grafo è un diagramma formato da un certo numero di nodi e di archi. Un arco è semplicemente una freccia che parte da un nodo e arriva in un altro. Se il grafico possiede $n$ nodi, questi vengono tipicamente indicati con i numeri $1,\dots,n$ mentre l'arco che va dal nodo $i$ al nodo $j$ viene indicato con una freccia $i \to j$. Un *cammino* all'interno di un grafo è un percorso che parte da un nodo $i$ e, seguendo gli archi del grafo, si arriva a un altro nodo $j$. Se il nodo di arrivo $j$ coincide con il nodo di partenza $i$ allora si parla di *ciclo*.
 Un grafo si dice **fortemente connesso** se per ogni coppia di nodi $i$ e $j$ esiste un cammino all'interno del grafo che va da $i$ a $j$. Equivalentemente, un grafo è fortemente connesso se esiste un ciclo nel grafo che tocca tutti i nodi. In figura sotto sono mostrati due grafi, uno fortemente connesso e l'altro no.
