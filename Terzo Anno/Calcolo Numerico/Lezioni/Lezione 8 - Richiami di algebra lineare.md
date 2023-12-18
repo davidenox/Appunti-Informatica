@@ -134,7 +134,7 @@ sono irriducibili oppure no.
 Il grafo della matrice $A$ è così definito:
 - i nodi sono $1,2,3$ 
 - gli archi sono $1\to2,2\to1,2\to2,2\to3,3\to2$ 
-Il grafo di $A$ è quello mostrato in [[CN/img/img2.png|figura]] a sinistra ed è fortemente connesso, per cui $A$ non è irriducibile. 
+Il grafo di $A$ è quello mostrato in [[CN/img/img2.png|figura]] a sinistra ed è fortemente connesso, per cui $A$ è irriducibile. 
 Il grafo della matrice B è così definito:
 - i nodi sono $1,2,3$
 - gli archi sono $1\to2,2\to1,2\to2,2\to3$ 
