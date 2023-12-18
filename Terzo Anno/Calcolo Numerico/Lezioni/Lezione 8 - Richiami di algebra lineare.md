@@ -148,8 +148,8 @@ per ogni $j=1,\dots,n,$ $$H_{j}=\mathscr{C}(a_{jj},|a_{1j}|+\dots+|a_{j-1,j}|+|a
 Ad ogni modo, *quando si parla di cerci di Gershgorin senza altre specificazioni, s'intendono i cerchi di Gershgorin per riga*. Quando si vuole parlare dei cerci di Gershgorin per colonna, questo va specificato ogni volta.
 
 # Esempio 1 
-Determinare i cerchi di Gershgorin della matrice A dell'[[#Matrici irriducibili#Esempio|esempio]].
-
+Determinare i cerchi di Gershgorin della matrice A.
+$$A=\begin{bmatrix}0 & -1 & 0 & 0\\ 1 & 0 & 1 & i \\ 1+i & 0 & 0 & -1 \\ -2 & 7 & 10 & 3i\end{bmatrix}$$
 **Soluzione**
 Non essendo specificato diversamente, si sta parlando dei cerchi di Gershgorin per riga di $A$. Tali cerchi sono $K_{1}=\mathscr{C}(0,1),K_{2}=\mathscr{C}(0,3),K_{3}=\mathscr{C}(0,1+\sqrt2),K_{4}=\mathscr{C}(3i,19)$ 
 
@@ -157,7 +157,7 @@ Non essendo specificato diversamente, si sta parlando dei cerchi di Gershgorin p
 Gli autovalori di una matrice $A\in\mathbb C^{n\times n}$ stanno tutti nell'unione dei cerchi di Gershgorin di $A$.
 
 **Dim.**
-Sia $\lambda$ un autovalore di $A$. Allora, detto $\underline{u}\neq \underline{0}$ un corrispondente autovettore, si ha $$A\underline{u}=\lambda\underline{u}\iff\sum\limits_{j=1}^{n}a_{ij}u_{j}=\lambda u_{j}\:\:\:\:\:\text{per ogni }i=1,\dots,n$$ Selezionando un indice $i$ corrispondente ad una componente $u_{i}$ di modulo massimo di $\underline{u}$, la precedente equazione $i-$esima ci dice che $$\begin{align*}
+Sia $\lambda$ un autovalore di $A$. Allora, detto $\underline{u}\neq \underline{0}$ un corrispondente autovettore, si ha $$A\underline{u}=\lambda\underline{u}\iff\sum\limits_{j=1}^{n}a_{ij}u_{j}=\lambda u_{j}\:\:\:\:\:\text{per ogni }i=1,\dots,n$$Selezionando un indice $i$ corrispondente ad una componente $u_{i}$ di modulo massimo di $\underline{u}$, la precedente equazione $i-$esima ci dice che $$\begin{align*}
 \sum\limits_{j=1}^{n}a_{ij}u_{j}=\lambda u_{i}&\implies (\lambda-a_{ii})u_{i}\sum\limits_{j\ne i}a_{ij}u_{j}\\
 &\implies |\lambda-a_{ii}||u_{i}|=|\sum\limits_{j\ne i}a_{ij}u_{j}|\le\sum\limits_{j\ne i}|a_{ij}||u_{j}|=|u_{i}|\sum\limits_{j\ne i}|a_{ij}|\\
 &\implies |\lambda-a_{ii}|\le\sum\limits_{j\ne i}|a_{ij}|
