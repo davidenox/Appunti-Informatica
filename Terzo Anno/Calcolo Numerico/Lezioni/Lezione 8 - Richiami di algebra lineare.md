@@ -175,7 +175,7 @@ Questo teorema si usa per escludere alcuni punti dai possibili autovalori di $A$
 Supponiamo che $A\in\mathbb C^{n\times n}$ sia irriducibile e sia $\mathscr{B}$ il bordo dell'unione dei cerchi di Gershgorin di $A$. Allora i punti di $\mathscr{B}$ che non stanno sul bordo di tutti i cerchi non sono autovalori di $A$.
 
 **Dim.**
-Ogni punto di $\mathscr{B}$ sta per forza sul bordo di quei cerchi a cui appartiene (non può stare dentro a un cerchio altrimenti non sarebbe un punto di $\mathscr{B}$). Pertanto, ogni punto di $\mathscr{B}$ che non sta sul bordo di tutti i cerchi soddisfa soddisfa l'ipotesi del [[#Terzo teorema di Gershgorin|terzo teorema di Gershgorin]] e quindi va escluso dall'insieme dei possibili autovalori di $A$. $\square$
+Ogni punto di $\mathscr{B}$ sta per forza sul bordo di quei cerchi a cui appartiene (non può stare dentro a un cerchio altrimenti non sarebbe un punto di $\mathscr{B}$). Pertanto, ogni punto di $\mathscr{B}$ che non sta sul bordo di tutti i cerchi soddisfa l'ipotesi del [[#Terzo teorema di Gershgorin|terzo teorema di Gershgorin]] e quindi va escluso dall'insieme dei possibili autovalori di $A$. $\square$
 
 ## Esempio 2
 Supponiamo di sapere che una matrice $A\in\mathbb C^{5\times 5}$ è irriducibile e che i suoi cerchi di Gershgorin siano i seguenti $$\begin{align*}
@@ -184,7 +184,7 @@ Supponiamo di sapere che una matrice $A\in\mathbb C^{5\times 5}$ è irriducibile
 &K_{3}=\mathscr{C}(4i,1)\\
 &K_{4}=\mathscr{C}(1+i,1)\\
 &K_{5}=\mathscr{C}(-1,1)
-\end{align*}$$ Avendo a disposizione solo queste informazioni, dire se le seguenti affermazioni sono vere o false: 
+\end{align*}$$Avendo a disposizione solo queste informazioni, dire se le seguenti affermazioni sono vere o false: 
 1.  $0$ non è autovalore $A$ 
 2. $A$ è invertibile
 3. $1$ potrebbe essere un autovalore di $A$
