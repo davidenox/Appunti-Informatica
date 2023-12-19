@@ -219,7 +219,7 @@ Discutere le proprietà di dominanza diagonale per righe e per colonne della mat
 Poiché $$\begin{align*}
 |3|&=|1|+|-2|&\iff\:\:\:\: &3=3\\
 |-3|&>|0|+|1|&\iff \:\:\:\:&3>1\\
-|5|&>|1-2i|+|5| &\iff \:\:\:\:&5>\sqrt{5}+1
+|5|&>|1-2i|+|-1| &\iff \:\:\:\:&5>\sqrt{5}+1
 \end{align*}$$ si conclude che $A$ è a diagonale dominante (per righe) ma non a diagonale dominante in senso stretto (per righe). 
 Poiché $$\begin{align*}
 |3|&>|0|+|1-2i|&\iff\:\:\:\: &3>\sqrt{5}\\
@@ -234,16 +234,12 @@ Supponiamo che la matrice $A\in\mathbb C^{n\times n}$ soddisfi *almeno una* dell
 - $A$ è a diagonale dominante per colonne e irriducibile;
 - $A$ è a diagonale dominante in senso stretto per colonne;
 Allora $A$ è invertibile.
-
-
 **Dim.**
-La dimostrazione si basa sui teoremi di Gershgorin. Dimostriamo il teorema sotto l'ipotesi che $A$ sia diagonale dominante e irriducibile. Mostriamo che $0$ non è un autovalore di $A$ usando il [[#Terzo teorema di Gershgorin|terzo teorema di Gershgorin]]. Poiché $A$ è a diagonale dominante, se $0$ appartiene a un cerchio di Gershgorin $K_{i}$ allora deve stare per forza sul bordo di $K_{i}$. Infatti non può stare all'interno, perché per ipotesi di dominanza diagonale si ha $$\text{raggio di }K_{i} =\sum\limits_{j\ne i}|a_{ij}|\le|a_{ii}|=|a_{ii}|=\text{distanza}(a_{ii},0)=\text{distanza}(\text{centro di }K_{i},0)$$ Dunque $0$ sta per forza sul bordo di quei cerchi di Gershgorin a cui esso appartiene. Inoltre, sempre per l'ipotesi di dominanza diagonale, esiste un indice $k$ tale che $$|a_{kk}|>\sum\limits_{j\ne k}|a_{kj}|$$ Questo significa che $0$ non sta sul bordo di $K_{k}$ e dunque $0$ non sta sul bordo di tutti i cerchi di Gershgorin di $A$. Poiché $A$ è irriducibile per ipotesi, il terzo teorema di Gershgorin ci dice che $0$ non può essere un autovalore di $A$ e quindi $A$ è invertibile. $\square$
+La dimostrazione si basa sui teoremi di Gershgorin. Dimostriamo il teorema sotto l'ipotesi che $A$ sia diagonale dominante e irriducibile. Mostriamo che $0$ non è un autovalore di $A$ usando il [[#Terzo teorema di Gershgorin|terzo teorema di Gershgorin]]. Poiché $A$ è a diagonale dominante, se $0$ appartiene a un cerchio di Gershgorin $K_{i}$ allora deve stare per forza sul bordo di $K_{i}$. Infatti non può stare all'interno, perché per ipotesi di dominanza diagonale si ha $$\text{raggio di }K_{i} =\sum\limits_{j\ne i}|a_{ij}|\le|a_{ii}|=|a_{ii}|=\text{distanza}(a_{ii},0)=\text{distanza}(\text{centro di }K_{i},0)$$Dunque $0$ sta per forza sul bordo di quei cerchi di Gershgorin a cui esso appartiene. Inoltre, sempre per l'ipotesi di dominanza diagonale, esiste un indice $k$ tale che $$|a_{kk}|>\sum\limits_{j\ne k}|a_{kj}|$$ Questo significa che $0$ non sta sul bordo di $K_{k}$ e dunque $0$ non sta sul bordo di tutti i cerchi di Gershgorin di $A$. Poiché $A$ è irriducibile per ipotesi, il terzo teorema di Gershgorin ci dice che $0$ non può essere un autovalore di $A$ e quindi $A$ è invertibile. $\square$
 
 **Oss.**
 Nella dimostrazione del [[#Matrici a diagonale dominante e a diag. dom. in senso stretto#Teorema|teorema]] abbiamo dovuto usare la versione forte del terzo teorema di Gershgorin perché quella [[#Terzo teorema di Gershgorin debole|debole]] non basta. Infatti la matrice $$A=\begin{bmatrix}1 & 1 & 0 & 0 & 0 \\ 0 & i & 1 & 0 & 0 \\  0 & 0 & -1 & 1 & 0 \\ 0 & 0 & 0 & -i & 1 \\ 1/4 & 0 & 0 & 0 & 1\end{bmatrix}$$ è a diagonale dominante e irriducibile e ha i cerchi di Gershgorin sia per righe che per colonne mostrati sotto in figura, per cui non riusciremmo a dimostrare che é invertibile (cioé che $0$ non è un autovalore) usando la sola versione debole del terzo teorema di Gershgorin. 
-
-![[CN/img/img4.png|center|350]]
-
+![[Pasted image 20231219162845.png|center|350]]
 
 # Norme vettoriali 
 ## Il concetto di norma vettoriale
