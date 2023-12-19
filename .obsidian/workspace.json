@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "86f1d980f24147db",
+        "id": "96863a4ff276f397",
         "type": "tabs",
         "children": [
           {
-            "id": "c671ff3e660be112",
+            "id": "7bcf2a06c9c4a462",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,11 +171,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "c671ff3e660be112",
+  "active": "7bcf2a06c9c4a462",
   "lastOpenFiles": [
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
-    "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+    "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
