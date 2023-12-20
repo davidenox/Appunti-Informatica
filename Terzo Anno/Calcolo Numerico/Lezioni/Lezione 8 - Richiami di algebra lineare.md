@@ -250,11 +250,10 @@ Consideriamo il sistema lineare $$\begin{bmatrix}8 & 1 & 1 \\ 1 & 5 & -1 \\ 1 & 
 
 **Def.**
 Una funzione $||\cdot||:\mathbb{C}^{n}\to\mathbb R$ si dice norma vettoriale se soddisfa le seguenti proprietà:
-- $||\underline{x}||\ge0$ per ogni $\\underline{x}\in\mathbb{C}^{n}$ e $||\underline{x}||=0$ se e solo se $\underline{x}=\underline{0}\text{ [ positività ]}$ 
+- $||\underline{x}||\ge0$ per ogni $\underline{x}\in\mathbb{C}^{n}$ e $||\underline{x}||=0$ se e solo se $\underline{x}=\underline{0}\text{ [ positività ]}$ 
 - $||\alpha\underline{x}||=|\alpha|\:||\underline{x}||$ per ogni $\alpha\in\mathbb{C}$ e ogni $\underline{x}\in\mathbb C^{n}\text{ [ omogeneità ]}$
 - $||\underline{x}+\underline{y}||\le||\underline{x}||+||\underline{y}||$ per ogni $\underline{x},\underline{y}\in\mathbb C^{n}\text{ [ disuguaglianza triangolare ]}$  
 Data una norma vettoriale $||\cdot||:\mathbb{C}^{n}\to\mathbb R$, definiamo la distanza fra due vettori $\underline{x},\underline{y}\in\mathbb C^{n}$ come $||\underline{x}-\underline{y}||$.
-
 ## Le norme 1, 2, $\infty$ 
 Le norme più importanti in $\mathbb C^{\infty}$ sono tre: la norma 1, la norma 2 (o euclidea) e la norma $\infty$. Esse sono definite nel modo seguente: $$\begin{align*}
 ||\underline{x}||_{1}&=|x_{1}|+|x_{2}|+\dots+|x_{n}|\\
@@ -268,7 +267,6 @@ Le norme più importanti in $\mathbb C^{\infty}$ sono tre: la norma 1, la norma 
 \underline{x}-\underline{y}=[0.00028,-0.00023,-0.00030]^{T} &\implies ||\underline{x}-\underline{y}||_{\infty}=0.00030\\
 \underline{x}-\underline{z}=[-0.00027,0.00029,0.00045]^{T} &\implies ||\underline{x}-\underline{z}||_{\infty}=0.00045\\
 \end{align*}$$ Quindi rispetto alla $||\cdot||_{\infty}$ il vettore $\underline{y}$ è più vicino a $\underline{x}$ rispetto a $\underline{z}$.
-
 ## Equivalenza delle norme vettoriali
 ### Teorema
 Tutte le norme vettoriali in $\mathbb C^{n}$ sono equivalenti, nel senso che se prendiamo due norme vettoriali $||\cdot||',||\cdot||'':\mathbb C^{n}\to\mathbb R$ allora si ha $$\alpha||\underline{x}||''\le ||\underline{x}||'\le \beta||\underline{x}||''\:\:\: \text{per ogni }\underline{x}\in\mathbb C^{n}\:\:\:\: (\star)$$ dove $\alpha, \beta>0$ sono due costanti indipendenti da $\underline{x}$.
