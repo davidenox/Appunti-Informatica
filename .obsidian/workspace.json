@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 275.0004348754883
+    "width": 231.00043487548828
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -171,7 +171,7 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "7bcf2a06c9c4a462",
   "lastOpenFiles": [
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
