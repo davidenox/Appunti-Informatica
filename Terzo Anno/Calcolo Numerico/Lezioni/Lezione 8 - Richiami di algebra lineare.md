@@ -355,7 +355,7 @@ Vale per le norme matriciali un teorema di equivalenza identico a quello per le 
 ### Teorema
 Tutte le norme matriciali in $\mathbb C^{n\times n}$ sono equivalenti, nel senso che se prendiamo due norme matriciali $||\cdot||',||\cdot||'':\mathbb C^{n\times n}\to \mathbb R$ allora si ha: $$\alpha||A||''\le||A||'\le \beta||A||'' \:\:\:\text{ per ogni }A \in \mathbb C^{n\times n} $$ dove $\alpha, \beta>0$ sono due costanti indipendenti da $A$.
 ## Successioni di matrici
-Una successione di matrici $A^{(0)},A^{(1)},A^{(2)},\dots$ in $\mathbb C^{n\times n}$ si dice convergente alla matrice $A\in\mathbb C^{n\times n}$ rispetto alla norma matriciale $||\cdot||$ se $||A^{(k)}-A||\to0$. Poiché tutte le norme matriciali sono equivalenti per il [[#Equivalenza delle norme matriciali#Teorema|teorema]], se una successione di matrici converge ad $A$ rispetot a una norma $||\cdot||$, allora converge ad $A$ rispetto a tutte le norme.
+Una successione di matrici $A^{(0)},A^{(1)},A^{(2)},\dots$ in $\mathbb C^{n\times n}$ si dice convergente alla matrice $A\in\mathbb C^{n\times n}$ rispetto alla norma matriciale $||\cdot||$ se $||A^{(k)}-A||\to0$. Poiché tutte le norme matriciali sono equivalenti per il [[#Equivalenza delle norme matriciali#Teorema|teorema]], se una successione di matrici converge ad $A$ rispetto a una norma $||\cdot||$, allora converge ad $A$ rispetto a tutte le norme.
 La dimostrazione è identica a quella fatta per i [[#Successioni di vettori|vettori]], quindi è omessa.
 
 Una successione di matrici $A^{(0)},A^{(1)},A^{(2)},\dots$ in $\mathbb C^{n\times n}$ si dice convergente (componente per componente) alla matrice $A\in \mathbb C^{n\times n}$ se $A^{(k)}\to A$ componente per componente, cioé se $$\begin{align*}

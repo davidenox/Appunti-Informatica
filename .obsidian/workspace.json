@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "96863a4ff276f397",
+        "id": "4be8559408bdce42",
         "type": "tabs",
         "children": [
           {
-            "id": "7bcf2a06c9c4a462",
+            "id": "068039152f002345",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md"
               }
             }
           },
@@ -171,8 +171,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "7bcf2a06c9c4a462",
+  "active": "068039152f002345",
   "lastOpenFiles": [
+    "Capitolo 3 - Richiami di algebra lineare.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
