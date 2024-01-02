@@ -5,15 +5,14 @@ Per risolvere il sistema lineare consideriamo solo *metodi iterativi stazionari*
 &\underline x^{(0)}\in \mathbb C^{n} \text{ dato}\\
 &\underline x^{(k+1)}=P\underline x^{(k)}+\underline q, \:\:k=0,1,2,\dots
 \end{align*}\:\:\:\:(\star)$$ dove $P\in \mathbb C^{n\times n}$ è una matrice fissata detta *matrice d'iterazione* e $\underline{q}\in\mathbb{C}^{n}$ è un vettore fissato.
-
 **Oss.**
-Se una successione $\{\underline{x}^{(k)}\}_{k=0,1,2,\dots}$, generata dal metodo $(\star)$,  converge a un vettore $\underline{x}^{(\infty)}$ allora $\underline{x}^{(\infty)}$ soddisfa l'equazione $$\underline{x}^{(\infty)}=\lim_{k\to\infty}\underline{x}^{(k+1)}=\lim_{k\to \infty}(P\underline{x}^{(k)}+\underline{q})=P \underline{x}^{(\infty)}+\underline{q}\implies \underline{x}^{(\infty)}=P \underline{x}^{(\infty)}+\underline{q}$$ Di conseguenza, se la soluzione $\underline{x}$ del sistema lineare, non soddisfa l'equazione $\underline{x}=P\underline{x}+\underline{q}$ allora non c'è speranza che una successione $\{\underline{x}^{(k)}\}_{k=0,1,2,\dots}$ generata dal metodo $(\star)$ converga a $\underline{x}$. Si noti che "soddisfare l'equazione $\underline{x}=P\underline{x}+\underline{q}$" vuol dire "essere punto fisso della funzione $\underline{g}(\underline{y})=P\underline{y}+\underline{q}$".
+Se una successione $\{\underline{x}^{(k)}\}_{k=0,1,2,\dots}$, generata dal metodo $(\star)$,  converge a un vettore $\underline{x}^{(\infty)}$ allora $\underline{x}^{(\infty)}$ soddisfa l'equazione $$\underline{x}^{(\infty)}=\lim_{k\to\infty}\underline{x}^{(k+1)}=\lim_{k\to \infty}(P\underline{x}^{(k)}+\underline{q})=P \underline{x}^{(\infty)}+\underline{q}\implies \underline{x}^{(\infty)}=P \underline{x}^{(\infty)}+\underline{q}$$Di conseguenza, se la soluzione $\underline{x}$ del sistema lineare non soddisfa l'equazione $\underline{x}=P\underline{x}+\underline{q}$ allora non c'è speranza che una successione $\{\underline{x}^{(k)}\}_{k=0,1,2,\dots}$ generata dal metodo $(\star)$ converga a $\underline{x}$. Si noti che "soddisfare l'equazione $\underline{x}=P\underline{x}+\underline{q}$" vuol dire "essere punto fisso della funzione $\underline{g}(\underline{y})=P\underline{y}+\underline{q}$".
 
-**Def.** (consistenza di un metodo iterativo)
-Il metodo iterativo $(\star)$ si dice consistente col sistema lineare, se la soluzione $\underline{x}$ del sistema soddisfa l'equazione $\underline{x}=P\underline{x}+\underline{q}$. 
+>[!important]- **Def.** Consistenza di un metodo iterativo
+>Il metodo iterativo $(\star)$ si dice consistente col sistema lineare, se la soluzione $\underline{x}$ del sistema soddisfa l'equazione $\underline{x}=P\underline{x}+\underline{q}$. 
 
-**Def.** (convergenza di un metodo iterativo)
-Il metodo iterativo $(\star)$ per risolvere il sistema lineare, si dice convergente se per ogni scelta del vettore iniziale $\underline{x}^{(0)}$, la successione $\{\underline{x}^{(k)}\}_{k=0,1,2,\dots}$ generata dal metodo converge (componente per componente) alla soluzione $\underline{x}$ del sistema lineare.
+>[!important]- **Def.** Convergenza di un metodo iterativo
+>Il metodo iterativo $(\star)$ per risolvere il sistema lineare, si dice convergente se per ogni scelta del vettore iniziale $\underline{x}^{(0)}$, la successione $\{\underline{x}^{(k)}\}_{k=0,1,2,\dots}$ generata dal metodo converge (componente per componente) alla soluzione $\underline{x}$ del sistema lineare.
 
 ## Teorema (condizione necessaria e sufficiente di convergenza)
 Supponiamo che il metodo $(\star)$ sia consistente col sistema lineare. Allora esso *è convergente* se e solo se $\rho(P)<1$.
