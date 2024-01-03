@@ -38,9 +38,8 @@ Quindi le condizioni $|\text{traccia}(P)|<n$ e $|\det(P)<1|$ sono **necessarie**
 **Dim.**
 - Se $|\text{traccia}(P)|\ge n$ allora esiste almeno un autovalore di $P$ di modulo $\ge1$. Infatti, se tutti gli autovalori $\lambda_{1},\dots,\lambda_{n}$ di $P$ fossero di modulo $<1$ allora avremmo $$|\text{traccia}(P)|=|\lambda_{1}+\dots+\lambda_{n}|\le|\lambda_{1}|+\dots+|\lambda_{n}|<n$$ Poiché esiste almeno un autovalore di $P$ di modulo $\ge1$ si deduce che $\rho(P)=\max(|\lambda_{1}|,\dots,|\lambda_{n}|)\ge1$ e dunque il metodo non è convergente per il [[#Teorema (condizione necessaria e sufficiente di convergenza)|teorema]].
 - Se $|\det(P)|\ge1$ allora esiste almeno un autovalore di $P$ di modulo $\ge1$. Infatti, se tutti gli autovalori $\lambda_{1},\dots,\lambda_{n}$ di $P$ fossero di modulo $<1$ allora avremmo $$|\det(P)|=|\lambda_{1}\dots\lambda_{n}|=|\lambda_{1}|\dots|\lambda_{n}|<1$$ Poiché esiste almeno un autovalore di $P$ di modulo $\ge1$, si deduce che $\rho(P)=\max(|\lambda_{1}|,\dots,|\lambda_{n}|)\ge1$ e dunque il metodo non è convergente per il [[#Teorema (condizione necessaria e sufficiente di convergenza)|teorema]].
-
+$\square$
 **Oss.** Si può dimostrare che se il metodo iterativo $(\star)$ non è convergente, allora praticamente ogni scelta del vettore $\underline{x}^{(0)}$ produce una successione che non converge alla soluzione $\underline{x}$ del sistema lineare. In sostanza, se il metodo iterativo $(\star)$ non è convergente, allora è da buttare.
-
 ## Esempio 1
 Consideriamo il sistema lineare $$A\underline{x}=\underline{b},\qquad A=\begin{bmatrix}2 & 1 \\ 1 & 2\end{bmatrix}, \qquad \underline{b}=\begin{bmatrix}1 \\ 1\end{bmatrix}$$ e il metodo iterativo $$\begin{align*}
 &\underline{x}^{(0)}\in\mathbb{C}^2\:\:\text{dato}\\
