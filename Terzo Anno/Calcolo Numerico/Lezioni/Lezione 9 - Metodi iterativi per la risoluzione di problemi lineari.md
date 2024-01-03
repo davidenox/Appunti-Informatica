@@ -104,7 +104,7 @@ Consideriamo il sistema lineare $$A\underline{x}=\underline{b},\qquad A=\begin{b
 
 **Soluzione**
 1. Il metodo assegnato è della forma $(\star)$ con $P=I- \frac{1}{2}A$ e $\underline{q}=\frac{1}{2}\underline{b}$. Sostituendo la soluzione $\underline{x}$ del sistema dato, nell'equazione del metodo (al posto di $\underline{x}^{(k+1)}$ e $\underline{x}^{k}$) otteniamo $$\underline{x}=(I- \frac{1}{2}A)\underline{x}+ \frac{1}{2}\underline{b}\quad\iff\underline{x}=\underline{x}- \frac{1}{2}A\underline{x}+ \frac{1}{2}\underline{b}\quad\iff A\underline{x}=\underline{b}$$ che è un'identità verificata. Dunque il metodo è consistente con il sistema dato.
-2. La matrice d'iterazione del metodo è $$P=I-A=\begin{bmatrix}0 & - \frac{1}{2}  \\ - \frac{1}{2} & 0\end{bmatrix}$$ Poiché $||P||_{\infty}= \frac{1}{2}<1$  è verificata la condizione sufficiente espressa nel [[#Corollario 1|corollario 1]], dunque il metodo è convergente.corollario 1
+2. La matrice d'iterazione del metodo è $$P=I-A=\begin{bmatrix}0 & - \frac{1}{2}  \\ - \frac{1}{2} & 0\end{bmatrix}$$ Poiché $||P||_{\infty}= \frac{1}{2}<1$  è verificata la condizione sufficiente espressa nel [[#Corollario 1|corollario 1]], dunque il metodo è convergente.
 3. La soluzione esatta del sistema è stata calcolata nell'esempio precedente ed è $\underline{x}=[\frac{1}{3}, \frac{1}{3}]^{T}$. Calcoliamo le prime 5 iterazioni del metodo partendo da $\underline{x}^{(0)}=[0,0]^{T}$ $$\begin{align*}
 &\underline{x}^{(1)}=\begin{bmatrix}0 & - \frac{1}{2}\\
 - \frac{1}{2} & 0\end{bmatrix}\begin{bmatrix}0\\

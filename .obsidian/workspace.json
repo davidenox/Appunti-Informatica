@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c726c19beed0547f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md"
               }
             }
           },
@@ -184,8 +171,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "c726c19beed0547f",
+  "active": "277c3d5f2ef12ced",
   "lastOpenFiles": [
+    "README.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
     "Capitolo 3 - Richiami di algebra lineare.md",
@@ -222,7 +210,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 6 - Ordinamento.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
