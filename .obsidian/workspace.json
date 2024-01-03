@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4be8559408bdce42",
+        "id": "a3aef5cf281269d4",
         "type": "tabs",
         "children": [
           {
-            "id": "068039152f002345",
+            "id": "277c3d5f2ef12ced",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -171,11 +171,11 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "068039152f002345",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Capitolo 3 - Richiami di algebra lineare.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
+    "Capitolo 3 - Richiami di algebra lineare.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",

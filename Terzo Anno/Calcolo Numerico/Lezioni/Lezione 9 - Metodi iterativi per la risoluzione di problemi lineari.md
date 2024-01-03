@@ -19,18 +19,18 @@ Supponiamo che il metodo $(\star)$ sia consistente col sistema lineare. Allora e
 
 **Dim.**
 Dimostriamo soltanto che se $\rho(P)<1$ allora il metodo è convergente.
-Dobbiamo dimostrare che la successione $(\star)$ converge alla soluzione $\underline{x}$ del sistema lineare indipendentemente dalla scelta del vettore iniziale $\underline{x}^{(0)}$. Poiché il metodo è consistente per ipotesi, vale l'equazione $$\underline{x}=P \underline{x}+\underline{q}$$ Inoltre, ovviamente, vale anche l'equazione del metodo, cioè $$\underline{x}^{(k+1)}=P \underline{x}^{(k)}+\underline{q} \:\:\text{ per ogni }k=0,1,2,\dots$$ Sottraendo membro a membro le due equazioni sopra, si ottiene l'equazione dell'errore $$\underline{e}^{(k+1)}=P\underline{e}^{(k)}\:\:\text{ per ogni }k=0,1,2,\dots$$ dove $\underline{e}^{(k)}=\underline{x}^{(k)}-\underline{x}$ è l'errore al passo $k$. Sviluppando per ricorrenza l'equazione dell'errore, si ottiene $$\underline{e}^{(k+1)}=P\underline{e}^{(k)}=P^{2}\underline{e}^{(k-1)}=P^{3}\underline{e}^{(k-2)}=\dots=P^{k+1}\underline{e}^{(0)}\:\:\text{ per ogni }k=0,1,2,\dots$$ da cui $$\underline{e}^{(k)}=P^{k}\underline{e}^{(0)}\:\:\text{ per ogni }k=0,1,2,\dots$$ Siccome stiamo assumendo che $\rho(P)<1$, il [[Capitolo 3 - Richiami di algebra lineare#Successioni di matrici#Teorema|teorema]] ci dice che $P^{k}\to O$. Dall'ultima equazione si deduce quindi che $\underline{e}^{(k)}\to \underline{0}$ cioè $\underline{x}^{(k)}\to\underline{x}$.
+Dobbiamo dimostrare che la successione $(\star)$ converge alla soluzione $\underline{x}$ del sistema lineare indipendentemente dalla scelta del vettore iniziale $\underline{x}^{(0)}$. Poiché il metodo è consistente per ipotesi, vale l'equazione $$\underline{x}=P \underline{x}+\underline{q}$$ Inoltre, ovviamente, vale anche l'equazione del metodo, cioè $$\underline{x}^{(k+1)}=P \underline{x}^{(k)}+\underline{q} \:\:\text{ per ogni }k=0,1,2,\dots$$ Sottraendo membro a membro le due equazioni sopra, si ottiene l'equazione dell'errore $$\underline{e}^{(k+1)}=P\underline{e}^{(k)}\:\:\text{ per ogni }k=0,1,2,\dots$$ dove $\underline{e}^{(k)}=\underline{x}^{(k)}-\underline{x}$ è l'errore al passo $k$. Sviluppando per ricorrenza l'equazione dell'errore, si ottiene $$\underline{e}^{(k+1)}=P\underline{e}^{(k)}=P^{2}\underline{e}^{(k-1)}=P^{3}\underline{e}^{(k-2)}=\dots=P^{k+1}\underline{e}^{(0)}\:\:\text{ per ogni }k=0,1,2,\dots$$ da cui $$\underline{e}^{(k)}=P^{k}\underline{e}^{(0)}\:\:\text{ per ogni }k=0,1,2,\dots$$Siccome stiamo assumendo che $\rho(P)<1$, il [[Lezione 8 - Richiami di algebra lineare#Norme matriciali#Successioni di matrici#Teorema|teorema]] ci dice che $P^{k}\to O$. Dall'ultima equazione si deduce quindi che $\underline{e}^{(k)}\to \underline{0}$ cioè $\underline{x}^{(k)}\to\underline{x}$.
 
 ### Corollario 1
 **Condizione sufficiente di convergenza**
 Supponiamo che il metodo $(\star)$ sia consistente col sistema lineare. Se esiste una norma matriciale indotta $||\cdot||$ tale che $||P||<1$, allora il metodo è convergente.
 
 **Dim.**
-Poiché $\rho(P)\le||P||$ per il [[Capitolo 3 - Richiami di algebra lineare#Norme matriciali indotte#Teorema|teorema]], la condizione $||P||<1$ implica che $\rho(P)<1$ e dunque il metodo è convergente per il teorema precedente. $\square$
+Poiché $\rho(P)\le||P||$ per il [[Lezione 8 - Richiami di algebra lineare#Norme matriciali indotte#Teorema|teorema]], la condizione $||P||<1$ implica che $\rho(P)<1$ e dunque il metodo è convergente per il teorema precedente. $\square$
 
 ### Corollario 2
 **Condizioni necessarie di convergenza**
-Suppinamo che il metodo $(\star)$ sia consistente col sistema lineare.
+Supponiamo che il metodo $(\star)$ sia consistente col sistema lineare.
 - Se $|\text{traccia}(P)|\ge n$ allora il metodo *non è convergente*.
 - Se $|\det(P)|\ge1$ allora il metodo *non è convergente*.
 Quindi le condizioni $|\text{traccia}(P)|<n$ e $|\det(P)<1|$ sono **necessarie** per la convergenza del metodo $(\star)$.
