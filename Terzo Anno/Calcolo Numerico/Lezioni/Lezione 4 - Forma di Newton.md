@@ -52,7 +52,7 @@ Sia $f:[a,b]\to \mathbb R$, siano $x_{0},\dots,x_{n}\in[a,b]$ punti distinti e s
 Per chiarezza, esprimiamo l'algoritmo nel caso $n=3$ $$p(x)=\underline{f[x_{0}]}+\underline{f[x_{0},x_{1}]}(x-x_{0})+\underline{f[x_{0},x_{1},x_{2}]}(x-x_{0})(x-x_{1})+\underline{f[x_{0},x_{1},x_{2},x_{3}]}(x-x_{0})(x-x_{1})(x-x_{2})$$
 - Il primo passo dell'algoritmo è indipendente dal punto $t$ in cui $p(x)$ deve essere valutato e consiste nel calcolare le differenze divise sottolineate. Questo calcolo si fa con la tabella delle differenze divise.
 
-- Dopo il primo passo, per calcolare $p(t)$ si usa il metodo di Ruffini-Hormer: $$p(t)=\underbrace{f[x_{0}]+(t-x_{0})\{\underbrace{f[x_{0},x_{1}](t-x_{1})\underbrace{[f[x_{0},x_{1},x_{2}]+(t-x_{2})\underbrace{f[x_{0},x_{1},x_{2},x_{3}]}_{h3}]}_{h2}}_{h1}}_{h0}  \}$$
+- Dopo il primo passo, per calcolare $p(t)$ si usa il metodo di Ruffini-Hormer: $$p(t)=\underbrace{f[x_{0}]+(t-x_{0})\{\underbrace{f[x_{0},x_{1}]+(t-x_{1})\underbrace{[f[x_{0},x_{1},x_{2}]+(t-x_{2})\underbrace{f[x_{0},x_{1},x_{2},x_{3}]}_{h3}]}_{h2}}_{h1}}_{h0}  \}$$
 Che possiamo riassumere come: 
 - $h_{3}=f[x_{0},x_{1},x_{2},x_{3}]$
 - $h_{2}=f[x_{0},x_{1},x_{2}]+(t-x_{2})h_{3}$
