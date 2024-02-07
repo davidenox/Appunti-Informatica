@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md"
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md"
               }
             }
           },
@@ -171,15 +171,18 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "277c3d5f2ef12ced",
   "lastOpenFiles": [
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 11_05_23.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
     "README.md",
     "Capitolo 3 - Richiami di algebra lineare.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
@@ -207,9 +210,6 @@
     "_temp/Appunti ASD/MOD I/ProblemSet1/Problem Set.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 7 - Scheduling.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 9 - BucketSort e RadixSort.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 10- Strutture dati elementari.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
