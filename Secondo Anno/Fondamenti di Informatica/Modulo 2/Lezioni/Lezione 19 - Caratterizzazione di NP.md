@@ -40,12 +40,12 @@ Infine, siccome per ogni $x\in L$, $ntime(NT,x)\leq|x|^k$. Allora posso fare in 
 Quindi, per la prima parte della dimostrazione:
 - Se $L\in NP$ allora esistono una macchina di Turing deterministica T e due costanti $h,k\in\mathbb {N}$ tali che, per ogni $x\in\Sigma^*$,$$x\in L\iff\exists y_x\in\{0,1\}^*:|y_x|\leq|x|^k\land T(x,y_x)\text{accetta}\land dtime(T,x,y_x)\in O(|x|^k)$$
 ### Un paio di precisazioni
-1. Nell'enunciato del [[Lezione 19 18_05_23#..ad una nuova caratterizzazione..|teorema]] si parla dell'esistenza di una "$y_x\in\{0,1\}^*$", ma la $y_x$ che risulta dalla dimostrazione non è una parola in $\{0,1\}^*$.
+1. Nell'enunciato del [[Lezione 19 - Caratterizzazione di NP#..ad una nuova caratterizzazione..|teorema]] si parla dell'esistenza di una "$y_x\in\{0,1\}^*$", ma la $y_x$ che risulta dalla dimostrazione non è una parola in $\{0,1\}^*$.
 	**1.1** È tuttavia gestibile con le codifiche binarie, e si sa trasformare una macchina di Turing definita su un alfabeto generico in una macchina di Turing definita sull'alfabeto $\{0,1\}$ e in modo tale che le due macchine siano polinomialmente correlate.
 2. Poi, quel che si chiede al Genio è "x appartiene ad L?"
 	**2.1**  E se $x\in L$ il genio dice Sì, ma poi bisogna verificare la parola $y_x$ che viene comunicata. Per questo, se $x\in L$, $y_x$ prende il nome di *dimostrazione* o **certificato** per x.
 ## Una nuova caratterizzazione 
-Non resta che dimostrare la seconda parte del [[Lezione 19 18_05_23#..ad una nuova caratterizzazione..|teorema]]: dobbiamo dimostrare che $L\in NP$, ossia che esistono una macchina di Turing non deterministica NT e un intero $a$ tale che:
+Non resta che dimostrare la seconda parte del [[Lezione 19 - Caratterizzazione di NP#..ad una nuova caratterizzazione..|teorema]]: dobbiamo dimostrare che $L\in NP$, ossia che esistono una macchina di Turing non deterministica NT e un intero $a$ tale che:
 - Per ogni $x\in L$, $NT(x)$ accetta e $ntime(NT,x)\in O(|x|^a)$;
 - Per ogni $x\notin L$, $NT(x)$ non accetta.
 Si dimostra che esistono $NT$ e $a$:

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md"
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -173,28 +173,35 @@
   },
   "active": "34be710ea6b10d36",
   "lastOpenFiles": [
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 - Classi di complemento.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 - Riducibilità polinomiale.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 - Specifiche classi di complessità.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 - Funzioni più che calcolabili.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 - Classi di complessità.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 - Misure di complessità.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 9 - Intro alla Teoria della Complessità Computazionale.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 - Halting Problem.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 7 - Modelli di calcolo.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 - macchine non deterministiche.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 - Intro e Princìpi.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "a.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "_temp/Appunti ASD/MOD I/Lezione 12 - Capitolo 8.md",
     "_temp/Appunti ASD/MOD I/Lezione 11 - Capitolo 6.md",
     "_temp/Appunti ASD/MOD I/Lezione 13 - Capitolo 11.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 18_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 16_05_23.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 11_05_23.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 3 - Errore d'interpolazione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 4 - Forma di Newton.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 8 - Richiami di algebra lineare.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
-    "README.md",
-    "Capitolo 3 - Richiami di algebra lineare.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 9 - Virtual Memory.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231128112203.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231128111902.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124123957.png",
@@ -203,13 +210,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124104402.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124101908.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124101847.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 8 - Memory Abstraction.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 11 - Il problema del dizionario.md",
-    "_temp/Appunti ASD/MOD I/Lezione 10 - Capitolo 6.md",
-    "_temp/Appunti LMP/MOD I/Lezione 6 - Classi.md",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
-    "_temp/Appunti LMP/MOD I/Lezione 7 - Classi Nidificate.md",
-    "_temp/Appunti ASD/MOD I/ProblemSet1/Problem Set.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
