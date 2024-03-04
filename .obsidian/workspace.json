@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3c7a26100dbed9a3",
+        "id": "3e6442b66edc8855",
         "type": "tabs",
         "children": [
           {
-            "id": "34be710ea6b10d36",
+            "id": "2e0fe2f5fcf2f086",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -171,8 +171,18 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "34be710ea6b10d36",
+  "active": "2e0fe2f5fcf2f086",
   "lastOpenFiles": [
+    "_temp/Appunti LMP/MOD I/Introduzione.md",
+    "_temp/Appunti BSD/MOD I/Indice delle lezioni BSD.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
+    "_temp/orario.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
@@ -185,20 +195,11 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 9 - Intro alla Teoria della Complessità Computazionale.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 - Halting Problem.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 7 - Modelli di calcolo.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 - macchine non deterministiche.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 - Intro e Princìpi.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "a.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "_temp/Appunti ASD/MOD I/Lezione 12 - Capitolo 8.md",
-    "_temp/Appunti ASD/MOD I/Lezione 11 - Capitolo 6.md",
-    "_temp/Appunti ASD/MOD I/Lezione 13 - Capitolo 11.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 6 - Formula dei trapezi ed errore.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 7 - Estrapolazione.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
@@ -217,7 +218,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
-    "Terzo Anno/Calcolo Numerico/Lezioni",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Immagini"
+    "Terzo Anno/Calcolo Numerico/Lezioni"
   ]
 }
