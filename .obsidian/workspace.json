@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3e6442b66edc8855",
+        "id": "3c6292a15d145f1c",
         "type": "tabs",
         "children": [
           {
-            "id": "2e0fe2f5fcf2f086",
+            "id": "86c9bc8da3d8cf63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md"
               }
             }
           },
@@ -171,12 +171,17 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "2e0fe2f5fcf2f086",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti",
+    "_temp/orario.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
     "_temp/Appunti LMP/MOD I/Introduzione.md",
     "_temp/Appunti BSD/MOD I/Indice delle lezioni BSD.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
-    "_temp/orario.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
@@ -198,26 +203,21 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 - macchine non deterministiche.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 - Intro e Princìpi.md",
     "a.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
-    "_temp/Appunti ASD/MOD I/Lezione 12 - Capitolo 8.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231128112203.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231128111902.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124123957.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124120900.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124114013.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124104402.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124101908.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini/Pasted image 20231124101847.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231128112203.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231128111902.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124123957.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124120900.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124114013.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124104402.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124101908.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124101847.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Lezioni/Lezione 5 - esercizio_processi.c",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1/Immagini",
-    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1",
-    "Terzo Anno/Calcolo Numerico/Lezioni"
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 5 - esercizio_processi.c",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini"
   ]
 }
