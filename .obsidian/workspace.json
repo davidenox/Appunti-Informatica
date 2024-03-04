@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.00043487548828
+    "width": 231.00043487548828,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -171,14 +172,17 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "86c9bc8da3d8cf63",
   "lastOpenFiles": [
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
+    "Pasted image 20240304145331.png",
+    "Pasted image 20240304144919.png",
+    "Pasted image 20240304144839.png",
+    "_temp/orario.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti",
-    "_temp/orario.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
     "_temp/Appunti LMP/MOD I/Introduzione.md",
     "_temp/Appunti BSD/MOD I/Indice delle lezioni BSD.md",
@@ -202,7 +206,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 7 - Modelli di calcolo.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 - macchine non deterministiche.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 - Intro e Princìpi.md",
-    "a.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
@@ -212,8 +215,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124120900.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124114013.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124104402.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124101908.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124101847.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
     "Terzo Anno/Calcolo Numerico/Immagini",
