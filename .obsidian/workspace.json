@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet e Web.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6023f316d57fffe1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet e Web.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet e Web.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet e Web.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md"
               }
             }
           },
@@ -171,10 +184,18 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "5dcc0afa02cf4f56",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305161744.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305155059.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305154018.png",
+    "README.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet e Web.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20240304144839.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
     "Terzo Anno/Programmazione Web/Lezioni",
@@ -186,7 +207,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezione 0 - Intro.md",
     "_temp/Appunti LMP/MOD I/Introduzione.md",
     "_temp/Appunti BSD/MOD I/Indice delle lezioni BSD.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione",
@@ -205,19 +225,12 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 - Classi di complessità.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 - Misure di complessità.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 9 - Intro alla Teoria della Complessità Computazionale.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 - Halting Problem.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 7 - Modelli di calcolo.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 - macchine non deterministiche.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231128112203.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231128111902.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124123957.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124120900.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124114013.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 1.pdf",
-    "Terzo Anno/Calcolo Numerico/Immagini"
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO"
   ]
 }
