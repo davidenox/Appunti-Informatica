@@ -21,7 +21,7 @@ Miliardi di *dispositivi* di calcolo connessi:
 - Tasso di trasmissione ( trasmission rate ): *Ampiezza di banda (bandwidth)*
 **Reti**:
 - Collezione di dispositivi, router, collegamenti: gestiti da un'organizzazione.
-## Dispositivi connessi a internet "divertenti"
+## Dispositivi connessi a internet 
 ![[Pasted image 20240304144839.png|center|800]]
 ### Note sui sistemi periferici
 Sistemi periferici in internet:
@@ -32,6 +32,14 @@ Sistemi periferici in internet:
 # Tornando agli "Ingranaggi"
 **Internet: "rete di reti"**:
 - ISP interconnessi ( Internet Service Provider ).
+
+> [!definition]- ISP
+> ISP = Internet Service Provider, che possono essere :
+> - aziendali
+> - residenziali
+> - pubblici
+> - etc...
+
 I **protocolli** sono *ovunque*:
 - Controllano l'invio e la ricezione di messaggi (es. HTTP(Web), streaming video. skype. TCP, IP, WiFi, 4/5G, Ethernet).
 **Standard di internet**:
@@ -83,7 +91,11 @@ Canali diversi sono trasmessi in bande di frequenze diverse
 - Asimmetrico: fino a 40Mbps - 1.2Gbps in downstream, 30-100Mbps in upstream
 **Rete** ibrica a fibra e cavo coassiale collega le case ai router degli ISP
 - L'urenza domestica *condivide la rete di accesso* alla stazione di testa
-### Reti di accesso: Digital Subscriber Line (DSL)
+### Reti di accesso: Digital Subscriber Line (DSL)ù
+
+**DSL = Digital Subscriber Line**
+**DSLAM = Digital Subscriber Line Access Multiplex**
+
 Utilizza la linea telefonica **esistente** verso il DSLAM nella centrale locale:
 - I dati sulla linea telefonica DSL vanno su internet;
 - La voce sulla linea telefonica DSL vanno sulla rete telefonica.
@@ -91,6 +103,7 @@ Asimmetrico:
 - 24-52 Mbps come tasso di trasmissione in downstream dedicato;
 - 3.5-16 Mbps come tasso di trasmissione in upstream dedicato;
 - L'ultimo standard fornisce un tasto aggregato in downstream e upstream di 1Gbps.
+Il modem DSL converte i dati digitali in toni ad alta frequenza, per poterli trasmettere alla centrale locale sul cavo telefonico; tutti i segnali analogici in arrivo dalle abitazioni vengono riconvertiti in formato digitale nel DSLAM.
 ### Reti di accesso : TTFFx
 - FTTH - Fiber To The Home (1 Gbps in downlink)
 - FTTB - Fiber To The Basement/Building
@@ -98,7 +111,13 @@ Asimmetrico:
 - FTTN - Fiber To The Node
 - FTTW o FTTR - Fiber To The Wireless/Radio 
 Quanto più il collegamento pottico arriva più vicino alla destinazione, tanto maggiore sarà 
+La più usata è la FTTH, che però viene suddivisa da molte abitazioni.
+
+Due architetture che usano questa suddivisione sono :
+- **AON** (Active Optical Network) : Rete ottica attiva
+- **PON** (Passive Optical Network) : Rete ottica passiva
 ### Reti di accesso: FFTH di tipo PON
+![[Pasted image 20240306100916.png|center|500]]
 ### Reti di accesso: Fixed Wireless Access
 - Rete mista: fibra, radio;
 - Raggiunge i clienti con:
@@ -114,50 +133,3 @@ Una rete condivisa d'accesso wireless collega i sistemi periferici al router
 - aziende, università,....
 - misto di tecnologe
 ### Reti di accesso: reti dei data center
-
-###### FINE INTRODUZIONE
-## Host: invio dei pacchetti di dati
-Funzione di invio dell'host:
-- Prende il messaggio dell'applicazione-
-- Lo suddivide in frammenti più piccoli, conosciuti come *pacchetti*., di lunghezza *L* bit.
-- Trasmette il pacchetto nella rete di accesso al *tasso di trasmissione R*.
-	- Tasso di trasmissione del collegamento, o *capacità* del link, o *ampiezza di banda del collegamento*.
-
-ritardo di trasmissione del pacchetto = tempo necessario per trasmettere pacchetti di L bit nel collegamento = $(L_{(bits)})/(R_{(bits/sec)})$ 
-## Collegamenti: mezzi trasmissivi
-- *Bit*: si propaga tra coppie trasmettitore/ricevitore
-- *Mezzo fisico*: cosa c'è tra trasmettitore e ricevitore
-- *Mezzo vincolato (guided media)*: I segnali si propagano in un mezzo solido: rame, fibra ottica, cavo coassiale.
-- *Mezzo non vincolato(unguided media)*: I segnali si propagano liberamente, es. Radio.
->Doppino di rame intrecciato (Twisted Pair(TP))
->Due fili di rame isolati:
-
->Cavo coassiale:
->- Due conduttori di rame concentrici
->- Bidirezionale
->- Banda larga:
->	- canali di frequenza multipli sul cavo
->	- centinaia di Mbps per canale
-
->Cavo in fibra ottica:
->- mezzo sottile e flessibile che conduce impulsi di luce, ciascuno dei quali rappresenta un bit
->- elevata velocità trasmittiva:
->	- Trasmissione punto-punto ad alta velocità (decine o centinaia di Gbps)
->- attenuazione di segnale molto bassa nel raggio di 100 km
->- basso tasso di errore:
->	- ripetitori distanziati
->	- immune all'interferenza elettromagnetica
-
-> Canali radio
-> - trasportano segnali nello spettro elettromagnetuco
-> - non richiedono l'installazione fisica di cavi
-> - broadcast, half-duplex
-> - effetti dell'ambiente di propagazione:
-> 	- riflessione
-> 	- ostruzioni da parte di ostacoli
-> 	- interferenza
-
->tipi di canali radio:
->- Wireless LAN (F)
-
-# Il nucleo della rete

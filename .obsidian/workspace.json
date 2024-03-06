@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "7e9cf0d0c6cbce01",
+        "id": "b6e5d8a6b18d631c",
         "type": "tabs",
         "children": [
           {
-            "id": "5dcc0afa02cf4f56",
+            "id": "0720b669d483011a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6023f316d57fffe1",
+            "id": "a404a3fd22fe7240",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md"
               }
             }
           },
@@ -184,8 +184,13 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "a404a3fd22fe7240",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 1 - Host e Reti Internet.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
+    "Lezione 1.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20240306100916.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305161744.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305155059.png",
@@ -193,11 +198,9 @@
     "README.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet e Web.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20240304144839.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
     "Terzo Anno/Programmazione Web/Lezioni",
     "Terzo Anno/Programmazione Web",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20240304145331.png",
@@ -224,13 +227,10 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 - Funzioni più che calcolabili.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 - Classi di complessità.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 - Misure di complessità.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 9 - Intro alla Teoria della Complessità Computazionale.md",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
     "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231128112203.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231128111902.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231124123957.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO"
   ]
 }
