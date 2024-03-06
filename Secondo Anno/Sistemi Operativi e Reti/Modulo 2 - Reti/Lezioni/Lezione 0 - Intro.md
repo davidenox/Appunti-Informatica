@@ -133,3 +133,4 @@ Una rete condivisa d'accesso wireless collega i sistemi periferici al router
 - aziende, università,....
 - misto di tecnologe
 ### Reti di accesso: reti dei data center
+I collegamenti ad alta larghezza di banda ( da decine a centinaia di Gbps ) collegano centinaia o migliaia di server tra loro e a Internet.

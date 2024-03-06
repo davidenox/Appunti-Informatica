@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0720b669d483011a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a404a3fd22fe7240",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2.md"
               }
             }
           },
@@ -186,25 +173,31 @@
   },
   "active": "a404a3fd22fe7240",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 1 - Host e Reti Internet.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2.md",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121706.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121157.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306120718.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306120548.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306120016.png",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML.md",
+    "Terzo Anno/Programmazione Web/Immagini",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306115727.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306115646.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306115545.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306110212.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306105443.png",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 1 - Host e Reti Internet.md",
     "Lezione 1.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20240306100916.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305161744.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305155059.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305154018.png",
     "README.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet e Web.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20240304144839.png",
     "Terzo Anno/Programmazione Web/Lezioni",
     "Terzo Anno/Programmazione Web",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20240304145331.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20240304144919.png",
     "_temp/orario.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni",
@@ -225,12 +218,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 - Riducibilità polinomiale.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 - Specifiche classi di complessità.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 - Funzioni più che calcolabili.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 - Classi di complessità.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 - Misure di complessità.md",
-    "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231219162845.png",
-    "Terzo Anno/Calcolo Numerico/Immagini/Pasted image 20231218100315.png",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Immagini/Pasted image 20231128112203.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO"
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf"
   ]
 }
