@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       },
       {
         "id": "281194aa5153c350",
@@ -187,12 +187,16 @@
   },
   "active": "9a3fbccc09b7d654",
   "lastOpenFiles": [
-    "Pasted image 20240311121907.png",
-    "Pasted image 20240311120703.png",
-    "Pasted image 20240311120629.png",
-    "Pasted image 20240311120417.png",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311162856.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311162158.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311162042.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311160031.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311121907.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311120703.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311120629.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311120417.png",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 -.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
@@ -200,13 +204,8 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121706.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121157.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306120718.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306120548.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306120016.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML.md",
     "Terzo Anno/Programmazione Web/Immagini",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306115727.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306115646.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 1 - Host e Reti Internet.md",
