@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md"
               }
             }
           },
@@ -187,9 +187,13 @@
   },
   "active": "9a3fbccc09b7d654",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 -.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121706.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121157.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306120718.png",
@@ -210,7 +214,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini",
     "README.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Terzo Anno/Programmazione Web/Lezioni",
     "Terzo Anno/Programmazione Web",
     "_temp/orario.md",
@@ -229,9 +232,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 - Classi di complemento.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 - Riducibilità polinomiale.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 - Specifiche classi di complessità.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 - Funzioni più che calcolabili.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 2.pdf"
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 - Riducibilità polinomiale.md"
   ]
 }
