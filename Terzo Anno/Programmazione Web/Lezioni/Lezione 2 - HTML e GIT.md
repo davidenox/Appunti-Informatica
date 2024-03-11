@@ -62,3 +62,14 @@ Sono elementi correlati ma "marginali" rispetto al contenuto. L'utilizzo tipico 
 - Link.
 Non ha un aspetto di default.
 ### L'elemento `<nav>`
+Si tratta di una sezione che permette la navigazione nel sito, dove tipicamente si mettono delle liste (non tutte).
+Nei siti responsive spesso viene compressa per i dispositivi piccoli.
+
+### L'elemento `<header>`
+Si usa per materiale introduttivo. I due usi comuni sono come header della pagina o come header di una sezione o articolo. Se viene usato in un articolo tipicamente contiene titolo, autore, data ecc...
+### L'elemento `<footer>`
+Esso contiene le info che vanno alla fine della sezione logica, con autore, copyright, documenti correlati o link.
+Gli usi comuni si trovano a fondo pagina o a fine article o section.
+### L'elemento `<section>`
+Tratta di sezioni tematiche. Possono contenere heading e paragrafi, o comunque tutti gli elementi che abbia senso raggruppare. Può essere usato in diversi contesti, da dividere le sezioni della pagina a dividere le sezioni di un articolo.
+### L'elemento `<article>`
