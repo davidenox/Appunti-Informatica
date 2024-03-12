@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7a9c171739cafadc",
+        "id": "e5ae55b98615c388",
         "type": "tabs",
         "children": [
           {
-            "id": "9a3fbccc09b7d654",
+            "id": "a378370ce6b7aa3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md"
               }
             }
           },
@@ -185,8 +185,10 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "9a3fbccc09b7d654",
+  "active": "a378370ce6b7aa3e",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311162856.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311162158.png",
@@ -200,7 +202,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 -.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121706.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121157.png",
