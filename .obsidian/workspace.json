@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md"
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md"
               }
             }
           },
@@ -187,6 +187,14 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240312151229.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240312151121.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240312143501.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240312142902.png",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni",
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
     "Terzo Anno/Programmazione Web/Coding/es01/index.css",
     "Terzo Anno/Programmazione Web/Coding/es01/test.html",
@@ -195,10 +203,7 @@
     "Terzo Anno/Programmazione Web/Coding/img1/es01",
     "Terzo Anno/Programmazione Web/Coding/img1",
     "Terzo Anno/Programmazione Web/Coding/page1.html",
-    "Terzo Anno/Programmazione Web/Coding/page1.css",
-    "Terzo Anno/Programmazione Web/Coding",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311162856.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311162158.png",
@@ -207,14 +212,10 @@
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311121907.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311120703.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311120629.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311120417.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 -.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121706.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240306121157.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
@@ -231,7 +232,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md"
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md"
   ]
 }
