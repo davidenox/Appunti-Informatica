@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       },
       {
         "id": "281194aa5153c350",
@@ -185,8 +185,11 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "a378370ce6b7aa3e",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Coding/page1.html",
+    "Terzo Anno/Programmazione Web/Coding/page1.css",
+    "Terzo Anno/Programmazione Web/Coding",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
@@ -221,17 +224,14 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti",
     "_temp/Appunti LMP/MOD I/Introduzione.md",
     "_temp/Appunti BSD/MOD I/Indice delle lezioni BSD.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 - Classi di complemento.md"
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md"
   ]
 }
