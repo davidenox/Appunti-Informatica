@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md"
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md"
               }
             }
           },
@@ -185,14 +185,15 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "a378370ce6b7aa3e",
   "lastOpenFiles": [
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240312151229.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240312151121.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240312143501.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240312142902.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 0 - Intro.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni",
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
@@ -211,7 +212,6 @@
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311160031.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311121907.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311120703.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240311120629.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 -.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
