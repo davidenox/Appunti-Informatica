@@ -108,3 +108,31 @@ Gli sniffer di rete come wireshark sono molto utili per:
 - Analizzare il traffico nella tua rete
 ![[Pasted image 20240313133833.png|center|500]]
 
+## tcpdump
+Esiste la possibilità di non poter accedere alla UI di sniffer di rete come Wireshark. In questo caso, si può usare il comando da terminale `tcpdump`:
+```Shell
+tcpdump -r password_cracking_filtered.pcap
+tcpdump -n -r password_cracking_filtered.pcap | awk -F" " '{print $3}' | sort -u | head
+tcpdump -n src host 172.16.40.10 -r password_cracking_filtered.pcap
+tcpdump -n dst host 172.16.40.10 -r password_cracking_filtered.pcap
+tcpdump -n port 81 -r password_cracking_filtered.pcap
+tcpdump -nX -r password_cracking_filtered.pcap
+tcpdump -A -n 'tcp[13] = 24' -r password_cracking_filtered.pcap
+tcpdump -A -n -r password_cracking_filtered.pcap | grep "HTTP/1.1 ”
+```
+
+# Introduzione ai framework di penetration test
+## Metasploit
+Molto conosciuto, usato per generare *payloads* che possono essere usati per sfruttare delle particolari vulnerabilità. Supporta i payloads e exploits di molti protocolli, linguaggi e framework come :
+- HTTP/S
+- MySQL
+- SSH
+Inoltre, permette la generazione di artefatti automatici come `bind`/`reverse shell` per Linux/Windows ecc...
+## SQL Map
+Framework utile per test e automazione di *SQL Injections*. Supporta in generale tutti i database commerciali:
+- MySQL
+- Oracle
+- PostreSQL
+- Microsoft SQL Server
+- ...
+È open source

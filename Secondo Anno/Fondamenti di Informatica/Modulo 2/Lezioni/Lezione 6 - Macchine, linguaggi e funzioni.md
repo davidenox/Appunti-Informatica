@@ -39,7 +39,7 @@ $$\begin{align}\\&
 \end{align}
 $$
 Ebbene, $T_{PAL}$ decide il linguaggio $L_{PPAL}$ (*P*ari e *PAL*indrome) seguente:
-$$L_{PPAL} = \{ x1x2… x_{2n} \in\{a,b\}^*: n \in \mathbb{N} \wedge \forall i \in \{1, 2, ... , n\} [ x_i = x_{2n-i+1} ] \}$$
+$L_{PPAL} = \{ x1x2… x_{2n} \in\{a,b\}^*: n \in \mathbb{N} \wedge \forall i \in \{1, 2, ... , n\} [ x_i = x_{2n-i+1} ] \}$
 ## Accettare un linguaggio
 Dato un alfabeto $\Sigma$, un linguaggio L è un insieme di parole costituite di caratteri di $\Sigma$: ossia, $L\subseteq\Sigma^*$.
 Un linguaggio L è **accettato** da una macchina di Turing T se:

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e5ae55b98615c388",
+        "id": "19972c008f935e54",
         "type": "tabs",
         "children": [
           {
-            "id": "a378370ce6b7aa3e",
+            "id": "d07a5a74edb322eb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md"
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       },
       {
         "id": "281194aa5153c350",
@@ -185,8 +185,27 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "d07a5a74edb322eb",
   "lastOpenFiles": [
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 - Classi di complemento.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 - Riducibilità polinomiale.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 - Specifiche classi di complessità.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 12 - Funzioni più che calcolabili.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 11 - Classi di complessità.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 10 - Misure di complessità.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 9 - Intro alla Teoria della Complessità Computazionale.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 8 - Halting Problem.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 7 - Modelli di calcolo.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 - macchine non deterministiche.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 - Intro e Princìpi.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133833.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133523.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133142.png",
@@ -197,9 +216,7 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132903.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132837.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132600.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132351.png",
     "README.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
@@ -215,23 +232,6 @@
     "Terzo Anno/Programmazione Web/Coding/page1.html",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 -.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 1 - Host e Reti Internet.md",
-    "Lezione 1.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
-    "_temp/orario.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
-    "_temp/Appunti LMP/MOD I/Introduzione.md",
-    "_temp/Appunti BSD/MOD I/Indice delle lezioni BSD.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md"
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 -.md"
   ]
 }
