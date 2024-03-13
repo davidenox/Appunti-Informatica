@@ -70,3 +70,68 @@ Definisco lo stile usando l'attributo `<style>`
 ***NON VA USATO***
 ## Selettori semplici
 ### Selettore elemento
+Seleziono tutti gli elementi di quel tipo. ES:
+```CSS
+p {
+	color: red;
+	text-align: center;
+}
+```
+
+### Selettore classe
+Seleziono tutti gli elementi di una classe. Li individuo con l'attributo class ed un identificatore, e uso come selettore l'identificatore preceduto dal punto. ES:
+```HTML
+<h1 class="center">Heading</h1>
+<p class="center">A paragraph</p>
+```
+```CSS
+.center{
+	text-align: center;
+	color: red;
+}
+p.center{
+	text-align: center;
+	color: green;
+}
+```
+
+### Selettore id
+Seleziono l'elemento con quell'id. ES:
+```HTML
+<p id="para1">...</p>
+```
+```CSS
+#para1{
+	text-align: center;
+	color: red;
+}
+```
+
+## Raggruppare i selettori
+```CSS
+h1, h2, p{
+	text-align: center;
+	color: red;
+}
+```
+
+# Selettori e DOM
+## Relazioni nel DOM
+- **Descendant** - discendenti:
+	- Gli elementi contenuti in un elemento sono i  suoi discendenti.
+- **Child** - figli:
+	- Discendenti diretti, viceversa sono i genitori ( parent ).
+- **Ancestor** - antenati:
+	- Gli elementi sopra nell'albero.
+- **Parent** - genitore:
+	-  Elementi direttamente sopra.
+- **Siblings** - fratelli:
+	- Elementi con lo stesso parent.
+![[Pasted image 20240313162141.png|center|500]]
+## Selettori composti
+1. Selettori per **descendant** (*spazio*).
+2. Selettori per **child** (*>*).
+3. Selettori per **adjacent siblings** (*+*).
+	1. Il fratello immediatamente successivo.
+4. Selettori per **general siblings** ($\sim$).
+	1. Tutti i fratelli successivi.

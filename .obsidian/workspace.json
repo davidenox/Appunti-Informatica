@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "19972c008f935e54",
+        "id": "33d32ffd08ab7375",
         "type": "tabs",
         "children": [
           {
-            "id": "d07a5a74edb322eb",
+            "id": "c71235aafcd6441d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -157,11 +157,11 @@
         "currentTab": 5
       },
       {
-        "id": "281194aa5153c350",
+        "id": "68a2d0baf5c6a8d6",
         "type": "tabs",
         "children": [
           {
-            "id": "5d5adcdf2ffea76f",
+            "id": "d07a5a74edb322eb",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -187,6 +187,9 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313162141.png",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
+    "_temp/Appunti SOR/MOD I/Lezione 1 - Introduzione sui sistemi operativi.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313150322.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
@@ -218,11 +221,8 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133038.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132903.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132837.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132600.png",
     "README.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni",
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
