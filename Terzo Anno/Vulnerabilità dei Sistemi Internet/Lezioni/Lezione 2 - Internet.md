@@ -46,3 +46,65 @@ Indirizza il processo dal numero della "porta".
 La coppia indirizzo IP+porta costituisce un "indirizzo-socket".
 ![[Pasted image 20240313121855.png|center|600]]
 ## Client
+Es. di programmi client: 
+- Web Browsers
+- FTP
+- Telnet
+- SSH
+Come fa un client a trovare il server?
+- L'indirizzo IP nell'indirizzo del socket del server identifica l'host fisico
+- La (ben conosciuta) porta nell'indirizzo del socket del server identifica il servizio
+	- Implicitamente identifica il processo del server che eroga quel servizio
+Esempi di porte conosciute:
+- Porta 7: server Echo
+- Porta 23: server Telnet
+- Porta 25: server Mail
+- Porta 53: DNS
+- Porta 80: server Web
+### Utilizzo delle porte per l'identificazione dei servizi
+![[Pasted image 20240313130132.png|center|500]]
+# Kali Linux
+## Avviare Kali
+Kali Linux contiene oltre 300 strumenti di penetration testing. Le credenziali iniziali della VM di Kali sono:
+- *Username*: kali
+- *Password*: kali
+Il menù di Kali presenta un grande numero di strumenti
+## Find, Locate, Which
+Per poter utilizzare lo strumento `locate`, è necessario eseguire `updatedb`:
+- Esso crea un database locale di tutti i file nel filesystem;
+- Una volta creato il db, `locate` può essere utilizzato facilmente per chiedere al database dove sono i file in locale:
+![[Pasted image 20240313132215.png|center|500]]
+Il comando `which` cerca tra le cartelle definite nel percorso, e se viene trovata la coincidenza, `which` rimanda il percorso completo del file cercato:
+![[Pasted image 20240313132351.png|center|500]]
+Il comando `find` è un comando più aggressivo di `locate` o `which`. 
+- `find` è capace di cercare ricorsivamente qualsiasi percorso dato per vari file
+- Ha una moltitudine di opzioni per gli attributi dei file:
+![[Pasted image 20240313132600.png|center|500]]
+## Bash
+Immagina di essere incaricato di:
+- Trovare tutti i subdomini listati nella index page di cisco.com 
+- Trovare i loro corrispettivi indirizzi IP
+Inizia scaricando la pagina index di cisco.com usando il comando `wget`:
+![[Pasted image 20240313132837.png|center|500]]
+![[Pasted image 20240313132903.png|center|500]]
+## netcat
+Connettersi ad una porta TCP/UDP può essere molto utile in molteplici situazioni:
+- Per verificare se una porta è aperta o chiusa
+- Per leggere il banner dalla porta
+- Per connettersi ad un servizio di rete manualmente.
+![[Pasted image 20240313133055.png|center|600]]
+![[Pasted image 20240313133109.png|center|600]]
+![[Pasted image 20240313133123.png|center|600]]
+![[Pasted image 20240313133142.png|center|600]]
+
+`netcat` può essere utilizzato anche per il trasferimento di file:
+- *Sender side*: nc -w 3 $\text{[destination] [port] < [file]}$
+- *Receiver side*: nc -l -p $\text{[port] > [file]}$
+![[Pasted image 20240313133523.png|center|500]]
+## Wireshark
+Gli sniffer di rete come wireshark sono molto utili per:
+- Capire un protocollo
+- Fare il debug di un client di rete
+- Analizzare il traffico nella tua rete
+![[Pasted image 20240313133833.png|center|500]]
+
