@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       },
       {
         "id": "281194aa5153c350",
@@ -185,8 +185,11 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "d07a5a74edb322eb",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313150322.png",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
@@ -219,7 +222,7 @@
     "README.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 -.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni",
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
@@ -229,9 +232,6 @@
     "Terzo Anno/Programmazione Web/Coding/es01",
     "Terzo Anno/Programmazione Web/Coding/img1/es01",
     "Terzo Anno/Programmazione Web/Coding/img1",
-    "Terzo Anno/Programmazione Web/Coding/page1.html",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 -.md"
+    "Terzo Anno/Programmazione Web/Coding/page1.html"
   ]
 }
