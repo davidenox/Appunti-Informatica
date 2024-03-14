@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "33d32ffd08ab7375",
+        "id": "2ea2b0d156116a50",
         "type": "tabs",
         "children": [
           {
-            "id": "c71235aafcd6441d",
+            "id": "8dec853a72f365cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md"
               }
             }
           },
@@ -154,21 +154,7 @@
             }
           }
         ],
-        "currentTab": 4
-      },
-      {
-        "id": "68a2d0baf5c6a8d6",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d07a5a74edb322eb",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          }
-        ]
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -185,19 +171,28 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "c71235aafcd6441d",
+  "active": "8dec853a72f365cf",
   "lastOpenFiles": [
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
+    "Pasted image 20240314151226.png",
+    "Pasted image 20240314143753.png",
+    "Pasted image 20240314143429.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
     "Terzo Anno/Programmazione Web/Coding/parco/anio.jpg",
     "Terzo Anno/Programmazione Web/Coding/parco/claudio.jpg",
     "Terzo Anno/Programmazione Web/Coding/parco/marcio.jpg",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/amarcio.html",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313162141.png",
     "_temp/Appunti SOR/MOD I/Lezione 1 - Introduzione sui sistemi operativi.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313150322.png",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
@@ -215,17 +210,8 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 - macchine non deterministiche.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 2 - Macchina di Turing.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 1 - Intro e Princìpi.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133833.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133523.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133142.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133123.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133109.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133055.png",
-    "README.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni",
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
