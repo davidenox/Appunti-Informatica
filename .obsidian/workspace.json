@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       },
       {
         "id": "68a2d0baf5c6a8d6",
@@ -185,10 +185,16 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "c71235aafcd6441d",
   "lastOpenFiles": [
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313162141.png",
+    "Terzo Anno/Programmazione Web/Coding/parco/anio.jpg",
+    "Terzo Anno/Programmazione Web/Coding/parco/claudio.jpg",
+    "Terzo Anno/Programmazione Web/Coding/parco/marcio.jpg",
+    "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
+    "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",
+    "Terzo Anno/Programmazione Web/Coding/parco/amarcio.html",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS.md",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313162141.png",
     "_temp/Appunti SOR/MOD I/Lezione 1 - Introduzione sui sistemi operativi.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313150322.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
@@ -218,9 +224,6 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133123.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133109.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133055.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133038.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132903.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313132837.png",
     "README.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
@@ -229,9 +232,6 @@
     "Terzo Anno/Programmazione Web/Coding/es01/index.css",
     "Terzo Anno/Programmazione Web/Coding/es01/test.html",
     "Terzo Anno/Programmazione Web/Coding/es01/index.html",
-    "Terzo Anno/Programmazione Web/Coding/es01",
-    "Terzo Anno/Programmazione Web/Coding/img1/es01",
-    "Terzo Anno/Programmazione Web/Coding/img1",
-    "Terzo Anno/Programmazione Web/Coding/page1.html"
+    "Terzo Anno/Programmazione Web/Coding/es01"
   ]
 }
