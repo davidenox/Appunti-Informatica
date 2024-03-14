@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md"
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md"
               }
             }
           },
@@ -173,11 +173,11 @@
   },
   "active": "8dec853a72f365cf",
   "lastOpenFiles": [
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
-    "Pasted image 20240314151226.png",
-    "Pasted image 20240314143753.png",
-    "Pasted image 20240314143429.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240314151226.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240314143753.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240314143429.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
