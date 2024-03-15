@@ -162,17 +162,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:Apri selezione rapida": false,
       "canvas:Crea nuova lavagna": false,
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
-      "graph:Apri vista grafo": false
+      "graph:Apri vista grafo": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "8dec853a72f365cf",
   "lastOpenFiles": [
+    "Secondo Anno/Basi di Dati e Conoscenze/Progetto/Bozza.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240314151226.png",
@@ -180,7 +183,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240314143429.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
@@ -209,7 +211,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 7 - Modelli di calcolo.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 5 - La macchina di Turing Universale.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 3 - Modelli di macchine di Turing.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 4 - macchine non deterministiche.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133833.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240313133523.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
@@ -217,7 +218,6 @@
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
     "Terzo Anno/Programmazione Web/Coding/es01/index.css",
     "Terzo Anno/Programmazione Web/Coding/es01/test.html",
-    "Terzo Anno/Programmazione Web/Coding/es01/index.html",
-    "Terzo Anno/Programmazione Web/Coding/es01"
+    "Terzo Anno/Programmazione Web/Coding/es01/index.html"
   ]
 }
