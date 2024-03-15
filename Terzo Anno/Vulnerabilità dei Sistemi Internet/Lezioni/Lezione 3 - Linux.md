@@ -55,18 +55,19 @@ La shell utilizza le variabili d'ambiente:
 > - Gli argomenti della linea di comando sono stringhe che seguono il nome del programma, separato da spazi
 > - Può essere anche utilizzato per stampare variabili d'ambiente
 > 	- `echo $PATH`
-> 
 
+>[!important]- Il programma `pwd`
+>- Stampa la cartella di lavoro corrente
+>- Si cambia directory con `cd`
+>- Si ottiene una lista dei file/cartelle dentro una directory con `ls`
 
-The program echo
-◦ prints back whatever it finds as command line argument
-◦ Command line arguments are strings following the program name, separated by spaces
-◦ can also be used to print env vars
-◦ echo $PATH
-Why does “echo $PATH” works? Where is the executable file “echo”?
-The program pwd
-◦ prints the current working directory
-◦ How to change directory? use cd
-◦ How to list files/directories inside a directory? Use ls
-◦ play with ls arguments
-◦ Notice that “.” and “..” folders inside every folder?
+>[!important]- Il programma `cat`
+>`cat file.txt`
+>Stampa il contenuto di un file
+
+>[!info]- Editor CLI
+>- nano
+>- vim
+>- ...
+
+slide 13
