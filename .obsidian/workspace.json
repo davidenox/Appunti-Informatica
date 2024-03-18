@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 355.000732421875
+    "width": 200
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -171,13 +171,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "8dec853a72f365cf",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240318110845.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240318110801.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240318110702.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240318110601.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
     "Terzo Anno/Programmazione Web/Coding/Pasted image 20240315233613.png",
     "Terzo Anno/Programmazione Web/Coding/Pasted image 20240315233334.png",
     "Terzo Anno/Programmazione Web/Coding/Pasted image 20240315232541.png",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto/Bozza.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
@@ -187,17 +192,11 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
-    "Terzo Anno/Programmazione Web/Coding/parco/anio.jpg",
-    "Terzo Anno/Programmazione Web/Coding/parco/claudio.jpg",
-    "Terzo Anno/Programmazione Web/Coding/parco/marcio.jpg",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/amarcio.html",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313162141.png",
     "_temp/Appunti SOR/MOD I/Lezione 1 - Introduzione sui sistemi operativi.md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240313150322.png",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",

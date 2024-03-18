@@ -135,3 +135,132 @@ h1, h2, p{
 	1. Il fratello immediatamente successivo.
 4. Selettori per **general siblings** ($\sim$).
 	1. Tutti i fratelli successivi.
+# Pseudo Classi
+Una Pseudo-classe viene utilizzata per definire uno stato speciale di un documento:
+- Mouse over
+- Visited e Unvisited Link
+- Focus
+```CSS
+Selector:pseudo-class{
+	property:value;
+}
+/* visited link */
+a:visited{
+	color: #00FF00;
+}
+/* mouse over link */
+a:hover{
+	color: #FF00FF;
+}
+```
+## Altre pseudo-classi
+```CSS
+:root
+:only-child
+:empty
+:first-of-type
+:first-child
+:last-of-type
+:last-child
+:only-of-type
+:nth-child()
+:nth-last-child()
+:nth-of-type()
+:nth-last-of-type
+```
+## Pseudo elementi
+Uno pseudo-elemento viene visualizzato per dare uno stile alle parti specifiche di un elemento:
+- Disegna la prima lettera o riga di un elemento
+- Inserisce un contenuto prima o dopo un elemento
+>Selettori:
+
+```CSS
+::after
+::before
+::first-letter
+::first-line
+::selection
+```
+# Selettori con attributi
+È possibile impostare lo stile di elementi HTML con attributi o valori di attributo specifici:
+
+```CSS
+[attribute]{
+	property: value;
+}
+[attribute=value]{
+	property: value;
+}
+```
+
+# Ereditarietà
+Alcune proprietà sono ereditate dai *discendenti*:
+- La dichiarazione `color` viene messa nello span;
+- Le altre no.
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			p {
+				color: white;
+				background: grey;
+				border: medium solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> This is a Heading </h1>
+		<p>This is a paragraph <span>with a span.</span></p>
+	</body>
+</html>
+```
+
+![[Pasted image 20240318110601.png|center|500]]
+## DOM - Albero degli elementi
+![[Pasted image 20240318110702.png|center|500]]
+## Dichiarazioni ereditate
+Gli stili relativi ai font sono ereditati dai descendant:
+![[Pasted image 20240318110801.png|center|500]]
+### Proprietà ereditate
+- azimuth
+- border-collapse
+- border-spacing
+- caption-side
+- color
+- cursor
+- direction
+- elevation
+- empty-cells
+- font-family
+- font-size
+- font-style
+- font-variant
+- font-weight
+- font
+- letter-spacing
+- line-height
+- list-style-image
+- list-style-position
+- list-style-type
+- list-style
+- orphans
+- pitch-range
+- pitch
+- quotes
+- stress
+- text-align
+- text-indent
+- text-transform
+- visibility
+- voice-family
+- white-space
+- widows
+- word-spacing
+# Cascade
+Il Cascade "*cascata*" è un algoritmo che definisce come combinare valori di proprietà provenienti da fonti diverse.
+>**Stili**:
+>- *Browser*: user-agent stylesheet
+>- *Author*: quello che scriviamo noi
+>- *Reader*: L'utente del browser, potrebbe avere uno stylesheet modificato per sua esperienza
+
