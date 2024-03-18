@@ -6,6 +6,7 @@ Appunti di:
 1° anno:
 
 	- Geometria ed Algebra (GA)
+	- Architettura dei Sistemi di Elaborazione (ASE)
 	- Logica e Reti Logiche (LRL)
 	- Programmazione dei Calcolatori con Laboratorio (PR)
 2° anno:
@@ -20,6 +21,8 @@ Appunti di:
 3° anno:
 
 	- Calcolo Numerico (CN)
+	- Programmazione Web (PW)(A scelta, Ing. di Internet)
+	- Vulnerabilità e Difesa dei Sistemi Internet (VDSI)(A scelta, Ing. di Internet)
  
  Gli appunti degli insegnamenti non presenti non sono ancora stati scritti. 
  :)
