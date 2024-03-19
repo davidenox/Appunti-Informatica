@@ -69,6 +69,5 @@ Del contorno di un elemento si può specificare:
 >*Default*: `none`
 >*Applies to*: all elements
 >*Inherits*: no
-
 ### Dimensione del border
-Slide 10
+10-37 tranne 34-35-36
