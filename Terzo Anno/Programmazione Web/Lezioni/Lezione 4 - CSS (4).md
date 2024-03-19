@@ -60,4 +60,65 @@ I valori per colore si esprimono in:
 Si tratta di una combinazione di RGB + canale alfa, che controlla il livello di trasparenza:
 ![[Pasted image 20240318115426.png|center|500]]
 # Testo
-work in progress
+## text-align
+Si tratta di *allineamento orizzontale*, i cui valori sono : 
+- `left`
+- `right`
+- `center`
+- `justify`
+![[Pasted image 20240319143715.png|center|500]]
+## text-decoration
+Si tratta di *decorazioni del testo*. Hanno i valori:
+- `none`
+- `underline`
+- `overline`
+- `line-through`
+- `blink`
+ES:
+```CSS
+a {
+	text-decoration: none;
+}
+```
+## text-transform
+Cambia le maiuscole e minuscole:
+- `none`
+- `capitalize`
+- `lowercase`
+- `uppercase`
+## text-indent
+*Indentazione del primo rigo*:
+- `lenght measurement`
+- `percentage`
+ES:
+```CSS
+p#1 {
+	text-indent: 2em;
+}
+
+p#2 {
+	text-indent: 25%;
+}
+
+p#3 {
+	text-indent: -35px;
+}
+```
+## text-shadow
+Mostra *ombra sul testo*:
+- `horizontal offset`
+- `vertical offset`
+- `blur radius`
+- `color`
+## letter-spacing e word-spacing
+- `lenght measurement`/`normal`
+ES:
+```CSS
+p {
+	letter-spacing: 8px;
+}
+
+p {
+	word-spacing: 1.5em;
+}
+```
