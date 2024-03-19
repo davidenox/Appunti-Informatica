@@ -57,3 +57,18 @@ Del contorno di un elemento si può specificare:
 - `border-style`
 - `border-width`
 - `border-color`
+### Stili del border
+>`border-top-style`, `border-right-style`, `border-bottom-style`, `border-left-style`
+>*Values*: `none`  | `dotted` | `dashed` | `solid` | `double` | `groove` | `ridge` | `inset` | `outset` | `inherit`
+>*Default*: `none`
+>*Applies to*: all elements 
+>*Inherits*: no
+![[Pasted image 20240319155023.png|center|500]]
+>`border-style`
+>*Values*: `none` | `dotted` | `dashed` | `solid` | `double` | `groove` | `ridge` | `inset` | `outset` | `inherit` 
+>*Default*: `none`
+>*Applies to*: all elements
+>*Inherits*: no
+
+### Dimensione del border
+Slide 10
