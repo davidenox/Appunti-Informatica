@@ -69,5 +69,71 @@ Del contorno di un elemento si può specificare:
 >*Default*: `none`
 >*Applies to*: all elements
 >*Inherits*: no
-### Dimensione del border
-10-37 tranne 34-35-36
+
+----
+## Overflow
+>`overflow`
+>*Values*: `visible` | `hidden` | `scroll` | `auto` | `inherit` 
+>*Default*: `visible`
+>*Applies to*: Block-level elements and replaced inline elements
+>*Inherits*: no
+
+# Gestione del Background
+- `background-color`
+	- `opacity`
+- Immagini nel background:
+	- `background-image`
+	- `background-repeat`
+	- `background-position`
+	- `background-attachment`
+## Colore del background
+>`background-color`
+>*Values*: Color value | `transparent` | `inherit` 
+>*Default*: `transparent`
+>*Applies to*: all elements
+>*Inherits*: no
+## Opacità
+>`opacity`
+>*Values*: Numbers (`0` to `1`) 
+>*Default*: `1`
+>*Applies to*: all elements
+>*Inherits*: no
+![[Pasted image 20240320100735.png|center|500]]
+
+```CSS
+h1 {
+	color: green; background: white; opacity: .25;
+}
+
+h1 {
+	color: green; background: white; opacity: .5;
+}
+
+h1 {
+	color: green; background: white; opacity: 1;
+}
+```
+
+## Immagini per il bg
+>`background-image`
+>*Values*: url | `none` | `inherit` 
+>*Default*: `none`
+>*Applies to*: all elements
+>*Inherits*: no
+
+### Gestione dello scroll
+>`background-attachment`
+>*Values*: `scroll` | `fixed` | `local` | `inherit` 
+>*Default*: `scroll`
+>*Applies to*: all elements
+>*Inherits*: no
+
+### Proprietà background
+>`background`
+>*Values*: `background-color` | `background-image` | `background-repeat` | `background-attachment` | `background-position` | `inherit` 
+>*Default*: individual properties
+>*Applies to*: all elements
+>*Inherits*: no
+
+# Display
+	prossima lezione
