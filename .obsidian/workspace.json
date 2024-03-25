@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7a15b770fe3fa7de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Architettura.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura degli elaboratori.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Architettura.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura degli elaboratori.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Architettura.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura degli elaboratori.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Architettura.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura degli elaboratori.md"
               }
             }
           },
@@ -184,8 +171,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "8dec853a72f365cf",
   "lastOpenFiles": [
+    "Architettura.md",
     "_temp/AE/img/img99.png",
     "_temp/AE/img/img98.png",
     "_temp/AE/img/img97.png",
@@ -196,14 +184,12 @@
     "_temp/AE/img/img92.png",
     "_temp/AE/img/img91.png",
     "_temp/AE/img/img90.png",
-    "_temp/AE/img/img9.png",
     "_temp/AE/img",
     "_temp/AE/Punti focus.md",
-    "_temp/AE/Architettura degli elaboratori.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura degli elaboratori.md",
     "_temp/AE/ARM.md",
     "_temp/AE",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
-    "Architettura.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
