@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7a15b770fe3fa7de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Architettura.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -93,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
+                "file": "Architettura.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
+                "file": "Architettura.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md"
+                "file": "Architettura.md"
               }
             }
           },
@@ -171,14 +185,22 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "7a15b770fe3fa7de",
   "lastOpenFiles": [
+    "Pasted image 20240325154048.png",
+    "Pasted image 20240325154020.png",
+    "Pasted image 20240325153927.png",
+    "Pasted image 20240325153852.png",
+    "img1.png",
+    "img0.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
+    "Architettura.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325120012.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325115739.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325114849.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325110618.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325100801.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325095443.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 8 - Memory Abstraction.md",
@@ -186,20 +208,13 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240321142952.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240321142511.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240320100735.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240319155048.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240319155023.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
     "README.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto/Bozza.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
@@ -212,7 +227,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 - Classi di complemento.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 - Riducibilità polinomiale.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 13 - Specifiche classi di complessità.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni",
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
