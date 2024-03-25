@@ -142,3 +142,93 @@ Recon NG è un framework di ricognizione web completo
 - utilizzare `recon/domains-hosts/hackertarget`
 - utilizza `recon/domains-hosts/google_site_web`
 # Host discovery
+Durante questa fase stiamo attivamente mappando l'infrastruttura di rete.
+- Enumerazione attiva e/o scansione delle vulnerabilità dei servizi aperti;
+- Ricerca attiva di directory, file e server non pubblicati.
+## DNS
+Su ARPANet, i nomi host venivano mappati sugli indirizzi IP in un file "hosts" memorizzato su un singolo server:
+- Altre macchine scaricavano periodicamente copie di host.txt
+- Unix memorizzava queste informazioni in /etc/hosts
+- Questa tecnica non si adattava bene... Il DNS è iniziato nel 1983
+1. Stoccaggio distribuito
+	- Dati DNS suddivisi su più server
+	- Requisiti di archiviazione ridotti per ciascun server
+	- Trasferimento più rapido delle informazioni
+	- Nessun singolo punto di errore
+1. Organizzazione gerarchica dei dati
+	- Consente il controllo locale dei nomi ed evita conflitti di nomi
+![[Pasted image 20240325115739.png|center|500]]
+## Zone DNS
+I dati per un dominio e tutti o alcuni dei suoi sottodomini sono chiamati zona.
+Tutto uniroma2 potrebbe essere una zona, contenente:
+- dns.uniroma2.it
+- www. uniroma2.it
+- mail.uniroma2.it
+Uniroma2 potrebbe avere nameserver separati su ciascun dipartimento, ciascuno responsabile del proprio sottodominio.
+Il dominio principale delegherebbe la responsabilità di un sottodominio a ciascun dipartimento, creando molte zone.
+Gli URL sarebbero più lunghi
+- www.eln.uniroma2.it
+- ftp.netgroup.uniroma2.it
+![[Pasted image 20240325120012.png|center|500]]
+## DNS Clients, Servers, and Resolvers
+*Client* DNS
+- Un programma come un browser Web che utilizza un nome di dominio come www.uniroma2.it
+*Server* DNS
+- Memorizza e serve dati DNS
+*Risolutore* DNS
+- Software che accetta una query da un client, interroga uno o più server DNS e risponde al client
+### DNS Query
+**Interrogazione ricorsiva**:
+- Il server troverà la risposta, anche se deve interrogare altri server per ottenerla
+- Il server non risponderà con un rinvio a un altro server
+**Interrogazione iterativa**:
+- Se il server non ha la risposta, invierà un riferimento a un altro server DNS
+- Il richiedente deve inviare un'altra query per cercare la risposta
+### `dig` per le informazioni DNS
+Il groper delle informazioni sul dominio, o dig, è un comando integrato in ogni distribuzione di Linux e UNIX.
+- È progettato per essere in grado di acquisire e visualizzare le informazioni DNS della chiave utente.
+- Apriamo un terminale e iniziamo a scavare!
+- scava il nome host
+```Shell
+dig nome host nome record
+dig @dns-server nome host nome-record
+dig @dns-server hostname any
+```
+###  Bruteforce
+Possiamo automatizzare la ricerca DNS di nomi host comuni:
+- Bash esegue lo script della ricerca
+- Indovina nomi validi di server tentando di risolvere un determinato nome
+- Se il nome che hai indovinato viene risolto, i risultati potrebbero indicare la presenza e persino la funzionalità del server
+
+```Shell
+echo www > list.txt
+echo ftp >> list.txt
+echo posta >> list.txt
+echo proxy >> list.txt
+echo router >> list.txt
+for ip in $(cat list.txt); do host $ip.megacorpone.com; done
+```
+
+## DNS Zone Transfer
+Il DNS Zone Transfer è il processo in cui un server DNS passa una copia di parte del suo database (una zona) a un altro server DNS.
+- È come puoi avere più di un server DNS in grado di rispondere a domande su una zona particolare
+- Sono presenti un server DNS master e server DNS slave
+- lo schiavo chiede al padrone una copia dei registri per quella zona.
+Un attacco di trasferimento di zona DNS di base
+- Fai finta di essere uno schiavo, chiedi al padrone una copia dei registri della zona e lui te li invia.
+- Può rivelare molte informazioni topologiche sulla tua rete interna
+- In particolare, se qualcuno intende sovvertire il vostro DNS, ad esempio avvelenandolo o spoofing, troverà molto utile avere una copia dei dati reali.
+Quindi la pratica migliore è limitare i trasferimenti di zona
+- Dici al master quali sono gli indirizzi IP degli slave e non trasferirli a nessun altro.
+
+Gestire il layout della rete aziendale su un piatto d'argento:
+- Tutti i nomi, gli indirizzi e le funzionalità dei server possono essere esposti
+- Potrebbe risultare in una mappa completa della struttura della rete interna ed esterna.
+- Un trasferimento di zona riuscito non comporta direttamente una violazione della rete
+`host -t ns megacorpone.com | tagliare -d " " -f 4`
+- Oppure usando dig...:
+```Shell
+host -l megacorpone.com ns1.megacorpone.com
+host -l megacorpone.com ns2.megacorpone.com
+host -l megacorpone.com ns3.megacorpone.com
+```
