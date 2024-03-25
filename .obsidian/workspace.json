@@ -90,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -185,22 +184,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7a15b770fe3fa7de",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Pasted image 20240325154048.png",
-    "Pasted image 20240325154020.png",
-    "Pasted image 20240325153927.png",
-    "Pasted image 20240325153852.png",
-    "img1.png",
-    "img0.png",
+    "_temp/AE/img/img99.png",
+    "_temp/AE/img/img98.png",
+    "_temp/AE/img/img97.png",
+    "_temp/AE/img/img96.png",
+    "_temp/AE/img/img95.png",
+    "_temp/AE/img/img94.png",
+    "_temp/AE/img/img93.png",
+    "_temp/AE/img/img92.png",
+    "_temp/AE/img/img91.png",
+    "_temp/AE/img/img90.png",
+    "_temp/AE/img/img9.png",
+    "_temp/AE/img",
+    "_temp/AE/Punti focus.md",
+    "_temp/AE/Architettura degli elaboratori.md",
+    "_temp/AE/ARM.md",
+    "_temp/AE",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Architettura.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325120012.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325115739.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325114849.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325110618.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240325100801.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 8 - Memory Abstraction.md",
@@ -224,14 +228,9 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 15 - Classi di complemento.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 14 - Riducibilità polinomiale.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni",
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
-    "Terzo Anno/Programmazione Web/Coding/es01/index.css",
-    "Terzo Anno/Programmazione Web/Coding/es01/test.html",
-    "Terzo Anno/Programmazione Web/Coding/es01/index.html"
+    "Terzo Anno/Programmazione Web/Coding/es01/index.css"
   ]
 }
