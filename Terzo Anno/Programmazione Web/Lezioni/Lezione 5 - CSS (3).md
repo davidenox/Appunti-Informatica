@@ -136,4 +136,28 @@ h1 {
 >*Inherits*: no
 
 # Display
-	prossima lezione
+>`display`
+>*Values*: `inline` | `block` | `list-item` | `inline-block` | `table` | `inline-table` | `table-row-group` | `table-header-group` | `table-footer-group` | `table-row` | `table-column-group` | `table-column` | `table-cell` | `table-caption` | `none` | `run-in` | `compact` | `ruby` | `ruby-base` | `ruby-text` | `ruby-base-container` | `ruby-text-container` 
+>*Default*: `inline`
+>*Applies to*: all elements
+>*Inherits*: yes
+# Liste
+## Stili per liste
+
+- `list-style-type`
+- `list-style-position`
+- `list-style-image`
+# Stile dei link
+## Selettori per link
+Specifici dei link:
+```CSS
+:link - link non visitati
+:visited - link già visitati dall'utente
+```
+Legati ad azioni dell'utente:
+```CSS
+:focus - l'elemento è selezionato
+:hover - il mouse è sopra l'elemento / deve essere dichiarato dopo link e visited
+:active - nel momento del click / deve essere dichiarato dopo :hover
+```
+
