@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md"
               }
             }
           },
@@ -173,6 +173,9 @@
   },
   "active": "8dec853a72f365cf",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Architettura.md",
     "_temp/AE/img/img99.png",
     "_temp/AE/img/img98.png",
@@ -186,7 +189,6 @@
     "_temp/AE/img/img90.png",
     "_temp/AE/img",
     "_temp/AE/Punti focus.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "_temp/AE/ARM.md",
     "_temp/AE",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
@@ -198,7 +200,6 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
     "README.md",
