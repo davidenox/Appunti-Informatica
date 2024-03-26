@@ -83,7 +83,7 @@ ADCS R0, R0, R0 ; RLX R0
 L'architettura ARM prevede la seguente organizzazione:
 - 16 registri denominati R0 - R15:
 	- R0 - R12 registri di uso generale utilizzabili dal programmatore per realizzare applicazioni
-	- R13 è lo [[Architettura degli elaboratori#Lo stack|stack pointer]] (SP)
+	- R13 è lo [[Architettura dei calcolatori#Lo stack|stack pointer]] (SP)
 	- R14  è il subroutine link register (LR), registro utilizzato per ripristinare il PC alla istruzione successiva alla chamata ad una subroutine, quando quest'ultima ha terminato la sua esecuzione
 	- R15 è il Program Counter (PC) e conserva l'indirizzo di memoria della successiva istruzione da eseguire
 - Un registro di stato denominato Current Program Status Register (CPSR) 
