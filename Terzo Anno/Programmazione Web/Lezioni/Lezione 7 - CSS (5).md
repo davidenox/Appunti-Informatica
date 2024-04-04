@@ -48,3 +48,35 @@
 ![[Pasted image 20240402124520.png|center|300]]
 
 > ILLUSTRAZIONI TECNICHE
+
+# Media query
+Definiscono degli stili per determinati media e device
+```CSS
+@media not|only mediatype and (media feature) {
+	CSS-Code;
+}
+```
+```HTML
+<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
+```
+## Media type
+> `all`, `print`, `screen`, `speech`
+
+```CSS
+@media screen {
+	p{
+		font-family: verdana, sans-serif;
+		font-size: 17px;
+	}
+}
+
+@media print {
+	p {
+		font-family: georgia, serif;
+		font-size: 14px;
+		color: blue;
+	}
+}
+```
+## Media Features
+![[Pasted image 20240404151508.png|center|500]]

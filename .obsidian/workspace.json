@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e07539474ea49813",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md"
               }
             }
           },
@@ -173,19 +186,23 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404153349.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404153316.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404153238.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404153149.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404153111.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404153037.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404152735.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404152704.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404152509.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404152414.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240404152129.png",
+    "Senza nome.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240402124520.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240402124320.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240402124258.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240402123952.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240402123653.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240402123603.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
     "README.md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240327100906.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240327100838.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240327100727.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240327100622.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Architettura.md",
@@ -194,7 +211,6 @@
     "_temp/AE/ARM.md",
     "_temp/AE",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 8 - Memory Abstraction.md",
@@ -212,8 +228,6 @@
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/amarcio.html",
-    "_temp/Appunti SOR/MOD I/Lezione 1 - Introduzione sui sistemi operativi.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 19 - Caratterizzazione di NP.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni",
     "Terzo Anno/Programmazione Web/Coding/es01/style.css",
