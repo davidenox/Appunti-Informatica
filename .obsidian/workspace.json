@@ -11,11 +11,9 @@
             "id": "17e71aea2de23168",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
-                "mode": "source",
-                "source": false
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405114955.png"
               }
             }
           }
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405114955.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405114955.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md"
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405114955.png"
               }
             }
           },
@@ -154,7 +152,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -173,19 +171,19 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405114955.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405115107.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405114842.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405113404.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240405113343.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404161931.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404161922.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404161912.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404161903.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404161853.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404161841.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404161820.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404160914.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404160741.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404160719.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240404160154.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
@@ -203,7 +201,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 8 - Memory Abstraction.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",

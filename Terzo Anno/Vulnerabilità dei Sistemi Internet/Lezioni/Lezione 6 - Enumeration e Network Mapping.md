@@ -48,4 +48,41 @@ La scansione di una rete può essere eseguita dall'amministratore di rete per:
 ![[Pasted image 20240404161922.png|center|500]]
 ![[Pasted image 20240404161931.png|center|500]]
 ## TCP SYN Scan
-work in progress
+Fa affidamento al meccanismo di stretta di mano a tre del TCP:
+- Due host che stanno per comunicare possono negoziare i parametri della connessione socket TCP di rete prima di trasmettere dati.
+- Tentano di completare il legame con l'host target sulla/e porta/e specifica/he.
+- Se il legame è completato allora la porta è aperta.
+`nc -n -vv -w 1 -z <ip address> <port range>`
+![[Pasted image 20240405113343.png|center|600]]
+![[Pasted image 20240405113404.png|center|600]]
+## UDP Scan
+Il meccanismo dietro lo scan delle porte UDP è diverso:
+- UDP non utilizza la stretta di mano a tre;
+- UDP è senza stati;
+- Utilizza *wireshark* mentre UDP scansiona una macchina con *netcat* per capire come funziona la scansione delle porte UDP.
+`nc -nv -u -z -w 1 <ip target> <port range>`
+Un pacchetto UDP vuoto viene mandato ad una porta specifica:
+- Se la porta UDP è aperta, non viene mandato un segnale di riposta dal target;
+- Se la porta UDP è chiusa, dovrebbe essere inviato un pacchetto inarrivabile da una porta ICMP  dalla macchina target.
+# Nmap
+`nmap` è uno dei port scanner più popolare, versatile e robust0. È stato sviluppato attivamente per una decade ed ha una larga varietà di strumenti per il port scanning.
+Una scansione `nmap` TCP scansionerà le 1000 porte più usate sulla macchina target.
+`nmap <scantype> <options> <ip address>`
+Abbiamo 3 stati differenti:
+- Open
+- Filtered
+- Close
+![[Pasted image 20240405114842.png|center|500]]
+### Scansione di un range specifico di porte
+`nmap <ip address> -p25-150`
+![[Pasted image 20240405114955.png|center|500]]
+### Scansione di una subnet
+`nmap <network address>/24 -p80`
+![[Pasted image 20240405115107.png|center|500]]
+### Spoofing e scansione dell'esca
+Spesso vogliamo nascondere il nostr0 IP ( o identità ):
+- Ogni pacchetto deve contenere il nostro codice sorgente altrimenti la risposta dalla macchina target non saprà dove rispondere.
+- Possiamo *beffare* il nostro indirizzo IP (`-S`) per qualsiasi richiesta ed ogni risposta verrà inviata ad un IP falso.
+- Possiamo *offuscare* (`-D`) il nostro indirizzo IP tra altri indirizzi IP.
+`nmap <ip address> -D <fake ip list>`
+### Evasione Firewall
