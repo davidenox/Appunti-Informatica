@@ -86,3 +86,59 @@ Spesso vogliamo nascondere il nostr0 IP ( o identità ):
 - Possiamo *offuscare* (`-D`) il nostro indirizzo IP tra altri indirizzi IP.
 `nmap <ip address> -D <fake ip list>`
 ### Evasione Firewall
+Nmap, in maniera predefinita, invia un `ping` per vedere se l'host del target è up.
+- Diversi firewall e router bloccano o rigettano il ping ICMP;
+- Possiamo impedire a nmap di inviare questo "ping di prova" per raggirare eventuali blocchi;
+- Possiamo farlo con lo switch `P0`:
+`nmap -P0 <ip address>`
+![[Pasted image 20240408111029.png|center|500]]
+Quando nmap esegue una scansione delle porte,
+- Recupera le informazioni della porta ( aperta/chiusa/filtrata ) e restituisce con il servizio *predefinito* che viene eseguito su quella porta.
+- Siccome si può eseguire un qualsiasi esercizio su una qualsiasi porta, potrebbe non essere un'informazione adeguata, poiché si vorrebbe sapere quale servizio si sta eseguendo su quella porta, e non quello di default.
+- Nmap ha un'opzione che interroga il servizio che viene eseguito su ogni porta scansionata, tramite l'operatore `-V`:
+`nmap -sV <ip address>`
+## TCP Connect Scan
+	-sT
+
+![[Pasted image 20240408111954.png|center|500]]
+### Svantaggi
+Lo svantaggio di questa scansione è quello di essere una scansione molto "rumorosa":
+- Controlla il log di connessione dell'applicazione;
+- Finchè la scansione TCP sta per completare una connessione TCP, i processi di normale applicazione seguono immediatamente;
+- Queste applicazioni incontrano immediatamente un pacchetto RST
+È consigliabile utilizzare lo scan TCP come ultima spiaggia
+## TCP SYN Scan 
+	-sS
+
+La scansione TCP SYN utilizza metodi comuni per l'identificazione delle porte, che da la possibilità ad nmap di ricavare informazioni sulle porte aperte prima che si completi il collegamento TCP. Quando viene identificata una porta aperta:
+- Il collegamento TCP viene resettato prima di essere completato;
+- Questa tecnica è spesso chiamata "scansione *mezza aperta*".
+![[Pasted image 20240408112724.png|center|500]]
+### Vantaggi
+La scansione TCP SYN non crea mai in realtà una sessione TCP, ed è una scansione molto più *silenziosa* del TCP Connect, con meno visibilità per il sistema di destinazione. Siccome la sessione TCP non viene mai iniziata, SYN è anche molto meno stressante per i servizi delle applicazioni.
+## Scansioni Stealth
+- FIN Scan (`-sF`);
+- Xmas Scan (`-sX`);
+- NULL Scan (`-sN`);
+
+Vengono chiamate scansioni "Stealth" perché inviano un singolo frame ad una porta TCP senza nessuna connessione TCP o pacchetti trasferiti in eccesso. Queste scansioni operano tramite la manipolazione dei bit del TCP Header per introdurre una risposta dalla stazione remota. 
+Ad eccezione della scansione SYN, `nmap` crea TCP Headers che combinano le opzioni di bit che non dovrebbero mai accadere nel mondo reale.
+Il protocollo TCP stabilisce che le stazioni riceventi informazioni (su una porta TCP chiusa dovrebbe inviare un frame RST) e una porta TCP disponibile non dovrebbe rispondere affatto. Durante una qualsiasi di queste scansioni invisibili, nmap classifica le risposte come chiuse o aperte|filtrate .
+È impossibile determinare se la risposta mancante è dovuta a una porta aperta o a una connessione di rete filtrata
+- non c'è modo di distinguere tra una porta aperta e un frame eliminato a livello amministrativo.
+A causa di questi pacchetti "*personalizzati*".
+- nmap richiede un accesso privilegiato per eseguire scansioni invisibili
+### FIN Scan
+![[Pasted image 20240408114035.png|center|500]]
+### Xmas Scan
+![[Pasted image 20240408114057.png|center|500]]
+### NULL Scan
+![[Pasted image 20240408114120.png|center|500]]
+## Version Detection
+	nmap -sV <ip address>
+
+![[Pasted image 20240408120231.png|center|500]]
+## Scan Timing
+![[Pasted image 20240408120335.png|center|500]]
+### Temporizzare la scansione
+![[Pasted image 20240408120407.png|center|500]]
