@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md"
               }
             }
           },
@@ -173,20 +173,21 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150442.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150154.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150133.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150058.png",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408121427.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408121319.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408120407.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408120335.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408120231.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408114120.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408114057.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408114035.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408112724.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408111954.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408111942.png",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
@@ -211,7 +212,6 @@
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto/Bozza.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/amarcio.html",
