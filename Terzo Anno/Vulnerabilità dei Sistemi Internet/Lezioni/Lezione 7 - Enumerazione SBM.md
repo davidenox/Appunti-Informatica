@@ -35,4 +35,34 @@ Gli script NSE definiscono un elenco di categorie:
 	- *Affidabilità*: Molti script utilizzano l'euristica e la corrispondenza fuzzy delle firme per raggiungere conclusioni sull'host o sul servizio di destinazione. Se lo script è spesso sbagliato, non appartiene alla categoria predefinita in cui potrebbe confondere o fuorviare gli utenti occasionali
 	- *Invadenza*: Alcuni script sono molto invasivi perché utilizzano risorse significative sul sistema remoto, rischiano di mandare in crash il sistema o il servizio o possono essere percepiti come un attacco dagli amministratori remoti. Più uno script è invadente, meno è adatto alla categoria predefinita
 	- *Privacy*: Alcuni script, in particolare quelli della categoria esterna descritta più avanti, divulgano informazioni a terzi per la loro stessa natura. Quanto più uno script è invasivo per la privacy, tanto meno è adatto per l'inclusione nella categoria predefinita
-(slide 22)
+# Telnet
+Telnet è un protocollo applicativo che consente, con l'uso di un client telnet, di connettersi ed eseguire comandi su un pc remoto che ospita un server telnet.
+Il client telnet stabilisce una connessione con il server. Il client diventa quindi un terminale virtuale che consente di interagire con l'host remoto. 
+`telnet [ip] [port]`
+Telnet invia tutti i messaggi in chiaro e non dispone di meccanismi di sicurezza specifici.
+# Enumerazione SMTP
+`smtp-user-enum` enumera gli utenti di un server mail usando `VRFY`, `EXPN` o `RCPT`.
+`smtp-user-enum [options] (-u username | -U file-of-usernames) (-t host | -T file-of-targets)`
+![[Pasted image 20240412162600.png|center|500]]
+## Wordlists
+Presenti di default in `/usr/share/wordlists`, contengono nomi comuni per utenti, password, enumerazione di directory...
+![[Pasted image 20240412162707.png|center|500]]
+# FTP
+Una tipica sessione FTP funziona utilizzando due canali:
+- Un canale di comando ( o di controllo);
+- Un canale dati.
+La separazione delle informazioni di comando e dei dati in canali separati è un modo per poter inviare comandi al server senza dover aspettare che il trasferimento di dati in corso finisca. Se i due canali fossero interconnessi, si potrebbero inserire i comandi solo tra un trasferimento di dati e l'altro, il che non sarebbe efficiente né per i trasferimenti di file di grandi dimensioni né per le connessioni internet lente.
+Porta di default: *21*
+## Login anonimo
+![[Pasted image 20240412163130.png|center|500]]
+# NFS
+Network File System consente di condividere directory e file con altri su una rete. Utilizzando NFS, gli utenti e i programmi possono accedere ai file dei sistemi remoti quasi come se vossero file locali. Questo avviene montando tutto o una parte di un filesystem su un server. 
+Alla porzione di filesystem montata possono accedere i client con privilegi assegnati a ciascun file.
+Comandi per interagire con NFS sotto il pacchetto `NFS-Common`:
+`lockd`,`statd`,`showmount`,`nfsstat`,`gssd`,`idmapd` e `mount.nfs`.
+![[Pasted image 20240412163602.png|center|500]]
+## Privilege Escalation
+Per impostazione predefinita, sulle condivisioni NFS è abilitato il *Root Squashing*, che impedisce a chiunque si connetta alla condivisione NFS di avere accesso root al volume NFS. Agli utenti root remoti, al momento della connessione, viene assegnato l'utente "`nfsnobody`", che ha i privilegi locali minimi. Se questa funzione è disattivata, può permettere a un utente remoto di accedere come root al sistema collegato.
+# Scansione delle vulnerabilità
+## Metasploitable
+La VM Metasploitable è una versione intenzionalmente vulnerabile di Ubuntu, disegnata per testare strumenti di sicurezza e dimostrare vulnerabilità comuni.

@@ -37,5 +37,8 @@ grid-template-rows: 100px 30px;
 }
 ```
 
-
 # Bootstrap
+Facile da utilizzare: 
+- Chiunque con una conoscenza base di HTML e CSS può utilizzarlo.
+## Griglia
+![[Pasted image 20240412154653.png|center|600]]
