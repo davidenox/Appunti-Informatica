@@ -1,4 +1,4 @@
-# Enumerazione SBM
+# Enumerazione SMB
 Il **Server Message Block**:
 - Fornisce accesso condiviso a file, stampanti e porte seriali;
 - Viene utilizzato a partire da Windows 95, Samba permette di utilizzarlo sui sistemi Unix;
