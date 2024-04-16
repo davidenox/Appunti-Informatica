@@ -8,18 +8,18 @@ Questo serve per evitare la programmazione a spaghetti (spaghetti code) che è u
 
 ## Diagrammi Nassi-Shneiderman
 I Diagrammi di Nassi-Shneiderman, anche detti **DNS**, sono strumenti semplici che si usano per scrivere algoritmi intrinsecamente strutturati e complessi.
-Si collegano al TH Bohm-Jacopini, associando infatti questo teorema al formalismo ideato da Isaac Nassi e Ben Shneiderman, si ottengono appunto i DNS.
-I concetti di sequenza, iterazione, selezione possono essere espressi, all’interno del diagramma, in blocchi che possono essere innestati e composti a piacere fino a giungere ad un qualsiasi livello di profondità.
+Si collegano al [[ARM#Teorema di Böhm - Jacopini|Th. Bohm-Jacopini]]: associando infatti questo teorema al formalismo ideato da Isaac Nassi e Ben Shneiderman, si ottengono appunto i DNS.
+I concetti di [[ARM#Sequenza|sequenza]], [[ARM#Selezione|selezione]] e [[ARM#Iterazione|iterazione]] possono essere espressi, all’interno del diagramma, in blocchi che possono essere innestati e composti a piacere fino a giungere ad un qualsiasi livello di profondità.
 
 ### Sequenza
 Si esprime il concetto che ogni procedimento risolutivo si può comporre attraverso un insieme finito di passaggi, o di blocchi, che verranno eseguiti nell’ordine dall’alto verso il basso, senza la possibilità di saltare la valutazione di un passaggio intermedio.
 
 ### Selezione
-È il concetto attraverso il quale il percorso del flusso di esecuzione può prendere differenti cammini a seconda della condizione espressa in testa al blocco.
+È il concetto attraverso il quale il percorso del flusso di esecuzione può prendere differenti cammini a seconda della condizione espressa in testa al *blocco*.
 Può essere:
-1. Singola: se la condizione è verificata, viene eseguito un blocco, altrimenti si esce e si prosegue il flusso di esecuzione (if-then o if-else)
-2. Binaria: se la condizione è verificata viene eseguito il blocco then, altrimenti il blocco else (if-then-else)
-3. Multipla: controlla il valore di una variabile all’interno di un intervallo di valori predefiniti. Quando la variabile corrisponde a uno dei valori della selezione, viene eseguito il blocco ad esso associato, altrimenti viene eseguito il blocco di default (switch)
+1. *Singola*: se la condizione è verificata, viene eseguito un blocco, altrimenti si esce e si prosegue il flusso di esecuzione (if-then o if-else)
+2. *Binaria*: se la condizione è verificata viene eseguito il blocco then, altrimenti il blocco else (if-then-else)
+3. *Multipla*: controlla il valore di una variabile all’interno di un intervallo di valori predefiniti. Quando la variabile corrisponde a uno dei valori della selezione, viene eseguito il blocco ad esso associato, altrimenti viene eseguito il blocco di default (switch)
 
 ### Iterazione
 Si esprime la possibilità di ripetere l’esecuzione di un blocco interno fino a quando non si verificherà la condizione di uscita, per questa ragione è di uso comune denominarlo anche “ciclo”. Esistono tre tipologie: for, while, do-while
@@ -194,23 +194,23 @@ $$
 ![[img72.png|center|500]]
 
 ###### Esempi di istruzioni artimetiche e logiche
-- **ADD R0, R1, R2**: carico in R0 la somma tra il contenuto del registro R1 ed R2 (indirizzamento a registro)
-- **ADD R0, R1, #16**: carico in R0 la somma tra il contenuto del registro R1 ed il numero decimale 16 (indirizzamento immediato)
-- **ADD R0, R1, # 0xF**: carico in R0 la somma tra il contenuto del registro R1 ed il numero esadecimale F (indirizzamento immediato)
-- **ADDLT R0, R1, R2**: carico in R0 la somma tra il contenuto del registro R1 e del registro R2, inoltre carico lo stato del risultato nei flags NZCV del registro di stato CPSR. Per esempio, se il risultato della somma va in overflow i flag C (carry) e V (overflow) verranno settati a 1
+- **`ADD R0, R1, R2`**: carico in R0 la somma tra il contenuto del registro R1 ed R2 (indirizzamento a registro)
+- **`ADD R0, R1, #16`**: carico in R0 la somma tra il contenuto del registro R1 ed il numero decimale 16 (indirizzamento immediato)
+- **`ADD R0, R1, # 0xF`**: carico in R0 la somma tra il contenuto del registro R1 ed il numero esadecimale F (indirizzamento immediato)
+- **`ADDLT R0, R1, R2`**: carico in R0 la somma tra il contenuto del registro R1 e del registro R2, inoltre carico lo stato del risultato nei flags NZCV del registro di stato CPSR. Per esempio, se il risultato della somma va in overflow i flag C (carry) e V (overflow) verranno settati a 1
 
 ###### Indirizzamento immediato
-Si hanno a disposizione solo 12 bit su 32 che costituiscono la word dell’istruzione, quindi si potrebbero rappresentare soltanto i numeri che vanno da 0…+4095 oppure da -2048…+2047. Questo limite non è accettabile perchè il processore ARM gestisce valori che hanno un campo di variazione da 0x00000000 a 0xFFFFFFFF
+Si hanno a disposizione solo 12 bit su 32 che costituiscono la word dell’istruzione, quindi si potrebbero rappresentare soltanto i numeri che vanno da 0…+4095 oppure da -2048…+2047. Questo limite non è accettabile perchè il processore ARM gestisce valori che hanno un campo di variazione da `0x00000000` a `0xFFFFFFFF`.
 Vengono memorizzati nei 12 bit due campi: posizione (4 bit) e valore (8 bit)
 
 Il numero descritto è ottenuto per traslazione, verso destra, dei bit del campo valore per un numero di posizioni pari al doppio del campo posizione
 
-Questo implica che si possono esprimere tutti i valori che hanno in binario bit 1 a distanza massima minore, o al più uguale, ad 8 che possano essere ottenuti per traslazione in pos pari.
+Questo implica che si possono esprimere tutti i valori che hanno in binario bit 1 a distanza massima minore, o al più uguale, ad 8 che possano essere ottenuti per traslazione in posizione pari.
 
-in generale:
+In generale:
 1.  convertire il valore in binario e verificare che il bit 1 più significativo e ultimo bit 1 meno significativo siano a distanza massimo di 8 (compressi il primo bit 1 più significativo e ultimo bit 1 meno significativo) 
 2.   verificare che il numero di zeri sia pari
-	- il codice binario anche se in riga vanno immaginati come scritti su un cerchio perciò anche se 0xA000000A sembra non indirizzabile perchè in binario è 10100000000000000000000000001010 e sembra non rispettare nessuno dei due punti in realtà **1010**000000000000000000000000**1010** le parti evidenziate sono come nelle mappe K vicine tra di loro
+	- il codice binario anche se in riga vanno immaginati come scritti su un cerchio perciò anche se `0xA000000A` sembra non indirizzabile perchè in binario è `10100000000000000000000000001010` e sembra non rispettare nessuno dei due punti in realtà **1010**`000000000000000000000000`**1010** le parti evidenziate sono come nelle mappe K vicine tra di loro
 
 ###### Indirizzamento con shift immediato e con shift a registro
 Se il bit 25 vale 0, nei bit 5 e 6 il tipo di shift da applicare tra quelli disponibili nel [[#Barrel shifter|barrel shifter]] (LSL, LSR, ASR, ROR, RRX) mentre il bit 4 specifica il tipo di indirizzamento.
