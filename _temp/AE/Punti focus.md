@@ -16,7 +16,7 @@ Interpretazione:
 
 # Livelli del computer
 
-![[AE/img/img1.png|center|300]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img1.png|center|300]]
 
 # CPU
 

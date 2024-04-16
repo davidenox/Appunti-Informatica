@@ -42,7 +42,7 @@ L'organizzazione interna di ARM prevede l'utilizzo di 3 registri:
 - RN: registro sorgente che contiene il primo operando (OP1) ed è utilizzato direttamente dalla ALU
 - RM: resgistro sorgente che contiene il secondo operando (OP2) ed è utilizzato dalla ALU dopo il passaggio nel **barrel shift** (circuito che può shiftare una word di un numero specifico di bit in un solo ciclo di clock)
 
-![[AE/img/img62.png|center|400]]
+![[img62.png|center|400]]
 ##### Barrel shifter
 Un barrel shifter è un circuito che esegue lo shift di una parola binaria di un numero specificato di bit in un solo ciclo di clock. Questo è possibile con una sequenza di multiplexer disposti in parallelo in cui le uscite di un livello sono collegate agli ingressi dei mux adiacenti nel livello successivo. 
 Nel barrel shifter si può definire la modalità di shift e il numero di bit da traslare.
@@ -50,29 +50,29 @@ Nel barrel shifter si può definire la modalità di shift e il numero di bit da 
 ###### Logical Shift Left (LSL) e *Logical Shift Right (LSR)*
 L’operazione **LSL** e **LSR** si applica a un registro sorgente e richiede un valore che determina il numero di volte in cui eseguire lo scorrimento a sinistra (*destra*) dei bit del registro. Ad ogni passaggio viene inserito il valore zero nel bit meno (*più*) significativo del registro (LSB - least significant bit/ *MSB - most significative bit*). Lo shift a sinistra (*destra*) coincide col moltiplicare (*dividere*) il valore del registro per la base. Se l'operazione viene ripetuta n volte, permette di moltiplicare (*dividere*) il valore del registro per $2^n$. L’ultimo bit più (*meno*) significativo che esce dal registro sorgente, ovvero il bit in posizione 32-n (*n-1*), finisce nel flag C del registro CPSR.
 
-![[AE/img/img63.png|center|300]]
-![[AE/img/img64.png|center|300]]
+![[img63.png|center|300]]
+![[img64.png|center|300]]
 
 
-![[AE/img/img65.png|center|300]]
-![[AE/img/img66.png|center|300]]
+![[img65.png|center|300]]
+![[img66.png|center|300]]
 
 ##### Arithmetic Shift Right (ASR)
 L’operazione ASR si applica a un registro sorgente e richiede un valore che determina il numero di volte in cui eseguire lo scorrimento a destra dei bit del registro. Ad ogni passaggio viene mantenuto il valore presente nel bit più significativo del registro (MSB most significant bit). L’operazione di shift a destra coincide col dividere per la base **preservando il segno del contenuto**. Se viene ripetuta n volte permette di dividere il valore del registro per $2^n$. L’ultimo bit meno significativo che esce dal registro sorgente ovvero il bit in posizione n-1 finisce nel flag C del registro CPSR
 
-![[AE/img/img67.png|center|300]]
-![[AE/img/img68.png|center|300]]
+![[img67.png|center|300]]
+![[img68.png|center|300]]
 
 ##### Rotate Right (ROR)
 L’operazione ROR si applica a un registro sorgente e richiede un valore che determina il numero di volte in cui eseguire lo scorrimento a destra dei bit del registro. Ad ogni passaggio il LSB finisce in posizione MSB senza che nessun bit si perda. L’ultimo bit meno significativo che esce dal registro sorgente per girare ovvero il bit in posizione n-1 finisce nel flag C del registro CPSR.
 
-![[AE/img/img69.png|center|300]]
-![[AE/img/img70.png|center|300]]
+![[img69.png|center|300]]
+![[img70.png|center|300]]
 
 ###### Rotate Right con estensione (RRX)
 L’operazione RRX funziona esattamente come la ROR ad eccezione del fatto che considera il flag C come estensione del registro sorgente. Ad ogni passaggio il LSB finisce nel flag C, il vecchio valore del flag C in posizione MSB e tutti gli altri si spostano verso destra senza che nessun bit venga perso.
 
-![[AE/img/img72.png|center|300]]
+![[img72.png|center|300]]
 
 ###### Rotate Left con estensone
 Nel barrel shifter non esiste una operazione analoga alla RRX che sia in grado di eseguire la rotazione di bit verso sinistra (rotate left with extend).
@@ -120,27 +120,27 @@ Questo registro tiene traccia dello stato del programma. Molto utili sono i 5 bi
 		- Undefined - si attiva quando si verifica un'eccezione dopo l’esecuzione di un'istruzione non supportata
 		- System - Mod privilegiata
 
-![[AE/img/img57.png|center|500]]
+![[img57.png|center|500]]
 
 #### Tabella delle condizioni aritmetico logiche
 
-![[AE/img/img58.png|center|600]]
+![[img58.png|center|600]]
 
 #### Esempio registro di stato 
 
-![[AE/img/img59.png|center|550]]
+![[img59.png|center|550]]
 
 L’istruzione **ADD** verrà eseguita solo se la condizione **GT** (maggiore stretto) sarà verificata. La condizione GT è identificata dal codice 1100 nella sezione del registro chiamata condition code.
 
 ---
 
-![[AE/img/img60.png|center|550]]
+![[img60.png|center|550]]
 
 In questo esempio la condizione **LE** (minore uguale) è verificata, in quanto nel registro di stato CPSR i flags N Z C V rispettano almeno una delle condizioni in tabella (Z = 1 OR N != V).
 
 #### Grado di parità di gestione delle eccezioni
 
-![[AE/img/img61.png|center|500]]
+![[img61.png|center|500]]
 
 
 ### Particolarità ARM
@@ -191,7 +191,7 @@ $$
 - $\text{< Rn >}$ è il registro sorgente nel quale è presente il valore del primo operando
 - $\text{OP}_2$ è il secondo operando, che può essere un valore immediato, un altro registro oppure il risultato di un operazione di shift su un valore o registro
 
-![[AE/img/img72.png|center|500]]
+![[img72.png|center|500]]
 
 ###### Esempi di istruzioni artimetiche e logiche
 - **ADD R0, R1, R2**: carico in R0 la somma tra il contenuto del registro R1 ed R2 (indirizzamento a registro)
@@ -333,7 +333,7 @@ $$
 \text{< MNEM >\{< PreCond >\}\{< S >\} < RdL >, < RdH >, < Rm >, < Rs > }
 $$
 Il suffisso S per la scrittura dei flag nel registro di stato è possibie per le istruzioni UMULL, UMLAL, SMULL, SMLAL.
-![[AE/img/img73.png|center|500]]
+![[img73.png|center|500]]
 
 ##### Istruzioni di trasferimento dati
 SI occupano di trasferire i valori tra i registri o nei registri
@@ -341,12 +341,12 @@ La codifica delle istruzioni di trasferimento ha la medesima forma di quelle di 
 $$
 \text{< MNEM >\{< PreCond >\}\{< S >\} <Rd>, < Rn >, OP}_2
 $$
-![[AE/img/img74.png|center|500]]
+![[img74.png|center|500]]
 
 ##### Istruzioni Single Istruction Multiple Data (SIMD)
 ARM ha introdotto delle istruzioni aritmetiche che agiscono sui registri considerandoli come dei contenitori di array definiti su word (32 bit) e halfword (16 bit). Una singola istruzione è in grado di operare contemporaneamente su più dati e quindi di eseguire, per esempio, la somma degli elementi di due array di 2 o 4 elementi.
 
-![[AE/img/img75.png|center|500]]
+![[img75.png|center|500]]
 
 La sintassi generica di una istruzione aritmetica SIMD è la seguente:
 $$
@@ -358,7 +358,7 @@ Il codice mnemonico $\text{< MNEM >}$ si ottiene unendo due elementi:
 
 La possibili conbinazioni di prefissi applicabili alle istruzioni SIMD sono:
 
-![[AE/img/img76.png|center|500]]
+![[img76.png|center|500]]
 
 Le istruzioni SIMD utilizzano i bit GE del CPSR come flag per i byte o le halfword dei risultati. Questo permette di utilizzarli per controllare l’esecuzione di una successiva istruzione. Per le istruzioni che operano su due halfword:
 -   I bit GE$[2 \div 3]$ sono impostati in base al risultato dell’halfword in posizione 1 (Most Significant Halfword).
@@ -367,19 +367,19 @@ Le istruzioni SIMD utilizzano i bit GE del CPSR come flag per i byte o le halfwo
 Per le istruzioni che operano su 4 byte, i bit GE$[\: i \:]$ sono impostati in base al risultato del byte in posizione $i$ con $i = [0,\: 1,\: 2,\: 3]$. Questi bit sono aggiornati se durante una operazione di addizione di numeri senza segno si raggiunge, o si supera, il massimo valore rappresentabile. La stessa cosa accade se durante un'operazione di sottrazione di numeri con segno il risultato è maggiore o uguale a 0.
 Le possibili tipologie di istruzioni SIMD sono:
 
-![[AE/img/img77.png|center|500]]
+![[img77.png|center|500]]
 
 Le istruzioni SIMD dell'architettura ARM che operano su array di 4 byte sono:
 
-![[AE/img/img78.png|center|500]]
+![[img78.png|center|500]]
 
 Interessante è l’istruzione USAD8 che esegue la somma dei valori assoluti delle differenze dei byte di due array, che presenta la stessa sintassi delle altre istruzioni SIMD. Esiste anche la variante del registro destinazione che permette di accumulare i risultati parziali (USADA8) in questo caso nella sintassi occorre aggiungere < Rn >.
 
-![[AE/img/img79.png|center|500]]
+![[img79.png|center|500]]
 
 Le istruzioni SIMD che operano su array di due halfword sono:
 
-![[AE/img/img80.png|center|500]]
+![[img80.png|center|500]]
 ##### Istruzioni di accesso ai registri di stato
 
 Le istruzioni per l’accesso ai registri di stato sono:
@@ -390,19 +390,19 @@ $$MSR\{<PreCond>\} \{CPSR|SPSR\}\{\_<ambiti>\}, <Rm>$$
 $$MSR\{<PreCond>\}\{CPSR|SPSR\}\{\_<ambiti>\}, \#<valore>$$
 Il campo $< ambiti >$ permette di specificare, attraverso una lista di caratteri in sequenza (c = controllo, x = estensione, s = stato, f = flag), quali sezioni del registro di stato devono essere sovrascritte con il contenuto del secondo operando.
 
-![[AE/img/img86.png|center|500]]
+![[img86.png|center|500]]
 
 
 Il bit 25 rappresenta il tipo di operando(0 = registro, 1 = valore immediato), il bit 22 specifica il tipo di registro di stato(0 = CPSR o 1 = SPSR), il campo field_mask, è costituito da 4 bit, responsabile del mascheramento dei diversi ambiti dei registri di stato.
 
 La sintassi dell’istruzione MSR permette di inserire nel campo ambito una sequenza di letterali, che corrisponde ai diversi ambiti da mascherare:
 
-![[AE/img/img87.png|center|500]]
+![[img87.png|center|500]]
 
 Per esempio è divenuta obsoleta la lettura del bit E con un'istruzione MRS.
 I bit di stato di esecuzione nel CPSR, diversi dal bit E, possono essere letti soltanto quando il processore è nello stato di debug. è stato anche introdotto un registro chiamato APSR (Application Program Status Register) che contiene i flag di stato dell’ALU e che andrebbe utilizzato per accedere modalità Utente ai flag delle condizioni.
 
-![[AE/img/img88.png|center|500]]
+![[img88.png|center|500]]
 
 
 #### Istruzioni di branch
@@ -437,15 +437,15 @@ L’istruzione STR (Store Register) esegue esattamente l’operazione inversa di
 ##### Esempio di istruzioni load/store
 - LDR R0, $[$ R1, #2 $]$ Carico in R0 la parola in memoria puntata dal registro R1
 
-![[AE/img/img81.png|center|500]]
+![[img81.png|center|500]]
 
 - LDRH R0, $[$ R1, #2 $]$ Carico in R0 la HalfWord (H) 2 byte a partire dalla cella puntata dal registro R1
 
-![[AE/img/img82.png|center|500]]
+![[img82.png|center|500]]
 
 -  STR R0, $[$ R1 $]$ Carico all’indirizzo puntato da R1 la parola contenuta nel registro R0
 
-![[AE/img/img83.png|center|500]]
+![[img83.png|center|500]]
 
 
 ##### Istruzione di load e store su byte, word o doubleword
@@ -458,7 +458,7 @@ $$
 $$
 I suffissi SB, H e SH specificano il dominio dei dati su cui deve operare l'istruzione
 
-![[AE/img/img84.png|center|500]]
+![[img84.png|center|500]]
 
 ##### Istruzione di load e store su registro multipli
 Le istruzioni di load/store multipli (LDM e STM) eseguono un trasferimento di un qualsiasi numero di registri da o verso la memoria. Queste istruzioni sono pensate per far corrispondere al registro con indice più piccolo l’indirizzo di memoria più basso e, viceversa, a quello con indice più grande l’indirizzo più alto. 
@@ -468,7 +468,7 @@ $$
 $$
 Il campo $\text{< Modo agg >}$ può assumere i formati indicati nella colonna sintassi della tabella:
 
-![[AE/img/img85.png|center|500]]
+![[img85.png|center|500]]
 
 ###### Esempio
 LDR R7, {R1, R4, R5}
@@ -498,7 +498,7 @@ Le istruzioni di trasferimento in memoria sono:
 1.  LDC(Load to Coprocessor): carica i registri del coprocessore con i dati contenuti in una sequenza contigua di locazioni in memoria.
 2.  STC(Store from Coprocessor): memorizza in una sequenza di indirizzi di memoria contigui i dati contenuti nei registri del coprocessore
 
-![[AE/img/img89.png|center|500]]
+![[img89.png|center|500]]
 
 Il campo CP_Num indica con un numero intero quale coprocessore dovrà rispondere alla chiamata
 il bit L, come per le istruzioni Load/Store, indica se l’istruzione è LDC(L=1) o STC(L=0)
@@ -512,13 +512,13 @@ Le istruzioni di trasferimento dati tra registri sono:
 3.  MRC(Move to ARM register from Coprocessor) trasferisce il contenuto dei registri del coprocessore nel registro RD del processore o nei flag del registro di stato
 4.  MRRC(Move to two ARM register from Coprocessor)
 
-![[AE/img/img90.png|center|500]]
+![[img90.png|center|500]]
 
 Nel caso di MRC, se viene indicato R15, l’effetto ottenuto è l’aggiornamento dell’ambito dei flag nel registro CPSR
 Il bit r/$\bar c$ individua il tipo di istruzione: se 1 si tratta di MRC altrimento di MCR
 per MCRR e MRRC: se il bit r/c(negato) vale 1 si tratta di MRRC altrimenti di MCRR
 
-![[AE/img/img91.png|center|500]]
+![[img91.png|center|500]]
 
 #### Istruzioni per generare eccezioni
 Le eccezioni possono essere generato in modo volontario attraverso istruzioni software o un errore imprevisto. Le eccezioni volontarie sono attivate da istruzioni che mandano il processore in modalità di funzionamento privilegiata. 
@@ -580,7 +580,7 @@ La sintassi è:
 $$
 <MNEM>\{<Precod>\} <Rd>, <Rm>
 $$
-![[AE/img/img92.png|center|500]]
+![[img92.png|center|500]]
 
 Esempio:
 LDR R1, =0x0FE10547
@@ -619,7 +619,7 @@ $$
 Il registro Rs indica nel suo Byte meno significativo il numero di cifre da scorrere.
 il campo # valore è un numero intero compreso tra 1 e 31.
 
-![[AE/img/img93.png|center|500]]
+![[img93.png|center|500]]
 
 ##### Copia registro
 L'Istruzione CPY è una pseudo-istruzione sinonima della MOV offset a registro ma, differentemente da quest’ultimo, non ha la possibilità di impostare i flag del registro di stato (S) e neanche di eseguire lo shift sul secondo operando la sua sintassi risulta:
@@ -634,13 +634,13 @@ CPS\{IE|ID\} <int\_flag> \{,\#<modo>\}
 $$
 Il campo int_flag indica quali bit nel registro di stato verranno abilitati o disabilitati.
 
-![[AE/img/img94.png|center|500]]
+![[img94.png|center|500]]
 
-![[AE/img/img95.png|center|500]]
+![[img95.png|center|500]]
 
 Il campo IE_ID permette di specificare se si tratta di un Interrupt Enable (IE_ID=10) oppure un Interrupt Disable (IE ID=11). Se il bit M è asserito allora significa che l'istruzione contiene un cambio di modalità di funzionamento e pertanto negli ultimi 5 bit sarà indicato il relativo codice.
 
-![[AE/img/img96.png|center|500]]
+![[img96.png|center|500]]
 
 #### Store return state onto a stack
 L'istruzione SRS (Store Return State onto a stack), memorizza rispettivamente il LR e SPR dell'attuale modalità di funzionamento, nelle due word successive a partire da (SP) della modalità indicata all'interno dell'istruzione. Grazie a questa istruzione è possibile predisporre lo stato di ritorno da un exception handler su uno stack diverso da quel-
@@ -655,7 +655,7 @@ $$
 
 L'istruzione SRS si comporta come una STM che però opera sulla coppia di registri: R14 e SPSR del corrente modo di funzionamento. Utilizza la medesima modalità di aggiornamento (IA, IB, DA e DB) e utilizza come registro base il registro R13 relativo alla modalità di funzionamento indicata nel campo numerico $<Modo>$. Il punto esclamativo permette di aggiornare il registro base con la nuova posizione di memoria ed agisce sul bit di writeback (W). La codifica dell'istruzione SRS risulta:
 
-![[AE/img/img99.png|center|500]]
+![[img99.png|center|500]]
 
 
 
@@ -667,7 +667,7 @@ RFE<Modo Agg> <Rn>\{!\}
 $$
 L'istruzione RFE si comporta come una LDM che opera sulla coppia di registri: PC e CPSR. Utilizza la stessa modalità di aggiornamento (IA, IB, DA e DB). Come per la SRS, il punto esclamativo permette di aggiornare il registro base con la nuova posizione di memoria ed agisce sul bit di writeback (W). L'istruzione è codificata nel seguente modo:
 
-![[AE/img/img97.png|center|500]]
+![[img97.png|center|500]]
 
 #### Set eandniess
 Questa istruzione permette di modificare l'ordinamento dei byte (big-endian o little-endian) durante le operazioni di accesso in memoria. L'istruzione SETEND è stata introdotta per aumentare l'efficienza delle applicazioni rendendo possibile un accesso ottimizzato in funzione del formato di memorizzazione. Differentemente dalle altre istruzioni, la SETEND non può essere eseguita in modo condizionato e agisce direttamente sul bit E
@@ -677,5 +677,5 @@ SETEND \{BE|LE\}
 $$
 L’istruzione è codificata nel seguente modo:
 
-![[AE/img/img98.png]]
+![[img98.png]]
 

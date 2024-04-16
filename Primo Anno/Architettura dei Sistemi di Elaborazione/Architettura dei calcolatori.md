@@ -14,12 +14,12 @@ L'esecuzione di un programma compilato è molto più veloce rispetto a un progra
 Viceversa, l'interpretazione legge un'istruzione alla volta dal codice sorgente del programma ( sorgente ) e la traduce in linguaggio macchina per farla eseguire dal processore.
 Dopo aver eseguito un'istruzione, il software interprete passa ad elaborare la successiva e non resta traccia della precedente. Tutti questi passaggi si ripetono ogni volta che eseguo il programma. Per questa ragione l'esecuzione di un programma interpretato è più lenta.
 
-![[AE/img/img0.png|center|400]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img0.png|center|400]]
 
 
 ### Livelli di un computer
 
-![[AE/img/img1.png|center|400]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img1.png|center|400]]
 
 # Capitolo 2 
 ## Organizzazione dei sistemi di calcolo
@@ -51,7 +51,7 @@ La **RISC** è semplice e lineare, permettendo al microprocessore di eseguire il
 -   Solo le istruzioni Load e Store fanno riferimento alla memoria;
 -   Molti registri disponibili.
 
-![[AE/img/img2.png|center|500]]  
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img2.png|center|500]]  
 
 ### Dischi magnetici
 Ogni traccia è divisa in settori di lunghezza fissata. Tra due settori è presente un piccolo spazio detto **intersector gap**.
@@ -100,23 +100,23 @@ L’idea è di far vedere al calcolatore il sistema RAID (insieme di dischi) com
 Esistono 5 schemi RAID:
 - **RAID Livello 0**: i dati sono suddivisi in strisce di k settori e memorizzati in dischi con modalità round-robin. In questo modo un blocco di dati può essere letto con 4 letture parallele. Lavora meglio con richieste di grandi dimensioni, lavora male se il SO richiede i dati solo ad un settore alla volta; in caso di rottura di un disco tutti i dati sono persi.
  
-![[AE/img/img3.png|center|500]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img3.png|center|500]]
 
 - **RAID Livello 1**: Stesso funzionamento RAID 0 ma dischi duplicati, così ci sono tanti dischi primari quanti di backup. In scrittura ogni striscia è scritta due volte, in lettura possono essere utilizzate tutte le copie, distribuendo il carico su più dischi. Se un disco si rompe, si può utilizzare una replica, il ripristino di un disco rotto è semplice poiché c’è una copia del disco.
 
-![[AE/img/img4.png|center|500]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img4.png|center|500]]
 
 - **RAID Livello 2**: Utilizza parole binarie, o byte, per decomporre le informazioni sui dischi. Con 7 dischi è possibile dividere un bit per disco: i byte si dividono in 4 bit e si aggiungono 3 bit ottenendo così un codice a correzione di errore di hamming. Se si rompe un disco si può ricostruire facilmente. Il throughput è alto poiché le operazioni sono in parallelo. La rotazione dei dischi sia sincronizzata e che si utilizzino un numero elevato di dischi. Carico di lavoro del controller per calcolare hamming è elevato;
 
-![[AE/img/img5.png|center|500]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img5.png|center|500]]
 
 - **RAID Livello 3**: Versione semplificata del RAID 2, un singolo bit di parità è scritto in un disco di parità separato per ogni parola. Tutti i dischi devono essere sincronizzati. Non offre garanzie di affidabilità su errori casuali perché un solo bit non è sufficiente, se si rompe un disco è possibile ricostruire il suo contenuto.
 
-![[AE/img/img6.png|center|500]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img6.png|center|500]]
 
 - **RAID Livello 4/5**: I RAID 4 e 5 lavorano su strisce e non richiedono dischi sincronizzati. è come il RAID 0, con una parità per striscia scritta su un disco separato di parità. Si esegue l’EXOR bit a bit di tutte le strisce ottenendo così una striscia di parità.
 
-![[AE/img/img7.png|center|500]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img7.png|center|500]]
 
 # Capitolo 3
 ## Livello logico digitale
@@ -124,11 +124,11 @@ Esistono 5 schemi RAID:
 La base hardware di tutti i calcolatori è costituita da piccoli dispositivi elettronici dette porte logiche, ciascune delle quali calcola una diversa funzione di questi segnali.
 
 ### Negazione NOT
-![[AE/img/img8.png|center|150]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img8.png|center|150]]
 
 Restituisce il valore inverso del valore in entrata (1 restituisce 0 e 0 restituisce 1)
 ### Congiunzione logica AND
-![[AE/img/img9.png|center|150]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img9.png|center|150]]
 
 Il risultato è 1 se tutti gli operatori sono 1, altrimenti 0
 Proprietà: 
@@ -139,7 +139,7 @@ Proprietà:
 - elemento assorbente: $0 \land A = 0$ 
 - complementi: $\bar A \land A = 0$ 
 ### Disgiunzione logica OR
-![[AE/img/img10.png|center|150]]  
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img10.png|center|150]]  
 
 Il risultato è 1 se e solo se almeno uno degli operandi è 1
 Proprietà:
@@ -151,7 +151,7 @@ Proprietà:
 - complementi: $\bar A \lor A = 1$ 
 ### Disgiunzione logica esclusiva XOR e EXOR
 
-![[AE/img/img11.png|center|150]]  
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img11.png|center|150]]  
 
 Il risultato è 1 se e solo se un numero dispari di operandi vale 1
 >$$A \oplus B = (\bar A\land B) \: \lor (A\land\bar B)  $$
@@ -172,7 +172,7 @@ $$\overline{(A\lor B)}= \bar A\land\bar B$$
 ### Multiplexer
 Un multiplexer è un circuito con $2^n$ dati di input, un valore di output ed n input di controllo. Gli input selezionano la linea di ingresso che verrà trasferita in uscita. 
 
-![[AE/img/img12.png|center|300]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img12.png|center|300]]
 
 Le linee di controllo $S_0,\: S_1,\: S_2$ codificano un numero a 3 bit che specifica quale delle $I_0,\: I_1,...,\:I_7$ linee di input deve essere instradata verso la porta OR e quindi verso l'output. Indipendentemente dal valore definito dalle linee di controllo, le 7 rimanenti porte AND genereranno il valore 0, mentre quella rimanente produrrà in output 0 oppure 1.
 
@@ -182,14 +182,14 @@ Le linee di controllo $S_0,\: S_1,\: S_2$ codificano un numero a 3 bit che speci
 ### Decoder
 Un decodificatore accetta come input un numero ad n bit e lo utilizza per impostare ad 1 una sola delle $2^n$ linee di output.
 
-![[AE/img/img13.png|center|350]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img13.png|center|350]]
 
 Quando si fornisce alla memoria un indirizzo, si utilizzano i suoi 3 bit più significativi per selezionare uno degli otto chip di memoria ($U_0,\: U_1,...,\: U_7$). I 3 bit corrispondono ai tre input A, B, C; a seconda del loro valore 1 solo degli 8 chip assumerà il valore 1, mentre tutti gli altri rimangono a 0.
 
 ### PLA (Array logico programmabile)
 Chip generale che permette di calcolare somme di prodotti. Nella figura la porta OR $F_1$ genera come risultato $\bar WYZ+WX\bar Z$ 
 
-![[AE/img/img14.png|center|350]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img14.png|center|350]]
 
 >**Oss.**
 >A partire dalla forma normale disgiuntiva, come per il multiplexer, la PLA può essere realizzata utilizzando porte AND, OR, NOT e può essere utilizzata per implementare qualsiasi funzione.
@@ -197,7 +197,7 @@ Chip generale che permette di calcolare somme di prodotti. Nella figura la porta
 ### Circuiti aritmetici
 #### Shifter
 
-![[AE/img/img15.png|center|500]]
+![[Primo Anno/Architettura dei Sistemi di Elaborazione/img/img15.png|center|500]]
 
 Lo shifter in figura è un circuito con 8 input ($D_0,\: D_1,...,\:D_7$) e 8 output ($S_0,\: S_1,...,\:S_7$). I bit in output sono la copia di quelli in input traslati tutti di una posizione a destra o a sinistra. La direzione (destra/sinistra) è impostata da un bit di controllo C (0 = sx, 1 = dx).
 
@@ -205,19 +205,19 @@ Lo shifter in figura è un circuito con 8 input ($D_0,\: D_1,...,\:D_7$) e 8 out
 Per un calcolatore, la somma tra bit è un operazione fondamentale. Per realizzare un sommatore ad n bit, vengono utilizzati n [[#Full-adder|sommatori]] (full-adder a 1 bit), realizzati a loro volta partendo da [[#Half-adder|semi-sommatori]] (half-adder a 1 bit).    
 ##### Half-adder
 
-![[AE/img/img16.png|center|500]]
+![[img16.png|center|500]]
 
 L'half-adder funziona solo per i bit meno significativi, perché non gestisce un riporto in ingresso.
 ##### Full-adder
 
-![[AE/img/img17.png|center|500]] 
+![[img17.png|center|500]] 
 
 A partire da due half-adder, si può costruire un sommatore che prende in ingresso tre bit (A, B e riporto in ingresso). 
 
 ##### Clock
 Nei circuiti digitali complessi è necessario stabilire l'ordine con cui si verificano gli eventi. Un clock è un circuito che emette degli impulsi di larghezza definita ad intervalli di tempo costanti. L'intervallo di tempo compreso tra le estremità di due impulsi è detto **tempo di ciclo di clock**.
 
-![[AE/img/img18.png|center|450]]
+![[img18.png|center|450]]
 
 La frequenza di clock specifica il numero di cicli di clock per unità di tempo (secondo). L'unità di misura è dell'ordine degli Hertz (Hz).
 
@@ -227,14 +227,14 @@ La memoria è un componente fondamentale in un computer perché memorizza dati e
 ##### Latch
 Per creare una memoria a 1 bit è necessario un circuito che ricordi i precedenti valori in input. Un circuito semplice può essere realizzato con due NOR che hanno le uscite retroazionate in ingresso (dipendono dai valori dei precedenti ingressi). Il set-reset latch (**SR Latch**) ha due ingressi: S (set) è utilizzato per impostare ad 1 il valore dell'uscita e R (reset) è usato per azzerarlo. 
 
-![[AE/img/img19.png|center|450]]
+![[img19.png|center|450]]
 
 Il cambio di stato è provocato da un segnale/impulso; a seguito dell'impulso il circuito si mantiene nello stato raggiunto a meno che non vengano inviati ulteriori segnali/impulsi.
 Quando S è impostato temporaneamente ad 1, lo stato del latch diventa Q = 1, indipendentemente dallo stato precedente. Quando si imposta R temporaneamente ad 1, si forza il latch a passare nello stato Q = 0.
 
 ##### SR Latch temporizzato
 
-![[AE/img/img20.png|center|450]]
+![[img20.png|center|450]]
 
 È un SR latch in cui i segnali agiscono solo quando il segnale di clock è attivo. Quando il clock vale 0, le porte AND generano in output il valore 0, indipendentemente dai valori di S ed R, impedendo al latch di cambiare stato. Quando il clock vale 1, le porte AND non bloccano i segnali di S ed R che tornano a pilotare lo stato del latch.
 Ma cosa succede nel caso in cui S = R = 1? Come cambiano gli stati? In questa circostanza il circuito è in uno stato instabile. Vediamo come risolvere questo problema.
@@ -244,23 +244,23 @@ Per risolvere l'ambiguità del latch SR, viene utilizzato un solo ingresso dati 
 - Quando D = 1 e il clock = 1, il latch va nello stato Q = 1
 - Quando D = 0 e il clock = 1, il latch va nello stato Q = 0
 
-![[AE/img/img21.png|center|450]]
+![[img21.png|center|450]]
 
 ##### Flip-Flop
 Il flip-flop è un circuito simile ad un latch, l'unica differenza è relativa all'istante in cui il segnale di clock determina il cambiamento di stato:
 - Nel latch il cambiamento di stato è determinato dal livello alto/basso del clock
 - Nel flip-flop è determinato dal fronte salita/discesa del clock
 
-![[AE/img/img22.png|center|450]]
+![[img22.png|center|450]]
 
 Molti latch hanno due ingressi aggiuntivi PRESET (per forzare lo stato Q = 1) e CLEAR (per forzare lo stato Q = 0).
 Un flip-flop D è dotato di un generatore di impulsi che funge da clock nei fronti di salita e discesa dovuti ai ritardi fisici del processamento del segnale passante per l'AND.
 
-![[AE/img/img23.png|center|450]]
+![[img23.png|center|450]]
 
 Per realizzare un registro ad 1 byte possono essere utilizzati 8 flip-flop come mostrato nella figura sottostante
 
-![[AE/img/img24.png|center|450]]
+![[img24.png|center|450]]
 
 - Gli 8 flip-flop hanno l'input di clock collegati tra loro e sono pilotati da una porta NOT (pin 11).
 - Input (D) e Output (Q) sono separati tra loro.
@@ -299,7 +299,7 @@ Il meccansimo centralizzato necessita di un arbitro, che quando riceve una richi
 Quando due o più dispositivi fanno richiesta, la ottiene il più vicino all'arbitro.
 Molti bus per aggirare il fatto che le priorità sono legate alla distanza dall'arbitro, definiscono diversi livelli di priorità, utilizzando diverse linee di richiesta-concessione ed il bus viene concesso al dispositivo con priorità maggiore; a parità di priorità vince chi è più vicino all'arbitro.
 
-![[AE/img/img25.png|center]]
+![[img25.png|center]]
 
 Nel meccanismo decentralizzato, ogni dispositivo ha una propria linea di richiesta ed una priorità, prima di inviare una richiesta ciascuno deve verificare che non ci sia già una richiesta con priorità più alta. Al termine dell'utilizzo del bus, la linea deve essere negata. Lo svantaggio è che ci sono troppi collegamenti e il numero di collegamenti non può superare il numero di linee.
 Lo schema utilizza tre linee:
@@ -311,7 +311,7 @@ Per ottenere un bus un dispositivo deve:
 - cosi nega OUT, asserisce la linea BUSY e diventa il master del bus.
 al termine sblocca OUT e libera BUSY negandolo.
 
-![[AE/img/img26.png|center]]
+![[img26.png|center]]
 
 ### Dispositivi di I/O
 I dispositivi esterni dovrebbero rappresentare/raccogliere informazioni in una forma comprensibile agli esseri umani.
@@ -342,10 +342,10 @@ Gli altri registri presenti sono:
 - Op code register (OPC), è il registro temporaneo, può contenere l'ultima istruzione eseguita prima di un salto e identifica il tipo di istruzione indicando anche se è di tipo ADD o BRANCH
 - Holding (H)
 
-![[AE/img/img27.png|center|450]]
+![[img27.png|center|450]]
 
 ### ALU 
-![[AE/img/img28.png|center|500]]
+![[img28.png|center|500]]
 
 Il settore in basso a sinistra contiene un decodificatore a 2 bit che, in base ai segnali $F_0$ e $F_1$, permette di attivare una delle quattro linee per le 4 operazioni: $AB$ (AND), $A+B$ (OR), $\bar B$ (NOT), $A + B$ (somma aritmetica). 
 Il settore in alto contiene le porte logiche per calcolare A AND B, A OR B e $\bar B$; in base alle linea attivata dal decodificatore solo uno di questi risultati viene passato attraverso la porta OR. 
@@ -354,13 +354,13 @@ Il settore in basso a destra è un [[#Full-adder|full-adder]].
 
 Le ALU ad 1 bit possono essere assemblate insieme per costruire un ALU di lunghezza variabile. Questa tecnica è detta bit-slice e può essere applicata ad altri circuiti digitali che lavorano bit a bit.
 
-![[AE/img/img29.png|center|500]]
+![[img29.png|center|500]]
 
 Il segnale INC è utilizzato per incrementare il risultato, ovvero per calcolare somme come A+1, A+B+1.
 
 ### Temporizzazione del percorso dati
 
-![[AE/img/img30.png|center|550]]
+![[img30.png|center|550]]
 
 Ogni nuovo ciclo ha inizio sul fronte di discesca del clock, momento in cui vengono memorizzati i bit che controllano il funzionamento delle porte. Questa operazione richiede un intervallo di tempo finito (w in figura). Il registro richiesto viene selezionato e il suo contenuto portato sul bus B, dopo un intervallo di tempo x. A questo punto, la ALU e lo shifter possono iniziare ad operare sui suoi dati e i loro output diventano stabili dopo un intervallo di tempo y. Dopo un ulteriore intervallo di tempo z, i risultati vengono propagati lungo il bus C e caricati nei registri in corrispondenza del fronte di salita del successivo impulso di clock.
 
@@ -372,7 +372,7 @@ La CPU ha due modi per comunicare con la memoria:
 - Una porta a 8 bit per leggere (solo lettura!) il programma eseguibile (fetch delle istruzioni ISA). Anche questa porta è controllata da due registri:
 	- PC (Program Counter): registro a 32 bit che indica l'indirizzo di memoria della prossima istruzione ISA da caricare (fetch)
 	- MBR (Memory Byte Register): contiene il byte letto dalla memoria durante il fetch. È un registro a 32 bit, pertanto il byte letto viene memorizzato negli 8 bit meno significativi
-In generale tutti i registri della CPU vengono controllati da uno o due segnali di controllo. In [[AE/img/img27.png|figura]] la freccia vuota indica l'output del registro sul bus B, mentre la freccia piena indica il caricamento dal bus C. 
+In generale tutti i registri della CPU vengono controllati da uno o due segnali di controllo. In [[img27.png|figura]] la freccia vuota indica l'output del registro sul bus B, mentre la freccia piena indica il caricamento dal bus C. 
 MBR può essere scritto sul bus B in due modi diversi: 
 - unsigned: i 24 bit non utilizzati vengono impostati a 0 (valore MBR tra 0 e 255)
 - signed: il bit di segno (il settimo), viene copiato su tutti i 24 bit non utilizzati (valori tra -128 e +127)
@@ -384,8 +384,8 @@ Per controllare il data path abbiamo bisogno di 29 segnali suddivisibili in 5 gr
 - 9 segnali (frecce piene) per controllare la scrittura dei dati dal bus C all'interno dei registri 
 - 9 segnali (frecce vuote) per controllare l'abilitazione dei registri del bus B per l'input della ALU
 - 8 segnali per controllare le funzioni della ALU e dello shifter
-- 2 segnali (non mostrati in [[AE/img/img27.png|figura]]) per indicare lettura/scrittura della memoria tramite PC/MBR
-- 1 segnale (non mostrato in [[AE/img/img27.png|figura]]) per il fetch (lettura) delle istruzioni dalla memoria tramite PC/MBR
+- 2 segnali (non mostrati in [[img27.png|figura]]) per indicare lettura/scrittura della memoria tramite PC/MBR
+- 1 segnale (non mostrato in [[img27.png|figura]]) per il fetch (lettura) delle istruzioni dalla memoria tramite PC/MBR
 I valori di questi 29 segnali specificano il comportamento della CPU da eseguire durante un ciclo del percorso dati.
 La sequenza di cicli di data path necessari all'esecuzione di un istruzione ISA prende il nome di **microprogramma** di quell'istruzione ISA. Un microprogramma è costituito di **microistruzioni**. 
 
@@ -398,17 +398,17 @@ I 29 segnali di controllo non sono sufficienti a specificare una microistruzione
 - Address: indirizzo della prossima microistruzione da eseguire
 - JAM: bit per la gestione dei salti incondizionati a seconda dei bit di stato (N, Z) dell'ALU
 
-![[AE/img/img31.png|center|500]]
+![[img31.png|center|500]]
 
-### [[AE/img/img32.png|Microarchitettura MIC-1]]
+### [[img32.png|Microarchitettura MIC-1]]
 La decisione dei segnali di controllo da abilitare durante ciascun ciclo è determinato da un **sequenzializzatore** che si occupa di far avanzare passo dopo passo la sequenza di operazioni necessarie per eseguire una singola istruzione ISA. Durante ogni ciclo, il sequenzializzatore deve produrre due tipi di informazioni:
 - stato di ogni segnale di controllo del sistema
 - indirizzo della microistruzione successiva
-Il cuore dell'architettura (in [[AE/img/img32.png|figura]]) di controllo è una memoria detta **control store** che contiene le microistruzioni.  
+Il cuore dell'architettura (in [[img32.png|figura]]) di controllo è una memoria detta **control store** che contiene le microistruzioni.  
 Il "decoder" decodifica il tipo di istruzione in base all'opcode (codice del tipo di operazione da svolgere).
 
 #### Funzionamento di MIC-1
-All'inizio di ogni ciclo di clock (fronte di discesa) MIR viene caricato con il contenuto della parola indirizzata da MPC. Il caricamento deve terminare entro il tempo w (in riferimento alla [[AE/img/img30.png|figura]]). 
+All'inizio di ogni ciclo di clock (fronte di discesa) MIR viene caricato con il contenuto della parola indirizzata da MPC. Il caricamento deve terminare entro il tempo w (in riferimento alla [[img30.png|figura]]). 
 Subito dopo i segnali vengono propagati all'interno del data path ed uno dei registri vengono inviati attraverso il bus B alla ALU che calcola la funzione richiesta e produce sul bus C il risultato; sul fronte di salita i registri selezionati vengono caricati. 
 
 # Capitolo 5
@@ -432,7 +432,7 @@ In IJVM lo stack è utilizzato per memorizzare variabili locali ed eseguire calc
 - Un puntatore alla base attuale dello stack - LV (Local Variable)
 - Un puntatore alla cima dello stack - SP (Stack Pointer)
 
-![[AE/img/img33.png|center|450]]
+![[img33.png|center|450]]
 
 ### Il modello della memoria IJVM
 La memoria può essere vista come un vettore di:
@@ -444,7 +444,7 @@ L'unico modo che le istruzioni IJVM hanno per accedere alla memoria è quello di
 - **Stack degli operandi**: Il blocco dello stack non può superare una certa dimensione, stabilita in anticipo dal compilatore Java. Lo spazio per lo stack degli operandi è allocato direttamente sopra il blocco delle variabili locali.
 - **Area dei metodi**: Infine c’è una regione di memoria in cui risiede il programma. Quì è presente un registro implicito che contiene l’indirizzo della successiva istruzione da prelevare. Questo puntatore è chiamato contatore di programma (Program Counter), oppure PC.
 
-![[AE/img/img34.png|center|500]]
+![[img34.png|center|500]]
 
 Tutti i computer suddividono la memoria in celle adiacenti di un byte che sono a loro volta raggruppati in gruppi di 4 (32 bit) o 8 (64 bit).
 I processori a livello ISA normalmente dispongono di uno spazio di memoria lineare (232 o 264), talvolta alcuni hanno una suddivisione tra dati e istruzioni (questo rende più difficili gli attacchi malware).
@@ -462,7 +462,7 @@ Il set di istruzioni IJVM è molto semplice e si compone di 20 istruzioni:
 - 2 istruzioni per la chiamata di metodi (INVOKEVIRTUAL, IRETURN) 
 - 1 istruzione nulla (NOP)
 La tabella seguente elenca le istruzioni IJVM; la prima colonna contiene il codice (opcode) dell'istruzione, la seconda il codice mnemonico e gli eventuali operandi dell'istruzione; la terza colonna riporta una descrizione
-![[AE/img/img35.png|center|500]]
+![[img35.png|center|500]]
 
 ### I registri
 Tutti i computer hanno dei registri visibili a livello ISA. Il loro compito è il controllo dell'esecuzione del programma, il contenimento dei risultati temporanei o altro.
@@ -501,7 +501,7 @@ Il Core i7 ha 4 registri di uso generale (tutti a 32 bit):
 - EDX: è necessario per le moltiplicazioni e le divisioni durante le quali contiene con EAX prodotti e dividendi di 64 bit.
 Tutti questi registri possono essere utilizzati a 16 o 8 bit
 
-![[AE/img/img36.png|center|500]]
+![[img36.png|center|500]]
 
 
 Ulteriori 4 registri a 32 bit con caratteristiche specifiche sono:
@@ -510,14 +510,14 @@ Ulteriori 4 registri a 32 bit con caratteristiche specifiche sono:
 - EBP: referenzia l’indirizzo base del record di attivazione corrente (analogo al registro LV della IJVM).
 - ESP: Puntatore allo stack (come SP di IJVM).
 
-![[AE/img/img37.png|center|500]]
+![[img37.png|center|500]]
 
 Poi sono presenti:
 - I registri segmento (tutti a 16 bit) che derivano dalla compatibilità dell’indirizzamento a 16 bit dell’8088:  CS, SS, DS, ES, FS e GS.
 - Il Program Counter che è EIP (Extender Instruction Pointer).
 - L’insieme dei bit dei flag della program status word EFLAGS.
 
-![[AE/img/img38.png|center|500]]
+![[img38.png|center|500]]
 
 # Capitolo 8 (Da vedere con sistemi operativi)
 ## Architetture per il calcolo parallelo
@@ -529,7 +529,7 @@ Quindi per ottenere una maggiore potenza di calcolo ci si affidò alle architett
 
 La classificazione si basa su due concetti: il flusso di istruzioni ed il flusso di dati.
 
-![[AE/img/img39.png|center|500]]
+![[img39.png|center|500]]
 
 ### Parallelismo
 Il parallelismo nel chip aiuta a migliorare le performance della CPU: con il pipelining e le architetture superscalari si può arrivare ad un fattore di miglioramento da 5 a 10.
@@ -538,7 +538,7 @@ Esistono 3 diversi approcci:
 - Data Parallel Computer (SIMD)
 - Multiprocessori e Multicomputer (MIMD)
 
-![[AE/img/img40.png|center|500]]
+![[img40.png|center|500]]
 
 - **[[#Parallelismo a|Parallelismo a livello di istruzione]]**: l'idea è di emettere più istruzioni per ciclo di clock utilizzando processori superscalari e processori con più parole di istruzione molto lunghe
 - **[[#Multithreading|Multithreading nel chip]]**: la CPU esegue contemporaneamente due thread (parti di programma) come se esistessero due CPU virtuali. Se uno dei due deve attendere ad esempio per un cache-miss (sia di primo che di secondo livello) l’altro può continuare l’esecuzione evitando di lasciare la CPU in attesa. Serve per superare lo stallo che si verifica nelle pipeline quando si accede ad un indirizzo assente nella cache
@@ -547,14 +547,14 @@ Esistono 3 diversi approcci:
 #### Parallelismo a livello di istruzione 
 A livello delle istruzioni, un modo per ottenere il parallelismo è emettere più istruzioni per ciclo di clock. Ci sono due tipi di CPU a emissione multipla: i processori superscalari e i processori VLIW.
 
-![[AE/img/img41.png|center|500]]
+![[img41.png|center|500]]
 
 ##### Pipelining
 Da anni è ovvio che uno dei maggiori [colli di bottiglia](https://it.wikipedia.org/wiki/Collo_di_bottiglia_(ingegneria)) è rappresentato dal fetch delle istruzioni in memoria. Fin dal modello IBM Stretch (1959), per alleviare questo problema, i calcolatori sono stati dotati della capacità di poter prelevare in anticipo le istruzioni dalla memoria, in modo da averle già a disposizione nel momento in cui dovessero rendersi necessari. Le istruzioni venivano memorizzate in un insieme di registri chiamati **buffer di prefetch**, dai quali potevano essere prese nel momento in cui venivano richieste, senza dover attendere che si completasse una lettura della memoria. La tecnica di prefetching suddivide l'esecuzione dell'istruzione in due parti: il prelievo e la sua esecuzione. 
 
 Il concetto di pipeline spinge questa strategia molto più avanti; invece di dividere l'esecuzione di un'istruzione in due fasi, la si divide in un numero maggiore di parti (12 o più) che possono essere eseguite in parallelo; ciascuna di queste parti è gestita da componenti hardware dedicati. 
 
-![[AE/img/img42.png|center|500]]
+![[img42.png|center|500]]
 
 Durante il primo ciclo di clock lo stadio S1 sta lavorando sull'istruzione 1, prelevandola dalla memoria. Durante il ciclo di clock 2 lo stadio S2 decodifica l'istruzione 1, mentre lo stadio S1 preleva l'istruzione 2. Durante il ciclo 3 lo stadio S3 preleva gli operandi per l'istruzione 1, lo stadio S2 decodifica l'istruzione 2 e lo stadio S1 preleva la terza istruzione. Durante il quarto ciclo lo stadio S4 esegue l'istruzione 1, S3 preleva gli operandi per l'istruzione 2, S2 decodifica l'istruzione 3 e S1 preleva l'istruzione 4. Infine, durante l'ultimo ciclo S5 scrive il risultato dell'istruzione 1, mentre gli altri componenti lavorano sulle istruzioni successive. 
 
@@ -567,7 +567,7 @@ Il multithreading nel chip permette di mascherare queste situazioni attraverso l
 
 Supponiamo di avere una CPU che emette una istruzione per ciclo di clock con tre thread A, B e C. Durante il primo ciclo A, B e C eseguono le istruzioni A1, B1 e C1. Purtroppo al secondo ciclo di clock A2 fa un riferimento non presente nella cache di primo livello e deve attendere 2 cicli per recuperarlo dalla cache di secondo livello.
 
-![[AE/img/img43.png|center|500]]
+![[img43.png|center|500]]
 
 ###### Pipe
 Il pipe è uno pseudo-file che permette a due processi di comunicare tra loro, ma affinché questi due processi possano comunicare attraverso una pipe, essa deve essere inizializzata in anticipo. Il processo A, che vuole inviare dati al processo B, deve scrivere sulla pipe come fosse un file in uscita. Il processo B, per leggere i dati inviati da A, legge la pipe come se fosse un file in entrata.
@@ -587,11 +587,11 @@ Esiste una variante che permette di “guardare avanti” le istruzioni anticipa
 ###### Multithreading a CPU superscalari 
 Le CPU possono avere più unità in parallelo ed emettere più istruzioni per ciclo.
 
-![[AE/img/img44.png|center|500]]
+![[img44.png|center|500]]
 
 In ogni thread sono eseguiti due istruzioni per ciclo finché non si raggiunge uno stallo
 
-![[AE/img/img45.png|center|500]]
+![[img45.png|center|500]]
 
 ##### Multithreading simultaneo
 Ciascun thread emette due istruzioni per ciclo finché non si raggiunge uno stallo. A questo punto si passa all'istruzione del thread che segue affinché la CPU rimanga impiegata
@@ -650,14 +650,14 @@ Esistono due differenti tipologie di multiprcoessori:
 ##### UMA con architettura basata su bus
 I più semplici multiprocessori sono basati su un singolo bus che interconnette tutte le CPU alla memoria condivisa.
 
-![[AE/img/img46.png|center|350]]
+![[img46.png|center|350]]
 
 Una CPU che vuole leggere/scrivere una parola in memoria, se il bus è occupato, deve attendere che si liberi. Questa architettura funziona bene con due o tre CPU. Per aumentare il numero di CPU occorre aumentare il numero di memorie.
 
 ##### UMA con singlo bus e cache nelle CPU
 L'aggiunta di una memoria cache all'interno delle singole CPU può ridurre il traffico sul bus e il sistema può sopportare anche più di 3 CPU
 
-![[AE/img/img47.png|center|350]]
+![[img47.png|center|350]]
 
 Il [[#Caching|caching]] non viene eseguito sulle singole parole di memoria ma su blocchi di 32 o 64 byte. Quando una parola è referenziata, l’intero blocco che la contiene, chiamato linea di cache, è caricato nella CPU che l’ha richiesta.
 Ogni blocco di cache è contrassegnato come READ-ONLY oppure READ/WRITE.
@@ -669,7 +669,7 @@ L’insieme di tali regole, utilizzate per la gestione della cache è chiamato *
 ##### UMA con singolo bus e CPU dotate di RAM
 Un'altra soluzione è con l'aggiunta di memorie RAM in un bus dedicato per ogni CPU 
 
-![[AE/img/img48.png|center|250]]
+![[img48.png|center|250]]
 
 A questo punto la memoria condivisa è utilizzata esclusivamente per scrivere variabili condivise (globali). Questa soluzione riduce il traffico sul bus ma richiede una collaborazione attiva del compilatore che deve separare gli oggetti locali da quelli globali.
 
@@ -677,7 +677,7 @@ A questo punto la memoria condivisa è utilizzata esclusivamente per scrivere va
 Anche con le migliori tecniche di caching, l’uso di un singolo bus di interconnessione limita la dimensione del multiprocessore UMA a 16 o 32 CPU.
 Per andare oltre, occorre utilizzare una differente rete di interconnessione. Il circuito più semplice che permette di collegare $n$ CPU a $k$ memorie è il **crossbar switch**.
 
-![[AE/img/img49.png|center|400]]
+![[img49.png|center|400]]
 
 Ad ogni intersezione tra una linea orizzontale (CPU) e una verticale c'è un **crosspoint**, un commutatore che può essere aperto o chiuso, a seconda che si voglia collegare o meno le linee corrispondenti. 
 Un vantaggio di questo sistema è che si crea una rete non bloccante, ovvero non succede mai che venga negata a una CPU la connessione di cui ha bisogno perché la linea è già occupata. 
@@ -696,7 +696,7 @@ Ogni messaggio contiene:
 Lo switch utilizza il campo module per scegliere dove spedire il messaggio.
 Una rete economica e semplice è la rete **Omega**
 
-![[AE/img/img50.png|center|500]] 
+![[img50.png|center|500]] 
 
 Sono state connesse 8 CPU ad 8 memorie con 12 switch. Per $n$ CPU e $n$ memorie sono necessarie $\log_2 n$ stadi per un totale di $(\frac{n}{2})\log_2 n$ switch. 
 Lo schema di connessione è detto shuffle perfetto. A differenza del crossbar la Omega è una rete 
@@ -788,29 +788,29 @@ Il nodo base di un multicomputer consiste di una CPU, una memoria ed un'interfac
 
 In un sistema piccolo potrebbe essere presente uno switch attraverso il quale sono connessi tutti i nodi
 
-![[AE/img/img51.png|center|150]]
+![[img51.png|center|150]]
 
 Un'altra rete di interconnessione è la topologia ad anello: ogni nodo è connesso ad altri due nodo in ordine per formare un anello circolare (non sono necessari switch).
 
-![[AE/img/img52.png|center|150]]
+![[img52.png|center|150]]
 
 La topologia a griglia (grid) o maglia (mesh) è una struttura bidimensionale utilizzata in molti sistemi complessi. La sua forma regolare la rende altamente scalabile. Il percorso più lungo tra due nodi, aumenta come $\sqrt n$ sul numero $n$ di nodi. 
 
-![[AE/img/img53.png|center|150]]
+![[img53.png|center|150]]
 
 Il doppio toro è una variante della griglia, ma con i nodi estremi che si congiungono, è più tollerante ai guasti ma ha un diametro più piccolo. 
 
-![[AE/img/img54.png|center|150]]
+![[img54.png|center|150]]
 
 Il cubo è una topologia tridimensionale regolare
 
-![[AE/img/img55.png|center|150]]
+![[img55.png|center|150]]
 
 Un cubo di dimensione 4 si può ottenere da uno di dimensione 3 ed è detto ipercubo. Molti computer paralleli utilizzano questa topografia perché il diametro cresce in modo logaritmico con la dimensione.
 Diametro = $\log_2 n$ con n nodi.
 Un cubo di dimensione n + 1 si può ottenere da uno di dimensione n in modo ricorsivo.
 
-![[AE/img/img56.png|center|250]]
+![[img56.png|center|250]]
 
 Nei multicomputer sono utilizzati due tipi di schemi di switching:
 1. store and forward packet switching 

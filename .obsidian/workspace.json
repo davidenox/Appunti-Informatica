@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md"
               }
             }
           },
@@ -173,6 +173,7 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240412163602.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240412163130.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240412162707.png",
@@ -184,9 +185,7 @@
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150133.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150058.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408121427.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408121319.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
@@ -196,9 +195,9 @@
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Architettura.md",
-    "_temp/AE/img",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
     "_temp/AE/Punti focus.md",
-    "_temp/AE/ARM.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
     "_temp/AE",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3.1 - Bash.md",

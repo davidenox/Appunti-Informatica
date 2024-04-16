@@ -22,7 +22,7 @@ Un programma utente che esegue istruzioni errate può causare un crash del siste
 Pochi anni fa, un ambiente di elaborazione consisteva in un certo numero di PC collegati in rete, con un server che forniva servizi di condivisione di file e di stampa. L'accesso remoto era lento. I terminali erano collegati a minicomputer con SO [[Lezione 2 - Tipologie di sistemi#Sistemi operativi time-sharing|time-sharing]] ed erano spesso utilizzati in molte società e università.  
 Con l'avvento di Internet e grazie all'evoluzione delle tecnologie web, le aziende forniscono portali per accedere ai propri server interni. I terminali sono stati sostituiti dai computer e dispositivi mobili.
 
-![[img9.png|center|500]]
+![[_temp/Appunti SOR/MOD I/img/img9.png|center|500]]
 
 
 ### Computing mobile
@@ -39,13 +39,13 @@ I SO per calcolatori collegati in rete sono classificati in:
 
 Con l'evoluzione dei PC, i progettisti hanno abbandonato l'architettura di sistema centralizzato. I terminali collegati a sistemi centralizzati ora sono sostituiti da PC e dispositivi mobili ad interfaccia grafica che si connettono ai server tramite un'applicazione web. Molti sistemi attuali funzionano come sistemi server per soddisfare le richieste generate da sistemi client.  
 
-![[img9.png|center|500]]
+![[_temp/Appunti SOR/MOD I/img/img9.png|center|500]]
 
 
 #### Peer-to-peer
 In questo sistema, tutti i nodi sono considerati alla pari, ovvero ciascuno funziona sia da client che da server. I sistemi peer-to-peer offrono un vantaggio rispetto ai sistemi [[#Client-server|client-server]] perchè in questi il server è l'unico nodo a fornire servizi, mentre nel sistema peer-to-peer i servizi sono forniti da tutti i nodi distribuiti nella rete.  
 
-![[img11.png|center|500]]
+![[_temp/Appunti SOR/MOD I/img/img11.png|center|500]]
 
 
 #### Cloud computing
@@ -75,7 +75,7 @@ Dato che molti processori sono dotati di istruzioni da eseguire in [[#^86a8e2|mo
 ### Struttura monolitica
 Consiste nel realizzare un insieme di funzioni, ciascuna delle quali implementa un determinato servizio, attivabile tramite una o più chiamate di sistema. Spesso queste funzioni si scrivono in linguaggio assembly, per poter avere la massima velocità di esecuzione e una minore dimensione in termini di occupazione di memoria RAM.
 
-![[img12.png|center|600]]
+![[_temp/Appunti SOR/MOD I/img/img12.png|center|600]]
 
 
 Questa struttura, piuttosto semplice è stata usata nel sistema operativo Microsoft MS-DOS e nelle prime versioni dei kernel UNIX e Linux. MS-DOS era un sistema operativo monoutente e mono tasking scritto per microprocessori Intel 8088, 8086, 80286, privi di modalità kernel.  
@@ -84,7 +84,7 @@ In assenza di modalità privilegiata, il programmatore può accedere a qualsiasi
 ### Struttura stratificata
 Per la progettazione e lo sviluppo di sistemi più complessi si può ricorrere ai modelli e alle tecniche della programmazione strutturata o alla programmazione ad oggetti. I progettisti organizzano il sistema in un insieme di moduli, strutturandoli in vari livelli. Ciascun modulo di un livello utilizza le funzionalità offerte dai moduli di livello sottostante e fornisce i servizi al livello superiore.  
 
-![[img13.png|center|500]]
+![[_temp/Appunti SOR/MOD I/img/img13.png|center|500]]
 
 
 In questi sistemi, con il termine *kernel* si intende il livello a stretto contratto con l'hardware. Questa tecnica semplifica la fase di progettazione e rende più agevole apportare modifiche e correzioni al codice. Ogni strato può essere modificato, senza apportare cambiamenti agli altri strati. Tuttavia, è richiesta un attenta e complessa analisi per stabilire quanti strati realizzare e scegliere quale funzionalità implementare in ciascuno di essi. La stratificazione porta, però, ad un funzionamento meno efficiente in termini di velocità di esecuzione e di occupazione di memoria, perchè per eseguire un’operazione, un programma applicativo, potrebbe effettuare una chiamata di sistema al livello sottostante, la quale, a sua volta, ne richiama un'altra, e così via. In altre parole, il programma applicativo per ottenere un servizio potrebbe attendere l’esecuzione di N funzioni di sistema. Bisogna tenere anche presente che nel passaggio da uno strato all’altro sono spesso allocate strutture dati e parametri, con conseguente maggiore impegno di memoria. Per tale motivo, attualmente, si progettano sistemi stratificati con un limitato numero di strati.  
@@ -94,7 +94,7 @@ Per proteggere le componenti del SO è necessario che il processore sia dotato d
 Per gestire una risorsa sono definite due tipi di componenti del SO: le **tecniche** (meccanismi) per consentire l'uso della risorsa e le **strategie di gestione** (politiche), realizzate utilizzando i meccanismi.  
 In questa struttura l'insieme dei meccanismi costituisce il microkernel, che è l'unico componente che gira in stato privilegiato. Tutte le strategie sono implementate in programmi applicativi che girano in modalità utente. In questo modo, i programmi sono più facili da modificare ed espandere. Quando un processo applicativo richiede una risorsa, interagisce con il relativo processo server mediante un insieme di chiamate di sistema detto **IPC (Inter Process Comunication)**, fornite dal microkernel, che consentono la comunicazione tra processi.
 
-![[img14.png|center|600]]
+![[_temp/Appunti SOR/MOD I/img/img14.png|center|600]]
 
 
 La struttura a microkernel comporta una perdita di efficienza, poiché ogni operazione di comunicazione tra processi utilizza chiamate di sistema. 
@@ -103,7 +103,7 @@ La struttura a microkernel comporta una perdita di efficienza, poiché ogni oper
 Attualmente la miglior tecnica per progettare sistemi e realizzare i sistemi operativi complessi, si basa sulla programmazione orientata agli oggetti. 
 Con questa tecnica si sviluppa il sistema in moduli, ciascuno dei quali svolge un compito. Ogni modulo è implementato da un insieme di funzioni descritte da un'interfaccia che descrive le funzionalità svolte dal modulo e da un corpo che consiste nel codice che implementa le funzioni descritte nell'interfaccia.  
 
-![[img15.png|center|600]]
+![[_temp/Appunti SOR/MOD I/img/img15.png|center|600]]
 
 
 Il codice del corpo di un modulo è nascosto al resto del sistema e si comunica con esso solo tramite le funzioni della propria interfaccia. Il kernel si realizza in base ad un numero di componenti fondamentali, ai quali, se richiesto, se ne aggiungono altri dinamicamente durante la procedura di avvio o durante l'esecuzione.  
