@@ -40,3 +40,50 @@ Le persone sono anche molto ingenue nella scelta dei numeri e dei caratteri da u
 >- Quasi invisibili
 
 ## Come nascondere le password - Server Side
+- Gli amministratori conoscono le password degli utenti
+- Le debolezze delle infrastrutture possono esporre le password
+- I malintenzionati possono leggere le password
+Soluzione *Funzioni Hash*
+![[Pasted image 20240418162951.png|center|500]]
+L'utente invia la password, il servizio la traduce in funzione hash e verifica se il codice è uguale all'hash nel loro database:
+![[Pasted image 20240418163120.png|center|500]]
+### Salt
+Stringa randomica per ogni utente, che viene memorizzata dal db insieme alla password
+`user|salt|H(password||salt)`![[Pasted image 20240418170651.png|center|500]]
+## Come craccare gli hash
+![[Pasted image 20240418170800.png|center|500]]
+### John The Ripper
+Gli strumenti di Password Cracking sono molto utili:
+- Per verificare le debolezze delle proprie password
+- Per eseguire attacchi di sicurezza
+`JohnTheRipper`:
+- Uno dei più famosi strumenti di password cracking
+- Modalità dizionario e modalità Bruteforce
+- Supporta molti algoritmi di crittografia
+- Implementazione multi-piattaforma
+#### Modalità
+>`wordlist
+>- Verifica le coincidenze utilizzando un dizionario in input
+>- L'attacco va a buon fine se il dizionario contiene la password
+>- `john -w=<dictionary> --rules[=SECTION] unshadowed`
+
+>Single-Crack
+>- Proverà a fare il crack della password utilizzando le informazioni di login
+>- `john --single unshadowed`
+
+>Incremental
+>- Attacchi di Bruteforce
+>- `john --incremental:<set> unshadowed
+>- Abbastanza lento
+
+>External
+>L'utente può decidere che strumenti e metodi usare
+
+Le regole delle modalità di attacco sono chiare in `john.conf`.
+## Hashcat
+Hashcat può essere utilizzato per un password cracking più veloce sfruttando la potenza della GPU:
+
+```Kali
+hashcat -m 0 -a 0 -0 cracked.txt hashed.txt /usr/share/wordlists/rockyou.txt
+```
+(slide 42)
