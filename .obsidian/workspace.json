@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "17e71aea2de23168",
+            "id": "66f0d1fbda7f02ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 9 - Password.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 9 - Password.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 9 - Password.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md"
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 9 - Password.md"
               }
             }
           },
@@ -173,6 +173,14 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240418155451.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240418155400.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240418155344.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240418155313.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240418155237.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240418155040.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 9 - Password.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240412163602.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240412163130.png",
@@ -180,12 +188,7 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240412162600.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240412154653.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150442.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150154.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150133.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240409150058.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240408121427.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
@@ -197,7 +200,6 @@
     "Architettura.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
     "_temp/AE/Punti focus.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
     "_temp/AE",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3.1 - Bash.md",
@@ -210,7 +212,6 @@
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto/Bozza.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/amarcio.html",
