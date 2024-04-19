@@ -86,4 +86,19 @@ Hashcat può essere utilizzato per un password cracking più veloce sfruttando l
 ```Kali
 hashcat -m 0 -a 0 -0 cracked.txt hashed.txt /usr/share/wordlists/rockyou.txt
 ```
-(slide 42)
+## Cracking di password Online - Hydra
+Spesso si desidera di ottenere l'accesso a servizi online:
+- `hydra -l <user name> -p <password> <protocol://hostname>`
+- `hydra -L <user list> -p <password list> <protocol://hostname>`
+>Esempio:
+>`hydra -t 4 -l dale -P /usr/share/wordlists/rockyou.txt -vV 10.10.10.6 ftp`
+>- `hydra` : Esegue lo strumento Hydra
+>- `-t 4` : Numero di connessioni parallele per target
+>- `-l [user]` : Punta all'utente che si sta cercando di compromettere
+>- `-P [path to dictionary]` : Infica il file contenente la lista delle possibili password
+>- `-vV` : Configura la verbose mode su "very verbose", mostra la combinazione login+pw per ogni tentativo
+>- `[machine ip]` : L'indirizzo IP della macchina target
+>- `ftp/protocol` : Configura il protocollo
+
+## Password cracking in windows
+DA FINIRE
