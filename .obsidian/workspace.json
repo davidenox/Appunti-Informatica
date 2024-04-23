@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -171,10 +171,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5a8b99f91a24654b",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240423151815.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240423151723.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240423151652.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240422121707.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240422121346.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240422121343.png",
@@ -185,9 +189,7 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240422113426.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240422113404.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240422112617.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240422112555.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 9 - Password.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240418170800.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
@@ -209,8 +211,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 8 - Memory Abstraction.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",
