@@ -225,5 +225,47 @@ myFirstArr[0] = "nuovo valore" // Modifica
 myFirstArr.push("ciao") // Aggiunge alla fine
 myFirstArr.unshift("ueue") // Aggiunge all'inizio
 myFirstArr[10] = "ciao" //aggiunge al decimo posto
-myFirstArr.pop() // Ri
+myFirstArr.pop() // Rimuove l'ultimo elemento
+myFirstArr.shift() // Rimuove il primo elemento
+delete myFirstArr[10] // Rimuove l'elemento ma non sposta gli indici dell'array
+myFirstArr.length // Lunghezza dell'array
+// Svuotare l'array:
+myFirstArr = []
+myFirstArr.length = 0
 ```
+### Slicing
+```js
+let myArr = ["a", "b", "c", "d", "e"];
+myArr = myArr.slice(1, 4); // ["b", "c", "d"]
+myArr.splice(3,2); //ritorna ["d","e"]
+// Ora l'array è ["a", "b", "c"]
+```
+### Loop, join e search
+```js
+let colori =["rosso","verde","blu"];
+
+//loop
+colori.forEach(function(colore){
+	console.log(colore);
+});
+
+//join
+let list = colori.join(" - "); // "rosso - verde - blu"
+
+//search
+let a = ["a", "b", "a", "b", "a"];
+console.log(a.indexOf("b")); //1
+```
+### Map
+Metodo che serve a "convertire" (mappare) un array in un altro. Esempio: dato un array di stringhe, generiamo un array che contiene la lunghezza delle stringhe
+```js
+let a = ["pippo", "pluto", "paperino"];
+a.map((item, index, array) => item.lenght);
+// Ritorna [5, 5, 8]
+```
+### Reduce
+Metodo che serve a calcolare un singolo valore dell'array.
+```js
+[1,2,3].reduce((ac, item) => ac + item); //6
+```
+(Slide 95)
