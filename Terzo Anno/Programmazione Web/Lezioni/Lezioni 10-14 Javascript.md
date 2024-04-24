@@ -102,4 +102,128 @@ Ogni dato appartiene ad un *tipo*:
 | \|\|      | OR     |
 | !         | NOT    |
 ## Funzioni
-Slide 51
+Sono un modo pratico per *raggruppare* dei comandi e per *richiamare* più volte lo stesso codice.
+```js
+// Dichiarazione
+function calcolatrice(){
+	let n1, n2, somma;
+	n1 = prompt("Primo numero");
+	n2 = prompt("Secondo numero");
+	alert("La somma è "+(Number(n1)+Number(n2)));
+}
+// Invocazione
+calcolatrice();
+```
+
+Le funzioni possono accettare dei parametri di ingresso e ritornare un valore in uscita:
+```js
+function somma(a, b){
+	let sum = a + b;
+	return sum;
+}
+```
+
+Una funzione deve avere un nome descrittivo ( es. getName, runCalculator, fillResults, checkIsOnline ecc..), ma soprattutto una funzione deve fare *esattamente una* cosa, cioè l'operazione descritta nel suo nome. Se fa più cose, probabilmente è utile suddividere il codice in due funzioni.
+### Passare funzioni a funzioni
+```js
+function ask(question, yes, no){
+	if(confirm(question)) yes()
+	else no();
+}
+// Funzione di callback
+ask(
+	"Do you agree?",
+	function() { alert("You agreed.");},
+	function() { alert("You canceled the operation".);}
+);
+```
+### Arrow functions
+Si tratta di un sistema più sintetico di specificare una funzione
+```js
+let somma = (a, b) => a + b;
+```
+## Oggetti
+Un **oggetto** è una *lista di coppie proprietà-valore* racchiuse in parentesi angolati. Le proprietà possono essere solo stringhe o simboli. Un valore può essere un tipo primitivo, un altro oggetto o una funzione.
+Da qui *JSON* (JavaScript Object Notation)
+```js
+let studente = {
+	name: "Pierpaolo",
+	age: 80,
+	scores: [1,2,3],
+	classes: {pw: 30, fi: 18}
+};
+```
+Non esistono valori privati.
+```js
+let studente = {}; //oggetto vuoto
+studente = new Object(); // stessa cosa
+
+studente.voto = 30; //aggiungo proprietà e valore
+
+console.log(studente.voto); //30
+
+delete studente.voto;//elimino proprietà con annesso valore
+console.log(studente.voto) //undefined
+```
+### Copiare un oggetto
+```js
+let a = {nome; "pippo"};
+let b = a;
+```
+![[Pasted image 20240424153942.png|center|500]]
+
+`a` e `b` sono dei riferimenti allo stesso oggetto:
+- Copiando `a` in `b`, copiamo solo il riferimento;
+- Se facciamo `a.nome = "pluto"`, otterremo anche che `b.nome` è "pluto".
+### Garbage collection
+Tutte le variabili che creiamo occupano memoria, che viene allocata dinamicamente. Un algoritmo ( *garbage collector* ) capisce gli oggetti non più raggiungibili dallo script e rilascia la memoria.
+### Metodi
+Un oggetto può avere tra le sue proprietà anche delle funzioni che chiameremo *metodi*.
+```js
+let a = {"name": "pippo"};
+a.saluta = function(){
+	alert("Ciao sono pippo");
+}
+a.saluta()
+```
+#### This
+può essere utile nei metodi riferirci ad altre proprietà nell'oggetto:
+```js
+let a = {"name": "pippo"};
+a.saluta = function(){
+	alert("Ciao sono "+this.name);
+}
+```
+### Costruttori
+Per creare oggetti uguali o simili possiamo usare delle funzioni:
+```js
+// Costruttore
+function User(name){
+	this.name = name;
+	this.isAdmin = false;
+	//ritorna implicitamente this
+}
+let user = new User("Pippo");
+alert(user.name);// Pippo
+alert(user.isAdmin); //false
+```
+
+Quando viene chiamato un costruttore con `new`:
+- Viene creato un oggetto vuoto e assignato a `this`.
+- Viene eseguita la funzione.
+- Viene ritornato `this`.
+### Altri metodi
+![[Pasted image 20240424155051.png|center|600]]
+## Array
+Si tratta di contenitori di variabili, anche con tipi diversi. Sono oggetti con proprietà numeriche e metodi/attributi per "maneggiarli".
+Ogni *elemento* di un array ha un *indice* che parte da 0.
+![[Pasted image 20240424155229.png|center|500]]
+
+```js
+let arr = [el0, el1, el2]; // Creazione
+myFirstArr[0] = "nuovo valore" // Modifica
+myFirstArr.push("ciao") // Aggiunge alla fine
+myFirstArr.unshift("ueue") // Aggiunge all'inizio
+myFirstArr[10] = "ciao" //aggiunge al decimo posto
+myFirstArr.pop() // Ri
+```
