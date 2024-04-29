@@ -71,3 +71,14 @@ Can exploit also with:
 #### Windows
 - `&, &&`
 ( SLIDE 12 )
+## Command Injection
+Qualsiasi codice eseguibile in lato server che utilizza l'input del client per interagire con l'OS può essere utilizzato per l'inject di comandi al SO.
+![[Pasted image 20240429121824.png|center|500]]
+![[Pasted image 20240429121842.png|center|500]]
+![[Pasted image 20240429121906.png|center|600]]
+![[Pasted image 20240429121929.png|center|600]]
+## Reverse shell
+![[Pasted image 20240429122010.png|center|500]]
+![[Pasted image 20240429122031.png|center|500]]
+## Mitigazione di Command Injections
+(Slide 19)
