@@ -81,4 +81,4 @@ Qualsiasi codice eseguibile in lato server che utilizza l'input del client per i
 ![[Pasted image 20240429122010.png|center|500]]
 ![[Pasted image 20240429122031.png|center|500]]
 ## Mitigazione di Command Injections
-(Slide 19)
+Validazione dell'input: Esegue la validazione di tutti gli input degli utenti per evitare caratteri pericolosi (ad esempio `; | >`...).
