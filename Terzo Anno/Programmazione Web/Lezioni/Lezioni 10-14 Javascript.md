@@ -312,3 +312,115 @@ Oltre ad `alert`, `prompt` e `confirm`, l'oggetto "window" ha altre funzioni ("m
 - `setInterval(funz_da_chiamare, time)`: Richiama la funzione *ciclicamente* dopo `time` millisecondi
 - `clearTimeout` e `clearInterval` interrompono le funzioni precedenti.
 # Eccezioni: a che servono?
+Indicano che qualcosa è andato storto...
+`es. rgbygiiygiu();//ReferenceError: rgbygiiygiu is not defined`
+Un'eccezione può essere un qualunque tipo di dato.
+Il frammento di codice "lancia" un'eccezione (*throw*) che può essere gestita (*catch*)
+1. Interrompe la normale esecuzione;
+2. Cerca una routine in grado di risolvere il problema (catch);
+3. Se "gestita", il flusso continua da dopo il blocco "catch".
+ES:
+```js
+function getMonthName(monthId) {
+if (monthId == 1) { return “Gennaio”;}
+else if (monthId == 2) { return “Febbraio”;}
+/* … */
+else if (monthId == 12) { return “Dicembre”;}
+else {
+throw “Il mese non e’ valido”;
+}
+//C'è un problema, lancio l'eccezione
+
+}
+function f(myMonth) {
+try {
+monthName = getMonthName(myMonth);
+}
+catch (e) {
+monthName = "unknown”;
+}
+finally {
+// eseguita in ogni caso (ad es. chiudi un file)
+}
+}
+// Gestisco l'eccezione
+```
+## Error Object
+Si tratta di una struttura dati "errore generico" per l'eccezione. Ha due proprietà:
+1. `name`: Errore sintetico ("DOMException");
+2. `message`: Descrizione verbosa dell'errore.
+`throw ( new Error("The message"));`
+# Approfondiamo le funzioni
+## Closure
+### Var e Let
+- Lo *scope* di `var` è il *functional block* più vicino
+- Lo *scope* di `let` è l'*enclosing block* più vicino
+![[Pasted image 20240503121622.png|center|500]]
+
+>[!danger]- Se dimentichiamo di dimenticare una variabile, diventerà una proprietà dell'oggetto `window`
+
+## Funzioni e oggetti
+Possiamo definire le funzioni *dentro* altre funzioni.
+La funzione `nested` può accedere allo scope della funzione che la include (oltre che allo scope globale).
+![[Pasted image 20240503121809.png|center|500]]
+### Scope e funzioni nested
+```js
+function molto_fuori() {
+	let a = 5;
+	function fuori() {
+		let b = 6;
+		function dentro() {
+			let c = 7;
+			console.log(a,b,c);
+			}
+		return dentro();
+	}
+	return fuori();
+}
+molto_fuori();
+```
+![[Pasted image 20240503121943.png|center|200]]
+
+L'inner function *può* accedere allo scope delle outer functions, mentre non è possibile il viceversa.
+### Funzioni che ritornano funzioni
+```js
+function multisum(p1, a, b) {
+	let x = p1;
+	function sum(a, b) {
+		return x * (a + b);
+	}
+	return sum(a,b);
+}
+/*
+multisum(10, 1,2) <- torna 30
+La funzione "multisum" ritorna l'output di "sum", ovvero ritorna un numero*/
+function multisum(p1) {
+	let x = p1;
+	return function sum(a, b) {
+		return x * (a + b);
+	}
+}
+/*
+multisum(10); <- torna una funzione
+multisum(10)(1,2) <- torna 30
+*/
+```
+## Closure
+![[Pasted image 20240503122439.png|center|500]]
+### Esempio di closure
+```js
+function salutatore(name) {
+	let text = ’Ciao' + name; // Local variable
+	let diCiao = function() { alert(text); }
+	return diCiao;
+}
+
+let s = salutatore(’Lorenzo');
+s(); // alerts ”Ciao Lorenzo"
+```
+"s" non memorizza solo il return della funzione "salutatore" (che è una funzione), ma anche le variabili appartenenti al suo scope (ad es. la variabile "text").
+### Perché le closure sono utili?
+![[Pasted image 20240503122709.png|center|600]]
+# Approfondiamo gli oggetti
+## Costruttori, prototipi ed ereditarietà
+### This
