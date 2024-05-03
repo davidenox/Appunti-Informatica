@@ -268,4 +268,47 @@ Metodo che serve a calcolare un singolo valore dell'array.
 ```js
 [1,2,3].reduce((ac, item) => ac + item); //6
 ```
-(Slide 95)
+
+## Built-in Objects
+### Date
+L'oggetto built-in *Date* ha metodi e costanti per le date ( js non ha il tipo primitivo "data").
+```js
+today = new Date() // data di oggi
+var Xmas95 = new Date("December 25, 1995 13:30:00”)
+Xmas95 = new Date(1995, 11, 25)
+var Xmas95 = new Date(1995, 11, 25, 9, 30, 0)
+
+Xmas95.getMonth() // ritorna 11
+Xmas95.getFullYear() //ritorna 1995.
+getTime() // ritorna i millisecondi dal 1-1-1970
+```
+### Typeof e Instanceof
+- `typeof true;` Restituisce `boolean`.
+- `typeof 62;` Restituisce `number`.
+
+- `let theDay = new Date(1995, 12, 17);`
+- `theDay instanceof Date;` Restituisce `true`.
+### Math
+L'oggetto built-in *Math* ha metodi e costanti per operazioni matematiche.
+
+![[Pasted image 20240503114412.png|center|500]]
+
+```js
+Math.random() // 0.9485474
+```
+
+### JSON
+È utile convertire oggetti in stringhe ( e viceversa ), ad esempio per importare/passare dati ad un server.
+```js
+JSON.stringify(obj);
+JSON.parse(objString);
+```
+### Window
+L'oggetto `window` rappresenta la finestra del browser.
+![[Pasted image 20240503114736.png|center|600]]
+#### Funzioni dell'oggetto window
+Oltre ad `alert`, `prompt` e `confirm`, l'oggetto "window" ha altre funzioni ("metodi") utili:
+- `setTimeout(funz_da_chiamare, time)`: Richiama la funzione scelta dopo `time` millisecondi.
+- `setInterval(funz_da_chiamare, time)`: Richiama la funzione *ciclicamente* dopo `time` millisecondi
+- `clearTimeout` e `clearInterval` interrompono le funzioni precedenti.
+# Eccezioni: a che servono?
