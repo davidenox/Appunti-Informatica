@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md"
               }
             }
           },
@@ -171,8 +171,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "5a8b99f91a24654b",
   "lastOpenFiles": [
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503122709.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503122439.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503121943.png",
@@ -181,14 +189,9 @@
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503114736.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503114412.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240429122031.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240429122010.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240429121929.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240429121906.png",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 10 - Introduzione web.md",
@@ -208,9 +211,6 @@
     "_temp/AE/Punti focus.md",
     "_temp/AE",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3.1 - Bash.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 8 - Memory Abstraction.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",
