@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md"
               }
             }
           },
@@ -171,10 +171,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5a8b99f91a24654b",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507154636.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507154321.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507153736.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507153459.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507153023.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507152952.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507152923.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507151018.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507150254.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
@@ -183,15 +192,7 @@
     "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503122709.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503122439.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503121943.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503121809.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503121622.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503114736.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503114412.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240429122031.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240429122010.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240429121929.png",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 10 - Introduzione web.md",
@@ -210,7 +211,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
     "_temp/AE/Punti focus.md",
     "_temp/AE",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3.1 - Bash.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
     "Terzo Anno/Programmazione Web/Coding/parco/aclaudio.html",

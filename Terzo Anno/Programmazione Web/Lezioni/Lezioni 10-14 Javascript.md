@@ -424,3 +424,210 @@ s(); // alerts ”Ciao Lorenzo"
 # Approfondiamo gli oggetti
 ## Costruttori, prototipi ed ereditarietà
 ### This
+Un oggetto può avere come proprietà una funzione. La parola chiave `this` usata dentro la funzione indica l'oggetto che la contiene ( dipende dal contesto, la stessa funzione può indicare come `this` oggetti diversi ).
+Es.
+```js
+var studente = {
+	name: “pippo”,
+	getName : function() {
+		return this.name;
+	}
+}
+```
+
+Attenzione al contesto!
+
+```js
+let x = 9;
+let module = {
+	x: 81,
+	getX: function() { return this.x; }
+};
+
+module.getX(); // 81
+
+let getX = module.getX;
+getX(); // quanto ritorna?
+```
+
+## Prototipi di oggetto
+In JS gli oggetti hanno un prototipo, che è un altro oggetto da cui eredita tutte le proprietà:
+![[Pasted image 20240507150254.png|center|600]]
+
+### Oggetti: Proprietà di base e ereditate
+Quando chiamiamo una proprietà di un oggetto:
+- Prima si cerca tra le proprietà dell'oggetto;
+- Poi tra le proprietà del prototipo;
+- Poi tra le propriettà del prototipo del prototipo `[Prototype chain]`
+Es.
+```js
+pippo.name //trova la proprietà nell'oggetto
+pippo.university //trova la proprietà nel prototipo
+```
+Possiamo vedere se la proprietà è dell'oggetto o del prototipo con:
+```js
+pippo.hasOwnProperty("university");//false
+pippo.__proto__.hasOwnProperty("university");//true
+```
+Quindi possiamo ridefinire (override) alcune proprietà del prototipo.
+### Prototipi di funzione
+*Ogni funzione* ha la proprietà `prototype` il cui valore è un oggetto.
+Scrivendo `student.prototype.university = "Tor Vergata"` assegniamo una proprietà a quell'oggetto.
+**Tutti gli oggetti creati con questo costruttore avranno come prototipo il prototipo della funzione.**
+### Costruttori, prototipi e proprietà
+![[Pasted image 20240507151018.png|center|600]]
+```js
+function Student(name, age) {
+	this.name = name;
+	this.age = age;
+}
+Student.prototype.university = "Tor Vergata";
+let pippo = new Student("Pippo", 20);
+```
+Cosa succede?
+1. Viene creato un nuovo oggetto vuoto;
+2. Viene passato al costruttore (`function Student`), in modo che ci possa riferire con “this”;
+3. Il costruttore setta le proprietà dell’oggetto;
+4. Il costruttore imposta: prototipo dell’oggetto creato = prototipo della funzione
+`Student.prototype` $\rightarrow$ `pippo.__proto__`.
+## Prototipi
+
+>[!important]- Prototipi di funzione
+>È l'istanza di un oggetto che diventerà il prototipo per tutti gli oggetti creati usando la funzione come costruttore.
+>`NomeFunzione.prototype`
+
+>[!important]- Prototipi di oggetto
+>È l'istanza dell'oggetto dal quale l'oggetto è ereditato.
+>`NomeOggetto.__proto__`
+
+```js
+function Student(name, age) {
+	this.name = name;
+	this.age = age;
+}
+Student.prototype.university = "TV";
+let pippo = new Student("Pippo", 20);
+let pluto = new Student("Pluto", 21);
+
+pippo.university;
+pluto. university;
+```
+![[Pasted image 20240507152923.png|center|500]]
+```js
+Student.prototype.university = "La Sapienza";
+pippo.color;
+pluto.color;
+```
+![[Pasted image 20240507152952.png|center|500]]
+```js
+Student.prototype = {university: "La terza"};
+pippo.color;
+pluto.color;
+```
+![[Pasted image 20240507153023.png|center|500]]
+## Bind
+Il metodo `bind` ci permette di definire chi è il "this" per una funzione.
+- Metodo di una funzione $\rightarrow$ la funzione è un oggetto ! 
+```js
+let a = {id: 10};
+let x = function() {return this.id}
+let w = x.bind(a);
+x(); // ritorna undefined
+w(); //ritorna 10
+```
+### Apply e Call: Impostare il "this"
+> `apply` per chiamare una funzione impostando un certo "this" e passando gli argomenti come array;
+> `call` come apply, ma gli argomenti sono passati esplicitamente.
+
+![[Pasted image 20240507153459.png|center|500]]
+### New e Apply
+```js
+function Car(maker, model, year) {
+	this.maker = maker;
+	this.model = model;
+	this.year = year;
+}
+let mycar = new Car(”FIAT", ”500", 1936);
+// oppure …
+let new_car = new Object()
+Car.apply(new_car, [”FIAT", ”500", 1936]);
+```
+# Manipolazione del DOM
+## Document Object Model
+È un'*interfaccia di programmazione* per HTML ( e XML ). Fornisce una mappa strutturata del documento ed i metodi per interfacciarsi con gli elementi.
+![[Pasted image 20240507153736.png|center|500]]
+- Ogni elemento della pagina è un nodo
+- L'elemento radice è "document"
+- "document" ha una serie di proprietà standard
+Es. 
+```js
+let foo = document.getElementById("miodiv").innerHTML;
+```
+foo contiene il contenuto HTML del div con id "miodiv"
+## Selezionare un elemento
+```js
+document.getElementById("miodiv")
+// Ritorna il node associato al div con id “miodiv”
+document.getElementsByTagName("p")
+// Ritorna una NodeList degli elementi “p”
+document.getElementsByClassName(“myclass”)
+// Ritorna una NodeList degli elementi con classe “myclass”
+document.querySelectorAll("p .warning")
+// Permette di usare selettori css e ritorna una NodeList
+```
+Una NodeList è simile a un’array. Esempio:
+```js
+let paragraphs = document.getElementsByTagName("p");
+paragraphs[0]; paragraphs.length
+```
+## Eventi
+![[Pasted image 20240507154321.png|center|500]]
+### Associare un evento ad un elemento
+1. con un attributo HTML
+– `<body onclick="myFunction();”>`
+2. con un metodo
+–`window.onclick = myFunction;`
+–`document.getElementById(”miodiv”).onclick = …`
+3. con `addEventListener`
+–` window.addEventListener("click", myFunction);` $\Leftarrow$ METODO CORRETTO
+## Caricamento degli script
+Il browser quando legge`<script ...>` interrompe la creazione della pagina: scarica lo script e lo esegue. Se mettiamo gli script in cima alla pagina...
+-  Gli script possono non vedere gli elementi della pagina
+-  GLi script possono rallentare il rendering
+Mettiamo gli script in fondo?
+- Se il documento HTML è lungo potremmo attendere troppo
+L'attributo `defer` dice al browser di NON aspettare lo script che verrà scaricato in  background ed eseguito quando il DOM è costruito.
+`async` è come defer, ma lo script viene eseguito appena è pronto.
+![[Pasted image 20240507154636.png|center|500]]
+## Manipolare un nodo
+```js
+let myImage = document.getElementById("someimage");
+let oldSrc = myImage.getAttribute("src");
+myImage.setAttribute("src", "otherimage.jpg2);
+//Leggere attributi di un nodo
+//Scrivere attributi di un nodo
+let myP = document.getElementById("someparagraph");
+myP.innerHTML = "<p>New text</p>";
+//Leggere/Modificare HTML
+myP.style.color = "#fff";
+myP.style.backgroundColor = "#fff"
+```
+### Creare un nodo
+```js
+// crea un nodo ma non lo visualizza (non gli abbiamo detto dove "metterlo"!)
+var newDiv = document.createElement("div");
+// come il precedente ma crea un nodo contenente del testo
+var ourText = document.createTextNode(”Ciao!");
+// mettiamoli dentro un elemento della pagina
+var ourDiv = document.getElementById(”mydiv");
+newDiv.appendChild(ourText);
+ourDiv.appendChild(newDiv)
+ourDiv.insertBefore( newHeading, para );
+// Inserisci il nodo “newHeading” prima del nodo“para”. Entrambi sono contenuti nel nodo genitore “ourDiv”.
+ourDiv.replaceChild( newImg, oldImg );
+// Sostituisce newImg al posto di oldImg
+parentDiv.removeChild( removeMe );
+// Rimuove il nodo removeMe dal suo genitore (parentDiv)
+```
+# Comunicazione asincrona
+DA FARE A LEZIONE
