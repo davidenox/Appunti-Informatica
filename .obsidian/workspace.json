@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d539faf291d0da3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md"
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md"
               }
             }
           },
@@ -154,7 +167,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -173,6 +186,11 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
+    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507154636.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507154321.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507153736.png",
@@ -189,10 +207,7 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503122709.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503122439.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 10 - Introduzione web.md",
@@ -207,9 +222,7 @@
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
-    "Architettura.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
-    "_temp/AE/Punti focus.md",
     "_temp/AE",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
     "Terzo Anno/Programmazione Web/Coding/parco/aanio.html",
