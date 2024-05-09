@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5a8b99f91a24654b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d539faf291d0da3d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md"
               }
             }
           },
@@ -167,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -186,20 +173,23 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151628.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151606.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151548.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151534.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151505.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151241.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509145750.png",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507154636.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507154321.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507153736.png",
     "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507153459.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507153023.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507152952.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507152923.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507151018.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240507150254.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
@@ -207,7 +197,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240503122709.png",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 10 - Introduzione web.md",
@@ -220,8 +209,6 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
     "_temp/AE",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
