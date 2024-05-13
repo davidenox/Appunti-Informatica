@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md"
+                "file": "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md"
               }
             }
           },
@@ -173,21 +173,22 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513115837.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513115501.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513112218.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513112215.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513112014.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513122620.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513122555.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513122533.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513122509.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513122447.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513121926.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513121758.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513121501.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513121316.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513120653.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513120606.png",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
+    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240513104404.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151628.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151606.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151548.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151534.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240509151505.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
@@ -208,7 +209,6 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
     "_temp/AE",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
