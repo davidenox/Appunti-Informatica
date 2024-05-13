@@ -82,3 +82,40 @@ Attacco in 3 fasi
 - Include il file di registro per eseguire il codice PHP
 ![[Pasted image 20240513112218.png|center|600]]
 
+### LFI Exploit - /proc/self/environ
+`include /proc/self/environ`
+- Se Apache ha i diritti di visualizzazione, `include` elencherà i processi correnti, incluse cose come `HTTP_USER_AGENT`
+- Se hai precedentemente modificato il tuo `useragent` per contenere codice php (ad esempio `"<?phpinfo();?>"` invece di `"Mozilla/5.0"`) verrà eseguito come codice php quando viene eseguito environ.
+- Non imbatterti in questo molto spesso, la maggior parte dei sistemi non consente ad Apache di avere permessi di lettura su environ
+### LFI Exploit - PHP Session
+Include il tuo file di sessione php
+- Determina il tuo sessionid dai cookie del browser
+- Il trucco sta nell'identificare dove è archiviato il file della sessione e se l'amministratore ha configurato impostazioni univoche potrebbe rivelarsi difficile.
+- Prova a includere nelle normali posizioni di archiviazione della sessione
+	- `/tmp/sess_mysessionid%00`
+	- `/var/lib/php5/sess_mysessionid%00`
+### LFI Exploit - Lettura dei file
+Legge qualsiasi file sul filesystem.
+Poiché tutti i file inclusi che contengono php vengono eseguiti al momento dell'inclusione, non possiamo mai leggere nessuno dei file php, ma vengono invece eseguiti.
+I filtri PHP ignoreranno questo problema.
+## PHP Filters LFI Use
+`index.php?page=php://filter/read=convert.base64-encode/resource=config`
+Questo codice baserà64 la risorsa "config" (come se fosse `index.php?page=config`, ma con base64′d) con ciò, il tuo codice non verrà eseguito e potrai `base64_decode()` dopo prendi il file `config.php` originale. Questo metodo non avrà bisogno di virgolette magiche ma dovrai avere una versione PHP superiore o uguale a PHP5.
+![[Pasted image 20240513115501.png|center|650]]
+## Ricognizione LFI
+Esiste una cartella?
+Tenta semplicemente di attraversare la directory dentro e fuori dalla directory. Se esiste, l'inclusione funzionerà.
+`index.php?page=../../../../../../var/www/doiexist/../../../../../etc/passwd%00`
+## Protezione LFI
+1. Attiva le virgolette magiche
+2. Configura open_basedir per leggere solo nella cartella web e /tmp
+3. Pulisci l'input dell'utente analizzando "/", "." e "%00" per cominciare
+4. Rimuovere le autorizzazioni di lettura di Apache su access.log
+5. Monitorare /tmp per eventuali aggiunte di file (/tmp viene letto/scritto da tutti)
+6. Se possibile, utilizzare include statiche anziché dinamiche
+	-  `if ($_GET['file'] == 'miapagina'){include('miapagina.php');};`
+# Remote File Inclusion
+Identico a LFi ma prende le risorse da una località remota:
+![[Pasted image 20240513115837.png|center|650]]
+
+> Da vedere DVWA
