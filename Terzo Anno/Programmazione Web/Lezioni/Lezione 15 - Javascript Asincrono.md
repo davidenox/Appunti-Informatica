@@ -77,3 +77,15 @@ main();
 	- *responseText* La risposta ( DOMString )
 ## AJAX con Fetch
 ### Fetch API
+>Fetch
+>- API promise-based per le richieste Ajax
+>- Rimpiazza *XMLHttpRequest*
+>- Ora supportato in tutti i browser moderni
+
+```js
+function doWebRequest(){
+	const url = "..."
+	fetch(url);
+}
+```
+![[Pasted image 20240513104404.png|center|600]]
