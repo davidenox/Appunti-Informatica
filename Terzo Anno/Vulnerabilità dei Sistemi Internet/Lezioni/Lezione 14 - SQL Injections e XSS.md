@@ -314,3 +314,67 @@ Default *BEUST*.
 -  SQLite
 -  Microsoft Access
 -  MongoDB
+## SQLmap: logging
+Registra tutto il traffico HTTP in un file:
+`-t <file_output>`
+Salva le opzioni utilizzate nella riga di comando:
+`--save <file>`
+Verbosità:
+`-v <0…6> (il valore predefinito è 1)`
+`-v 6` è uguale a `–t` ma viene visualizzato nella console.
+## SQLmap: Enumerazione
+*Obbiettivo*: Ottenere dati da tabelle DBMS
+Cosa puoi ottenere?
+-  Versione DBMS, sistema operativo, architettura e livello di patch: `-f`
+-  Banner DBMS: `-b`
+-  Nome host del server DBMS: `--hostname`
+-  Utente DBMS dell'applicazione: `--current-user`
+-  DB corrente dell'applicazione: `--current-db`
+-  Se l'utente è amministratore DB: `--is-dba`
+-  Elenca gli utenti DBMS `--users`
+-  Elenca tutti gli hash delle password degli utenti DBMS `--passwords`
+	-  sqlmap ha integrato un semplice attacco con dizionario (o JTR)
+-  Elenca i privilegi degli utenti:  `--privileges`
+-  Elenca tutti i database disponibili: `--dbs`
+-  Elenca tutte le tabelle o solo un database `--tables (-D nome_db)`
+-  Elenca tutte le colonne o solo una tabella specifica da un database
+	-  `--columns (-T <nome_tabella> -D <nome_db> )`
+-  Voci della tabella Count: `--count`
+-  Scarica i dati da un database/tabella/colonna
+	-  `--dump (-D, -T, -C per selezionare cosa scaricare)`
+	-  `--dump-all (molto lento)`
+-  Cerca un nome di database, una tabella o un nome di colonna specifico (o parte di esso):
+	-  `--search (-D, -T, -C per specificare cosa cercare)`
+-  Esecuzione di query SQL personalizzate
+	-  `--sql-query <sql_query da eseguire>`
+-  Shell SQL interattiva per eseguire tutte le query SQL personalizzate
+	-  `--sql-shell`
+## SQLmap: file system
+	Leggere e scrivere qualsiasi file sul DBMS OS
+Funziona solo se
+-  `DBMS=mysql|mssql|postgresql`
+-  L'utente DBMS deve disporre di privilegi
+Leggere
+-  `--file-read=<percorso_file>`
+Scrivere
+-  `--file-write=<percorso_file_locale>`
+-  `--file-dest=<percorso_file_remoto>`
+## SQLmap: pwnage
+	Prende l'accesso dal DBMS OS e dalla rete interna
+Funziona solo per
+-  DBMS=mysql|mssql|postgresql
+-  L'utente DBMS deve disporre di privilegi
+Cosa puoi fare?
+-  Ottieni una shell inversa
+-  Stabilire una connessione VNC
+Per eseguire comandi del sistema operativo
+-  `--os-cmd=<comando>`
+Per ottenere un guscio inverso
+- `--os-shell`
+Per ottenere una shell meterpreter o VNC
+-  `--os-pwn`
+-  `--msf-percorso=<percorso>`
+Escalation dei privilegi della procedura di archiviazione:
+-  `--bof`
+# Cross Site Scripting (XSS)
+NON SO SE È DA FARE
