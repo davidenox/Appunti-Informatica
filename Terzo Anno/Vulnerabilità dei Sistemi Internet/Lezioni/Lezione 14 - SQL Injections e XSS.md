@@ -233,3 +233,40 @@ login.executeUpdate();
 ```
 
 ## Blind SQL Injections
+Supponiamo che `http://xyz.com/items.php?id=2` restituisca una query soggetta a SQL injection
+`SELECT title, body FROM items WHERE id=2`
+Vedremo una risposta diversa agli URL di seguito?
+- `http://xyz.com/items.php?id=2 AND 1=1`
+- `http://xyz.com/items.php?id=2 AND 1=2`
+Quale sarà il risultato di `../items.php?id=2 AND SUBSTRING(user,1,1) = 'a'`
+- Uguale a 1 se l'utente inizia con a
+- altrimenti uguale a 2!
+Quindi possiamo usarlo per scoprire indirettamente cose sulla struttura e sul contenuto del database!
+
+Un'iniezione SQL in cui non è la risposta in sé a essere interessante, ma è il tipo di risposta, o la mancanza di risposta, a far trapelare informazioni a un utente malintenzionato
+Gli errori possono anche far trapelare informazioni interessanti: ad es. per
+`IF <qualche condizione> SELECT 1 ELSE 1/0`
+il messaggio di errore può rivelare se `<alcune condizioni>` sono vere.
+In modo più subdolo, il tempo di risposta potrebbe comunque far trapelare informazioni
+`.. IF(SUBSTRING(user,1,1) ='a', BENCHMARK(50000, … ), null) ..`
+## MSSQL
+`; create table #output (id int identity(1,1), output nvarchar(255) null);`
+`; insert #output (output) exec @rc = master..xp_cmdshell ‘whoami';`
+# SQLmap
+	Uno strumento per le SQL Injection
+
+![[Pasted image 20240514141956.png|center|500]]
+`$query = “SELECT name,status,age FROM user WHERE name=‘” . $_REQUEST[‘search’]. ‘” AND age > 42”;`
+## SQLmap: target selection
+`-u <url> (e.g. http://10.0.0.X/cat.php?id=1)`
+`-r <saved_request_file>`
+![[Pasted image 20240514142143.png|center|500]]
+## SQLmap: Injection points
+```
+GET parameters (default)
+POST parameters (default)
+Cookie Header values (if --level>=2)
+User-Agent value (if --level>=3)
+Referer header value (if --level>=3)
+```
+SLIDE 75
