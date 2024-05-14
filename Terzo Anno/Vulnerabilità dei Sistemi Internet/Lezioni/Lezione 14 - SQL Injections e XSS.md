@@ -196,4 +196,40 @@ Successo! otteniamo una pagina Web valida e popolata Quindi questa dichiarazione
 La maggior parte dei database SQL ha una tabella in ciascun database chiamata "`information_schema`", che è sempre interessante. Possiamo prendere tutti i nomi delle tabelle e dei nomi delle colonne da esso. Una volta che conosci il tipo e la versione del DB, queste informazioni sono facili da determinare.
 Possiamo utilizzare il seguente SQLi per estrarre queste informazioni:
 ![[Pasted image 20240513154243.png|center|500]]
-SLIDE 48
+### Esempio
+`UNION SELECT 1, login, 3, 4 FROM users`
+Rivela un login di "admin"
+`UNION SELECT 1, password, 3, 4 FROM users`
+Rivela una password in hash, che convertita rivela la vera password.
+## Capire il problema
+La causa principale di molti problemi con l'input è che un server web:
+- innanzitutto sostituisce alcuni input dell'utente in una stringa
+- quindi analizza la stringa per interpretarne il significato
+Analizzando prima e poi sostituendo, possiamo evitare alcuni problemi.
+Perché?
+I caratteri di controllo nell'input dell'utente non possono più influenzare globalmente l'analisi
+## Evitare le SQL Injection
+>Convalida dell'input
+>- È possibile impedire l'iniezione SQL se si adotta una tecnica di convalida dell'input in cui l'input dell'utente viene autenticato rispetto a un insieme di regole definite per lunghezza, tipo e sintassi e anche rispetto alle regole aziendali
+
+>Evitare SQL dinamico
+>- Utilizza API di query con parametri fortemente tipizzate con indicatori di sostituzione dei segnaposto, anche quando si chiamano procedure memorizzate.
+>- Prestare attenzione quando si utilizzano le procedure memorizzate poiché generalmente sono sicure dall'iniezione. Tuttavia, fai attenzione poiché possono essere iniettabili (ad esempio tramite l'uso di exec() o concatenando argomenti all'interno della procedura memorizzata).
+
+**Vulnerabile**:
+```
+String updateString = "SELECT * FROM Account WHERE
+Username" + username + " AND Password = " + password;
+stmt.executeUpdate(updateString);
+```
+
+*Sicuro*:
+```
+PreparedStatement login = con.preparedStatement("SELECT * FROM Account WHERE Username = ? AND
+Password = ?" );
+login.setString(1, username);
+login.setString(2, password);
+login.executeUpdate();
+```
+
+## Blind SQL Injections
