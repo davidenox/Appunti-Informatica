@@ -269,4 +269,48 @@ Cookie Header values (if --level>=2)
 User-Agent value (if --level>=3)
 Referer header value (if --level>=3)
 ```
-SLIDE 75
+## SQLmap: finding SQLi
+`./sqlmap.py -u “http://10.0.0.X/cat.php?id=1”`
+Comportamento predefinito
+- Testare tutti i parametri GET e/o POST
+- Testare tutti i tipi di attacco SQLi
+- Testare tutti i tipi di database
+Potrebbe richiedere molto tempo.
+
+> `--level=<level>`(1-5 default 1)
+> Con `--level=5` tutte le combinazioni dei payload, prefissi e suffissi verranno testati su tutti i punti di injection disponibili.
+> Aumenta il rumore ma efficace.
+
+>`--risk=<risk>`(1-3 default 1)
+>- Incrementa il rischio di compromettere il db
+>- Per testare con `OR` usare `--risk=3`
+>- `UPDATE user SET disabled=1 WHERE email=a@lol.it AND 1=1 #`
+>- `UPDATE user SET disabled=1 WHERE email=a@lol.it OR 1=1 #`
+
+>`-p <param>`
+>- Per specificare il parametro da testare per la injection
+
+## SQLmap: Tecniche
+	--technique=SU
+Default *BEUST*.
+*B*oolean-based Blind:
+- Basato sul cambio di pagina, i dati sono dedotti, carattere per carattere
+*E*rror-based:
+- Utilizza gli errori mostrati per estrarre dati
+*U*nion query-based:
+- Cambia le query SQL per estrarre dati
+*S*tacked query:
+- Utilizza le semi-colonne per l'inkections di comandi SQL
+*T*ime-based blind:
+- Basato su tempo, i dati sono dedotti, carattere per carattere
+## SQLmap: DB supportati:
+	--dbms=mssql|mysql|postgresql|oracle|...
+- Microsoft SQL Server
+-  MySQL
+-  PostgreSQL
+-  Oracle
+-  IBM DB2
+-  Firebird
+-  SQLite
+-  Microsoft Access
+-  MongoDB
