@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a7f60b6287f8cd1a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md"
               }
             }
           },
@@ -154,7 +167,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -171,8 +184,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d539faf291d0da3d",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240520120130.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240520115310.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240520115111.png",
+    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240520114752.png",
+    "README.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240514142143.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240514141956.png",
@@ -180,12 +200,7 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513154131.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513150629.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513150543.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513150453.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513150253.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513150243.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240513150121.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
@@ -200,7 +215,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 10 - Introduzione web.md",
-    "README.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 9 - Password.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",

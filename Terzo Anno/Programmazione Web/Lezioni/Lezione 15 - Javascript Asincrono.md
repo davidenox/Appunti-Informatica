@@ -89,3 +89,75 @@ function doWebRequest(){
 }
 ```
 ![[Pasted image 20240513104404.png|center|600]]
+# Promise
+Una *Promise* è un oggetto usato come **placeholder** per il risultato futuro di una operazione asincrona.
+- Un contenitore per un valore assegnato in modo asincrono
+- Un contenitore per un valore futuro
+> Vantaggi:
+> - Non serve più un evento ed una callback per gestire il risultato asincrono
+> - Le promises si possono concatenare evitando il *callback hell*
+
+- "Producing code" è un codice che può richiedere del tempo;
+- "Consuming code" è il codice che deve attendere il risultato.
+Una promise è un oggetto che collega producing code e consuming code.
+```js
+let myPromis = new Promise(function(myResolve,myReject){
+	//producing code
+	myResolve(); //when successful
+	myReject(); //when error
+});
+//consuming code
+myPromise.then(
+	function(value){/*code if successful*/}
+	function(error){/*code if some error*/}
+);
+```
+## Ciclo di vita
+![[Pasted image 20240520114752.png|center|600]]
+## Creare una promise
+```js
+let promise = new Promise(function(resolve,reject){
+	//la funzione viene eseguita automaticamente quando la promessa viene costruita
+	setTimeout(()=> resolve("Done"),1000);
+	//dopo un secondo arriva il segnale che il lavoro è terminato con il risultato "Done"
+});
+```
+![[Pasted image 20240520115111.png|center|500]]
+```js
+let promise = new Promise(function(resolve,reject){
+	setTimeout(()=> reject(new Error("Whoops!")),1000);
+	//dopo un secondo arriva il segnale che il lavoro è terminato con un errore
+});
+```
+![[Pasted image 20240520115310.png|center|500]]
+### Consumare una promise: `then`
+```js
+let promise = new Promise(function(resolve,reject){
+	setTimeout(()=> resolve("Done"),1000);
+});
+
+promise.then(
+	result => alert(result), //"Done" dopo un secondo
+	error => alert(error) //non esegue
+);
+```
+### Gestire gli errori: `catch`
+```js
+let promise = new Promise(function(resolve,reject){
+	setTimeout(()=> reject(new Error("Whoops!")),1000);
+});
+//.catch(f) è la stessa cosa di promise.then(null, f)
+promise.catch(alert); //mostra "Error: Whoops!"dopo un secondo 
+```
+## Concatenare Promise
+![[Pasted image 20240520120130.png|center|500]]
+### ...finally
+```js
+.finally(() => alert("Promise Ready"))
+.then(result => alert(result));
+```
+Oppure
+```js
+.finally(() => alert("Promise Ready"))
+.catch(err => alert(err));
+```
