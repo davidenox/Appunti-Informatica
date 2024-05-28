@@ -115,12 +115,12 @@ Poiché l’incremento del clock del processore ha raggiunto un limite fisico, i
 Il parallelismo si può ottenere in due diversi modi:
 - *Parallelismo a livello di istruzione*: il parallelismo è sfruttato all’interno delle istruzioni per ottenere un maggior numero di istruzioni al secondo;
 - *Parallelismo a livello di processore*: più CPU collaborano per risolvere lo stesso problema.
-## Pipelining
+# Pipelining
 
 Una limitazione nella velocità di esecuzione delle istruzioni è rappresentato dal prelievo delle istruzioni dalla memoria.
 Per alleviare questo problema, i calcolatori sono stati dotati della capacità di poter prelevare in anticipo le istruzioni dalla memoria, in modo da averle già a disposizione nel momento in cui dovessero rendersi necessarie. Le istruzioni venivano memorizzate in un insieme di registri chiamati buffer di prefetch, dai quali potevano essere prese nel momento in cui venivano richieste, senza dover attendere che si completasse una lettura della memoria.
 In pratica la tecnica di *prefetching* divide l’esecuzione dell’istruzione in due parti: il prelievo dell’istruzione e la sua esecuzione effettiva. Il pipeline divide l’esecuzione di un’istruzione in un numero maggiore di parti che possono essere eseguite in parallelo; ciascuna di queste parti è gestita da componenti hardware dedicati.
-### Processori con più pipeline
+## Processori con più pipeline
 
 Avere due pipeline è sicuramente meglio di averne una sola. 
 Questa architettura è stata utilizzata inizialmente dall’Intel x486:
@@ -129,31 +129,31 @@ Questa architettura è stata utilizzata inizialmente dall’Intel x486:
 
 Affinché le due istruzioni possano essere eseguite in parallelo, non devono però esserci conflitti nell’uso delle risorse (cioè i registri) e nessuna delle due istruzioni deve dipendere dal risultato dell’altra.
 Inoltre, non tutte le istruzioni possono essere svolte in parallelo (l’input di una istruzione può dipendere dal risultato della precedente) e sarebbero necessarie troppe componenti hardware per le varie unità che andrebbero poi sincronizzate.
-#### Architetture superscalari
+### Architetture superscalari
 
 Viene utilizzata inizialmente da Intel Core. Il processore dispone di una sola pipeline con più unità funzionali in corrispondenza di alcuni stadi.
 
 ![[Pasted image 20240528120811.png|center|600]]
 
 Affinché l’architettura abbia senso è necessario che la velocità di emissione della fase S 3 sia più alta rispetto a quella della fase S4. La fase S4 può avere delle unità ALU duplicate.
-### Parallelismo a livello di processore
+## Parallelismo a livello di processore
 
 Il parallelismo nel chip aiuta a migliorare le performance della CPU: con il pipelining e le
 architetture superscalari si può arrivare ad un fattore di miglioramento da 5 a 10.
 Però per incrementare drasticamente le performance di un calcolatore occorre progettare sistemi con molte CPU, in questo caso si può arrivare ad ottenere un incremento di 50, 100, o anche più.
 Esistono tre differenti approcci: *computer con parallelismo sui dati*, *multiprocessori*,
 *multicomputer*.
-#### Computer con parallelismo sui dati
+### Computer con parallelismo sui dati
 
 Ci sono due schemi differenti:
 - Processori SIMD (Single Instruction-stream Multiple Data-stream): sono costituiti da un vasto numero di processori identici che eseguono la stessa sequenza di istruzioni su insieme differenti di dati;
 - Processori vettoriali: un processore vettoriale esegue la stessa sequenza di operazioni su coppie di dati, ma tutte le addizioni sono svolte da un unico sommatore strutturato in pipeline.
 Entrambe le architettura lavorano su array di dati, mentre il primo utilizza tanti sommatori quanti gli elementi del vettore, il secondo utilizza un solo sommatore e un unico registro vettoriale.
-#### Multiprocessori
+## Multiprocessori
 
 È un’architettura costituita da più CPU che condividono una memoria comune.
 Poiché ciascuna CPU può leggere o scrivere qualsiasi zona della memoria comune, le CPU devono sincronizzarsi via software.In questo caso le CPU hanno la necessità di interagire in modo così profondo che il sistema è detto fortemente accoppiato (tightly coupled).
-#### Multicomputer
+## Multicomputer
 
 Multiprocessori con molte CPU sono difficili da realizzare, per via del problema delle connessioni di ciascuna CPU verso la memoria comune.
 I progettisti hanno superato il problema abbandonando il concetto di memoria comune e
@@ -172,7 +172,7 @@ I moderni sistemi di memoria possono avere più livelli di cache:
 - *L2*: Cache di secondo livello, generalmente esterna al chip della CPU ma inclusa nel suo involucro, unificata (contenente sia dati che istruzioni) e di dimensioni variabili (da 512 KB a 1 MB).
 - *L3*: Cache di terzo livello, posizionata sulla scheda del processore e di dimensioni più ampie (alcuni MB). Le cache sono di solito organizzate in modo gerarchico, dove il contenuto della cache di livello superiore è incluso nella cache di livello inferiore.
 In sintesi, la memoria cache sfrutta la località dei riferimenti alla memoria per conservare dati frequentemente utilizzati, riducendo così i tempi di accesso e migliorando le prestazioni complessive del sistema, mentre i multipli livelli di cache offrono una gerarchia di velocità e capacità per ottimizzare ulteriormente le prestazioni.
-### RAID
+## RAID
 
 Il **RAID** (Redundant Array of Inexpensive Disks) è una tecnologia che combina diversi dischi in un unico sistema di archiviazione per migliorare le prestazioni, la capacità e/o la ridondanza dei dati. Esistono diversi livelli di RAID, ognuno con specifiche modalità di organizzazione dei dati:
 
@@ -254,7 +254,7 @@ La soluzione non può essere l'assegnazione di indirizzi assoluti di memoria all
 Questo processo si ripete a ogni chiamata di procedura, con le variabili locali che vengono sovrapposte nello stack. Quando una procedura termina, lo spazio assegnato alle sue variabili locali viene liberato. Lo stack può anche essere utilizzato per calcolare espressioni aritmetiche, dove gli operandi vengono inseriti nello stack e le operazioni vengono eseguite utilizzando la logica dello stack. Ad esempio, per eseguire $a_1 = a_2 + a_3$, i valori di a2 e a3 vengono inseriti nello stack, l'addizione viene eseguita e il risultato viene memorizzato in $a1$.
 In alcuni casi, come nel calcolo di espressioni che coinvolgono funzioni, sia le variabili locali che gli operandi possono essere memorizzati nello stack, consentendo un'elaborazione efficiente dell'espressione. 
 In sintesi, lo stack viene utilizzato per gestire le variabili locali delle procedure e come meccanismo per l'elaborazione efficiente delle espressioni, consentendo un'allocazione dinamica della memoria necessaria.
-### ISA
+## ISA
 
 L'ISA è fondamentale poiché costituisce un linguaggio comune comprensibile sia per i compilatori che per l'hardware. Sebbene sia teoricamente possibile eseguire direttamente codice di alto livello sull'hardware, ciò comporterebbe la perdita delle prestazioni ottimali ottenute tramite la compilazione. Inoltre, è preferibile che i
 computer siano in grado di eseguire programmi scritti in vari linguaggi anziché limitarsi a uno solo.
@@ -263,7 +263,7 @@ caratteristiche desiderate per l'ISA. Se le richieste del compilatore non sono r
 Tuttavia, nella pratica, la domanda principale dei potenziali utenti riguarda la compatibilità con i predecessori. Questo comporta la necessità di mantenere l'ISA costante o retrocompatibile con le generazioni precedenti, consentendo ai vecchi programmi di funzionare senza modifiche significative.
 Tuttavia, le nuove macchine possono offrire funzionalità innovative sfruttabili solo dai nuovi software. Pertanto, sebbene gli ingegneri abbiano libertà nella progettazione dell'hardware, l'ISA deve rimanere retrocompatibile con le generazioni precedenti. Un buon ISA, oltre a garantire la retrocompatibilità, offre vantaggi in termini di prestazioni e può influenzare notevolmente la potenza di calcolo e l'efficienza del processore. Un buon ISA si distingue per la capacità di essere implementato efficientemente dalle attuali e future tecnologie, riducendo i costi di produzione e di esecuzione del software.
 Inoltre, un ISA efficace favorisce una compilazione "pulita", offrendo al compilatore un insieme di istruzioni regolari e complete che consentono una scelta ottimale delle alternative di esecuzione. La regolarità e la completezza dell'ISA sono quindi importanti per consentire al compilatore di operare scelte migliori senza limitazioni che potrebbero compromettere l'efficienza del codice generato.
-#### Proprietà del livello ISA
+### Proprietà del livello ISA
 
 Il livello ISA, o Architettura dell'Insieme di Istruzioni, può essere definito come la rappresentazione della macchina dal punto di vista del programmatore in linguaggio macchina. Tuttavia, dato che ormai pochi programmatori scrivono direttamente in linguaggio macchina, possiamo considerare il codice a livello ISA come l'output di un compilatore.Per produrre codice a livello ISA, i progettisti dei compilatori devono comprendere il modello di memoria, i registri disponibili, i tipi di dati e le istruzioni accessibili. Tutte queste informazioni insieme definiscono il livello ISA.
 Inizialmente, si è affermato che aspetti come la microarchitettura, la microprogrammazione, la pipeline o la scalabilità non fanno parte del livello ISA perché non sono visibili direttamente al progettista del compilatore.
@@ -282,7 +282,7 @@ Un aspetto cruciale nel modello di memoria è la semantica della memoria stessa.
 Per risolvere questo problema, i progettisti di sistema possono adottare vari approcci. Ad esempio, la serializzazione di tutte le richieste di accesso alla memoria assicura che ogni operazione sia completata prima dell'emissione della successiva, garantendo l'ordine di esecuzione specificato dal programma. Al contrario, permettere all'hardware di gestire l'ordine richiede istruzioni aggiuntive nel programma per sincronizzare gli accessi alla memoria. Esistono anche modelli di memoria intermedi che bloccano solo
 alcuni accessi, lasciando altri liberi.
 Sebbene queste peculiarità dell'architettura a livello ISA possano creare problematiche per i programmatori, l'abitudine a tali implementazioni è diffusa, poiché molte dipendono da caratteristiche sottostanti come il riordinamento delle istruzioni, le pipeline complesse e i sistemi di cache multipli.
-### Registri 
+## Registri 
 
 I registri sono componenti essenziali di un computer e possono essere divisi in due categorie principali a livello ISA: registri specializzati e registri d'uso generale.
 *Registri specializzati*: Questi includono registri come il Program Counter (PC) e il puntatore allo stack, dedicati a funzioni specifiche e visibili sia a livello ISA che microarchitetturale.
@@ -292,7 +292,7 @@ Solitamente, sistemi operativi o compilatori seguono convenzioni nell'uso di que
 Oltre ai registri visibili ai programmi dell'utente, ci sono registri specializzati visibili solo in modalità kernel che gestiscono cache, memoria, dispositivi di I/O e altre funzionalità hardware. Questi sono utilizzati solo dal sistema operativo.
 Il registro di flag o PSW (Program Status Word) è un registro di controllo che contiene vari bit di varia natura, tra cui i codici di condizione. Questi codici di condizione riflettono lo stato del risultato dell'operazione più recente, come N per indicare un risultato negativo, Z per un risultato uguale a zero, V per indicare un overflow, C per un riporto oltre l'ultimo bit più significativo, A per un riporto oltre il terzo bit (riporto ausiliario) e P per un risultato pari (parità nulla).
 Questi codici di condizione sono utilizzati da istruzioni come CMP (comparazione) e dai salti condizionati. Ad esempio, un'istruzione CMP imposta il codice di condizione in base alla differenza tra due operandi, e un'istruzione successiva come BEQ (branch on equal, "salto se uguali") controlla il bit di condizione Z per decidere se eseguire il salto.Oltre ai codici di condizione, il PSW contiene altri campi specifici della macchina, come la modalità di macchina (utente o kernel), i bit di traccia per il debugging, il livello di priorità della CPU e lo stato di attivazione degli interrupt. Alcuni di questi campi potrebbero essere scrivibili solo in modalità kernel per ragioni di sicurezza e controllo dell'hardware.
-## Indirizzamento
+# Indirizzamento
 **Indirizzamento Immediato**: In questa modalità, l'operando è incorporato direttamente nell'istruzione stessa.
 L'operando è immediatamente disponibile e non richiede un riferimento in memoria separato. Tuttavia, questa modalità presenta limitazioni nella dimensione dell'operando e nel numero di operandi forniti.
 **Indirizzamento Diretto**: Qui, l'indirizzo completo dell'operando in memoria è specificato nell'istruzione.
@@ -305,7 +305,7 @@ Questa modalità è adatta per accedere a variabili globali il cui indirizzo è 
 Gli operandi sono posti sullo stack e le operazioni vengono eseguite utilizzando gli elementi nello stack.
 **Notazione Polacca Inversa**: Si tratta di una notazione per esprimere le espressioni matematiche in cui gli operatori vengono posti dopo gli operandi. Questa notazione è ideale per la valutazione delle formule da parte di un computer dotato di stack.
 Le diverse modalità di indirizzamento hanno vantaggi e limitazioni, e la scelta di una modalità rispetto a un'altra dipende dalle esigenze specifiche della programmazione e dall'architettura del computer utilizzato.
-### Trap e Interrupt
+## Trap e Interrupt
 **Trap**: Le trap sono chiamate di procedura automatiche che vengono attivate quando si verificano determinate condizioni eccezionali causate da un programma. Ad esempio, un'overflow (quando un risultato aritmetico supera la capacità di rappresentazione) può causare una trap. Le trap sono gestite da un gestore di trap, che si occupa di affrontare l'eccezione, come la stampa di un messaggio di errore.
 **Interrupt**: Gli interrupt sono cambiamenti nel flusso esecutivo generati da eventi esterni al programma in esecuzione. Al contrario delle trap, gli interrupt non sono sincroni e possono essere causati da eventi esterni, come la pressione di un tasto o l'arrivo di dati da un dispositivo di input/output. Quando si verifica un interrupt, il controllo viene trasferito a un gestore di interrupt che prende in carico l'evento. Una volta completato il gestore di interrupt, il controllo ritorna al programma interrotto esattamente da dove è stato interrotto.
 Alcuni punti importanti riguardo alle trap e agli interrupt includono:
@@ -333,221 +333,152 @@ Le chiamate di procedura sono istruzioni macchina che richiamano una procedura e
 **Compiti del Linker**: Il linker crea un'immagine dello spazio di indirizzamento virtuale, assegna gli indirizzi di partenza ai moduli e risolve riferimenti a memoria e procedure esterne.
 # Classificazione di Flynn
 
-(18)
+![[Pasted image 20240528135438.png|center|600]]
 
-Parallelismo nel chip
-Obiettivo: far svolgere al chip più compiti alla volta.Parallelismo a livello delle istruzioni
-L’idea è di emettere più istruzioni per ciclo di clock. Ci sono due tipi di CPU a
-emissione multipla: processori superscalari e processori VLIW (“Very Long
-Instruction Word”, con parole di istruzione molto lunghe).
-Le CPU superscalari sono composte da pipeline e più unità funzionali (Figura
-8.2(a)).
+## Parallelismo nel chip
+
+Obiettivo: far svolgere al chip più compiti alla volta.
+
+![[Pasted image 20240528135530.png|center|600]]
+
+### Parallelismo a livello delle istruzioni
+
+L’idea è di emettere più istruzioni per ciclo di clock. Ci sono due tipi di CPU a emissione multipla: processori superscalari e processori VLIW (“Very Long Instruction Word”, con parole di istruzione molto lunghe).
+Le CPU superscalari sono composte da pipeline e più unità funzionali ([[Index#Parallelismo nel chip|Figura 8.2(a)]]).
 I processori VLIW sono in grado di indirizzare le diverse unità funzionali con una
 sola linea di pipeline.
-MULTITHREADING
-Multithreading a grana fine:
-Consente alla CPU di gestire più thread contemporaneamente, commutando tra di essi ad ogni
-ciclo.
-Ogni thread ha il proprio set di registri e l'identificatore del thread viene associato a ciascuna
-operazione.
-Nasconde gli stalli nell'esecuzione delle istruzioni, consentendo ad altri thread di continuare
-l'esecuzione.Multithreading a grana grossa:
-Un thread continua ad emettere istruzioni fino a quando non va in stallo, momento in cui la CPU
-passa immediatamente a un altro thread.
-Potenzialmente meno efficiente del multithreading a grana fine ma richiede meno thread per
-mantenere la CPU occupata.
-Varianti del multithreading a grana fine:
-Un'implementazione "anticipa" gli stalli per approssimare il multithreading a grana fine, riducendo i
-cicli persi.
-L'identificatore del thread viene inserito in ogni operazione nel caso del multithreading a grana fine,
-mentre nel multithreading a grana grossa si svuota la pipeline a ogni commutazione di thread.
-Multithreading simultaneo:
-Ogni thread emette istruzioni fino a quando possibile, ma se uno va in stallo, la CPU inizia
-immediatamente l'esecuzione di un'istruzione di un altro thread per mantenere la CPU pienamente
-impegnata.
-Le moderne CPU utilizzano queste tecniche di multithreading per gestire gli stalli nell'esecuzione
-delle istruzioni e mascherare i tempi di latenza della cache, ottimizzando l'uso dell'hardware e
-migliorando le prestazioni complessive della CPU.
-Tipologie di multiprocessori in un solo chip:
-Multiprocessori omogenei:
-Le CPU condividono le stesse cache di primo e secondo livello oltre alla memoria principale.
+
+![[Pasted image 20240528135725.png|center|600]]
+
+
+# MULTITHREADING
+
+Multithreading **a grana fine**:
+Consente alla CPU di gestire più thread contemporaneamente, commutando tra di essi ad ogni ciclo.
+Ogni thread ha il proprio set di registri e l'identificatore del thread viene associato a ciascuna operazione.
+Nasconde gli stalli nell'esecuzione delle istruzioni, consentendo ad altri thread di continuare l'esecuzione.
+
+Multithreading **a grana grossa**:
+Un thread continua ad emettere istruzioni fino a quando non va in stallo, momento in cui la CPU passa immediatamente a un altro thread.
+Potenzialmente meno efficiente del multithreading a grana fine ma richiede meno thread per mantenere la CPU occupata.
+
+**Varianti del multithreading a grana fine**:
+Un'implementazione "anticipa" gli stalli per approssimare il multithreading a grana fine, riducendo i cicli persi.
+L'identificatore del thread viene inserito in ogni operazione nel caso del multithreading a grana fine, mentre nel multithreading a grana grossa si svuota la pipeline a ogni commutazione di thread.
+
+**Multithreading simultaneo**:
+Ogni thread emette istruzioni fino a quando possibile, ma se uno va in stallo, la CPU inizia immediatamente l'esecuzione di un'istruzione di un altro thread per mantenere la CPU pienamente impegnata.
+Le moderne CPU utilizzano queste tecniche di multithreading per gestire gli stalli nell'esecuzione delle istruzioni e mascherare i tempi di latenza della cache, ottimizzando l'uso dell'hardware e migliorando le prestazioni complessive della CPU.
+
+## Tipologie di multiprocessori in un solo chip
+
+**Multiprocessori omogenei**:
+Le CPU condividono le stesse cache di primo e secondo livello oltre alla memoria principale. 
 Due tipi predominanti:
--Pipeline doppia: Un singolo chip con una duplice pipeline che può raddoppiare il
-throughput, condividendo alcune risorse come le unità funzionali.
--Multiprocessori separati: Più core separati, ognuno contenente una CPU completa e con la
-propria pipeline. Questi core sono meno accoppiati, comportando interazioni più complesse
-tra CPU.
-Multiprocessori eterogenei:
-- Ogni core ha un compito specifico, come decoder audio/video, crittoprocessore o interfacce
-di rete. Queste architetture integrano un calcolatore completo in un unico chip, noto come
-"system on a chip".
-Condivisione delle risorse:
+- *Pipeline doppia*: Un singolo chip con una duplice pipeline che può raddoppiare il throughput, condividendo alcune risorse come le unità funzionali.
+- *Multiprocessori separati*: Più core separati, ognuno contenente una CPU completa e con la propria pipeline. Questi core sono meno accoppiati, comportando interazioni più complesse tra CPU.
+**Multiprocessori eterogenei**:
+- Ogni core ha un compito specifico, come decoder audio/video, crittoprocessore o interfacce di rete. Queste architetture integrano un calcolatore completo in un unico chip, noto come "system on a chip".
+**Condivisione delle risorse**:
 - Anche se le CPU possono condividere cache o risorse, condividono sempre la memoria
 principale.
-- Il processo di snooping garantisce la coerenza dei dati nelle cache condivise, rimuovendo
-automaticamente le copie obsolete.Sistemi di comunicazione tra core:
--
--
--
-Nei sistemi più piccoli, un unico bus potrebbe essere sufficiente, ma nei sistemi più grandi
-potrebbe diventare un collo di bottiglia.
-Soluzioni comuni includono l'uso di più bus o la configurazione di un anello attraverso tutti i
-core.
-In un anello, l'arbitraggio avviene attraverso un token che circola nell'anello: un core deve
-catturare il token per trasmettere e, una volta terminata la comunicazione, può rimettere il
-token nell'anello per continuare la circolazione. Questo protocollo previene le collisioni
-sull'anello.
-Infine, viene sottolineato che, sebbene siano disponibili chip multicore, le applicazioni e gli
-algoritmi attuali devono ancora sfruttare pienamente le potenzialità di questi sistemi paralleli. La
-scrittura di algoritmi paralleli efficaci e la gestione delle risorse condivise rimangono sfide per molti
-programmatori.
-MULTIPROCESSORI E MULTICOMPUTER
-Multiprocessori:
--
--
--
--
-Memoria Condivisa: Le CPU condividono un unico spazio di memoria comune.
-Cooperazione tra Processi: Processi diversi possono condividere lo stesso spazio
-degli indirizzi virtuali mappati nella memoria comune, permettendo una
-comunicazione semplice attraverso le istruzioni LOAD e STORE.
-SMP (Symmetric MultiProcessor): Le CPU hanno uguale accesso a tutti i moduli di
-memoria e dispositivi di I/O, gestiti in modo intercambiabile dal sistema operativo.
-Tipologie di Multiprocessori:
-- UMA (Uniform Memory Access): Ogni parola di memoria può essere letta
-alla stessa velocità.
-- NUMA (NonUniform Memory Access): Non tutte le parole di memoria
-possono essere lette alla stessa velocità.
-Multicomputer:
--
--
--
--
-Memoria Privata: Ogni CPU ha la propria memoria privata accessibile solo da essa.
-Comunicazione tra CPU: Non c'è accesso diretto alla memoria delle altre CPU,
-richiedendo uno scambio di messaggi attraverso la rete di interconnessione.
-Complessità di Programmazione: Programmare un multicomputer è più complesso
-rispetto a un multiprocessore a causa della comunicazione attraverso messaggi
-software (send e receive).
-Costruzione e Costi: I multicomputer grandi sono più semplici ed economici da
-costruire rispetto ai multiprocessori con lo stesso numero di CPU.Implementazioni Ibride della Memoria Condivisa:
-- Varianti di Implementazione della Memoria Condivisa: L'implementazione della
-memoria condivisa può avvenire a livelli diversi, presentando vantaggi e svantaggi
-specifici.
-- Approcci Ibridi: Sforzi per costruire sistemi ibridi che combinano caratteristiche di
-memoria condivisa e accesso distribuito, con diverse soluzioni per
-l'implementazione della memoria condivisa.
-In sintesi, il testo evidenzia le differenze fondamentali tra multiprocessori e multicomputer,
-sottolineando le caratteristiche distintive di ciascun approccio, la gestione della memoria e
-la complessità di programmazione associata a ciascuno di essi. Inoltre, evidenzia gli sforzi
-per creare sistemi ibridi che possano combinare vantaggi di entrambi gli approcci.
-Timesharing:
--
--
-Vettore di Liste di Processi: Utilizza un vettore di liste di processi a varie priorità di
-esecuzione.
-Condivisione di Risorse e Bilanciamento del Carico: Assegna il tempo tra le CPU come se
-fossero in un sistema monoprocessore, bilanciando automaticamente il carico.
-Problemi Potenziali:
--
--
-Dispute per l'Accesso alla Struttura di Scheduling: Con l'aumentare delle CPU, potrebbero
-verificarsi conflitti nell'accesso a questa struttura dati condivisa.
-Sovraccarico nello Scambio di Contesto per I/O: Lo scambio di contesto quando un
-processo bloccato per I/O potrebbe causare sovraccarico.
-Approcci per Mitigare i Problemi:
--
--
-Flag Speciale per Spin Locks: Quando un processo termina il suo quanto di tempo
-mantenendo uno spin lock, può attivare un flag speciale per ottenere un extra-quanto e non
-bloccare completamente il processo successivo.
-Scheduling per Affinità: Assegna lo stesso processo alla stessa CPU per sfruttare la cache
-della CPU già utilizzata dal processo.
-Scheduling a Condivisione dello Spazio (Space Sharing):
--
-Partizionamento Statico delle CPU: Assegna gruppi di CPU a gruppi di processi correlati,
-permettendo l'esecuzione simultanea di processi collegati.
-- Eliminazione della Multiprogrammazione: Elimina l’overhead degli scambi di contesto ma
-può portare a tempo sprecato se alcune CPU non hanno lavoro da fare.
-Schedulazione Gang:
-- Esecuzione Simultanea dei Thread Appartenenti ad un Gruppo (Gang): Schedula i thread
-correlati come un'unità, eseguendoli contemporaneamente in diverse CPU.-
-Sincronizzazione dei Tempi di Esecuzione dei Thread della Gang: Tutti i membri della gang
-iniziano e terminano la loro porzione di tempo contemporaneamente, in intervalli discreti.
-Vantaggi della Schedulazione Gang:
-- Comunicazione più Rapida tra Thread di un Processo: Tutti i thread di un processo in
-esecuzione simultaneamente possono comunicare tra loro in modo più efficiente e rapido.
-In sintesi, le tecniche di scheduling analizzate mirano a ottimizzare l'utilizzo delle risorse di CPU,
-affrontando sfide come il bilanciamento del carico, l'efficienza della comunicazione tra processi e
-l'ottimizzazione degli scambi di contesto. Ogni approccio ha i propri vantaggi e svantaggi, e la
-scelta dell'algoritmo dipende dalle esigenze specifiche del sistema e delle applicazioni da gestire.
-Scheduling su Multiprocessori e Multicomputer:
-- Multiprocessori: Tutti i processi condividono la stessa memoria, quindi le CPU possono
-scegliere liberamente i processi da eseguire. La schedulazione richiede una lista
-centralizzata dei processi pronti.
--
-Multicomputer: Ogni nodo ha memoria e processi propri. La schedulazione è più facile, ma
-l'allocazione dei processi ai nodi diventa cruciale. L'uso della schedulazione gang può
-essere adottato per consentire la coordinazione dell'esecuzione dei processi tra i nodi.
-Bilanciamento del Carico:
-Assegnazione dei Processi: Gli algoritmi di allocazione del processore cercano di assegnare i
-processi ai nodi in base a vari fattori, come l'utilizzo della CPU, della memoria e la quantità di
-comunicazione tra processi. L'obiettivo può essere minimizzare l'uso della CPU non sfruttata,
-ridurre la larghezza di banda di comunicazione o garantire condizioni eque per gli utenti e i
-processi.
-Virtualizzazione:
-Macchine Virtuali: La virtualizzazione permette a un singolo computer "reale" di ospitare più
-computer "virtuali". Ogni macchina virtuale può eseguire il proprio sistema operativo e applicazioni.
-Vantaggi della Virtualizzazione: Isolamento dei malfunzionamenti, risparmio di spazio, minor
-consumo energetico, maggiore manutenibilità e possibilità di eseguire applicazioni legacy.
-Requisiti di Virtualizzazione: La CPU deve supportare un insieme di istruzioni sensibili che sono
-un sottoinsieme di quelle privilegiate per garantire la virtualizzazione. L'Intel 386 e i suoi
-successori, ad esempio, presentavano istruzioni sensibili non virtualizzabili.
-Sviluppi nelle Tecnologie di Virtualizzazione: Intel e AMD nel 2005 introducono la
-virtualizzazione sulle loro CPU (VT per Intel, SVM per AMD) creando contenitori per eseguire le
-macchine virtuali.
-In sintesi, l'efficace gestione dei processi su sistemi multiprocessore e multicomputer richiede
-approcci specifici di schedulazione e bilanciamento del carico, mentre la virtualizzazione offre
-vantaggi significativi ma richiede supporto hardware specifico per essere implementata in modo
-efficiente.Gli hypervisor, o VMM (Virtual Machine Monitor), sono software che gestiscono macchine virtuali
-consentendo l'esecuzione simultanea di più sistemi operativi su una singola macchina fisica.
+- Il processo di snooping garantisce la coerenza dei dati nelle cache condivise, rimuovendo automaticamente le copie obsolete.
+**Sistemi di comunicazione tra core**:
+- Nei sistemi più piccoli, un unico bus potrebbe essere sufficiente, ma nei sistemi più grandipotrebbe diventare un collo di bottiglia.
+- Soluzioni comuni includono l'uso di più bus o la configurazione di un anello attraverso tutti i core.
+- In un anello, l'arbitraggio avviene attraverso un token che circola nell'anello: un core deve catturare il token per trasmettere e, una volta terminata la comunicazione, può rimettere il token nell'anello per continuare la circolazione. Questo protocollo previene le collisioni sull'anello.
+
+Infine, viene sottolineato che, sebbene siano disponibili chip multicore, le applicazioni e gli algoritmi attuali devono ancora sfruttare pienamente le potenzialità di questi sistemi paralleli. La scrittura di algoritmi paralleli efficaci e la gestione delle risorse condivise rimangono sfide per molti programmatori.
+
+# MULTIPROCESSORI E MULTICOMPUTER
+
+**Multiprocessori**:
+- Memoria Condivisa: Le CPU condividono un unico spazio di memoria comune.
+- Cooperazione tra Processi: Processi diversi possono condividere lo stesso spazio degli indirizzi virtuali mappati nella memoria comune, permettendo una comunicazione semplice attraverso le istruzioni LOAD e STORE.
+- SMP (Symmetric MultiProcessor): Le CPU hanno uguale accesso a tutti i moduli di memoria e dispositivi di I/O, gestiti in modo intercambiabile dal sistema operativo.
+- Tipologie di Multiprocessori:
+	- UMA (Uniform Memory Access): Ogni parola di memoria può essere letta alla stessa velocità.
+	- NUMA (NonUniform Memory Access): Non tutte le parole di memoria possono essere lette alla stessa velocità.
+
+**Multicomputer**:
+- Memoria Privata: Ogni CPU ha la propria memoria privata accessibile solo da essa.
+- Comunicazione tra CPU: Non c'è accesso diretto alla memoria delle altre CPU, richiedendo uno scambio di messaggi attraverso la rete di interconnessione.
+- Complessità di Programmazione: Programmare un multicomputer è più complesso rispetto a un multiprocessore a causa della comunicazione attraverso messaggi software (send e receive).
+- Costruzione e Costi: I multicomputer grandi sono più semplici ed economici da costruire rispetto ai multiprocessori con lo stesso numero di CPU.
+
+**Implementazioni Ibride della Memoria Condivisa**:
+- Varianti di Implementazione della Memoria Condivisa: L'implementazione della memoria condivisa può avvenire a livelli diversi, presentando vantaggi e svantaggi specifici.
+- Approcci Ibridi: Sforzi per costruire sistemi ibridi che combinano caratteristiche di memoria condivisa e accesso distribuito, con diverse soluzioni per l'implementazione della memoria condivisa.
+In sintesi, il testo evidenzia le differenze fondamentali tra multiprocessori e multicomputer, sottolineando le caratteristiche distintive di ciascun approccio, la gestione della memoria e la complessità di programmazione associata a ciascuno di essi. Inoltre, evidenzia gli sforzi per creare sistemi ibridi che possano combinare vantaggi di entrambi gli approcci.
+
+**Timesharing**:
+- Vettore di Liste di Processi: Utilizza un vettore di liste di processi a varie priorità di esecuzione.
+- Condivisione di Risorse e Bilanciamento del Carico: Assegna il tempo tra le CPU come se fossero in un sistema monoprocessore, bilanciando automaticamente il carico.
+
+**Problemi Potenziali**:
+- Dispute per l'Accesso alla Struttura di Scheduling: Con l'aumentare delle CPU, potrebbero verificarsi conflitti nell'accesso a questa struttura dati condivisa.
+- Sovraccarico nello Scambio di Contesto per I/O: Lo scambio di contesto quando un processo bloccato per I/O potrebbe causare sovraccarico.
+
+**Approcci per Mitigare i Problemi**:
+- Flag Speciale per Spin Locks: Quando un processo termina il suo quanto di tempo mantenendo uno spin lock, può attivare un flag speciale per ottenere un extra-quanto e non bloccare completamente il processo successivo.
+- Scheduling per Affinità: Assegna lo stesso processo alla stessa CPU per sfruttare la cache della CPU già utilizzata dal processo.
+
+**Scheduling a Condivisione dello Spazio (Space Sharing)**:
+- Partizionamento Statico delle CPU: Assegna gruppi di CPU a gruppi di processi correlati, permettendo l'esecuzione simultanea di processi collegati.
+- Eliminazione della Multiprogrammazione: Elimina l’overhead degli scambi di contesto ma può portare a tempo sprecato se alcune CPU non hanno lavoro da fare.ù
+
+*Schedulazione Gang*:
+- Esecuzione Simultanea dei Thread Appartenenti ad un Gruppo (Gang): Schedula i thread correlati come un'unità, eseguendoli contemporaneamente in diverse CPU.
+- Sincronizzazione dei Tempi di Esecuzione dei Thread della Gang: Tutti i membri della gang iniziano e terminano la loro porzione di tempo contemporaneamente, in intervalli discreti.
+**Vantaggi della Schedulazione Gang**:
+- Comunicazione più Rapida tra Thread di un Processo: Tutti i thread di un processo in esecuzione simultaneamente possono comunicare tra loro in modo più efficiente e  rapido.
+
+In sintesi, le tecniche di scheduling analizzate mirano a ottimizzare l'utilizzo delle risorse di CPU, affrontando sfide come il bilanciamento del carico, l'efficienza della comunicazione tra processi e l'ottimizzazione degli scambi di contesto. Ogni approccio ha i propri vantaggi e svantaggi, e la scelta dell'algoritmo dipende dalle esigenze specifiche del sistema e delle applicazioni da gestire.
+
+## Scheduling su Multiprocessori e Multicomputer
+
+- Multiprocessori: Tutti i processi condividono la stessa memoria, quindi le CPU possono scegliere liberamente i processi da eseguire. La schedulazione richiede una lista centralizzata dei processi pronti.
+- Multicomputer: Ogni nodo ha memoria e processi propri. La schedulazione è più facile, ma l'allocazione dei processi ai nodi diventa cruciale. L'uso della schedulazione gang può essere adottato per consentire la coordinazione dell'esecuzione dei processi tra i nodi.
+**Bilanciamento del Carico**:
+Assegnazione dei Processi: Gli algoritmi di allocazione del processore cercano di assegnare i processi ai nodi in base a vari fattori, come l'utilizzo della CPU, della memoria e la quantità di comunicazione tra processi. L'obiettivo può essere minimizzare l'uso della CPU non sfruttata, ridurre la larghezza di banda di comunicazione o garantire condizioni eque per gli utenti e i processi.
+## Virtualizzazione
+
+**Macchine Virtuali**: La virtualizzazione permette a un singolo computer "reale" di ospitare più computer "virtuali". Ogni macchina virtuale può eseguire il proprio sistema operativo e applicazioni.
+**Vantaggi della Virtualizzazione**: Isolamento dei malfunzionamenti, risparmio di spazio, minor consumo energetico, maggiore manutenibilità e possibilità di eseguire applicazioni legacy.
+**Requisiti di Virtualizzazione**: La CPU deve supportare un insieme di istruzioni sensibili che sono un sottoinsieme di quelle privilegiate per garantire la virtualizzazione. L'Intel 386 e i suoi successori, ad esempio, presentavano istruzioni sensibili non virtualizzabili.
+**Sviluppi nelle Tecnologie di Virtualizzazione**: Intel e AMD nel 2005 introducono la
+virtualizzazione sulle loro CPU (VT per Intel, SVM per AMD) creando contenitori per eseguire le macchine virtuali.
+
+In sintesi, l'efficace gestione dei processi su sistemi multiprocessore e multicomputer richiede approcci specifici di schedulazione e bilanciamento del carico, mentre la virtualizzazione offre vantaggi significativi ma richiede supporto hardware specifico per essere implementata in modo efficiente.
+Gli hypervisor, o VMM (Virtual Machine Monitor), sono software che gestiscono macchine virtuali consentendo l'esecuzione simultanea di più sistemi operativi su una singola macchina fisica.
 Questi hypervisor possono essere classificati in diverse categorie, come tipo 1, tipo 2 e
 paravirtualizzazione, ognuno con differenti approcci e performance.
-Hypervisor di Tipo 1:
-- Posizione e Modalità di Esecuzione: Si trova nel sistema operativo reale (SO host) e gira in
-modalità kernel.
+
+**Hypervisor di Tipo 1**:
+- Posizione e Modalità di Esecuzione: Si trova nel sistema operativo reale (SO host) e gira in modalità kernel.
 - Supporto alle Macchine Virtuali: Gestisce le macchine virtuali (SO guest).
-- Gestione delle Istruzioni Sensibili: Quando una VM esegue un'istruzione sensibile, avviene
-una trap nel kernel dell'hypervisor. Quest'ultimo può esaminare l'istruzione e, se è stata
-inviata dalla VM del SO guest, la esegue; altrimenti, simula il comportamento dell'hardware
-reale.
-- Esempio di Implementazione: I processori con tecnologia VT consentono a un hypervisor di
-tipo 1 di gestire le VM in modo efficiente.
-Hypervisor di Tipo 2:
+- Gestione delle Istruzioni Sensibili: Quando una VM esegue un'istruzione sensibile, avviene una trap nel kernel dell'hypervisor. Quest'ultimo può esaminare l'istruzione e, se è stata inviata dalla VM del SO guest, la esegue; altrimenti, simula il comportamento dell'hardware reale.
+- Esempio di Implementazione: I processori con tecnologia VT consentono a un hypervisor di tipo 1 di gestire le VM in modo efficiente.
+
+**Hypervisor di Tipo 2**:
 - Posizione e Modalità di Esecuzione: Si tratta di un programma utente eseguito su un
 sistema operativo host.
-- Traduzione Binaria: Utilizza la tecnica della traduzione binaria per eseguire le istruzioni
-delle VM. Questo processo coinvolge la scansione del codice, la traduzione delle istruzioni
-sensibili in procedure VMware e l'esecuzione dei blocchi tradotti nella cache di VMware.
-- Esempio di Implementazione: VMware è un esempio di hypervisor di tipo 2 che si esegue
-come programma utente su un SO host.
-Confronto tra Hypervisor:
-- Approccio Trap-and-Emulate (Tipo 1) vs Traduzione delle Istruzioni (Tipo 2): Tipo 1 adotta
-l'approccio "trap-and-emulate" che genera trap e un overhead gestionale, mentre il tipo 2
-utilizza la traduzione delle istruzioni sensibili, risultando più efficiente.
-- Istruzioni Sensibili e Gestione delle VM: Nel tipo 2, le istruzioni sensibili sono sostituite da
-chiamate a procedure che ne emulano il comportamento, mentre il tipo 1 può implementare
-anche la traduzione binaria, come il tipo 2.
-Paravirtualizzazione:
-- Approccio Modificato del SO Guest: Prevede la modifica del codice sorgente del SO guest,
-introducendo chiamate di procedure definite dall'hypervisor.
-- Interfaccia e Performance: L'hypervisor definisce un'interfaccia (API) per i sistemi operativi
-guest, trasformandosi in un microkernel. Questo tipo di VM, chiamato paravirtualizzato,
-migliora le performance in quanto le trap vengono trasformate in system call.
-In sintesi, le diverse tipologie di hypervisor si distinguono per l'approccio alla gestione delle
-istruzioni sensibili, la loro posizione e modalità di esecuzione e l'efficienza nell'operare con le VM,
-offrendo soluzioni e performance differenziate.ARM
-l'architettura ARM (Advanced RISC Machine) è una famiglia di microprocessori RISC (Reduced
+- Traduzione Binaria: Utilizza la tecnica della traduzione binaria per eseguire le istruzioni delle VM. Questo processo coinvolge la scansione del codice, la traduzione delle istruzioni sensibili in procedure VMware e l'esecuzione dei blocchi tradotti nella cache di VMware.
+- Esempio di Implementazione: VMware è un esempio di hypervisor di tipo 2 che si esegue come programma utente su un SO host.
+
+**Confronto tra Hypervisor**:
+- Approccio Trap-and-Emulate (Tipo 1) vs Traduzione delle Istruzioni (Tipo 2): Tipo 1 adotta l'approccio "trap-and-emulate" che genera trap e un overhead gestionale, mentre il tipo 2 utilizza la traduzione delle istruzioni sensibili, risultando più efficiente. 
+- Istruzioni Sensibili e Gestione delle VM: Nel tipo 2, le istruzioni sensibili sono sostituite da chiamate a procedure che ne emulano il comportamento, mentre il tipo 1 può implementare anche la traduzione binaria, come il tipo 2.
+
+**Paravirtualizzazione**:
+- Approccio Modificato del SO Guest: Prevede la modifica del codice sorgente del SO guest, introducendo chiamate di procedure definite dall'hypervisor.
+- Interfaccia e Performance: L'hypervisor definisce un'interfaccia (API) per i sistemi operativi guest, trasformandosi in un microkernel. Questo tipo di VM, chiamato paravirtualizzato, migliora le performance in quanto le trap vengono trasformate in system call.
+
+In sintesi, le diverse tipologie di hypervisor si distinguono per l'approccio alla gestione delle istruzioni sensibili, la loro posizione e modalità di esecuzione e l'efficienza nell'operare con le VM, offrendo soluzioni e performance differenziate.
+
+# ARM
+
+L'architettura ARM (Advanced RISC Machine) è una famiglia di microprocessori RISC (Reduced
 Instruction Set Computer) a 32-bit e 64-bit sviluppata da ARM Ltd. Questa architettura è
 ampiamente diffusa in dispositivi come cellulari, tablet, console per videogiochi, portatili e una
 vasta gamma di apparecchi elettronici, tra cui automobili, elettrodomestici e televisori.
