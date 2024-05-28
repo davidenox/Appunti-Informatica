@@ -478,78 +478,31 @@ In sintesi, le diverse tipologie di hypervisor si distinguono per l'approccio al
 
 # ARM
 
-L'architettura ARM (Advanced RISC Machine) è una famiglia di microprocessori RISC (Reduced
-Instruction Set Computer) a 32-bit e 64-bit sviluppata da ARM Ltd. Questa architettura è
-ampiamente diffusa in dispositivi come cellulari, tablet, console per videogiochi, portatili e una
-vasta gamma di apparecchi elettronici, tra cui automobili, elettrodomestici e televisori.
-La forza principale dell'architettura ARM risiede nella sua semplicità circuitale, che richiede un
-minor numero di transistor e di silicio, rendendolo più economico e con un basso consumo
-energetico rispetto alle sue prestazioni. Questo bilanciamento tra potenza di calcolo e risparmio
-energetico ha reso gli ARM molto adatti per dispositivi mobili.
-Un altro fattore chiave del successo di ARM è il suo modello di business. ARM Ltd concede licenze
-del design del microprocessore ad altre aziende, permettendo loro di adattare il progetto alle
-proprie esigenze, modificandolo e producendo chip personalizzati. Questo approccio ha alimentato
-un'evoluzione rapida e l'ampia diffusione degli ARM in molteplici settori e applicazioni.
-L'architettura ARM condivide le caratteristiche fondamentali di una tipica architettura RISC,
-progettata per ottimizzare l'emissione delle istruzioni. Per massimizzare il throughput delle
-istruzioni, un processore ARM dispone di un elevato numero di registri, tutti con la stessa
-dimensione, e esegue l'elaborazione dei dati direttamente nel processore senza l'intervento della
-memoria, accedendo ad essa solo per le operazioni di load/store.
-La decodifica rapida delle istruzioni è favorita da un formato regolare e una lunghezza fissa delle
-istruzioni stesse, indipendentemente dal tipo di istruzione. Inoltre, l'indirizzamento efficiente
-richiede che il valore dell'indirizzo sia contenuto direttamente nell'istruzione (immediato) o in un
-registro del processore, evitando passaggi eccessivi.
-In sintesi, l'architettura ARM si distingue per la sua efficienza, semplicità circuitale, basso consumo
-energetico e la capacità di adattamento attraverso la concessione di licenze, fattori che l'hanno
-resa dominante nei dispositivi mobili e diffusa in numerosi altri settori e applicazioni.
-Aspetti innovativi:
--
--
--
--
-Un datapath specifico che permette di coniugare congiuntamente la funzione aritmetica e
-logica con quella di scorrimento su più bit in una sola istruzione;
-La modalità indirizzamento con auto incremento e auto decremento per ottimizzare i cicli
-nei programmi;
-La possibilitá di eseguire istruzione di load/store multiple per massimizzare il throughtput
-dei dati;
-Quasi tutte le istruzioni possono prevedere una pre-condizione che vincola l’esecuzione
-dell’istruzione stessa(esecuzione condizionale) che permette al processore ARM di
-compiere in un solo passaggio quello che per altre CPU richiede l’esecuzione di piú
-istruzioni.
-ARM Cortex – Ambiti:
-- Applicazione :architetture tradizionali con sistema di memoria virtuale MMU (memory
-management Unit)-
--
-Real-Time : Architetture destinate a contesti real-time e un sistema di memoria protetta
-MPU (Memory protected Unit)
-Microcontrollore: Modello di programmazione per l’elaborazione veloce degli interrupt.
-ARMv6:
-Introduce definitivamente l’estensione Jazelle che permette di eseguire direttamente codice byte
-code trasformando di fatto il processo in una Java Virtual Machine. Il tutto in aggiunta allo stato
-Thumb del processore in cui utilizza un set di istruzioni a 16bit favorendone una cosi maggiore
-densità nelle applicazioni.
-Processore ARM:
-Il processore ARM utilizza un’architettura RISC a 32 bit, dimensione che coincide con quella dei
-registri, delle istruzioni e dei dati su cui operano tali istruzioni.
-Lo spazio di indirizzamento utilizzato dall’ARM è di 32 bit e la memoria è indirizzabile al singolo
-byte, a 16 (halfword) o 32 bit (word), in modalità allineata al byte. Quindi l’indirizzo di un dato a 16
-bit deve essere multiplo di 2 byte, mentre di un dato a 32 bit multiplo di 4 byte.
-Il processore ARM può indirizzare quindi fino a 2^32 locazioni di memoria sia nel formato little-
-endian (default) sia Big-endian, mentre accede al codice sempre in formato little-endian. Per
-selezionare la modalità Big-endian occorre asserire il pin BIGEND che verrà letto dalla CPU in fase
-di avvio della macchina. Tuttavia, la maggior parte dei dispositivi funziona in modalità little-endian
-ed è per questa ragione che è il valore predefinito di funzionamento del processore ARM.
-Una caratteristica pregnante dell’architettura ARM è la lunghezza fissa a 32 bit delle istruzioni,
-questo permette di definire un set di istruzioni ortogonali cioè dotate di forma regolare facilmente
-decodificabile.
-L’altro aspetto interessante e peculiare è la possibilità di condizionare l’esecuzione delle istruzioni
-in maniera preventiva in base al valore dei flag di stato. A differenza di altri linguaggi assembly, nel
-set delle istruzioni ARM non esistono istruzioni di shift o rotazione i bit se non innestate all’interno
-di altre istruzioni di elaborazione (aritmetiche, logiche, …) e, comunque, possono essere applicate
-ad un solo operando. Tuttavia, i processori ARM riescono ad eseguire una operazione aritmetica o
-logica e una di shift o di rotazione in una sola istruzione. Differentemente da altri linguaggi
-assembly, non esiste una istruzione per eseguire l’operazione di divisione, i progettisti
-dell’architettura hanno pensato di delegare questo compito al coprocessore che, avendo un ambito
-di applicazione specifico, puó risolvere al meglio il compito. In alternativa, si può sempre scrivere
-con una procedura assembly in grado di eseguire la divisione.
+L'architettura ARM (Advanced RISC Machine) è una famiglia di microprocessori RISC (Reduced Instruction Set Computer) a 32-bit e 64-bit sviluppata da ARM Ltd. Questa architettura è ampiamente diffusa in dispositivi come cellulari, tablet, console per videogiochi, portatili e una vasta gamma di apparecchi elettronici, tra cui automobili, elettrodomestici e televisori. 
+La forza principale dell'architettura ARM risiede nella sua semplicità circuitale, che richiede un minor numero di transistor e di silicio, rendendolo più economico e con un basso consumo energetico rispetto alle sue prestazioni. Questo bilanciamento tra potenza di calcolo e risparmio energetico ha reso gli ARM molto adatti per dispositivi mobili.
+Un altro fattore chiave del successo di ARM è il suo modello di business. ARM Ltd concede licenze del design del microprocessore ad altre aziende, permettendo loro di adattare il progetto alle proprie esigenze, modificandolo e producendo chip personalizzati. Questo approccio ha alimentato un'evoluzione rapida e l'ampia diffusione degli ARM in molteplici settori e applicazioni. 
+L'architettura ARM condivide le caratteristiche fondamentali di una tipica architettura RISC, progettata per ottimizzare l'emissione delle istruzioni. Per massimizzare il throughput delle istruzioni, un processore ARM dispone di un elevato numero di registri, tutti con la stessa dimensione, e esegue l'elaborazione dei dati direttamente nel processore senza l'intervento della memoria, accedendo ad essa solo per le operazioni di load/store.
+La decodifica rapida delle istruzioni è favorita da un formato regolare e una lunghezza fissa delle istruzioni stesse, indipendentemente dal tipo di istruzione. Inoltre, l'indirizzamento efficiente richiede che il valore dell'indirizzo sia contenuto direttamente nell'istruzione (immediato) o in un registro del processore, evitando passaggi eccessivi.
+
+In sintesi, l'architettura ARM si distingue per la sua efficienza, semplicità circuitale, basso consumo energetico e la capacità di adattamento attraverso la concessione di licenze, fattori che l'hanno resa dominante nei dispositivi mobili e diffusa in numerosi altri settori e applicazioni.
+**Aspetti innovativi**:
+- Un datapath specifico che permette di coniugare congiuntamente la funzione aritmetica e logica con quella di scorrimento su più bit in una sola istruzione;
+- La modalità indirizzamento con auto incremento e auto decremento per ottimizzare i cicli nei programmi;
+- La possibilitá di eseguire istruzione di load/store multiple per massimizzare il throughtput dei dati;
+- Quasi tutte le istruzioni possono prevedere una pre-condizione che vincola l’esecuzione dell’istruzione stessa(esecuzione condizionale) che permette al processore ARM di compiere in un solo passaggio quello che per altre CPU richiede l’esecuzione di piú istruzioni.
+
+**ARM Cortex – Ambiti**:
+- Applicazione :architetture tradizionali con sistema di memoria virtuale MMU (memory management Unit)
+- Real-Time : Architetture destinate a contesti real-time e un sistema di memoria protetta MPU (Memory protected Unit)
+- Microcontrollore: Modello di programmazione per l’elaborazione veloce degli interrupt.
+
+## ARMv6
+
+Introduce definitivamente l’estensione Jazelle che permette di eseguire direttamente codice byte code trasformando di fatto il processo in una Java Virtual Machine. Il tutto in aggiunta allo stato Thumb del processore in cui utilizza un set di istruzioni a 16bit favorendone una cosi maggiore densità nelle applicazioni.
+**Processore ARM**:
+Il processore ARM utilizza un’architettura RISC a 32 bit, dimensione che coincide con quella dei registri, delle istruzioni e dei dati su cui operano tali istruzioni.
+Lo spazio di indirizzamento utilizzato dall’ARM è di 32 bit e la memoria è indirizzabile al singolo byte, a 16 (halfword) o 32 bit (word), in modalità allineata al byte. Quindi l’indirizzo di un dato a 16 bit deve essere multiplo di 2 byte, mentre di un dato a 32 bit multiplo di 4 byte.
+Il processore ARM può indirizzare quindi fino a 2^32 locazioni di memoria sia nel formato little-endian (default) sia Big-endian, mentre accede al codice sempre in formato little-endian. Per selezionare la modalità Big-endian occorre asserire il pin BIGEND che verrà letto dalla CPU in fase di avvio della macchina. Tuttavia, la maggior parte dei dispositivi funziona in modalità little-endian ed è per questa ragione che è il valore predefinito di funzionamento del processore ARM.
+Una caratteristica pregnante dell’architettura ARM è la lunghezza fissa a 32 bit delle istruzioni, questo permette di definire un set di istruzioni ortogonali cioè dotate di forma regolare facilmente decodificabile.
+L’altro aspetto interessante e peculiare è la possibilità di condizionare l’esecuzione delle istruzioni in maniera preventiva in base al valore dei flag di stato. A differenza di altri linguaggi assembly, nel set delle istruzioni ARM non esistono istruzioni di shift o rotazione i bit se non innestate all’interno di altre istruzioni di elaborazione (aritmetiche, logiche, …) e, comunque, possono essere applicate ad un solo operando. Tuttavia, i processori ARM riescono ad eseguire una operazione aritmetica o logica e una di shift o di rotazione in una sola istruzione. Differentemente da altri linguaggi assembly, non esiste una istruzione per eseguire l’operazione di divisione, i progettisti
+dell’architettura hanno pensato di delegare questo compito al coprocessore che, avendo un ambito di applicazione specifico, puó risolvere al meglio il compito. In alternativa, si può sempre scrivere con una procedura assembly in grado di eseguire la divisione.
