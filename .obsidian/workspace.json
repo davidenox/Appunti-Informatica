@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md"
               }
             }
           },
@@ -154,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -171,8 +171,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a7f60b6287f8cd1a",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528122422.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528120811.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528120706.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528113814.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528113459.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezioni 15-16 - Privilege Escalation e Pivoting.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240521144157.png",
@@ -181,12 +188,8 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240521143534.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240521143322.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240520144627.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240520144413.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240520143425.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240520133817.png",
-    "Terzo Anno/Programmazione Web/Immagini/Pasted image 20240520132404.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
     "README.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
@@ -195,7 +198,6 @@
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
@@ -207,7 +209,6 @@
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
     "_temp/AE",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
