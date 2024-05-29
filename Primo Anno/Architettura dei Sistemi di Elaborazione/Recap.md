@@ -38,8 +38,8 @@
 ![[Pasted image 20240529115927.png|center|400]]
 
 # Linguaggi, livelli e macchine virtuali
-- *Traduzione*: consiste nel sostituire, in una fase iniziale, ogni sua istruzione con un equivalente sequenza di istruzioni in $L_O$. Il programma che ne risulta è costituito interamente da istruzioni di $L_O$ e può essere eseguito dal computer al posto del programma $L_1$ originale.
-- Interpretazione: consiste nello scrivere un programma in $L_O$ che accetta come dati d’ingressoprogrammi in $L_1$; tale programma li esegue esaminando un’istruzione alla volta e sostituendoladirettamente con l’equivalente sequenza di istruzioni $L_O$. Il programma che la esegue è detto interprete.
+- *Traduzione*: consiste nel sostituire, in una fase iniziale, ogni sua istruzione con una equivalente sequenza di istruzioni in $L_O$. Il programma che ne risulta è costituito interamente da istruzioni di $L_O$ e può essere eseguito dal computer al posto del programma $L_1$ originale.
+- *Interpretazione*: consiste nello scrivere un programma in $L_O$ che accetta come dati d’ingresso programmi in $L_1$; tale programma li esegue esaminando un’istruzione alla volta e sostituendola direttamente con l’equivalente sequenza di istruzioni $L_O$. Il programma che la esegue è detto *interprete*.
 La differenza è che, nel caso della traduzione, il programma $L_1$ viene, all’inizio, convertito interamente in un programma $L_O$. Nell’interpretazione ciascuna istruzione $L_1$ viene esaminata e decodificata, e quindi eseguita direttamente senza generare alcun programma tradotto.
 ## Attuali macchine multilivello
 
@@ -78,9 +78,9 @@ In sintesi, dall'hardware base (livello 0) si passa attraverso i livelli di micr
 Si compone delle seguenti parti:
 - *Memoria*: conserva sia il programma che i dati su cui deve lavorare il programma;
 - *CPU*: è l’unità di elaborazione composta da tre elementi principali:
-	- ALU (Arithmetic Logic Unit): esegue le istruzioni elementari come quelle aritmetiche e logiche;
-	- CU (Control Unit): recupera le istruzioni in memoria secondo l’ordine stabilito dall’algoritmo e permette la loro esecuzione;
-	- Accumulatore: è una memoria interna della CPU che viene utilizzata per contenere gli operandi delle istruzioni eseguite dalla ALU.
+	- **ALU** (Arithmetic Logic Unit): esegue le istruzioni elementari come quelle aritmetiche e logiche;
+	- **CU** (Control Unit): recupera le istruzioni in memoria secondo l’ordine stabilito dall’algoritmo e permette la loro esecuzione;
+	- **Accumulatore**: è una memoria interna della CPU che viene utilizzata per contenere gli operandi delle istruzioni eseguite dalla ALU.
 - Input/Output (*I/O*): costituisce l’interfacciamento del calcolatore verso l’esterno;
 - *Bus* di comunicazione: è il canale che permette la comunicazione tra le unità appena descritte. 
 # Processori
@@ -111,7 +111,8 @@ La CPU esegue ogni istruzione compiendo una serie di passi:
 1. prelevare la successiva istruzione dalla memoria per portarla nell’IR;
 2. aggiornare il PC per farlo puntare all’istruzione seguente;
 3. determinare il tipo dell’istruzione appena prelevata (decodifica dell’istruzione);
-4. se l’istruzione usa una parola in memoria, determinare dove si trova;5. se necessario, prelevare la parola per portarla in un registro della CPU;
+4. se l’istruzione usa una parola in memoria, determinare dove si trova;
+5. se necessario, prelevare la parola per portarla in un registro della CPU;
 6. eseguire l’istruzione;
 7. tornare al punto 1 per iniziare l’esecuzione dell’istruzione successiva.
 Spesso ci si riferisce a questa sequenza di passi con il termine di ciclo esecutivo delle istruzioni, o ciclo di prelievo-decodifica-esecuzione (fetch-decode-execute).
@@ -119,8 +120,9 @@ Spesso ci si riferisce a questa sequenza di passi con il termine di ciclo esecut
 
 - **CISC** (Complex Instruction Set Computer): la CPU è in grado di comprendere molte istruzioni complesse nativamente (è il più alto livello di astrazione riconosciuto dalla macchina);
 - **RISC** (Reduced Instruction Set Computer): si basa sull’idea che se le istruzioni sono semplici e poche, esse possono essere eseguite rapidamente (è necessario un solo ciclo nel datapath);
-- **Ibrido**: a partire dal x486, le CPU intel contengono un sottoinsieme di istruzioni RISC (quelle più comuni) che possono essere eseguite in un singolo ciclo nel datapath, mentre le altre complesse sono interpretate secondo la classica modalità CISC.
+- **Ibrido**: a partire dal x486, le CPU Intel contengono un sottoinsieme di istruzioni RISC (quelle più comuni) che possono essere eseguite in un singolo ciclo nel datapath, mentre le altre complesse sono interpretate secondo la classica modalità CISC.
 #### Principi di progettazione dei calcolatori moderni (Principi RISC):
+
 >Esecuzione diretta delle istruzioni dall'hardware:
 >- Evitare l'interpretazione delle istruzioni.
 >- Le architetture CISC possono suddividere istruzioni complesse in microistruzioni.
@@ -157,7 +159,7 @@ Il parallelismo si può ottenere in due diversi modi:
 # Pipelining
 
 Una limitazione nella velocità di esecuzione delle istruzioni è rappresentato dal prelievo delle istruzioni dalla memoria.
-Per alleviare questo problema, i calcolatori sono stati dotati della capacità di poter prelevare in anticipo le istruzioni dalla memoria, in modo da averle già a disposizione nel momento in cui dovessero rendersi necessarie. Le istruzioni venivano memorizzate in un insieme di registri chiamati buffer di prefetch, dai quali potevano essere prese nel momento in cui venivano richieste, senza dover attendere che si completasse una lettura della memoria.
+Per alleviare questo problema, i calcolatori sono stati dotati della capacità di poter prelevare in anticipo le istruzioni dalla memoria, in modo da averle già a disposizione nel momento in cui dovessero rendersi necessarie. Le istruzioni venivano memorizzate in un insieme di registri chiamati *buffer di prefetch*, dai quali potevano essere prese nel momento in cui venivano richieste, senza dover attendere che si completasse una lettura della memoria.
 In pratica la tecnica di *prefetching* divide l’esecuzione dell’istruzione in due parti: il prelievo dell’istruzione e la sua esecuzione effettiva. Il pipeline divide l’esecuzione di un’istruzione in un numero maggiore di parti che possono essere eseguite in parallelo; ciascuna di queste parti è gestita da componenti hardware dedicati.
 ## Processori con più pipeline
 
@@ -185,18 +187,18 @@ Esistono tre differenti approcci: *computer con parallelismo sui dati*, *multipr
 ### Computer con parallelismo sui dati
 
 Ci sono due schemi differenti:
-- Processori SIMD (Single Instruction-stream Multiple Data-stream): sono costituiti da un vasto numero di processori identici che eseguono la stessa sequenza di istruzioni su insieme differenti di dati;
-- Processori vettoriali: un processore vettoriale esegue la stessa sequenza di operazioni su coppie di dati, ma tutte le addizioni sono svolte da un unico sommatore strutturato in pipeline.
+- *Processori SIMD* (Single Instruction-stream Multiple Data-stream): sono costituiti da un vasto numero di processori identici che eseguono la stessa sequenza di istruzioni su insieme differenti di dati;
+- *Processori vettoriali*: un processore vettoriale esegue la stessa sequenza di operazioni su coppie di dati, ma tutte le addizioni sono svolte da un unico sommatore strutturato in pipeline.
 Entrambe le architettura lavorano su array di dati, mentre il primo utilizza tanti sommatori quanti gli elementi del vettore, il secondo utilizza un solo sommatore e un unico registro vettoriale.
 ## Multiprocessori
 
-È un’architettura costituita da più CPU che condividono una memoria comune.
+È un’architettura costituita da *più CPU* che condividono una *memoria comune*.
 Poiché ciascuna CPU può leggere o scrivere qualsiasi zona della memoria comune, le CPU devono sincronizzarsi via software.In questo caso le CPU hanno la necessità di interagire in modo così profondo che il sistema è detto fortemente accoppiato (tightly coupled).
 ## Multicomputer
 
 Multiprocessori con molte CPU sono difficili da realizzare, per via del problema delle connessioni di ciascuna CPU verso la memoria comune.
 I progettisti hanno superato il problema abbandonando il concetto di memoria comune e
-realizzando un elevato numero di CPU interconnesse, ciascuna con la propria memoria privata. Le CPU in un multicomputer sono accoppiate in modo lasco (loosely coupled) e comunicano attraverso scambi di messaggi.
+realizzando un elevato numero di *CPU interconnesse*, ciascuna con la propria *memoria privata*. Le CPU in un multicomputer sono accoppiate in modo lasco (loosely coupled) e comunicano attraverso scambi di messaggi.
 In architetture grandi la completa interconnessione non è fattibile così sono utilizzate topologie differenti come la griglia, l’albero o l’anello.
 
 ### Memoria cache
@@ -251,8 +253,8 @@ computer. ISA come il RISC (Reduced Instruction Set Computing) si basano su istr
 Esaminiamo l'esempio pratico della Java Virtual Machine (JVM) semplificata, chiamata IJVM, operante esclusivamente su numeri interi, come rappresentazione di una microarchitettura. Questa IJVM sarà il nostro esempio per comprendere il controllo e l'ordinamento delle istruzioni.
 Nel caso della microarchitettura per l'IJVM, questa conterrà un microprogramma registrato in una ROM, responsabile di prelevare, decodificare ed eseguire le istruzioni IJVM. Tuttavia, l'interprete JVM di Sun non può essere utilizzato per controllare l'hardware a un livello di dettaglio richiesto, essendo stato scritto in C per la portabilità.
 Il modello convenzionale per progettare la microarchitettura è simile a un problema di programmazione, dove ogni istruzione ISA rappresenta una funzione richiamata dal programma principale. Il programma principale è un semplice ciclo senza fine che determina quale funzione (istruzione) invocare e poi riprende l'esecuzione.
-Il microprogramma contiene variabili che costituiscono lo stato del calcolatore, tra cui il Program Counter (PC) che indica la locazione di memoria contenente la successiva istruzione da eseguire. Durante l'esecuzione di un'istruzione, il PC viene avanzato per puntare alla prossima istruzione. Ogni istruzione IJVM è composta da campi, di solito uno o due, con uno scopo specifico. Il primo campo è l'opcode che identifica il tipo di istruzione (ad esempio ADD, BRANCH) e può specificare l'operando (come indicare una variabile locale). 
-Il modello fetch-decode-execute è utilizzato per l'esecuzione delle istruzioni, fornendo un metodo astratto per l'implementazione di ISA complessi come l'IJVM.
+Il microprogramma contiene variabili che costituiscono lo stato del calcolatore, tra cui il Program Counter (*PC*) che indica la locazione di memoria contenente la successiva istruzione da eseguire. Durante l'esecuzione di un'istruzione, il PC viene avanzato per puntare alla prossima istruzione. Ogni istruzione IJVM è composta da campi, di solito uno o due, con uno scopo specifico. Il primo campo è l'*opcode* che identifica il tipo di istruzione (ad esempio `ADD`, `BRANCH`) e può specificare l'operando (come indicare una variabile locale). 
+Il modello `fetch-decode-execute` è utilizzato per l'esecuzione delle istruzioni, fornendo un metodo astratto per l'implementazione di ISA complessi come l'IJVM.
 Le microistruzioni compongono il microprogramma e controllano il percorso dati durante un ciclo, definendo il flusso di esecuzione.
 ## Percorso dati
 Il percorso dati è una parte essenziale dell'unità di elaborazione di un processore (CPU), comprendente l'Arithmetic Logic Unit (ALU), i suoi input e output, e una serie di registri a 32 bit come il PC, SP e MDR.
