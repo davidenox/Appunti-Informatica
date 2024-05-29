@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md"
               }
             }
           },
@@ -173,21 +173,21 @@
   },
   "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528135725.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528135530.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528135438.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528122422.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528120811.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528120706.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528113814.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240528113459.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115927.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115811.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115616.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529114134.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529114013.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529113942.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529113825.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529113747.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529113408.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529113316.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529113135.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Index.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezioni 15-16 - Privilege Escalation e Pivoting.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240521144157.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240521144021.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Immagini/Pasted image 20240521143842.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",

@@ -1,7 +1,46 @@
+# Circuiti
+## Porte Logiche
+
+![[Pasted image 20240529112931.png|center|500]]
+
+## Multiplexer
+
+![[Pasted image 20240529113135.png|center|500]]
+
+## Decoder
+![[Pasted image 20240529113316.png|center|300]]
+![[Pasted image 20240529113408.png|center|500]]
+
+## Half Adder
+
+![[Pasted image 20240529113747.png|center|400]]
+![[Pasted image 20240529113825.png|center|400]]
+## Full Adder
+
+![[Pasted image 20240529113942.png|center|400]]
+![[Pasted image 20240529114013.png|center|400]]
+## Latch
+### SR
+
+![[Pasted image 20240529114134.png|center|500]]
+
+### SR Temporizzato
+
+![[Pasted image 20240529115616.png|center|400]]
+
+### D Temporizzato
+
+![[Pasted image 20240529115811.png|center|400]]
+
+## Flip Flop
+### D
+
+![[Pasted image 20240529115927.png|center|400]]
+
 # Linguaggi, livelli e macchine virtuali
-- Traduzione: consiste nel sostituire, in una fase iniziale, ogni sua istruzione con un equivalente sequenza di istruzioni in LO. Il programma che ne risulta è costituito interamente da istruzioni di LO e può essere eseguito dal computer al posto del programma L 1 originale.
-- Interpretazione: consiste nello scrivere un programma in L O che accetta come dati d’ingressoprogrammi in L1; tale programma li esegue esaminando un’istruzione alla volta e sostituendoladirettamente con l’equivalente sequenza di istruzioni L O. Il programma che la esegue è detto interprete.
-La differenza è che, nel caso della traduzione, il programma L 1 viene, all’inizio, convertito interamente in un programma LO. Nell’interpretazione ciascuna istruzione L1 viene esaminata e decodificata, e quindi eseguita direttamente senza generare alcun programma tradotto.
+- *Traduzione*: consiste nel sostituire, in una fase iniziale, ogni sua istruzione con un equivalente sequenza di istruzioni in $L_O$. Il programma che ne risulta è costituito interamente da istruzioni di $L_O$ e può essere eseguito dal computer al posto del programma $L_1$ originale.
+- Interpretazione: consiste nello scrivere un programma in $L_O$ che accetta come dati d’ingressoprogrammi in $L_1$; tale programma li esegue esaminando un’istruzione alla volta e sostituendoladirettamente con l’equivalente sequenza di istruzioni $L_O$. Il programma che la esegue è detto interprete.
+La differenza è che, nel caso della traduzione, il programma $L_1$ viene, all’inizio, convertito interamente in un programma $L_O$. Nell’interpretazione ciascuna istruzione $L_1$ viene esaminata e decodificata, e quindi eseguita direttamente senza generare alcun programma tradotto.
 ## Attuali macchine multilivello
 
 ![[Pasted image 20240528113459.png|center|600]]
@@ -135,7 +174,7 @@ Viene utilizzata inizialmente da Intel Core. Il processore dispone di una sola p
 
 ![[Pasted image 20240528120811.png|center|600]]
 
-Affinché l’architettura abbia senso è necessario che la velocità di emissione della fase S 3 sia più alta rispetto a quella della fase S4. La fase S4 può avere delle unità ALU duplicate.
+Affinché l’architettura abbia senso è necessario che la velocità di emissione della fase $S3$ sia più alta rispetto a quella della fase $S4$. La fase $S4$ può avere delle unità ALU duplicate.
 ## Parallelismo a livello di processore
 
 Il parallelismo nel chip aiuta a migliorare le performance della CPU: con il pipelining e le
@@ -344,7 +383,7 @@ Obiettivo: far svolgere al chip più compiti alla volta.
 ### Parallelismo a livello delle istruzioni
 
 L’idea è di emettere più istruzioni per ciclo di clock. Ci sono due tipi di CPU a emissione multipla: processori superscalari e processori VLIW (“Very Long Instruction Word”, con parole di istruzione molto lunghe).
-Le CPU superscalari sono composte da pipeline e più unità funzionali ([[Index#Parallelismo nel chip|Figura 8.2(a)]]).
+Le CPU superscalari sono composte da pipeline e più unità funzionali ([[Recap#Parallelismo nel chip|Figura 8.2(a)]]).
 I processori VLIW sono in grado di indirizzare le diverse unità funzionali con una
 sola linea di pipeline.
 
