@@ -478,8 +478,8 @@ In sintesi, le tecniche di scheduling analizzate mirano a ottimizzare l'utilizzo
 
 ## Scheduling su Multiprocessori e Multicomputer
 
-- Multiprocessori: Tutti i processi condividono la stessa memoria, quindi le CPU possono scegliere liberamente i processi da eseguire. La schedulazione richiede una lista centralizzata dei processi pronti.
-- Multicomputer: Ogni nodo ha memoria e processi propri. La schedulazione è più facile, ma l'allocazione dei processi ai nodi diventa cruciale. L'uso della schedulazione gang può essere adottato per consentire la coordinazione dell'esecuzione dei processi tra i nodi.
+- *Multiprocessori*: Tutti i processi condividono la stessa memoria, quindi le CPU possono scegliere liberamente i processi da eseguire. La schedulazione richiede una lista centralizzata dei processi pronti.
+- *Multicomputer*: Ogni nodo ha memoria e processi propri. La schedulazione è più facile, ma l'allocazione dei processi ai nodi diventa cruciale. L'uso della schedulazione gang può essere adottato per consentire la coordinazione dell'esecuzione dei processi tra i nodi.
 **Bilanciamento del Carico**:
 Assegnazione dei Processi: Gli algoritmi di allocazione del processore cercano di assegnare i processi ai nodi in base a vari fattori, come l'utilizzo della CPU, della memoria e la quantità di comunicazione tra processi. L'obiettivo può essere minimizzare l'uso della CPU non sfruttata, ridurre la larghezza di banda di comunicazione o garantire condizioni eque per gli utenti e i processi.
 ## Virtualizzazione
