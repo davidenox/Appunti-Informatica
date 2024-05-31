@@ -5,11 +5,19 @@
 
 ## Multiplexer
 
-![[Pasted image 20240529113135.png|center|500]]
+![[Pasted image 20240531125241.png|center|600]]
 
 ## Decoder
-![[Pasted image 20240529113316.png|center|300]]
-![[Pasted image 20240529113408.png|center|500]]
+
+![[Pasted image 20240531125447.png|center|600]]
+
+## Comparatore
+
+![[Pasted image 20240531125830.png|center|600]]
+
+## Shifter
+
+![[Pasted image 20240531130028.png|center|600]]
 
 ## Half Adder
 
@@ -22,7 +30,7 @@
 ## Latch
 ### SR
 
-![[Pasted image 20240529114134.png|center|500]]
+![[Pasted image 20240531141840.png|center|600]]
 
 ### SR Temporizzato
 
@@ -35,7 +43,7 @@
 ## Flip Flop
 ### D
 
-![[Pasted image 20240529115927.png|center|400]]
+![[Pasted image 20240531141933.png|center|600]]
 
 # Linguaggi, livelli e macchine virtuali
 - *Traduzione*: consiste nel sostituire, in una fase iniziale, ogni sua istruzione con una equivalente sequenza di istruzioni in $L_O$. Il programma che ne risulta è costituito interamente da istruzioni di $L_O$ e può essere eseguito dal computer al posto del programma $L_1$ originale.
