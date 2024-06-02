@@ -83,6 +83,7 @@ In sintesi, dall'hardware base (livello 0) si passa attraverso i livelli di micr
 ### La macchina di Von Neumann
 
 ![[Pasted image 20240528113814.png|center|300]]
+
 Si compone delle seguenti parti:
 - *Memoria*: conserva sia il programma che i dati su cui deve lavorare il programma;
 - *CPU*: è l’unità di elaborazione composta da tre elementi principali:
