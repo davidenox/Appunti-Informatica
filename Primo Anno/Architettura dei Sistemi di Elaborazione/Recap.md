@@ -98,7 +98,7 @@ La CPU è il cervello del computer, ed è composta dall’unità di controllo (*
 Tra i registri sono molto importanti:
 - Program Counter (*PC*): punta alla prossima istruzione da prelevare per l’esecuzione;
 - Instruction Register (*IR*): mantiene l’istruzione corrente in fase di esecuzione.
-Le componenti di un computer sono collegate attraverso un bus: una collezione di cavi paralleli utilizzati per trasferire indirizzi, dati e segnali di controllo.
+Le componenti di un computer sono collegate attraverso un *bus*: una collezione di cavi paralleli utilizzati per trasferire indirizzi, dati e segnali di controllo.
 ## Organizzazione della CPU di von Neumann:
 
 *Registri*: Composti da 1 a 32 registri, costituiscono il data path della CPU.
@@ -111,36 +111,40 @@ Le componenti di un computer sono collegate attraverso un bus: una collezione di
 - *Gestione dei dati*: Il valore risultante può essere immagazzinato in un registro della CPU e successivamente trasferito in memoria, se necessario.
 
 **Tipologie di istruzioni**:
+
 - *Istruzioni Registro-Memoria*: Coinvolgono il caricamento o lo scaricamento di parole di memoria nei registri. Permettono di prelevare dati dalla memoria e spostarli nei registri o viceversa. Questi dati possono essere utilizzati come input per le operazioni successive, come ad esempio l'ALU.
+
 - *Istruzioni Registro-Registro*: Coinvolgono operandi già presenti nei registri. Estraggono due operandi dai registri, li trasferiscono all'ALU e eseguono operazioni su di essi. Il risultato viene memorizzato in uno dei registri della CPU.
+
 In sintesi, la CPU di von Neumann si basa su registri, ALU e bus per eseguire operazioni aritmetiche e logiche. Utilizza diverse istruzioni che coinvolgono trasferimenti di dati tra la memoria e i registri, o operazioni dirette tra i registri stessi con l'ausilio dell'ALU.
 
 ### Esecuzione dell’istruzione
 La CPU esegue ogni istruzione compiendo una serie di passi:
-1. prelevare la successiva istruzione dalla memoria per portarla nell’IR;
-2. aggiornare il PC per farlo puntare all’istruzione seguente;
-3. determinare il tipo dell’istruzione appena prelevata (decodifica dell’istruzione);
-4. se l’istruzione usa una parola in memoria, determinare dove si trova;
-5. se necessario, prelevare la parola per portarla in un registro della CPU;
-6. eseguire l’istruzione;
-7. tornare al punto 1 per iniziare l’esecuzione dell’istruzione successiva.
-Spesso ci si riferisce a questa sequenza di passi con il termine di ciclo esecutivo delle istruzioni, o ciclo di prelievo-decodifica-esecuzione (fetch-decode-execute).
+1. Prelevare la successiva istruzione dalla memoria per portarla nell’*IR* (Instruction Register) ;
+2. Aggiornare il *PC* ( Program Counter ) per farlo puntare all’istruzione seguente;
+3. Determinare il tipo dell’istruzione appena prelevata (decodifica dell’istruzione);
+4. Se l’istruzione usa una parola in memoria, determinare dove si trova;
+5. Se necessario, prelevare la parola per portarla in un registro della CPU;
+6. Eseguire l’istruzione;
+7. Tornare al punto 1 per iniziare l’esecuzione dell’istruzione successiva.
+
+Spesso ci si riferisce a questa sequenza di passi con il termine di ciclo esecutivo delle istruzioni, o ciclo di prelievo-decodifica-esecuzione (`fetch-decode-execute`).
 ### Strategie di progettazione delle CPU
 
-- **CISC** (Complex Instruction Set Computer): la CPU è in grado di comprendere molte istruzioni complesse nativamente (è il più alto livello di astrazione riconosciuto dalla macchina);
-- **RISC** (Reduced Instruction Set Computer): si basa sull’idea che se le istruzioni sono semplici e poche, esse possono essere eseguite rapidamente (è necessario un solo ciclo nel datapath);
+- **CISC** (*Complex* Instruction Set Computer): la CPU è in grado di comprendere molte istruzioni complesse nativamente (è il più alto livello di astrazione riconosciuto dalla macchina);
+- **RISC** (*Reduced* Instruction Set Computer): si basa sull’idea che se le istruzioni sono semplici e poche, esse possono essere eseguite rapidamente (è necessario un solo ciclo nel datapath);
 - **Ibrido**: a partire dal x486, le CPU Intel contengono un sottoinsieme di istruzioni RISC (quelle più comuni) che possono essere eseguite in un singolo ciclo nel datapath, mentre le altre complesse sono interpretate secondo la classica modalità CISC.
 #### Principi di progettazione dei calcolatori moderni (Principi RISC):
 
->Esecuzione diretta delle istruzioni dall'hardware:
+>***Esecuzione diretta delle istruzioni dall'hardware***:
 >- Evitare l'interpretazione delle istruzioni.
 >- Le architetture CISC possono suddividere istruzioni complesse in microistruzioni.
 
->Massimizzazione della frequenza di emissione delle istruzioni:
+>***Massimizzazione della frequenza di emissione delle istruzioni***:
 >- Il parallelismo è cruciale per le prestazioni.
 >- Emissione di un gran numero di istruzioni più semplici contemporaneamente.
 
->Decodifica facile delle istruzioni:
+>***Decodifica facile delle istruzioni***:
 >- Limitare la complessità della decodifica per ogni istruzione.
 >- Istruzioni regolari, di lunghezza fissa e con pochi campi.
 
