@@ -235,67 +235,76 @@ In sintesi, la memoria cache sfrutta la località dei riferimenti alla memoria p
 
 Il **RAID** (Redundant Array of Inexpensive Disks) è una tecnologia che combina diversi dischi in un unico sistema di archiviazione per migliorare le prestazioni, la capacità e/o la ridondanza dei dati. Esistono diversi livelli di RAID, ognuno con specifiche modalità di organizzazione dei dati:
 
->RAID livello 0:
+>***RAID livello 0***:
 >- Organizzazione basata sullo striping. 
 >- Distribuisce i dati tra i dischi senza ridondanza. 
 >- Migliore per richieste di grandi dimensioni. 
 >- Prestazioni elevate, ma non offre ridondanza dei dati.
 
->RAID livello 1: 
+>***RAID livello 1***: 
 >- Organizzazione basata sulla duplicazione (mirroring).
 >- Ogni dato viene replicato su un altro disco.
 >- Prestazioni in scrittura simili a un singolo disco, ma prestazioni in lettura migliori. 
 >- Elevata tolleranza ai guasti grazie alla duplicazione dei dati.
 
->RAID livello 2: 
+>***RAID livello 2***: 
 >- Organizzazione basata su parole o byte, con dischi sincronizzati.
 >- Utilizza bit di correzione dell'errore (ECC - Error Correction Code) per la correzione degli errori.
 >- Requisiti di sincronizzazione dei dischi, meno efficiente a meno che non vengano utilizzate molte unità.
 
->RAID livello 3: 
+>***RAID livello 3***: 
 >- Utilizza la parità per il controllo degli errori, con un disco dedicato per i bit di parità. 
 >- Offre maggiore tolleranza ai guasti rispetto al livello 2, ma richiede la sincronizzazione dei dischi. 
 
->RAID livello 4: 
->- Simile al livello 0, ma con una parità strip-per-strip su un disco separato. 
+>***RAID livello 4***: 
+>- Simile al livello 0, ma con una parità `strip-per-strip` su un disco separato. 
 >- Protegge dalla perdita di un disco, ma le prestazioni possono essere limitate durante l'aggiornamento di piccole quantità di dati.
 
->RAID livello 5:
+>***RAID livello 5***:
 >- Distribuisce uniformemente i bit di parità su tutti i dischi. 
 >- Migliora la ridondanza e le prestazioni rispetto al livello 4, ma la ricostruzione dei dati dopo un guasto è complessa.
 
-In sintesi, i livelli di RAID offrono diverse combinazioni di prestazioni, ridondanza e tolleranza ai guasti. La scelta del livello di RAID dipende dalle esigenze specifiche di prestazioni, ridondanza dei dati e costo.Il livello di microarchitettura si trova sopra il livello logico digitale ed è responsabile dell'implementazione dell'Instruction Set Architecture (ISA), il quale può variare in base agli obiettivi di costo e prestazioni del
-computer. ISA come il RISC (Reduced Instruction Set Computing) si basano su istruzioni più semplici, eseguibili tipicamente in un singolo ciclo di clock, mentre ISA più complessi come il CISC (Complex Instruction Set Computing) possono richiedere più cicli per l'esecuzione di una singola istruzione.
+In sintesi, i livelli di RAID offrono diverse combinazioni di prestazioni, ridondanza e tolleranza ai guasti. La scelta del livello di RAID dipende dalle esigenze specifiche di prestazioni, ridondanza dei dati e costo.
+Il livello di microarchitettura si trova sopra il livello logico digitale ed è responsabile dell'implementazione dell'*Instruction Set Architecture* (**ISA**), il quale può variare in base agli obiettivi di costo e prestazioni del computer. ISA come il RISC (Reduced Instruction Set Computing) si basano su istruzioni più semplici, eseguibili tipicamente in un singolo ciclo di clock, mentre ISA più complessi come il CISC (Complex Instruction Set Computing) possono richiedere più cicli per l'esecuzione di una singola istruzione.
+
 ## Esempio di microarchitettura
 
 Esaminiamo l'esempio pratico della Java Virtual Machine (JVM) semplificata, chiamata IJVM, operante esclusivamente su numeri interi, come rappresentazione di una microarchitettura. Questa IJVM sarà il nostro esempio per comprendere il controllo e l'ordinamento delle istruzioni.
+
 Nel caso della microarchitettura per l'IJVM, questa conterrà un microprogramma registrato in una ROM, responsabile di prelevare, decodificare ed eseguire le istruzioni IJVM. Tuttavia, l'interprete JVM di Sun non può essere utilizzato per controllare l'hardware a un livello di dettaglio richiesto, essendo stato scritto in C per la portabilità.
 Il modello convenzionale per progettare la microarchitettura è simile a un problema di programmazione, dove ogni istruzione ISA rappresenta una funzione richiamata dal programma principale. Il programma principale è un semplice ciclo senza fine che determina quale funzione (istruzione) invocare e poi riprende l'esecuzione.
+
 Il microprogramma contiene variabili che costituiscono lo stato del calcolatore, tra cui il Program Counter (*PC*) che indica la locazione di memoria contenente la successiva istruzione da eseguire. Durante l'esecuzione di un'istruzione, il PC viene avanzato per puntare alla prossima istruzione. Ogni istruzione IJVM è composta da campi, di solito uno o due, con uno scopo specifico. Il primo campo è l'*opcode* che identifica il tipo di istruzione (ad esempio `ADD`, `BRANCH`) e può specificare l'operando (come indicare una variabile locale). 
+
 Il modello `fetch-decode-execute` è utilizzato per l'esecuzione delle istruzioni, fornendo un metodo astratto per l'implementazione di ISA complessi come l'IJVM.
 Le microistruzioni compongono il microprogramma e controllano il percorso dati durante un ciclo, definendo il flusso di esecuzione.
 ## Percorso dati
-Il percorso dati è una parte essenziale dell'unità di elaborazione di un processore (CPU), comprendente l'Arithmetic Logic Unit (ALU), i suoi input e output, e una serie di registri a 32 bit come il PC, SP e MDR.
+
+Il percorso dati è una parte essenziale dell'unità di elaborazione di un processore (CPU), comprendente l'Arithmetic Logic Unit (ALU), i suoi input e output, e una serie di registri a 32 bit come il PC ( Program Counter ), SP ( Stack Pointer ) e MDR ( Memory Data Register ).
 
 ![[Pasted image 20240528122422.png|center|300]]
 
-Questi registri sono accessibili solo a livello di microarchitettura e memorizzano valori corrispondenti alle variabili dell'Instruction Set Architecture (ISA) a cui sono associati.La funzione dell'ALU è determinata da sei linee di controllo che regolano le sue operazioni, ad esempio, F0 e F1 definiscono l'operazione, ENA e ENB abilitano gli input, INVA inverte l'input di sinistra e INC forza un riporto nel bit meno significativo per l'operazione di somma di 1.
+Questi registri sono accessibili solo a livello di microarchitettura e memorizzano valori corrispondenti alle variabili dell'Instruction Set Architecture (ISA) a cui sono associati.
+La funzione dell'ALU è determinata da sei linee di controllo che regolano le sue operazioni, ad esempio, $F_0$ e $F_1$ definiscono l'operazione, ENA e ENB abilitano gli input, INVA inverte l'input di sinistra e INC forza un riporto nel bit meno significativo per l'operazione di somma di 1.
+
 La Figura 4.2 illustra alcune delle combinazioni più rilevanti per l'ALU, come somma, sottrazione, complemento a due, etc. Queste funzioni possono variare a seconda delle esigenze dell'ISA, e talvolta diverse combinazioni possono ottenere lo stesso risultato.
+
 Nel percorso dati, l'ALU richiede due input: uno a sinistra (A) collegato al registro di mantenimento H e uno a destra (B) collegato al bus B. Il bus B può essere caricato da nove sorgenti diverse. È possibile caricare un valore in H utilizzando la somma di B con zero, ottenendo quindi lo stesso valore di B senza modifiche, e memorizzarlo in H attraverso lo shifter senza modificarlo ulteriormente.
-Due linee di controllo aggiuntive, SLL8 (Shift Left Logical) e SRA1 (Shift Right Arithmetic), gestiscono operazioni di shift dei dati.
-La lettura e la scrittura di un registro nello stesso ciclo avvengono in fasi diverse dello stesso ciclo di clock per evitare inconsistenze nei dati. Durante una fase iniziale del ciclo, quando viene selezionato un registro come input destro della ALU, i suoi valori vengono caricati sul bus B e mantenuti stabili per l'intera durata del ciclo. Le operazioni dell'ALU producono un risultato che viene inviato al bus C attraverso lo shifter. Verso lafine del ciclo, quando i valori di output sono stabili, un segnale di clock attiva la memorizzazione dei valori sul bus C nei registri, consentendo la lettura e la scrittura simultanea in un singolo ciclo. La sequenza temporizzata del percorso dati permette la coerenza delle letture e scritture simultanee nello stesso registro, senza generare dati incoerenti.
+
+Due linee di controllo aggiuntive, *SLL8* (Shift Left Logical) e *SRA1* (Shift Right Arithmetic), gestiscono operazioni di shift dei dati.
+La lettura e la scrittura di un registro nello stesso ciclo avvengono in fasi diverse dello stesso ciclo di clock per evitare inconsistenze nei dati. Durante una fase iniziale del ciclo, quando viene selezionato un registro come input destro della ALU, i suoi valori vengono caricati sul bus B e mantenuti stabili per l'intera durata del ciclo. Le operazioni dell'ALU producono un risultato che viene inviato al bus C attraverso lo *shifter*. Verso la fine del ciclo, quando i valori di output sono stabili, un segnale di clock attiva la memorizzazione dei valori sul bus C nei registri, consentendo la lettura e la scrittura simultanea in un singolo ciclo. La sequenza temporizzata del percorso dati permette la coerenza delle letture e scritture simultanee nello stesso registro, senza generare dati incoerenti.
 
 ## Microistruzioni
 
-Il controllo del percorso dati, come descritto nel testo, richiede la gestione di 29 segnali, suddivisi in cinque gruppi funzionali:
-- Scrittura dei dati dal bus C ai registri: 9 segnali
-- Abilitazione dei registri sul bus B per l'input della ALU: 9 segnali
-- Controllo delle funzioni della ALU e dello shifter: 8 segnali
-- Segnali per indicare la lettura/scrittura della memoria attraverso MAR (MDR): 2 segnali
-- Segnale per il prelievo dei dati dalla memoria attraverso PC o MBR: 1 segnale
-Durante un ciclo del percorso dati, si caricano i valori dei registri sul bus B, si eseguono operazioni attraverso l'ALU e lo shifter, si guida il risultato sul bus C e si riscrivono i dati nei registri appropriati. Se viene eseguita un'operazione di lettura dalla memoria, essa inizia alla fine del ciclo di percorso dati, dopo il caricamento di MAR. I dati della memoria saranno disponibili solo nel ciclo successivo, quindi non possono
-essere utilizzati nel ciclo immediatamente successivo alla lettura.
-Nel progetto del controllore, si utilizzano 24 segnali (24 bit) per controllare il percorso dati in un ciclo. La seconda parte del controllo riguarda le operazioni da eseguire nel ciclo successivo. Si adotta un formato che comprende i 24 bit di controllo, oltre a due campi aggiuntivi: NEXT_ADDRESS e JAM.
+Il controllo del percorso dati, come descritto nel testo, richiede la gestione di **29 segnali**, suddivisi in **cinque gruppi funzionali**:
+- Scrittura dei dati dal bus C ai registri: *9* segnali;
+- Abilitazione dei registri sul bus B per l'input della ALU: *9* segnali;
+- Controllo delle funzioni della ALU e dello shifter: *8* segnali;
+- Segnali per indicare la lettura/scrittura della memoria attraverso MAR (MDR): *2* segnali;
+- Segnale per il prelievo dei dati dalla memoria attraverso PC o MBR: *1* segnale.
+
+Durante un ciclo del percorso dati, si caricano i valori dei registri sul bus B, si eseguono operazioni attraverso l'ALU e lo shifter, si guida il risultato sul bus C e si riscrivono i dati nei registri appropriati. Se viene eseguita un'operazione di lettura dalla memoria, essa inizia alla fine del ciclo di percorso dati, dopo il caricamento di *MAR* ( Memory Address Register ). I dati della memoria saranno disponibili solo nel ciclo successivo, quindi non possono essere utilizzati nel ciclo immediatamente successivo alla lettura.
+Nel progetto del controllore, si utilizzano 24 segnali (24 bit) per controllare il percorso dati in un ciclo. La seconda parte del controllo riguarda le operazioni da eseguire nel ciclo successivo. Si adotta un formato che comprende i 24 bit di controllo, oltre a due campi aggiuntivi: `NEXT_ADDRESS` e `JAM`.
 
 Questi sei gruppi funzionali per il controllo del percorso dati comprendono:
 - Indirizzo (Addr): Contiene l'indirizzo di una potenziale successiva microistruzione.
@@ -305,26 +314,34 @@ Questi sei gruppi funzionali per il controllo del percorso dati comprendono:
 - Mem: Seleziona la funzione della memoria.
 - B: Seleziona la sorgente del bus B.
 Questi segnali di controllo sono codificati in 36 bit e vengono utilizzati per descrivere le operazioni da eseguire, includendo le azioni per il ciclo successivo.
+
 Il formato del controllore è stato attentamente strutturato per minimizzare l'incrocio delle linee, che in schemi simili corrispondono a collegamenti che si incrociano sui chip. Questi incroci possono complicare i progetti, quindi minimizzarli è una pratica consigliata per semplificare l'architettura 
 ### Stack
 
-Il concetto di stack è fondamentale nella gestione delle variabili locali e nell'elaborazione delle espressioni in molti linguaggi di programmazione. In sostanza, il problema principale è determinare dove memorizzare le variabili locali, specialmente considerando la possibilità che una procedura possa richiamare se stessa.
-La soluzione non può essere l'assegnazione di indirizzi assoluti di memoria alle variabili poiché ciò potrebbe generare conflitti se una procedura viene invocata più volte contemporaneamente. Quindi, si utilizza lo stack, un'area di memoria flessibile, per memorizzare le variabili locali. Si definisce un registro, LV, che punta alla procedura corrente e un altro registro, SP, che punta all'ultimo elemento nello stack delle variabili locali.Quando una procedura richiama un'altra procedura, lo spazio per le variabili locali della procedura chiamata viene allocato sopra nello stack. LV viene modificato per puntare alle nuove variabili locali, consentendo l'accesso tramite l'offset rispetto a LV.
-Questo processo si ripete a ogni chiamata di procedura, con le variabili locali che vengono sovrapposte nello stack. Quando una procedura termina, lo spazio assegnato alle sue variabili locali viene liberato. Lo stack può anche essere utilizzato per calcolare espressioni aritmetiche, dove gli operandi vengono inseriti nello stack e le operazioni vengono eseguite utilizzando la logica dello stack. Ad esempio, per eseguire $a_1 = a_2 + a_3$, i valori di a2 e a3 vengono inseriti nello stack, l'addizione viene eseguita e il risultato viene memorizzato in $a1$.
+Il concetto di *stack* è fondamentale nella gestione delle variabili locali e nell'elaborazione delle espressioni in molti linguaggi di programmazione. In sostanza, il problema principale è determinare dove memorizzare le variabili locali, specialmente considerando la possibilità che una procedura possa richiamare se stessa.
+
+La soluzione non può essere l'assegnazione di indirizzi assoluti di memoria alle variabili poiché ciò potrebbe generare conflitti se una procedura viene invocata più volte contemporaneamente. Quindi, si utilizza lo stack, un'area di memoria flessibile, per memorizzare le variabili locali. 
+Si definisce un registro, *LV* ( Local Variable ), che punta alla procedura corrente e un altro registro, SP, che punta all'ultimo elemento nello stack delle variabili locali. Quando una procedura richiama un'altra procedura, lo spazio per le variabili locali della procedura chiamata viene allocato sopra nello stack. LV viene modificato per puntare alle nuove variabili locali, consentendo l'accesso tramite l'offset rispetto a LV.
+Questo processo si ripete a ogni chiamata di procedura, con le variabili locali che vengono sovrapposte nello stack. Quando una procedura termina, lo spazio assegnato alle sue variabili locali viene liberato. Lo stack può anche essere utilizzato per calcolare espressioni aritmetiche, dove gli operandi vengono inseriti nello stack e le operazioni vengono eseguite utilizzando la logica dello stack. Ad esempio, per eseguire $a_1 = a_2 + a_3$, i valori di $a_2$ e $a_3$ vengono inseriti nello stack, l'addizione viene eseguita e il risultato viene memorizzato in $a_1$.
 In alcuni casi, come nel calcolo di espressioni che coinvolgono funzioni, sia le variabili locali che gli operandi possono essere memorizzati nello stack, consentendo un'elaborazione efficiente dell'espressione. 
 In sintesi, lo stack viene utilizzato per gestire le variabili locali delle procedure e come meccanismo per l'elaborazione efficiente delle espressioni, consentendo un'allocazione dinamica della memoria necessaria.
 ## ISA
 
-L'ISA è fondamentale poiché costituisce un linguaggio comune comprensibile sia per i compilatori che per l'hardware. Sebbene sia teoricamente possibile eseguire direttamente codice di alto livello sull'hardware, ciò comporterebbe la perdita delle prestazioni ottimali ottenute tramite la compilazione. Inoltre, è preferibile che i
+L'ISA è fondamentale poiché costituisce un linguaggio comune **comprensibile** sia per i compilatori che per l'hardware. Sebbene sia teoricamente possibile eseguire direttamente codice di alto livello sull'hardware, ciò comporterebbe la perdita delle prestazioni ottimali ottenute tramite la compilazione. Inoltre, è preferibile che i
 computer siano in grado di eseguire programmi scritti in vari linguaggi anziché limitarsi a uno solo.
-La prassi comune tra i progettisti è quella di tradurre vari linguaggi di alto livello in un formato intermedio comune, ovvero l'ISA, per poi costruire l'hardware che esegue direttamente i programmi in questo linguaggio. Tale livello definisce l'interfaccia tra compilatori e hardware. Durante la progettazione di una nuova macchina, sia i progettisti del compilatore che quelli dell'hardware collaborano per determinare le
-caratteristiche desiderate per l'ISA. Se le richieste del compilatore non sono realizzabili con costi accettabili, vengono escluse. Allo stesso modo, se l'hardware propone funzionalità che non possono essere utilizzate dai software esistenti, queste idee vengono scartate.
-Tuttavia, nella pratica, la domanda principale dei potenziali utenti riguarda la compatibilità con i predecessori. Questo comporta la necessità di mantenere l'ISA costante o retrocompatibile con le generazioni precedenti, consentendo ai vecchi programmi di funzionare senza modifiche significative.
-Tuttavia, le nuove macchine possono offrire funzionalità innovative sfruttabili solo dai nuovi software. Pertanto, sebbene gli ingegneri abbiano libertà nella progettazione dell'hardware, l'ISA deve rimanere retrocompatibile con le generazioni precedenti. Un buon ISA, oltre a garantire la retrocompatibilità, offre vantaggi in termini di prestazioni e può influenzare notevolmente la potenza di calcolo e l'efficienza del processore. Un buon ISA si distingue per la capacità di essere implementato efficientemente dalle attuali e future tecnologie, riducendo i costi di produzione e di esecuzione del software.
-Inoltre, un ISA efficace favorisce una compilazione "pulita", offrendo al compilatore un insieme di istruzioni regolari e complete che consentono una scelta ottimale delle alternative di esecuzione. La regolarità e la completezza dell'ISA sono quindi importanti per consentire al compilatore di operare scelte migliori senza limitazioni che potrebbero compromettere l'efficienza del codice generato.
-### Proprietà del livello ISA
 
-Il livello ISA, o Architettura dell'Insieme di Istruzioni, può essere definito come la rappresentazione della macchina dal punto di vista del programmatore in linguaggio macchina. Tuttavia, dato che ormai pochi programmatori scrivono direttamente in linguaggio macchina, possiamo considerare il codice a livello ISA come l'output di un compilatore.Per produrre codice a livello ISA, i progettisti dei compilatori devono comprendere il modello di memoria, i registri disponibili, i tipi di dati e le istruzioni accessibili. Tutte queste informazioni insieme definiscono il livello ISA.
+*La prassi comune tra i progettisti è quella di tradurre vari linguaggi di alto livello in un formato intermedio comune, ovvero l'ISA, per poi costruire l'hardware che esegue direttamente i programmi in questo linguaggio*. Tale livello definisce l'interfaccia tra compilatori e hardware. Durante la progettazione di una nuova macchina, sia i progettisti del compilatore che quelli dell'hardware collaborano per determinare le caratteristiche desiderate per l'ISA. Se le richieste del compilatore non sono realizzabili con costi accettabili, vengono escluse.
+
+Allo stesso modo, se l'hardware propone funzionalità che non possono essere utilizzate dai software esistenti, queste idee vengono scartate.
+Tuttavia, nella pratica, la domanda principale dei potenziali utenti riguarda la compatibilità con i predecessori. Questo comporta la necessità di mantenere l'ISA costante o retrocompatibile con le generazioni precedenti, consentendo ai vecchi programmi di funzionare senza modifiche significative.
+Tuttavia, le nuove macchine possono offrire funzionalità innovative sfruttabili solo dai nuovi software. Pertanto, sebbene gli ingegneri abbiano libertà nella progettazione dell'hardware, l'ISA deve rimanere *retrocompatibile* con le generazioni precedenti. 
+
+Un buon ISA, oltre a garantire la retrocompatibilità, offre vantaggi in termini di prestazioni e può influenzare notevolmente la potenza di calcolo e l'efficienza del processore. Un buon ISA si distingue per la capacità di essere implementato efficientemente dalle attuali e future tecnologie, riducendo i costi di produzione e di esecuzione del software.
+Inoltre, un ISA efficace favorisce una compilazione "pulita", offrendo al compilatore un insieme di istruzioni regolari e complete che consentono una scelta ottimale delle alternative di esecuzione. La regolarità e la completezza dell'ISA sono quindi importanti per consentire al compilatore di operare scelte migliori senza limitazioni che potrebbero compromettere l'efficienza del codice generato.
+
+### Proprietà del livello ISA 
+	qui
+Il livello *ISA*, o Architettura dell'Insieme di Istruzioni, può essere definito come la rappresentazione della macchina dal punto di vista del programmatore in linguaggio macchina. Tuttavia, dato che ormai pochi programmatori scrivono direttamente in linguaggio macchina, possiamo considerare il codice a livello ISA come l'output di un compilatore.Per produrre codice a livello ISA, i progettisti dei compilatori devono comprendere il modello di memoria, i registri disponibili, i tipi di dati e le istruzioni accessibili. Tutte queste informazioni insieme definiscono il livello ISA.
 Inizialmente, si è affermato che aspetti come la microarchitettura, la microprogrammazione, la pipeline o la scalabilità non fanno parte del livello ISA perché non sono visibili direttamente al progettista del compilatore.
 Tuttavia, alcune di queste proprietà possono influenzare le prestazioni, il che è rilevante per il compilatore. Ad esempio, in una microarchitettura superscalare che emette istruzioni in successione se sono di tipo diverso, il compilatore potrebbe ottimizzare il codice per ottenere prestazioni migliori. Spesso, il livello ISA è definito attraverso documenti formali, talvolta redatti da consorzi di aziende, che consentono ai produttori di costruire macchine in grado di eseguire lo stesso codice, garantendo gli stessi
 risultati. Questi documenti di definizione hanno sezioni normative che stabiliscono requisiti obbligatori e informative che forniscono ulteriori dettagli e spiegazioni. Le sezioni normative utilizzano termini come "deve", "non deve" e "dovrebbe" per imporre, vietare o suggerire aspetti dell'architettura. Ciò significa che il compilatore non può fare affidamento su comportamenti prestabiliti e ciascun produttore ha la libertà di fare le proprie scelte.
