@@ -148,11 +148,11 @@ Spesso ci si riferisce a questa sequenza di passi con il termine di ciclo esecut
 >- Limitare la complessità della decodifica per ogni istruzione.
 >- Istruzioni regolari, di lunghezza fissa e con pochi campi.
 
->Solo Load e Store fanno riferimento alla memoria: 
+>***Solo Load e Store fanno riferimento alla memoria***: 
 >- Limitare l'accesso diretto della memoria solo per le operazioni Load e Store. 
 >- Consentire lo spostamento degli operandi dalla memoria ai registri con istruzioni dedicate.
 
->Ampio numero di registri disponibili:
+>***Ampio numero di registri disponibili***:
 >- Garantire un gran numero di registri (almeno 32). 
 >- Mantenere i dati nei registri per evitare frequenti accessi lenti alla memoria.
 
@@ -165,18 +165,20 @@ Spesso ci si riferisce a questa sequenza di passi con il termine di ciclo esecut
 
 ### Parallelismo a livello di istruzione
 
-Poiché l’incremento del clock del processore ha raggiunto un limite fisico, i progettisti di CPU guardano al parallelismo (più istruzioni nello stesso tempo) per incrementare le prestazioni.
+Poiché l’incremento del clock del processore ha raggiunto un limite fisico, i progettisti di CPU guardano al **parallelismo** (più istruzioni nello stesso tempo) per incrementare le prestazioni.
 Il parallelismo si può ottenere in due diversi modi:
 - *Parallelismo a livello di istruzione*: il parallelismo è sfruttato all’interno delle istruzioni per ottenere un maggior numero di istruzioni al secondo;
 - *Parallelismo a livello di processore*: più CPU collaborano per risolvere lo stesso problema.
 # Pipelining
 
-Una limitazione nella velocità di esecuzione delle istruzioni è rappresentato dal prelievo delle istruzioni dalla memoria.
+>[!important]- Una limitazione nella velocità di esecuzione delle istruzioni è rappresentato dal prelievo delle istruzioni dalla memoria.
+
 Per alleviare questo problema, i calcolatori sono stati dotati della capacità di poter prelevare in anticipo le istruzioni dalla memoria, in modo da averle già a disposizione nel momento in cui dovessero rendersi necessarie. Le istruzioni venivano memorizzate in un insieme di registri chiamati *buffer di prefetch*, dai quali potevano essere prese nel momento in cui venivano richieste, senza dover attendere che si completasse una lettura della memoria.
-In pratica la tecnica di *prefetching* divide l’esecuzione dell’istruzione in due parti: il prelievo dell’istruzione e la sua esecuzione effettiva. Il pipeline divide l’esecuzione di un’istruzione in un numero maggiore di parti che possono essere eseguite in parallelo; ciascuna di queste parti è gestita da componenti hardware dedicati.
+In pratica la tecnica di **prefetching** divide l’esecuzione dell’istruzione in due parti: il *prelievo* dell’istruzione e la sua *esecuzione* effettiva. Il pipeline divide l’esecuzione di un’istruzione in un numero maggiore di parti che possono essere eseguite in parallelo; ciascuna di queste parti è gestita da componenti hardware dedicati.
 ## Processori con più pipeline
 
-Avere due pipeline è sicuramente meglio di averne una sola. 
+>[!note]- Avere due pipeline è sicuramente meglio di averne una sola. 
+
 Questa architettura è stata utilizzata inizialmente dall’Intel x486:
 
 ![[Pasted image 20240528120706.png|center|500]]
@@ -189,7 +191,7 @@ Viene utilizzata inizialmente da Intel Core. Il processore dispone di una sola p
 
 ![[Pasted image 20240528120811.png|center|600]]
 
-Affinché l’architettura abbia senso è necessario che la velocità di emissione della fase $S3$ sia più alta rispetto a quella della fase $S4$. La fase $S4$ può avere delle unità ALU duplicate.
+Affinché l’architettura abbia senso è necessario che *la velocità di emissione della fase $S3$ sia più alta rispetto a quella della fase $S4$*. La fase $S4$ può avere delle unità ALU duplicate.
 ## Parallelismo a livello di processore
 
 Il parallelismo nel chip aiuta a migliorare le performance della CPU: con il pipelining e le
@@ -202,23 +204,26 @@ Esistono tre differenti approcci: *computer con parallelismo sui dati*, *multipr
 Ci sono due schemi differenti:
 - *Processori SIMD* (Single Instruction-stream Multiple Data-stream): sono costituiti da un vasto numero di processori identici che eseguono la stessa sequenza di istruzioni su insieme differenti di dati;
 - *Processori vettoriali*: un processore vettoriale esegue la stessa sequenza di operazioni su coppie di dati, ma tutte le addizioni sono svolte da un unico sommatore strutturato in pipeline.
+
 Entrambe le architettura lavorano su array di dati, mentre il primo utilizza tanti sommatori quanti gli elementi del vettore, il secondo utilizza un solo sommatore e un unico registro vettoriale.
 ## Multiprocessori
 
 È un’architettura costituita da *più CPU* che condividono una *memoria comune*.
-Poiché ciascuna CPU può leggere o scrivere qualsiasi zona della memoria comune, le CPU devono sincronizzarsi via software.In questo caso le CPU hanno la necessità di interagire in modo così profondo che il sistema è detto fortemente accoppiato (tightly coupled).
+Poiché ciascuna CPU può leggere o scrivere qualsiasi zona della memoria comune, le CPU devono sincronizzarsi via software.In questo caso le CPU hanno la necessità di interagire in modo così profondo che il sistema è detto **fortemente accoppiato** (tightly coupled).
+
 ## Multicomputer
 
 Multiprocessori con molte CPU sono difficili da realizzare, per via del problema delle connessioni di ciascuna CPU verso la memoria comune.
 I progettisti hanno superato il problema abbandonando il concetto di memoria comune e
-realizzando un elevato numero di *CPU interconnesse*, ciascuna con la propria *memoria privata*. Le CPU in un multicomputer sono accoppiate in modo lasco (loosely coupled) e comunicano attraverso scambi di messaggi.
-In architetture grandi la completa interconnessione non è fattibile così sono utilizzate topologie differenti come la griglia, l’albero o l’anello.
+realizzando un elevato numero di *CPU interconnesse*, ciascuna con la propria *memoria privata*. Le CPU in un multicomputer sono accoppiate in modo **lasco** (loosely coupled) e comunicano attraverso scambi di messaggi.
+In architetture grandi la completa interconnessione non è fattibile, così sono utilizzate topologie differenti come la griglia, l’albero o l’anello.
 
 ### Memoria cache
 
 La memoria cache è un sistema che combina una piccola quantità di memoria veloce con una più ampia ma più lenta memoria principale al fine di migliorare le prestazioni complessive del sistema. I principi chiave della memoria cache includono:
 - *Località spaziale e temporale:* I programmi tendono ad accedere a porzioni specifiche della memoria in modo non casuale. La località spaziale suggerisce che i riferimenti successivi alla memoria saranno vicini agli attuali, mentre la località temporale indica che le stesse zone della memoria verranno frequentemente richiamate nel tempo.
 - *Funzionamento della cache*: Le parole di memoria frequentemente utilizzate vengono conservate nella cache. Quando la CPU richiede una parola, la cerca prima nella cache e, se non la trova, accede alla memoria principale. Questo riduce significativamente i tempi di accesso se le parole necessarie sono presenti nella cache.
+
 #### Livelli di cache
 
 I moderni sistemi di memoria possono avere più livelli di cache:
