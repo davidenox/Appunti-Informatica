@@ -340,86 +340,113 @@ Un buon ISA, oltre a garantire la retrocompatibilità, offre vantaggi in termini
 Inoltre, un ISA efficace favorisce una compilazione "pulita", offrendo al compilatore un insieme di istruzioni regolari e complete che consentono una scelta ottimale delle alternative di esecuzione. La regolarità e la completezza dell'ISA sono quindi importanti per consentire al compilatore di operare scelte migliori senza limitazioni che potrebbero compromettere l'efficienza del codice generato.
 
 ### Proprietà del livello ISA 
-	qui
-Il livello *ISA*, o Architettura dell'Insieme di Istruzioni, può essere definito come la rappresentazione della macchina dal punto di vista del programmatore in linguaggio macchina. Tuttavia, dato che ormai pochi programmatori scrivono direttamente in linguaggio macchina, possiamo considerare il codice a livello ISA come l'output di un compilatore.Per produrre codice a livello ISA, i progettisti dei compilatori devono comprendere il modello di memoria, i registri disponibili, i tipi di dati e le istruzioni accessibili. Tutte queste informazioni insieme definiscono il livello ISA.
+
+Il livello *ISA*, o Architettura dell'Insieme di Istruzioni, può essere definito come la rappresentazione della macchina dal punto di vista del programmatore in linguaggio macchina. Tuttavia, dato che ormai pochi programmatori scrivono direttamente in linguaggio macchina, possiamo considerare il codice a livello ISA come l'output di un compilatore.
+Per produrre codice a livello ISA, i progettisti dei compilatori devono comprendere il modello di memoria, i registri disponibili, i tipi di dati e le istruzioni accessibili. Tutte queste informazioni insieme definiscono il livello ISA.
+
 Inizialmente, si è affermato che aspetti come la microarchitettura, la microprogrammazione, la pipeline o la scalabilità non fanno parte del livello ISA perché non sono visibili direttamente al progettista del compilatore.
-Tuttavia, alcune di queste proprietà possono influenzare le prestazioni, il che è rilevante per il compilatore. Ad esempio, in una microarchitettura superscalare che emette istruzioni in successione se sono di tipo diverso, il compilatore potrebbe ottimizzare il codice per ottenere prestazioni migliori. Spesso, il livello ISA è definito attraverso documenti formali, talvolta redatti da consorzi di aziende, che consentono ai produttori di costruire macchine in grado di eseguire lo stesso codice, garantendo gli stessi
-risultati. Questi documenti di definizione hanno sezioni normative che stabiliscono requisiti obbligatori e informative che forniscono ulteriori dettagli e spiegazioni. Le sezioni normative utilizzano termini come "deve", "non deve" e "dovrebbe" per imporre, vietare o suggerire aspetti dell'architettura. Ciò significa che il compilatore non può fare affidamento su comportamenti prestabiliti e ciascun produttore ha la libertà di fare le proprie scelte.
+Tuttavia, alcune di queste proprietà possono influenzare le prestazioni, il che è rilevante per il compilatore. Ad esempio, in una microarchitettura superscalare che emette istruzioni in successione, se sono di tipo diverso, il compilatore potrebbe ottimizzare il codice per ottenere prestazioni migliori. 
+
+Spesso, il livello ISA è definito attraverso documenti formali, talvolta redatti da consorzi di aziende, che consentono ai produttori di costruire macchine in grado di eseguire lo stesso codice, garantendo gli stessi risultati. Questi documenti di definizione hanno sezioni :
+1. *normative* che stabiliscono requisiti obbligatori;
+2. *informative* che forniscono ulteriori dettagli e spiegazioni. 
+Le sezioni normative utilizzano termini come "deve", "non deve" e "dovrebbe" per imporre, vietare o suggerire aspetti dell'architettura. Ciò significa che il compilatore non può fare affidamento su comportamenti prestabiliti e ciascun produttore ha la libertà di fare le proprie scelte.
 Le specifiche architetturali sono accompagnate da test sperimentali che verificano la conformità dell'implementazione alla specifica corrispondente.
-Un'altra proprietà importante del livello ISA è la presenza di almeno due modalità di esecuzione: modalità kernel e modalità utente. La modalità kernel è utilizzata per l'esecuzione del sistema operativo e consente l'accesso a tutte le istruzioni, mentre la modalità utente è destinata all'esecuzione di programmi applicativi e può limitare l'esecuzione di alcune istruzioni più "sensibili" che manipolano direttamente la cache, ad
+
+Un'altra proprietà importante del livello ISA è la presenza di almeno due modalità di esecuzione: modalità *kernel* e modalità *utente*. La modalità kernel è utilizzata per l'esecuzione del sistema operativo e consente l'accesso a tutte le istruzioni, mentre la modalità utente è destinata all'esecuzione di programmi applicativi e può limitare l'esecuzione di alcune istruzioni più "sensibili" che manipolano direttamente la cache, ad
 esempio.
+
 ### Modelli di memoria
 
-I computer organizzano la memoria in celle consecutive, comunemente di 8 bit, chiamate byte. La preferenza per i byte deriva dal fatto che i caratteri nella tabella ASCII occupano 7 bit, permettendo di utilizzare un byte intero. In futuro, se lo standard UNICODE diventerà predominante, potrebbe portare a unità consecutive di 16 bit.
+I computer organizzano la memoria in celle consecutive, comunemente di 8 bit, chiamate *byte*. La preferenza per i byte deriva dal fatto che i caratteri nella tabella ASCII occupano 7 bit, permettendo di utilizzare un byte intero. In futuro, se lo standard `UNICODE` diventerà predominante, potrebbe portare a unità consecutive di 16 bit.
+
 Di solito, i byte vengono raggruppati in parole di 4 byte (32 bit) o 8 byte (64 bit). Molte architetture richiedono che le parole siano allineate lungo i loro limiti. Ad esempio, una parola di 4 byte può iniziare solo agli indirizzi 0, 4, 8, ecc., mentre una parola di 8 byte può iniziare agli indirizzi 0, 8, 16, ecc. Questo allineamento ottimizza l'efficienza della memoria, ma può creare complicazioni. 
-La capacità di leggere parole da indirizzi arbitrari richiede hardware più complesso, rendendo il chip più grande e costoso. Gli ingegneri preferirebbero evitare questo, ma impongono spesso che ogni riferimento in memoria sia allineato. Tuttavia, la richiesta di retrocompatibilità e di poter eseguire codice vecchio porta spesso a compromessi.
-Molti processori hanno uno spazio lineare degli indirizzi che va da 0 fino a 2^32 o 2^64 byte. Alcune macchine hanno spazi separati per istruzioni e dati, il che consente l'esecuzione di programmi e il recupero di istruzioni da spazi diversi. Questo schema offre vantaggi di sicurezza e permette una più ampia selezione di indirizzi.I modelli di memoria separata per dati e istruzioni differiscono dalla cache di primo livello separata. Nel primo caso, gli accessi ai diversi spazi degli indirizzi portano a risultati diversi, mentre nella cache separata, un singolo spazio degli indirizzi è diviso tra cache differenti.
-Un aspetto cruciale nel modello di memoria è la semantica della memoria stessa. Ad esempio, l'ordine di esecuzione di un'istruzione di caricamento (LOAD) dopo un'istruzione di memorizzazione (STORE) allo stesso indirizzo. In molte architetture, il riordinamento delle microistruzioni può creare comportamenti inaspettati.
-Per risolvere questo problema, i progettisti di sistema possono adottare vari approcci. Ad esempio, la serializzazione di tutte le richieste di accesso alla memoria assicura che ogni operazione sia completata prima dell'emissione della successiva, garantendo l'ordine di esecuzione specificato dal programma. Al contrario, permettere all'hardware di gestire l'ordine richiede istruzioni aggiuntive nel programma per sincronizzare gli accessi alla memoria. Esistono anche modelli di memoria intermedi che bloccano solo
-alcuni accessi, lasciando altri liberi.
+
+La capacità di leggere parole da indirizzi arbitrari richiede un hardware più complesso, rendendo il chip più grande e costoso. Gli ingegneri preferirebbero evitare questo, ma impongono spesso che ogni riferimento in memoria sia allineato. Tuttavia, la richiesta di retrocompatibilità e di poter eseguire codice vecchio porta spesso a compromessi.
+
+Molti processori hanno uno spazio lineare degli indirizzi che va da $0$ fino a $2^{32}$ o $2^{64}$ byte. Alcune macchine hanno spazi separati per istruzioni e dati, il che consente l'esecuzione di programmi e il recupero di istruzioni da spazi diversi. Questo schema offre vantaggi di sicurezza e permette una più ampia selezione di indirizzi.I modelli di memoria separata per dati e istruzioni differiscono dalla cache di primo livello separata. Nel primo caso, gli accessi ai diversi spazi degli indirizzi portano a risultati diversi, mentre nella cache separata, un singolo spazio degli indirizzi è diviso tra cache differenti.
+
+Un aspetto cruciale nel modello di memoria è la *semantica* della memoria stessa. 
+Ad esempio, l'ordine di esecuzione di un'istruzione di caricamento (`LOAD`) dopo un'istruzione di memorizzazione (`STORE`) allo stesso indirizzo. In molte architetture, il riordinamento delle microistruzioni può creare comportamenti inaspettati.
+Per risolvere questo problema, i progettisti di sistema possono adottare vari approcci. Ad esempio, la *serializzazione* di tutte le richieste di accesso alla memoria assicura che ogni operazione sia completata prima dell'emissione della successiva, garantendo l'ordine di esecuzione specificato dal programma. Al contrario, permettere all'hardware di gestire l'ordine richiede istruzioni aggiuntive nel programma per sincronizzare gli accessi alla memoria. Esistono anche modelli di memoria intermedi che bloccano solo alcuni accessi, lasciando altri liberi.
+
 Sebbene queste peculiarità dell'architettura a livello ISA possano creare problematiche per i programmatori, l'abitudine a tali implementazioni è diffusa, poiché molte dipendono da caratteristiche sottostanti come il riordinamento delle istruzioni, le pipeline complesse e i sistemi di cache multipli.
+
 ## Registri 
 
-I registri sono componenti essenziali di un computer e possono essere divisi in due categorie principali a livello ISA: registri specializzati e registri d'uso generale.
-*Registri specializzati*: Questi includono registri come il Program Counter (PC) e il puntatore allo stack, dedicati a funzioni specifiche e visibili sia a livello ISA che microarchitetturale.
-*Registri d'uso generale*: Questi registri contengono variabili locali e risultati temporanei del calcolo. In alcune architetture, i registri d'uso generale sono simmetrici e intercambiabili, mentre in altre possono essere specializzati. Ad esempio, il Pentium 4 ha un registro come EDX che può essere utilizzato come registro d'uso generale, ma è destinato anche a ricevere metà del prodotto in una moltiplicazione o metà del
-dividendo in una divisione.
+I registri sono componenti essenziali di un computer e possono essere divisi in due categorie principali a livello ISA: registri **specializzati** e registri **d'uso generale**.
+- *Registri specializzati*: Questi includono registri come il Program Counter (*PC*) e il puntatore allo stack, dedicati a funzioni specifiche e visibili sia a livello ISA che microarchitetturale.
+- *Registri d'uso generale*: Questi registri contengono variabili locali e risultati temporanei del calcolo. In alcune architetture, i registri d'uso generale sono simmetrici e intercambiabili, mentre in altre possono essere specializzati. Ad esempio, il Pentium 4 ha un registro come EDX che può essere utilizzato come registro d'uso generale, ma è destinato anche a ricevere metà del prodotto in una moltiplicazione o metà del dividendo in una divisione.
+
 Solitamente, sistemi operativi o compilatori seguono convenzioni nell'uso di questi registri. Se ci sono convenzioni su come utilizzare i registri e queste non vengono rispettate, possono verificarsi problemi con la gestione dei dati in memoria.
 Oltre ai registri visibili ai programmi dell'utente, ci sono registri specializzati visibili solo in modalità kernel che gestiscono cache, memoria, dispositivi di I/O e altre funzionalità hardware. Questi sono utilizzati solo dal sistema operativo.
-Il registro di flag o PSW (Program Status Word) è un registro di controllo che contiene vari bit di varia natura, tra cui i codici di condizione. Questi codici di condizione riflettono lo stato del risultato dell'operazione più recente, come N per indicare un risultato negativo, Z per un risultato uguale a zero, V per indicare un overflow, C per un riporto oltre l'ultimo bit più significativo, A per un riporto oltre il terzo bit (riporto ausiliario) e P per un risultato pari (parità nulla).
-Questi codici di condizione sono utilizzati da istruzioni come CMP (comparazione) e dai salti condizionati. Ad esempio, un'istruzione CMP imposta il codice di condizione in base alla differenza tra due operandi, e un'istruzione successiva come BEQ (branch on equal, "salto se uguali") controlla il bit di condizione Z per decidere se eseguire il salto.Oltre ai codici di condizione, il PSW contiene altri campi specifici della macchina, come la modalità di macchina (utente o kernel), i bit di traccia per il debugging, il livello di priorità della CPU e lo stato di attivazione degli interrupt. Alcuni di questi campi potrebbero essere scrivibili solo in modalità kernel per ragioni di sicurezza e controllo dell'hardware.
+
+Il *registro di flag* o **PSW** (Program Status Word) è un registro di controllo che contiene vari bit di varia natura, tra cui i codici di condizione. Questi codici di condizione riflettono lo stato del risultato dell'operazione più recente, come $N$ per indicare un risultato negativo, $Z$ per un risultato uguale a zero, $V$ per indicare un overflow, $C$ per un riporto oltre l'ultimo bit più significativo, $A$ per un riporto oltre il terzo bit (riporto ausiliario) e $P$ per un risultato pari (parità nulla).
+
+Questi codici di condizione sono utilizzati da istruzioni come `CMP` (comparazione) e dai salti condizionati. Ad esempio, un'istruzione `CMP` imposta il codice di condizione in base alla differenza tra due operandi, e un'istruzione successiva come `BEQ` (*branch on equal*, "salto se uguali") controlla il bit di condizione $Z$ per decidere se eseguire il salto.
+Oltre ai codici di condizione, il PSW contiene altri campi specifici della macchina, come la *modalità* di macchina (utente o kernel), i bit di traccia per il *debugging*, il livello di *priorità* della CPU e lo stato di *attivazione* degli interrupt. Alcuni di questi campi potrebbero essere scrivibili solo in modalità kernel per ragioni di sicurezza e controllo dell'hardware.
+
 # Indirizzamento
-**Indirizzamento Immediato**: In questa modalità, l'operando è incorporato direttamente nell'istruzione stessa.
-L'operando è immediatamente disponibile e non richiede un riferimento in memoria separato. Tuttavia, questa modalità presenta limitazioni nella dimensione dell'operando e nel numero di operandi forniti.
-**Indirizzamento Diretto**: Qui, l'indirizzo completo dell'operando in memoria è specificato nell'istruzione.
-Questa modalità è adatta per accedere a variabili globali il cui indirizzo è noto in fase di compilazione, ma limita l'accesso a una posizione di memoria fissa.
-**Indirizzamento a Registro**: Si specifica un registro piuttosto che un indirizzo di memoria. Questa è la modalità più utilizzata in quanto i registri sono veloci in accesso e hanno indirizzi brevi.
-**Indirizzamento a Registro Indiretto**: L'indirizzo dell'operando in memoria è contenuto in un registro. Questo metodo permette di referenziare la memoria senza incorporare un intero indirizzo nell'istruzione e consente l'accesso a diverse posizioni di memoria in diverse esecuzioni.
-**Indirizzamento Indicizzato**: Questa modalità permette di referenziare una parola di memoria che si trova a uno specifico spiazzamento (offset) dal contenuto di un registro. È utile per accedere alle variabili locali o agli elementi di un array.
-**Indirizzamento Indicizzato Esteso**: Alcune macchine consentono la somma del contenuto di due registri più un offset per calcolare l'indirizzo di memoria. Questo metodo è più efficiente della modalità con offset in quanto richiede meno spazio per l'istruzione.
-**Indirizzamento a Stack**: Le istruzioni senza indirizzi possono essere eseguite in associazione con uno stack.
-Gli operandi sono posti sullo stack e le operazioni vengono eseguite utilizzando gli elementi nello stack.
-**Notazione Polacca Inversa**: Si tratta di una notazione per esprimere le espressioni matematiche in cui gli operatori vengono posti dopo gli operandi. Questa notazione è ideale per la valutazione delle formule da parte di un computer dotato di stack.
+
+- **Indirizzamento Immediato**: In questa modalità, l'operando è incorporato direttamente nell'istruzione stessa. L'operando è immediatamente disponibile e non richiede un riferimento in memoria separato. Tuttavia, questa modalità presenta limitazioni nella dimensione dell'operando e nel numero di operandi forniti.
+- **Indirizzamento Diretto**: Qui, l'indirizzo completo dell'operando in memoria è specificato nell'istruzione.Questa modalità è adatta per accedere a variabili globali il cui indirizzo è noto in fase di compilazione, ma limita l'accesso a una posizione di memoria fissa.
+- **Indirizzamento a Registro**: Si specifica un registro piuttosto che un indirizzo di memoria. Questa è la modalità più utilizzata in quanto i registri sono veloci in accesso e hanno indirizzi brevi.
+- **Indirizzamento a Registro Indiretto**: L'indirizzo dell'operando in memoria è contenuto in un registro. Questo metodo permette di referenziare la memoria senza incorporare un intero indirizzo nell'istruzione e consente l'accesso a diverse posizioni di memoria in diverse esecuzioni.
+- **Indirizzamento Indicizzato**: Questa modalità permette di referenziare una parola di memoria che si trova a uno specifico spiazzamento (*offset*) dal contenuto di un registro. È utile per accedere alle variabili locali o agli elementi di un array.
+- **Indirizzamento Indicizzato Esteso**: Alcune macchine consentono la somma del contenuto di due registri più un offset per calcolare l'indirizzo di memoria. Questo metodo è più efficiente della modalità con offset in quanto richiede meno spazio per l'istruzione.
+- **Indirizzamento a Stack**: Le istruzioni senza indirizzi possono essere eseguite in associazione con uno *stack*. Gli operandi sono posti sullo stack e le operazioni vengono eseguite utilizzando gli elementi nello stack.
+- **Notazione Polacca Inversa**: Si tratta di una notazione per esprimere le espressioni matematiche in cui gli operatori vengono posti dopo gli operandi. Questa notazione è ideale per la valutazione delle formule da parte di un computer dotato di stack.
+
 Le diverse modalità di indirizzamento hanno vantaggi e limitazioni, e la scelta di una modalità rispetto a un'altra dipende dalle esigenze specifiche della programmazione e dall'architettura del computer utilizzato.
+
 ## Trap e Interrupt
-**Trap**: Le trap sono chiamate di procedura automatiche che vengono attivate quando si verificano determinate condizioni eccezionali causate da un programma. Ad esempio, un'overflow (quando un risultato aritmetico supera la capacità di rappresentazione) può causare una trap. Le trap sono gestite da un gestore di trap, che si occupa di affrontare l'eccezione, come la stampa di un messaggio di errore.
-**Interrupt**: Gli interrupt sono cambiamenti nel flusso esecutivo generati da eventi esterni al programma in esecuzione. Al contrario delle trap, gli interrupt non sono sincroni e possono essere causati da eventi esterni, come la pressione di un tasto o l'arrivo di dati da un dispositivo di input/output. Quando si verifica un interrupt, il controllo viene trasferito a un gestore di interrupt che prende in carico l'evento. Una volta completato il gestore di interrupt, il controllo ritorna al programma interrotto esattamente da dove è stato interrotto.
+
+- **Trap**: Le trap sono *chiamate di procedura automatiche* che vengono attivate quando si verificano determinate condizioni eccezionali causate da un programma. Ad esempio, *un'overflow* (quando un risultato aritmetico supera la capacità di rappresentazione) *può causare una trap*. Le trap sono gestite da un gestore di trap, che si occupa di affrontare l'eccezione, come la stampa di un messaggio di errore.
+- **Interrupt**: Gli interrupt sono *cambiamenti nel flusso esecutivo generati da eventi esterni* al programma in esecuzione. Al contrario delle trap, gli interrupt non sono sincroni e *possono essere causati da eventi esterni*, come la pressione di un tasto o l'arrivo di dati da un dispositivo di input/output. Quando si verifica un interrupt, il controllo viene trasferito a un gestore di interrupt che prende in carico l'evento. Una volta completato il gestore di interrupt, il controllo ritorna al programma interrotto esattamente da dove è stato interrotto.
+
 Alcuni punti importanti riguardo alle trap e agli interrupt includono:
 - **Gestione Hardware e Software**: Le trap sono generate da condizioni interne al programma, mentre gli interrupt sono causati da eventi esterni all'esecuzione del programma.
 - **Trasparenza**: Dopo l'interruzione, sia le trap che gli interrupt devono far tornare il sistema allo stato precedente, garantendo una corretta ripresa dell'esecuzione del programma.
 - **Gestione Priorità**: Gli interrupt possono essere gestiti con priorità, consentendo di dare precedenza a determinati eventi o dispositivi rispetto ad altri.
 - **Ripristino e Gestione**: Durante un interrupt, vengono salvati i registri di stato per poi ripristinarli alla fine del gestore di interrupt, garantendo il ritorno al flusso precedente.
 Inoltre, il capitolo menziona l'implementazione hardware e software di trap e interrupt, discutendo le azioni che avvengono a livello di hardware e software quando si verificano queste eccezioni o interruzioni. Infine, viene esplorato il concetto di trasparenza degli interrupt, che garantisce che più interruzioni possano essere gestite senza compromettere l'integrità del sistema.
+
 ## Linguaggio assemblativo
-**Traduzione e esecuzione**: Il linguaggio assemblativo coinvolge la traduzione del codice sorgente in un programma oggetto, che viene eseguito solo dopo la traduzione. Durante l'esecuzione del programma oggetto, si interagisce con i livelli di micro e macro architettura e con il livello macchina del sistema operativo.
-**Linguaggio Assemblativo**: È un linguaggio in cui ogni istruzione corrisponde direttamente a un'istruzione macchina. Utilizza simboli per i nomi e gli indirizzi, rendendolo più leggibile rispetto alla rappresentazione binaria o ottale. Consente un accesso completo alle funzionalità e alle istruzioni della macchina di destinazione.
-*Vantaggi del linguaggio assemblativo*: Nonostante la complessità, viene utilizzato per le prestazioni e la piena gestione delle funzionalità della macchina. In alcune applicazioni dove le dimensioni del programma, la velocità e il controllo completo della macchina sono cruciali, il linguaggio assemblativo rimane l'unica scelta.
-**Formato delle istruzioni**: Le istruzioni nel linguaggio assemblativo sono composte da quattro parti: un campo etichetta (opzionale), un campo operazione (codice operativo), un campo operandi e un campo commenti.
-Le etichette forniscono nomi agli indirizzi e sono utilizzate per le destinazioni delle istruzioni di salto. Il campo del codice operativo contiene l'abbreviazione simbolica del codice o il comando per l'assemblatore. Il campo operandi specifica gli indirizzi o i registri utilizzati come operandi dall'istruzione. I commenti forniscono spiegazioni utili sul funzionamento del programma.
-**Esempio di linguaggio assemblativo**: Viene mostrato un esempio di codice assemblativo che esegue un'istruzione di somma di interi su architettura x86, spiegando l'utilizzo delle etichette, dei codici operativi, degli operandi e dei commenti.L'obiettivo principale del linguaggio assemblativo è offrire un controllo dettagliato sul funzionamento della macchina, consentendo ai programmatori di ottimizzare le prestazioni e le funzionalità del programma, a discapito della complessità e della portabilità del codice su diverse macchine.
-**Pseudoistruzioni**: Le pseudoistruzioni o direttive dell'assemblatore sono comandi indirizzati all'assemblatore stesso. Esempi includono EQU, DB (define byte), condizionali come IF e ENDIF.
-**Macroistruzioni**: Le macroistruzioni consentono ai programmatori di definire sequenze di istruzioni per un uso ripetuto.
-Definizione, chiamata ed espansione delle macro sono parti fondamentali.
+
+- **Traduzione e esecuzione**: Il linguaggio assemblativo coinvolge la traduzione del codice sorgente in un programma oggetto, che viene eseguito solo dopo la traduzione. Durante l'esecuzione del programma oggetto, si interagisce con i livelli di micro e macro architettura e con il livello macchina del sistema operativo.
+- **Linguaggio Assemblativo**: È un linguaggio in cui ogni istruzione corrisponde direttamente a un'istruzione macchina. Utilizza simboli per i nomi e gli indirizzi, rendendolo più leggibile rispetto alla rappresentazione binaria o ottale. Consente un accesso completo alle funzionalità e alle istruzioni della macchina di destinazione.
+	- *Vantaggi del linguaggio assemblativo*: Nonostante la complessità, viene utilizzato per le prestazioni e la piena gestione delle funzionalità della macchina. In alcune applicazioni dove le dimensioni del programma, la velocità e il controllo completo della macchina sono cruciali, il linguaggio assemblativo rimane l'unica scelta.
+- **Formato delle istruzioni**: Le istruzioni nel linguaggio assemblativo sono composte da quattro parti: un campo *etichetta* (opzionale), un campo *operazione* (codice operativo), un campo *operandi* e un campo *commenti*. Le etichette forniscono nomi agli indirizzi e sono utilizzate per le destinazioni delle istruzioni di salto. Il campo del codice operativo contiene l'abbreviazione simbolica del codice o il comando per l'assemblatore. Il campo operandi specifica gli indirizzi o i registri utilizzati come operandi dall'istruzione. I commenti forniscono spiegazioni utili sul funzionamento del programma.
+- **Esempio di linguaggio assemblativo**: Viene mostrato un esempio di codice assemblativo che esegue un'istruzione di somma di interi su architettura x86, spiegando l'utilizzo delle etichette, dei codici operativi, degli operandi e dei commenti.
+L'obiettivo principale del linguaggio assemblativo è offrire un controllo dettagliato sul funzionamento della macchina, consentendo ai programmatori di ottimizzare le prestazioni e le funzionalità del programma, a discapito della complessità e della portabilità del codice su diverse macchine.
+- **Pseudoistruzioni**: Le pseudoistruzioni o direttive dell'assemblatore sono *comandi indirizzati all'assemblatore stesso*. Esempi includono `EQU`, `DB` (define byte), condizionali come `IF` e `ENDIF`.
+- **Macroistruzioni**: Le macroistruzioni consentono ai programmatori di definire sequenze di istruzioni per un uso ripetuto.
+
+*Definizione, chiamata ed espansione delle macro sono parti fondamentali*.
 Durante l'assemblaggio, l'assemblatore sostituisce il nome della macro con il suo corpo (espansione di macro).
-**Macro VS Procedure**:Le chiamate di macro sono istruzioni dirette all'assemblatore per sostituire il nome della macro con il suo corpo.
-Le chiamate di procedura sono istruzioni macchina che richiamano una procedura e comportano un salto nel codice.
-**Macro con Parametri**: Le macro possono avere parametri formali che vengono sostituiti con valori attuali durante l'espansione della macro.
-**Processo di Assemblaggio**: L'assemblatore opera in due passate per risolvere riferimenti in avanti, costruire la tabella dei simboli e generare il programma oggetto.
-**Collegamento e Caricamento**: Il linker unisce i moduli oggetto generati separatamente in un eseguibile, risolvendo riferimenti a memoria e ad altre procedure.
-**Compiti del Linker**: Il linker crea un'immagine dello spazio di indirizzamento virtuale, assegna gli indirizzi di partenza ai moduli e risolve riferimenti a memoria e procedure esterne.
+
+>[!important]- **Macro VS Procedure**
+>- Le chiamate di macro sono istruzioni dirette all'assemblatore per sostituire il nome della macro con il suo corpo.
+>- Le chiamate di procedura sono istruzioni macchina che richiamano una procedura e comportano un salto nel codice.
+
+- **Macro con Parametri**: Le macro possono avere parametri formali che vengono sostituiti con valori attuali durante l'espansione della macro.
+- **Processo di Assemblaggio**: L'assemblatore opera in due passate per risolvere riferimenti in avanti, costruire la tabella dei simboli e generare il programma oggetto.
+- **Collegamento e Caricamento**: Il linker unisce i moduli oggetto generati separatamente in un eseguibile, risolvendo riferimenti a memoria e ad altre procedure.
+- **Compiti del Linker**: Il linker crea un'immagine dello spazio di indirizzamento virtuale, assegna gli indirizzi di partenza ai moduli e risolve riferimenti a memoria e procedure esterne.
+
 # Classificazione di Flynn
 
 ![[Pasted image 20240528135438.png|center|600]]
 
 ## Parallelismo nel chip
 
-Obiettivo: far svolgere al chip più compiti alla volta.
+**Obiettivo**: far svolgere al chip più compiti alla volta.
 
 ![[Pasted image 20240528135530.png|center|600]]
 
 ### Parallelismo a livello delle istruzioni
 
-L’idea è di emettere più istruzioni per ciclo di clock. Ci sono due tipi di CPU a emissione multipla: processori superscalari e processori VLIW (“Very Long Instruction Word”, con parole di istruzione molto lunghe).
+L’idea è di emettere *più istruzioni per ciclo di clock*. Ci sono due tipi di CPU a emissione multipla: processori superscalari e processori **VLIW** (“Very Long Instruction Word”, con parole di istruzione molto lunghe).
 Le CPU superscalari sono composte da pipeline e più unità funzionali ([[Recap#Parallelismo nel chip|Figura 8.2(a)]]).
 I processori VLIW sono in grado di indirizzare le diverse unità funzionali con una
 sola linea di pipeline.
@@ -429,25 +456,26 @@ sola linea di pipeline.
 
 # MULTITHREADING
 
-Multithreading **a grana fine**:
-Consente alla CPU di gestire più thread contemporaneamente, commutando tra di essi ad ogni ciclo.
-Ogni thread ha il proprio set di registri e l'identificatore del thread viene associato a ciascuna operazione.
-Nasconde gli stalli nell'esecuzione delle istruzioni, consentendo ad altri thread di continuare l'esecuzione.
+>Multithreading **a grana fine**:
+>- Consente alla CPU di gestire più thread contemporaneamente, commutando tra di essi ad ogni ciclo.
+>- Ogni thread ha il proprio set di registri e l'identificatore del thread viene associato a ciascuna operazione.
+>- Nasconde gli stalli nell'esecuzione delle istruzioni, consentendo ad altri thread di continuare l'esecuzione.
 
-Multithreading **a grana grossa**:
-Un thread continua ad emettere istruzioni fino a quando non va in stallo, momento in cui la CPU passa immediatamente a un altro thread.
-Potenzialmente meno efficiente del multithreading a grana fine ma richiede meno thread per mantenere la CPU occupata.
+>Multithreading **a grana grossa**:
+>- Un thread continua ad emettere istruzioni fino a quando non va in stallo, momento in cui la CPU passa immediatamente a un altro thread.
+>- Potenzialmente meno efficiente del multithreading a grana fine ma richiede *meno thread* per mantenere la CPU occupata.
 
-**Varianti del multithreading a grana fine**:
-Un'implementazione "anticipa" gli stalli per approssimare il multithreading a grana fine, riducendo i cicli persi.
-L'identificatore del thread viene inserito in ogni operazione nel caso del multithreading a grana fine, mentre nel multithreading a grana grossa si svuota la pipeline a ogni commutazione di thread.
+>**Varianti del multithreading a grana fine**:
+>- Un'implementazione "anticipa" gli stalli per approssimare il multithreading a grana fine, riducendo i cicli persi.
+>- L'identificatore del thread viene inserito in ogni operazione nel caso del multithreading a grana fine, mentre nel multithreading a grana grossa si svuota la pipeline a ogni commutazione di thread.
 
-**Multithreading simultaneo**:
-Ogni thread emette istruzioni fino a quando possibile, ma se uno va in stallo, la CPU inizia immediatamente l'esecuzione di un'istruzione di un altro thread per mantenere la CPU pienamente impegnata.
+>**Multithreading simultaneo**:
+>- Ogni thread emette istruzioni fino a quando possibile, ma se uno va in stallo, la CPU inizia immediatamente l'esecuzione di un'istruzione di un altro thread per mantenere la CPU pienamente impegnata.
+
 Le moderne CPU utilizzano queste tecniche di multithreading per gestire gli stalli nell'esecuzione delle istruzioni e mascherare i tempi di latenza della cache, ottimizzando l'uso dell'hardware e migliorando le prestazioni complessive della CPU.
 
 ## Tipologie di multiprocessori in un solo chip
-
+	qui
 **Multiprocessori omogenei**:
 Le CPU condividono le stesse cache di primo e secondo livello oltre alla memoria principale. 
 Due tipi predominanti:
