@@ -139,7 +139,7 @@ Spesso ci si riferisce a questa sequenza di passi con il termine di ciclo esecut
 >***Esecuzione diretta delle istruzioni dall'hardware***:
 >- Evitare l'interpretazione delle istruzioni.
 >- Le architetture CISC possono suddividere istruzioni complesse in microistruzioni.
-
+`qui`
 >***Massimizzazione della frequenza di emissione delle istruzioni***:
 >- Il parallelismo è cruciale per le prestazioni.
 >- Emissione di un gran numero di istruzioni più semplici contemporaneamente.
@@ -550,7 +550,7 @@ In sintesi, le tecniche di scheduling analizzate mirano ad ottimizzare l'utilizz
 - *Assegnazione dei Processi*: Gli algoritmi di allocazione del processore cercano di assegnare i processi ai nodi in base a vari fattori, come l'utilizzo della CPU, della memoria e la quantità di comunicazione tra processi. L'obiettivo può essere minimizzare l'uso della CPU non sfruttata, ridurre la larghezza di banda di comunicazione o garantire condizioni eque per gli utenti e i processi.
 
 ## Virtualizzazione
-	qui
+
 **Macchine Virtuali**: La virtualizzazione permette a un singolo computer "reale" di ospitare più computer "virtuali". Ogni macchina virtuale può eseguire il proprio sistema operativo e applicazioni.
 **Vantaggi della Virtualizzazione**: Isolamento dei malfunzionamenti, risparmio di spazio, minor consumo energetico, maggiore manutenibilità e possibilità di eseguire applicazioni legacy.
 **Requisiti di Virtualizzazione**: La CPU deve supportare un insieme di istruzioni sensibili che sono un sottoinsieme di quelle privilegiate per garantire la virtualizzazione. L'Intel 386 e i suoi successori, ad esempio, presentavano istruzioni sensibili non virtualizzabili.
@@ -559,28 +559,31 @@ virtualizzazione sulle loro CPU (VT per Intel, SVM per AMD) creando contenitori 
 
 In sintesi, l'efficace gestione dei processi su sistemi multiprocessore e multicomputer richiede approcci specifici di schedulazione e bilanciamento del carico, mentre la virtualizzazione offre vantaggi significativi ma richiede supporto hardware specifico per essere implementata in modo efficiente.
 Gli hypervisor, o VMM (Virtual Machine Monitor), sono software che gestiscono macchine virtuali consentendo l'esecuzione simultanea di più sistemi operativi su una singola macchina fisica.
-Questi hypervisor possono essere classificati in diverse categorie, come tipo 1, tipo 2 e
-paravirtualizzazione, ognuno con differenti approcci e performance.
+Questi hypervisor possono essere classificati in diverse categorie, come tipo *1*, tipo *2* e
+*paravirtualizzazione*, ognuno con differenti approcci e performance.
 
 **Hypervisor di Tipo 1**:
-- Posizione e Modalità di Esecuzione: Si trova nel sistema operativo reale (SO host) e gira in modalità kernel.
-- Supporto alle Macchine Virtuali: Gestisce le macchine virtuali (SO guest).
-- Gestione delle Istruzioni Sensibili: Quando una VM esegue un'istruzione sensibile, avviene una trap nel kernel dell'hypervisor. Quest'ultimo può esaminare l'istruzione e, se è stata inviata dalla VM del SO guest, la esegue; altrimenti, simula il comportamento dell'hardware reale.
-- Esempio di Implementazione: I processori con tecnologia VT consentono a un hypervisor di tipo 1 di gestire le VM in modo efficiente.
+- *Posizione e Modalità di Esecuzione*: Si trova nel sistema operativo reale (SO host) e gira in modalità kernel.
+- *Supporto alle Macchine Virtuali*: Gestisce le macchine virtuali (SO guest).
+- *Gestione delle Istruzioni Sensibili*: Quando una VM esegue un'istruzione sensibile, avviene una trap nel kernel dell'hypervisor. Quest'ultimo può esaminare l'istruzione e, se è stata inviata dalla VM del SO guest, la esegue; altrimenti, simula il comportamento dell'hardware reale.
+- *Esempio di Implementazione*: I processori con tecnologia VT consentono a un hypervisor di tipo 1 di gestire le VM in modo efficiente.
 
 **Hypervisor di Tipo 2**:
-- Posizione e Modalità di Esecuzione: Si tratta di un programma utente eseguito su un
-sistema operativo host.
-- Traduzione Binaria: Utilizza la tecnica della traduzione binaria per eseguire le istruzioni delle VM. Questo processo coinvolge la scansione del codice, la traduzione delle istruzioni sensibili in procedure VMware e l'esecuzione dei blocchi tradotti nella cache di VMware.
-- Esempio di Implementazione: VMware è un esempio di hypervisor di tipo 2 che si esegue come programma utente su un SO host.
+- *Posizione e Modalità di Esecuzione*: Si tratta di un programma utente eseguito su un sistema operativo host.
+- *Traduzione Binaria*: Utilizza la tecnica della traduzione binaria per eseguire le istruzioni delle VM. Questo processo coinvolge la scansione del codice, la traduzione delle istruzioni sensibili in procedure VMware e l'esecuzione dei blocchi tradotti nella cache di VMware.
+- *Esempio di Implementazione*: VMware è un esempio di hypervisor di tipo 2 che si esegue come programma utente su un SO host.
 
 **Confronto tra Hypervisor**:
-- Approccio Trap-and-Emulate (Tipo 1) vs Traduzione delle Istruzioni (Tipo 2): Tipo 1 adotta l'approccio "trap-and-emulate" che genera trap e un overhead gestionale, mentre il tipo 2 utilizza la traduzione delle istruzioni sensibili, risultando più efficiente. 
-- Istruzioni Sensibili e Gestione delle VM: Nel tipo 2, le istruzioni sensibili sono sostituite da chiamate a procedure che ne emulano il comportamento, mentre il tipo 1 può implementare anche la traduzione binaria, come il tipo 2.
+- *Approccio `Trap-and-Emulate` (Tipo 1) vs Traduzione delle Istruzioni (Tipo 2)*: 
+	- Tipo 1 adotta l'approccio "`trap-and-emulate`" che genera trap e un overhead gestionale, mentre il tipo 2 utilizza la traduzione delle istruzioni sensibili, risultando più efficiente. 
+- *Istruzioni Sensibili e Gestione delle VM*: 
+	- Nel tipo 2, le istruzioni sensibili sono sostituite da chiamate a procedure che ne emulano il comportamento, mentre il tipo 1 può implementare anche la traduzione binaria, come il tipo 2.
 
 **Paravirtualizzazione**:
-- Approccio Modificato del SO Guest: Prevede la modifica del codice sorgente del SO guest, introducendo chiamate di procedure definite dall'hypervisor.
-- Interfaccia e Performance: L'hypervisor definisce un'interfaccia (API) per i sistemi operativi guest, trasformandosi in un microkernel. Questo tipo di VM, chiamato paravirtualizzato, migliora le performance in quanto le trap vengono trasformate in system call.
+- *Approccio Modificato del SO Guest*: 
+	- Prevede la modifica del codice sorgente del SO guest, introducendo chiamate di procedure definite dall'hypervisor.
+- *Interfaccia e Performance*: 
+	- L'hypervisor definisce un'interfaccia (*API*) per i sistemi operativi guest, trasformandosi in un microkernel. Questo tipo di VM, chiamato *paravirtualizzato*, migliora le performance in quanto le trap vengono trasformate in system call.
 
 In sintesi, le diverse tipologie di hypervisor si distinguono per l'approccio alla gestione delle istruzioni sensibili, la loro posizione e modalità di esecuzione e l'efficienza nell'operare con le VM, offrendo soluzioni e performance differenziate.
 

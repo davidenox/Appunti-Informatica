@@ -400,7 +400,8 @@ I 29 segnali di controllo non sono sufficienti a specificare una microistruzione
 
 ![[img31.png|center|500]]
 
-### [[img32.png|Microarchitettura MIC-1]]
+ ![[img32.png]]
+ 
 La decisione dei segnali di controllo da abilitare durante ciascun ciclo è determinato da un **sequenzializzatore** che si occupa di far avanzare passo dopo passo la sequenza di operazioni necessarie per eseguire una singola istruzione ISA. Durante ogni ciclo, il sequenzializzatore deve produrre due tipi di informazioni:
 - stato di ogni segnale di controllo del sistema
 - indirizzo della microistruzione successiva
