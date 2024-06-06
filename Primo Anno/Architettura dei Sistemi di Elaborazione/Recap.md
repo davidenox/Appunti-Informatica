@@ -475,20 +475,20 @@ sola linea di pipeline.
 Le moderne CPU utilizzano queste tecniche di multithreading per gestire gli stalli nell'esecuzione delle istruzioni e mascherare i tempi di latenza della cache, ottimizzando l'uso dell'hardware e migliorando le prestazioni complessive della CPU.
 
 ## Tipologie di multiprocessori in un solo chip
-	qui
+
 **Multiprocessori omogenei**:
 Le CPU condividono le stesse cache di primo e secondo livello oltre alla memoria principale. 
 Due tipi predominanti:
 - *Pipeline doppia*: Un singolo chip con una duplice pipeline che può raddoppiare il throughput, condividendo alcune risorse come le unità funzionali.
 - *Multiprocessori separati*: Più core separati, ognuno contenente una CPU completa e con la propria pipeline. Questi core sono meno accoppiati, comportando interazioni più complesse tra CPU.
+
 **Multiprocessori eterogenei**:
 - Ogni core ha un compito specifico, come decoder audio/video, crittoprocessore o interfacce di rete. Queste architetture integrano un calcolatore completo in un unico chip, noto come "system on a chip".
 **Condivisione delle risorse**:
-- Anche se le CPU possono condividere cache o risorse, condividono sempre la memoria
-principale.
+- Anche se le CPU possono condividere cache o risorse, condividono sempre la memoria principale.
 - Il processo di snooping garantisce la coerenza dei dati nelle cache condivise, rimuovendo automaticamente le copie obsolete.
 **Sistemi di comunicazione tra core**:
-- Nei sistemi più piccoli, un unico bus potrebbe essere sufficiente, ma nei sistemi più grandipotrebbe diventare un collo di bottiglia.
+- Nei sistemi più piccoli, un unico bus potrebbe essere sufficiente, ma nei sistemi più grandi potrebbe diventare un collo di bottiglia.
 - Soluzioni comuni includono l'uso di più bus o la configurazione di un anello attraverso tutti i core.
 - In un anello, l'arbitraggio avviene attraverso un token che circola nell'anello: un core deve catturare il token per trasmettere e, una volta terminata la comunicazione, può rimettere il token nell'anello per continuare la circolazione. Questo protocollo previene le collisioni sull'anello.
 
@@ -496,57 +496,61 @@ Infine, viene sottolineato che, sebbene siano disponibili chip multicore, le app
 
 # MULTIPROCESSORI E MULTICOMPUTER
 
-**Multiprocessori**:
-- Memoria Condivisa: Le CPU condividono un unico spazio di memoria comune.
-- Cooperazione tra Processi: Processi diversi possono condividere lo stesso spazio degli indirizzi virtuali mappati nella memoria comune, permettendo una comunicazione semplice attraverso le istruzioni LOAD e STORE.
-- SMP (Symmetric MultiProcessor): Le CPU hanno uguale accesso a tutti i moduli di memoria e dispositivi di I/O, gestiti in modo intercambiabile dal sistema operativo.
-- Tipologie di Multiprocessori:
-	- UMA (Uniform Memory Access): Ogni parola di memoria può essere letta alla stessa velocità.
-	- NUMA (NonUniform Memory Access): Non tutte le parole di memoria possono essere lette alla stessa velocità.
+>***Multiprocessori***:
+>- **Memoria Condivisa:** Le CPU condividono un *unico* spazio di memoria comune.
+>- **Cooperazione tra Processi**: Processi diversi possono condividere lo stesso spazio degli indirizzi virtuali mappati nella memoria comune, permettendo una comunicazione semplice attraverso le istruzioni `LOAD` e `STORE`.
+>- **SMP** (Symmetric MultiProcessor): Le CPU hanno uguale accesso a tutti i moduli di memoria e dispositivi di I/O, gestiti in modo intercambiabile dal sistema operativo.
+>- Tipologie di **Multiprocessori**:
+	- *UMA* (Uniform Memory Access): Ogni parola di memoria può essere letta alla stessa velocità.
+	- *NUMA* (NonUniform Memory Access): Non tutte le parole di memoria possono essere lette alla stessa velocità.
 
-**Multicomputer**:
-- Memoria Privata: Ogni CPU ha la propria memoria privata accessibile solo da essa.
-- Comunicazione tra CPU: Non c'è accesso diretto alla memoria delle altre CPU, richiedendo uno scambio di messaggi attraverso la rete di interconnessione.
-- Complessità di Programmazione: Programmare un multicomputer è più complesso rispetto a un multiprocessore a causa della comunicazione attraverso messaggi software (send e receive).
-- Costruzione e Costi: I multicomputer grandi sono più semplici ed economici da costruire rispetto ai multiprocessori con lo stesso numero di CPU.
+>***Multicomputer***:
+>- **Memoria Privata**: Ogni CPU ha la propria memoria privata accessibile solo da essa.
+>- **Comunicazione tra CPU**: Non c'è accesso diretto alla memoria delle altre CPU, richiedendo uno scambio di messaggi attraverso la rete di interconnessione.
+>- **Complessità di Programmazione**: Programmare un multicomputer è più complesso rispetto a un multiprocessore a causa della comunicazione attraverso messaggi software (send e receive).
+>- **Costruzione e Costi**: I multicomputer grandi sono più semplici ed economici da costruire rispetto ai multiprocessori con lo stesso numero di CPU.
 
-**Implementazioni Ibride della Memoria Condivisa**:
-- Varianti di Implementazione della Memoria Condivisa: L'implementazione della memoria condivisa può avvenire a livelli diversi, presentando vantaggi e svantaggi specifici.
-- Approcci Ibridi: Sforzi per costruire sistemi ibridi che combinano caratteristiche di memoria condivisa e accesso distribuito, con diverse soluzioni per l'implementazione della memoria condivisa.
+>****Implementazioni Ibride della Memoria Condivisa***:
+>- **Varianti di Implementazione della Memoria Condivisa**: L'implementazione della memoria condivisa può avvenire a livelli diversi, presentando vantaggi e svantaggi specifici.
+>- **Approcci Ibridi**: Sforzi per costruire sistemi ibridi che combinano caratteristiche di memoria condivisa e accesso distribuito, con diverse soluzioni per l'implementazione della memoria condivisa.
+
 In sintesi, il testo evidenzia le differenze fondamentali tra multiprocessori e multicomputer, sottolineando le caratteristiche distintive di ciascun approccio, la gestione della memoria e la complessità di programmazione associata a ciascuno di essi. Inoltre, evidenzia gli sforzi per creare sistemi ibridi che possano combinare vantaggi di entrambi gli approcci.
 
 **Timesharing**:
-- Vettore di Liste di Processi: Utilizza un vettore di liste di processi a varie priorità di esecuzione.
-- Condivisione di Risorse e Bilanciamento del Carico: Assegna il tempo tra le CPU come se fossero in un sistema monoprocessore, bilanciando automaticamente il carico.
+- *Vettore di Liste di Processi*: Utilizza un vettore di liste di processi a varie priorità di esecuzione.
+- *Condivisione di Risorse e Bilanciamento del Carico*: Assegna il tempo tra le CPU come se fossero in un sistema monoprocessore, bilanciando automaticamente il carico.
 
 **Problemi Potenziali**:
-- Dispute per l'Accesso alla Struttura di Scheduling: Con l'aumentare delle CPU, potrebbero verificarsi conflitti nell'accesso a questa struttura dati condivisa.
-- Sovraccarico nello Scambio di Contesto per I/O: Lo scambio di contesto quando un processo bloccato per I/O potrebbe causare sovraccarico.
+- *Dispute per l'Accesso alla Struttura di Scheduling*: Con l'aumentare delle CPU, potrebbero verificarsi conflitti nell'accesso a questa struttura dati condivisa.
+- *Sovraccarico nello Scambio di Contesto per I/O*: Lo scambio di contesto quando un processo bloccato per I/O potrebbe causare sovraccarico.
 
 **Approcci per Mitigare i Problemi**:
-- Flag Speciale per Spin Locks: Quando un processo termina il suo quanto di tempo mantenendo uno spin lock, può attivare un flag speciale per ottenere un extra-quanto e non bloccare completamente il processo successivo.
-- Scheduling per Affinità: Assegna lo stesso processo alla stessa CPU per sfruttare la cache della CPU già utilizzata dal processo.
+- *Flag Speciale per Spin Locks*: Quando un processo termina il suo quanto di tempo mantenendo uno spin lock, può attivare un flag speciale per ottenere un extra-quanto e non bloccare completamente il processo successivo.
+- *Scheduling per Affinità*: Assegna lo stesso processo alla stessa CPU per sfruttare la cache della CPU già utilizzata dal processo.
 
 **Scheduling a Condivisione dello Spazio (Space Sharing)**:
-- Partizionamento Statico delle CPU: Assegna gruppi di CPU a gruppi di processi correlati, permettendo l'esecuzione simultanea di processi collegati.
-- Eliminazione della Multiprogrammazione: Elimina l’overhead degli scambi di contesto ma può portare a tempo sprecato se alcune CPU non hanno lavoro da fare.ù
+- *Partizionamento Statico delle CPU*: Assegna gruppi di CPU a gruppi di processi correlati, permettendo l'esecuzione simultanea di processi collegati.
+- *Eliminazione della Multiprogrammazione*: Elimina l’overhead degli scambi di contesto ma può portare a tempo sprecato se alcune CPU non hanno lavoro da fare.
 
-*Schedulazione Gang*:
-- Esecuzione Simultanea dei Thread Appartenenti ad un Gruppo (Gang): Schedula i thread correlati come un'unità, eseguendoli contemporaneamente in diverse CPU.
-- Sincronizzazione dei Tempi di Esecuzione dei Thread della Gang: Tutti i membri della gang iniziano e terminano la loro porzione di tempo contemporaneamente, in intervalli discreti.
+**Schedulazione Gang**:
+- *Esecuzione Simultanea dei Thread Appartenenti ad un Gruppo* (Gang): Schedula i thread correlati come un'unità, eseguendoli contemporaneamente in diverse CPU.
+- *Sincronizzazione dei Tempi di Esecuzione dei Thread della Gang*: Tutti i membri della gang iniziano e terminano la loro porzione di tempo contemporaneamente, in intervalli discreti.
+
 **Vantaggi della Schedulazione Gang**:
-- Comunicazione più Rapida tra Thread di un Processo: Tutti i thread di un processo in esecuzione simultaneamente possono comunicare tra loro in modo più efficiente e  rapido.
+- *Comunicazione più Rapida tra Thread di un Processo*: Tutti i thread di un processo in esecuzione simultaneamente possono comunicare tra loro in modo più efficiente e  rapido.
 
-In sintesi, le tecniche di scheduling analizzate mirano a ottimizzare l'utilizzo delle risorse di CPU, affrontando sfide come il bilanciamento del carico, l'efficienza della comunicazione tra processi e l'ottimizzazione degli scambi di contesto. Ogni approccio ha i propri vantaggi e svantaggi, e la scelta dell'algoritmo dipende dalle esigenze specifiche del sistema e delle applicazioni da gestire.
+In sintesi, le tecniche di scheduling analizzate mirano ad ottimizzare l'utilizzo delle risorse di CPU, affrontando sfide come il bilanciamento del carico, l'efficienza della comunicazione tra processi e l'ottimizzazione degli scambi di contesto. Ogni approccio ha i propri vantaggi e svantaggi, e la scelta dell'algoritmo dipende dalle esigenze specifiche del sistema e delle applicazioni da gestire.
 
 ## Scheduling su Multiprocessori e Multicomputer
 
 - *Multiprocessori*: Tutti i processi condividono la stessa memoria, quindi le CPU possono scegliere liberamente i processi da eseguire. La schedulazione richiede una lista centralizzata dei processi pronti.
 - *Multicomputer*: Ogni nodo ha memoria e processi propri. La schedulazione è più facile, ma l'allocazione dei processi ai nodi diventa cruciale. L'uso della schedulazione gang può essere adottato per consentire la coordinazione dell'esecuzione dei processi tra i nodi.
-**Bilanciamento del Carico**:
-Assegnazione dei Processi: Gli algoritmi di allocazione del processore cercano di assegnare i processi ai nodi in base a vari fattori, come l'utilizzo della CPU, della memoria e la quantità di comunicazione tra processi. L'obiettivo può essere minimizzare l'uso della CPU non sfruttata, ridurre la larghezza di banda di comunicazione o garantire condizioni eque per gli utenti e i processi.
-## Virtualizzazione
 
+**Bilanciamento del Carico**:
+- *Assegnazione dei Processi*: Gli algoritmi di allocazione del processore cercano di assegnare i processi ai nodi in base a vari fattori, come l'utilizzo della CPU, della memoria e la quantità di comunicazione tra processi. L'obiettivo può essere minimizzare l'uso della CPU non sfruttata, ridurre la larghezza di banda di comunicazione o garantire condizioni eque per gli utenti e i processi.
+
+## Virtualizzazione
+	qui
 **Macchine Virtuali**: La virtualizzazione permette a un singolo computer "reale" di ospitare più computer "virtuali". Ogni macchina virtuale può eseguire il proprio sistema operativo e applicazioni.
 **Vantaggi della Virtualizzazione**: Isolamento dei malfunzionamenti, risparmio di spazio, minor consumo energetico, maggiore manutenibilità e possibilità di eseguire applicazioni legacy.
 **Requisiti di Virtualizzazione**: La CPU deve supportare un insieme di istruzioni sensibili che sono un sottoinsieme di quelle privilegiate per garantire la virtualizzazione. L'Intel 386 e i suoi successori, ad esempio, presentavano istruzioni sensibili non virtualizzabili.
