@@ -134,12 +134,12 @@ Spesso ci si riferisce a questa sequenza di passi con il termine di ciclo esecut
 - **CISC** (*Complex* Instruction Set Computer): la CPU è in grado di comprendere molte istruzioni complesse nativamente (è il più alto livello di astrazione riconosciuto dalla macchina);
 - **RISC** (*Reduced* Instruction Set Computer): si basa sull’idea che se le istruzioni sono semplici e poche, esse possono essere eseguite rapidamente (è necessario un solo ciclo nel datapath);
 - **Ibrido**: a partire dal x486, le CPU Intel contengono un sottoinsieme di istruzioni RISC (quelle più comuni) che possono essere eseguite in un singolo ciclo nel datapath, mentre le altre complesse sono interpretate secondo la classica modalità CISC.
-#### Principi di progettazione dei calcolatori moderni (Principi RISC):
+s#### Principi di progettazione dei calcolatori moderni (Principi RISC):
 
 >***Esecuzione diretta delle istruzioni dall'hardware***:
 >- Evitare l'interpretazione delle istruzioni.
 >- Le architetture CISC possono suddividere istruzioni complesse in microistruzioni.
-`qui`
+
 >***Massimizzazione della frequenza di emissione delle istruzioni***:
 >- Il parallelismo è cruciale per le prestazioni.
 >- Emissione di un gran numero di istruzioni più semplici contemporaneamente.
