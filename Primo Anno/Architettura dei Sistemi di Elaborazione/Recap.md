@@ -401,7 +401,7 @@ Le diverse modalità di indirizzamento hanno vantaggi e limitazioni, e la scelta
 
 ## Trap e Interrupt
 
-- **Trap**: Le trap sono *chiamate di procedura automatiche* che vengono attivate quando si verificano determinate condizioni eccezionali causate da un programma. Ad esempio, *un'overflow* (quando un risultato aritmetico supera la capacità di rappresentazione) *può causare una trap*. Le trap sono gestite da un gestore di trap, che si occupa di affrontare l'eccezione, come la stampa di un messaggio di errore.
+- **Trap**: Le trap sono *chiamate di procedura automatiche* che vengono attivate quando si verificano determinate condizioni eccezionali causate da un programma. Ad esempio, *un overflow* (quando un risultato aritmetico supera la capacità di rappresentazione) *può causare una trap*. Le trap sono gestite da un gestore di trap, che si occupa di affrontare l'eccezione, come la stampa di un messaggio di errore.
 - **Interrupt**: Gli interrupt sono *cambiamenti nel flusso esecutivo generati da eventi esterni* al programma in esecuzione. Al contrario delle trap, gli interrupt non sono sincroni e *possono essere causati da eventi esterni*, come la pressione di un tasto o l'arrivo di dati da un dispositivo di input/output. Quando si verifica un interrupt, il controllo viene trasferito a un gestore di interrupt che prende in carico l'evento. Una volta completato il gestore di interrupt, il controllo ritorna al programma interrotto esattamente da dove è stato interrotto.
 
 Alcuni punti importanti riguardo alle trap e agli interrupt includono:
@@ -411,6 +411,7 @@ Alcuni punti importanti riguardo alle trap e agli interrupt includono:
 - **Ripristino e Gestione**: Durante un interrupt, vengono salvati i registri di stato per poi ripristinarli alla fine del gestore di interrupt, garantendo il ritorno al flusso precedente.
 Inoltre, il capitolo menziona l'implementazione hardware e software di trap e interrupt, discutendo le azioni che avvengono a livello di hardware e software quando si verificano queste eccezioni o interruzioni. Infine, viene esplorato il concetto di trasparenza degli interrupt, che garantisce che più interruzioni possano essere gestite senza compromettere l'integrità del sistema.
 
+# 7
 ## Linguaggio assemblativo
 
 - **Traduzione e esecuzione**: Il linguaggio assemblativo coinvolge la traduzione del codice sorgente in un programma oggetto, che viene eseguito solo dopo la traduzione. Durante l'esecuzione del programma oggetto, si interagisce con i livelli di micro e macro architettura e con il livello macchina del sistema operativo.

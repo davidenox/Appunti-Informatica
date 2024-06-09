@@ -43,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -117,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md"
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md"
               }
             }
           },
@@ -178,7 +179,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -195,11 +196,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a7f60b6287f8cd1a",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/img32.png",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezioni 15-16 - Privilege Escalation e Pivoting.md",
