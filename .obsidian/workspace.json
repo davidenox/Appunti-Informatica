@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md"
+                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md"
               }
             }
           },
@@ -173,8 +173,14 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 10 - Introduzione web.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
@@ -203,11 +209,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115811.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115616.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
-    "README.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
     "_temp/AE",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
