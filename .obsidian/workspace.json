@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e80e8430537b5381",
+        "id": "07501f4b99825cc5",
         "type": "tabs",
         "children": [
           {
-            "id": "03cc610938e3d798",
+            "id": "802ed948b57e63c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md"
+                "file": "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md"
               }
             }
           },
@@ -171,10 +171,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "802ed948b57e63c3",
   "lastOpenFiles": [
-    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
@@ -208,7 +209,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115927.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115811.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115616.png",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img",
     "_temp/AE",
     "Secondo Anno/Basi di Dati e Conoscenze/Progetto",
