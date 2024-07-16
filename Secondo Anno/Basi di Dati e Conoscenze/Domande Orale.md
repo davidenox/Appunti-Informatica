@@ -1,3 +1,49 @@
+# Indice
+[[Domande Orale#Transazioni|Transazioni]]
+	[[Domande Orale#Transazioni#ACID|ACID]]
+	[[Domande Orale#Transazioni#Lock e Concorrenza|Lock e Concorrenza]]
+		[[Domande Orale#Transazioni#Lock e Concorrenza#Gestione dei guasti|Gestione dei guasti]]
+		[[Domande Orale#Transazioni#Lock e Concorrenza#Concorrenza|Concorrenza]]
+	[[Domande Orale#Transazioni#Scheduler View-Serializzabili (VSR)|Scheduler View-Serializzabili (VSR)]]
+	[[Domande Orale#Transazioni#Scheduler Conflict-Serializzabili|Scheduler Conflict-Serializzabili]]
+[[Domande Orale#Normalizzazione|Normalizzazione]]
+	[[Domande Orale#Normalizzazione#Prima Forma Normale (1NF)|Prima Forma Normale (1NF)]]
+	[[Domande Orale#Normalizzazione#Seconda Forma Normale (2NF)|Seconda Forma Normale (2NF)]]
+	[[Domande Orale#Normalizzazione#Terza Forma Normale (3NF)|Terza Forma Normale (3NF)]]
+	[[Domande Orale#Normalizzazione#Forma Normale di Boyce-Codd (BCNF)|Forma Normale di Boyce-Codd (BCNF)]]
+		[[Domande Orale#Normalizzazione#Forma Normale di Boyce-Codd (BCNF)#Requisiti della BCNF|Requisiti della BCNF]]
+		[[Domande Orale#Normalizzazione#Forma Normale di Boyce-Codd (BCNF)#Esempio di BCNF|Esempio di BCNF]]
+		[[Domande Orale#Normalizzazione#Forma Normale di Boyce-Codd (BCNF)#Verifica della BCNF|Verifica della BCNF]]
+		[[Domande Orale#Normalizzazione#Forma Normale di Boyce-Codd (BCNF)#Come rendere una tabella in BCNF|Come rendere una tabella in BCNF]]
+		[[Domande Orale#Normalizzazione#Forma Normale di Boyce-Codd (BCNF)#Vantaggi della BCNF|Vantaggi della BCNF]]
+[[Domande Orale#Dipendenze funzionali|Dipendenze funzionali]]
+	[[Domande Orale#Dipendenze funzionali#Definizione di Dipendenza Funzionale|Definizione di Dipendenza Funzionale]]
+	[[Domande Orale#Dipendenze funzionali#Esempio di Dipendenza Funzionale|Esempio di Dipendenza Funzionale]]
+	[[Domande Orale#Dipendenze funzionali#Tipi di Dipendenze Funzionali|Tipi di Dipendenze Funzionali]]
+		[[Domande Orale#Dipendenze funzionali#Tipi di Dipendenze Funzionali#Dipendenza Funzionale Completa|Dipendenza Funzionale Completa]]
+		[[Domande Orale#Dipendenze funzionali#Tipi di Dipendenze Funzionali#Dipendenza Funzionale Parziale|Dipendenza Funzionale Parziale]]
+		[[Domande Orale#Dipendenze funzionali#Tipi di Dipendenze Funzionali#Dipendenza Transitiva|Dipendenza Transitiva]]
+	[[Domande Orale#Dipendenze funzionali#Importanza delle Dipendenze Funzionali|Importanza delle Dipendenze Funzionali]]
+	[[Domande Orale#Dipendenze funzionali#Verifica delle Dipendenze|Verifica delle Dipendenze]]
+[[Domande Orale#Algebra Relazionale|Algebra Relazionale]]
+	[[Domande Orale#Algebra Relazionale#Operazioni di Base dell'Algebra Relazionale|Operazioni di Base dell'Algebra Relazionale]]
+		[[Domande Orale#Algebra Relazionale#Operazioni di Base dell'Algebra Relazionale#Selezione (σ)|Selezione (σ)]]
+		[[Domande Orale#Algebra Relazionale#Operazioni di Base dell'Algebra Relazionale#Proiezione (π)|Proiezione (π)]]
+		[[Domande Orale#Algebra Relazionale#Operazioni di Base dell'Algebra Relazionale#Unione (∪)|Unione (∪)]]
+		[[Domande Orale#Algebra Relazionale#Operazioni di Base dell'Algebra Relazionale#Differenza (−)|Differenza (−)]]
+		[[Domande Orale#Algebra Relazionale#Operazioni di Base dell'Algebra Relazionale#Prodotto Cartesiano (✕)|Prodotto Cartesiano (✕)]]
+		[[Domande Orale#Algebra Relazionale#Operazioni di Base dell'Algebra Relazionale#Rinomina (ρ)|Rinomina (ρ)]]
+	[[Domande Orale#Algebra Relazionale#Operazioni Derivate dell'Algebra Relazionale|Operazioni Derivate dell'Algebra Relazionale]]
+		[[Domande Orale#Algebra Relazionale#Operazioni Derivate dell'Algebra Relazionale#Intersezione (∩)|Intersezione (∩)]]
+		[[Domande Orale#Algebra Relazionale#Operazioni Derivate dell'Algebra Relazionale#Join Naturale (⨝)|Join Naturale (⨝)]]
+		[[Domande Orale#Algebra Relazionale#Operazioni Derivate dell'Algebra Relazionale#Divisione (÷)|Divisione (÷)]]
+[[Domande Orale#Calcolo Relazionale|Calcolo Relazionale]]
+	[[Domande Orale#Calcolo Relazionale#Calcolo Relazionale sui Tuple (TRC)|TRC]]
+	[[Domande Orale#Calcolo Relazionale#Calcolo Relazionale sui Domini (DRC)|DRC]]
+	[[Domande Orale#Calcolo Relazionale#Differenze tra TRC e DRC|Differenze]]
+	[[Domande Orale#Calcolo Relazionale#Sicurezza delle Query|Sicurezza delle query]]
+	[[Domande Orale#Calcolo Relazionale#Potenza espressiva|Potenza Espressiva]]
+
 # Transazioni
 
 **Transazione**: complesso di operazioni (di *lettura* e *scrittura*) che portano il DB da uno stato corretto ad un altro stato corretto.
@@ -257,7 +303,7 @@ Le dipendenze funzionali sono un concetto chiave nella teoria delle basi di dati
 
 ### Definizione di Dipendenza Funzionale
 
-Una dipendenza funzionale tra due insiemi di attributi di una relazione è una relazione in cui un insieme di attributi determina un altro insieme di attributi. Formalmente, si dice che un insieme di attributi XXX determina un insieme di attributi YYY (notato come X→YX \rightarrow YX→Y) se, per ogni coppia di tuple in una relazione, se le tuple concordano su tutti gli attributi di XXX, allora devono concordare anche su tutti gli attributi di YYY.
+Una dipendenza funzionale tra due insiemi di attributi di una relazione è una relazione in cui un insieme di attributi determina un altro insieme di attributi. Formalmente, si dice che un insieme di attributi X determina un insieme di attributi Y (notato come $X \rightarrow Y$) se, per ogni coppia di tuple in una relazione, se le tuple concordano su tutti gli attributi di X, allora devono concordare anche su tutti gli attributi di Y.
 
 ### Esempio di Dipendenza Funzionale
 
@@ -271,14 +317,14 @@ Consideriamo una tabella di studenti con le seguenti colonne:
 
 In questo esempio:
 
-- Matricola→Nome\text{Matricola} \rightarrow \text{Nome}Matricola→Nome significa che ogni matricola identifica univocamente il nome di uno studente.
-- Corso→Professore\text{Corso} \rightarrow \text{Professore}Corso→Professore significa che ogni corso è tenuto da un unico professore.
+- $\text{Matricola} \rightarrow \text{Nome}$ significa che ogni matricola identifica univocamente il nome di uno studente.
+- $\text{Corso} \rightarrow \text{Professore}$ significa che ogni corso è tenuto da un unico professore.
 
 ### Tipi di Dipendenze Funzionali
 
 #### Dipendenza Funzionale Completa
 
-Una dipendenza funzionale X→YX \rightarrow YX→Y è completa se la rimozione di qualsiasi attributo da XXX fa sì che la dipendenza non sia più valida. In altre parole, tutti gli attributi di XXX sono necessari per determinare YYY.
+Una dipendenza funzionale $X \rightarrow Y$ è completa se la rimozione di qualsiasi attributo da X fa sì che la dipendenza non sia più valida. In altre parole, tutti gli attributi di X sono necessari per determinare Y.
 
 **Esempio:**
 
@@ -291,7 +337,7 @@ In questo caso, solo conoscendo sia la matricola che il corso possiamo determina
 
 #### Dipendenza Funzionale Parziale
 
-Una dipendenza funzionale X→YX \rightarrow YX→Y è parziale se esiste un sottoinsieme proprio di XXX che determina ancora YYY.
+Una dipendenza funzionale $X \rightarrow Y$ è parziale se esiste un sottoinsieme proprio di X che determina ancora Y.
 
 **Esempio:**
 
@@ -304,7 +350,7 @@ Qui, la dipendenza è parziale perché il nome da solo può determinare il corso
 
 #### Dipendenza Transitiva
 
-Una dipendenza funzionale X→ZX \rightarrow ZX→Z è transitiva se esistono attributi YYY tali che X→YX \rightarrow YX→Y e Y→ZY \rightarrow ZY→Z.
+Una dipendenza funzionale $X \rightarrow Z$ è transitiva se esistono attributi Y tali che $X \rightarrow Y$ e $Y \rightarrow Z$.
 
 **Esempio:** 
 
@@ -315,7 +361,7 @@ Una dipendenza funzionale X→ZX \rightarrow ZX→Z è transitiva se esistono at
 | 1 $\rightarrow$ Matematica     |     |
 | Matematica $\rightarrow$ Rossi |     |
 
-In questo caso, Matricola→Corso→ProfessoreMatricola $\rightarrow$Corso $\rightarrow$ ProfessoreMatricola→Corso→Professore rappresenta una dipendenza transitiva.
+In questo caso, $Matricola\rightarrow Corso\rightarrow Professore$ rappresenta una dipendenza transitiva.
 
 ### Importanza delle Dipendenze Funzionali
 
@@ -327,6 +373,176 @@ Le dipendenze funzionali sono utilizzate per:
 
 ### Verifica delle Dipendenze Funzionali
 
-Per verificare se una dipendenza funzionale X→YX \rightarrow YX→Y è valida in una relazione, si esaminano tutte le tuple della relazione per vedere se per ogni coppia di tuple, se le tuple hanno gli stessi valori per XXX, allora devono avere gli stessi valori per YYY.
+Per verificare se una dipendenza funzionale $X \rightarrow Y$ è valida in una relazione, si esaminano tutte le tuple della relazione per vedere se per ogni coppia di tuple, se le tuple hanno gli stessi valori per X, allora devono avere gli stessi valori per Y.
 
 In conclusione, le dipendenze funzionali sono fondamentali per capire come gli attributi di una base di dati sono correlati tra loro e per garantire che i dati siano organizzati in modo da ridurre le ridondanze e mantenere l'integrità.
+
+# Algebra Relazionale
+
+L'algebra relazionale è un insieme di operazioni utilizzate per manipolare e interrogare i dati nelle basi di dati relazionali. Queste operazioni sono formali e forniscono un modo per esprimere le query su una base di dati relazionale. L'algebra relazionale è fondamentale per la teoria dei database relazionali e costituisce la base per SQL, il linguaggio di query più comunemente utilizzato.
+
+### Operazioni di Base dell'Algebra Relazionale
+
+Le operazioni dell'algebra relazionale si suddividono in due categorie principali: operazioni di base (primitive) e operazioni derivate.
+
+#### 1. Selezione (σ)
+
+La selezione è un'operazione unaria che restituisce un sottoinsieme delle tuple di una relazione che soddisfano una certa condizione.
+
+**Notazione:** $\sigma_{\text{condizione}}(R)$
+
+**Esempio:**
+```SQL
+σ_{salario > 50000}(Dipendenti)
+```
+
+Questa operazione restituisce tutte le tuple della relazione Dipendenti dove il salario è maggiore di 50000.
+
+#### 2. Proiezione (π)
+
+La proiezione è un'operazione unaria che restituisce una nuova relazione contenente solo le colonne specificate.
+
+**Notazione:** $\pi_{\text{attributi}}(R)$
+**Esempio:**
+```SQL
+π_{nome, salario}(Dipendenti)
+```
+
+Questa operazione restituisce una nuova relazione con solo le colonne nome e salario dalla relazione Dipendenti.
+
+#### 3. Unione (∪)
+
+L'unione è un'operazione binaria che restituisce una relazione contenente tutte le tuple di due relazioni, eliminando le duplicazioni.
+
+**Notazione:** $R \cup S$
+**Esempio:**
+```SQL
+Dipendenti_{Italia} ∪ Dipendenti_{Francia}
+```
+
+Questa operazione restituisce una relazione contenente tutte le tuple dei dipendenti in Italia e Francia.
+
+#### 4. Differenza (−)
+
+La differenza è un'operazione binaria che restituisce una relazione contenente tutte le tuple che sono in una relazione ma non nell'altra.
+
+**Notazione:** $R - S$
+**Esempio:**
+```SQL
+Dipendenti_{Italia} − Dipendenti_{Francia}
+```
+
+Questa operazione restituisce una relazione contenente tutte le tuple dei dipendenti in Italia che non sono in Francia.
+
+#### 5. Prodotto Cartesiano (×)
+
+Il prodotto cartesiano è un'operazione binaria che restituisce una nuova relazione combinando tutte le tuple di due relazioni.
+
+**Notazione:** $R \times S$
+**Esempio:**
+```SQL
+Dipendenti × Progetti
+```
+
+Questa operazione restituisce una relazione contenente tutte le possibili combinazioni di tuple da Dipendenti e Progetti.
+
+#### 6. Rinominazione (ρ)
+
+La rinominazione è un'operazione unaria che cambia il nome degli attributi di una relazione.
+
+**Notazione:**  $\rho_{S(A_1, A_2, \ldots, A_n)}(R)$ 
+**Esempio:**
+```SQL
+ρ_{D(Nome, Salario)}(Dipendenti)
+```
+
+Questa operazione rinomina la relazione Dipendenti in D e i suoi attributi in Nome e Salario.
+
+### Operazioni Derivate dell'Algebra Relazionale
+
+Oltre alle operazioni di base, ci sono diverse operazioni derivate che possono essere definite usando le operazioni di base.
+
+#### 1. Intersezione (∩)
+
+L'intersezione restituisce una relazione contenente tutte le tuple che sono comuni a due relazioni.
+
+**Notazione:** $R \cap S$
+**Esempio:**
+```SQL
+Dipendenti_{Italia} ∩ Dipendenti_{Francia}
+```
+
+Questa operazione restituisce una relazione contenente tutte le tuple dei dipendenti che sono sia in Italia che in Francia.
+
+#### 2. Join Naturale (⋈)
+
+Il join naturale è un'operazione binaria che combina due relazioni basate su attributi comuni.
+
+**Notazione:** $R \bowtie S$
+**Esempio:**
+```SQL
+Dipendenti ⋈ Progetti
+```
+
+Questa operazione combina le tuple di Dipendenti e Progetti dove i valori degli attributi comuni corrispondono.
+
+#### 3. Divisione (÷)
+
+La divisione è un'operazione binaria che restituisce una relazione contenente le tuple di una relazione che sono associate a tutte le tuple di un'altra relazione.
+
+**Notazione:** $R \div S$
+**Esempio:**
+```SQL
+Dipendenti \div Progetti
+```
+
+Questa operazione restituisce i dipendenti che lavorano su tutti i progetti.
+
+# Calcolo Relazionale
+
+Il calcolo relazionale è un altro approccio formale per esprimere query su basi di dati relazionali, complementare all'algebra relazionale. Mentre l'algebra relazionale usa un insieme di operazioni per costruire query, il calcolo relazionale si basa sulla logica del primo ordine, usando formule per specificare le condizioni che le tuple devono soddisfare. Ci sono due varianti principali del calcolo relazionale: il calcolo relazionale sui tuple (TRC) e il calcolo relazionale sui domini (DRC).
+
+### Calcolo Relazionale sui Tuple (TRC)
+
+Il calcolo relazionale sui tuple (TRC) utilizza variabili che rappresentano tuple in una relazione. Le query in TRC specificano le proprietà che le tuple di risultato devono soddisfare.
+
+**Sintassi Generale:** $\{ t \mid \varphi(t) \}$
+Dove:
+
+- t è una variabile che rappresenta una tuple.
+- $\varphi(t)$ è una formula logica che specifica le condizioni che t deve soddisfare.
+
+**Esempio:** Consideriamo una relazione Dipendenti con attributi (DID,Nome,Salario).
+
+Trova i nomi e i salari dei dipendenti che guadagnano più di 50000.
+
+$\{ t.Nome, t.Salario \mid t \in Dipendenti \land t.Salario > 50000 \}$
+
+### Calcolo Relazionale sui Domini (DRC)
+
+Il calcolo relazionale sui domini (DRC) utilizza variabili che rappresentano valori singoli, piuttosto che tuple. Le query in DRC specificano le proprietà che i valori di dominio devono soddisfare.
+
+**Sintassi Generale:** $\{ (x_1, x_2, \ldots, x_n) \mid \varphi(x_1, x_2, \ldots, x_n) \}$
+Dove:
+
+- $x_1, x_2, \ldots, x_n$​ sono variabili che rappresentano valori singoli.
+- $\varphi(x_1, x_2, \ldots, x_n)$ è una formula logica che specifica le condizioni che questi valori devono soddisfare.
+
+**Esempio:** Consideriamo la stessa relazione Dipendenti(DID,Nome,Salario).
+
+Trova i nomi e i salari dei dipendenti che guadagnano più di 50000.
+
+$\{ (N, S) \mid \exists DID \, (Dipendenti(DID, N, S) \land S > 50000) \}$
+
+### Differenze tra TRC e DRC
+
+- **Rappresentazione delle Variabili:** Nel TRC, le variabili rappresentano tuple, mentre nel DRC, le variabili rappresentano valori singoli.
+- **Sintassi:** TRC utilizza variabili di tuple e formule che descrivono condizioni sulle tuple, mentre DRC utilizza variabili di dominio e formule che descrivono condizioni sui valori di dominio.
+
+### Sicurezza delle Query
+
+In entrambi i tipi di calcolo relazionale, è importante garantire che le query siano sicure, ovvero che restituiscano un insieme finito di risultati e che il calcolo possa essere eseguito in un tempo finito. Le query non sicure possono causare problemi di performance e di gestione delle risorse.
+
+### Potenza espressiva
+
+Il calcolo relazionale e l'algebra relazionale hanno la stessa potenza espressiva, il che significa che qualsiasi query esprimibile in uno può essere espressa anche nell'altro. Tuttavia, il calcolo relazionale tende a essere più dichiarativo, specificando cosa si desidera ottenere piuttosto che come ottenerlo, mentre l'algebra relazionale è più procedurale.
