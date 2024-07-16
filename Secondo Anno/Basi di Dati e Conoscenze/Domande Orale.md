@@ -109,7 +109,7 @@ Due scheduler si dicono **conflict-equivalenti** se contengono le *stesse operaz
 Uno scheduler è **conflict-serializzabile** se è *conflict-equivalente* ad uno scheduler seriale.
 Per verificare la *conflict-serializzabilità* basta utilizzare un algoritmo su grafi $(grafo \Rightarrow (nodo = transazione)$, (arco orientato da $T_i$ a $T_j$ se c’è almeno un conflitto tra una azione $𝑎_𝑖$ ed una $𝑎_𝑗$ ) ). Se il grafo ottenuto in questo modo è *aciclico*, lo scheduler è **conflict-serializzabile**. 
 
-(Se S è conflict-serializzabile esiste uno scheduler $S’$ seriale che presenta operazioni in conflitto nello stesso ordine di S. Poiché S’ avrà un ordinemento delle transizioni del tipo $T_1, T_2, …, T_n$, il grafo associato ad S non presenterà cicli). 
+(Se S è conflict-serializzabile esiste uno scheduler $S’$ seriale che presenta operazioni in conflitto nello stesso ordine di S. Poiché S’ avrà un ordinamento delle transizioni del tipo $T_1, T_2, …, T_n$, il grafo associato ad S non presenterà cicli). 
 Nonostante una diminuzione a livello di costi computazionali, il modello basato su **conflict-serializzabilità** funziona *solo* nel caso in cui *tutte le transazioni terminano con una commit e non risulta quindi implementabile in realtà*. Come si procede allora?
 
 Nei DBMS moderni vengono utilizzati protocolli di **locking** sulle transazioni.
