@@ -1,5 +1,4 @@
 
-- Dipendenze funzionali
 # Transazioni
 
 **Transazione**: complesso di operazioni (di *lettura* e *scrittura*) che portano il DB da uno stato corretto ad un altro stato corretto.
@@ -176,3 +175,83 @@ Dopo la normalizzazione in 3NF:
 - Deve essere già in 3NF.
 - Per ogni dipendenza funzionale non banale A→BA \rightarrow BA→B, A deve essere una superchiave.
 **Obiettivo:** Gestire alcuni tipi di anomalie che non vengono risolte dalla 3NF.
+
+# Dipendenze funzionali
+
+Le dipendenze funzionali sono un concetto chiave nella teoria delle basi di dati relazionali, utilizzato per esprimere le relazioni tra attributi in una tabella. Comprendere le dipendenze funzionali è essenziale per la normalizzazione del database e per garantire l'integrità dei dati. Ecco una spiegazione dettagliata delle dipendenze funzionali:
+
+### Definizione di Dipendenza Funzionale
+
+Una dipendenza funzionale tra due insiemi di attributi di una relazione è una relazione in cui un insieme di attributi determina un altro insieme di attributi. Formalmente, si dice che un insieme di attributi XXX determina un insieme di attributi YYY (notato come X→YX \rightarrow YX→Y) se, per ogni coppia di tuple in una relazione, se le tuple concordano su tutti gli attributi di XXX, allora devono concordare anche su tutti gli attributi di YYY.
+
+### Esempio di Dipendenza Funzionale
+
+Consideriamo una tabella di studenti con le seguenti colonne:
+
+|Matricola|Nome|Corso|Professore|
+|---|---|---|---|
+|1|Anna|Matematica|Rossi|
+|2|Bob|Fisica|Bianchi|
+|3|Carla|Matematica|Rossi|
+
+In questo esempio:
+
+- Matricola→Nome\text{Matricola} \rightarrow \text{Nome}Matricola→Nome significa che ogni matricola identifica univocamente il nome di uno studente.
+- Corso→Professore\text{Corso} \rightarrow \text{Professore}Corso→Professore significa che ogni corso è tenuto da un unico professore.
+
+### Tipi di Dipendenze Funzionali
+
+#### Dipendenza Funzionale Completa
+
+Una dipendenza funzionale X→YX \rightarrow YX→Y è completa se la rimozione di qualsiasi attributo da XXX fa sì che la dipendenza non sia più valida. In altre parole, tutti gli attributi di XXX sono necessari per determinare YYY.
+
+**Esempio:**
+
+| (Matricola, Corso) $\rightarrow$ Voto |     |
+| ------------------------------------- | --- |
+| 1, Matematica $\rightarrow$ 30        |     |
+| 2, Fisica $\rightarrow$ 28            |     |
+
+In questo caso, solo conoscendo sia la matricola che il corso possiamo determinare univocamente il voto di uno studente in quel corso.
+
+#### Dipendenza Funzionale Parziale
+
+Una dipendenza funzionale X→YX \rightarrow YX→Y è parziale se esiste un sottoinsieme proprio di XXX che determina ancora YYY.
+
+**Esempio:**
+
+| (Matricola, Nome) $\rightarrow$ Corso |     |
+| ------------------------------------- | --- |
+| 1, Anna $\rightarrow$ Matematica      |     |
+| 2, Bob $\rightarrow$ Fisica           |     |
+
+Qui, la dipendenza è parziale perché il nome da solo può determinare il corso.
+
+#### Dipendenza Transitiva
+
+Una dipendenza funzionale X→ZX \rightarrow ZX→Z è transitiva se esistono attributi YYY tali che X→YX \rightarrow YX→Y e Y→ZY \rightarrow ZY→Z.
+
+**Esempio:** 
+
+| Matricola $\rightarrow$ Corso | 
+
+| Corso $\rightarrow$ Professore |     |
+| ------------------------------ | --- |
+| 1 $\rightarrow$ Matematica     |     |
+| Matematica $\rightarrow$ Rossi |     |
+
+In questo caso, Matricola→Corso→ProfessoreMatricola $\rightarrow$Corso $\rightarrow$ ProfessoreMatricola→Corso→Professore rappresenta una dipendenza transitiva.
+
+### Importanza delle Dipendenze Funzionali
+
+Le dipendenze funzionali sono utilizzate per:
+
+1. **Normalizzazione:** Aiutano a identificare le anomalie di aggiornamento e a eliminare le ridondanze nei dati.
+2. **Progettazione del Database:** Garantiscono che la struttura del database sia ottimale per mantenere l'integrità e l'efficienza dei dati.
+3. **Integrità dei Dati:** Assicurano che le relazioni tra i dati siano mantenute correttamente, prevenendo inconsistenze.
+
+### Verifica delle Dipendenze Funzionali
+
+Per verificare se una dipendenza funzionale X→YX \rightarrow YX→Y è valida in una relazione, si esaminano tutte le tuple della relazione per vedere se per ogni coppia di tuple, se le tuple hanno gli stessi valori per XXX, allora devono avere gli stessi valori per YYY.
+
+In conclusione, le dipendenze funzionali sono fondamentali per capire come gli attributi di una base di dati sono correlati tra loro e per garantire che i dati siano organizzati in modo da ridurre le ridondanze e mantenere l'integrità.
