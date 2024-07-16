@@ -41,10 +41,12 @@ Le operazioni di risoluzione vengono svolte dal **recovery manager**.
 
 I sistemi odierni devono essere in grado di governare centinaia di transazioni al secondo che possono essere eseguite anche nello stesso arco temporale.
 Se la concorrenza non venisse gestita correttamente, potrebbero verificarsi gravi problematiche legate alla consistenza dei dati.
+
 Consideriamo la seguente situazione: una transizione $T_1$ prova a modificare il valore di una certa variabile $X$, però, prima che questo venga trascritto in memoria fisica, viene schedulata una seconda transizione $T_2$ che legge $X$ e la modifica. In questo caso il risultato della transizione $T_1$ viene perso, perché $T_2$ leggerà il valore iniziale di $X$ e sarà questo ad essere modificato. 
 Un’altra situazione critica è quando la transizione $T_1$ prova a leggere due volte il valore di una certa $X$. Se tra queste due operazioni viene schedulata una $T_2$ che modifica $X$, $T_1$ leggerà per $X$ due valori distinti senza averla modificata.
 
 Si possono infine generale anche altre anomalie come gli inserimenti fantasma ($T_1$ legge stipendi impiegati, poi viene schedulata $T_2$ che inserisce un nuovo impiegato. $T_1$ a questo punto viene caricata di nuovo in CPU per essere completata e calcola la media degli stipendi $\Rightarrow$ non teniamo conto di inserimento fatto da $T_2$).
+
 Il gestore delle transizioni si affida per risolvere tali problematiche a specifici *scheduler*, come quelli seriali. In questo caso le operazioni delle transizioni vengono eseguite una alla volta in maniera successiva. (Una volta terminata $T_1$ si passa poi a $T_2$) $\Rightarrow$ se $T$ presenta un elevato numero di operazioni, avremo occupazione non efficiente della CPU.
 Gli scheduler, in generale, possono provocare le problematiche precedentemente citate. Una parte di essi, però, produrrà il risultato corretto, in questo caso sono detti serializzabili (ovvero producono sul DB gli stessi effetti di uno scheduler seriale). Abbiamo bisogno di un metodo per stabilire tale equivalenza. (Nella seguente trattazione supponiamo di dover gestire solo transazioni andate in commit)
 
@@ -65,8 +67,11 @@ Per verificare la *conflict-serializzabilità* basta utilizzare un algoritmo su 
 Nonostante una diminuzione a livello di costi computazionali, il modello basato su **conflict-serializzabilità** funziona *solo* nel caso in cui *tutte le transazioni terminano con una commit e non risulta quindi implementabile in realtà*. Come si procede allora?
 
 Nei DBMS moderni vengono utilizzati protocolli di **locking** sulle transazioni.
-**MECCANISMO**: i lock non sono nient’altro che *variabili* associate a singoli oggetti in memoria del DB che descrivono lo stato dell’oggetto stessto rispetto alle operazioni che possono essere effettuate su di esso. 
+
+**MECCANISMO**: i lock non sono nient’altro che *variabili* associate a singoli oggetti in memoria del DB che descrivono lo stato dell’oggetto stesso rispetto alle operazioni che possono essere effettuate su di esso. 
+
 *Una transazione richiede un lock mediante una operazione di locking, e lo rilascia mediante una unlocking.*
+
 In questo modo implementiamo un meccanismo di mutua esclusione sulle informazioni mantenute in memoria. (Se una transizione prova a richiedere il lock di un certo oggetto, ma questo non risulta disponibile, la transizione rimarrà in attesa finchè questo non viene rilasciato $\Rightarrow$ il tutto è gestito mediante un’apposita tabella dei conflitti).
 
 I protocolli di locking più utilizzati nei sistemi moderni sono:
@@ -75,7 +80,7 @@ I protocolli di locking più utilizzati nei sistemi moderni sono:
 
 Nei sistemi basati su lock possono però verificarsi due **problematiche** fondamentali, che vanno risolte:
 - *Livelock*: transazione può rimanere in attesa di un lock per un tempo indefinito. Possiamo risolvere utilizzando coda di priorità dove la priorità assegnata ad ogni transizione coincide con l’istante di richiesta del lock (in questo modo ogni transizione ad un certo avrà priorità massima per ottenere il lock)
-- *Deadlock*: si ha quando due transizioni detengono ciascuna una risorsa e aspettano quella detenuta dll’altra. Si può risolvere facendo abortire le transazioni.
+- *Deadlock*: si ha quando due transizioni detengono ciascuna una risorsa e aspettano quella detenuta dell’altra. Si può risolvere facendo abortire le transazioni.
 
 # Normalizzazione
 
@@ -170,11 +175,82 @@ Dopo la normalizzazione in 3NF:
 
 ## Forma Normale di Boyce-Codd (BCNF)
 
-**Requisiti:**
-- Deve essere già in 3NF.
-- Per ogni dipendenza funzionale non banale A→BA \rightarrow BA→B, A deve essere una superchiave.
-**Obiettivo:** Gestire alcuni tipi di anomalie che non vengono risolte dalla 3NF.
+La Forma Normale di Boyce-Codd (BCNF) è una versione più rigorosa della Terza Forma Normale (3NF). È stata introdotta per risolvere alcuni problemi che possono rimanere nelle tabelle anche dopo la normalizzazione in 3NF. BCNF garantisce una migliore eliminazione delle anomalie di aggiornamento e delle ridondanze rispetto alla 3NF.
 
+### Requisiti della BCNF
+
+Una tabella è in BCNF se e solo se per ogni dipendenza funzionale non banale A$\rightarrow$B, A è una superchiave.
+
+**Definizione:**
+
+- Una dipendenza funzionale A$\rightarrow$B è non banale se B non è un sottoinsieme di A.
+- Un attributo o un insieme di attributi A è una superchiave se A determina univocamente ogni attributo nella tabella.
+
+### Esempio di BCNF
+
+Consideriamo una tabella di un'università con le seguenti colonne:
+
+|StudenteID|CorsoID|Professore|Aula|
+|---|---|---|---|
+|1|101|Rossi|10|
+|2|102|Bianchi|20|
+|3|101|Rossi|10|
+
+In questo esempio, potremmo avere le seguenti dipendenze funzionali:
+
+1. (StudenteID,CorsoID)$\rightarrow$Professore
+2. Professore$\rightarrow$Aula
+
+Per controllare se la tabella è in BCNF, dobbiamo verificare se per ogni dipendenza funzionale non banale, l'insieme di attributi a sinistra è una superchiave.
+
+### Verifica della BCNF
+
+1. (StudenteID,CorsoID)→Professore(StudenteID, CorsoID) \rightarrow Professore(StudenteID,CorsoID)→Professore
+    
+    - (StudenteID,CorsoID)(StudenteID, CorsoID)(StudenteID,CorsoID) è una superchiave perché determina univocamente ProfessoreProfessoreProfessore (e in effetti tutti gli altri attributi della tabella).
+2. Professore→AulaProfessore \rightarrow AulaProfessore→Aula
+    
+    - ProfessoreProfessoreProfessore non è una superchiave, perché non determina univocamente tutti gli attributi della tabella (ad esempio, non determina StudenteIDStudenteIDStudenteID o CorsoIDCorsoIDCorsoID).
+
+Quindi, la tabella non è in BCNF a causa della dipendenza funzionale Professore→AulaProfessore \rightarrow AulaProfessore→Aula.
+
+### Come rendere una tabella in BCNF
+
+Per portare una tabella in BCNF, dobbiamo decomporre la tabella in modo da eliminare le dipendenze funzionali che violano la BCNF.
+
+**Decomposizione:**
+
+1. Creiamo una nuova tabella per la dipendenza Professore→AulaProfessore \rightarrow AulaProfessore→Aula:
+
+**Tabella Professori:**    
+|Professore|Aula|  
+|---|---|
+|Rossi|10|   
+|Bianchi|20|
+
+2. Modifichiamo la tabella originale per rimuovere l'attributo AulaAulaAula:
+    
+    **Tabella Iscrizioni:**
+    
+    |StudenteID|CorsoID|Professore|
+    |---|---|---|
+    |1|101|Rossi|
+    |2|102|Bianchi|
+    |3|101|Rossi|
+    
+
+Ora entrambe le tabelle sono in BCNF:
+
+- Nella tabella **Professori**, ProfessoreProfessoreProfessore è una superchiave e determina univocamente AulaAulaAula.
+- Nella tabella **Iscrizioni**, (StudenteID,CorsoID)(StudenteID, CorsoID)(StudenteID,CorsoID) è una superchiave e determina univocamente ProfessoreProfessoreProfessore.
+
+### Vantaggi della BCNF
+
+- **Elimina Anomalie:** Riduce al minimo le anomalie di inserimento, aggiornamento e cancellazione.
+- **Integrità dei Dati:** Mantiene l'integrità dei dati e riduce le ridondanze.
+- **Consistenza:** Garantisce una maggiore consistenza dei dati attraverso la rigorosa eliminazione delle dipendenze funzionali non necessarie.
+
+In sintesi, la Forma Normale di Boyce-Codd è uno step avanzato nella normalizzazione dei database che garantisce che tutte le dipendenze funzionali siano gestite correttamente, migliorando l'integrità e la coerenza dei dati.
 # Dipendenze funzionali
 
 Le dipendenze funzionali sono un concetto chiave nella teoria delle basi di dati relazionali, utilizzato per esprimere le relazioni tra attributi in una tabella. Comprendere le dipendenze funzionali è essenziale per la normalizzazione del database e per garantire l'integrità dei dati. Ecco una spiegazione dettagliata delle dipendenze funzionali:
