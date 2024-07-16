@@ -1,4 +1,3 @@
-
 # Transazioni
 
 **Transazione**: complesso di operazioni (di *lettura* e *scrittura*) che portano il DB da uno stato corretto ad un altro stato corretto.
