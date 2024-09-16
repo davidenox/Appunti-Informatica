@@ -1,0 +1,62 @@
+body{
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#counter{
+    text-align: center;
+    align-items: center;
+}
+
+#count{
+    text-align: center;
+    align-items: center;
+}
+
+header{
+    text-align: center;
+    align-items: center;
+    background-color: #333;
+    color: #ffffff;
+}
+nav ul li{
+    display: inline-block;
+}
+footer{
+    align-content: center;
+    text-align: center;
+    height: 80px;
+    background-color: #333;
+    color: #ffffff;
+}
+
+button{
+    color: #007bff;
+    font-family:Arial, sans-serif;
+    align-items: center;
+    align-content: center;
+}
+
+.hamburger{
+    display: none;
+    align-items: center;
+    align-content: center;
+}
+
+
+@media (max-width: 600px){
+    .hamburger{
+        display: block;
+    }
+    nav ul li{
+        display: none;
+    }
+    button{
+        align-items: unsafe;
+    }
+    .diminuisci{
+        align-items: center;
+    }
+    .aumenta{align-items: center;}
+
+}

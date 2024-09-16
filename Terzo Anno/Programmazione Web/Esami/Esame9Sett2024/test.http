@@ -1,0 +1,15 @@
+### GET /counter
+
+GET http://localhost:3000/counter
+
+### GET /colors
+
+GET http://localhost:3000/colors
+
+### POST /increase
+
+POST http://localhost:3000/increase
+
+
+### POST /decrease
+POST http://localhost:3000/decrease
