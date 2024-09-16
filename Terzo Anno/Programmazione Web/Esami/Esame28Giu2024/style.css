@@ -1,0 +1,30 @@
+body{
+    background-color: #e0f7fa;
+}
+.container{
+    background-color: #ffffff;
+    border: 2px  solid #00796b;
+    font-family: Arial, sans-serif;
+}
+link{
+    color: #004d40;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    border: 2px  solid #00796b;
+}
+
+nav ul li{
+    display: inline;
+
+}
+
+.sinistra{
+    width: 30%;
+}
+
+.destra{
+    width: 70%;
+}
