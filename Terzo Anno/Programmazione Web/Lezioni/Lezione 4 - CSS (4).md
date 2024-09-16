@@ -34,7 +34,7 @@ Si specifica il font desiderato e quindi delle alternative simili. ES:
 
 ### Web Font
 ![[Pasted image 20240318113040.png|center|500]]
-# Testo e c0lori
+# Testo e colori
 ## Colore
 Il colore del testo viene ereditato dagli elementi e non influenza solo il testo. Può essere indicato in vari modi:
 ```CSS

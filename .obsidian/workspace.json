@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
+                "file": "Terzo Anno/Programmazione Web/Orale.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
+                "file": "Terzo Anno/Programmazione Web/Orale.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
+                "file": "Terzo Anno/Programmazione Web/Orale.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md"
+                "file": "Terzo Anno/Programmazione Web/Orale.md"
               }
             }
           },
@@ -173,33 +173,33 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
     "Secondo Anno/Linguaggi e Metodologie di Programmazione/Java.md",
+    "Terzo Anno/Programmazione Web/Orale.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezioni 10-14 Javascript.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 6 - CSS (4).md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 1 - Internet ed il Web.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 0 - Intro.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 5 - CSS (3).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 4 - CSS (4).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 3 - CSS (1).md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
+    "Terzo Anno/Programmazione Web/Lezioni/Lezione 2 - HTML e GIT.md",
+    "Secondo Anno/Basi di Dati e Conoscenze/Domande Orale.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 2 - Il nucleo della rete.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 1 - Host e Reti Internet.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 9 - Virtual Memory.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
+    "Secondo Anno/Linguaggi e Metodologie di Programmazione/Modulo 1/Lezioni/Lezione 6 - Classi.md",
+    "_temp/orario.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 11 - Enumerazione Web.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 10 - Introduzione web.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/img32.png",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezioni 15-16 - Privilege Escalation e Pivoting.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 1 - Intro.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 2 - Internet.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 3 - Linux.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 5 - Social Engineering.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 6 - Enumeration e Network Mapping.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 7 - Enumerazione SBM.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 9 - Password.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 12 - Web Command Injection.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 13 - Local File Inclusion.md",
-    "Terzo Anno/Vulnerabilità dei Sistemi Internet/Lezioni/Lezione 14 - SQL Injections e XSS.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531141933.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531141840.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531130028.png",
