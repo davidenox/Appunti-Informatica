@@ -2,6 +2,7 @@ body{
     background-color: #e0f7fa;
 }
 .container{
+    margin: 0 auto;
     background-color: #ffffff;
     border: 2px  solid #00796b;
     font-family: Arial, sans-serif;
@@ -21,10 +22,38 @@ nav ul li{
 
 }
 
-.sinistra{
-    width: 30%;
+.main{
+    display: flex;
 }
 
-.destra{
-    width: 70%;
+.main .sinistra{
+    width: 30%;
+    border: 1px solid #00796b;
 }
+
+.main .destra{
+    width: 70%;
+    border: 1px solid #00796b;
+
+}
+
+.panino{
+    display: none;
+}
+
+
+@media (max-width: 1000px){
+    .container{
+        width: 700px;
+    }
+    .panino{
+        display:block;
+    }
+    .hamburger{
+        display:block;
+    }
+    #menu{
+        display: none;
+    }
+}
+

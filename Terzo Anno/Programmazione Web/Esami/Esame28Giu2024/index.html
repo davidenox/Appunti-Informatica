@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Logo</h1>
-            <nav class="menu">
+            <nav id="menu">
                 <ul>
                     <li href="#">Home</li>
                     <li href="#">About</li>
@@ -18,17 +19,22 @@
                     <li href="#">Contacts</li>
                 </ul>
             </nav>
+            <div class="panino">
+                <div class="hamburger" style="width: 35px; height: 5px; background-color: black; margin: 6px 0"></div>
+                <div class="hamburger" style="width: 35px; height: 5px; background-color: black; margin: 6px 0"></div>
+                <div class="hamburger" style="width: 35px; height: 5px; background-color: black; margin: 6px 0"></div>
+            </div>
         </header>
         <main class="main">
             <div class="sinistra">
-                <section class="lista">
-
-                </section>
+                    <ul id="lista">
+                    </ul>
+                </nav>
             </div>
             <div class="destra">
                 <h1>Dettagli</h1>
                 <p>Seleziona una persona dalla lista per vedere i dettagli</p>
-                <button class="changeColors">Cambia colori</button>
+                <button id="changeColors" onclick="updateColors()">Cambia colori</button>
             </div>
         </main>
         <footer></footer>
