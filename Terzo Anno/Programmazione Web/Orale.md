@@ -14,7 +14,7 @@ Cross Origin Resource Sharing, meccanismo di sicurezza nei browser per richieste
 Application Programming Interface, interfacce che permettono a diverse applicazioni software di comunicare tra loro. Server: libreria `fetch` per fare richieste HTTP ai server.
 
 ### REST con principi HTTP:
-Representational State Transfer, architettura per la progettazione di API basata su principi HTTP come:
+*Representational State Transfer*, architettura per la progettazione di API basata su principi HTTP come:
 1. Risorse identificate da URL
 2. Uso di metodi HTTP standard
 3. Operazioni stateless
@@ -32,6 +32,38 @@ Costrutto di programmazione che gestisce le operazioni asincrone, consentendo a 
 1. *Call Stack*: JS è single-threaded, ha un'unico stack di chiamate in cui vengono eseguite le funzioni. Ogni funzione invocata viene aggiunta a questo stack, e una volta terminata, viene rimossa.
 2. *Message Queue*: Struttura dati in cui vengono messi i messaggi contenenti funzioni callback da eseguire. Questi messaggi sono in attesa di essere elaborati una volta che lo stack di chiamate è vuoto.
 3. *Event Loop*: Meccanismo che controlla i due precedenti. Quando lo stack di chiamate è vuoto, l'event loop prende la prima funzione della coda di messaggi e la mette nello stack di chiamate per l'esecuzione. Continua ciclicamente.
+
+# JAVASCRIPT: 
+Linguaggio di programmazione dinamico e interpretato, basato sugli eventi e orientato agli oggetti. Supporta funzioni di prima classe ed ha un'ampia compatibilità coi browser. Usa la gestione asincrona tramite callback, promises e async/await, ma soprattutto permette la manipolazione del DOM.
+
+## FORM: 
+Contenitore per elementi di input che permette di inviare dati ad un server. Include campi di testo, caselle di controllo, pulsanti radio, menu a discesa e pulsanti di invio.
+
+## THIS LATO FUNCTION: 
+Due casi:
+1. Funzione come metodo di un oggetto: this si riferisce all'oggetto stesso.
+2. Funzione standal-one: this si riferisce all'oggetto globale.
+
+## PROMISE: 
+Rappresenta l'eventuale completamento o fallimento di un'operazione asincrona. Tre stati: *pending* ( in attesa ),  *fulfilled* ( completata con successo ) e *rejected* ( fallita ). Il costruttore `promise` prende una funzione executor con i parametri `resolve` e `reject`.  
+
+## CODA DI MICROTASK: 
+Coda di operazioni che devono essere eseguite dopo il completamento della task attuale. Esempio: *promise*.
+
+## GARBAGE COLLECTOR: 
+Sistema di gestione della memoria che recupera la memoria inutilizzata liberando oggetti non più raggiungibili o utilizzati.
+
+## SCOPE: 
+Visibilità e durata delle variabili e delle funzioni: Scope *locale/globale*.
+
+## COSTRUTTORE: 
+Funzione/oggetto chiamato per inizializzare l'oggetto appena creato. `new`:
+1. Creato oggetto vuoto e assegnato a this
+2. Eseguita la funzione
+3. Ritornato this
+Lo scope di `var` è il functional block più vicino.
+Lo scope di `let` è l'enclosing block più vicino.
+
 
 # Node.JS: 
 Runtime JS costruito sul V8 di Google Chrome, *permette di eseguire JS lato server*. Utilizza l'event loop per gestire le operazioni di I/O asincrone. Invece di bloccare il thread principale durante le operazioni di I/O, come la lettura da file o l'invio di richieste di rete, node.js  delega queste operazioni ad un pool di thread worker ( `libuv` ) che gestisce le operazioni I/O in background. Quando un'operazione I/O è completata, una callback corrispondente viene messa nella coda dei messaggi, e l'event loop se ne occupa non appena lo stack di chiamate è vuoto.
@@ -81,8 +113,7 @@ Con grazie e senza grazie, presenza o meno di piccoli abbellimenti.
 Margin distanza esterna Padding interna
 
 ### BORDER-BOX: 
-`box-sizing: border-box;` modifica il comportamento del modello di box. Quando è impostata, il valore `border-box`  rende il bordo l'elemento ultimo del nostro
-box e fa sì che la larghezza consideri padding e bordi come interni.
+`box-sizing: border-box;` modifica il comportamento del modello di box. Quando è impostata, il valore `border-box`  rende il bordo l'elemento ultimo del box e fa sì che la larghezza consideri padding e bordi come interni.
 
 ## CSS position:
 - `static` : valore predefinito secondo il normale flusso del documento.
@@ -99,36 +130,6 @@ RESPONSIVE:
 3. Margini responsive
 4. Griglie flessibili e framework come Bootstrap o Foundation.
 
-# JAVASCRIPT: 
-Linguaggio di programmazione dinamico e interpretato, basato sugli eventi e orientato agli oggetti. Supporta funzioni di prima classe ed ha un'ampia compatibilità coi browser. Usa la gestione asincrona tramite callback, promises e async/await, ma soprattutto permette la manipolazione del DOM.
-
-## FORM: 
-Contenitore per elementi di input che permette di inviare dati ad un server. Include campi di testo, caselle di controllo, pulsanti radio, menu a discesa e pulsanti di invio.
-
-## THIS LATO FUNCTION: 
-Due casi:
-1. Funzione come metodo di un oggetto: this si riferisce all'oggetto stesso.
-2. Funzione standal-one: this si riferisce all'oggetto globale.
-
-## PROMISE: 
-Rappresenta l'eventuale completamento o fallimento di un'operazione asincrona. Tre stati: *pending* ( in attesa ), *fulfilled* ( completata con successo ) e *rejected* ( fallita ). Il costruttore `promise` prende una funzione executor con i parametri `resolve` e `reject`.  
-
-## CODA DI MICROTASK: 
-Coda di operazioni che devono essere eseguite dopo il completamento della task attuale. Esempio: *promise*.
-
-## GARBAGE COLLECTOR: 
-Sistema di gestione della memoria che recupera la memoria inutilizzata liberando oggetti non più raggiungibili o utilizzati.
-
-## SCOPE: 
-Visibilità e durata delle variabili e delle funzioni: Scope *locale/globale*.
-
-## COSTRUTTORE: 
-Funzione/oggetto chiamato per inizializzare l'oggetto appena creato. `new`:
-1. Creato oggetto vuoto e assegnato a this
-2. Eseguita la funzione
-3. Ritornato this
-Lo scope di `var` è il functional block più vicino.
-Lo scope di `let` è l'enclosing block più vicino.
 
 # DOM: 
 Document Oject Model. Rappresentazione strutturata di un documento HTML sotto forma di albero. Permette a JS di manipolare il contenuto, la struttura e lo stile.
