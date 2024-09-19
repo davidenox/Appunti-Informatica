@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+#menu ul li{
+    display: inline-block;
+}
+
+#panino{
+    display: none;
+}
+
+
+@media (max-width: 1000px){
+    #menu{
+        display: none;
+    }
+    #panino{
+        display: block;
+
+    }
+}
