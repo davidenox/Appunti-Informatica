@@ -68,7 +68,7 @@ HyperText Markup Language, definisce la struttura ed il contenuto delle pagine w
 # CSS
 Cascade StyleSheet, determina stili, colori e font all'interno di una pagina web.
 ## Specificità CSS: 
-Determina quali regole CSS vanno applicate ad un elemento specifico quando ci sono regole contrastanti. basata su *Id*, *classi* e *pseudo-classi*.
+Determina quali regole CSS vanno applicate ad un elemento specifico quando ci sono regole contrastanti. Basata su *Id*, *classi* e *pseudo-classi*.
 
 ## Web-Font: 
 Font caricati e utilizzati nelle pagine web tramite CSS.
@@ -76,16 +76,16 @@ Font caricati e utilizzati nelle pagine web tramite CSS.
 ## font-family: 
 Specifica una lista di famiglie di caratteri per un elemento.
 
+### SERIF, SANS-SERIF:
+Con grazie e senza grazie, presenza o meno di piccoli abbellimenti.
+
 ## Font Stack: 
 Lista di famiglie di caratteri specificata nella proprietà font-family. Permette al browser di usare il primo font disponibile nell'elenco. Se non è possibile, va in cascata.
 
 ## DESKTOP-FIRST e MOBILE-FIRST: 
 Due approcci alla progettazione responsive:
-- *DesktopFirst*: usa `max-width` con le media query
+- *DesktopFirst*: usa `max-width` con le media query;
 - *MobileFirst*: usa `min-width` con le media query.
-
-### SERIF, SANS-SERIF:
-Con grazie e senza grazie, presenza o meno di piccoli abbellimenti.
 
 ### MARGIN e PADDING: 
 Margin distanza esterna Padding interna.
