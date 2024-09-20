@@ -165,13 +165,13 @@ Le funzioni del middleware possono eseguire le seguenti attività:
 4. Chiamare la successiva funzione middleware nello stack.
 
 # DOM: 
-Document Oject Model. Rappresentazione strutturata di un documento HTML sotto forma di albero. Permette a JS di manipolare il contenuto, la struttura e lo stile.
+Document Object Model. Rappresentazione strutturata di un documento HTML sotto forma di albero. Permette a JS di manipolare il contenuto, la struttura e lo stile.
 
 ## CODICE SINCRONO/ASINCRONO:
 1. *Sincrono*: eseguito in sequenza, ogni istruzione attende la fine della precedente.
 2. *Asincrono*: permette l'esecuzione di operazioni senza bloccare il flusso principale del programma (callback, promises o async/await).
 
 ## ROUTING: 
-Determinazione di quale azione intraprendere in risposta ad una richiesta di un URL specifico.
+Instradamento: determinazione di quale azione intraprendere in risposta ad una richiesta di un URL specifico.
 ### LATO SERVER: 
 Associa gli URL alle funzioni del server ai controller che gestiscono le richieste. Quando un server web riceve una richiesta, il router analizza l'URL e decide quale codice eseguire per rispondere alla richiesta.
