@@ -1,22 +1,42 @@
-header{
+header, footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+main{
+    background-color: #f0f0f0;
+
+}
+
+.card{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
     display: flex;
     justify-content: space-between;
 }
-#menu ul li{
-    display: inline-block;
+.btnCompleted{
+    background-color: grey;
+    text-decoration:line-through;
+
 }
 
-#panino{
-    display: none;
+button{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
 }
 
 
-@media (max-width: 1000px){
-    #menu{
-        display: none;
-    }
-    #panino{
-        display: block;
-
+@media (min-width: 600px){
+    main{
+        /* display:grid;
+        grid-template-columns: 300px 300px; */
+        display:grid;
+        grid-template-columns: 300px 300px;
     }
 }
