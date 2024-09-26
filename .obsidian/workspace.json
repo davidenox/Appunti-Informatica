@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Orale.md",
+                "file": "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Orale.md",
+                "file": "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Orale.md",
+                "file": "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Programmazione Web/Orale.md"
+                "file": "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md"
               }
             }
           },
@@ -171,11 +171,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "f63b2e5336c8a245",
   "lastOpenFiles": [
+    "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 15.md",
+    "Primo Anno/Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
+    "Terzo Anno/Programmazione Web/Orale.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
-    "Terzo Anno/Programmazione Web/Orale.md",
     "Terzo Anno/Programmazione Web/Esami/Esame20Sett2024/task.json",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
@@ -207,7 +209,6 @@
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/serve-static/README.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/serve-static/HISTORY.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/http-errors/README.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/http-errors/HISTORY.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/img32.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531141933.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531141840.png",
