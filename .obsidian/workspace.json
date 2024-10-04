@@ -13,14 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Indice.md",
+                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4b710cef64758e44",
+            "id": "a406b1e93e21dc94",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Indice.md",
+                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Indice.md",
+                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Indice.md"
+                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md"
               }
             }
           },
@@ -183,11 +183,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f63b2e5336c8a245",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241004222547.png",
+    "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241004222530.png",
+    "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241004222503.png",
+    "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241004222440.png",
+    "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
     "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
     "Terzo Anno/Ingegneria del Software/Lezioni/Indice.md",
-    "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
     "Terzo Anno/Ingegneria del Software/Lezioni/img",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241004113527.png",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
@@ -221,15 +225,11 @@
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/negotiator/HISTORY.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/vary/README.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/vary/HISTORY.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/type-is/README.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/img32.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531141933.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531141840.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531130028.png",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531125830.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531125447.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531125241.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115927.png",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240529115811.png"
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/img/Pasted image 20240531125447.png"
   ]
 }
