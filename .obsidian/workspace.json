@@ -13,19 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "a406b1e93e21dc94",
+            "id": "fcb74576f5cf5cde",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md"
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md"
               }
             }
           },
@@ -185,6 +185,13 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
+    "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
+    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
+    "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152441.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152418.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152408.png",
@@ -192,12 +199,9 @@
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007145331.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007145245.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007145222.png",
-    "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
-    "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007142156.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007142129.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007141718.png",
-    "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007141411.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/Indice.md",
     "Terzo Anno/Ingegneria del Software/Lezioni/img",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
@@ -219,7 +223,6 @@
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/server.js",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/script.js",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/package-lock.json",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/package.json",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/cors/README.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/cors/HISTORY.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/cors/CONTRIBUTING.md",
@@ -227,9 +230,6 @@
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/fs/README.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/ms/readme.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/ms/license.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/negotiator/README.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/negotiator/HISTORY.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/vary/README.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/vary/HISTORY.md"
+    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/negotiator/README.md"
   ]
 }
