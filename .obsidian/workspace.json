@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md"
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md"
               }
             }
           },
@@ -185,8 +186,10 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
+    "Terzo Anno/Algoritmi per i Big Data/img",
+    "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241009142250.png",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
     "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
@@ -201,7 +204,6 @@
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007145222.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007142156.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007142129.png",
-    "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007141718.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/Indice.md",
     "Terzo Anno/Ingegneria del Software/Lezioni/img",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
@@ -229,7 +231,6 @@
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/object-assign/readme.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/fs/README.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/ms/readme.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/ms/license.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/negotiator/README.md"
+    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/ms/license.md"
   ]
 }

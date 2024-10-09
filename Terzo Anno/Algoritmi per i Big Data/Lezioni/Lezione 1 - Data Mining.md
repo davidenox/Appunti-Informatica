@@ -84,4 +84,34 @@ Un teorema fondamentale della *statistica*, noto come **correzione di Bonferroni
 
 #### Esempi di "bogus": Gang nei Social Network
 
-13/24 arrivare a 16
+**Estrazione di informazioni da un social network**
+
+Il *modello grafico* (versione semplificata) $G(V,E)$: un (ampio) insieme $\texttt{V}$ di $n$ agenti (potenzialmente criminali) che visitano un (ampio) insieme $\texttt{H}$ di $h$ luoghi pubblici (hotel, bar, ristoranti, aeroporti, ecc.) in una grande città/regione:
+- Esiste un arco $(u,v)$ se $u$ e $v$ visitano la stessa posizione in $\texttt{H}$ nello stesso giorno in una sequenza di $T >> 0$ giorni;
+- **Ipotesi del modello** (versione semplificata): il processo di visita degli agenti nei luoghi pubblici (hotel, bar, aeroporto, banche, ecc.) è sufficientemente *casuale* e *uniforme*.
+
+- *Problema* (informale): individuare possibili «**Gang**», ovvero *Clique* in $G$.
+
+**Impostazione formale**
+
+*Domanda*: Quale dimensione massima della clique ci aspettiamo in $G(V,E)$?
+
+*Risposta*: Per ogni coppia di agenti $(u,v)$, otteniamo $Pr[(u,v)\in E]\simeq T/h ≜ p$
+Per un sottoinsieme S ⊆ V di dimensione s, otteniamo:
+$Pr[\text{S è una cricca}]\simeq p^{(s^2/2)}$,
+Quindi:
+$H =$ size of location set;
+$T =$ number of days;
+Hyp: $H >> T$
+
+![[Pasted image 20241009142250.png|center]]
+
+Ora, osservando un grande sistema spazio-temporale, ad es. $n\simeq 10^7, h \simeq 10^4; T \simeq 10^3 \implies p \simeq 1/10$, 
+Da $(*)$, possiamo aspettarci un gran numero di cliques di dimensioni $s\simeq 10$
+Quindi, una Gang di 10 ragazzi che si sono incontrati almeno una volta non è un evento sorprendente!
+
+## Uno sguardo computazionale per il Data Mining
+
+L'*approccio informatico* al Data Mining è di tipo **algoritmico**:
+- Dato un DataSet $\texttt{DS}$, trovare un *algoritmo efficiente* ( e relativa struttura dati ) per risolvere query complesse su $\texttt{DS}$.
+S15CH1ABD
