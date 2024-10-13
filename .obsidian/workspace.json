@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
+                "file": "_temp/orario.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
+                "file": "_temp/orario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
+                "file": "_temp/orario.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md"
+                "file": "_temp/orario.md"
               }
             }
           },
@@ -186,9 +186,9 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
     "Terzo Anno/Algoritmi per i Big Data/img",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241009142250.png",
-    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 1 - Data Mining.md",
     "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
@@ -224,7 +224,6 @@
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/style.css",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/server.js",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/script.js",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/package-lock.json",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/cors/README.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/cors/HISTORY.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/node_modules/cors/CONTRIBUTING.md",
