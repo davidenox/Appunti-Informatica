@@ -23,14 +23,14 @@ Doppia modalità supportate dall'hardware:
 - Modalità **Utente**.
 ![[Pasted image 20231008165919.png||center]]
 
-# The operating system as an extended Machine
+# Il SO come una Macchina estesa
 - Idea di *astrazione* :
-	- - Il sistema operativo si pone tra l'Hardware e le applicazioni; 
+	- Il sistema operativo si pone tra l'Hardware e le applicazioni; 
 - Visione *top-down* :
-	- - Il SO fornisce astrazioni ai programmi applicativi
+	- Il SO fornisce astrazioni ai programmi applicativi
 - Vista *bottom-up* :
-	- -Il SO gestisce parti di un sistema complesso
-	- - E fornisce un'allocazione ordinata e controllata delle risorse
+	- Il SO gestisce parti di un sistema complesso
+	- E fornisce un'allocazione ordinata e controllata delle risorse
 ## Il sistema operativo come gestore di risorse
 Da un moderno sistema operativo ci aspettiamo che *gestisca* :
 1. *Più programmi in esecuzione*;
@@ -82,7 +82,7 @@ Programmazioni avanzate: **Pipeline** (non del tutto trasparenti al SO).
 #### La memoria di un processore
 ![[Pasted image 20231008170635.png|center]]
 
-Problemi del sistema di cache:
+*Problemi del sistema di cache*:
 1. Quando inserire un nuovo elemento nella cache?
 2. In quale riga della cache inserire il nuovo elemento?
 3. Quale elemento rimuovere dalla cache quando è necessario uno slot.
@@ -108,25 +108,25 @@ Per eseguire l'I/O:
 2. Il Kernel effettua una chiamata al driver;
 3. Il driver avvia l'I/O.
 E interroga il dispositivo per vedere se ha finito (è occupato in attesa), o chiede al dispositivo di generare un interrupt quando ha finito ( e restituisce qualche informazione ).
-Più avanzato: ga uso di hardware speciale (DMA).
+Più avanzato: fa uso di hardware speciale (DMA).
 ![[Pasted image 20231008172841.png|center]]
 
 #### Il DMA
-DMA è l'acronimo di "*Direct Memory Access*" ed è un dispositivo hardware speciale. Consente ai componenti di accedere direttamente alla memoria del computer senza coinvolgere la CPU. Migliora l'efficienza ed aumenta le prestazioni nelle operazioni di input/output (I/O) ad alta velocità. Utilizzato per il trasferimento veloce di dati tra memoria e dispositivi periferici, riduce il carico sulla CPU durante le operazioni di I/O, consentendole di concentrarsi su altri compiti critici.
+**DMA** è l'acronimo di "*Direct Memory Access*" ed è un dispositivo hardware speciale. Consente ai componenti di accedere direttamente alla memoria del computer senza coinvolgere la CPU. Migliora l'efficienza ed aumenta le prestazioni nelle operazioni di input/output (I/O) ad alta velocità. Utilizzato per il trasferimento veloce di dati tra memoria e dispositivi periferici, riduce il carico sulla CPU durante le operazioni di I/O, consentendole di concentrarsi su altri compiti critici.
 
 ### Buses
-L'evoluzione dei computer ha portato all'aggiunta di bus supplementari per gestire l'aumento del traffivco dati.
+L'evoluzione dei computer ha portato all'aggiunta di bus supplementari per gestire l'aumento del traffico dati.
 	Un sistema x86 moderno ha diversi bus con funzioni e velocità di trasferimento diverse.
 	*La CPU comunica con la memoria attraverso un bus veloce DDR4, con una periferica grafica esterna sul bus PCIe* ( Peripheral Component Interconnect Express).
-	Con tutti gli altro dispositivi attraverso un hub su un bus DMI (Direct Media Interface).
-Il bus PCIe è il principale e più veloce bus di comunicazioni dei computer attuali.
+	Con tutti gli altri dispositivi attraverso un hub su un bus *DMI* (Direct Media Interface).
+Il bus **PCIe** è il principale e più veloce bus di comunicazioni dei computer attuali.
 	*PCIe utilizza un'architettura a connessioni punto a punto dedicate*, migliorando l'efficienza rispetto ai bus condivisi.
 ![[Pasted image 20231008173528.png|center]]
 
 Dispositivi *legacy* possono essere collegati ad un processore hub separato.
-USB ( Universal Series Bus ) è stato sviluppato per connettere dispositivi lenti al computer, ma le versioni moderne possono raggiungere velocità fino a 40Gbps. USB utilizza un connettore a 4-11 conduttori per alimentazione e comunicazione. USB consente il collegamento immediato dei dispositivi senza necessità di riavvio del sistema.
+**USB** ( Universal Series Bus ) è stato sviluppato per connettere dispositivi lenti al computer, ma le versioni moderne possono raggiungere velocità fino a 40Gbps. USB utilizza un connettore a 4-11 conduttori per alimentazione e comunicazione. USB consente il collegamento immediato dei dispositivi senza necessità di riavvio del sistema.
 ## Avvio del sistema (Boot)
-La memoria flash della scheda madre contiene il firmware ( il BIOS ). Dopo aver premuto il pulsante di accenzione, la CPU esegue il BIOS che:
+La memoria flash della scheda madre contiene il firmware ( il BIOS ). Dopo aver premuto il pulsante di accensione, la CPU esegue il BIOS che:
 1. Inizializza la RAM e altre risorse;
 2. Esegue la scansione dei bus PCI/PCIe e inizializza i dispositivi;
 3. Imposta il *firmware runtime* per i servizi critici ( ad esempio, I/O a basso livello) che il sistema deve utilizzare dopo l'avvio.

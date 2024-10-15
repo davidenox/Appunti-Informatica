@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cb74da1844de7af2",
+        "id": "97de6cd056348f63",
         "type": "tabs",
         "children": [
           {
-            "id": "f63b2e5336c8a245",
+            "id": "069b438d53790956",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 218.00043487548828
   },
   "right": {
     "id": "3373f41afc1aa408",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md"
               }
             }
           },
@@ -171,8 +171,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "069b438d53790956",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 2 - Sistemi Operativi.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 1 - Intro.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 9 - Virtual Memory.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Indice.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 16 - DFS.md",
@@ -208,12 +213,7 @@
     "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 15.md",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
     "Terzo Anno/Programmazione Web/Orale.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 9 - CSS (7).md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 8 - CSS (6).md",
     "Terzo Anno/Programmazione Web/Esami/Esame20Sett2024/task.json",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 8 - Delimitazioni inferiori e superiori.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 16 - Async-CORS.md",
-    "Terzo Anno/Programmazione Web/Lezioni/Lezione 15 - Javascript Asincrono.md",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/esame.pdf",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/test.http",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/style.css",
