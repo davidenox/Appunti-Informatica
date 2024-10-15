@@ -22,16 +22,18 @@ Il sistema operativo offre funzionalità attraverso le chiamate di sistema. Grup
 - Process Management Service
 I processori sono astrazioni a livello utente per eseguire un programma per conto dell'utente. Ogni processo ha il proprio spazio di indirizzamento. i dati coinvolti nell'elaborazione vengono recuperati e memorizzati in file. I file persistono rispetto ai processi.
 ## Che cos'è un processo?
-Concetto chiave in tutti i SO.
-*Def*: **Programma in esecuzione**
-Il processo è associato:
-1. A uno spazio di indirizzi;
-2. Un insieme di risorse:
-	- Registri;
-	- File aperti;
-	- Allarmi;
-	- ...
-Il processo può essete pensato come un contenitore. Contiene tutte le informazioni necessarie per l'esecuzione del programma.
+	Concetto chiave in tutti i SO.
+
+>[!important]- *Def*: **Programma in esecuzione**
+>Il processo è associato:
+>1. A uno spazio di indirizzi;
+>2. Ad un insieme di risorse:
+>- Registri;
+> - File aperti;
+> - Allarmi;
+> - ...
+>
+>Il processo può essere pensato come un contenitore. Contiene tutte le informazioni necessarie per l'esecuzione del programma.
 ## Il layout di un processo
 Il layout dipende da:
 1. Architettura della macchina;
@@ -57,8 +59,8 @@ Un albero di processi. Il processo A ha creato due processi figli, B e C. Il pro
 I processi sono "di proprietà" di un utente, identificato da un UID.
 1. Ogni processo ha tipicamente l'UID dell'utente che lo ha avviato.
 2. Su UNIX, un processo figlio ha lo stesso UID del suo processo padre.
-3. Gli utenti possono essere membri di gruppi, identificati da un GUID.<
-Un processo (superuser/root/administrator) è speciale: ha più privilegi.
+3. Gli utenti possono essere membri di gruppi, identificati da un GUID.
+Un processo `superuser/root/administrator` è speciale: ha più privilegi.
 ## File
 *File*: astrazione di un dispositivo di memorizzazione ( eventualmente ) reale (ad esempio, un disco).
 È possibile leggere e scrivere dati da/su file fornendo una posizione e una quantità di dati da trasferire. 
@@ -75,7 +77,7 @@ Le directory e i file formano una gerarchia:
 - Altri filesystem possono essere montati ( da *mount* ) nella root:
 	- /mnt/windows
 ## Diritti di accesso
-I file sono "protetti" da tuple a tre bit per il *proprietario*(**owner**), il *gruppo*(**group**) e gli *altri utenti*      (**other users**).
+I file sono "protetti" da tuple a tre bit per il *proprietario*(**owner**), il *gruppo*(**group**) e gli *altri utenti* (**other users**).
 Le tuple contengono un bit (*r*)ead, (*w*)rite e un bit e(*x*)ecute ( ma sono disponibili più bit).
 Esempio:
 	-*rwx*r-x--x myuser my group 14492 Dec 4 18:04 my file
@@ -93,7 +95,7 @@ Un file system per un dipartimento universitario.
 ## Accesso ai file : un esempio
 ![[Pasted image 20231010170256.png|center|600]]
 ## File e pipe
-Pipes : pseudo file che consentono ai processi di comunicare su un canale FIFO.
+**Pipes** : pseudo file che consentono ai processi di comunicare su un canale FIFO (First-In-First-Out).
 Deve essere impostato in anticipo.
 Sembra un file "normale" per leggere e scrivere da/sui processi in esecuzione.
 ![[Pasted image 20231010170442.png|center|600]]
@@ -160,10 +162,13 @@ Il codice di ritorn *s* è $-1$ se si è verificato un errore. I codici di ritor
 ## Struttura di un sistema operativo monolitico
 Il programma principale invoca le chiamate di sistema richieste.
 Il kernel è un blocco monolitico con:
-- - Procedure di servizio che eseguono le chiamate di Sistema;
-- - Procedure di utilità che aiutano a implementare le procedure di servizio.
+- Procedure di servizio che eseguono le chiamate di Sistema;
+- Procedure di utilità che aiutano a implementare le procedure di servizio.
 ![[Pasted image 20231011131558.png|center]]
 ### Alcune considerazioni
+
+****
+
 *Sistemi Operativi Monolitici*: Un approccio al design "tutto in uno".
 - Il kernel è un'unica unità grande e interconnessa;
 - Tutte le funzioni del sistema operativo, come la gestione dei processi, la gestione della memoria e la gestione dei dispositivi di I/O, sono strettamente integrate in un unico spazio di indirizzamento.
