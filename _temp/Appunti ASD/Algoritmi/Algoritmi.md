@@ -498,7 +498,7 @@ BFS(root)
 # Algoritmi di visita di un grafo
 
 ## Algoritmo DFS (Grafi)
-Speigazione qua -> [[Lezione 14 - Capitolo 11#Visita in profondità|Lezione 14 - DFS]]
+Speigazione qua -> [[Lezione 15 - Strutture dati#Visita in profondità|Lezione 14 - DFS]]
 
 ### Pseudocodice
 
@@ -512,7 +512,7 @@ Il tempo di esecuzione dipende dalla struttura dati usata per rappresentare il g
 
 ## Algoritmo BFS (Grafi)
 
-Speigazione qua -> [[Lezione 14 - Capitolo 11#Visita in ampiezza|Lezione 14 - BFS]]
+Speigazione qua -> [[Lezione 15 - Strutture dati#Visita in ampiezza|Lezione 14 - BFS]]
 
 ### Pseudocodice
 

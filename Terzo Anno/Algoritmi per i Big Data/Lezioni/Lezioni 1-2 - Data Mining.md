@@ -114,4 +114,55 @@ Quindi, una Gang di 10 ragazzi che si sono incontrati almeno una volta non è un
 
 L'*approccio informatico* al Data Mining è di tipo **algoritmico**:
 - Dato un DataSet $\texttt{DS}$, trovare un *algoritmo efficiente* ( e relativa struttura dati ) per risolvere query complesse su $\texttt{DS}$.
-S15CH1ABD
+**Esempio**: 
+Dato un flusso infinito $\texttt{DS}$ di interi, mantieni il *valore medio* di $\texttt{DS}$ (visto finora) e la sua *deviazione standard* (o il suo numero sorprendente)
+**Osservazione**: 
+L'algoritmo *non dovrebbe basarsi* su alcuna ipotesi statistica $\texttt{I}$ su $\texttt{DS}$ ma se $\texttt{I}$ è valida, i valori calcolati saranno coerenti con $\texttt{I}$.
+
+### Task tipiche
+
+1. **Modellazione computazionale** dei *processi di dati* (input) (ad esempio streaming)
+2. **Riepilogo** di un *DataSet*
+3. **Estrazione** delle *caratteristiche più importanti* del set di dati e scarto del resto.
+
+### Flussi di dati
+
+In molte situazioni di *Data Mining*, non conosciamo nello specifico l'intero DataSet.
+La **gestione del flusso** è importante quando il tasso di input è controllato *esternamente*:
+- Query dei motori di ricerca;
+- Aggiornamenti di stato di Twitter o Facebook;
+- Indirizzi IP gestiti dai server;
+- ecc.
+Possiamo pensare al *DataSet* come **infinito** e **non stazionario**(la *distribuzione* cambia nel tempo).
+
+## Il modello del DataStream
+
+Gli *elementi* di input entrano a una *velocità elevata*, in una o più porte di input (ad esempio, Stream):
+	- ad esempio *elementi* degli $Stream\equiv tuple$
+Il sistema non può memorizzare l'intero Stream $S$ in modo accessibile, solo brevi *schizzi* di $S$ possono essere mantenuti e aggiornati.
+
+**Domanda**: Come si risponde a *query critiche* su $S$ utilizzando una *quantità di memoria limitata*?
+
+![[Pasted image 20241015120106.png|center|500]]
+
+### Problemi del DataStream
+
+Tipi di *query* su un flusso di dati (**DS**):
+-  **Campionamento** dei dati da un *DS*: creazione di un campione casuale;
+-  **Filtraggio** di un DS: selezione di elementi con proprietà x;
+-  **Conteggio** di elementi *distinti* in DS: numero di elementi distinti negli ultimi k elementi del DS;
+-  **Stima dei momenti**: stima della media e della deviazione standard degli ultimi k elementi in DS
+-  **Individuazione** dei k elementi più frequenti finora visti in DS
+
+#### Riepilogo
+
+**Query algoritmica**: dato un ampio set di dati *DS*, fornire un breve schizzo $H(S)$ che riassuma efficacemente le caratteristiche principali di *DS*
+**Sfide di ottimizzazione**:
+-  Ridurre al minimo la dimensione $|H(S)|$ (dovrebbe essere asintoticamente molto più piccola di $|DS|$);
+-  $H(S)$ deve approssimare efficacemente le caratteristiche principali di DS
+-  $H(S)$ deve consentire un aggiornamento dinamico efficiente (struttura dati dinamica)
+Esempio pratico: Page Rank
+
+#### Estrazione
+
+L'**estrazione** di caratteristiche da enormi *DataSet* spesso si basa sulla selezione delle *dipendenze statistiche (correlazioni) più forti* tra gli ***elementi*** e sull'utilizzo solo di queste *dipendenze* per rappresentare l'intero DataSet.

@@ -1,9 +1,9 @@
 # Introduzione al corso
 ## Prerequisiti
-- - Programmazione di base
-- - Strutture dati elementari (array, struct, puntatori)
-- - Concetto di ricorsione
-- - Dimostrazione per induzione e calcolo infinitesimale
+- Programmazione di base
+- Strutture dati elementari (array, struct, puntatori)
+- Concetto di ricorsione
+- Dimostrazione per induzione e calcolo infinitesimale
 # Inizio
 
 >[!important]- Algoritmo

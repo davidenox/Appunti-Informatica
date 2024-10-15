@@ -11,11 +11,11 @@
 - [[Lezione 9 - Capitolo 5]]
 - [[Lezione 10 - Capitolo 6]]
 - [[Lezione 11 - Capitolo 6]]
-- [[Lezione 12 - Capitolo 8]]
-- [[Lezione 13 - Capitolo 11]]
-- [[Lezione 14 - Capitolo 11]]
-- [[Lezione 15 - Capitolo 11]]
-- [[Lezione 16 - Capitolo 13]]
+- [[Lezione 13 - Coda con priorità]]
+- [[Lezione 14 - Grafi]]
+- [[Lezione 15 - Strutture dati]]
+- [[Lezione 16 - DFS]]
+- [[Lezione 17 - Dijkstra]]
 - 
 
 
