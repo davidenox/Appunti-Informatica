@@ -13,10 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_temp/orario.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Lezione 6 - Macchine, linguaggi e funzioni"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
             }
           },
           {
@@ -54,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
             }
           },
           {
@@ -62,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
             }
           },
           {
@@ -70,7 +78,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
             }
           }
         ]
@@ -93,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_temp/orario.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +111,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a Lezione 6 - Macchine, linguaggi e funzioni"
             }
           },
           {
@@ -112,7 +124,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
             }
           },
           {
@@ -121,10 +135,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_temp/orario.md",
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da Lezione 6 - Macchine, linguaggi e funzioni"
             }
           },
           {
@@ -132,7 +148,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -141,8 +159,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_temp/orario.md"
-              }
+                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md"
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di Lezione 6 - Macchine, linguaggi e funzioni"
             }
           },
           {
@@ -150,7 +170,9 @@
             "type": "leaf",
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -173,6 +195,8 @@
   },
   "active": "069b438d53790956",
   "lastOpenFiles": [
+    "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
+    "_temp/orario.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 2-3-4 - Approcci Statistici.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 2 - Sistemi Operativi.md",
@@ -188,7 +212,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 14 - Grafi.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 13 - Coda con priorità.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
-    "_temp/orario.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 1-2 - Data Mining.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 2-3 - Approcci statistici.md",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241015120106.png",
@@ -212,7 +235,6 @@
     "Primo Anno/Logica e Reti Logiche/Lezioni/Preparazione per l'orale.md",
     "Terzo Anno/Ingegneria del Software/Lezioni",
     "Primo Anno/Logica e Reti Logiche/Lezioni/Lezione 15.md",
-    "Primo Anno/Logica e Reti Logiche/Lezioni/Indice delle lezioni.md",
     "Terzo Anno/Programmazione Web/Esami/Esame20Sett2024/task.json",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/esame.pdf",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/test.http",
