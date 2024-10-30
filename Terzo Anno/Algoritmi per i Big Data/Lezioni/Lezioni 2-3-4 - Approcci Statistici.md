@@ -158,3 +158,56 @@ Se non abbiamo informazioni sul processo che ha generato l'identità, una plausi
 $$\begin{align} \\&  E-\text{L'identità è corretta} \\& B -\text{Il test ritorna che l'identità è corretta} \\& \text{Iniziamo con }Pr(E)=Pr(\overline{E})=\frac{1}{2}\text{, e dato che il test non ha errori nascosti con limite }\frac{1}{2},\\&\text{abbiamo che }Pr(B|E)=1\text{ e che } Pr(B|\overline{E})\le\frac{1}{2}).\\&\text{Applicando la legge di Bayes si ha:}\\& Pr(E'|B)=\frac{Pr(B|E)Pr(E)}{Pr(B|E)Pr(E)+Pr(B|\overline E)Pr(\overline E)}\le\frac{1/2}{1/2 + 1/2\space\cdot 1/2}=\frac{2}{3}\\&\text{Supponiamo ora di riprovare il test e ancora una volta abbiamo una risposta corretta.}\\&\text{Dopo il primo test, il modello a priori è cambiato, quindi:}\\&Pr(E)\ge 2/3, Pr(\overline E)\le 1/3.\\&Pr(B|E)=1, Pr(B|\overline E)\le 1/2.\\&\text{Applicando la legge di Bayes abbiamo}\\&Pr(E'|B)\ge\frac{2/3}{2/3 +1/3\space\cdot 1/2}=\frac{4}{5}.   \end{align}$$
 
 ## Algoritmo Min-Cut
+
+**Input**: Un grafo $G=(V,E)$ con $|V|=n$ nodi e $|E|=m$ archi.
+**Output**: Un insieme minimo di archi che disconnettono il grafo.
+1. Ripetere $n-2$ volte:
+	1. Scegliere un nodo a caso ( uniformemente ).
+	2. Contrarre i due vertici connessi a quel nodo, eliminando tutti i nodi connessi al nodo scelto.
+2. Restituisce l'insieme di nodi che connettono i due archi rimanenti
+
+![[Pasted image 20241030102905.png|center|600]]
+
+>[!important]- Teorema
+>L'algoritmo restituisce un set con tagli minimi di nodi con probabilità di successo $\le\frac{1}{n(n-1)}.$
+>La probabilità diminuisce all'aumentare di $n$.
+
+>[!note]- Lemma
+>La contrazione dei nodi non riduce la dimensione dell'insieme di taglio minimo. Un taglio in $G'$ è un taglio in $G$, quindi o migliora la situazione o la rende invariata, non può peggiorarla.
+
+
+### Analisi dell'algoritmo
+
+ Assumiamo che il grafo abbia un insieme `min-cut` di $k$ nodi. Computiamo la probabilità di trovarne uno come il set di prima C.
+
+>[!note]- Lemma
+>Se l'arco contratto non appartiene a C, nessun altro arco eliminato in quel passaggio appartiene a C
+
+Dati:$$\begin{align}
+\\& E_i=\text{"L'arco contratto nell'iterazione i non appartiene a C."}
+\\& F_i = \cap_{j=1}^i E_j =\text{"Nessun arco di C è stato contratto nelle prime i iterazioni".}
+\\& \text{Dobbiamo computare }Pr(F_{n-2})\\&
+\\&\texttt{OSSERVAZIONE FONDAMENTALE}\\&
+\\&\text{Dato che il cut-set minimo ha }k\text{ archi, tutti i nodi hanno grado}\le k\text{, ed il grafo ha un}\\&\text{numero di archi}\ge nk/2.
+\\&\text{Ci sono almeno }nk/2\text{ archi nel grafo, }k\text{ archi sono in }C.
+\\& Pr(E_1)=Pr(F_1)\ge1-\frac{2k}{nk}=1-\frac{2}{n}.
+\end{align}$$
+Assumiamo che la prima contrazione non ha eliminato un arco di C ( condizionamento sull'evento $E_1=F_1$). Alla prima contrazione degli archi ci resta un grafo con $n-1$ nodi, con un cut-set minimo, ed un grado minimo $\ge k$.
+Il nuovo grafo ha almeno $k(n-1)/2$ archi.
+$Pr(E_2|F_1)\ge 1-\frac{k}{k(n-1)/2}\ge 1-\frac{2}{n-1}$.
+Analogamente:
+$Pr(E_i|F_{i-1})\ge 1-\frac{k}{k(n-i+1)/2}=1-\frac{2}{n-i+1}$.
+
+Dobbiamo eseguire $Pr(F_{n-2})$. Usiamo:
+![[Pasted image 20241030104937.png|center|500]]
+
+![[Pasted image 20241030105011.png|center|500]]
+
+Data $A_1,..,A_n$ una sequenza di eventi, e dato $E_i=\cap_{j=1}^i A_i$.
+$$Pr(E_n)=Pr(A_n|E_{n-1})Pr(E_{n-1})=Pr(A_n|E_{n-1})Pr(A_{n-1}|E_{n-2})...Pr(A_2|E_1)Pr(A_1).$$
+>[!important]- Teorema
+>Assumiamo di eseguire l'algoritmo Min-Cut randomizzato $n(n-1)\log(n)$ volte, e che esso restituisca la dimensione minima di cut-set trovati in tutte le iterazioni. La probabilità che l'output **non** sia un insieme di min-cut è limitata a:$$(1-\frac{2}{n(n-1)})^{n(n-1)\log n}\le e^{-2\log n}=\frac{1}{n^2}.$$
+>Si tratta di un buon risultato, poiché la probabilità di errore decresce all'aumentare di $n$.
+>
+
+

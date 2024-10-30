@@ -1,0 +1,2 @@
+# Variabili random
+a
