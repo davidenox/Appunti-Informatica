@@ -148,4 +148,13 @@ L'unica variabile è $r_1$:$$r_1 = - \frac{\sum_{j=2}^n d_{1j}r_j}{d_{11}}$$  La
 
 
 ## Approccio Bayesiano
-MITZ1S49
+
+Inizia con un *modello precedente*, dando dei valori inziali ai parametri del modello. Questo modello viene poi modificato, incorporando nuove osservazioni per avere *un modello a posteriori* che catturi nuove informazioni.
+
+> Esempio: Test di moltiplicazioni delle matrici randomizzato
+
+La volontà è quella di incrementare la sicurezza attraverso test ripetuti.
+Se non abbiamo informazioni sul processo che ha generato l'identità, una plausibile assunzione a posteriori è che l'identità è corretta con probabilità $\frac{1}{2}$. Se eseguiamo il test randomizzato una volta ed esso restituisce l'identità matriciale corretta, come cambia la nostra sicurezza nell'identità?
+$$\begin{align} \\&  E-\text{L'identità è corretta} \\& B -\text{Il test ritorna che l'identità è corretta} \\& \text{Iniziamo con }Pr(E)=Pr(\overline{E})=\frac{1}{2}\text{, e dato che il test non ha errori nascosti con limite }\frac{1}{2},\\&\text{abbiamo che }Pr(B|E)=1\text{ e che } Pr(B|\overline{E})\le\frac{1}{2}).\\&\text{Applicando la legge di Bayes si ha:}\\& Pr(E'|B)=\frac{Pr(B|E)Pr(E)}{Pr(B|E)Pr(E)+Pr(B|\overline E)Pr(\overline E)}\le\frac{1/2}{1/2 + 1/2\space\cdot 1/2}=\frac{2}{3}\\&\text{Supponiamo ora di riprovare il test e ancora una volta abbiamo una risposta corretta.}\\&\text{Dopo il primo test, il modello a priori è cambiato, quindi:}\\&Pr(E)\ge 2/3, Pr(\overline E)\le 1/3.\\&Pr(B|E)=1, Pr(B|\overline E)\le 1/2.\\&\text{Applicando la legge di Bayes abbiamo}\\&Pr(E'|B)\ge\frac{2/3}{2/3 +1/3\space\cdot 1/2}=\frac{4}{5}.   \end{align}$$
+
+## Algoritmo Min-Cut
