@@ -32,4 +32,32 @@ Dato $X$ sul valore $2^i$ con probabilità $\frac{1}{2^i}$ per $i=1,2,...$ $$E[X
 ![[Pasted image 20241030115648.png|center|500]]
 
 > Esempi:
-> - La 
+> - La stima della somma di due dadi è $7$, anche se non sono indipendenti
+> - La stima della risultante della somma di due dadi è $10\frac{1}{2}$.
+> - Assumiamo di lanciare $N$ monete, qual è il numero stimato di "testa"?
+> 	- Utilizzando la linearità della stima otteniamo $N\cdot\frac{1}{2}.$
+> 	- Con la somma diretta ottteniamo $\sum_{i=1}^N i\binom{N}{i}2^{-N}.$
+> Quindi proviamo che $$\sum_{i=0}^N i\binom{N}{i}2^{-N}=\frac{N}{2}$$
+
+## Variabile randomica di Bernoulli
+
+Una variabile randomica **Bernoulliana**:$$Y =\begin{cases}
+   x + y = 2 & \text{se l'esperimento ha successo }(p)\\
+   x - y = 0 & \text{altrimenti }(1-p)
+\end{cases}
+$$ $$E[Y]=p\cdot1+(1-p)\cdot0=Pr(Y=1).$$
+
+## Variabile randomica Binomiale
+
+>[!important]- Definizione
+>Una **variabile randomica Binomiale** $X$ con parametri $n,p$, denotati come $B(n,p)$ è definita dalla seguente distribuzione di probabilità su $j=0,1,..,n$:
+>$$Pr(X=j)=\binom{n}{j}p^j(1-p)^{n-j}.$$
+
+### Stima della Variabile Randomica Binomiale
+	per completezza ma non applicare.
+
+![[Pasted image 20241030122129.png|center|600]]
+
+Utilizzando la linearità delle stime:$$E[X]=E[\sum_{i=1}^{n}X_i]=\sum_{i=1}^{n}E[X_i]=np.$$
+****
+L5 MitzCh2S17
