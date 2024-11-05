@@ -139,3 +139,32 @@ Questo è buonissimo, perché risulterebbe $Pr(X\ge n\log^2n)\le\frac{1}{\log n}
 
 ### Varianza
 
+>[!important]- Definizione
+>La **varianza** di una variabile randomica $X$ è $$Var[X]=E[(X-E[X])^2]=E[X^2]-(E[X])^2.$$
+
+>[!important]- Definizione
+>La **deviazione standard** di una variabile randomica $X$ è $$\sigma(X)=\sqrt{Var[X]}.$$
+
+
+# Disuguaglianza di Chebyshev
+
+>[!important]- Teorema 1
+>Per ogni variabile randomica $$Pr(|X-E[X]|\le a)\le\frac{Var[X]}{a^2}$$
+
+>[!important]- Teorema 2
+>Per ogni variabile randomica $$Pr(|X-E[X]|\ge a\sigma[X])\le\frac{1}{a^2}.$$
+
+>[!important]- Teorema 3
+>Per ogni variabile randomica $$Pr(|X-E[X]|\ge\epsilon E[X])\le\frac{Var[X]}{\epsilon^2(E[X])^2}.$$
+
+>[!important]- Teorema 4
+>Se $X$ e $Y$ sono variabili randomiche indipendenti $$E[XY]=E[X]\cdot E[Y].$$
+
+>[!important]- Teorema 5
+>Se $X$ e $Y$ sono variabili randomiche indipendenti $$Var[X+Y] = Var[X] + Var[Y]$$
+
+### Tornando al lancio della moneta
+
+Assumiamo di lanciare $N$ monete. Sia $X$ il numero di teste.
+$X_i=1$ se l'$i$-esimo lancio è stata testa altrimenti $X_i=0$.
+![[Pasted image 20241105152745.png|center|500]]

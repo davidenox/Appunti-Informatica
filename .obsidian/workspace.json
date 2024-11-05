@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md",
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 6 - Variabili randomiche binomiali.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lezioni 4-5 - Variabili randomiche"
+              "title": "Lezione 6 - Variabili randomiche binomiali"
             }
           }
         ]
@@ -159,10 +159,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md"
+                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 6 - Variabili randomiche binomiali.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di Lezioni 4-5 - Variabili randomiche"
+              "title": "Struttura di Lezione 6 - Variabili randomiche binomiali"
             }
           },
           {
@@ -195,10 +195,13 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Pasted image 20241105153150.png",
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md",
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezione 6 - Variabili randomiche binomiali.md",
+    "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241105152745.png",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241030122129.png",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241030115648.png",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 2-3-4 - Approcci Statistici.md",
-    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241030105011.png",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241030104937.png",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241030102905.png",
@@ -227,12 +230,9 @@
     "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
     "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
-    "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 2 - Processo Software.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152441.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152418.png",
-    "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152408.png",
-    "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152348.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img",
     "Terzo Anno/Ingegneria del Software/Lezioni",
     "Terzo Anno/Programmazione Web/Esami/Esame20Sett2024/task.json",
