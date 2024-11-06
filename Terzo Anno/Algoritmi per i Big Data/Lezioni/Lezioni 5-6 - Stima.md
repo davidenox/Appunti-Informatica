@@ -86,4 +86,32 @@ Se $n=2k+1$, l'elemento mediano è il $k+1$-esimo nell'insieme ordinato. Viene f
 
 Siano $Y_1,Y_2$ rispettivamente i numeri di campioni sotto e sopra il mediano.
 L'algoritmo fallisce nel calcolare il mediano in tempo $O(n)$ se e solo se almeno uno dei 3 seguenti eventi accadono:
-1. 
+1. $E_1: Y_1<\frac{1}{2}n^{3/4}-\sqrt n.$
+2. $E_2: Y_2<\frac{1}{2}n^{3/4}-\sqrt n.$
+3. $E_3:|C|> n/\log n.$ 
+Qual è la probabilità che le tre variabili randomiche $Y_1,Y_2,|C|$ sono tutte entro gli intervalli richiesti?
+
+Lo spazio di esempio in esecuzione di questo algoritmo è un insieme di tutte le possibili scelte di $n^{3/4}$ elementi da $n$, con ripetizioni (lo spazio di esempio ha $n^{n^{3/4}}$).
+Ogni punto nello spazio di esempio definisce i valori per $Y_1,Y_2,|C|$. Calcolare le probabilità direttamente è troppo complicato, useremo invece limiti su deviazioni dalla stima.
+
+Qual è la probabilità che $Y_1<\frac{1}{2}n^{3/4}-\sqrt n$?
+Vedendo $Y_1$ come la somma di $n^{3/4}$ variabili indipendenti randomiche $0-1$, ognuna con stima $1/2$ e varianza $1/4$, abbiamo che $$E[Y_1]=\frac{1}{2}n^{3/4}.$$$$Var[Y_1]=\frac{1}{4}n^{3/4}.$$
+Applicando la disuguaglianza di Chebyshev otteniamo:$$\begin{align}\\&
+Pr(E_1:Y_1<\frac{1}{2}n^{3/4}-\sqrt n)\le Pr(|Y_1-E[Y_1]|>\sqrt n)\le\\&
+\frac{Var[Y_1]}{n}=\frac{n^{3/4}/4}{n}=\frac{1}{4}n^{-1/4}.
+\end{align}$$
+Analogamente $$\begin{align}\\&
+Pr(E_1:Y_1<\frac{1}{2}n^{3/4}-\sqrt n)\le\frac{1}{4}n^{-1/4}.\\&
+Pr(E_1\cup E_2)\le\frac{2}{4}n^{-1/4}.
+\end{align}$$
+>Richiamo
+
+>[!important]- Lemma
+>$$Pr(E_3)\le\frac{1}{2}n^{-1/4}.$$
+
+Definire questi due eventi:
+1. $\varepsilon_{3,1}$: Almeno $2n^{3/4}$ elementi di $C$ sono più grandi del mediano;
+2. $\varepsilon_{3,2}$: Almeno $2n^{3/4}$ elementi di $C$ sono più piccoli del mediano;
+Se $|C|>4n^{3/4}$, allora almeno uno dei due eventi avviene.
+****
+L6Mitz3S22
