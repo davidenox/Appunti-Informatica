@@ -72,4 +72,18 @@ Se $n=2k+1$, l'elemento mediano è il $k+1$-esimo nell'insieme ordinato. Viene f
 2. Sia $d$ il ($\frac{1}{2}n^{3/4}-\sqrt n$)-esimo elemento più piccolo nell'insieme $R$ ordinato.
 3. Sia $u$ il ($\frac{1}{2}n^{3/4}+\sqrt n$)-esimo elemento più piccolo nell'insieme $R$ ordinato.
 4. Confrontando ogni elemento di $S$ a $d$ e $u$ genera l'insieme $C=\{x\in S:d\le x\le u\}$, ed i numeri $l_d=|\{x\in S:x<d\}|$ e $l_u=|\{x\in S:x>u\}|$.
-5. Se 
+5. Se $l_d>n/2$ o $l_u>n/2$ allora `FAIL`.
+6. Se $|C|\le 4n^{3/4}$ allora ordinare l'insieme $C$, altrimenti `FAIL`.
+7. Restituire il $(\lfloor\frac{n}{2}\rfloor-l_d+1)$-esimo elemento ordinato in $C$.
+
+### Intuizioni
+
+- Possiamo ordinare insiemi di grandezza $<n/\log n$ in tempo lineare.
+- Il campione di $R$ elementi sono distanziati "più o meno" equamente tra gli elementi di $C$.
+- Con alta probabilità più di $\frac{1}{2}n^{3/4} -\sqrt n$ campioni sono più piccoli del mediano.
+- Con alta probabilità più di $\frac{1}{2}n^{3/4} -\sqrt n$ campioni sono più grandi del mediano.
+- Con alta probabilità il mediano è l'insieme $C$, e $|C|<n/\log n$
+
+Siano $Y_1,Y_2$ rispettivamente i numeri di campioni sotto e sopra il mediano.
+L'algoritmo fallisce nel calcolare il mediano in tempo $O(n)$ se e solo se almeno uno dei 3 seguenti eventi accadono:
+1. 
