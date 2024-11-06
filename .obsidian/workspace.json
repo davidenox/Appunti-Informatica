@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lezioni 5-6 - Stima"
+              "title": "Lezione 3 - Modelli di calcolo e notazione asintotica"
             }
           }
         ]
@@ -159,10 +159,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di Lezioni 5-6 - Stima"
+              "title": "Struttura di Lezione 3 - Modelli di calcolo e notazione asintotica"
             }
           },
           {
@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -193,10 +193,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "5bd044c3cc02a913",
   "lastOpenFiles": [
-    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Indice.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md",
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241105153150.png",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241105152745.png",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241030122129.png",
@@ -213,8 +215,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 1 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 9 - Virtual Memory.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Indice.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 16 - DFS.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 17 - Dijkstra.md",

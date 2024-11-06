@@ -142,6 +142,8 @@ o & \lt\\
 
 ![[Pasted image 20231010162142.png|center]]
 
+****
+
 ## Usare la notazione asintotica nelle analisi
 ### Upped Bound
 >algoritmo fibonacci3(intero n)$\rightarrow$ intero
