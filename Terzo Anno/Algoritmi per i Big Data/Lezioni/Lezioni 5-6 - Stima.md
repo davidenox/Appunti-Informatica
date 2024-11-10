@@ -113,5 +113,15 @@ Definire questi due eventi:
 1. $\varepsilon_{3,1}$: Almeno $2n^{3/4}$ elementi di $C$ sono più grandi del mediano;
 2. $\varepsilon_{3,2}$: Almeno $2n^{3/4}$ elementi di $C$ sono più piccoli del mediano;
 Se $|C|>4n^{3/4}$, allora almeno uno dei due eventi avviene.
+
+Almeno $2n^{3/4}$ elementi di C sono più grandi del mediano;
+Almeno $2n^{3/4}$ elementi di C dopo mediano$\implies$ 
+$u$ è almeno il $\frac{1}{2}n+2n^{3/4}$ più grande in $S\implies$
+$R$ ha avuto almeno $\frac{1}{2}n^{3/4}-\sqrt n$ campionamenti tra i $\frac{1}{2}n-2n^{3/4}$ elementi più larghi in $S$.
+
+Sia $X$ il numero di campionamenti tra i $\frac{1}{2}n-2n^{3/4}$ elementi più grandi in $S$. Sia $X=\sum_{i=1}^{n^{3/4}}X_i$ dove $$X_i=\begin{cases}
+1 \rightarrow\text{l'esempio i-esimo nei} \frac{1}{2}n-2n^{3/4}\text{elementi maggiori in }S \\
+0\rightarrow\text{altrimenti.}
+\end{cases}$$
 ****
-L6Mitz3S22
+L6Mitz3S23
