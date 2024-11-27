@@ -1,8 +1,7 @@
-| Ore        | Lun      | Mar      | Mer     | Gio      | Ven          |
-| ---------- | -------- | -------- | ------- | -------- | ------------ |
-| Cotral     | 8:15     | 7:30     | 7:30    | 8:00     | 8:15         |
-| Mattina    | Garoni D | BigData  | BigData | ISW      | ISW          |
-| Pomeriggio | Fisica   | Sistemi  | Algo    | Fisica   | Sistemi/Algo |
-| Cotral     | 17:50    | 16:20    | 16:20   | 15:20    | 15:20        |
-| Post       | /        | Palestra | /       | Palestra | Palestra     |
+| Ore        | Lun    | Mar      | Mer     | Gio      | Ven   |
+| ---------- | ------ | -------- | ------- | -------- | ----- |
+| Mattina    | Fisica | Sistemi  | Sistemi | ISW      | ISW   |
+| Pomeriggio | Algo   | Fisica   | Algo    | Fisica   | Algo  |
+| Cotral     | 16:20  | 14:20    | 16:20   | 14:20    | 16:20 |
+| Post       | \      | Palestra | \       | Palestra | \     |
 
