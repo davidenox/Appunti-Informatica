@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "97de6cd056348f63",
+        "id": "cf531d44d4582ec9",
         "type": "tabs",
         "children": [
           {
-            "id": "069b438d53790956",
+            "id": "b7a5875be7efb9b0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Lezioni 5-6 - Stima"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -190,15 +186,20 @@
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
       "graph:Apri vista grafo": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "069b438d53790956",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Programmazione Web/Esami/Esame20Sett2024/node_modules/nodemon/node_modules/ms/readme.md",
+    "Terzo Anno/Programmazione Web/Esami/Esame23Lug2024/node_modules/ms/license.md",
+    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md",
+    "Terzo Anno/Calcolo Numerico/Crediti D/Relazione.md",
+    "Terzo Anno/Calcolo Numerico/Crediti D",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Indice.md",
-    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241105153150.png",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241105152745.png",
@@ -228,9 +229,6 @@
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241015120106.png",
     "Terzo Anno/Algoritmi per i Big Data/img",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241009142250.png",
-    "Terzo Anno/Ingegneria del Software/Lezioni/Lezione 1 - Introduzione.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 9 - Metodi iterativi per la risoluzione di problemi lineari.md",
-    "Terzo Anno/Calcolo Numerico/Lezioni/Lezione 5 - Aggiunta di un nodo di interpolazione.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152441.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img",
@@ -239,7 +237,6 @@
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/esame.pdf",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/test.http",
     "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/style.css",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/server.js",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/script.js"
+    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/server.js"
   ]
 }
