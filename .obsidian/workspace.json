@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cf531d44d4582ec9",
+        "id": "9c4a20ee8962f9f3",
         "type": "tabs",
         "children": [
           {
-            "id": "b7a5875be7efb9b0",
+            "id": "28b9b16b607004ff",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 5 - Ricorsione.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "CAPITOLO 2"
+              "icon": "lucide-file",
+              "title": "Lezione 5 - Ricorsione"
             }
           }
         ]
@@ -38,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Esplora risorse"
@@ -157,10 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md"
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 5 - Ricorsione.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Lezione 3 - Modelli di calcolo e notazione asintotica"
+              "title": "Struttura di Lezione 5 - Ricorsione"
             }
           },
           {
@@ -192,21 +198,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b7a5875be7efb9b0",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 4 - Ricorsione.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Indice.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 4.pdf",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 3.pdf",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 5.pdf",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 1 - Intro.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 7 - Scheduling.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 8 - Memory Abstraction.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 9 - Virtual Memory.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 2 - Sistemi Operativi.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 1 - Intro.md",
     "_temp/orario.md",
     "Terzo Anno/Programmazione Web/Esami/Esame20Sett2024/node_modules/nodemon/node_modules/ms/readme.md",
     "Terzo Anno/Programmazione Web/Esami/Esame23Lug2024/node_modules/ms/license.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md",
     "Terzo Anno/Calcolo Numerico/Crediti D/Relazione.md",
     "Terzo Anno/Calcolo Numerico/Crediti D",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Indice.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241105153150.png",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241105152745.png",
@@ -218,27 +233,18 @@
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241030102905.png",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 9 - Virtual Memory.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 16 - DFS.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 17 - Dijkstra.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 15 - Strutture dati.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 14 - Grafi.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 13 - Coda con priorità.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
-    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 1-2 - Data Mining.md",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241015120106.png",
     "Terzo Anno/Algoritmi per i Big Data/img",
     "Terzo Anno/Algoritmi per i Big Data/img/Pasted image 20241009142250.png",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni",
     "Terzo Anno/Ingegneria del Software/Lezioni/img/Pasted image 20241007152441.png",
     "Terzo Anno/Ingegneria del Software/Lezioni/img",
-    "Terzo Anno/Ingegneria del Software/Lezioni",
-    "Terzo Anno/Programmazione Web/Esami/Esame20Sett2024/task.json",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/esame.pdf",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/test.http",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/style.css",
-    "Terzo Anno/Programmazione Web/Esami/Esame9Sett2024/server.js"
+    "Terzo Anno/Ingegneria del Software/Lezioni"
   ]
 }
