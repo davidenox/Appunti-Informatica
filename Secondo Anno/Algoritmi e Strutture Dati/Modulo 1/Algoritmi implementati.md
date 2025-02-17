@@ -473,3 +473,162 @@ algoritmo visitaBFS(nodo r)
 			C.enqueue(figlio sinistro di u)
 			C.enqueue(figlio destro di u)
 ```
+
+- $T(n)=O(n)$
+
+### CalcolaAltezza
+
+```C
+CalcolaAltezza(nodo r)
+	if(r= NULL) then return -1
+	sin = CalcolaAltezza(nodo sinistro di r)
+	des = CalcolaAltezza(nodo destro di r)
+	return 1+max{sin,des}
+```
+
+- $O(n)$
+
+### CalcolaNumFoglie
+
+```C
+CalcolaNumFoglie(nodo r)
+	if(r= NULL) then
+		return 0
+	if(r è una foglia) then
+		return 1
+	sin = CalcolaNumFoglie(figlio sinistro di r)
+	des = CalcolaNumFoglie(figlio destro di r)
+	return(sin + des)
+```
+
+- $O(n)$
+
+# BST
+## Search
+
+```C
+algoritmo search(chiave k)-> elem
+	v <- radice di T
+	while(v != NULL ) do
+		if(k=chiave(v)) then
+			return elem(v)
+		else if(k<chiave(v)) then
+			v <- figlio sinistro di v
+		else 
+			v <- figlio destro di v
+	return NULL
+```
+## Insert
+*Idea*: aggiunge la nuova chiave come nodo foglia; per capire dove mettere la foglia simula una ricerca con la chiave da inserire.
+
+## Ricerca del massimo
+
+```C
+algoritmo max(nodo u) -> nodo
+	v <- u
+	while(figlio destro di v != NULL) do
+		v <- figlio desro di v
+	return v
+```
+
+## Ricerca del predecessore
+
+```C
+algoritmo pred(nodo u) -> nodo
+	if(u ha figlio sinistro sin(u)) then
+		return max(sin(u))
+	while(parent(u) != NULL e u è il figlio sinistro di suo padre) do
+		u <- parent(u)
+	return parent(u)
+```
+## Delete
+Sia u il nodo contenente l'elemento da cancellare:
+1. u è una foglia: rimuovila
+2. u ha un solo figlio: uniscilo al padre di u
+3. u ha due figli: sostituiscilo con il predecessore (o successore) (v) e rimuovi fisicamente il predecessore (o successore) (che ha al più un figlio).
+
+----
+
+TUTTE LE OPERAZIONI HANO COSTO $O(h)$ con $h$ altezza dell'albero (caso peggiore $n$).
+
+----
+
+# Coda con priorità
+![[Pasted image 20250217230312.png|center|500]]
+![[Pasted image 20250217230332.png|center|500]]
+![[Pasted image 20250217230412.png|center|700]]
+
+![[Pasted image 20250217230614.png|center|700]]
+
+# Visite di grafi
+## BFS
+```C
+algoritmo visitaBFS(vertice s) -> albero
+	"rendi tutti i vertici non marcati"
+	T <- albero formato da un solo nodo s
+	Coda F
+	"marca il vertice s;"dist(s) <- 0
+	F.enqueue(s)
+	while(not F.isEmpty())do
+		u <- F.dequeue()
+		for each ( arco (u,v) in G) do
+			if(v non marcato) then
+				F.enqueue(v)
+				"marca il vertice v"; dist(v)<- dist(u)+1
+				"rendi u padre di v in T"
+	return T
+```
+
+Costo: 
+- Matrice di adiacenza $O(n^2)$
+- Liste di adiacenza $O(m+n)$
+
+>[!important]- Osservazioni: 
+>1. Si noti che se il grafo è connesso allora $m≥n-1$ e quindi $O(m+n)=O(m)$
+>2. Ricordando che $m≤n(n-1)/2$, si ha $O(m+n)=O(n^2)$ $\Rightarrow$ per $m=o(n^2)$ **la rappresentazione mediante liste di adiacenza è temporalmente più efficiente**!
+
+## DFS
+
+```C
+procedura visitaDFSRicorsiva(vertice v, albero T)
+	"marca e visita v"
+	for each(arco (v,w)) do
+		if(w non marcato) then
+			"aggiungi l'arco(v,w) a T"
+			visitaDFSRicorsiva(w,T)
+
+algoritmo visitaDFS(vertice s) -> albero
+	T <- albero vuoto
+	visitaDFSRicorsiva(s,T)
+	return T
+```
+
+Costo:
+- Liste di adiacenza $O(m+n)$
+- Matrice di adiacenza $O(n^2)$
+
+# Dijkstra
+	cammini minimi in grafi
+
+```C
+algoritmo Dijkstra(grafo G, vertice s) -> albero
+	for each(vertice u in G) do D_su <- +infinito
+	T^ <- albero formato dal solo nodo s; X <- 0/
+	CodaPriorita S
+	D_ss <- 0
+	S.insert(s,0)
+	while(not S.isEmpty()) do
+		u <- S.deleteMin(); X <- X union {u}
+		for each(arco (u,v) in g) do
+			if(D_sv = +infinito) then
+				S.insert(v,D_su + w(u,v))
+				D_sv <- D_su + w(u,v)
+				rendi u padre di v in T^
+			else if(D_su + w(u,v) < D_sv) then
+				S.decreaseKey(v, D_sv-D_su-w(u,v))
+				D_sv <- D_su + w(u,v)
+				rendi u nuovo padre di v in T^
+	return T^
+```
+
+Tempo di esecuzione $O(m + n\log{n})$.
