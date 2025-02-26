@@ -9,6 +9,7 @@ Appunti di:
 	- Architettura dei Sistemi di Elaborazione (ASE)
 	- Logica e Reti Logiche (LRL)
 	- Programmazione dei Calcolatori con Laboratorio (PR)
+	- Fisica (FI)
 2° anno:
 
 	- Algoritmi e Strutture Dati (ASD)
@@ -23,6 +24,7 @@ Appunti di:
 	- Calcolo Numerico (CN)
 	- Programmazione Web (PW)(A scelta, Ing. di Internet)
 	- Vulnerabilità e Difesa dei Sistemi Internet (VDSI)(A scelta, Ing. di Internet)
+	- Ingegneria del Software (ISW)
+	- Algoritmi per i Big Data (ABD)
  
- Gli appunti degli insegnamenti non presenti non sono ancora stati scritti. 
  :)
