@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "_temp/orario.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "orario"
             }
           }
         ]
@@ -200,6 +200,7 @@
   },
   "active": "e7efb82c1234e00e",
   "lastOpenFiles": [
+    "README.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/0_Indice.md",
     "_temp/orario.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni",
@@ -244,7 +245,6 @@
     "Secondo Anno/Basi di Dati e Conoscenze/Lezioni/Lezione 4 - Modello relazionale.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Indice.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 16 - DFS.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 17 - Dijkstra.md",
     "Terzo Anno/Algoritmi per i Big Data/img"
   ]
 }
