@@ -52,13 +52,6 @@ Proviamo con il primo algoritmo : confronto le monete una alla volta.
 ![[Pasted image 20231003163420.png]]
 ![[Pasted image 20231003163432.png]]
 
-
-
-
-
-
-
-
 ### Lower bound
 
 >[!important]- Teorema
