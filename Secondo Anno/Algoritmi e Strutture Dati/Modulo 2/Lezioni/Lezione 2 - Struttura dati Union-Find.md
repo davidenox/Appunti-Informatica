@@ -129,3 +129,12 @@ Se eseguiamo $n$ `makeSet`, $n-1$ `union` come sopra, seguite da $m$ `find`, il 
 *UnionBySize*: Nell'unione degli insiemi A e B, rendiamo la radice dell'albero *con meno nodi* figlia della radice dell'albero *con più nodi*.
 ![[Pasted image 20250306153844.png|center|500]]
 #### Demo
+![[union_by_size2.gif|center|500]]
+
+>[!definition]- Lemma
+>Con la *Union-By-Size*, dato un albero QuickUnion con size (numero di nodi) $s$ ed altezza $h$ vale che $s\ge 2^h$.
+>**Dim.** per induzione sul numero di union fatte.
+
+Quindi, *L'operazione `find` richiede tempo $O(\log n)\implies$* L'intera sequenza di operazioni costa $O(n+m\log n)$.
+
+### Euristica Path-Compression
