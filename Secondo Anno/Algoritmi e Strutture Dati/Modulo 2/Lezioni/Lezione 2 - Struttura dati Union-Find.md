@@ -138,3 +138,38 @@ Se eseguiamo $n$ `makeSet`, $n-1$ `union` come sopra, seguite da $m$ `find`, il 
 Quindi, *L'operazione `find` richiede tempo $O(\log n)\implies$* L'intera sequenza di operazioni costa $O(n+m\log n)$.
 
 ### Euristica Path-Compression
+**Idea**: Quando eseguo `find(x)` ed attraverso il cammino da x alla radice, comprimo il cammino, ovvero rendo tutti i nodi del cammino figli della radice.
+*Intuizione*: `find(x)` ha un costo ancora lineare nella lunghezza del cammino attraversato, ma prossime `find` costeranno di meno.
+
+![[Pasted image 20250307161943.png|center|500]]
+
+>[!important]- Th. Tarjan&van Leeuwen
+>Usando in **QuickUnion** le euristiche di union-by-rank o *union-by-size* e *path compression*, una qualsiasi sequenza di $n$ `makeSet`, $n-1$ `union` ed $m$ `find` hanno un costo di $O(n+m\space\alpha(n+m,n))$.
+>- $\alpha(x,y)$: Funzione inversa della funzione di Ackermann
+
+##### Funzione di Ackermann ed inversa
+
+*Notazione*: Con $a^{b^c}$  intendiamo $a^{(b^c)}$ e non $(a^b)^c=a^{b\cdot c}$. 
+
+Per interi $i,j\ge 1$, definiamo $A(i,j)$ come:
+![[Pasted image 20250307162518.png|center|400]]
+![[Pasted image 20250307162547.png|center|500]]
+##### La funzione $\alpha(m,n)$ 
+Per interi $m\ge n\ge 0$, definiamo $\alpha(m,n)$ come:$$\alpha(m,n)=\min\{i\ge1|A(i,\lfloor m/n\rfloor)\gt\log_2 n\}.$$
+>Proprietà
+1. Per $n$ fissato, $\alpha(m,n)$ è monotonicamente decrescente al crescere di $m$:$$\alpha(m,n)=\min\{i\gt0:A(i,\lfloor m/n\rfloor)\gt\log_2{n}\}$$
+2. $\alpha(n,n)\rightarrow\infty$ per $n\rightarrow\infty$ $$\begin{align}
+ \alpha(n,n)&=\min\{i\gt0:A(i,\lfloor n/n\rfloor)\gt\log_2 n \}\\&
+ =\min\{i\gt0:A(i,1)\gt\log_2 n \}\text{ dove }\log_2 n\rightarrow\infty
+ \end{align}$$ 
+>[!info]- Osservazione
+ >$\alpha(m,n)\le4$ per ogni scopo pratico (ovvero per valori ragionevoli di $n$).
+ 
+ >Ultime proprietà: densità di $m/n$ 
+
+- $\alpha(m,n)\le1$ quando $\lfloor m/n\rfloor\gt\log_2\log_2 n$ 
+- $\alpha(m,n)\le2$ quando $\lfloor m/n\rfloor\gt\log^*\log_2 n$ dove:
+	- $\log^{(1)}n=\log n$
+	- $\log^{(i)}n=\log\log^{(i-1)}n$
+	- $\log^* n=\min{i\gt0:\log^{(i)}n\le1}$
+		*Riuscite a dimostrarle?*
