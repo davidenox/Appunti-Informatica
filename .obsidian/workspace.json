@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ef492cd5c5b7072e",
+        "id": "e4a0948a5529e829",
         "type": "tabs",
         "children": [
           {
-            "id": "8752fa693ee3e39f",
+            "id": "d6a767319cb739cc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2. Livello di applicazione"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -160,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello applicativo.md",
+                "file": "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 2. Livello applicativo"
+              "title": "Struttura di Recap"
             }
           },
           {
@@ -198,21 +194,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8752fa693ee3e39f",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240314143753.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240314151226.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240314143429.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305161744.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305155059.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Immagini/Pasted image 20240305154018.png",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
+    "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250310124958.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250310104514.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250310103951.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 2 - Struttura dati Union-Find.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250307162547.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250307162518.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250307161943.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/union_by_size.gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/union_by_size2.gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ezgif.com-animated-gif-maker(1).gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250306153844.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
     "Terzo Anno/Programmazione Web/Esami/Esame28Giu2024/node_modules/ms/license.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/0_Indice.md",
@@ -236,15 +240,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 1 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 7 - Scheduling.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 8 - Memory Abstraction.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 9 - Virtual Memory.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 3 - Concetti SO.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 2 - Sistemi Operativi.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame20Sett2024/node_modules/nodemon/node_modules/ms/readme.md",
-    "Terzo Anno/Programmazione Web/Esami/Esame23Lug2024/node_modules/ms/license.md",
-    "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md",
-    "Terzo Anno/Calcolo Numerico/Crediti D/Relazione.md"
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf"
   ]
 }
