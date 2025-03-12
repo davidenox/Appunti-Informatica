@@ -90,7 +90,7 @@ $T_{am}$= Tempo per operazione *ammortizzato* sull'intera sequenza di unioni. Ve
 
 
 #### Demo
-![[union_by_find.gif|center|500]]
+![[union_by_size.gif|center|500]]
 #### Complessità Union
 ![[Pasted image 20250306141539.png|center|500]]
 **Domanda**: Quanto costa cambiare padre ad un nodo?
