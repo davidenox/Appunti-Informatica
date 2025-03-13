@@ -59,5 +59,57 @@
 >![[Pasted image 20250312113654.png|center|500]]
 
 >[!important]- **Proprietà del ciclo**
+>Sia $C$ un qualsiasi ciclo in $G$, e sia $f$ un arco di costo massimo in $C$. Allora esiste un MST $T^*$ che non contiene $f$.
+>*Dim*:
+>- Supponiamo che $f$ appartiene a $T^*$
+>- Eliminando $f$ da $T^*$ si crea un taglio $S$ in $T^*$
+>- L'arco $f$ è sia nel ciclo $C$ che nel cutset $D$ corrispondente ad $S$
+>- $\implies$ esiste un altro arco $e$ che si trova sia in $C$ che in $D$
+>- $T'=T^*\cup \{e\}-\{f\}$ è anch'esso uno spanning tree
+>- Siccome $c_e\le c_f$, allora $costo(T')\le costo(T^*)$
+>- Allora $T'$ è un MST che non contiene $f$
+>![[Pasted image 20250313121308.png|center|500]]
 
-****
+# Algoritmo di Kruskal
+
+>[!important]- Si parte con $T=\not0$. Si considerano gli archi in ordine di costo dal più piccolo al più grande. Si inserisce l'arco $e$ in $T$ a meno che non si crei un ciclo.
+
+>[!note]- Un'implementazione efficiente dell'algoritmo di Kruskal utilizza una struttura dati [[Lezione 2 - Struttura dati Union-Find|Union-Find]] per mantenere connessi i componenti della soluzione corrente, e per controllare se l'arco corrente forma un ciclo.
+
+```pseudo codice
+algoritmo Kruskal(grafo G=(V,E,c) )
+	UnionFind UF
+	T=0
+	ordina gli archi in ordine di costo dal più piccolo al più grande
+	for each nodo v do UF.makeset(v)
+	for each arco (x,y) in order do
+		T_x=UF.find(x)
+		T_y=UF.find(y)
+		if T_x != T_y then
+			UF.union(T_x, T_y)
+			add edge(x,y) to T
+	return T
+```
+
+## Demo
+![[kruskal.gif|center|500]]
+## Correttezza
+>Quando l'algoritmo decide di aggiungere l'arco (x,y) alla soluzione?
+- Dato che l'algoritmo vede gli archi in ordine crescente di costo,
+![[Pasted image 20250313144501.png|center|500]]
+- Si consideri l'insieme $S$ di vertici vicini allo stesso componente connesso di $y$
+- L'arco evidenziato è l'arco di minimo costo che attraversa il taglio $S, V-S$.
+>Quando l'algoritmo decide di scartare l'arco (x,y) dalla soluzione?
+- Dato che l'algoritmo vede gli archi in ordine crescente di costo,
+![[Pasted image 20250313154616.png|center|500]]
+- L'arco evidenziato è l'arco di costo minimo nel ciclo che (x,y) forma con la soluzione corrente.
+## Costo
+- Ordinare gli archi: $O(m\log m)=O(m\log n)$
+- Operazioni di Union-Find :
+	- $n$ makeSet
+	- $n-1$ union
+	- $m$ find
+$\implies O(m \log n + UF(m,n))$
+- Usando QuickFind con union-by-size $O(m\log n)$
+- Usando QuickUnion con union-by-size $O(m\log n)$
+$$O(m\log n)$$
