@@ -65,3 +65,54 @@ Prim(G,s){
 
 Quindi, il tempo di esecuzione dell'algoritmo di Prim è $O ( m + n \log ⁡ ( n ) )$
 # Clustering
+>[!important]- Dato un insieme $U$ di $n$ oggetti etichettati come $p_1,...,p_n$, classificare questi oggetti in gruppi coerenti
+>
+
+**Funzione distanza**: Valore numerico che specifica la *vicinanza* di due oggetti
+
+**Problema fondamentale**: Dividere in cluster in modo che i punti in cluster diversi sono lontani tra loro.
+- Routing in reti mobili ad hoc.
+- Identificazione di modelli nell'espressione genica.
+- Categorizzazione di documenti per la ricerca web.
+- Ricerca di similarità nei database di immagini mediche
+- Skycat: raggruppa $10^9$ oggetti celesti in stelle, quasar, galassie.
+## k-Clustering
+	Dividere oggetti in k gruppi non vuoti
+
+**Funzione distanza**: Assumiamo che soddisfi numerose proprietà naturali:
+- $d(p_i,p_j)=0 \iff p_i=p_j$ (identità)
+- $d(p_i,p_j)\ge 0$ (non-negatività)
+- $d(p_i,p_j)=d(p_j,p_i)$ (simmetria)
+
+**Spacing**: Distanza minima tra qualsiasi paio di punti in cluster differenti
+
+**Clustering dello spacing massimo**: Dato un intero $k$, trovare un $k$-clustering dello spacing massimo.
+![[Pasted image 20250314141624.png|center|500]]
+## Algoritmo greedy di Clustering
+**Algoritmo Single-linkage k-clustering**
+- Crea un grafo sull'insieme dei vertici $U$ , corrispondente a $n$ cluster
+- Trova la coppia di oggetti più vicini tale che i due oggetti si trovano in cluster diversi, e poi aggiungi un'arco tra i due
+- Ripeti il procedimento $n − k$ volte, fino a quando non ci sono esattamente $k$ cluster
+
+**Osservazione chiave** : Questo procedimento è esattamente l'algoritmo di Kruskal (solo che qui ci fermiamo quando abbiamo k componenti connesse)
+
+**Osservazione** : Questo è equivalente a trovare un MST e cancellare i k − 1 archi di costo massimo
+
+>[!note]- **Clustering gerarchico**
+>Eseguire l'algoritmo di Kruskal fino alla fine produce implicitamente un clustering gerarchico, ovvero un $k$-clustering per ogni valore di $k=n,n-1,...,1$.
+
+### Demo
+![[k_cluster.gif|center|500]]
+### Analisi
+> [!important]- **Th**. Sia $C^*$ un qualunque clustering, composoto dai cluster $C_1^* , … , C_k^*$ , formato cancellando i $k − 1$ archi più costosi del MST. Allora $C^*$ è un $k$-clustering di spacing massimo
+
+**Dimostrazione**
+
+Sia $C$ un'altro clustering, formato dai cluster $C_1,\dots,C_k$
+- Lo spacing di $C^\star$ è la lunghezza $d^\star$ del $(k-1)$-esimo arco più pesante del MST
+- Siano $p_i,p_j$ due punti che stanno in un cluster di $C^\star$, detto $C^\star_r$, ma in due cluster diversi di $C$, detti $C_s,C_t$
+- Un qualche arco $(p,q)$ sul percorso $p_i-p_j$ in $C^\star_r$ spazia due diversi cluster di $C$
+- Tutti gli archi sul percorso $p_i-p_j$ hanno lunghezza $\leq d^\star$, dato che Kruskal li ha scelti nella sua soluzione
+- Lo spacing di $C$, di conseguenza, è $\leq d^\star$ dato che $p$ e $q$ sono in due cluster diversi
+- Quindi, $C^\star$ è un k-clustering di spacing massimo $\square$.
+![[Pasted image 20250314144504.png|center|500]]
