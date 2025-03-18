@@ -15,7 +15,7 @@ Ricordiamo il problema dell'MST e le varie proprietà.
 >![[Pasted image 20250312113654.png|center|500]]
 
 >[!important]- **Proprietà del ciclo**
->Sia $S$ un qualsiasi sottoinsieme di nodi, e sia $e$ un arco di costo minimo con esattamente un endpoint in $S$. Allora esiste un MST $T^*$ che contiene $e$.
+>Sia $C$ un qualsiasi ciclo, e sia $f$ un arco di costo massimo appartenente a $C$. Allora esiste un MST $T^*$ che non contiene $f$.
 >![[Pasted image 20250312113654.png|center|500]]
 
 # Algoritmo di Prim

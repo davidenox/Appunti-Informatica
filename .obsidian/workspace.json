@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 4 - Algoritmo di Prim e k-Clustering.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Livello di applicazione"
+              "title": "Lezione 4 - Algoritmo di Prim e k-Clustering"
             }
           }
         ]
@@ -198,8 +198,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "d6a767319cb739cc",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20250318145216.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20250317144505.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20250317143015.png",
@@ -213,14 +214,12 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 2 - Struttura dati Union-Find.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250313154616.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250313144501.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/kruskal.gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 13 - Coda con priorità.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
     "_temp/orario.md",
     "_temp/AE/Punti focus.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Recap.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Focus.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
