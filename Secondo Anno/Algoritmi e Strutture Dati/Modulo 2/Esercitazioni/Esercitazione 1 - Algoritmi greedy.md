@@ -46,4 +46,65 @@ Dividiamo la dimostrazione di correttezza in due casi:
 >- $w'(T)=\sum_e w'(e)$
 
 ![[Pasted image 20250319114717.png|center|500]]
-## SOlu
+## Soluzione 
+![[Pasted image 20250319120816.png|center|500]]
+- $x^*$: Foglia più lontana a distanza $L=15$
+- *Idea*: Mettere tutte le foglie a distanza $L=15$
+- *Intuizione*: Conviene aumentare gli archi "alti"
+- *Definizione*: Arco $e$ copre una foglia $x$ se il cammino dalla radice verso $x$ passa per $e$
+$F$= Insieme delle foglie;
+$F_e$ = Insieme delle foglie coperte da $e$.
+Per ogni sottoinsieme di archi $X$ $\{F_e\}_{e\in X}$ famiglia **laminare** di insiemi:
+Per ogni $e$, $e'$ in $X-F_e \subseteq F_{e'}$ oppure $F_e\cap F_{e'}=\not0$ 
+
+>Algoritmo Greedy
+>- Marca tutti gli archi del cammino $r-x^*$
+>- Considera gli archi di T top-down (ordine ascendente di profondità)
+>	- Se l'arco $e$ non è marcato
+>		- Alza il peso di $e$ finché una foglia $x\in F_e$ non diventa a distanza $L$
+>		- Marca tutti gli archi lungo il cammino verso $x$
+>- Restituisci la nuova pesatura.
+### Demo
+![[sync_circuit.gif|center|500]]
+## Ottimalità
+**Claim:** una soluzione ottima mette tutte le foglie a distanza $L$
+Supponi che **Opt** metta tutte le foglie a distanza $L'\gt L$.
+![[Pasted image 20250319125021.png|center|300]]
+**Concetti chiave:**
+- $X$: archi incrementati da **Opt**
+- Poiché tutte le foglie hanno aumentato la loro distanza:$\bigcup_{e \in X} F_e = F$
+- $X' \subseteq X$: tale che ogni foglia è coperta da un solo $e \in X'$.
+
+Definiamo 
+$$
+\delta = \min \{ w'(e) - w(e) \mid e \in X' \}
+$$
+Se decrementiamo di $\delta$, otteniamo una soluzione ammissibile **strettamente migliore**.
+Allora **Opt** non era ottima: **assurdo!**
+
+**Idea:** *faccio vedere che il greedy non sbaglia mai*
+
+**Definizioni**
+- $e^*$ : primo arco incrementato dal greedy  
+- $W$ : incremento del greedy che porta $x$ a distanza $L$  
+**Ipotesi**
+Assumiamo che **Opt** incrementi $e^*$ di $W' < W$.
+- $X$: archi incrementati da **Opt** in $T'$
+- Poiché tutte le foglie di $T'$ devono aumentare la loro distanza:$$
+  \bigcup_{e \in X} F_e = \text{foglie di } T'
+  $$
+- $X' \subseteq X$: tale che ogni foglia di $T'$ è coperta da un solo $e \in X'$
+**Nota**
+$$
+|X'| \geq 2
+$$
+**Contraddizione**
+Definiamo:
+$$
+\delta = \min \{ W - W', \min \{ w'(e) - w(e) \mid e \in X' \} \}
+$$
+Decrementando di $\delta$ e incrementando $e^*$ di $\delta$, otteniamo una soluzione ammissibile **strettamente migliore**.
+Allora **Opt** non era ottima: **assurdo!**
+
+**Conclusione**
+Quindi l'ottimo deve incrementare $e^*$ come il **greedy**: stesse argomentazioni per i prossimi archi.
