@@ -32,6 +32,7 @@ Un *Insieme Indipendente* di $G$ è un sottoinsieme di nodi che non contiene due
 ![[Pasted image 20250320143303.png|center|500]]
 
 Spoiler: è difficile ricombinare le soluzioni.
+## Approccio corretto
 
 Non stiamo capendo la *struttura del problema*. La comprensione della struttura del problema porterà a sviluppare un *nuovo approccio*.
 
@@ -71,3 +72,43 @@ $G_j$ :Sottocammino composto dai primi $j$ vertici di $G$.
 $OPT[1]=w_1;OPT[2]=\max\{w_1,w_2\}$ 
 $OPT[j]=\max\{OPT[j-1],w_j+OPT[j-2]\}$
 ![[Pasted image 20250320154609.png|center|500]]
+
+## L'algoritmo
+$G_j$: Sottocammino composto dai primi $j$ vertici di $G$.
+$OPT[]$: Vettore di $n$ elementi.
+Dento $OPT[j]$ voglio mettere il peso dell'II di peso massimo di $G_j$.
+
+```pseudo
+OPT[1]=w_1; OPT[2]=max{w_1,w_2}
+for j=3 to n do
+	OPT[j]=max{OPT[j-1],w_j+OPT[j-2]}
+return OPT[n]
+```
+
+*Oss*. L'algoritmo calcola il valore della soluzione ottima, ma non la soluzione.
+
+Possiamo trovare in tempo lineare anche l'insieme indipendente di peso massimo?
+
+### Ricostruire la soluzione in tempo lineare
+**Idea semplice**: Mentre calcoliamo i valori $OPT[j]$ possiamo mantenere esplicitamente anche la soluzione.
+- Corretta ma non ideale: spreco di tempo e spazio.
+**Idea migliore**: Ricostruire la soluzione solo alla fine sfruttando il vettore $OPT[]$.
+**Proprietà chiave**:$$v_j\in\text{ II di peso massimo di }G_j\iff w_j+OPT[j-2]\ge OPT[j-1]$$
+```pseudo
+S* = 0; j = n;
+while j >= 3 do
+	if OPT[j-1] >= w_j + OPT[j-2] then
+		j = j-1
+	else
+		S* = S* \union {v_j}; j = j-2
+if j=2 and w_2 > w_1 then
+	S* = S* \union {v_2}
+else
+	S* = S* \union {v_1}
+return S*
+```
+
+Complessità temporale $T(n)=\Theta(n)$.
+
+![[dynamic_ii.gif|center|500]]
+****
