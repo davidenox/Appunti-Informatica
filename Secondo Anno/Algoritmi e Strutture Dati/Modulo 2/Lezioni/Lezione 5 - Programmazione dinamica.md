@@ -112,3 +112,4 @@ Complessità temporale $T(n)=\Theta(n)$.
 
 ![[dynamic_ii.gif|center|500]]
 ****
+34
