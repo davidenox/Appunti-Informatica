@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 1 - Algoritmi greedy.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 5 - Programmazione dinamica.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Esercitazione 1 - Algoritmi greedy"
+              "title": "Lezione 5 - Programmazione dinamica"
             }
           }
         ]
@@ -198,8 +198,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250320114429.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 1 - Algoritmi greedy.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 5 - Programmazione dinamica.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250319125021.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/sync_circuit.gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ezgif.com-animated-gif-maker(3).gif",
@@ -208,13 +211,11 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250319114251.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250319112540.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 4 - Algoritmo di Prim e k-Clustering.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 1 - Algoritmi greedy.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20250318145216.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20250317144505.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Immagini/Pasted image 20250317143015.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250314144504.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 3 - MST, Algoritmo di Kruskal.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 2 - Struttura dati Union-Find.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
@@ -238,7 +239,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Lezioni/Lezione 0 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti",
-    "README.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2",
