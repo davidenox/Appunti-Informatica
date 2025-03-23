@@ -111,5 +111,38 @@ return S*
 Complessità temporale $T(n)=\Theta(n)$.
 
 ![[dynamic_ii.gif|center|500]]
-****
-34
+# Programmazione dinamica
+## Principi generali
+1. Identificare un numero piccolo di sottoproblemi:
+	- Es. Calcolare l'II di peso massimo di $G_j, j=1,...,n$;
+2. Descrivere la soluzione di un generico sottoproblema in funzione delle soluzioni di sottoproblemi più *piccoli*:
+	- Es. $OPT[j]=\max\{OPT[j-1], w_j+OPT[j-2]\}$;
+3. Le soluzioni dei sottoproblemi sono memorizzate in una tabella;
+4. Avanzare opportunamente sulla tabella, calcolando la soluzione del sottoproblema corrente in funzione delle soluzioni di sottoproblemi già risolti.
+## Proprietà dei sottoproblemi
+1. Essere pochi;
+2. Risolti tutti i sottoproblemi si può calcolare velocemente la soluzione al problema originale:
+	- *Spesso la soluzione cercata è semplicemente quella del sottoproblema più grande*
+3. Ci devono essere sottoproblemi "piccoli":
+	- Casi base;
+4. Ci deve essere un ordine in cui risolvere i sottoproblemi:
+	- E quindi un modo di avanzare nella tabella e riempirla.
+### Ruolo dei sottoproblemi
+La chiave di tutto è la definizione dei **giusti** sottoproblemi:
+- La definizione dei "giusti" sottoproblemi è un *punto di arrivo*;
+- Solo una volta definiti i sottoproblemi si può verificare che l'algoritmo è corretto;
+Se la definizione dei sottoproblemi è un punto di arrico, come ci arrivo?
+- *Ragionando sulla struttura della soluzione (ottima) cercata*.
+La struttura della soluzione può suggerire i sottoproblemi e l'ordine in cui considerarli.
+
+>[!note]- Esercizio: II di peso massimo su alberi (**problema della festa aziendale**).
+>**Problema**: Invita i dipendenti alla festa aziendale;
+>**Massimizza**: Il divertimento totale degli invitati;
+>**Vincolo**: Tutti devono divertirsi $\implies$ non invitare un dipendente ed il suo boss diretto!
+>
+>**Input**: Un albero con pesi sui nodi.
+>**Goal**: Un II di peso totale massimo.
+>![[Pasted image 20250323175035.png|center|500]]
+>Spoiler: $OPT=15$
+
+
