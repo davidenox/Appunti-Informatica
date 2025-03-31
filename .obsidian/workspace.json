@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem"
+              "title": "3. Livello di trasporto"
             }
           }
         ]
@@ -198,10 +198,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "888af9e6e212fe72",
   "lastOpenFiles": [
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250330182037.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250331090228.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250330182037.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250330184357.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250330184332.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250330184149.png",
@@ -214,9 +218,7 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250327143613.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250327143600.png",
     "Terzo Anno/Programmazione Web/Lezioni/Lezione 7 - CSS (5).md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250327122220.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 5 - DP 1 - Insieme Indipendente.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 1 - Algoritmi greedy.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 3 - MST, Algoritmo di Kruskal.md",
@@ -235,7 +237,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 3 -.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Architettura dei calcolatori.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni",
