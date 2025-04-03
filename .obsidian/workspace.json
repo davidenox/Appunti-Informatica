@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8a123e3b38c9e6f0",
+        "id": "7e5760baa6308c65",
         "type": "tabs",
         "children": [
           {
-            "id": "888af9e6e212fe72",
+            "id": "bc6d1fc0f710d72b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 2 - Programmazione Dinamica.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 8 - DP 3 - Sequence Alignment, Algoritmo di Hirschberg.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Esercitazione 2 - Programmazione Dinamica"
-            }
-          },
-          {
-            "id": "45083e9b5cdee37b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 1 - Algoritmi greedy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Esercitazione 1 - Algoritmi greedy"
+              "title": "Lezione 8 - DP 3 - Sequence Alignment, Algoritmo di Hirschberg"
             }
           }
         ]
@@ -174,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 8 - DP 3 - Sequence Alignment, Algoritmo di Hirschberg.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem"
+              "title": "Struttura di Lezione 8 - DP 3 - Sequence Alignment, Algoritmo di Hirschberg"
             }
           },
           {
@@ -212,24 +198,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250403122025.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250403121321.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250403121123.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250403114856.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/0_Indice.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 8 - DP 3 - Sequence Alignment, Algoritmo di Hirschberg.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 1 - Algoritmi greedy.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 2 - Programmazione Dinamica.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250402115545.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/eserc2.gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ezgif.com-animated-gif-maker(5).gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250402112628.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 1 - Algoritmi greedy.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 2 - Programmazione Dinamica.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/0_Indice.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250401123403.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250401123350.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250401123331.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250401123314.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250401123300.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250401123247.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/Pasted image 20250401123227.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 6 - DP 2 - Weighted Interval Scheduling, Longest Increasing Subsequence, House Coloring Problem.md",
@@ -250,7 +237,6 @@
     "Primo Anno/Architettura dei Sistemi di Elaborazione/ARM.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 0 - Intro.md",
     "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 1 - Concetti principali.md",
-    "Primo Anno/Architettura dei Sistemi di Elaborazione/Lezioni/Lezione 2 - Processori.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni",
