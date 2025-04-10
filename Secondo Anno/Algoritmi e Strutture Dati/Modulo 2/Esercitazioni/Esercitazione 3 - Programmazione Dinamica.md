@@ -25,3 +25,28 @@
 ![[Pasted image 20250410122959.png|center|500]]
 ![[Pasted image 20250410123015.png|center|500]]
 # Problema 2 - I due scaffali
+**Input**: Una collezione di $n$ libri di spessore $t_1,...,t_n\in N$.
+**Goal**: Vuoi comprare due scaffali $S_1$ ed $S_2$, *entrambi di lunghezza* $W\in N$, per disporre tutti i libri.
+
+**OPT**: Lunghezza *minima* necessaria per gli scaffali $S_1$ ed $S_2$.
+![[Pasted image 20250410140543.png|center|500]]
+
+**Sottoproblema**: $OPT[i,w] =$ minimo spazio usato dallo scaffale $S_1$ se sullo scaffale $S_2$ ho a disposizione spazio $w$ e voglio piazzare $i$ libri di spessore $t_1,...,t_i$.
+**Caso base**: $OPT[0,w]=0$.
+**Soluzione**: $\min W$ tale che $OPT[n,W]\le W$. ($W\le T=\sum t_i$)
+
+## Complessità
+
+**Spazio**: $O(n\cdot T)$ dove $T=\sum t_i$
+**Tempo**: $O(n\cdot T)$, ogni volta devo combinare un numero costante di sottoproblemi.
+*Pseudo polinomiale*
+
+**Formula ricorsiva**: $$OPT[i,w]=\begin{cases}
+t_i+OPT[i-1,w]&\text{se }t_i>w\\
+\min\{t_i+OPT[i-1,w],OPT[i-1,w-t_i]\}&\text{altrimenti}
+\end{cases}$$
+- Nel primo caso, $t_i$ non entra in $S_2$, quindi lo devo mettere per forza in $S_1$.
+- Nel secondo caso, inserisco $t_i$ in $S_1$ o $S_2$.
+# Esercizi
+1. Implementare l'algoritmo con approccio bottom-up (tabulation) e top-down (memoization);
+2. Adattare l'algoritmo nel caso in cui si hanno tre scaffali $S_1,S_2$ ed $S_3$.
