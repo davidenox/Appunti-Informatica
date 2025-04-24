@@ -115,9 +115,8 @@ Dato che Ford-Fulkerson termina, il teorema segue dall'invariante di integralitÃ
 
 **Cattive notizie** : Il numero di percorsi aumentanti puÃ² essere esponenziale nella dimensione dell'input
 
-Vedi esempio qui -> [Esempio](https://www.mat.uniroma2.it/~guala/07_Network_Flow_I_2023.pdf#page=45)
+![[exponential_example.gif|center|500]]
 
-----
 
 # Scegliere dei buoni percorsi aumentanti
 
