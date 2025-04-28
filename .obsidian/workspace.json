@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 11 - Teorema di MaxFlow e MinCut.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/0_Indice.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lezione 11 - Teorema di MaxFlow e MinCut"
+              "title": "0_Indice"
             }
           }
         ]
@@ -180,7 +180,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -200,20 +200,19 @@
   },
   "active": "bc6d1fc0f710d72b",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 11 - NF 1 - Teorema di MaxFlow e MinCut.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250428092010.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250428092000.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250428091933.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250428091859.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/exponential_example.gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ezgif.com-animated-gif-maker(6).gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250424154441.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250424154404.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250424154327.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250424154241.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250424154220.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/lemma1.gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 10 - NF 1 - MaxFlox e MinCut, Algoritmo Ford-Fulkerson.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 11 - Teorema di MaxFlow e MinCut.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 3 - Programmazione Dinamica.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ford_fulkerson.gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ford_fulkerson_prev.gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250417151342.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 9 - DP 3 - Algoritmo di Bellman-Ford-Moore.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 2 - Programmazione Dinamica.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 8 - DP 3 - Sequence Alignment, Algoritmo di Hirschberg.md",

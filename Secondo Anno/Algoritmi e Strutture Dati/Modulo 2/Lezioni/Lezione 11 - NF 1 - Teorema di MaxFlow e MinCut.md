@@ -18,6 +18,7 @@ $$\begin{align}val(f)&=\sum\limits_{\text{archi e uscenti da s}}f(e)-\sum\limits
 **Dimostrazione**
 
 $$\begin{align}val(f)&=\underbrace{\sum\limits_{\text{archi e uscenti da A}}f(e)-\sum\limits_{\text{archi e entranti in A}}f(e)}_{\text{Per il lemma sul valore del flusso}}\\&\leq\sum\limits_{\text{archi e uscenti da A}}f(e)\\&\leq\sum\limits_{\text{archi e uscenti da A}}c(e)\\&=cap(A,B)\end{align}$$
+
 ![[Pasted image 20250424154220.png|center|500]]
 ### Certificato di Ottimalità
 
@@ -141,11 +142,11 @@ Dato che Ford-Fulkerson termina, il teorema segue dall'invariante di integralit�
 - Sia $G_f(\Delta)$ una parte del residual network che contiene solo gli archi con capacità $\geq\Delta$
 - Ogni percorso aumentante in $G_f(\Delta)$ ha una capacità di bottleneck $\geq\Delta$
 
-![[Pasted image 20240429120019.png|center|500]]
+![[Pasted image 20250428091859.png|center|500]]
 
 L'algoritmo è il seguente
 
-![[Pasted image 20240429120044.png|center|500]]
+![[Pasted image 20250428091933.png|center|500]]
 
 ### Analisi dell'algoritmo (sketch)
 
@@ -156,7 +157,7 @@ Si possono dimostrare le seguenti condizioni
 
 Quindi, il numero totale di aumenti è : $O(m\log C)$
 
->[!definition]- Teorema
+>[!definition] Teorema
 >L'algoritmo capacity-scaling impiega tempo $O(m^2\log C)$
 
 
@@ -168,7 +169,7 @@ Quindi, il numero totale di aumenti è : $O(m\log C)$
 
 L'algoritmo è il seguente :
 
-![[Pasted image 20240429120449.png|center|500]]
+![[Pasted image 20250428092010.png|center|500]]
 
 ### Analisi dell'algoritmo
 
