@@ -163,5 +163,34 @@ Per essere precisi
 ![[Pasted image 20250504175938.png|center|500]]
 
 ## Baseball Elimination
+**Q**: Quali team hanno una chance di finire la stagione con più vittorie?
+![[Pasted image 20250506133804.png|center|500]]
+1. Montreal è automaticamente eliminato.
+	- Finisce con $\le80$ vittorie;
+	- Atlanta ha già 83 vittorie.
+2. Philadelphia è matematicamente eliminato.
+	 - Philadelphia finisce con $\le83$ vittorie.
+	 - O New York o Atlanta finiscono con $\ge84$ vittorie.
+**Oss**: La risposta non dipende solo da quanti match già vinti e quanti da giocare ancora, ma anche **tra chi** si gioca.
 
-da finire
+**Classifica attuale**:
+- Insieme di team $S$;
+- Team distinti $z\in S$:
+- Il team $x$ ha già vinto $w_x$ match;
+- I team $x$ ed $y$ giocano l'un l'altro $r_{x,y}$ volte in più.
+
+>[!important] **Problema del Baseball Elimination**:
+>Data la classifica atttuale, c'è un esito delle partite rimanenti in cui la squadra z finisce con il maggior numero di vittorie (o in parità)?
+
+### Formulazione del MaxFlow
+Può il team $4$ finire con più vittorie?
+- Assumiamo che il team 4 vinca tutti i match rimanenti $\Rightarrow w_4+r_4$ vittorie
+- Dividiamo i match rimanenti in modo che ogni team ha $\le w_4+r_4$ vittorie.
+![[Pasted image 20250506135304.png|center|500]]
+
+>[!important] Th. 
+>Il team 4 non è eliminato se e solo se il max flow satura tutti gli archi lasciando $s$.
+>Pf.
+>- Teorema di integralità $\implies$ ogni partita rimanente tra $x$ e $y$ viene aggiunta al numero di vittorie per la squadra $x$ o per la squadra $y$;
+>- La capacità sugli archi (x, t) garantisce che nessuna squadra vinca troppe partite.
+

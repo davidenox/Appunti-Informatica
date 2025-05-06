@@ -160,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 11 - Teorema di MaxFlow e MinCut.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 12 - NF 2 - Applicazioni del flusso.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Lezione 11 - Teorema di MaxFlow e MinCut"
+              "title": "Struttura di Lezione 12 - NF 2 - Applicazioni del flusso"
             }
           },
           {
@@ -198,8 +198,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bc6d1fc0f710d72b",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250506135304.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250506133804.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250504175509.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 12 - NF 2 - Applicazioni del flusso.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250504175938.png",
@@ -210,8 +212,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250504175724.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250504175705.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250504175648.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250504175611.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250504175541.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 11 - NF 1 - Teorema di MaxFlow e MinCut.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/0_Indice.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 10 - NF 1 - MaxFlox e MinCut, Algoritmo Ford-Fulkerson.md",
