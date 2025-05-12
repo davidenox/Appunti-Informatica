@@ -27,4 +27,6 @@ Appunti di:
 	- Ingegneria del Software (ISW)
 	- Algoritmi per i Big Data (ABD)
  
+ Per visionare correttamente gli appunti nel modo in cui io stesso ho dato interpretazione, è opportuno clonare la repository e vederla come vault di Obsidian (esclusa ovviamente la parte di coding, che ho sviluppato interamente su VSC)
+ 
  :)

@@ -11,9 +11,12 @@
 [[Lezione 9 - DP 3 - Algoritmo di Bellman-Ford-Moore]]
 [[Lezione 10 - NF 1 - MaxFlox e MinCut, Algoritmo Ford-Fulkerson]]
 [[Lezione 11 - NF 1 - Teorema di MaxFlow e MinCut]]
+[[Lezione 12 - NF 2 - Applicazioni del flusso]]
+[[Lezione 13 - Intrattabilità I]]
 
 # Esercitazioni
 [[Esercitazione 1 - Algoritmi greedy]]
 [[Esercitazione 2 - Programmazione Dinamica]]
 [[Esercitazione 3 - Programmazione Dinamica]]
+[[Esercitazione 4 - Problemi di flusso]]
 
