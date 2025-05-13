@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "1. Introduzione"
             }
           }
         ]
@@ -198,20 +198,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "bc6d1fc0f710d72b",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/tcam.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/tab_inoltro.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/SNMP.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/porte_in.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/piano_controllo_trad.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/piano_controllo_sdn.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/OSFP.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/openflow.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/NAT.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/ipv6.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
+    "README.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/0_Indice.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 13 - Intrattabilità I.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512114036.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512113947.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512113339.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512113309.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512111700.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512111336.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512103737.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512103606.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512102720.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250512101853.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 4 - Problemi di flusso.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 12 - NF 2 - Applicazioni del flusso.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 11 - NF 1 - Teorema di MaxFlow e MinCut.md",
@@ -222,8 +228,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 8 - DP 3 - Sequence Alignment, Algoritmo di Hirschberg.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 1 - Algoritmi greedy.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 6 - DP 2 - Weighted Interval Scheduling, Longest Increasing Subsequence, House Coloring Problem.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 4 - Algoritmo di Prim e k-Clustering.md",
@@ -233,9 +237,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 3 - MST, Algoritmo di Kruskal.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 2 - Struttura dati Union-Find.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 13 - Coda con priorità.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 3 - Modelli di calcolo e notazione asintotica.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni",
@@ -243,7 +244,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 4.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 3.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 5.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf"
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 5.pdf"
   ]
 }
