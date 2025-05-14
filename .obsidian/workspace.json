@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 14 - Intrattabilità II.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Introduzione"
+              "title": "Lezione 14 - Intrattabilità II"
             }
           }
         ]
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 6 - Macchine, linguaggi e funzioni.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 14 - Intrattabilità II.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a Lezione 6 - Macchine, linguaggi e funzioni"
+              "title": "Riferimenti a Lezione 14 - Intrattabilità II"
             }
           },
           {
@@ -160,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 14 - Intrattabilità II.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di README"
+              "title": "Struttura di Lezione 14 - Intrattabilità II"
             }
           },
           {
@@ -198,21 +198,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bc6d1fc0f710d72b",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250514122017.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250514115948.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250514114310.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250514112522.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250514111926.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250514111331.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250514111240.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 14 - Intrattabilità II.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/tcam.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/tab_inoltro.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/SNMP.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/porte_in.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/piano_controllo_trad.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/piano_controllo_sdn.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/OSFP.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/openflow.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/NAT.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img/ipv6.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
     "README.md",
@@ -236,7 +238,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 3 - MST, Algoritmo di Kruskal.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 2 - Struttura dati Union-Find.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni",
