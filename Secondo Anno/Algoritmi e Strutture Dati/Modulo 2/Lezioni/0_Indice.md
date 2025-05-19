@@ -13,7 +13,9 @@
 [[Lezione 11 - NF 1 - Teorema di MaxFlow e MinCut]]
 [[Lezione 12 - NF 2 - Applicazioni del flusso]]
 [[Lezione 13 - Intrattabilità I]]
-
+[[Lezione 14 - Intrattabilità II]]
+[[Lezione 15 - Intrattabilità III]]
+[[Lezione 16 - Algoritmi di Approssimazione]]
 # Esercitazioni
 [[Esercitazione 1 - Algoritmi greedy]]
 [[Esercitazione 2 - Programmazione Dinamica]]
