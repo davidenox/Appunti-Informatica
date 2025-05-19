@@ -46,8 +46,36 @@ Spoiler: **È NP-Completo**.
 Se esiste un ciclo hamiltoniano $C$:
 - Prima elimina/pulisci gli archi che non appartengono a $C$;
 - Pulisci i nodi rimanenti passando per $C$.
+*Pf.*$\Rightarrow$
+Intuitivamente: Se si vuole pulire la tavola si devono utilizzare i gadget nel loro modo previsto (altrimenti de base perdi).
 
 Comportamento previsto:
+**2-in-1-out**
 
---- 
+![[2in1out.gif|center|500]]
 
+**1-in-2-out**
+
+![[1in2out.gif|center|500]]
+
+# Tetris
+
+>3-Partition
+>**Input**: Una collezione $A$ di $n$ interi positivi $a_1,...,a_n$.
+>**Goal**: È possibile *partizionare* $A$ in $n/3$ collezioni $A_1,A_2,A_3$ di somme uguali? es. $$\sum_{a\in A_1}a=...=\sum_{a\in A_\frac{n}{3}}a=\frac{\sum_{a\in A}a}{\frac{n}{3}}=t.$$
+>- Fatto 1: 3-Partition è NP-Completo, anche se $t/4\lt a_i \lt t/2$.
+>- **Oss**. Se assumiamo che $t/4\lt a_i \lt t/2$ abbiamo $|A_i|=3$ per ogni $A_i$
+> - Fatto 2: 3-Partition è **NP-Hard**, ovvero è NPC anche se ogni $a_i$ è limitato polinomialmente in $n$ ($n$=numero di numeri).
+
+![[Pasted image 20250519114531.png|center|500]]
+**Input**: Una configurazione iniziale della tavola, e l'intera sequenza dei pezzi.
+**Goal**: Si riesce a pulire la tavola?
+
+![[Pasted image 20250519114703.png|center|500]]
+![[Pasted image 20250519114739.png|center|500]]
+
+![[3par-tetris.gif|center|500]]
+
+![[Pasted image 20250519115609.png|center|500]]
+
+E si continua finché la tavola non è pulita.
