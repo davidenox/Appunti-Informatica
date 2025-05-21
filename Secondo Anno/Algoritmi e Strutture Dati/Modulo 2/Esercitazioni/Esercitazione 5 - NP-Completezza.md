@@ -47,3 +47,41 @@ La risposta al Vertex Cover è **sì** se e solo se la risposta all'SCP è **sì
 Di conseguenza, si è dimostrato che SCP è un problema NP-Completo.
 # Lecture Planning Problem
 
+## Input:
+- Un insieme di **corsi** $C = \{c_1, c_2, \dots, c_n\}$    
+- Un insieme di **temi obbligatori** $T = \{t_1, t_2, \dots, t_m\}$
+- Ogni corso $c_i$​ **copre un sottoinsieme** $T_i \subseteq T$ di temi
+- Un intero $k$
+**Domanda**:
+Esiste un sottoinsieme di corsi $C' \subseteq C$, con $|C'| \leq k$, tale che l’unione dei temi trattati in $C′$ **copra tutti i temi** di $T$?  
+Cioè: $$\bigcup_{c_i \in C'} T_i = T$$
+##  Analogia con Set Cover
+
+Questo problema è un modo alternativo di formulare il classico problema **Set Cover**, uno dei problemi fondamentali e noti per essere **NP-completi**.
+
+### Corrispondenza:
+
+- Universo $U$ → Temi obbligatori $T$
+
+- Ogni sottoinsieme $S_i \subseteq U$ → Corso $c_i$​ che tratta i temi $T_i = S_i$    
+- Il parametro $k$ è lo stesso
+
+Quindi, **trovare una selezione di al massimo $k$ corsi che coprono tutti i temi è esattamente trovare un set cover di cardinalità $\leq k$**.
+
+**È in NP**:
+
+- Possiamo verificare una soluzione $C′$ in tempo polinomiale:
+    - Verificare che $|C'| \leq k$:
+    - Calcolare $\bigcup_{c_i \in C'} T_i$​ e controllare che sia uguale a $T$
+
+**È NP-hard**:
+
+- Si può ridurre in tempo polinomiale un’istanza qualsiasi di **Set Cover** a un’istanza del **Lecture Planning Problem**.
+ Quindi LPP è **almeno tanto difficile quanto Set Cover**
+## Conclusione
+
+Il **Lecture Planning Problem** è:
+- Un problema di **copertura** formulato nel contesto dell'organizzazione didattica
+- È **NP-completo**, perché:
+    - È in **NP**;
+    - È **NP-hard** per riduzione diretta da **Set Cover**.
