@@ -21,4 +21,4 @@
 [[Esercitazione 2 - Programmazione Dinamica]]
 [[Esercitazione 3 - Programmazione Dinamica]]
 [[Esercitazione 4 - Problemi di flusso]]
-
+[[Esercitazione 5 - NP-Completezza]]
