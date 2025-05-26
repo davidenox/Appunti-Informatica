@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 17 - Approssimazioni.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lezione 1 - Interval Scheduling ed Interval Partitioning"
+              "title": "Lezione 17 - Approssimazioni"
             }
           }
         ]
@@ -160,13 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 15 - Intrattabilità III.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 17 - Approssimazioni.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Lezione 15 - Intrattabilità III"
+              "title": "Struttura di Lezione 17 - Approssimazioni"
             }
           },
           {
@@ -198,24 +198,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/k_center.gif",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ezgif.com-animated-gif-maker(6).gif",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526112105.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526111822.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526111806.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526110712.png",
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 17 - Approssimazioni.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/list_scheduling.gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ezgif.com-animated-gif-maker(6).gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250525171257.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250525171011.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250525170808.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Indice.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 5 - NP-Completezza.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250521150229.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 16 - Algoritmi di Approssimazione.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 15 - Intrattabilità III.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250519115609.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/3par-tetris.gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250519114739.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250519114703.png",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 17 - Complessità di problemi.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 16 - Problemi e codifiche.md",
