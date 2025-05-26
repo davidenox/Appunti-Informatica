@@ -128,3 +128,42 @@ L'analisi è stretta?
 
 **Goal**: Trovare un insieme di centri $C$ che minimizza $r(C)$, soggetto a $|C|=k$.
 
+**Proprietà della funzione distanza**
+- $dist(x,x)=0$ `(identità)`
+- $dist(x,y)=dist(y,x)$ `(simmetria)`
+- $dist(x,y)\leq dist(x,z)+dist(z,y)$ `(disuguaglianza triangolare)`
+
+**Esempio** : Ogni sito è un vertice in un grafo pesato non diretto, un sito può essere un nodo, $dist(x,y)$ = distanza (pesata) in $G$ tra $x$ e $y$
+![[k_center2.gif|center|500]]
+## Algoritmo greedy
+
+**Algoritmo Greedy**: Sceglie ripetutamente il prossimo centro per essere il sito più *lontano* da ogni centro esistente:![[Pasted image 20250526143120.png|center|500]]
+Esempio di esecuzione:
+
+![[k_center_ex.gif|center|500]]
+
+### Analisi dell'algoritmo greedy
+
+>[!definition] Teorema
+>Sia $C^\star$ un insieme ottimale di centri.
+>Allora $r(C)\leq2r(C^\star)$
+
+**Dimostrazione (per assurdo)** Assumiamo che $r(C^\star)\lt\frac{1}{2}r(C)$
+- Per ogni sito $c_i\in C$, consideriamo una sfera di raggio $\frac{1}{2}r(C)$
+- Esattamente un $c_i^\star$ in ogni sfera
+	- Ogni sfera con centro $c_i\in C$ deve contenere un centro in $C^\star$
+	- Le sfere sono disgiunte e $\vert C\vert=\vert C^\star\vert$ ![[Pasted image 20250526145107.png|center|500]]
+	- Sia $c_i$ il sito abbinato con $c_i^\star$
+- Consideriamo un qualunque sito $s$ e il cuo centro più vicino $c_i^\star\in C^\star$
+- $$dist(s,C)\leq dist(s,c_i)\underbrace{\leq}_{\Delta-\text{disuguaglianza}}\underbrace{dist(s,c_i^\star)+dist(c_i^\star,c_i)}_{\leq r(C^\star)\text{ dato che il centro più vicino è }c_i^\star}\leq2r(C^\star)$$
+- Quindi $r(C)\leq2r(C^\star)$
+
+>[!definition] Teorema
+>L'algoritmo greedy è $2-$approssimante per questo problema
+
+**Remark** : L'algoritmo greedy posizione sempre i centri nei siti, ma lo fa con un fattore di $2$ rispetto alla soluzione ottima, che permette di posizionare i centri ovunque
+
+**D** : C'è speranza di ottenere una approssimazione migliore? ..Molto improbabile
+
+>[!definition] Teorema
+>A meno che $P=NP$, non esiste un algoritmo $\rho-$approssimante per questo problema per ogni $\rho\lt2$
