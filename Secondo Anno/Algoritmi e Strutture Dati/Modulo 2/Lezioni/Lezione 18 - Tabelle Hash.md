@@ -51,3 +51,20 @@ Dato un universo $U$ di possibili elementi, mantenere un sottoinsieme $S\subsete
 
 ### Progettare una famiglia universale di Hash Function
 
+*Grandezza della tavola*: Sceglie $m$ come un numero primo tale che $n\le m\le 2n$. (esiste sempre - `[Chebyshev 1850]`)
+*Integer Encoding*: Identifica ogni elemento $x\in U$ con un intero di base $m$ di $r$ cifre: $x=(x_1,x_2,...,x_r), x_i\in\{0,1,...,m-1\}$
+*Hash Function*: Dato $a\in U, a=(a_1,...,a_r).$
+$$h_a(x)=[\sum_{i=1}^r a_i x_i] mod\ m.$$
+![[Pasted image 20250527152319.png|center|300]]
+
+*Famiglia delle hash function*: $\mathcal H=\{h_a:a\in U\}$
+
+*Word RAM Model*:
+- Manipolazione di $O(1)$ parole di macchine richiede tempo $O(1)$;
+- Ogni oggetto di interesse si adatta ad una parola macchina.
+$\implies$
+- Immagazzinare $h_a$ richiede solo l'immagazzinamento di un valore singolo, $a$ (1 parola macchina);
+- Computare $h_a(x)$ richiede tempo $O(1)$.
+---
+slide 8
+****
