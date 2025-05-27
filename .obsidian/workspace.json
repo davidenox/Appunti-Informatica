@@ -180,7 +180,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -198,7 +198,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 5-6 - Stima.md",
     "Terzo Anno/Algoritmi per i Big Data/Lezioni/Lezioni 4-5 - Variabili randomiche.md",
