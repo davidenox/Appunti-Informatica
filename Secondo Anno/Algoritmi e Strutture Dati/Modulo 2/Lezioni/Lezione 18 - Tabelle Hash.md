@@ -65,6 +65,43 @@ $$h_a(x)=[\sum_{i=1}^r a_i x_i] mod\ m.$$
 $\implies$
 - Immagazzinare $h_a$ richiede solo l'immagazzinamento di un valore singolo, $a$ (1 parola macchina);
 - Computare $h_a(x)$ richiede tempo $O(1)$.
----
-slide 8
-****
+
+>[!important] Th.
+>$\mathcal H=\{h_a:a\in U\}$ è universale.
+>*Pf*.
+>Siano $x=(x_1,x_2,...,x_r)$ e $y=(y_1,y_2,...,y_r)$ due elementi distinti di $U$. Dobbiamo mostrare che $Pr[h_a(x)=h_a(y)]\le\frac{1}{m}$.
+>Dato che $x\not=y$, allora esiste un intero $j$ tale che $x_j\not=y_j$. 
+>Abbiamo $h_a(x)=h_a(y)$ se e solo se $$a_j\underbrace{(y_j-x_j)}_{z}=\underbrace{\sum_{i\not=y}a_i(x_i-y_i)}_{\alpha}mod\ m.$$
+>Possiamo assumere che $a$ sia scelto uniformemente a random prima selezionando tutte le coordinate $a_i$ dove $i\not=j$, poi selezionando $a_j$ a random. Quindi, possiamo assumere che $a_i$ sia fissata per tutte le coordinate $i\not=j$.
+>Siccome $m$ è primo e $z\not=0$, $z$ ha un'inversa moltiplicativa $z^{-1}$; es. $z\cdot z^{-1}=1 mod\ m$.
+>Questo implica che $Pr[h_a(x)=h_a(y)]\le\frac{1}{m}._\square$
+
+#### Un'altra famiglia di hash universale
+
+Scegli un primo $p\ge|U|$ (una volta sola).
+**Famiglia hash**:
+Dati $a,b\in U,$ $$h_{ab}(x)=[(ax+b)mod\ p]mod\ m$$
+**Famiglia di hash function**: $\mathcal H=\{h_{ab}:a,b\in U\}.$
+
+### Come scegliere (dinamicamente) la grandezza della tavola
+
+>[!note] Nota: $S$ si carica nel tempo e noi vogliamo usare spazio $O(|S|)$.
+
+**Parametri**:
+- $n$: numero di elementi correntemente in tavola;
+- $N$: grandezza virtuale della tavola;
+- $m$: grandezza effettiva della tavola (un numero primo tra $N$ e $2N$).
+
+**Tecnica di raddoppio/dimezzamento**:
+
+```
+- init n=N=1
+- quando n>N:
+	- N := 2N
+	- scegli un nuovo m
+	- re-hash tutti gli elementi (in O(n) tempo) -->O(1) ammortizzato per insert/delete
+- quando n<N/4:
+	- n := N/2
+	- scegli un nuovo m
+	- re-hash tutti gli elementi (in O(n) tempo)
+```
