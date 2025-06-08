@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_temp/orario.md",
+                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 2 - Struttura dati Union-Find.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "orario"
+              "title": "Lezione 2 - Struttura dati Union-Find"
             }
           }
         ]
@@ -200,7 +200,9 @@
   },
   "active": "984e47a143e2e803",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf",
+    "_temp/orario.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 18 - Tabelle Hash.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png",
@@ -231,12 +233,10 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526142758.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/k_center.gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526112105.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Indice.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni/Esercitazione 5 - NP-Completezza.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 16 - Algoritmi di Approssimazione.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 15 - Intrattabilità III.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 2/Lezioni/Lezione 18 - La classe NP.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti",
@@ -244,7 +244,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 4.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 3.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 5.pdf"
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 3.pdf"
   ]
 }

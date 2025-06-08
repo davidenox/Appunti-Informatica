@@ -48,11 +48,11 @@ return S
 
 ![[interval_scheduling.gif|center|500]]
 
->[!important]- Affermazione
+>[!important] Affermazione
 >È possibile implementare l'EarliestFinishTime in tempo $O(n\log n)$.
 >- Tenere traccia dell'ultimo job $j^*$ aggiunto in $S$
 >- Il job $j$ è compatibile con $S$ solo se $s_j\ge f_{j^*}$
->- Ordinare per temo di fine richiede tempo $O(n\log n)$.
+>- Ordinare per tempo di fine richiede tempo $O(n\log n)$.
 
 #### Analisi dell'algoritmo
 Sia $i_1,...,i_k$ l'insieme dei job selezionati dal greedy (ordinate per tempo di fine).
@@ -113,7 +113,7 @@ return schedulazione
 #### Demo
 ![[interval_partitioning.gif|center|500]]
 
->[!important]- Affermazione
+>[!important] Affermazione
 >L'algoritmo Earliest-start-time-first può essere implementato in tempo $O(n\log n)$.
 >- L'ordinamento in base agli orari di inizio richiede tempo $O(n\log n)$.
 >- Memorizza le aule in una **coda prioritaria** (chiave = ora di fine dell'ultima lezione).
@@ -132,7 +132,7 @@ return schedulazione
 #### Analisi dell'algoritmo
 >*Oss*. L'algoritmo earliest-start-time non schedula mai due lezioni incompatibili nella stessa classe.
 
->[!important]- Th. L'algoritmo Earliest-start-time-first è ottimale
+>[!important] Th. L'algoritmo Earliest-start-time-first è ottimale
 >- Sia $d$ = numero di aule assegnate dall'algoritmo. 
 >- L'aula $d$ è aperta perché dovevamo programmare una lezione, diciamo $j$, che è incompatibile con una lezione in ciascuna delle altre aule $d – 1$. 
 >- Pertanto, queste lezioni terminano ciascuna dopo $s_j$. 
