@@ -428,8 +428,7 @@ restituisce il primo elemento di S (senza toglierlo da S).
 
 # Visita alberi
 ## DFS
->[!note]- L’algoritmo di visita in profondità (DFS) parte da r e procede visitando nodi di
-figlio in figlio fino a raggiungere una foglia. Retrocede poi al primo antenato che ha ancora figli non visitati (se esiste) e ripete il procedimento a partire da uno di quei figli.
+>[!note]- L’algoritmo di visita in profondità (DFS) parte da r e procede visitando nodi di figlio in figlio fino a raggiungere una foglia. Retrocede poi al primo antenato che ha ancora figli non visitati (se esiste) e ripete il procedimento a partire da uno di quei figli.
 
 (Alberi binari)
 ```C
