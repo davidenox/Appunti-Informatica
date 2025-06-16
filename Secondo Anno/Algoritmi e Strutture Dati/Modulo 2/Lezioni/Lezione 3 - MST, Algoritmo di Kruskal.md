@@ -1,7 +1,7 @@
 # Minimum Spanning Tree
 	Minimo albero ricoprente
 
->[!important]- MST
+>[!important] MST
 >Dato un grafo pesato non orientato $G=(V,E)$ con pesi sugli archi $c_e$, un MST è un sottonisieme degli archi $T\subseteq E$ tale che $T$ è un albero ricoprente la cui somma dei pesi degli archi è minima:
 >![[Pasted image 20250312102838.png|center|600]]
 
@@ -35,7 +35,7 @@
 
 >**Ciclo**(*Cycle*): Insieme di archi di forma $a-b,b-c,...,y-z,z-a$ 
 >![[Pasted image 20250312104355.png|center|500]]
->**Taglio**(*Cut*): Sottoinsieme di nodi $S$ (A volte definito come partizione di $V$ in $S$ e $V/S$)
+>**Taglio** (*Cut*): Sottoinsieme di nodi $S$ (A volte definito come partizione di $V$ in $S$ e $V/S$)
 >**Cutset**: Il corrispondente cutset $D$ di un taglio $S$ è il sottoinsieme di archi con esattamente un endpoint in $S$ 
 >![[Pasted image 20250312112838.png|center|500]]
 
@@ -46,7 +46,7 @@
 
 ### Proprietà
 
->[!important]- **Proprietà del taglio**
+>[!important] **Proprietà del taglio**
 >Sia $S$ un qualsiasi sottoinsieme di nodi, e sia $e$ un arco di costo minimo con esattamente un endpoint in $S$. Allora esiste un MST $T^*$ che contiene $e$.
 >*Dim*:
 >- Supponiamo che $e$ non appartenga a $T^*$
@@ -58,7 +58,7 @@
 >- Quindi $T'$ è un MST che contiene $e$
 >![[Pasted image 20250312113654.png|center|500]]
 
->[!important]- **Proprietà del ciclo**
+>[!important] **Proprietà del ciclo**
 >Sia $C$ un qualsiasi ciclo in $G$, e sia $f$ un arco di costo massimo in $C$. Allora esiste un MST $T^*$ che non contiene $f$.
 >*Dim*:
 >- Supponiamo che $f$ appartiene a $T^*$

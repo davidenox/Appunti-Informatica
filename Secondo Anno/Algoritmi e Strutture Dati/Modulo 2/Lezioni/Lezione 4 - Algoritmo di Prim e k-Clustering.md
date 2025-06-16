@@ -19,7 +19,7 @@ Ricordiamo il problema dell'MST e le varie proprietà.
 >![[Pasted image 20250312113654.png|center|500]]
 
 # Algoritmo di Prim
-	Jarnìk 1930, Dijkstra 1957, Prim 1959ù
+	Jarnìk 1930, Dijkstra 1957, Prim 1959
 
 >[!important]- Si inizia con un qualche nodo radice $s$ e si fa crescere un albero da $s$ con approccio "greedy". Ad ogni step, si aggiunge l'arco con il costo minore $e$ a $T$ che ha esattamente un endpoint in $T$.
 >
@@ -104,7 +104,7 @@ Quindi, il tempo di esecuzione dell'algoritmo di Prim è $O ( m + n \log ⁡ ( n
 ### Demo
 ![[k_cluster.gif|center|500]]
 ### Analisi
-> [!important]- **Th**. Sia $C^*$ un qualunque clustering, composoto dai cluster $C_1^* , … , C_k^*$ , formato cancellando i $k − 1$ archi più costosi del MST. Allora $C^*$ è un $k$-clustering di spacing massimo
+> [!important]- **Th**. Sia $C^*$ un qualunque clustering, composto dai cluster $C_1^* , … , C_k^*$ , formato cancellando i $k − 1$ archi più costosi del MST. Allora $C^*$ è un $k$-clustering di spacing massimo
 
 **Dimostrazione**
 

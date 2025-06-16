@@ -16,6 +16,8 @@
 [[Lezione 14 - Intrattabilità II]]
 [[Lezione 15 - Intrattabilità III]]
 [[Lezione 16 - Algoritmi di Approssimazione]]
+[[Lezione 17 - Approssimazioni]]
+[[Lezione 18 - Tabelle Hash]]
 # Esercitazioni
 [[Esercitazione 1 - Algoritmi greedy]]
 [[Esercitazione 2 - Programmazione Dinamica]]

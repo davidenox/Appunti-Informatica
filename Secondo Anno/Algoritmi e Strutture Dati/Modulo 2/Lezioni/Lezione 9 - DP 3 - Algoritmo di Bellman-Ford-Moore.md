@@ -47,7 +47,7 @@ Diamo ora la definizione dei due problemi fondamentali di questo argomento, ovve
 - **Negative-cycle**
 
 >[!definition] Single-destination shortest-path
->Dato un grafo diretto $G=(V,E)$ con pesi sugli arhci $l_{vw}$ (ma no cicli negativi) e un determinato nodo $t$, trovare lo SP $v\to t$ per ogni nodo $v$
+>Dato un grafo diretto $G=(V,E)$ con pesi sugli archi $l_{vw}$ (ma no cicli negativi) e un determinato nodo $t$, trovare lo SP $v\to t$ per ogni nodo $v$
 >Equivalente al problema `single-source shortest-path (in quel caso gli archi vengono invertiti, e si cerca lo SP da v a t)`
 
 >[!definition] Negative-cycle

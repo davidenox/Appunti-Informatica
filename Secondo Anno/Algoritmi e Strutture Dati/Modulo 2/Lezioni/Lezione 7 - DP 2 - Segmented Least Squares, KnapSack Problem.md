@@ -74,7 +74,7 @@ Abbiamo 2 casi
 >[!definition]
 >$OPT(i)$ = Valore ottimale per il problema del knapsack con gli elementi $1,\dots,i$, soggetti al limite di peso $w$
 
-**Goal** : $OTP(n,W)$
+**Goal** : $OPT(n,W)$
 
 Anche qui abbiamo due casistiche
 
@@ -100,7 +100,7 @@ $$OPT(i,w)=\begin{cases}0&i=0\\OPT(i-1,w)&w_i\gt w\\\max\{OPT(i-1,w),v_i+OPT(i-1
 
 #### Tempo di esecuzione
 
->[!definition]- Teorema
+>[!definition] Teorema
 >L'algoritmo di DP per il problema del Knapsack con $n$ elementi e peso massimo $W$, lo risolve in tempo $\Theta(nW)$ e spazio $\Theta(nW)$
 
 **Dimostrazione** :
@@ -113,7 +113,7 @@ Ma la domanda fondamentale è la seguente
 
 **A** : NO!!, perchè $\Theta(nW)$ non è una funzione polinomiale nella dimensione dell'input, ma si dice `pseudo-polinomiale`
 
->[!definition]- Algoritmo pseudo-polinomiale
+>[!definition] Algoritmo pseudo-polinomiale
 >Un algoritmo il cui tempo di esecuzione risulta essere polinomiale nel valore dell'input (es: il più grande intero presente nell'input) :
 >- Efficiente quando i numeri nell'input sono ragionevolmente piccoli
 >- Non necessariamente polinomiale nella dimensione dell'input (numeor di bits richiesti per rappresentare l'input)
