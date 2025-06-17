@@ -26,7 +26,7 @@ $d=2\implies$*albero binario*.
 ![[Pasted image 20231024141501.png|center|600]]
 ![[Pasted image 20231024141523.png|center|600]]
 # HeapSort
->*Struttura dati heap*: Associa ad un isieme $S=$ albero binario radicato con le seguenti proprietà:
+>*Struttura dati heap*: Associa ad un insieme $S=$ albero binario radicato con le seguenti proprietà:
 1) Completo fino al penultimo livello ( struttura rafforzata: foglie sull'ultimo livello tutte compattate a sinistra ).
 2) Gli elementi di $S$ sono memorizzati nei nodi dell'albero ( ogni nodo $v$ memorizza uno e un solo elemento, denominato con $chiave(v)$).
 3) $chiave(padre(V))\ge chiave(v)$ per ogni nodo $v$ diverso dalla radice.
@@ -38,7 +38,7 @@ $d=2\implies$*albero binario*.
 3. Gli heap con struttura rafforzata possono essere rappresentati in un *array di dimensione pari a n*.
 ### Altezza di un heap : prop2
 Sia H un heap di n nodi e altezza h
-![[Pasted image 20221028094753.png|center|600]]
+![[Pasted image 20250617111958.png|center|500]]
 
 $$n\geq 1+\sum_{i=0}^{h-1}2^i=1+2^h-1=2^h\implies h\leq log_2n$$
 ### Rappresentazione tramite vettore posizionale : prop3
