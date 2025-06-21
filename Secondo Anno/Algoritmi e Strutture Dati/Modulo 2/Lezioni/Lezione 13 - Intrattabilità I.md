@@ -4,7 +4,7 @@
 **Design pattern algoritmici**:
 - Greedy
 - Divide et Impera
--  Programmazione dinamica
+- Programmazione dinamica
 - Dualità
 - *Riduzioni*
 
@@ -33,7 +33,7 @@
 
 ## Riduzioni polinomiali
 
-Supponiamo di poter risolvere il problema Y in tempo polinomiale. Cos'èaltro possiamo risolvere in tempo polinomiale?
+Supponiamo di poter risolvere il problema Y in tempo polinomiale. Cos'altro possiamo risolvere in tempo polinomiale?
 
 **Riduzione**: Il problema X in tempo polinomale si riduce al problema Y se istanze arbitrarie del problema X possono essere risolte usando:
 - Numero polinomiale di passi computazionali standard, e

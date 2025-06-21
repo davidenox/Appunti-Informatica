@@ -1,12 +1,12 @@
 # Matching Bipartito
 >[!important] Matching
->Dato un grafo non diretto $G=(V,E)$, un sottoinsieme degli archi $M\subseteq E$ è un **matching** se ogni nodo compate in al massimo un arco in $M$.
+>Dato un grafo non diretto $G=(V,E)$, un sottoinsieme degli archi $M\subseteq E$ è un **matching** se ogni nodo compare in al massimo un arco in $M$.
 
 **Max Matching**
 Dato un grafo $G$, trovare un matching di massima cardinalità
 ![[Pasted image 20250504170950.png|center|500]]
 
-Un grafo $G$ è *bipartito* se i nodi possono essere partizioniati in due sottoinsiemi $L$ e $R$ tale che ogni arco connette un nodo in $L$ con un nodo in $R$.
+Un grafo $G$ è *bipartito* se i nodi possono essere partizionati in due sottoinsiemi $L$ e $R$ tale che ogni arco connette un nodo in $L$ con un nodo in $R$.
 
 >[!important] Matching Bipartito
 >Dato un grafo bipartito $G=(L\cup R,E)$, trovare un matching di massima cardinalità.
@@ -134,7 +134,7 @@ Il problema è identico al problema precedente, solo che il grafo in questione n
 - **Accuratezza** : se $a_i\gt b_i$, preferiamo etichettare $i$ come foreground
 - **Smoothness** : se molti vicini di $i$ sono etichettati in primo piano, dovremmo essere propensi a etichettare $i$ come foreground
 - Trovare una partizione $(\underbracket{A}_{\text{foreground}},\underbracket{B}_{\text{background}})$ che massimizza : $$\sum_{i\in A}a_i+\sum_{j\in B}b_j-\sum\limits_{(i,j)\in E\atop\vert A\cap\{i,j\}\vert=1}p_{ij}$$
-SI può formulare come un problema di min-cut
+Si può formulare come un problema di min-cut
 
 Facciamolo diventare un **problema di minimizzazione**  :
 - Massimizzare $\sum\limits_{i\in A}a_i+\sum\limits_{j\in B}b_j-\sum\limits_{(i,j)\in E\atop\vert A\cap\{i,j\}\vert=1}p_{ij}$

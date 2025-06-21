@@ -95,7 +95,7 @@ Per tutta l'esecuzione di Ford-Fulkerson, i valori $f(e)(\text{valore del flusso
 
 **Dimostrazione** : Possiamo usare la BFS o la DFS per trovare il percorso aumentante in tempo $O(m)$
 
->[!definition] Teorema di Intergralità
+>[!definition] Teorema di Integralità
 >Esiste un flusso massimo integrale $f^\star$
 >$f(e)$ è un intero per ogni arco $e$
 
