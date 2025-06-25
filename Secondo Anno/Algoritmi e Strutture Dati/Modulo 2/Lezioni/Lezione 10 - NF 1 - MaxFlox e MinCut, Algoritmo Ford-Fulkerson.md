@@ -75,7 +75,7 @@ $$c_f(e)=\begin{cases}c(e)-f(e)&\iff e\in E\\f(e^\text{reverse})&\iff e^\text{re
 ![[Pasted image 20250417150626.png|center|500]]
 
 **Residual Network** : $G_f=(V,E_f,s,t,c_f)$
-- $E_f=\{e|f(e)\lt c(e)\}\cup\{e|f(e^\text{reverse})\gt0\}$ (archin con capacità residua positiva)
+- $E_f=\{e|f(e)\lt c(e)\}\cup\{e|f(e^\text{reverse})\gt0\}$ (archi con capacità residua positiva)
 - Proprietà chiave : $f'$ è un flusso in $G_f\iff f+f'$ è un flusso in $G$ (dove il flusso su un arco inverso nega il flusso sul corrispondente arco anteriore)
 
 **Esempio**
