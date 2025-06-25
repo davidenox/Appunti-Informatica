@@ -123,7 +123,7 @@ Numero di chiamate ricorsive $\leq n\implies O(n)$
 
 | Memoization                                                           | Table-base                                                                 |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| ApproccioTop-Down                                                     | **Più difficile da "afferrare"**                                           |
+| Approccio Top-Down                                                    | **Più difficile da "afferrare"**                                           |
 | Più facile indicizzare i sottoproblemi da altri oggetti (es. insieme) | **Bisogna indicizzare i sottoproblemi con gli interi**                     |
 | Calcola solo i sottoproblemi necessari                                | **Calcola sempre tutti i sottoproblemi**                                   |
 | **Chiamate delle funzioni sopraelevate**                              | Nessuna ricorsione. Più efficiente                                         |

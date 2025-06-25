@@ -76,7 +76,7 @@ $OPT[j]=\max\{OPT[j-1],w_j+OPT[j-2]\}$
 ## L'algoritmo
 $G_j$: Sottocammino composto dai primi $j$ vertici di $G$.
 $OPT[]$: Vettore di $n$ elementi.
-Dento $OPT[j]$ voglio mettere il peso dell'II di peso massimo di $G_j$.
+Dentro $OPT[j]$ voglio mettere il peso dell'II di peso massimo di $G_j$.
 
 ```pseudo
 OPT[1]=w_1; OPT[2]=max{w_1,w_2}
@@ -131,7 +131,7 @@ Complessità temporale $T(n)=\Theta(n)$.
 La chiave di tutto è la definizione dei **giusti** sottoproblemi:
 - La definizione dei "giusti" sottoproblemi è un *punto di arrivo*;
 - Solo una volta definiti i sottoproblemi si può verificare che l'algoritmo è corretto;
-Se la definizione dei sottoproblemi è un punto di arrico, come ci arrivo?
+Se la definizione dei sottoproblemi è un punto di arrivo, come ci arrivo?
 - *Ragionando sulla struttura della soluzione (ottima) cercata*.
 La struttura della soluzione può suggerire i sottoproblemi e l'ordine in cui considerarli.
 
