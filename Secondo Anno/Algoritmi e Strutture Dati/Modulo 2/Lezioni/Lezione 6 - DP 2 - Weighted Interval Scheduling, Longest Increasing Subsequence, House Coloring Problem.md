@@ -12,7 +12,7 @@
 
 ![[Pasted image 20250327113057.png|center|500]]
 ## Programmazione dinamica: scelta binaria
-**Convenzione**: i job sono ordinate per ordine di fine in modo che $f_1\le f_2\le\dots\le f_n$.
+**Convenzione**: i job sono ordinati per tempo di fine in modo che $f_1\le f_2\le\dots\le f_n$.
 >**Def**. $p(j)=$il più alto indice $i<j$ tale che il job $i$ è compatibile con $j$.
 
 ![[Pasted image 20250327114607.png|center|500]]
