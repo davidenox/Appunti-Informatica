@@ -317,7 +317,7 @@ IntegerSort (X, k)
 
 ```C
 BucketSort (X, k)
-	Sia Y un array di dimensione k
+	Sia X un array di dimensione k
 	for i=1 to k do Y[i]=lista vuota
 	for i=1 to n do
 		appendi il record X[i] alla lista Y[chiave(X[i])]
