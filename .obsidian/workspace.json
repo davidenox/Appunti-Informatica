@@ -65,16 +65,6 @@
             }
           },
           {
-            "id": "650cdc7bbb8637fe",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "starred"
-            }
-          },
-          {
             "id": "1768097c3cabbb69",
             "type": "leaf",
             "state": {
@@ -201,11 +191,11 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 17 - Dijkstra.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 13 - Coda con priorità.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 9 - DP 3 - Algoritmo di Bellman-Ford-Moore.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 8 - DP 3 - Sequence Alignment, Algoritmo di Hirschberg.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 7 - DP 2 - Segmented Least Squares, KnapSack Problem.md",
