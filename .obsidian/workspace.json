@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c0de22e255023cb1",
+        "id": "3f11a8bec89454a6",
         "type": "tabs",
         "children": [
           {
-            "id": "d2866beafa5c3467",
+            "id": "946d210d6dad68c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
+                "file": "Primo Anno/Fisica/Formulario finale.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algoritmi implementati"
+              "title": "Formulario finale"
             }
           }
         ]
@@ -189,10 +189,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "946d210d6dad68c6",
   "lastOpenFiles": [
-    "Terzo Anno/Ingegneria del Software/Risposte-Domande orali.pdf",
-    "Terzo Anno/Ingegneria del Software/ProgettoISW_Finale.vpp",
+    "Primo Anno/Fisica/Lezioni/programma",
+    "Primo Anno/Fisica/Lezioni/25-Onde_Elettromagnetiche-compresso.pdf",
+    "Primo Anno/Fisica/Lezioni/24-Legge_di_Faraday_e_Induttanza_rev1.pdf",
+    "Primo Anno/Fisica/Lezioni/23-Forze_e_Campi_Magnetici-compresso.pdf",
+    "Primo Anno/Fisica/Lezioni/22-Corrente_e_Circuiti_in_Corrente_Continua-compresso_rev2.pdf",
+    "Primo Anno/Fisica/Lezioni/21-Potenziale_Elettrico_e_Capacità-compresso_rev1.pdf",
+    "Primo Anno/Fisica/Lezioni/20-Forza_Elettrica_e_Campo_Elettrico-compresso_rev1.pdf",
+    "Primo Anno/Fisica/Lezioni/19-Secondo_Principio_della_Termodinamica-compresso.pdf",
+    "Primo Anno/Fisica/Lezioni/18-Primo_Principio_della_Termodinamica_Rev2-compresso.pdf",
+    "Primo Anno/Fisica/Lezioni/17-Temperatura_e_Teoria_Cinetica_dei_Gas-compresso.pdf",
+    "Primo Anno/Fisica/Lezioni/16-Meccanica_dei_Fluidi-compresso.pdf",
+    "Primo Anno/Fisica/Formulario finale.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 17 - Dijkstra.md",
@@ -217,10 +227,7 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 10 - NF 1 - MaxFlox e MinCut, Algoritmo Ford-Fulkerson.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 12 - NF 2 - Applicazioni del flusso.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 18 - Tabelle Hash.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 1 - Algoritmo.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Immagini/Pasted image 20250617111958.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527120717.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526145107.png",
@@ -229,13 +236,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526143120.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/k_center2.gif",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526142758.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/k_center.gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Esercitazioni",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/img",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 4.pdf"
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/k_center.gif"
   ]
 }
