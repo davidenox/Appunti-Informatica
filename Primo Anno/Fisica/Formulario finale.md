@@ -22,3 +22,10 @@ x(t)=x_0+V_{x,0}t+\frac{1}{2}a_xt^2\implies\text{Legge oraria}
 \end{cases}$$
 Accelerazione di gravità: $g=9,81 [m/s^2]$ (se il moto è verso l'alto $g$ cambia di segno)
 ##### Vettori e moti dimensionali
+$\Delta\vec{r}=\vec{r_f}-\vec{r_i}$ : Vettore spostamento
+*Traiettoria* : insieme dei vettori $\vec{r}(t)$ al variare di $t$
+$\vec{V}_{med}=\frac{\Delta\vec{r}}{\Delta t}$ Velocità **media**
+$\vec{V}=\lim_{\Delta t\rightarrow\infty}\frac{\Delta\vec{r}}{\Delta t}=\vec{r'}(t)$ Velocità **istantanea**
+$\vec{a}_{med}=\frac{\Delta\vec{V}}{\Delta t}$ Accelerazione **media**
+$\vec{a}=\lim_{\Delta t\rightarrow\infty}\frac{\Delta\vec{V}}{\Delta t}=\vec{V'}(t)=\vec{r''}(t)$ accelerazione **istantanea**
+
