@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "Formulario finale"
             }
-          },
-          {
-            "id": "4fff4c26af6a1091",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Primo Anno/Fisica/Esami/Formulario Fisica (2).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Formulario Fisica (2)"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -202,12 +189,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4fff4c26af6a1091",
+  "active": "8846b6ec0a110f1b",
   "lastOpenFiles": [
-    "Primo Anno/Fisica/Formulario finale.md",
     "_temp/orario.md",
-    "Primo Anno/Fisica/Lezioni/02-Cinematica_Moto_Rettilineo_last.pdf",
+    "Primo Anno/Fisica/bozza.md",
     "Primo Anno/Fisica/Esami/Formulario Fisica (2).pdf",
+    "Primo Anno/Fisica/Formulario finale.md",
+    "Primo Anno/Fisica/Lezioni/02-Cinematica_Moto_Rettilineo_last.pdf",
     "Primo Anno/Fisica/Lezioni/01-Introduzione_GrandezzeFisiche_Misure-compresso.pdf",
     "Primo Anno/Fisica/Lezioni/programma",
     "Primo Anno/Fisica/Lezioni/25-Onde_Elettromagnetiche-compresso.pdf",
@@ -238,8 +226,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 1 - Interval Scheduling ed Interval Partitioning.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 11 - NF 1 - Teorema di MaxFlow e MinCut.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 10 - NF 1 - MaxFlox e MinCut, Algoritmo Ford-Fulkerson.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 12 - NF 2 - Applicazioni del flusso.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 18 - Tabelle Hash.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Immagini/Pasted image 20250617111958.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527120717.png",
