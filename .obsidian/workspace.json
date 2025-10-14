@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
-                "mode": "source",
+                "file": "Primo Anno/Fisica/bozza.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Introduzione"
+              "title": "bozza"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
+                "file": "Primo Anno/Fisica/bozza.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Algoritmi implementati"
+              "title": "Struttura di bozza"
             }
           },
           {
@@ -189,11 +189,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9afb1ef4ed9334be",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
     "Primo Anno/Fisica/bozza.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Primo Anno/Fisica/Formulario finale.md",
     "_temp/orario.md",
@@ -206,7 +206,6 @@
     "Primo Anno/Fisica/Lezioni/23-Forze_e_Campi_Magnetici-compresso.pdf",
     "Primo Anno/Fisica/Lezioni/22-Corrente_e_Circuiti_in_Corrente_Continua-compresso_rev2.pdf",
     "Primo Anno/Fisica/Lezioni/21-Potenziale_Elettrico_e_Capacità-compresso_rev1.pdf",
-    "Primo Anno/Fisica/Lezioni/20-Forza_Elettrica_e_Campo_Elettrico-compresso_rev1.pdf",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 17 - Dijkstra.md",
