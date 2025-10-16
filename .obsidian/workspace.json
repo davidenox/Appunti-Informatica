@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "14254971aaf6b74d",
+        "id": "769e67d4ec800a1d",
         "type": "tabs",
         "children": [
           {
-            "id": "9afb1ef4ed9334be",
+            "id": "381d87847ab79492",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Fisica/bozza.md",
-                "mode": "preview",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bozza"
+              "title": "1. Introduzione"
             }
           }
         ]
@@ -189,11 +189,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "381d87847ab79492",
   "lastOpenFiles": [
+    "Primo Anno/Fisica/bozza.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
-    "Primo Anno/Fisica/bozza.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Primo Anno/Fisica/Formulario finale.md",
     "_temp/orario.md",
