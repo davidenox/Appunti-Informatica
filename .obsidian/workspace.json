@@ -11,12 +11,14 @@
             "id": "381d87847ab79492",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "CAPITOLO 1"
+              "icon": "lucide-file",
+              "title": "2. Livello di applicazione"
             }
           }
         ]
@@ -189,13 +191,13 @@
   },
   "active": "381d87847ab79492",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Primo Anno/Fisica/bozza.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
     "Primo Anno/Fisica/Formulario finale.md",
     "_temp/orario.md",
     "Primo Anno/Fisica/Esami/Formulario Fisica (2).pdf",
@@ -224,7 +226,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 2 - Struttura dati Union-Find.md",
     "Terzo Anno/Vulnerabilità dei Sistemi Internet/Comandi - 2025.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 13 - Intrattabilità I.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 15 - Intrattabilità III.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Immagini/Pasted image 20250617111958.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527120717.png",
