@@ -11,12 +11,14 @@
             "id": "381d87847ab79492",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf"
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "CAPITOLO 2"
+              "icon": "lucide-file",
+              "title": "2. Livello di applicazione"
             }
           }
         ]
@@ -148,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Fisica/bozza.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di bozza"
+              "title": "Struttura di 2. Livello di applicazione"
             }
           },
           {
@@ -187,18 +189,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "381d87847ab79492",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Primo Anno/Fisica/bozza.md",
+    "Primo Anno/Fisica/Formulario finale.md",
+    "Primo Anno/Fisica/Esami/Formulario Fisica (2).pdf",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md",
-    "Primo Anno/Fisica/bozza.md",
-    "Primo Anno/Fisica/Formulario finale.md",
     "_temp/orario.md",
-    "Primo Anno/Fisica/Esami/Formulario Fisica (2).pdf",
     "Primo Anno/Fisica/Lezioni/02-Cinematica_Moto_Rettilineo_last.pdf",
     "Primo Anno/Fisica/Lezioni/01-Introduzione_GrandezzeFisiche_Misure-compresso.pdf",
     "Primo Anno/Fisica/Lezioni/programma",
@@ -206,7 +209,6 @@
     "Primo Anno/Fisica/Lezioni/24-Legge_di_Faraday_e_Induttanza_rev1.pdf",
     "Primo Anno/Fisica/Lezioni/23-Forze_e_Campi_Magnetici-compresso.pdf",
     "Primo Anno/Fisica/Lezioni/22-Corrente_e_Circuiti_in_Corrente_Continua-compresso_rev2.pdf",
-    "Primo Anno/Fisica/Lezioni/21-Potenziale_Elettrico_e_Capacità-compresso_rev1.pdf",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 17 - Dijkstra.md",
