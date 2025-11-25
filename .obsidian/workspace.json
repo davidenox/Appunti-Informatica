@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Intelligenza Artificiale/Lezioni/Indice.md",
+                "file": "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Indice"
+              "title": "Ch.2 - Risolvere i problemi con la ricerca"
             }
           }
         ]
@@ -191,11 +191,15 @@
   },
   "active": "381d87847ab79492",
   "lastOpenFiles": [
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/Lezione 1.md",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.1 - Agenti Intelligenti.md",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
+    "Pasted image 20251125154056.png",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/0_Indice.md",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/Lezione 2.md",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251125124125.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251124125229.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251124123338.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251124123317.png",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/Indice.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img",
     "Terzo Anno/Intelligenza Artificiale/Lezioni",
@@ -228,13 +232,10 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 3 - MST, Algoritmo di Kruskal.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 17 - Approssimazioni.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 16 - Algoritmi di Approssimazione.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 2 - Struttura dati Union-Find.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Immagini/Pasted image 20250617111958.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527120717.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526145107.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/k_center_ex.gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/ezgif.com-animated-gif-maker(6).gif",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526143120.png"
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/k_center_ex.gif"
   ]
 }

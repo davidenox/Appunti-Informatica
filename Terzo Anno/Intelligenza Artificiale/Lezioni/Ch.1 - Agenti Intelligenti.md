@@ -65,3 +65,109 @@ Il caso più difficile è:
 - Continuo;
 - Ignoto.
 ![[Pasted image 20251124125229.png|center|500]]
+
+Il compito dell'IA è progettare il **programma agente** che implementa la funzione agente, che fa corrispondere le percezioni alle azioni. Il programma sarà eseguito da un dispositivo computazionale dotato di sensori ed attuatori fisici. Questo prende il nome di **architettura agente**: $$agente=architettura+programma$$
+In generale, l'architettura si occupa di:
+
+- Rendere le percezioni *disponibili* al programma;
+- *Eseguire* il programma stesso;
+- *Passare* le azioni scelte agli attuatori man mano che vengono generate.
+
+Di seguito un programma agente che tiene traccia della sequenza percettiva e poi la usa per selezionare l'azione da intraprendere in una tabella (funzione agente):
+
+```
+function AGENTE-CON-TABELLA(percezione) returns un'azione;
+	persistent: percezioni, una sequenza inizialmente vuota
+	
+	tabella, una tabella di azioni,
+	indicizzata per sequenze percettive,
+	completamente specificata dall'inizipo
+	
+	aggiungi percezione alla fine di percezioni
+	azione <- LOOKUP (percezioni, tabella)
+	return azione
+```
+
+Per costruire un agente razionale con questa tecnica, i progettisti devono costruire una tabella che contenga l'azione appropriata per ogni possibile sequenza percettiva.
+Questo approccio, basato su tabelle esplicite, è però destinato al *fallimento*: 
+Sia $P$ l'insieme di possibili percezioni e $T$ la durata di vita dell'agente (numero totale di percezioni che riceverà), allora la sua tabella dovrà contenere $\sum_{t=1}^T |P|^t$ righe.
+L'enorme dimensione di queste tabelle comporta che:
+1. Nessun agente fisico nell'universo avrà mai spazio necessario per memorizzarle;
+2. Il progettista non avrà mai il tempo per crearle;
+3. Nessun agente avrà mai il tempo di apprendere le righe corrette in base all'esperienza.
+
+Nonostante ciò, `AGENTE-CON-TABELLA` implementa effettivamente la funzione agente desiderata (assumendo che la tabella sia riempita in modo corretto).
+
+> La sfisa principale dell'IA sta nel trovare il modo di scrivere programmi che, nella massima misura possibile, producano un comportamento razionale con una piccola quantità di codice anziché con un'enorme tabella.
+
+# Tipologie di agenti
+## Agenti reattivi semplici
+
+Questi agenti scelgono le azioni sulla base della *percezione corrente*, ignorando tutta la storia percettiva precedente. 
+
+Di seguito uno de possibili programmi agente per l'agente reattivo semplice *aspirapolvere*:
+```
+function AGENTE-REATTIVO-ASPIRAPOLVERE[(posizione, stato)] returns azione
+
+	if stato = Sporco then return Aspira
+	else if posizione = A then return Destra
+	else if posizione = B then return Sinistra
+```
+
+Il programma agente è molto più piccolo della tabella corrispondente. La riduzione più importante deriva dall'aver ignorato la storia delle percezioni, che riduce il numero di sequenze percettive rilevanti da $4^T$ a $4$. Un'ulteriore piccola riduzione deriva dal fatto che  che quando il riquadro corrente è sporco l'azione non dipende dalla posizione.
+La connessione `if sporco then aspira` prende il nome di **regola condizione-azione**:
+![[Pasted image 20251125124125.png|center|500]]
+*Diagramma schematico di un agente reattivo semplice. I rettangoli denotano lo stato interno corrente del processo decisionale dell'agente, mentre gli ovali rappresentano le informazioni di base utilizzate nel processo*
+
+Un possibile programma agente può essere:
+```
+function Agente-Reattivo-Semplice(percezione) returns azione
+	persistent: regole, insieme di regole condizione-azione
+	stato <- Interpreta-Input(percezione)
+	regola <- Regola-Corrispondente(stato, regole)
+	azione <- regola.Azione
+	return <- azione
+```
+
+La funzione `Interpreta-Input` genera una decisione astratta dello stato corrente partendo dalla percezione, mentre la funzione `Regola-Corrispondente` restituisce la prima regola dell'inzieme che corrisponde a tale descrizione.
+
+Gli agenti reattivi semplici hanno l’ammirevole proprietà di essere semplici, ma la loro intelligenza è molto limitata. L’agente nella figura funzionerà solo se si può selezionare la decisione corretta in base alla sola percezione corrente, ovvero solo nel caso in cui l’ambiente sia completamente osservabile. Anche una minima parte di non-osservabilità può causare grandi problemi. Spesso gli agenti reattivi semplici non sono in grado di evitare cicli infiniti quando operano in ambienti parzialmente osservabili.
+
+Evitare i cicli infiniti è possibile quando l’agente è in grado di **randomizzare** le sue azioni, scegliendone una in modo casuale.
+
+## Agenti reattivi basati su modello
+
+In questo caso l'agente tiene traccia dello stato del mondo tramite:
+
+- **Modello Sensoriale**:
+	Come lo stato del mondo influenza le percezioni dell'agente;
+- **Modello di transazione**:
+	L'effetto dell'azione dell'agente e come si evolve il mondo indipendentemente dall'agente.
+
+Il modello di transazione ed il modello sensoriale, insieme, consentono ad un agente di tenere traccia dello stato del mondo, per quanto possibile date le limitazioni dei sensori.
+Questo significa che l'agente deve mantenere una sorta di **stato interno** che dipende dalla storia delle percezioni che che quindi riflette almeno una parte degli aspetti non osservabili dello stato corrente.
+Quindi l'agente fa un'ipotesi dell'aspetto corrente del mondo in base all'azione precedentemente eseguita, all'evoluzione del mondo e allo stato attuale in base alla percezione ottenuta.
+
+## Agente con obiettivo
+
+L'agente sceglie l'azione migliore al fine di raggiungere il suo obiettivo. In altre parole, oltre alla descrizione dello stato corrente l'agente ha bisogno di qualche informazione riguardante il suo **obiettivo**, che descrive situazioni desiderabili.
+
+In questo caso non ci si basa più sulle regole di condizione-azione, poiché l'azione scelta prende in considerazione il **grado di soddisfacimento** e le conseguenze dopo averla eseguita.
+Non è efficiente ma flessibile, poiché la conoscenza che guida le sue decisioni può essere modificata. La **ricerca** e la **pianificazione** sono sottocampi dell'IA dedicati proprio ad identificare le sequenze di azioni che permettono ad un agente di raggiungere i propri obiettivi
+
+## Agente basato sull'utilità
+
+L'agente sceglie l'azione in base ad una **funzione di utilità**, ovvero il grado di soddisfacimento che l'agente ottiene in base allo stato del mondo risultante da quell'azione.
+Questo modello ha vantaggi in termini di flessibilità ed apprendimento, e la funzione di utilità tiene conto delle probabilità di successo e dell'importanza degli obiettivi.
+Questo agente, quindi, sceglie l'azione che massimizza l'**utilità attesa**, ovvero l'utilità che l'agente si attende di ottenere, in media, date le probabilità e le utilità di ciascun risultato.
+
+Ogni agente descritto può essere costruito come **agente capace di apprendere**. È diviso in quattro componenti astratte:
+1. **Elemento di apprendimento**:
+	Responsabile del miglioramento interno;
+2. **Elemento esecutivo**:
+	Che seleziona le azioni esterne;
+3. **Elemento critico**:
+	Che rappresenta le prestazioni correnti dell'agente. L'elemento di apprendimento prende dall'elemento critico e decide se modificare l'elemento esecutivo al fine di migliorarlo;
+4. **Generatore di problemi**:
+	Suggerisce azioni con lo scopo di eseguire esperienze nuove e significative.
+![[Pasted image 20251125154056.png|center|500]]
