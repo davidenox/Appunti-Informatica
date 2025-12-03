@@ -32,3 +32,37 @@ L'insieme degli stati e le azioni dell'agente possono essere rappresentati trami
 - Root = Stato iniziale;
 - Nodo = Qualunque stato;
 - Ramo = Azione qualunque.
+A sua volta, il nodo può essere definito come una *struttura dati* composta da informazioni come:
+- Stato del nodo;
+- Padre del nodo;
+- Azione eseguita dal nodo padre per generare il nodo corrente;
+- Costo del cammino dalla radice al nodo corrente.
+
+## Strategie di ricerca non informata
+### BFS
+
+>**Quando usarla**:
+>	È utile utilizzare la BFS quando tutte le azioni hanno lo stesso costo.
+>**Come funziona**:
+>	Dalla radice, si visitano tutti i nodi per gradi di profondità dell'albero. Prima di visitare un qualunque nodo, si verifica se è lo stato obiettivo: in tal caso, si riporta la *soluzione*, altrimenti si visita il nodo e si generano i nodi figli, che verranno inseriti in una coda FIFO.
+>**Vantaggi**:
+>	La ricerca trova la soluzione con un numero minimo di azioni, poiché, quando genera i nodi di profondità $d$, ha già generato tutti i nodi di profondità $d-1$.
+>**Funzione di valutazione** $f(n)$:
+>	Numero di azioni per raggiungere $n$.
+>**Costo**: 
+>	$O(b^d)$ sia dal punto di vista spaziale che temporale, con $b=foglie$ e $d=profondità$.
+
+### Dijkstra
+
+>**Quando usarlo**:
+>	Si utilizza l'algoritmo di Dijkstra quando le azioni hanno costi differenti.
+>**Come funziona**: 
+>	Ad ogni azione, aggiunge ad un insieme $X$ di nodi il nodo la cui stima della distanza radice-nodo è minima. Se durante la ricerca trova un arco che raggiunge lo stesso nodo già bisitato con distanza minore rispetto al cammino precedente allora lo sostituisce.
+>**Funzione di valutazione** $f(n)$: 
+>	Costo del cammino.
+>**Costo**:
+>	$O(b^{(1+\frac{C^*}{\varepsilon})})$ dove $C^*$ è il costo della soluzione ottima e $\varepsilon$ il limite inferiore al costo.
+
+### DFS
+
+>
