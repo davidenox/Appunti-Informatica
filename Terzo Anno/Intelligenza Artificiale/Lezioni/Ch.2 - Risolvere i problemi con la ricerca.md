@@ -65,4 +65,52 @@ A sua volta, il nodo può essere definito come una *struttura dati* composta da 
 
 ### DFS
 
+>**Quando usarla**:
+>	È utile utilizzare la DFS per gli spazi degli stati finiti.
+>**Come funziona**:
+>	Dalla radice si scende di nodo in nodo fino ad una foglia, risalendo poi o al nodo padre o al figlio non visitato.
+>**Vantaggi**:
+>	Poca memoria necessaria, inesistenza di una tabella di nodi raggiunti e riduzione dei nodi nella frontiera.
+>**Costo**:
+>	$O(b\cdot m)$ dove $b$ è il fattore di ramificazione ed $m$ la massima profondità dell'albero.
 >
+>**Variante**: Backtracking
+>**Come funziona**: 
+>	Dopo aver visitato un nodo, viene generato un solo suo successore, e vengono ricordati i successori ancora da generare. I successori sono generati modificando la descrizione dello stato corrente.
+>**Vantaggio**: 
+>	Viene allocata meno memoria - $O(m)$.
+>
+>**Variante**: Profondità limitata
+>**Quando usarla**:
+>	Anche per spazi degli stati infiniti, poiché viene posto un limite di profondità $l$ per evitare che l'algoritmo si perda in un cammino infinito. Scelta di $l$ importante.
+>**Costo**:
+>	$O(b^l)$ Temporale e $O(b\cdot l)$ Spaziale.
+>	
+>**Variante**: Approfondimento iterativo
+>**Come funziona**:
+>	Pone una ricerca all'incrementare del valore $l$. Quindi, parte per $l=1$  e se fallisce parte con $l=2$  e così via.
+>	
+>**Variante**: Ricerca bidirezionale
+>**Come funziona**: 
+>	L'algoritmo si muove verso due direzioni: dallo stato iniziale allo stato obiettivo e viceversa, espandendo il nodo con il valore minimo della funzione di valutazione. Si ha una soluzione quando le due frontiere si incontrano.
+
+## Algoritmi di ricerca informata
+
+L'agente deve essere in grado di *stimare* quanto lontano si trovi dall'obiettivo, in modo da scegliere la direzione più promettente da seguire. Per raggiungere questo scopo, l'agente utilizza una **funzione euristica** che rappresenta una valutazione del costo stimanto per arrivare all'obiettivo a partire dallo stato attuale.
+Questa funzione $h$ associa a ciascun nodo $n$ una stima numerica $h(n)$ del costo del cammino più economico che porta dallo stato attuale allo stato obiettivo.
+
+### Best-First Greedy
+
+>**Funzione di valutazione**: 
+>	$f(n)=h(n)$.
+>**Funzionamento**: 
+>	Espande i nodi con $h(n)$ minimo.
+>**Vantaggio**:
+>	Non espande nodi superflui che non portano alla soluzione.
+>**Svantaggio**: 
+>	La soluzione non ha il costo ottimale.
+>**Costo**:
+>	$O(|V|)$ Temporale e Spaziale; $O(b\cdot m)$ con una buona euristica.
+
+### A*
+p9
