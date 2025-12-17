@@ -113,4 +113,43 @@ Questa funzione $h$ associa a ciascun nodo $n$ una stima numerica $h(n)$ del cos
 >	$O(|V|)$ Temporale e Spaziale; $O(b\cdot m)$ con una buona euristica.
 
 ### A*
-p9
+
+L'algoritmo A* utilizza la funzione di valutazione $f(n)=g(n)+h(n)$, dove:
+
+- $g(n)$ è il costo effettivo del cammino dalla radice al nodo $n$;
+- $h(n)$ è il costo stimato del cammino dal nodo $n$ allo stato obiettivo.
+
+Per verificare l'ottimalità dell'algoritmo è importante introdurre i concetti di:
+
+- **Ammissibilità**: La funzione euristica non sovrastima mai il costo per raggiungere un obiettivo;
+- **Consistenza**: Per ogni nodo $n$ e suo successore $n'$ generato da un'azione $a$, deve valere $h(n)\le c(n,a,n')+h(n)$.
+
+>[!important] Prima proprietà
+>Se l'euristica è consistente, allora è ammissibile, e quindi ottima rispetto al costo.
+
+>[!important] Seconda proprietà
+>Con un'euristica consistente, il primo percorso per raggiungere uno stato è ottimo.
+
+Se l'euristica *non* è ammissibile, esistono due casi di ottimalità rispetto al costo:
+
+- Se esiste un solo cammino ottimo rispetto al costo lungo cui $h(n)$ è ammissibile per ogni $n$ sul suo cammino, allora tale cammino verrà trovato;
+- Se $h(n)$ sovrastima alcuni costi ma non è mai $\lt C_2-C^*$, allora A* restituisce sempre soluzioni ottime rispetto al costo.
+
+Una problematica di A* è lo spazio in memoria: $O(b^d)$. È possibile migliorare tale risultato con l'algoritmo **Beam Search**, che mantiene solamente i $k$ nodi più 'promettenti' della frontiera.
+
+### ID A*
+	A* con approfondimento iterativo
+
+ID A* applica i vantaggi di A* e determina il valore di taglio dal *limite di costo*, non di profondità. Nella ricerca ID A* la soglia è $f(g+h)$, ovvero la somma tra stima e percorso complessivo. 
+L'algoritmo ha costo $O(d\cdot b)$.
+![[Pasted image 20251217122948.png|center|500]]
+
+### Best-First Ricorsivo
+
+
+
+### SM A*
+
+
+
+## Valutazioni delle funzioni euristiche

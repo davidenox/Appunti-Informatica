@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ch.2 - Risolvere i problemi con la ricerca"
+              "title": "README"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Ch.2 - Risolvere i problemi con la ricerca"
+              "title": "Struttura di README"
             }
           },
           {
@@ -191,8 +191,9 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217122948.png",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.1 - Agenti Intelligenti.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251125154056.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/0_Indice.md",
@@ -231,11 +232,9 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 4 - Algoritmo di Prim e k-Clustering.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 3 - MST, Algoritmo di Kruskal.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 17 - Approssimazioni.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 16 - Algoritmi di Approssimazione.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Immagini/Pasted image 20250617111958.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527120717.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526145107.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/k_center_ex.gif"
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526145107.png"
   ]
 }

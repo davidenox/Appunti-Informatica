@@ -1,5 +1,5 @@
 # Appunti-Informatica
-Questo è un vault scritto su Obsidian riguardante appunti su ogni materia del corso di informatica di cui ho bisogno. Alcuni appunti sono incompleti a causa della successiva riorganizzazione del metodo di studio.
+Questo è un vault Obsidian riguardante appunti su ogni materia del corso di informatica di cui ho bisogno. Alcuni appunti sono incompleti a causa della successiva riorganizzazione del metodo di studio, mentre altri sono appunti di colleghi studenti che ho adattato per me (Peace✌️​).
 
 Appunti di:
 
@@ -10,6 +10,7 @@ Appunti di:
 	- Logica e Reti Logiche (LRL)
 	- Programmazione dei Calcolatori con Laboratorio (PR)
 	- Fisica (FI)
+
 2° anno:
 
 	- Algoritmi e Strutture Dati (ASD)
@@ -19,6 +20,7 @@ Appunti di:
     - Linguaggi e Metodologie di Programmazione (LMP)
     - Ricerca Operativa (RO)
     - Sistemi Operativi e Reti (SOR)
+
 3° anno:
 
 	- Calcolo Numerico (CN)
@@ -26,6 +28,7 @@ Appunti di:
 	- Vulnerabilità e Difesa dei Sistemi Internet (VDSI)(A scelta, Ing. di Internet)
 	- Ingegneria del Software (ISW)
 	- Algoritmi per i Big Data (ABD)
+	- Intelligenza Artificiale (IA)
  
  Per visionare correttamente gli appunti nel modo in cui io stesso ho dato interpretazione, è opportuno clonare la repository e vederla come vault di Obsidian (esclusa ovviamente la parte di coding, che ho sviluppato interamente su VSC)
  
