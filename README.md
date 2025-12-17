@@ -30,6 +30,8 @@ Appunti di:
 	- Algoritmi per i Big Data (ABD)
 	- Intelligenza Artificiale (IA)
  
- Per visionare correttamente gli appunti nel modo in cui io stesso ho dato interpretazione, è opportuno clonare la repository e vederla come vault di Obsidian (esclusa ovviamente la parte di coding, che ho sviluppato interamente su VSC)
+ Per visionare correttamente gli appunti nel modo in cui io stesso ho dato interpretazione, è opportuno clonare la repository e vederla come vault di Obsidian (esclusa ovviamente la parte di coding, che ho sviluppato interamente su VSC).
+
+N.B. L'ordine degli appunti non rispecchia l'indicizzazione dei libri o dei testi da cui sono tratti, ma l'ordine cronologico in cui sono stati studiati.
  
  :)

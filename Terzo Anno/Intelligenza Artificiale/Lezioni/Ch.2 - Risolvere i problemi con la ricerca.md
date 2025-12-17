@@ -146,10 +146,42 @@ L'algoritmo ha costo $O(d\cdot b)$.
 
 ### Best-First Ricorsivo
 
-
+Replica del comportamento del [[Ch.2 - Risolvere i problemi con la ricerca#Best-First Greedy|Best-First Greedy]], ma in spazio lineare. Aggiunge una variabile `f-limite` per tenere traccia del miglior cammino alternativo che si origina da un antenato del nodo corrente.
+Quando il valore $f$ del nodo corrente supera il limite stabilito, l'algoritmo riparte dal cammino alternativo individuato. In questa fase il valore del nodo abbandonato viene aggiurnato con il miglior valore $f$ tra i figli, il che permette all'algoritmo di riesaminare quel nodo in un momento successivo in cui potrebbe essere conveniente espanderlo nuovamente.
 
 ### SM A*
 
-
+Stessa funzione di valutazione di A*, ma gestisce diversamente la memoria.
+Espande la foglia migliore fino ad esaurimento della memoria, per poi eliminare la foglia con il valore $f$ più alto e memorizzare quel valore nel nodo padre come '$f$ dimenticato'.
+L'algoritmo può rigenerare quella foglia solo se tutti gli altri cammini hanno un valore $f$ maggiore rispetto al cammino abbandonato.
+Questo algoritmo differenzia dagli altri per l'utilizzo intensivo della memoria, che permette di espandere il maggior numero possibile di nodi.
 
 ## Valutazioni delle funzioni euristiche
+
+**Per essere ammissibile un'euristica non deve superare il costo effettivo delle operazioni necessarie per raggiungere la soluzione.** 
+
+Negli algoritmi non informati la funzione euristica $h(n)$ assume il valore $0$ per ogni nodo $n$, mentre negli algoritmi di ricerca informata l'euristica $h^*(n)$ fornisce una stima esatta del costo per raggiungere la soluzione. In generale,$$0\le h(n)\le h^*(n)$$Se si considerano due euristiche $h_1$ ed $h_2$, con $h_1\le h_2$, allora $h_2$ possiede un **livello di informazione maggiore** rispetto ad $h_1$. Tuttavia, utilizzare $h_2$ in un algoritmo comporta tempi di ricerca ridotti per trovare il cammino ottimale, ma a fronte di un costo di calcolo più elevato rispetto ad $h_1$.
+
+### Misura del potere euristico 
+
+>**Fattore di diramazione effettivo** $b^*$:
+>	Data una ricerca informata, si ha:
+>	- $N$ = numero di nodi espansi;
+>	- $d$ = profondità.
+>	Sapendo che $N+1=1+(b^*)^1+(b^*)^2+\dots+(b^*)^d$ possiamo determinare $b^*$:
+>Es. 
+>$d=5,N=52\implies b^5+b^4+...+b-52=0\implies b=1,92$. 
+>Una buona euristica ha $b^*\lt 1,5$.
+
+### Invenzione di un'euristica
+	Strategie
+
+1. **Rilassamento del problema**:
+	- Un *problema rilassato* è una versione semplificata del problema, ottenuta riducendo il numero di vincoli sulle azioni possibili. Questa semplificazione permette di definire euristiche specifiche per il problema rilassato, che forniscono una stima esatta del costo per risolverlo.
+2. **Massimo di euristiche**:
+	- Se un problema dispone di $m$ euristiche ammissibili, e nessuna di queste domina le altre, utilizziamo la combinazione: $$h(n)=\max\{h_1(n),...,h_m(n)\}.$$
+	- In questo modo selezioniamo l'euristica che fornisce la stima più alta tra quelle disponibili, garantendo di risolvere il problema anche nel caso peggiore.
+3. **Generarla dai sottoproblemi**:
+	- Derivando euristiche ammissibili dal costo di una soluzione di un sottoproblema: Memorizzare in un pattern di DB i costi esatti di ogni istanza del sottoproblema. Per ogni sottoproblema, è possibile calcolare $h_{DB}$ per ogni stato incontrato nella ricerca. Il risultato è caratterizzato da euristiche molto più accurate ma anche da un costo rilevante di memoria e tempo.
+4. **Apprendere dall'esperienza**:
+	- Ogni soluzione ottima è rappresentata da una tupla (obiettivo, cammino). A partire da queste soluzioni, è possibile utilizzare un algoritmo di apprendimento per costruire un'euristica in grado di approssimare il costo del cammino reale, applicabile ad altri stati che potrebbero emergere durante la ricerca.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Ch.3 - Ricerca in ambienti complessi"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di README"
+              "title": "Struttura di Ch.3 - Ricerca in ambienti complessi"
             }
           },
           {
@@ -170,7 +170,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -189,12 +189,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "d1cc2cbf4f940f27",
   "lastOpenFiles": [
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217153051.png",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217152322.png",
+    "README.md",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.1 - Agenti Intelligenti.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217122948.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.1 - Agenti Intelligenti.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251125154056.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/0_Indice.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Lezione 2.md",
@@ -230,11 +234,8 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 6 - DP 2 - Weighted Interval Scheduling, Longest Increasing Subsequence, House Coloring Problem.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 5 - DP 1 - Insieme Indipendente.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 4 - Algoritmo di Prim e k-Clustering.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 3 - MST, Algoritmo di Kruskal.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 17 - Approssimazioni.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Immagini/Pasted image 20250617111958.png",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527120717.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250526145107.png"
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527120717.png"
   ]
 }
