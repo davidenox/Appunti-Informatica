@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ch.3 - Ricerca in ambienti complessi"
+              "title": "3. Livello di trasporto"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Ch.3 - Ricerca in ambienti complessi"
+              "title": "Struttura di 3. Livello di trasporto"
             }
           },
           {
@@ -170,7 +170,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -189,16 +189,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
+    "Primo Anno/Fisica/bozza.md",
+    "Primo Anno/Fisica/Formulario finale.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217153051.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217152322.png",
     "README.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.1 - Agenti Intelligenti.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217122948.png",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251125154056.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/0_Indice.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Lezione 2.md",
@@ -214,9 +217,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 2.pdf",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Riassunti/CAPITOLO 1.pdf",
-    "Primo Anno/Fisica/bozza.md",
-    "Primo Anno/Fisica/Formulario finale.md",
     "Primo Anno/Fisica/Esami/Formulario Fisica (2).pdf",
     "_temp/orario.md",
     "Primo Anno/Fisica/Lezioni/02-Cinematica_Moto_Rettilineo_last.pdf",
@@ -235,7 +235,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 5 - DP 1 - Insieme Indipendente.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 4 - Algoritmo di Prim e k-Clustering.md",
     "Secondo Anno/Fondamenti di Informatica/Modulo 1/Immagini/Pasted image 20250617111958.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527120717.png"
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png"
   ]
 }
