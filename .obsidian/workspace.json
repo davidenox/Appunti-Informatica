@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Comeback Totale/SOR/SO/Lezioni/L2 - Dalle architetture ai SO.md",
+                "file": "Comeback Totale/SOR/SO/Lezioni/L3 - Concetti base dei SO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "L2 - Dalle architetture ai SO"
+              "title": "L3 - Concetti base dei SO"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Comeback Totale/SOR/SO/Lezioni/L3 - Concetti base dei SO.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di README"
+              "title": "Struttura di L3 - Concetti base dei SO"
             }
           },
           {
@@ -174,7 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 212
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,11 +189,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "908e27dbace64ec5",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Pasted image 20260309152931.png",
-    "Comeback Totale/SOR/SO/Lezioni/Index.md",
     "Comeback Totale/SOR/SO/Lezioni/L2 - Dalle architetture ai SO.md",
+    "Comeback Totale/SOR/SO/Lezioni/L3 - Concetti base dei SO.md",
+    "Comeback Totale/SOR/SO/img/Pasted image 20260309160420.png",
+    "Comeback Totale/SOR/SO/img/Pasted image 20260309160004.png",
+    "Comeback Totale/SOR/SO/img/Pasted image 20260309155445.png",
+    "Comeback Totale/SOR/SO/img/Pasted image 20260309155221.png",
+    "Comeback Totale/SOR/SO/img/Pasted image 20260309155150.png",
+    "Comeback Totale/SOR/SO/img/Pasted image 20260309154825.png",
+    "Comeback Totale/SOR/SO/img/Pasted image 20260309154418.png",
+    "Comeback Totale/SOR/SO/img/Pasted image 20260309152931.png",
+    "Pasted image 20260309153341.png",
+    "Comeback Totale/SOR/SO/Lezioni/Index.md",
     "README.md",
     "Comeback Totale/SOR/SO/img",
     "Comeback Totale/SOR/SO/Lezioni",
@@ -214,17 +223,10 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217153051.png",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217152322.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.1 - Agenti Intelligenti.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251217122948.png",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251125154056.png",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/0_Indice.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Lezione 2.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251125124125.png",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251124125229.png",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251124123338.png",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/img/Pasted image 20251124123317.png",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
@@ -234,8 +236,6 @@
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 17 - Dijkstra.md",
     "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 13 - Coda con priorità.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md",
-    "Secondo Anno/Fondamenti di Informatica/Modulo 1/Immagini/Pasted image 20250617111958.png",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/img/Pasted image 20250527152319.png"
+    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 7 - HeapSort.md"
   ]
 }
