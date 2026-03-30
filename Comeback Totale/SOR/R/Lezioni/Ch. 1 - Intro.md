@@ -118,3 +118,30 @@ Si parla di collegamenti ad alta larghezza di banda che collegano centinaia o mi
 >**Canali radio**:
 >- Trasportano segnali nello spettro elettromagnetico, per cui non richiedono l'installazione fisica di cavi;
 >	- WiFI, 4G/5G, Bluetooth, Microonde, Satellitari
+
+# Nucleo della rete
+Per **nucleo della rete** si intende una maglia di commutatori di pacchetto e collegamenti che interconnettono i sistemi periferici di Internet.
+
+**Packet Switching**: i sistemi periferici suddividono i messaggi di livello applicativo in *pacchetti*.
+- La rete *inoltra* i pacchetti da un router al successivo attraverso collegamenti (links) lungo un *percorso* (path/route) dalla sorgente alla destinazione.
+- I pacchetti sono inoltrati *indipendentemente*, senza prenotazione delle risorse.
+
+## Inoltro ed instradamento
+- **Inoltro**(*forwarding*): Azione *locale*, sposta i pacchetti in arrivo al collegamento di ingresso del router al collegamento di uscita appropriato.
+- **Instradamento**(*routing*): Azione *globale*, determina i percorsi presi dai pacchetti dalla sorgente alla destinazione; opera grazie ad algoritmi di instradamento.
+
+>Store-and-forward
+
+![[Pasted image 20260330111940.png|center|500]]
+
+- *delay di trasmissione*: Servono $L/R$ secondi per trasmettere pacchetti di $L$ bit attraverso un collegamento a $R$ bps.
+- *store-and-forward*: Il router deve aver ricevuto l'intero pacchetto prima di poter cominciare a trasmettere sul collegamento in uscita.
+
+Delay end-to-end per la trasmissione di un pacchetto su un percorso di $N$ collegamenti di pari velocità $R$: $$d_{end-to-end}=N\frac{L}{R}$$
+Delay end-to-end per la trasmissione di P pacchetti su un percorso di N collegamenti di pari velocità R:$$d_{end-to-end}=(N+P-1)\frac{L}{R}$$
+**Accodamento**(*queuing*): Si verifica quando il lavoro arriva più velocemente di quanto possa essere servito.
+Se il tasso di arrivo eccede il tasso di trasmissione per un certo periodo di tempo:
+- I pacchetti si accodano in attesa di essere trasmessi sul collegamento in uscita;
+- I pacchetti possono essere scartati (persi) se la memoria (buffer)  si riempie.
+
+**Commutazione di Circuito**
