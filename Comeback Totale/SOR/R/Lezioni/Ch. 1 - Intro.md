@@ -145,3 +145,101 @@ Se il tasso di arrivo eccede il tasso di trasmissione per un certo periodo di te
 - I pacchetti possono essere scartati (persi) se la memoria (buffer)  si riempie.
 
 **Commutazione di Circuito**
+
+Le risorse richieste lungo un percorso per consentire la comunicazione tra sistemi periferici sono riservate per l'intera durata della sessione di comunicazione. La rete stabilisce una *connessione punto a punto*, detta **circuito**.
+Viene utilizzato comunemente nelle reti telefoniche tradizionali:
+![[Pasted image 20260403160153.png|center|500]]
+
+### FDM e TDM
+
+>**Multiplexing a divisione di Frequenza**(*FDM*)
+>- Spettro di frequenza diviso in *bande*: bande adiacenti sono separate da piccoli intervallli di *guardia* non usati.
+>- Ogni circuito ha una propria banda, può trasmettere alla velocità massima di quella banda ristretta.
+>![[Pasted image 20260403160413.png|center|500]]
+
+>**Multiplexing a divisione di Tempo**(*TDM*)
+>- Tempo suddiviso in *frame* di durata fissa, ripartiti in un numero fisso di *slot*.
+>- Ciascun circuito riceve slot periodici, può trasmettere alla massima velocitàdella banda di frequenza (più ampia) solo nei propri slot temporali.![[Pasted image 20260403160609.png|center|500]]
+
+## Pacchetto vs. Circuito
+
+![[Pasted image 20260403160811.png|center|500]]
+
+***Domanda***: Quanti utenti possono usare questa rete sotto ciascuna commutazione?
+- *Commutazione di circuito*: 10 utenti;
+- *Commutazione di pacchetto*: Con 35 utenti, probabilità >10 attivi allo stesso tempo è meno di 0,0004
+
+***Domanda***: Che succede se soltanto uno degli utenti è attivo?
+- *Commutazione di circuito*: L'utente attivo può trasmettere ad una velocità media di 100Mbps, inferiore alla capacità del collegamento (1Gbps), parte della quale è stata preallocata agli altri utenti e rimarrà inutilizzata;
+- *Commutazione di pacchetto*: L'unico utente attivo può trasmettere continuamente pacchetti alla massima velocità del collegamento (1Gbps).
+
+***Domanda finale***:*La commutazione di pacchetto è una 'vincitrice assoluta'*?
+- Ottima per i dati "a raffica":
+	- Più semplice, non necessita l'impostazione della chiamata.
+- *Eccessiva congestione*: Ritardo e perdita di pacchetti in caso di buffer overflow:
+	- Sono necessari i protocolli per il trasferimento affidabile dei dati e per il controllo della congestione.
+- *Ritardi end-to-end variabili ed imprevedibili*: A causa della variabilità ed imprevedibilità dei ritardi di accodamento:
+	- Servizi in tempo reale (telefonia, videoconferenza,..).
+# Struttura di internet: "rete di reti"
+
+I sistemi periferici accedono ad Internet tramite gli Internet Service Provider (**ISP**) di *accesso*. Essi però devono essere *interconnessi* a loro volta (in modo che due host, qualsiasi ed ovunque, possano inviare i pacchetti l'uno all'altro).
+
+**Domanda**: Dati *milioni* di ISP di accesso, come collegarli tra loro?
+![[Pasted image 20260403162327.png|center|500]]
+
+- Connettere direttamente ogni ISP di accesso all'altro risulta impossibile e non scalabile ($O(n^2)$).
+**Opzione**:  Collegare ogni ISP di accesso ad un ISP globale di transito?
+- ISP *cliente* e *fornitore* hanno un accordo economico:
+![[Pasted image 20260403162600.png|center|500]]
+
+Ma se un ISP globale è un'alternativa vantaggiosa, ci saranno concorrenti..
+
+![[Pasted image 20260403162945.png|center|500]]
+
+... e ISP regionali possono sorgere per collegare gli ISP di accesso agli ISP di primo livello:
+
+![[Pasted image 20260403163132.png|center|600]]
+
+... E le reti di fornitori di contenuti (Google, Microsoft,...) possono gestire la propria rete, per avvicinare servizi e contenuti agli utenti finali:
+![[Pasted image 20260403163327.png|center|600]]
+
+## Struttura finale
+
+![[Pasted image 20260403163406.png|center]]
+
+Al "centro": un piccolo numero di grandi reti ben connesse:
+- *ISP di primo livello* (**ISP Tier 1**): Possiede una rete globale e può raggiungere ogni altra rete su Internet esclusivamente tramite accordi di peering "settlement-free".
+- *Rete di fornitori di contenuti* (Google, Facebook,..): Reti private che connettono i suoi data center a Internet, spesso aggirando ISP Tier 1 e regionali..
+
+# Prestazioni
+## Perdite, ritardi, throughput
+
+I pacchetti si *accodano* nei buffer del router, aspettando il proprio turno per la trasmissione. La lunghezza della coda cresce quando il tasso di arrivo dei pacchetti sul collegamento eccede la capacità del collegamento di evaderli.
+La **perdita** dei pacchetti avviene quando la memoria che contiene la coda dei pacchetti si riempie. 
+Ci sono quattro cause:
+![[Pasted image 20260403171900.png|center|500]]
+
+1. $d_{elab}$: *Elaborazione di nodo*:
+	 - Controllo errori sui bit;
+	 - Determinazione del collegamento di uscita;
+	 - Tipicamente < microsecondi.
+2. $d_{acc}$: *Ritardo di accodamento*:
+	- Attesa di trasmissione;
+	- Dipende dal livello di congestione del router.
+3. $d_{trasm}$: *Ritardo di trasmissione*:
+	- L = lunghezza del pacchetto;
+	- R = tasso di trasmissione del collegamento;
+	- $d_{trasm}=\frac{L}{R}$, non dipende dalla lunghezza del collegamento né dalla velocità di propagazione del segnale.
+4. $d_{prop}$: *Ritardo di propagazione*:
+	 - d = lunghezza del collegamento fisico;
+	 - v = velocità di propagazione ($\sim 2\cdot 10^8 m/s$);
+	 - $d_{prop}=\frac{d}{v}$, non dipende dalla lunghezza del pacchetto né dalla velocità di trasmissione.
+
+**Altre cause**:
+- Un host può essere costretto ad attendere prima di inviare un pacchetto su un canale condiviso, perché deve rispettare le regole del protocollo di accesso al mezzo utilizzato da tutti i dispositivi collegati;
+- Ritardo di pacchettizzazione nelle applicazioni multimediali in tempo reale;
+- ecc..
+
+## Ritardo end-to-end
+
+p03ip2s38
