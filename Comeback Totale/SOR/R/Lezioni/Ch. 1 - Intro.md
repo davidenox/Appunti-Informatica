@@ -242,4 +242,90 @@ Ci sono quattro cause:
 
 ## Ritardo end-to-end
 
-p03ip2s38
+I ritardi totali di nodo in cui è incorso un pacchetto lungo il suo percorso dalla sorgente alla destinazione si accumulano: $$d_{end-to-end}=\sum_i (d_{elab_i}+d_{acc_i}+d_{trasm_i}+d_{prop_i}).$$
+## Ritardo di accodamento dei pacchetti
+
+- $a$ = velocità media di arrivo dei pacchetti;
+- $L$ = lunghezza del pacchetto (bit);
+- $R$ = velocità di trasmissione (bit).
+$$\frac{L\cdot a}{R}:\frac{\text{velocità di arrivo dei bit}}{\text{velocità di servizio dei bit}}=\text{Velocità di traffico}.$$
+- $L\cdot a / R\sim0$: ritardo di accodamento medio piccolo;
+- $L\cdot a/R=1$: ritardo di accodamento grande;
+- $L\cdot a/R>1$: più lavoro in arrivo di quanto possa essere servito.
+
+La coda (buffer) che precede un collegamento ha capacità finita : quando un pacchetto trova la coda piena viene scartato (quindi perso). Il pacchetto perso può essere ritrasmesso dal nodo precedente, dal sistema terminale che lo ha generato o non essere più ritrasmesso.
+![[Pasted image 20260413112329.png|center|500]]
+
+## Throughput
+
+>[!important] **Throughput** - frequenza (bits/s) alla quale i bit sono trasferiti tra mittente e ricevente. Istantaneo o medio
+
+![[Pasted image 20260413112546.png|center|500]]
+
+Il throughput end-to-end non può superare la velocità di trasmissione dei collegamenti attraversati dal flusso di dati:
+- Se il percorso non è interessato da altro traffico $throughput\sim\min\{R_i\}$ con $R_i$ velocità di trasmissione dell'i-esimo collegamento;
+- Altrimenti, occorre considerare la frazione disponibile della capacità del collegamento.
+Quindi, il throughput effettivo può essere inferiore a causa di altri fattori.
+
+# Sicurezza di rete
+
+## Intercettazione dei pacchetti
+
+**Packet Sniffing**:
+- Media broadcast (ethernet condivisa, wireless);
+- Interfaccia di rete promiscua legge/registra tutti i pacchetti che l'attraversa.
+![[Pasted image 20260413113513.png|center|500]]
+
+**IP Spoofing** - iniezione di pacchetti con indirizzo sorgente falso:![[Pasted image 20260413113603.png|center|500]]
+Usi:
+- Ostacolare identificazione/blocco di una sorgente di attacco;
+- Sfruttare relazioni di fiducia tra host;
+- Indirizzare messaggi di risposta verso B, montando un attacco di negazione di servizio contro B, basato sull'ampliamento di traffico generato da C.
+
+**DoS** - Negazione di servizio:
+Gli aggressori rendono una rete, un host o un altro elemento infrastrutturale non disponibile per gli utenti legittimi. Tre categorie:
+- *Attacchi alla vulnerabilità di sistemi*: Invio di pochi pacchetti costruiti ad hoc per causare il blocco di un servizio o lo spegnimento di un host, sfruttando vulnerabilità delle applicazioni o dei SO.
+- *Bandwidth flooding*: Invio massivo di pacchetti all'host obiettivo impedendo al traffico legittimo di raggiungerlo.
+- *Connection flooding*: Stabilire un gran numero di connessioni TCP con l'host obiettivo, impedendogli di accettare connessioni legittime.
+
+## Linee di difesa
+
+- **Autenticazione**: dimostrare la propria identità
+- **Riservatezza**: cifratura di dati sensibili;
+- **Integrità**: tramite firme digitali che prevengono/rilevano manomissioni;
+- **Restrizioni di accesso**: VPN protette da password;
+- **Firewalls**: "middlebox" specializzate nelle reti di accesso e di base
+- ...
+
+# Livelli di protocollo e modelli di servizio
+
+Complessità delle reti: 
+- Host
+- Router
+- Mezzi trasmissivi
+- Applicazioni
+- Protocolli
+- HW/SW
+È possibile organizzare l'architettura delle reti?
+
+*Layer* - ogni livello implementa un servizio effettuando determinate azioni all'interno del livello ed utilizzando i servizi del livello immediatamente inferiore.
+- Una struttura esplicita consente l'identificazione dei vari componenti di un sistema complesso e delle loro inter-relazioni - *analisi del modello di riferimento a strati*.
+- La modularizzazione facilita la manutenzione e l'aggiornamento di un sistema.
+Tuttavia, un livello può duplicare funzionalità del livello inferiore. Esiste la necessità di violare la separazione tra livelli, perché un livello ha bisogno di un'informazione disponibile solo all'interno del livello inferiore.
+
+## Pila protocollare
+
+- **Applicazione** - supporto alle applicazioni di rete (HTTP,IMAP,SMTP,DNS);
+- **Trasporto** - trasferimento di dati tra processi in esecuzione su host differenti (TCP,UDP);
+- **Rete** - trasferimento di pacchetti di rete (datagrammi) da un host all'altro (IP, protocolli di instradamento);
+- **Collegamento** - trasferimento dati tra elementi di rete vicini (Ethernet, WiFi, PPP);
+- **Fisico** - bit "sul filo".
+
+**Service Model**:
+- Insieme dei servizi offerti da un livello a quello superiore;
+- I diversi servizi possono essere implementati da protocolli diversi;
+- Il livello di collegamento può offrire servizi diversi in base a protocollo impiegato sul link;
+- Un protocollo a livello di collegamento può prevedere diversi protocolli a livello fisico dipendentemente dalla tecnologia di trasmissione e dal mezzo trasmissivo del link. 
+
+**Incapsulamento**
+l4p24
