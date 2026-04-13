@@ -328,4 +328,28 @@ Tuttavia, un livello può duplicare funzionalità del livello inferiore. Esiste 
 - Un protocollo a livello di collegamento può prevedere diversi protocolli a livello fisico dipendentemente dalla tecnologia di trasmissione e dal mezzo trasmissivo del link. 
 
 **Incapsulamento**
-l4p24
+![[Pasted image 20260413140010.png|center|500]]
+
+Un protocollo di livello n può essere *distribuito* tra sistemi periferici, commutatori di pacchetto ed altri elementi di rete. Host, router e switch implementano ciascuna solo i livelli adeguati alle loro funzionalità. Il livello di rete può ricevere un servizio diverso dai protocolli del livello di collegamento, man mano che un datagramma attraversa collegamenti di tipo diverso.
+
+**Incapsulamento - visione end-to-end** 
+
+- L'intestazione del datagramma contiene gli indirizzi a livello di rete (IP) dell'host sorgente e dell'host destinazione. Questi indirizzi non cambiano mentre il pacchetto attraversa la rete a meno di alcuni casi.
+- Ad ogni salto (hop) lungo il percorso, l'intestazione del frame di livello 2 viene aggiornata con gli indirizzi a livello di collegamento (MAC) del dispositivo sorgente e del dispositivo destinazione immediatamente adiacente.
+- Gli switch sono trasparenti (mai indirizzati esplicitamente).
+- Dal punto di vita del livello di rete, due nodi sono adiacenti se possono comunicare direttamente tra loro tramite il livello di collegamento, senza dover passare per un router.
+
+**n-PDU** - protocol data unit - *implementazione dei livelli*:
+È la singola unità di informazione scambiata tra pari attraverso un protocollo di livello n:
+- Specifiche informazioni di controllo per il protocollo;
+- Carico utile (payload): in genere $(n+1)-PDU$.
+
+![[Pasted image 20260413142527.png|center|500]]
+
+**Modello di riferimento ISO/OSI**
+Due strati non presenti nella pila di protocolli di internet.
+- *Presentazione*: Consente alle applicazioni di interpretare il significato dei dati (es. crittografia, compressione, convenzioni specifiche della macchina);
+- *Sessione*: Sincronizzazione, checkpointing, ripristino dello scambio di dati.
+La pila di internet manca di questi strati, e questi servizi (se necessari) devono essere implementati nelle applicazioni.
+Quando si parla di livello $n$, si fa in genere riferimento al modello ISO/OSI. I livelli sono numerati dal basso verso l'alto secondo lo schema:![[Pasted image 20260413144156.png|center|500]]
+
