@@ -165,13 +165,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Ch. 1 - Intro"
+              "title": "Struttura di Ch. 2 - Applicazione"
             }
           },
           {
@@ -204,10 +204,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "daf882561ca7ec88",
+  "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Comeback Totale/SOR/R/Esercizi/Esercizi Ch. 1.md",
+    "Comeback Totale/SOR/R/img/Pasted image 20260417163746.png",
+    "Comeback Totale/SOR/R/img/Pasted image 20260417163322.png",
+    "Senza nome.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione.md",
+    "Comeback Totale/SOR/R/img/Pasted image 20260417123259.png",
+    "Comeback Totale/SOR/R/Esercizi/Esercizi Ch. 1.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione",
     "Comeback Totale/SOR/R/Esercizi",
     "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
@@ -219,8 +223,6 @@
     "Comeback Totale/SOR/R/img/Pasted image 20260413112546.png",
     "Comeback Totale/SOR/R/img/Pasted image 20260413112329.png",
     "Comeback Totale/SOR/R/img/Pasted image 20260403171900.png",
-    "Comeback Totale/SOR/R/img/Pasted image 20260403171845.png",
-    "Comeback Totale/SOR/R/img/Pasted image 20260403163406.png",
     "Comeback Totale/SOR/SO/Lezioni/L3 - Concetti base dei SO.md",
     "Comeback Totale/SOR/R/img",
     "Comeback Totale/SOR/R/Lezioni",
@@ -249,8 +251,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
-    "_temp/orario.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Algoritmi implementati.md",
-    "Secondo Anno/Algoritmi e Strutture Dati/Modulo 1/Lezioni/Lezione 12 - Alberi AVL.md"
+    "_temp/orario.md"
   ]
 }
