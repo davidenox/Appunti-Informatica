@@ -94,4 +94,120 @@ Un protocollo a livello applicazione definisce:
 ![[Pasted image 20260417163746.png|center|500]]
 
 # Web e HTTP
-p6sl19
+## Panoramica HTTP
+**HTTP**(*HyperText Transfer Protocol*):
+- Protocollo a livello applicazione del Web;
+- Modello client/server:
+	- *client*: browser che richiede, riceve e 'visualizza' gli oggetti del Web;
+	- *server*: il server Web che invia oggetti in risposta alle richieste.
+
+*HTTP usa TCP*:
+- Il client inizializza la connessione TCP con il server sulla porta 80;
+- Il server accetta la connessione TCP dal client;
+- Messaggi HTTP scambiati tra browser e server Web;
+- Connessione chiusa TCP.
+
+HTTP è un protocollo *stateless*: il server non mantiene informazioni sulle richieste fatte dal client.
+Due tipi di connessioni:
+1. **Connessioni non persistenti**:
+	- Connessione TCP aperta;
+	- Una singola coppia richiesta/risposta HTTP per un singolo oggetto;
+	- Connessione TCP chiusa.
+	- Lo scaricamento di oggetti multipli richiede connessioni multiple.
+2. **Connessioni persistenti**:
+	- Connessione TCP al server aperta;
+	- Più coppie richiesta/risposta HTTP, per trasmettere più oggetti su una singola connessione TCP tra server e client;
+	- Connessione TCP chiusa.
+
+### Tempo di risposta
+
+**RTT**: Tempo impiegato da un piccolo pacchetto per andare dal client al server e ritornare al client (include ritardi di elaborazione, accodamento, propagazione).
+**Tempo di risposta**(per oggetto): 
+- Un RTT per inizializzare la connessione TCP;
+- Un RTT perché ritornino la richiesta HTTP ed i primi byte della riposta HTTP;
+- Tempo di trasmissione del file/oggetto
+*Tempo di risposta per connessioni non persistenti*: $2RTT+$ tempo di trasmissione file.
+
+### Connessioni persistenti
+	HTTP 1.1
+**Svantaggi connessioni non persistenti**:
+- Richiedono 2RTT per oggetto;
+- Allocazione di buffer e variabili per *ogni* connessione TCP;
+- I browser spesso aprono connessioni TCP parallele per collegare gli oggetti referenziati:
+	- Maggiore onere sul server web;
+	- Controllo della congestione: throughput inizialmente limitato per nuove connessioni (MA connessioni multiple permettono di aggirare la suddivisione equa della banda tra le applicazioni).
+**Connessioni Persistenti**:
+- Il server lascia la connessione TCP aperta dopo l'invio di una risposta;
+- I successivi messaggi tra gli stessi client/server vengono trasmessi sulla connessione aperta;
+- Il client invia le richieste non appena incontra un oggetto referenziato;
+- Un solo RTT per tutti gli oggetti referenziati.
+
+### Messaggi HTTP
+
+Due tipi di messaggi HTTP: *richiesta, risposta*.
+
+**Messaggio di richiesta HTTP**:
+![[Pasted image 20260420115556.png|center|500]]
+- *Host*: Hostname e numero di porta (se assente si assume 80 per http e 443 per https) del server al quale sarà inviata la richiesta. Necessario per il funzionamento delle web cache e del name-based virtual hosting.
+- *User-Agent*: Identifica l'applicazione, il SO, il *vendor* e/o la versione dello user-agent che sta effettuando la richiesta.
+- *Accept*: Tipi di contenuto compresi dal client.
+- *Accept-Language*: Linguaggi naturali preferiti dal client.
+- *Accept-Encoding*: Algoritmi di codifica compresi dal client.
+- *Connection*: Controlla se la connessione rimarrà aperta al termine dello scambio richiesta/risposta. Il valore *close* indica che la connessione sarà chiusa; altrimenti, una lista non vuota di nomi di header indica che la connessione rimarrà aperta.
+![[Pasted image 20260420120413.png|center|500]]
+
+- **Post**:
+	- La pagina web spesso include un form per l'input dell'utente;
+	- L'input dell'utente viene inviato dal client al server nel corpo dell'entità di un messaggio di richiesta HTTP POST.
+- **Head**:
+	- Richiede le intestazioni che verrebbero restituite se l'URL specificato fosse richiesto con il metodo HTTP GET.
+- **Get** (per inviare dati al server):
+	- L'input arriva al server nel campo URL della riga di richiesta (dopo un '?').
+- **Put**: 
+	- Carica un nuovo file sul server;
+	- Sostituisce completamente il file esistente all'URL specificato con il contenuto del corpo dell'entità del messaggio di richiesta HTTP PUT.
+
+**Idempotenza**:
+Un'operazione si dice *idempotente* se l'effetto intero sul server di una singola richiesta è lo stesso di quello di più richieste identiche.
+- GET, PUT, HEAD sono idempotenti;
+- POST no.
+Un form può essere implementato usando:
+- GET se l'operazione associata al form è idempotente;
+- POST se l'operazione associata al form NON è idempotente.
+Il concetto di idempotenza è utile per stabilire se un client può *ritentare* in automatico una richiesta in caso di problemi di rete.
+
+**Messaggio di risposta HTTP**:
+![[Pasted image 20260420142018.png|center|500]]
+- *Date*: Data e ora in cui il messaggio è stato originato;
+- *Server*: Descrive il sw usato dal server di origine per gestire la richiesta;
+- *Last-Modified*: La data e l'ora in cui il server di origine crede che l'oggetto sia stato modificato l'ultima volta;
+- *Accept-Ranges*: Indica il supporto del server ai download parziali: Il valore, se diverso da NONE, indica l'unità che si può usare per esprimere l'intervallo richiesto;
+- *Content-Lenght*: Lunghezza in byte del corpo dell'entità inviato al ricevente;
+- *Content-Type*: Formato del corpo dell'entità inviato al ricevente.
+#### Codici di stato della risposta HTTP
+Raggruppati in cinque categorie, differenziate dalla prima cifra:
+- 1xx **Informal**:
+	- Risposta intermedia per comunicare lo stato di connessione o l'avanzamento della richiesta prima di completare l'azione richiesta ed inviare una risposta finale.
+- 2xx **Successful**:
+	- La richiesta è stata ricevuta con successo, compresa ed accettata.
+- 3xx **Redirect**:
+	- Il client deve eseguire ulteriori azioni per soddisfare la richiesta.
+- 4xx **Client Error**:
+	- La richiesta è sintatticamente scorretta o non può essere soddisfatta.
+- 5xx **Server Error**:
+	- Il server ha fallito nel soddisfare una richiesta apparentemente valida
+### Mantenere stato utente/server: Cookie
+L'interazione HTTP GET/risposta è *stateless*: Nessuna nozione di scambio di messaggi HTTP in più fasi per completare una 'transazione' Web. 
+- Non è necessario che il client o il server tengano traccia dello "stato" dello scambio in più fasi. 
+- Tutte le richieste HTTP sono indipendenti l'una dall'altra.
+- Non è necessario che il client né il server siano in grado di 'recuperare' da una transazione quasi completa ma mai completata.
+I siti web ed il browser client usano i *cookie* per mantenere lo stato tra le transazioni. Quattro componenti:
+1. Una riga di intestazione nel messaggio di risposta HTTP;
+2. Una riga di intestazione nel messaggio di richiesta HTTP;
+3. Un file cookie mantenuto sul sistema terminale dell'utente e gestito dal browser dell'utente;
+4. Un db sul sito.
+![[Pasted image 20260420155536.png|center|500]]
+
+**Commenti**
+
+pdf6sl39
