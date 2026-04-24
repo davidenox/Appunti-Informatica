@@ -210,4 +210,86 @@ I siti web ed il browser client usano i *cookie* per mantenere lo stato tra le t
 
 **Commenti**
 
-pdf6sl39
+I cookie possono essere usati per:
+- Autorizzazione;
+	- ![[Pasted image 20260424120931.png|center|500]]
+- Carrello degli acquisti;
+- Raccomandazioni;
+- Stato della sessione dell'utente.
+È possibile mantenere lo stato della sessione tramite gli endpoint del protocollo, utilizzando multiple transazioni.
+
+I cookie possono essere usati per:
+- Tracciare il comportamento degli utenti su un dato sito (*cookie di prima parte*);
+- Tracciare il comportamento degli utenti su più siti (*cookie di terze parti*) senza che l'utente abbia mai scelto di visitare il sito del tracker (!).
+- Il tracciamento può essere *invisibile* all'utente
+
+### Web Cache
+
+**Obiettivo**: Soddisfare la richiesta del client senza coinvolgere il server di origine.
+- L'utente configura il browser per usare una *web cache* locale.
+- Il browser trasmette tutte le richieste HTTP alla cache:
+	- *Se* l'oggetto è nella cache: la cache fornisce l'oggetto al client;
+	- *Altrimenti*: la cache richiede l'oggetto al server di origine, memorizza l'oggetto ricevuto e lo restituisce infine al client.
+In altre parole la cache opera come client per il server di origine e come server per il client originale.
+
+#### GET condizionale
+
+**Obiettivo**: non inviare un oggetto se la cache ha una copia aggiornata dell'oggetto.
+- *Client*: specifica la data della copia dell'oggetto nella richiesta HTTP;
+- *Server*: la risposta non contiene l'oggetto se la copia nella cache è aggiornata.
+
+Il web caching riduce i tempi di risposta alle richieste dei client, riduce il traffico sul collegamento di accesso a Internet istituzionale, ed in generale riduce il traffico globale su Internet.
+
+#### Note
+
+Il caching può essere effettuato da:
+- Una web cache, ossia uno speciale tipo di proxy, cui il browser invia le richieste invece che indirizzarle al server d'origine;
+- Oppure, dal browser stesso, che conserva una copia degli oggetti richiesti in precedenza.
+In entrambi i casi occorre prestare attenzione al problema dell'aggiornamento degli oggetti.
+
+## HTTP 2
+
+**Obiettivo principale**: Diminuzione del ritardo nelle richieste HTTP a più oggetti.
+
+>**HTTP 1.1** ha introdotto *GET multiple in più pipeline* su una singola connessione TCP:
+>- Il server risponde *in ordine* (FCFS) alle richieste GET;
+>- Con FCFS oggetti piccoli possono dover aspettare per la trasmissione (*head-of -line* **HOL***blocking*) dietro a uno o più oggetti grandi
+>- Il recupero delle perdite (ritrasmissione dei segmenti TCP persi) blocca la trasmissione degli oggetti
+
+>**HTTP 2** maggiore flessibilità del server nell'invio di oggetti al client:
+>- metodi, codice di stato, maggior parte dei campi di intestazione inalterati rispetto a HTTP 1.1
+>- Introduce una codifica binaria dei messaggi, con supporto alla compressione degli header
+>- Ordine di trasmissione degli oggetti richiesti basata su una priorità degli oggetti specificata dal client (non necessariamente FCFS)
+>- Invio *push* al client di oggetti aggiuntivi, senza che il client li abbia richiesti
+>- Dividere gli oggetti (messaggi) in frame, alternare i frame relativi ad oggetti (messaggi) diversi per mitigare il blocco HOL.
+
+Affrontando l'HOL, HTTP2 vuole permettere di scaricare una pagina conpiù oggetti attraverso una singola connessione TCP:
+- Minor overhead sul server;
+- Miglior funzionamento del controllo della congestione TCP.
+
+**HTTP 3** aggiunge sicurezza, controllo di errore (per oggetto)  e congestione (più pipelining) su UDP.
+
+# Email, SMTP, IMAP
+
+## Email
+Tre componenti principali:
+- User Agent;
+- Mail Server;
+- Simple Mail Transfer Protocol - **SMTP**.
+
+*User-Agent*:
+- Detto anche 'mail reader';
+- Composizione, editing, lettura dei messaggi;
+- I messaggi in uscita/arrivo sono memorizzati sul server;
+- es. Outlook
+
+*Mail Servers*:
+- `mailbox` (casella di posta) contiene i messaggi in arrivo per l'utente;
+- coda di messaggi da trasmettere.
+**Protocollo SMTP** tra mail server per inviare messaggi email:
+- *client* - mail server trasmittente;
+- *server* - mail server ricevente.
+
+**SMTP RFC**
+
+p7sl5
