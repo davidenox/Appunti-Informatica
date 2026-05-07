@@ -291,5 +291,68 @@ Tre componenti principali:
 - *server* - mail server ricevente.
 
 **SMTP RFC**
+- Usa TCP per trasferire in modo affidabile i messaggi di posta dal client al server (porta 25).
+	- *Trasferimento diretto*: dal server di posta del mittente al server di posta del destinatario.
+- Tre fasi di trasferimento:
+	- *handshaking*;
+	- *trasferimento dei messaggi*;
+	- *chiusura*.
 
-p7sl5
+### Note finali SMTP
+
+**Confronto con HTTP**
+**HTTP**: client pull $v_s$ **SMTP**: client push.
+Entrambi hanno un'interazione comando/risposta in ASCII, codici di stato.
+- HTTP: Ciascun oggetto è incapsulato nel suo messaggio di risposta;
+- SMTP: Più oggetti vengono trasmessi in un unico messaggio.
+SMTP usa connessioni persistenti, e richiede che il messaggio sia nel formato ASCII a 7 bit.
+
+**dot-stuffing**
+Una riga contenente soltanto un punto segna la fine di un'email. *SMTP* prevede una forma di escaping, il **dot-stuffing**:
+- Il client invia due punti anziché uno, quando questo si trova all'inizio di una riga;
+- Il servver sostituisce ogni sequenza di due ounti all'inizio di una riga con un solo punto.
+## Protocolli di accesso alla posta
+
+![[Pasted image 20260507154430.png|center|500]]
+
+- **SMTP**: consegna/memorizzazione sul server del destinatario.
+- Protocollo di accesso alla posta: ottenere i messaggi dal server.
+	- *IMAP*: Internet Mail Access Protocol $[RFC 3501]$:  messaggi memorizzati sul server, IMAP consente di recuperare, cancellare ed archiviare i messaggi memorizzati sul server.
+- **HTTP**: gmail, Hotmail, Yahoo!Mail,... consente interfaccia web sopra a SMTP (per l'invio) e IMAP per il recupero delle mail.
+
+# DNS - servizio di directory di Internet
+
+Nasce la necessità di dover mappare indirizzi ip (host e router) con nomi (persone) e viceversa. 
+
+**File *hosts*** - Associa un indirizzo IP a uno o più hostname:
+![[Pasted image 20260507155420.png|center|500]]
+
+*Anni '70*: `HOSTS.TXT`
+- Mantenuto dal Network Information Center (NIC) presso lo SRI;
+- Reso disponibile su un host designato (attraverso FTP);
+- Installatp dagli amministratori di sistema sui singoli nodi
+PROBLEMI:
+- Crescita del file;
+- Traffico generato sull'host dove era pubblicato.
+
+**Domain Name System** - *DNS*
+- Database distribuito implementato in una gerarchia di nameserver;
+- Protocollo a livello di applicazione che consente agli host ed ai server DNS di comunicare per *risolvere* i nomi (traduzione nome/indirizzo).
+	- si noti: funzioni critiche di Internet, implementate come protocollo a livello di applicazione;
+	- Complessità nelle parti periferiche della rete.
+
+**Servizi DNS**
+-  Traduzione degli Hostname in indirizzi IP;
+- Host aliasing
+	- nome canonico e alias;
+- Mail server aliasing;
+- Load distribution
+	- Server web replicati: più indirizzi IP corrispondono ad un solo nome.
+
+È opportuno pensare al DNS come ad un *enorme db distribuito*, con miliardi di record, ciascuno semplice. Gestisce molte interrogazioni al giorno:
+- Molte più letture che scritture;
+- Quasi tutte le transazioni Internet interagiscono col DNS.
+È organizzativamente e fisicamente decentralizzato, affidabile e sicuro.
+![[Pasted image 20260507163229.png|center|500]]
+
+l7sl23
