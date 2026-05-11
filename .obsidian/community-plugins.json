@@ -7,5 +7,6 @@
   "better-export-pdf",
   "mathlinks",
   "dataview",
-  "typewriter-mode"
+  "typewriter-mode",
+  "obsidian-link-converter"
 ]

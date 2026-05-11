@@ -39,7 +39,7 @@ Non è necessario scrivere programmi per i dispositivi nel nucleo della rete:
 
 Un processo invia/riceve messaggi a/da la sua *socket*. Una socket è analoga ad una porta:
 - Il processo mittente fa uscire il messaggio dalla propria socket e presuppone l'esistenza di un'infrastruttura esterna che trasporterà il messaggio, attraverso la rete, alla socket del processo di destinazione.
-- ![[Pasted image 20260417123259.png|center|500]]
+- ![center|500](Pasted%20image%2020260417123259.png)
 
 **Indirizzamento**
 
@@ -80,7 +80,7 @@ Un protocollo a livello applicazione definisce:
 >- *NON OFFRE* affidabilità, controllo di flusso, controllo di congestione, temporizzazione, ampiezza di banda minima, sicurezza, né setup della connessione.
 >- Offre alle applicazioni maggiore controllo sull'invio dei dati.
 
-![[Pasted image 20260417163322.png|center|500]]
+![center|500](Pasted%20image%2020260417163322.png)
 
 ### Rendere sicuro TCP
 
@@ -91,7 +91,7 @@ Un protocollo a livello applicazione definisce:
 - Offre connessioni TCP cifrate;
 - Controllo di integrità dei dati;
 - Autenticazione end-to-end.
-![[Pasted image 20260417163746.png|center|500]]
+![center|500](Pasted%20image%2020260417163746.png)
 
 # Web e HTTP
 ## Panoramica HTTP
@@ -147,14 +147,14 @@ Due tipi di connessioni:
 Due tipi di messaggi HTTP: *richiesta, risposta*.
 
 **Messaggio di richiesta HTTP**:
-![[Pasted image 20260420115556.png|center|500]]
+![center|500](Pasted%20image%2020260420115556.png)
 - *Host*: Hostname e numero di porta (se assente si assume 80 per http e 443 per https) del server al quale sarà inviata la richiesta. Necessario per il funzionamento delle web cache e del name-based virtual hosting.
 - *User-Agent*: Identifica l'applicazione, il SO, il *vendor* e/o la versione dello user-agent che sta effettuando la richiesta.
 - *Accept*: Tipi di contenuto compresi dal client.
 - *Accept-Language*: Linguaggi naturali preferiti dal client.
 - *Accept-Encoding*: Algoritmi di codifica compresi dal client.
 - *Connection*: Controlla se la connessione rimarrà aperta al termine dello scambio richiesta/risposta. Il valore *close* indica che la connessione sarà chiusa; altrimenti, una lista non vuota di nomi di header indica che la connessione rimarrà aperta.
-![[Pasted image 20260420120413.png|center|500]]
+![center|500](Pasted%20image%2020260420120413.png)
 
 - **Post**:
 	- La pagina web spesso include un form per l'input dell'utente;
@@ -177,7 +177,7 @@ Un form può essere implementato usando:
 Il concetto di idempotenza è utile per stabilire se un client può *ritentare* in automatico una richiesta in caso di problemi di rete.
 
 **Messaggio di risposta HTTP**:
-![[Pasted image 20260420142018.png|center|500]]
+![center|500](Pasted%20image%2020260420142018.png)
 - *Date*: Data e ora in cui il messaggio è stato originato;
 - *Server*: Descrive il sw usato dal server di origine per gestire la richiesta;
 - *Last-Modified*: La data e l'ora in cui il server di origine crede che l'oggetto sia stato modificato l'ultima volta;
@@ -206,13 +206,13 @@ I siti web ed il browser client usano i *cookie* per mantenere lo stato tra le t
 2. Una riga di intestazione nel messaggio di richiesta HTTP;
 3. Un file cookie mantenuto sul sistema terminale dell'utente e gestito dal browser dell'utente;
 4. Un db sul sito.
-![[Pasted image 20260420155536.png|center|500]]
+![center|500](Pasted%20image%2020260420155536.png)
 
 **Commenti**
 
 I cookie possono essere usati per:
 - Autorizzazione;
-	- ![[Pasted image 20260424120931.png|center|500]]
+	- ![center|500](Pasted%20image%2020260424120931.png)
 - Carrello degli acquisti;
 - Raccomandazioni;
 - Stato della sessione dell'utente.
@@ -313,7 +313,7 @@ Una riga contenente soltanto un punto segna la fine di un'email. *SMTP* prevede 
 - Il servver sostituisce ogni sequenza di due ounti all'inizio di una riga con un solo punto.
 ## Protocolli di accesso alla posta
 
-![[Pasted image 20260507154430.png|center|500]]
+![center|500](Pasted%20image%2020260507154430.png)
 
 - **SMTP**: consegna/memorizzazione sul server del destinatario.
 - Protocollo di accesso alla posta: ottenere i messaggi dal server.
@@ -325,7 +325,7 @@ Una riga contenente soltanto un punto segna la fine di un'email. *SMTP* prevede 
 Nasce la necessità di dover mappare indirizzi ip (host e router) con nomi (persone) e viceversa. 
 
 **File *hosts*** - Associa un indirizzo IP a uno o più hostname:
-![[Pasted image 20260507155420.png|center|500]]
+![center|500](Pasted%20image%2020260507155420.png)
 
 *Anni '70*: `HOSTS.TXT`
 - Mantenuto dal Network Information Center (NIC) presso lo SRI;
@@ -353,6 +353,100 @@ PROBLEMI:
 - Molte più letture che scritture;
 - Quasi tutte le transazioni Internet interagiscono col DNS.
 È organizzativamente e fisicamente decentralizzato, affidabile e sicuro.
-![[Pasted image 20260507163229.png|center|500]]
+![center|500](Pasted%20image%2020260507163229.png)
 
-l7sl23
+**Root name server**:
+- Ufficiale, contratto di ultima istanza da parte dei name server che non sono in grado di risolvere il nome - *Fornisce gli indirizzi IP dei TLD server*
+**Top-Level Domain server**:
+- Si occupano di domini come .com, .org, .net ... e di tutti i domini locali di alto livello come .it, .de, .uk,...
+- *Network Solutions*: Gestisce i server TLD per i domini .com e .net
+**DNS Server autoritativo**:
+- Server DNS propri di ciascuna organizzazione, forniscono i mapping ufficiali da hostname a IP per gli host dell'organizzazione;
+- Possono essere mantenuti dall'organizzazione o dal service provider.
+
+Quando l'host effettua una richiesta DNS, la query viene inviata al suo server DNS *locale*:
+- Il server DNS locale restituisce una risposta, rispondendo  dalla sua cache locale di coppie $(nome\rightarrow indirizzo)$ inoltrando la richiesta alla gerarchia DNS per la risoluzione.
+- Ciascun ISP ha un proprio server DNS locale;
+- Il server DNS locale non appartiene strettamente alla gerarchia dei server.
+
+**Interrogazione iterativa**:
+- Il server contattato risponde con il nome del server da contattare
+	- 'Non conosco questo nome, ma puoi chiederlo a questo server'.
+**Interrogazione ricorsiva**:
+- Affida il compito di tradurre il nome al server contattato
+**Caching ed aggiornamento dei record**:
+Una volta che un qualsiasi nameserver impara la mappatura, la mette nella *cache* e restituisce *immediatamente* il mapping nella cache in risposta ad una query.
+- Il caching migliora i tempi di risposta;
+- Le voci della cache vanno in timeout dopo un certo tempo;
+- I server TLD sono in genere memorizzati nella cache sei server dei nomi locali.
+Le voci nella cache potrebbero essere *obsolete*:
+- Se l'host con nome cambia il suo indirizzo IP, potrebbe non essere conosciuto su Internet fino alla scadenza di tutti i TTL.
+	- *traduzione  nome -> indirizzo best-effort*.
+
+## Record DNS
+**DNS**: db distribuito che memorizza record di risorsa (RR). 
+- Formato RR: `(name, value, type, ttl)`.
+	- `type=A`:
+		- `name` è l'hostname;
+		- `value` è l'IP.
+	- `type=NS`:
+		- `name` è il dominio (foo.com);
+		- `value` è l'hostname dell'authoritative name server per questo dominio.
+	- `type=CNAME`:
+		- `name` è l'alias di qualche nome canonico;
+		- `value` è il nome canonico.
+	- `type=MX`:
+		- `value` è il nome del server di posta associato a `name`.
+
+Nel DNS non esiste alcuna limitazione che impedisca di associare allo stesso `name` più record di tipi diversi. La principale eccezione è rappresentata dal fatto che non può esserci un record CNAME e nessun altro tipo di record per lo stesso `name`.
+**Ogni tipo di record risponde ad una domanda diversa**, posta da client diversi in momenti diversi.
+
+## Messaggi DNS
+*Domande* (query) e messaggi di *risposta* (reply), entrambi con lo stesso formato:
+Intestazione del messaggio:
+- *Identificazione*: numero di 16 bit per la domanda; la risposta alla domanda usa lo stesso numero.
+- *Flag*:
+	- Domanda o risposta;
+	- Richiesta di ricorsione;
+	- Ricorsione disponibile;
+	- DNS server autoritativo.
+![center|500](Pasted%20image%2020260511121315.png)
+
+### Inserire record nel db DNS
+Es. Nuova società `nomesocietà`.
+- Si registra il nome `nomesocietà.com` presso il *DNS Registrar*, fornendogli il nome e gli indirizzi IP degli authoritative name server.
+- Il registrar inserisce due RR nel TLD server .com:
+	- `(nomesocietà.com, nds1.nomesocietà.com, NS)`
+	- `(dns1.nomesocietà.com, 212.212.212.1, A)`
+- Si inserisce localmente nell'authoritative server:
+	- Un record A per `www.nomesocietà.com`;
+	- Un record MX per `nomesocietà.com`.
+
+### Sicurezza DNS
+
+*Attacchi DDoS*:
+- Bombardare di traffico di root server:
+	- Finora senza successo;
+	- Filtraggio del traffico;
+	- I server DNS locali mantengono in cache gli indirizzi IP dei server TLD, consentendo di aggirare i root server;
+- Bombardare il server TLD:
+	- Potenzialmente più pericoloso.
+*Attacco di spoofing*:
+- Intercettare le query DNS, restituendo risposte fasulle:
+	- DNS cache poisoning;
+	- RFC 4033:DNSSEC - servizi di autenticazione.
+
+# Applicazioni P2P
+
+**Architettura Peer-to-Peer**:
+- *Nessun* server sempre attivo
+- Sistemi periferici arbitrari comunicano direttamente
+- I peer richiedono un servizio ad altri peer e forniscono un servizio in cambio ad altri peer
+	- *Scalabilità intrinseca - nuovi peer portano nuova capacità di servizio e nuove richieste di servizio*
+- I peer sono connessi ad intermittenza e cambiano indirizzo IP
+	- Gestione complessa.
+![center|500](Pasted%20image%2020260511133503.png)
+
+**File distribution time: Client-Server**
+
+*Trasmissione via server*: deve inviare in sequenza $N$ copie di file
