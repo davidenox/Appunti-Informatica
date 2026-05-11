@@ -449,4 +449,41 @@ Es. Nuova società `nomesocietà`.
 
 **File distribution time: Client-Server**
 
-*Trasmissione via server*: deve inviare in sequenza $N$ copie di file
+*Trasmissione via server*: deve inviare in sequenza $N$ copie di file:
+- Tempo per inviare una copia: $F/u_s$.
+- Tempo per inviare $N$ copie: $NF/u_s$.
+*Client*: Ogni client deve scaricare una copia del file:
+- $d_{min}$= banda di download più bassa.
+- tempo di download per il client con banda minima è almento $F/d_{min}$.
+
+
+Tempo per distribuire F ad N client usando l'approccio client-server: $$D_{C-S}\ge\max\{NF/u_s,F/d_{min}\}$$ - Aumenta linearmente in $N$.
+
+Tempo per distribuire $F$ ad $N$ client usando l'approccio P2P:$$D_{P2P}\ge\max\{F/u_s,F/d_{min}, NF/(u_s+\sum u_i)\}$$
+**BitTorrent**
+- File diviso in chunk, in genere di 256kB
+- I peer nel torrent inviano/ricevono chunk del file.
+![[Ch. 2 - Applicazione-1778504968255.png]]
+
+Un peer che entra a far parte del torrent:
+- Non ha chunk del file, ma li accumulerà nel tempo da altri peer;
+- Si registra con un tracker, ottenendo la lista  di un sottoinsieme dei peer nel torrent, stabilisce una connessione con un sottoinsieme di questi, che sono detti peer "vicini".
+- Informa periodicamente il tracker che è ancora nel torrent.
+Mentre scarica chunk, un peer invia i chunk già in suo possesso agli altri peer. Un peer può cambiare i peer con cui scambia i chunk, ed una volta che un peer ha acquisito l'intero file, può lasciare il torrent o rimanerci come *seeder*.
+
+**Richiesta di chunk**
+- In ogni momento peer diversi hanno sottoinsiemi diversi di chunk
+- Periodicamente un peer chiede ai peer vicini l'elenco dei chunk in loro possesso
+- Il peer richiede ai peer i chunk mancanti, adottando la strategia del "*rarest first*", uniformando la distribuzione dei chunk, migliora la disponibilità globale e aumenta le possibilità di scambio (maggiore throughput).
+- Un peer appen entrato può chiedere un blocco in modo casuale, mentre quando sta per completare il file può adottare la strategia end game e richiedere lo stesso blocco a più peer simultaneamente.
+
+**Invio di chunk**
+- Un peer invia i chunk ai quattro peer vicini che attualmente gli inviano i chunk alla *velocità più alta*.
+	- Altri peer sono detti 'choked'
+	- Rivaluta i primi quattro posti ogni 10 secondi
+- Ogni 30 secondi: seleziona in modo causale un vicino ed inizia ad inviare chunk
+	- Questo peer è detto "optimistically unchocked"
+	- Il nuovo peer scelto può entrare nella top 4.
+
+# Streaming video e reti di distibuzione di contenuti
+pdf8sl13
