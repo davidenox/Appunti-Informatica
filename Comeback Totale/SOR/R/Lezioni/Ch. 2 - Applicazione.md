@@ -445,8 +445,9 @@ Es. Nuova società `nomesocietà`.
 	- *Scalabilità intrinseca - nuovi peer portano nuova capacità di servizio e nuove richieste di servizio*
 - I peer sono connessi ad intermittenza e cambiano indirizzo IP
 	- Gestione complessa.
-![center|500](Pasted%20image%2020260511133503.png)
+![center|493](Pasted%20image%2020260511133503.png)
 
 **File distribution time: Client-Server**
 
 *Trasmissione via server*: deve inviare in sequenza $N$ copie di file
+![Ch. 2 - Applicazione-1778500081942|532](Ch.%202%20-%20Applicazione-1778500081942.webp)
