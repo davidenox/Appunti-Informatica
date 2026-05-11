@@ -450,4 +450,3 @@ Es. Nuova società `nomesocietà`.
 **File distribution time: Client-Server**
 
 *Trasmissione via server*: deve inviare in sequenza $N$ copie di file
-![Ch. 2 - Applicazione-1778500081942|532](Ch.%202%20-%20Applicazione-1778500081942.webp)
