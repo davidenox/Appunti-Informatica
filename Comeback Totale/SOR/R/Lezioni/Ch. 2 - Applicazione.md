@@ -486,4 +486,12 @@ Mentre scarica chunk, un peer invia i chunk già in suo possesso agli altri peer
 	- Il nuovo peer scelto può entrare nella top 4.
 
 # Streaming video e reti di distibuzione di contenuti
-pdf8sl13
+Il traffico video in streaming è un grande consumatore di larghezza di banda di Internet.
+Le sfide sono la scala (raggiungere tanti utenti) e l'eterogeneità ( utenti diversi hanno capacità diverse ). La *soluzione* è un'infrastruttura distribuita a livello di applicazione.
+
+## Video
+Per video si intende una sequenza di immagini visualizzate a tasso costante (*frame rate*).
+- Immagine digitale: Un array di pixel, in cui ogni pixel è rappresentato da bit.
+- Codifica: Utilizzare la ridondanza *all'interno* e *tra* le immagini per ridurre il numero di bit utilizzati per la codifica dell'immagine
+	- Spaziale (all'interno di una data immagine);
+	- Temporale (da un'immagine all'altra).
