@@ -495,3 +495,14 @@ Per video si intende una sequenza di immagini visualizzate a tasso costante (*fr
 - Codifica: Utilizzare la ridondanza *all'interno* e *tra* le immagini per ridurre il numero di bit utilizzati per la codifica dell'immagine
 	- Spaziale (all'interno di una data immagine);
 	- Temporale (da un'immagine all'altra).
+
+Tipologie: 
+- **CBR** *(Constant Bit Rate)*
+- **VBR** *(Variable Bit Rate)*
+
+### Contenuti registrati
+Sfide principali:
+- La larghezza di banda da server a client varia nel tempo, con il variare dei livelli di congestione della rete.
+- La perdita di pacchetti ed i ritardi dovuti alla congestione ritardano la riproduzione o comportano una scarsa qualità video.
+- *Vincolo di riproduzione continua*: Quando la riproduzione inizia, dovrebbe procedere secondo i tempi di registrazione originali
+	- Ma *i ritardi di rete sono variabili* (jitter), quindi avrà bisogno di un buffer *lato client* per soddifare i vincoli di riproduzione continua.
