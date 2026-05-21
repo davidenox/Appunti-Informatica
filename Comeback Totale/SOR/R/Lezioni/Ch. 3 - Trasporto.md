@@ -129,4 +129,60 @@ Lo 'stato' del destinatario non è noto al mittente a meno che non venga comunic
 ![[Ch. 3 - Trasporto-1779202851293.png]]
 ![[Ch. 3 - Trasporto-1779202878293.png]]
 
-pdf15sl19
+**Mittente**:
+- Aggiunge il numero di sequenza al pacchetto;
+- Saranno sufficienti due numeri di sequenza (0,1).
+- Deve controllare se gli ACK/NAK sono danneggiati;
+- Il doppio di stati
+	- Lo stato deve ricordarsi se il pacchetto corrente ha numero di sequenza 0 o 1.
+**Ricevente**:
+- Deve controllare se il pacchetto ricevuto è duplicato
+	- Lo stato indica se il numero di sequenza previsto è 0 o 1;
+- Il ricevente non può sapere se il suo ultimo ACK/NAK è stato ricevuto correttamente dal mittente.
+
+### rdt2.2 - senza NAK
+
+Stessa funzionalità do rdt2.1, utilizzando solo gli ACK. Al posto del NAK, il destinatario invia un ACK per l'ultimo pacchetto ricevuto correttamente, includendo esplicitamente il numero di sequenza del pacchetto con l'ACK. Un ACK duplicato presso il mittente determina la stessa azione del NAK, ovvero *ritrasmettere il pacchetto corrente*.
+![[Ch. 3 - Trasporto-1779356023555.png]]
+
+### rdt3.0 - canali con errori e perdite
+
+*Nuova ipotesi*: Il canale sottostante può anche smarrire pacchetti (dati o NAK).
+**Approccio**: Il mittente attende un ACK per un tempo 'ragionevole'.
+- Ritrasmette se non riceve un ACK in questo periodo;
+- Se il pacchetto (o l'ACK) è soltanto in ritardo (non perso):
+	- La ritrasmissione sarà duplicata, ma l'uso dei numeri di sequenza già gestisce la problematica;
+	- Il destinatario deve specificare il numero di sequenza del pacchetto da riscontrare.
+- Utilizzare un *coutdown timer* per interrompere dopo un periodo di tempo ragionevole.
+
+**Mittente**
+![[Ch. 3 - Trasporto-1779356372678.png]]
+![[Ch. 3 - Trasporto-1779356388597.png]]
+
+**Ricevente**
+Come in [[Ch. 3 - Trasporto#rdt2.1 - il mittente gestisce gli ACK/NAK alterati|rdt2.1]].
+
+![[Ch. 3 - Trasporto-1779356469944.png]]
+![[Ch. 3 - Trasporto-1779356494977.png]]
+
+**Prestazioni**
+$U_{mittente}$: *Utilizzazione* - La frazione di tempo in cui il mittente è stato effettivamente occupato nell'invio di bit sul canale.
+>[!note] Esempio
+>Collegamento da 1Gbps, ritardo di propagazione 15ms, pacchetti da 1000 byte (8000bit).
+>Tempo per trasmettere un pacchetto sul collegamento:$$D_{trasm}=\frac{L}{R}=\frac{8000 bit}{10^9 bit/s}=8\mu s$$ 
+
+![[Ch. 3 - Trasporto-1779357346096.png]]
+
+$$U_{mittente}=\frac{L/R}{RTT+L/R}=\frac{.008}{30.008}=0.000267$$
+Il throughput effettivo generato dal mittente: $L/(RTT+L/R)=U_{mittente}\cdot R=267kbps$.
+Le prestazioni del protocollo rdt3.0 sono *pessime*, limitando le prestazioni dell'infrastruttura sottostante.
+
+**Funzionamento con pipeline**
+*Pipelining*: Il mittente ammette più pacchetti in transito, ancora da notificare.
+- L'intervallo dei numeri di sequenza deve essere incrementato;
+- Buffering dei pacchetti presso il mittente e, in certi casi, il ricevente.
+![[Ch. 3 - Trasporto-1779358258330.png]]
+
+### Protocolli con Pipeline: Go-Back-N 
+**Mittente**: 'finestra' contenente fino ad $N$ pacchetti consecutivi trasmessi ma non riscontrati.
+- Numero di sequenza a $k$ bit nell'intestazione del pacchetto.![[Ch. 3 - Trasporto-1779358372699.png]]
