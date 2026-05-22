@@ -186,3 +186,59 @@ Le prestazioni del protocollo rdt3.0 sono *pessime*, limitando le prestazioni de
 ### Protocolli con Pipeline: Go-Back-N 
 **Mittente**: 'finestra' contenente fino ad $N$ pacchetti consecutivi trasmessi ma non riscontrati.
 - Numero di sequenza a $k$ bit nell'intestazione del pacchetto.![[Ch. 3 - Trasporto-1779358372699.png]]
+*Riscontro cumulativo*: $ACK(n)$: Riscontro di tutti i pacchetti con numero di sequenza minore o uguale ad $n$.
+- Alla ricezione dell' ACK(n): sposta la finestra in avanti per iniziare da $n+1$.
+Timer per il pacchetto più vecchio in transito, $timeout(n)$: ritrasmette il pacchetto n e tutti i pacchetti con i numeri di sequenza più grandi.
+
+Solo ACK: Invia sempre un ACK per un pacchetto ricevuto correttamente con il numero di sequenza più alto *in sequenza*.
+- Potrebbe generare ACK duplicati;
+- Deve memorizzare solo `rcv_base`.
+Alla ricezione di un pacchetto fuori sequenza:
+- Può scartarlo (non è salvato) o inserirlo in un buffer: l'implementazione scarta i pacchetti fuori sequenza e deve solo gestire `rcv_base`.
+- Rimanda un ACK per il pacchetto con il numero di sequenza più alto in sequenza.
+![[Ch. 3 - Trasporto-1779444287468.png]]
+
+*FSM esteso del mittente*:![[Ch. 3 - Trasporto-1779444320893.png]]
+
+*FSM esteso del ricevente*:![[Ch. 3 - Trasporto-1779444351534.png]]
+![[Ch. 3 - Trasporto-1779444375332.png]]
+
+### Protocolli con pipeline: Selective Repeat
+**Pipelining**: Più pacchetti in transito.
+Il ricevente riscontra *individualmente* ciascuno dei pacchetti ricevuti correttamente.
+- Buffer dei pacchetti, se necessario, per eventuale consegna in sequenza al livello superiore.
+Mittente:
+- Mantiene un timer per ogni pacchetto non riscontrato.
+	- Timeout: Ritrasmette il singolo pacchetto associato al timeout.
+- Mantiene una "finestra" su N numeri di sequenza consecutivi;
+	- Limita i pacchetti in pipeline, in 'transito', per rientrare in questa finestra.
+![[Ch. 3 - Trasporto-1779445093930.png]]
+
+**Mittente**:
+- *Dati dall'alto*: Se nella finestra è disponibile il successivo numero di sequenza, invia il pacchetto.
+- *timeout(n)*: Ritrasmette il pacchetto n, riparte il timer.
+- *ACK(n)* in `[sendbase, sendbase+N-1]`:
+	- Marca il pacchetto n come ricevuto.
+	- Se n è il numero di sequenza più piccolo, la base della finestra avanza al successivo numero di sequenza del pacchetto non riscontrato.
+**Ricevente**:
+*Pacchetto n* in `[rcvbase, rcvbase+N-1]`:
+- Invia ACK(n);
+- Fuori sequenza: Buffer.
+- In sequenza: Consegna (anche i pacchetti bufferizzati in sequenza), la finestra avanza al successivo pacchetto non ancora ricevuto.
+*Pacchetto n* in `[rcvbase-N, rcvbase-1]`:
+- ACK(n), altrimenti ignora.
+![[Ch. 3 - Trasporto-1779445508084.png]]
+
+**Domanda**: Che accade quando arriva `ack2`?
+Esempio:
+- I numeri di sequenza sono usati ciclicamente.
+![[Ch. 3 - Trasporto-1779445660507.png]]
+
+Quale relazione è necessaria tra la dimensione dei numeri di sequenza e la dimensione della finestra per evitare il problema nello scenario (b)?![[Ch. 3 - Trasporto-1779445781019.png|361]]
+A causa della mancata ricezione degli ACK la finestra del ricevente può andare avanti rispetto a quella del mittente: Si consideri il caso peggiore associato all'invio di un'intera finestra di pacchetti e la mancata ricezione di tutti gli ACK.
+È necessario che lo spazio dei numeri di sequenza sia sufficientemente grande da contenere sia la finestra del mittente sia la finestra del destinatario senza che si sovrappomgano (considerando l'operazione di modulo).
+Sia $w$ la dimensione della finestra ed $m$ la dimensione dello spazio dei numeri di sequenza:![[Ch. 3 - Trasporto-1779445950201.png]]
+Se i numeri di sequenza sono espressi tramite $k$ bit, allora $m=2^k$, $w\le2^k/2$, cioè $w\le2^{k-1}$
+
+# TCP
+pdf16sl3
