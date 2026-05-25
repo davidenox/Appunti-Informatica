@@ -241,4 +241,110 @@ Sia $w$ la dimensione della finestra ed $m$ la dimensione dello spazio dei numer
 Se i numeri di sequenza sono espressi tramite $k$ bit, allora $m=2^k$, $w\le2^k/2$, cioè $w\le2^{k-1}$
 
 # TCP
-pdf16sl3
+**Panoramica**
+- Connessione punto a punto, singolo mittente e singolo destinatario.
+- Flusso di byte affidabile e in sequenza, nessun confine ai messaggi.
+- Full duplex data: i dati possono fluire in direzioni opposte allo stesso istante nella stessa connessione.
+- Gli ACK sono cumulativi.
+- Pipelining: il controllo di flusso e della congestione definiscono la dimensione della finestra.
+- Protocollo *orientato alla connessione*:
+	- L'handshaking inizializza lo stato del mittente e del destinatario prima di scambiare i dati;
+	- Una connessione TCP non definisce un circuito end-to-end che caratterizza le reti a comunicazione di circuito. Le connessioni TCP sono interamente implementate nei sistemi periferici, mentre i commutatori di pacchetto vedono solo i pacchetti di rete in transito.
+- Flusso controllato, il mittente non sovraccarica il destinatario.
+- Controllo della congestione, il mittente riduce la velocità di invio in funzione della congestione della rete.
+
+**Buffer di invio e ricezione TCP**
+![[Ch. 3 - Trasporto-1779701206876.png]]
+
+**MSS**
+![[Ch. 3 - Trasporto-1779701264971.png|426]]
+	Si vuole che $lunghezza(dati)+lunghezza(H_t)+lunghezza(H_n)\le MTU$.
+Altrimenti, il pacchetto IP risultante eccederebbe la MTU del collegamento: un router dovrebbe frammentarlo (IPv4) o scartarlo (IPv6).
+
+**MSS**: Maximum Segment Size, è la quantità massima di dati applicativi nel segmento (intestazione esclusa).
+Assumendo che:
+- $lunghezza(H_t)=20B$
+- $lunghezza(H_n)=20B$ in IPv4 e $lunghezza(H_n)=40B$ in IPv6.
+IPv4: MTU minima = $576B\rightarrow$ default MSS $536B$.
+IPv6: MTU minima = $1280B\rightarrow$ default MSS $1220B$.
+Minore l'MSS, maggiore l'overhead: riducendo il rapporto tra dati e intestazioni, si riduce il throughput end-to-end dal punto di vista dell'applicazione che si può raggiungere.
+
+Un host può determinare il MSS guardando la MTU del collegamento locale, ma ciò non offre garanzie circa altri collegamenti intermedi.
+	Valori tipici:
+	- $lunghezza(H_t)=20B$
+	- $lunghezza(H_n)=20B$ (IPv4)
+	- $MTU_{Ethernet}=1500\rightarrow MSS=1460$.
+Può essere negoziato durante l'instaurazione della connessione con l'opzione MSS.
+- Path MTU Discovery: Scoprire il valore più piccolo della MTU lungo il percorso da mittente a destinatario.
+	- L'host mittente riduce la MTU quando riceve il messaggio ICMP inviato da un router che ha scartato un pacchetto perché eccede la MTU del collegamento di uscita.
+	- MTU Black Hole: Se i messaggi ICMP sono bloccati, il mittente non aggiorna la MTU e tutti i segmenti possono andare persi. L'host deve adottare tecniche per rilevare questo fatto.
+	- Non permette di rilevare l'aumento della MTU.
+- *MSS Clamping* nei router: Alcuni router possono aggiornare il valore dell'opzione MSS se determinano che è eccessivo per la MTU del prossimo collegamento.
+
+## Struttura dei segmenti TCP
+![[Ch. 3 - Trasporto-1779705273692.png]]
+
+**Numeri di sequenza e ACK di TCP**
+![[Ch. 3 - Trasporto-1779711234543.png|285]]
+*Numeri di sequenza*:
+- 'numero' del primo byte nel segmento nel flusso di byte.
+*ACK*:
+- Numero di sequenza del prossimo byte atteso dall'altro lato;
+- ACK cumulativo;
+- RCF 2018: ACK selettivo.
+La specifica TCP non specifica come il destinatario i segmenti fuori sequenza, dipende dall'implementazione. Tuttavia, sono spesso inseriti in un buffer lato ricevente.
+![[Ch. 3 - Trasporto-1779711567800.png]]
+
+## RTT e Timeout
+**RTT**- Tempo di andata e ritorno.
+Come impostare il valore del timeout di TCP?
+- Più grande di RTT, ma RTT varia!
+Due scenari:
+- *Troppo piccolo*: timeout prematuro, ritrasmissioni non necessarie.
+- *Troppo grande*: reazione lenta alla perdita di segmenti.
+
+*Come stimare RTT?*
+- `SampleRTT`: Tempo misurato dalla trasmissione del segmento fino alla ricezione di ACK (ignorando le ritrasmissioni).
+- `SampleRTT` varia, quindi occorre una stima più livellata.
+
+`EstimatedRTT=(1-a)*EstimatedRTT+a*SampleRTT`
+EWMA: MEdia mobile esponenziale pesata.
+- L'influenza dei vecchi campioni decresce esponenzialmente
+- I campioni più recenti riflettono meglio la congestione attuale della rete.
+- ![[Ch. 3 - Trasporto-1779712477708.png|527]]
+- Valore raccomandato $\alpha=0.125$.
+![[Ch. 3 - Trasporto-1779712823679.png]]
+
+Intervallo di timeout: `EstimatedRTT`+ un margine di sicurezza:
+$TimeoutInterval=EstimatedRTT+4*DevRTT$, 
+$DevRTT=(1-\beta)*DevRTT+\beta*|SampleRTT-EstimatedRTT|$.
+Tipicamente $\beta=0.25$.
+
+### Mittente TCP
+*Evento: Ricevuti dati dall'applicazione*
+- Crea un segmento con il numero di sequenza;
+	- Il numero di sequenza è il numero del primo byte del segmento nel flusso di byte;
+- Avvia il timer, se non già in funzione.
+	- Intervallo di scadenza: `TimeoutInterval`.
+*Evento: timeout*
+- Ritrasmette il segmento che ha causato il timeout
+- Riavvia il timer.
+*Evento: ACK ricevuto*
+- Se riscontra segmenti precedentemente non riscontrati
+	- Aggiorna ciò che si sa essere stato riscontrato;
+	- Avvia il timer se ci sono altri segmenti ancora non riscontrati.
+
+### Ricevente TCP - Generazione degli ACK
+![[Ch. 3 - Trasporto-1779714676667.png]]
+
+**Scenari di ritrasmissione**
+![[Ch. 3 - Trasporto-1779715026221.png]]
+![[Ch. 3 - Trasporto-1779715042148.png]]
+
+**Ritrasmissione rapida**
+Se il mittente riceve 3 ACK addizionali per gli stessi dati, rispedisce il segmento non riscontrato con il più piccolo numero di sequenza.
+- È probabile che il segmento non riscontrato sia stato perso, quindi non aspettare il timeout.
+La ricezione di 3 ACK duplicati indica 3 segmenti ricevuti dopo un segmento mancante: è probabile che il segmento sia stato perso, quindi ritrasmettere.
+
+![[Ch. 3 - Trasporto-1779716613475.png|339]]
+## Controllo di flusso
