@@ -348,3 +348,62 @@ La ricezione di 3 ACK duplicati indica 3 segmenti ricevuti dopo un segmento manc
 
 ![[Ch. 3 - Trasporto-1779716613475.png|339]]
 ## Controllo di flusso
+Che succede se il livello di rete fornisce i dati più velocemente di quanto il livello di applicazione rimuova i dati dai buffer della socket?![[Ch. 3 - Trasporto-1779810087020.png|337]]
+![[Ch. 3 - Trasporto-1779810193964.png|337]]
+
+>[!important] Controllo di flusso
+>Il destinatario controlla il mittente, in modo che il mittente non ecceda il buffer del destinatario, inviando troppo e troppo velocemente.
+
+Un'entità TCP comunica lo spazio disponibile nel campo `rwnd` (receive window) nell'intestazione TCP.
+- `RcvBuffer` dimensione impostata attraverso opzioni della socket (base 4096 byte).
+- Molti SO regolano automaticamente `RcvBuffer`.
+Il mittente mantiene la variabile `rwnd` che viene usata per limitare i dati non riscontrati.
+- Garantisce che il buffer di ricezione non vada in overflow.
+Se `rwnd=0` il mittente invia i segmenti di 1B per sondare se il buffer si è svuotato.![[Ch. 3 - Trasporto-1779810487466.png|354]]
+## Gestione della connessione TCP
+Prima di scambiare i dati, il mittente ed il destinatario si 'stringono la mano', *handshake:
+- Accettano di stabilire una connessione;
+- Concordano i parametri di connessione;
+- Inizializzano variabili e buffer:
+![[Ch. 3 - Trasporto-1779810656246.png]]
+
+**Handshake a due vie**
+	NON USATO IN TCP
+![[Ch. 3 - Trasporto-1779810716578.png|310]]
+Funzionerebbe sempre?
+- Ritardi variabili;
+- Messaggi ritrasmessi a causa della perdita di messaggi;
+- Riordino dei messaggi;
+- Impossibilità di 'vedere' l'altro lato.
+![[Ch. 3 - Trasporto-1779810800916.png|240]]
+![[Ch. 3 - Trasporto-1779810831871.png|493]]
+![[Ch. 3 - Trasporto-1779810857942.png|251]]
+
+### 3-way handshake
+
+![[Ch. 3 - Trasporto-1779810928976.png]]
+
+Se un host riceve una richiesta di connessione per una porta su cui nessuna socket è in ascolto, l'host invia al mittente un segmento con bit RST uguale ad 1.
+La ricezione di un segmento TCP RST informa un potenziale aggressore che la porta incriminata non è usata da alcun processo e che il segmento destinato a quella porta non è stato bloccato da un firewall lungo il percorso.
+#### Attacco SYN FLOOD
+- L'aggressore invia un segmento TCP SYN ad un server con un IP fasullo;
+- Il server alloca ed inizializza le variabili ed i buffer della connessione e risponde inviando un segmento TCP SYNACK alla porta e all'indirizzo IP (fasullo) di origine e transita nello stato SYN_RCVD;
+- La rete tenta di consegnare il segmento TCP SYNACK all'IP fasullo, possibilmente raggiungendo un altro host che non c'entra nulla e che non risponderà;
+- Il server, nello stato SYN_RCVD, non ricevendo un ACK, eventualmente rilascerà tutte le risorse associate a quella connessione mezza aperta;
+- Nel frattempo però l'aggressore è riuscito a consumare delle risorse del server. Inviando numerosi segmenti SYN ad un server target, un aggressore può montare un attacco DoS
+
+**Contromisure 'SYN cookie'**
+Alla ricezione del segmento SYN iniziale, il server:
+- Calcola l'hash degli indirizzi IP e numeri di porta di origine e di destinazione e di una chiave  segreta, producendo un cookie
+	- `cookie= hash(IP sorgente, IP destinazione, porta sorgente, porta destinazione, chiave segreta)`
+- usa il cookie con numero di sequenza iniziale da inserire dentro al segmento SYNACK
+- non alloca alcuna risorsa né memorizza il cookie
+Se il segmento SYN ricevuto in precedenza era legittimo, il client alla ricezione del segmento SYNACK risponde con un segmento ACK, che usa come numero di `Acknowledgment cookie + 1`
+Alla ricezione di un segmento ACK, il server può capire che è legato al SYN precedente perché gli basta calcolare `Acknowledgment – 1` per ottenere il cookie. Quindi, riesegue il calcolo del cookie per vedere se ottiene lo stesso valore. Si noti che l'inclusione di una chiave segreta impedisce a un aggressore di creare un cookie valido.
+
+Per evitare attacchi replay, la funzione l'input hash dovrebbe includere una marca temporale, oppure la chiave segreta deve cambiare periodicamente. 
+### Chiusura di una connessione TCP
+Client e server chiudono ciascuno il proprio lato della connessione inviando il segmento TCP con il bit `FIN=1`, per poi rispondere al FIN ricevuto con un ACK.![[Ch. 3 - Trasporto-1779812200647.png]]
+
+# Principi del controllo della congestione
+pdf17sl3
