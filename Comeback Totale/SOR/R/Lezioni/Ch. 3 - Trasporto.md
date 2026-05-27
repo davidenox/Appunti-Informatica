@@ -406,4 +406,105 @@ Per evitare attacchi replay, la funzione l'input hash dovrebbe includere una mar
 Client e server chiudono ciascuno il proprio lato della connessione inviando il segmento TCP con il bit `FIN=1`, per poi rispondere al FIN ricevuto con un ACK.![[Ch. 3 - Trasporto-1779812200647.png]]
 
 # Principi del controllo della congestione
-pdf17sl3
+>[!importante] Congestione
+>Informalmente, troppe sorgenti inviano troppi dati troppo velocemente perché la rete li gestisca.
+
+Può causare lunghi ritardi (per accodamento nei buffer dei router) e pacchetti persi (overflow nei buffer dei router), e si differisce dal controllo di flusso.
+- *Controllo della congestione*: troppi mittenti troppo veloci;
+- *Controllo di flusso*: un mittente troppo veloce per il destinatario.
+
+## Scenari
+
+**Cause/Costi**: Scenario 1
+- Un router con buffer illimitati;
+- Capacità dei collegamenti di ingresso e uscita: R;
+- Due flussi;
+- Nessuna ritrasmissione
+![[Ch. 3 - Trasporto-1779873520771.png|543]]
+Cosa accade quando il tasso di arrivo $\lambda_{in}$ si avvicina a R/2?![[Ch. 3 - Trasporto-1779873621876.png|539]]
+**Cause/Costi**: Scenario 2
+- Un router, buffer *finiti*;
+- Il mittente ritrasmette pacchetti perduti:
+	- Input del livello di applicazione (tasso di trasmissione verso la socket):$\lambda_{in}$
+	- Input del livello di trasporto (tasso di trasmissione verso la rete): $\lambda'_{in}\ge\lambda_{in}$
+![[Ch. 3 - Trasporto-1779873881082.png]]
+
+Idealizzazione: **Conoscenza perfetta**, ovvero il mittente invia solo quando c'è spazio disponibile nei buffer del router (no perdita, $\lambda_{in}=\lambda'_{in}$)![[Ch. 3 - Trasporto-1779873976657.png]]
+![[Ch. 3 - Trasporto-1779873991256.png|246]]
+Idealizzazione 2: **un po' di conoscenza perfetta**, ovvero:
+- I pacchetti possono essere persi a causa di buffer pieni;
+- Il mittente sa quando un pacchetto è stato scartato, e lo ritrasmette solo in quel caso.
+![[Ch. 3 - Trasporto-1779874092066.png]]
+
+![[Ch. 3 - Trasporto-1779874115591.png|374]]
+
+Scenario realistico: **Duplicati non necessari**:
+- I pacchetti possono essere persi, scartati dal router a causa di buffer pieni, richiedendo ritrasmissioni;
+- Il mittente può però andare in timeout prematuramente, inviando *due* copie, che vengono *entrambe* consegnate
+![[Ch. 3 - Trasporto-1779874224316.png]]
+![[Ch. 3 - Trasporto-1779874237423.png|363]]**Costi** della congestione:
+- Più lavoro (ritrasmissioni) per un dato throughput di ricezione;
+- Ritrasmissioni non necessarie, che causano una diminuzione del throughput massimo raggiungibile.
+
+**Cause/Costi**: Scenario 3:
+- 4 mittenti;
+- Percorsi multi-hop
+- Timeout/ritrasmissione
+![[Ch. 3 - Trasporto-1779874414284.png]]
+
+Che succede quando $\lambda_{in}$ e $\lambda'_{in}$ aumentano?
+*Quando $\lambda'_{in}$ aumenta, tutti i pacchetti blu in arrivo alla coda in alto sono scartati, throughput blu ->0*.
+
+![[Ch. 3 - Trasporto-1779875459065.png]]
+Altro 'costo' della congestione: Quando il pacchetto viene scartato, la capacità trasmissiva utilizzata sui collegamenti di upstream per instradare il pacchetto risulta *sprecata*.
+
+### Intuizioni
+- Il throughput non può mai superare la capacità
+- Il ritardo aumenta mentre ci si avvicina alla capacità
+- La perdita/ritrasmissione diminuisce il throughput effettivo
+- I duplicati non necessari diminuiscono ulteriormente il throughput effettivo
+- Capacità di trasmissione a monte / buffering sprecato per i pacchetti persi a valle
+
+## Approcci al controllo della congestione
+**Controllo della congestione end-to-end**
+- Nessun supporto esplicito dalla rete;
+- La congestione è *dedotta* osservando le perdite ed i ritardi nei sistemi periferici;
+- Metodo adottato da TCP.
+![[Ch. 3 - Trasporto-1779876828253.png|524]]
+**Controllo della congestione assistito dalla rete**
+- I router forniscono un feedback *diretto* all'host mittente tramite un chokepacket che lo avvisa dello stato di congestione;
+- Oppure, un router può marcare i pacchetto che lo attraversano in modo tale che il destinatario alla sua ricezioni informi il mittente;
+- Possono indicare il livello di congestione o impostare esplicitamente un tasso di invio;
+- Protocolli TCP ECN, DECnet, ATM
+![[Ch. 3 - Trasporto-1779877011424.png|535]]
+
+### Trasmissione dati affidabile vs Controllo della congestione
+*Trasmissione dati affidabile*:
+- Reagisce alla perdita (e corruzione) dei pacchetti, possibilmente causata dalla congestione;
+- Tratta i 'sintomi' della congestione.
+*Controllo della congestione*:
+- 'Cura' la malattia;
+- Evita che la malattia si aggravi fino a degenerare allo scenario di 'collasso di congestione'.
+# Controllo della congestione TCP
+*TCP CLASSICO*:
+- Controllo della congestione end-to-end basato sugli 'eventi di perdita' nel mittente;
+- Sviluppato in risposta alla serie di collassi di congestione subiti da internet agli albori.
+*Evoluzioni* recenti di TCP:
+- Indicazione esplicita di congestione fornita dalla rete;
+- Controllo della congestione basato sui ritardi.
+
+![[Ch. 3 - Trasporto-1779877321294.png|401]]
+Comportamento di invio TCP:
+- Trascurando ritardo di trasmissione, invia `cwnd` byte, attende RTT per gli ACKs, quindi invia ulteriori byte. $$\text{tasso di invio}\approx\frac{cwnd}{RTT} byte/s$$
+- Il mittente limita la trasmissione: `LastByteSent - LastByte-Acked <= cwnd`
+- `cwnd` viene regolata dinamicamente in risposta alla congestione della rete osservata (implementando il controllo della congestione TCP).
+
+**Relazione col controllo di flusso**
+Il controllo del flusso regola la quantità e la velocità dei dati inviati in funzione della finestra di ricezione comunicata dal destinatario `rwnd`. Quindi, 
+`LastByteSent - LastByteAcked <= rwnd`. 
+Combinando questo vincolo con quello di prima: 
+`LastByteSent - LastByteAcked <= min{rwnd, cwnd}`
+Assumendo che il buffer di ricezione sia sufficientemente grande, possiamo trascurare il vincolo della finestra di ricezione (che assumiamo sempre maggiore della finestra di congestione).
+
+**Principi**
+pdf17sl21
