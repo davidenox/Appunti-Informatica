@@ -507,4 +507,50 @@ Combinando questo vincolo con quello di prima:
 Assumendo che il buffer di ricezione sia sufficientemente grande, possiamo trascurare il vincolo della finestra di ricezione (che assumiamo sempre maggiore della finestra di congestione).
 
 **Principi**
-pdf17sl21
+- Evento di perdita (timeout o ACK duplicati)$\rightarrow$implicazione implicita di congestione $\rightarrow$ riduzione del tasso di invio;
+- Ricezione ACK non duplicato $\rightarrow$ la rete sta consegnando i segmenti al destinatario $\rightarrow$ aumento della velocità di invio;
+- *Rilevamento della banda*: I mittenti possono aumentare il tasso di invio fino a quando non si verifica la perdita di pacchetti dovuta a congestione; quindi diminuire la velocità di invio in caso di evento di perdita, per poi ricominciare il ciclo.
+Controllo della congestione TCP classico - 3 fasi:
+- Slow start;
+- Congestion avoidance;
+- Fast recovery.
+
+## Slow start
+Quando inizia la connessione, la frequenza aumenta fino a quando non si verifica un evento di perdita:
+- Inizialmente `cwnd=1MSS`;
+- Raddoppia `cwnd` ogni RTT;
+- Fatto incrementando cwnd per ogni ACK ricevuto.
+![[Ch. 3 - Trasporto-1779959893330.png|207]]
+*Sintesi*: Tasso iniziale lento, ma aumenta esponenzialmente.
+
+## Da slow start a congestion avoidance
+L'aumento esponenziale passa a quello lineare quando `cwnd` raggiunge 1/2 del suo valore prima dell'evento di perdita; si passa quindi in *congestion avoidance*, caratterizzata invece da un aumento lineare di `cwnd`.![[Ch. 3 - Trasporto-1779960034012.png|403]]
+*Implementazione*:
+- `ssthresh` variabile (inizio 64KB)
+- In caso di evento di perdita, `ssthresh` è impostato a `1/2 cwnd` giusto prima dell'evento di perdita.
+![[Ch. 3 - Trasporto-1779960136487.png]]
+
+Quando arriva un nuovo ACK, la finestra del mittente scorre verso destra e, a meno di recente riduzione della finestra di congestione, dovrebbe essere possibile l'invio di nuovi segmenti (un segmento è uscito dalla rete e uno nuovo ne entra); quando la finestra di congestione viene incrementata sufficientemente è possibile l'invio di nuovi segmenti.
+- Nella fase di congestion avoidance la finestra di congestione viene incrementata di $MSS\cdot\frac{MSS}{cwnd}$ per ogni nuovo ACK; Poichè in un RTT ci si aspettano $\frac{cwnd}{MSS}$ ACL, il risultato finale è un incremento di 1MSS ogni RTT.
+- Nella fase di fast recovery, in assenza di nuovi ACK, la finestra del mittente non avanza verso destra, bloccando temporaneamente l'invio di nuovi segmenti; tuttavia, la cwnd viene incrementata per ogni ACK duplicato finché non diventa sufficientemente grande da permettere l'invio di nuovi segmenti (in media in 1/2RTT).
+La fase di fast recovery dura all'incirca 1RTT affinché arrivi l'ACK del segmento ritrasmesso.
+
+In TCP Reno, il mittente riduce il tasso di invio in risposta ad eventi di perdita:
+- Dimezzamento in caso di perdita rilevata da un triplo ACK duplicato
+- Taglio a 1MSS quando la perdita è rilevata dal timeout.
+
+## Incremento additivo e decremento moltiplicativo AIMD
+>[!important] AIMD (Additive Increment, Multiplicative Decrement)
+>Andamento della velocità di invio trascuranod la fase di slow start ed assumendo che le perdite siano rilevate da triplo ACK duplicato in presenza di fast recovery.
+
+![[Ch. 3 - Trasporto-1779962459060.png]]
+
+Questo algoritmo ottimizza i flussi congestionati in tutta la rete, e presenta proprietà desiderabili di stabilità.
+
+## TCP Cubic
+Intuizione:
+- $W_{max}$: La dimensione della  finestra del controllo di congestione all'istante in cui viene rilevata la perdita;
+- Lo stato di congestione del collegamento bottleneck probabilmente non è cambiato molto;
+- Dopo aver dimezzato la velocità/finestra in caso di perdita, inizialmente si sale verso $W_{max}$ più velocemente, ma poi ci si avvicina più lentamente:
+![[Ch. 3 - Trasporto-1779963205903.png]]
+pdf17sl31
