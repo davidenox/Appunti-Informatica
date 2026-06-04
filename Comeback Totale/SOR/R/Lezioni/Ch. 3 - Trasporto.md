@@ -553,4 +553,43 @@ Intuizione:
 - Lo stato di congestione del collegamento bottleneck probabilmente non è cambiato molto;
 - Dopo aver dimezzato la velocità/finestra in caso di perdita, inizialmente si sale verso $W_{max}$ più velocemente, ma poi ci si avvicina più lentamente:
 ![[Ch. 3 - Trasporto-1779963205903.png]]
-pdf17sl31
+
+### TCP e il collegamento 'bottleneck' congestionato
+
+TCP(Classic, CUBIC) aumenta la velocità di invio di TCP finché non si verifica una perdita di pacchetti all'uscita di un router: il *collegamento bottleneck*.![[Ch. 3 - Trasporto-1780567378756.png]]
+È utile comprendere la congestione, e concentrarsi sul collegamento con collo di bottiglia congestionato![[Ch. 3 - Trasporto-1780567701055.png]]
+### Controllo di congestione basato sul ritardo
+Approccio che consiste nel mantenere la tubazione da mittente a destinatario "sufficientemente piena, ma non di più": mantenere il collegamento a collo di bottiglia impegnato nella trasmissione, ma evitare ritardi elevati/buffering.![[Ch. 3 - Trasporto-1780568149477.png]]
+**Approccio basato sul ritardo - TCP Vegas**
+- $RTT_{min}-RTT$ minimo osservato (percorso non congestionato);
+- Throughput non congestionato con finestra di congestione `cwnd` è $cwnd/RTT_{min}$.
+Se il throughput misurato è molto vicino al throughput non congestionato, aumentare linearmente il `cwnd` (poiché il percorso non è congestionato), altrimenti se è molto inferiore al non congestionato diminuire linearmente il `cwnd`.
+## Controllo di congestione basato sul ritardo
+- Controllo di congestione senza indurre/forzare perdite;
+- Massimizzare il throughput ma mantenendo il ritardo basso;
+- Un certo numero di TCP distribuiti adottano un approccio basato sui ritardi;
+	- BBR (bottleneck bandwith and round-trip propagation time) impiegato sulla rete dorsale (interna) di Google.
+## Explicit Congestion Notification - ECN
+Le implementazioni di TCP spesso implementano un controllo della congestione *assistito dalla rete*:
+- Due vit (ECN) nell'intestazione IP (campo ToS) impostati da un *router di rete* per indicare la congestione;
+	- Policy per determinare la marcatura scelta dall'operatore di rete.
+- Indicazione di congestione portata a destinazione;
+- La destinazione imposta il bit ECE sul segmento ACK per notificare al mittente la presenza di una congestione;
+- Il mittente dimezza la finestra di congestione ed imposta il bit CWR nel segmento successivo;
+- Coinvolge sia l'IP che il TCP.
+![[Ch. 3 - Trasporto-1780569673645.png]]
+
+ECN viene negoziato in fase di instaurazione di una connessione TCP mediante opportune opzioni: Il mittente imposta i bit ECN nell'intestazione IP per indicare che contengono i segmenti di una connessione in grado di gestire ECN. Come TCP Vegas, TCP ECN permette di reagire all'insorgenza della congestione prima che si verifichi la perdita di pacchetti.
+## TCP Fairness
+**Obiettivo di equità**: Se K sessioni TCP condividono lo stesso collegamento bottleneck con larghezza di banda R, ciascuna dovrebbe avere una velocità media di R/K![[Ch. 3 - Trasporto-1780569873714.png]]
+Domanda: TCP è equo?
+Esempio: due sessioni TCP in competizione:
+- L'aumento additivo da una pendenza di 1, quando il throughput aumenta;
+- La diminuzione moltiplicativa riduce il throughput in modo proporzionale.
+![[Ch. 3 - Trasporto-1780569945120.png]]
+### Fairness
+Tutte le app di rete devono essere fair?
+**Fairness e UDP**
+- Le app multimediali in tempo reale spesso non usano TCP, ma UDP, inviando audio/video a velocità costante e tollerando la perdita dei pacchetti
+**Fairness, connessioni TCP parallele**
+- L'app può aprire più connessioni parallele tra due host
