@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. dati.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ch. 3 - Trasporto"
+              "title": "Ch. 4.1 - Rete p. dati"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. dati.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Ch. 3 - Trasporto"
+              "title": "Struttura di Ch. 4.1 - Rete p. dati"
             }
           },
           {
@@ -191,19 +191,20 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "allegati/Ch. 3 - Trasporto-1780569945120.png",
-    "allegati/Ch. 3 - Trasporto-1780569873714.png",
-    "allegati/Ch. 3 - Trasporto-1780569673645.png",
-    "allegati/Ch. 3 - Trasporto-1780568149477.png",
-    "allegati/Ch. 3 - Trasporto-1780567701055.png",
-    "allegati/Ch. 3 - Trasporto-1780567378756.png",
-    "allegati/Ch. 3 - Trasporto-1779963205903.png",
-    "allegati/Ch. 3 - Trasporto-1779962459060.png",
-    "allegati/Ch. 3 - Trasporto-1779960136487.png",
-    "allegati/Ch. 3 - Trasporto-1779960034012.png",
-    "allegati/Ch. 3 - Trasporto-1779959893330.png",
-    "u.md",
+    "allegati/Ch. 4.1 - Rete p. dati-1780586298794.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780586281718.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780586151972.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780585109020.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780585097816.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780585085804.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780585074135.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780584985669.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780584929737.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780584914813.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780584863698.png",
     "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. dati.md",
+    "u.md",
     "Senza nome.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione.md",
@@ -235,7 +236,6 @@
     "Terzo Anno/Intelligenza Artificiale/Lezioni/0_Indice.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Lezione 2.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/2. Livello di applicazione.md"
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md"
   ]
 }

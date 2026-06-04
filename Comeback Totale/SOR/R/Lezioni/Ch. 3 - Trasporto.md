@@ -593,3 +593,41 @@ Tutte le app di rete devono essere fair?
 - Le app multimediali in tempo reale spesso non usano TCP, ma UDP, inviando audio/video a velocità costante e tollerando la perdita dei pacchetti
 **Fairness, connessioni TCP parallele**
 - L'app può aprire più connessioni parallele tra due host
+
+### Descrizione macroscopica del throughput di TCP
+Valore medio del throughput come funzione della dimensione della finestra e di RTT?
+- TCP Reno, RTT e W approssimativamente costanti, ignoriamo slow start, assumiamo che ci siano sempre dati da inviare.
+$W=$ Dimensione della finestra (bytes) quando si verifica una perdita:
+- Dimensione media della finestra è $\frac{3}{4}W$;
+- Throughput medio è $\frac{3}{4}\frac{W}{RTT}bytes/s$
+![[Ch. 3 - Trasporto-1780581438957.png]]
+
+# Evoluzione della funzionalità del livello di trasporto
+TCP e UDP sono stati i principali protocolli di trasporto per 40 anni. Sono state sviluppate diverse *varianti* di TCP per scenari specifici:
+![[Ch. 3 - Trasporto-1780581587588.png]]
+Spostamento delle funzioni del livello di trasporto al livello di applicazione, in cima a UDP (HTTP/3: QUIC).
+
+## TCP su 'long, fat pipes'
+Esempio: Segmenti di 1500 bytes, RTT di 100ms, vogliamo un throughput di 10Gbps.
+Richiede $W=83'333$ segmenti in volo $\approx 125MB$
+- Primo problema: `rwnd` di TCP è di 16 bit (limite di 65KiB)
+Soluzione: *Window Scaling*
+- Durante l'handshaking viene negoziato un *window scaling factor*: ognuno invia nei segmenti SYN e SYN ACK lo scaling factor (da 0 a 14) che userà per `rwnd`; valori possibilmente diversi nelle due direzioni.
+- Finestra `TCP Effettiva = Finestra TCP << scaling factor`, cioè viene moltiplicata per $2^{\text{scaling factor}}$. Finestra massima $=2^{16+14}=2^{30}=1GiB$.
+- In Linux lo scaling factor viene calcolato dividendo la dimensione massima del buffer di ricezione per $2^{16}$. Se è attivo autotune, la dimensione effettiva del buffer di ricezione può essere ridotta a runtime sulla base delle condizioni della connessione, 'pubblicizzando' nel campo `rwnd` un valore inferiore al massimo.
+Throughput in termini della probabilità di perdita di pacchetti L:$$\text{TCP Throughput}=\frac{1.22\cdot MSS}{RTT\sqrt{L}}$$
+Quindi, per raggiungere un throughput di 10Gbps occorre un tasso di perdita $L=2\cdot10^{-10}$ - *BASSISSIMO*
+
+## QUIC
+**Quick UDP Internet Connections**
+Protocollo a livello di applicazione, sopra UDP:
+- Aumenta le prestazioni di HTTP;
+- Impiegati in molti server e app di Google
+- ![[Ch. 3 - Trasporto-1780582262077.png]]
+Adotta gli approcci studiati per l'instaurazione della connessione, il controllo degli errori ed il controllo della congestione.
+- **Controllo di errori e congestione**: "I lettori che hanno familiarità con i meccanismi di rilevamento delle perdite e di controllo della congestione del protocollo TCP troveranno qui algoritmi che rispecchiano quelli ben noti del TCP."
+- **Instaurazione della connessione**: Affidabilità, controllo della congestione, autenticazione, cifratura, stato stability in un solo RTT.
+Multiplexing di molteplici flussi a livello di applicazione su una singola connessione QUIC:
+- Stato del trasferimento dati affidabile e della sicurezza separati;
+- Stato del controllo della congestione condiviso.
+![[Ch. 3 - Trasporto-1780582542113.png]]![[Ch. 3 - Trasporto-1780582553800.png]]
