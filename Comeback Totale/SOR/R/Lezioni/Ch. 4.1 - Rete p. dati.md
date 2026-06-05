@@ -216,4 +216,78 @@ Sono stato proposti approcci alternativi più robusti, tra cui la manipolazione 
 - I router hanno tipicamente più interfacce;
 - Gli host hanno tipicamente una o due interfacce (es. Ethernet, 802.11 wireless)
 ![[Ch. 4.1 - Rete p. dati-1780656194264.png|325]]
-51
+
+Come sono effettivamente collegate le interfacce?
+![[Ch. 4.1 - Rete p. dati-1780672855011.png|422]]
+
+### Sottoreti
+	Subnet
+Per **sottoreti** si intendono interfacce di dispositivi che possono raggiungersi fisicamente *senza passare attraverso un router intermedio*.
+Gli indirizzi IP hanno una struttura:
+- *Parte della sottorete*: i dispositivi della stessa sottorete hanno in comune i bit di ordine superiore;
+- *Parte dell'host*: i rimanenti bit di ordine inferiore.
+![[Ch. 4.1 - Rete p. dati-1780673027342.png|317]]
+
+**Procedura per definire le sottoreti**:
+- Si sganciano le interfacce da host e router, in maniera tale da creare "isole" di reti isolate delimitate dalle interfacce
+- Ognuna di queste reti isolate viene detta *sottorete* (subnet)
+![[Ch. 4.1 - Rete p. dati-1780673131424.png|341]]
+
+### CIDR
+>[!important] CIDR - Classless Inter Domain Routing
+>- Parte della rete dell'indirizzo di lunghezza arbitraria
+>- Formato dell'indirizzo: `a.b.c.d/x`, dove `x` è il numero di bit della porzione della rete dell'indirizzo
+
+![[Ch. 4.1 - Rete p. dati-1780673270911.png]]
+
+**Classfull addressing**
+Spazio di indirizzamento IPv4 suvviviso in blocchi con prefisso di rete di 8, 16 e 24 bit:![[Ch. 4.1 - Rete p. dati-1780673319964.png]]
+Nell'indirizzamento IP la lunghezza della parte di rete era fissa e dipendeva dalla classe dell'indirizzo:
+- Classe A: 1 byte dedicato alla parte di rete;
+- Classe B: 2 byte dedicati alla parte di rete;
+- Classe C: 3 byte dedicati alla parte di rete.
+Questa rigidità comportava notevoli sprechi, e CIDR ha sostituito l'indirizzamento per classi in virtù di diversi vantaggi:
+- Più efficiente allocazione di blocchi di indirizzi;
+- Aggregazione di indirizzi con conseguente riduzione delle tabelle di instradamento.
+
+## IP:  come ottenerne uno
+Due domande:
+1. Come fa un host ad ottenere l'indirizzo IP all'interno della sua rete (parte host dell'indirizzo)?
+2. Come fa una rete ad ottenere l'indirizzo IP (parte dell'indirizzo relativa alla rete)?
+
+***Domanda 1:***
+- Codificato dal sysadmin nel file di configurazione;
+- **DHCP**: Dynamic Host Configuration Protocol, permette a un host di ottenere un indirizzo IP in modo automatico ( "plug and play" ).
+### DHCP
+**Obiettivo**: L'host ottiene *dinamicamente* l'indirizzo IP dal server di rete quando si 'unisce' alla rete.
+- Può rinnovare la propria concessione per l'indirizzo in uso
+- Permette il riutilizzo degli indirizzi ( mantiene un indirizzo solo quando è collegato/acceso )
+- Supporto per gli utenti mobili che si uniscono/abbandonano la rete (ma non mantiene una connessione TCP attiva, poiché quando ci si unisce ad una nuova sottorete si ottiene un altro IP).
+**Panoramica**
+- L'host invia in broadcast un messaggio `DHCP Discover` (opzionale);
+- Il server DHCP risponde con un messaggio `DHCP Offer` (opzionale);
+- L'host richiede un indirizzo IP: messaggio `DHCP request`;
+- Il server DHCP invia un indirizzo IP: messaggio `DHCP Ack`.
+
+Scenario:
+In genere il server DHCP è collocato nel router e serve tutte le sottoreti a cui il router è collegato. Il client DHCP in arrivo su questa rete ha bisogno di un indirizzo.
+![[Ch. 4.1 - Rete p. dati-1780675708244.gif]]
+
+Il DHCP può restituire più di un indirizzo IP:
+- Indirizzo del router first-hoè o router (o gateway) predefinito (per comunicare al di là della sottorete);
+- Nome e indirizzo IP del server DNS;
+- Maschera di sottorete ( che indica la porzione di sottorete rispetto a quella di host dell'indirizzo ).
+Esempio:
+![[Ch. 4.1 - Rete p. dati-1780675829245.png|400]]
+Il portatile che si collega utilizzerà il DHCP per ottenere l'indirizzo IP, l'indirizzo del router first-hop e l'indirizzo del server DNS.
+- Messaggio di richiesta DHCP incapsulato in UDP, incapsulato in IP, incapsulato in Ethernet.
+- Trasmissione di frame Ethernet (destinazione `FFFFFFFFFF`) sulla LAN, ricevuto dal router che esegue il server DHCP.
+- Ethernet demultiplato in IP, IP demultiplato in UDP, UDP demultiplato in DHCP.
+![[Ch. 4.1 - Rete p. dati-1780675989276.png]]
+
+Il server DHCP formula un DHCP ACK contenente l'indirizzo IP del client, l'indirizzo IP del router first-hop per il client, il nome e l'indirizzo IP del server DNS.
+- Risposta del server DHCP incapsulata ed inoltrata al client, de-mux fino a DHCP sul client;
+- Il client conosce ora il proprio IP, il nome e l'IP del server DNS, e l'IP del router first-hop.
+
+***Domanda 2***
+pdf19sl16
