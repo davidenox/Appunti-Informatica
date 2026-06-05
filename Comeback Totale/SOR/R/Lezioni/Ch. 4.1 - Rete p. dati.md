@@ -82,4 +82,138 @@ Spesso la corrispondenza a prefisso più lungo viene eseguita con le *ternary co
 	- N input: si desidera avere un tasso di trasferimento della struttura di commutazione N volte il tasso delle linee di input/output.![[Ch. 4.1 - Rete p. dati-1780586281718.png]]
 ![[Ch. 4.1 - Rete p. dati-1780586298794.png]]
 
-pdf18sl28
+#### Commutazione in memoria
+**Router di prima generazione**:
+- Computer tradizionali con commutazione sotto il diretto controllo della CPU
+- Pacchetti copiati nella memoria del sistema
+- Velocità limitata dall'ampiezza di banda della memoria (2 attraversamenti del bus per datagramma)
+![[Ch. 4.1 - Rete p. dati-1780651712720.png]]
+
+#### Commutazione tramite bus
+- Le porte di ingresso trasferiscono un pacchetto direttamente alle porte di uscita tramite un bus condiviso.
+- *Bus contention*: velocità di commutazione limitata dalla velocità del bus.
+- Bus a 32Gbps, Cisco 5600: velocità sufficiente per router di accesso.![[Ch. 4.1 - Rete p. dati-1780651869732.png]]
+
+#### Commutazione attraverso rete di interconnessione
+- Crossbar (matrice di commutazione), reti Clos, altre reti di interconnessione sviluppate originariamente per architetture multiprocessore;
+- *Multistage Switch*: switch $n\times n$  da più stadi di switch più piccoli;
+*Sfruttare il parallelismo*:
+- Frammenta il datagramma in celle di lunghezza fissa all'ingresso;
+- Commuta le celle attraverso la rete di commutazione e riassembla il datagramma in uscita
+![[Ch. 4.1 - Rete p. dati-1780652032800.png|253]]
+- Scala utilizzando molteplici piani di commutazione in parallelo:
+	- speedup, scaleup attraverso il parallelismo
+![[Ch. 4.1 - Rete p. dati-1780652183674.png]]
+
+### Accodamento sulle porte di ingresso
+Se la struttura di commutazione è più lenta delle porte di ingresso combinate, può verificarsi accodamento sulle porte di ingresso, e quindi ritardo di accodamento e perdite dovute all'overflow dei buffer di input
+>[!important] HOL Blocking - Blocco in testa alla coda
+>Il datagramma accodato all'inizio della coda impedisce agli altri in coda di avanzare.![[Ch. 4.1 - Rete p. dati-1780652333983.png]]
+
+### Accodamento in uscita
+![[Ch. 4.1 - Rete p. dati-1780652372759.png]]
+- *Buffering* richiesto quando i datagrammi arrivano dalla struttura di commutazione più velocemente del tasso di trasmissione del collegamento. **Drop policy**: quale datagramma scartare se il buffer non è sufficiente?
+	- I datagrammi possono essere persi a causa di congestione, mancanza di buffer.
+- *Disciplina di scheduling* sceglie tra i datagrammi in coda quale trasmettere.
+	- Schedulazione con priorità - chi ottiene le migliori prestazioni, neutralità della rete.
+![[Ch. 4.1 - Rete p. dati-1780652512085.png]]
+- Buffering quando il tasso di arrivo attraverso la struttura di commutazione supera la velocità delle linee di uscita.
+- **Accodamento e perdite causati dall'overflow del buffer della porta di uscita**.
+#### Quanta memoria è necessaria?
+Regola RFC3439 - Buffering medio uguale al prodotto del RTT 'tipico' (diciamo 250ms) per la capacità del collegamento C.
+	Raccomandazione più recente: Con N flussi, dimensione del buffer: $$\frac{RTT\cdot C}{\sqrt N}$$
+Ma *troppo* buffering può aumentare i ritardi, soprattutto nei router domestici.
+- RTT elevato:  prestazioni scarse delle applicazioni real-time, mittenti TCP meno reattivi alla congestione ed alla perdita dei pacchetti;
+- Il controllo di congestione basato sul ritardo: 'Mantenere il collegamento collo di bottiglia sufficientemente pieno ma non troppo'.
+## Gestione del buffer
+![[Ch. 4.1 - Rete p. dati-1780652945802.png]]
+**Politica di scarto** (drop): Quale pacchetto eliminare quando la coda è piena
+- *Tail drop*: Scarta il pacchetto in arrivo;
+- *Priorità*: Scarta/rimuove in base alla priorità.
+**Marcatura**: Quali pacchetti marcare per segnalare la congestione (ECN, RED).![[Ch. 4.1 - Rete p. dati-1780653046904.png|471]]
+### Schedulazione dei pacchetti
+Decidere quale pacchetto inviare successivamente sul collegamento.
+
+**FCFS**
+Pacchetti trasmessi in ordine di arrivo alla porta di uscita.
+	Conosciuto anche come FIFO
+
+**Priority Scheduling**
+Traffico in arrivo classificato ed accodato per classi.
+- Qualsiasi campo di intestazione può essere utilizzato per la classificazione.
+Invia il pacchetto dalla coda non vuota con priorità più alta.
+- FCFS all'interno di ciascuna classe
+- Possibilità di *starvation*: un pacchetto può attendere indefinitivamente se continuano ad arrivare pacchetti con priorità maggiore.
+![[Ch. 4.1 - Rete p. dati-1780653267353.png|369]]
+
+**Round-Robin Scheduling**
+Traffico in arrivo classificato ed accodato per classi
+- Qualsiasi campo di intestazione può essere usato per la classificazione.
+Il server esegue ciclicamente e ripetutamente la scansione delle code di classe, inviando a turno un pacchetto completo di ogni classe (se disponibile).
+![[Ch. 4.1 - Rete p. dati-1780653379278.png|517]]
+
+**Weighted Fair Queuing** WFQ
+Generalizza RR, ciascuna classe $i$ ha un peso $w_i$, e riceve una quantità ponderata di servizio in ogni ciclo: $\frac{w_i}{\sum_j w_j}$.
+Garanzia di larghezza di banda minima (per classe di traffico).
+![[Ch. 4.1 - Rete p. dati-1780653493906.png|445]]
+### Barra laterale: neutralità della rete
+*Tecnica*: Come un ISP dovrebbe condividere/allocare le proprie risorse.
+- La schedulazione dei pacchetti e la gestione dei buffer sono i *meccanismi*.
+Principi *sociali ed economici*
+- Proteggere la libertà di espressione
+- Incoraggiare l'innovazione e la competizione
+Far rispettare *politiche e leggi*.
+	Ogni paese ha il proprio approccio alla neutralità della rete.
+Tre regole definite nel 2015:
+- *no blocking*: ... non bloccherà i contenuti, le applicazioni, i servizi o i dispositivi non dannosi leciti, fatta salva una ragionevole gestione della rete.
+- *no throttling*: ...non devono pregiudicare o degradare il traffico Internet lecito sulla base del cotenuto, dell'applicazione o del servizio Internet o dell'uso di un dispositivo non dannoso, fatta salva una ragionevole gestione della rete.
+- *no paid prioritization*: ...non devono impegnarsi nella prioritizzazione a pagamento
+Nel 2017 la Restoring Internet Freedom Order ha annullato questi divieti, concentrandosi invece sulla trasparenza degli ISP.
+
+### ISP: Telecomunicazione o informazione?
+
+Un ISP è un 'servizio di telecomunicazione' o un fornitore di 'servizi di informazione'?
+La risposta è importante dal punto di vista normativo
+US Telecommunication Act del 1934 e 1996: 
+- *Titolo II*: impone “**common carrier duties**” ai servizi di telecomunicazione: tariffe ragionevoli, non discriminazione e richiede una regolamentazione;
+- *Titolo I*: si applica ai servizi di informazione: 
+	- no common carrier duties (non regolamentato)
+	- ma concede alla FCC l'autorità "... necessaria per l'esecuzione delle sue funzioni "
+
+# IP
+![[Ch. 4.1 - Rete p. dati-1780655428234.png]]
+
+## Formato dei datagrammi IP
+![[Ch. 4.1 - Rete p. dati-1780655499968.png]]
+
+### Frammentazione e riassemblaggio dei datagrammii
+L'unità massima di trasmissione (MTU) è la quantità massima di dati che un frame a livello di collegamento può trasportare.
+- Differenti tipi di collegamento, differenti MTU
+Datagrammi IP grandi vengono frammentati in datagrammi IP più piccoli:
+- Un datagramma viene frammentato;
+- I frammenti saranno riassemblati solo una volta raggiunta la destinazione;
+- I bit dell'intestazione IP sono usati per identificare ed ordinare i frammenti.
+![[Ch. 4.1 - Rete p. dati-1780655664157.png]]
+
+*Deprecata*:
+- Ogni frammento richiede un'intestazione IP, aumentando il carico di rete (overhead) e sottraendo banda all'invio di dati utili (inefficienza)
+- Perdita di un frammento -> datagramma originale perso (a dispetto della ricezione di altri frammenti)
+- Impiego di risorse computazionali per il riassemblaggio dei pacchetti
+- Sicurezza: 'tiny fragment attack' consiste nell'intasare i buffer di riassemblaggio inviando piccoli frammenti.
+In IPv6: Frammentazione solo nella sorgente, router invia messaggio `ICMP Packet Too Big`
+*Path MTU Discovery*
+- Invio di pacchetti con bit (DF) `Don't fragment` impostato a 1.
+- Se il router non può inoltrare il datagramma perché eccede la MTU, scarta il pacchetto ed invia al mittente un messaggio ICMP `Destination unreachable: fragmentation required` oppure `Packet too big` in IPv6
+
+Il problema p che questi messaggi ICMP possono essere bloccati (sicurezza): in questi casi, per esempio, un mittente TCP rischia addirittura di ritrasmettere inutilmente lo stesso pacchetto più volte. Inoltre, il percorso, e quindi la MTU, possono cambiare.
+Sono stato proposti approcci alternativi più robusti, tra cui la manipolazione di segmenti SYN in fase di instaurazione di una connessione TCP, cambiando l'opzione relativa al MSS.
+
+## Indirizzamento IP
+>[!important] Indirizzo IP
+>Identificatore a 32 bit associato a ciascuna *interfaccia* di host e router
+
+**Interfaccia**: Connessione tra host/router e collegamento fisico.
+- I router hanno tipicamente più interfacce;
+- Gli host hanno tipicamente una o due interfacce (es. Ethernet, 802.11 wireless)
+![[Ch. 4.1 - Rete p. dati-1780656194264.png|325]]
+51
