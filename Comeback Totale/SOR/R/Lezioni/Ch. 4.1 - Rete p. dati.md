@@ -290,4 +290,67 @@ Il server DHCP formula un DHCP ACK contenente l'indirizzo IP del client, l'indir
 - Il client conosce ora il proprio IP, il nome e l'IP del server DNS, e l'IP del router first-hop.
 
 ***Domanda 2***
-pdf19sl16
+- La tete ottiene l'assegnazione di una porzione dello spazio di indirizzi del suo provider ISP. 
+![[Ch. 4.1 - Rete p. dati-1780911454043.png]]
+
+### Indirizzamento Gerarchico
+**Aggregazione di indirizzi** (Route Aggregation)
+- L'indirizzamento gerarchico consente di pubblicizzare in modo efficiente le informazioni di routing:
+![[Ch. 4.1 - Rete p. dati-1780911725621.png]]
+
+**Percorsi più specifici**:
+- L'organizzazione 1 si sposta da Fly-By-Night-ISP a ISP-R-Us;
+- ISP-R-Us ora pubblicizza un percorso più specifico verso l'organizzazione 1:
+![[Ch. 4.1 - Rete p. dati-1780911900451.png]]
+
+**Ultime domande**
+1. Come fa un ISP ad ottenere un blocco di indirizzi?
+	- *ICANN*: International Corporations for Assigned Names and Numbers
+		- Assegnazione degli indirizzi IP, attraverso *5 registri regionali (RR)*
+		- Gestisce la zona radice del DNS, compresa la delega della gestione dei singoli TLD.
+2. Ci sono abbastanza indirizzi IP a 32 bit?
+	- ICANN ha assegnato l'ultima porzione di indirizzi IPv4 ai RR nel 2011.
+	- NAT(successivo) aiuta con l'esaurimento dello spazio degli indirizzi IPv4
+	- IPv6 ha uno spazio di indirizzi a 128 bit
+
+## Traduzione degli indirizzi di rete: NAT
+**NAT**(*Network Address Translation*): Tutti i dispositivi ella rete locale condividono *un solo* indirizzo IPv4 per il mondo esterno.![[Ch. 4.1 - Rete p. dati-1780913047858.png]]
+Tutti i dispositivi della rete locale hanno indirizzi a 32 bit in uno spazio di indirizzi IP "privato" (prefissi 10/8, 172.16/12, 192.168/16) che possono essere usati solo nella rete locale.
+Vantaggi:
+- È necessario *un solo* indirizzo IP dal provider ISP per **tutti** i dispositivi;
+- Può cambiare gli indirizzi degli host nella rete locale senza notificare il mondo esterno;
+- Può cambiare ISP senza modificare gli indirizzi dei dispositivi nella rete locale;
+- Sicurezza: Dispositivi all'interno della rete locale non direttamente indirizzabili o visibili dall'esterno.
+
+**Implementazione**: I router NAT devono (in maniera trasparente):
+- *Datagrammi in uscita: Sostituire* (IP sorgente, Porta sorgente) di ogni datagramma in uscita con (IP NAT, nuovo num. porta)
+	- I client/server rempoti risponderanno con (IP NAT, nuovo num. porta) come indirizzo di destinazione;
+- *Ricordare*(nella "tabella di traduzione NAT") ogni coppia di traduzione da origine a nuovo.
+- *Datagrammi in ingresso: Sostituire* (IP NAT, nuovo num. porta) nei campi di intestazione di ogni datagramma in ingresso con il corrispondente (IP NAT, nuovo n. porta) memorizzato nella tabella NAT.
+![[Ch. 4.1 - Rete p. dati-1780913457690.png]]
+
+Il NAT è spesso oggetto di controversie:
+- I router "dovrebbero" elaborare i pacchetti solo fino al livello 3;
+- La "scarsità" di indirizzi dovrebbe essere risolta da IPv6;
+- Viola il cosiddetto argomento punto-punto (num. di porta manipolato da un dispositivo a livello di rete);
+- Attraversamento NAT (NAT traversal): Cosa succede se un client vuole connettersi ad un server dietro NAT?
+Ma allo stesso tempo è qui per restare, siccome è ampiamente utilizzato nelle reti domestiche ed istituzionali, e nelle reti 4G/5G.
+
+## IPv6
+**Motivazione iniziale**: Lo spazio degli indirizzi IPv4 a 32 bit sarebbe stato completamente allocato;
+*Motivazioni aggiuntive*:
+- Velocità di elaborazione/inoltro: intestazione con una larghezza fissa di 40 byte
+- Consentire un diverso trattamento dei "flussi" a livello di rete
+
+**Formato del datagramma IPv6**
+- *Classe di traffico*: Attribuisce priorità a datagrammi all'interno di un flusso o proveniente da specifiche applicazioni.
+- *Etichetta di flusso*: Identifica i datagrammi appartenenti allo stesso flusso (concetto di "flusso" non ben definito).
+- *128-bit*.
+![[Ch. 4.1 - Rete p. dati-1780915334058.png|440]]
+Cosa manca (rispetto a IPv4):
+- No `checksum` (velocitta l'elaborazione presso i router)
+- No frammentazione/riassemblaggio
+- No opzioni
+
+**Flussi IPv6**
+pdf19sl29
