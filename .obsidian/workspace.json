@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. dati.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 4.2 - Rete p. Controllo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ch. 4.1 - Rete p. dati"
+              "title": "Ch. 4.2 - Rete p. Controllo"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. dati.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 4.2 - Rete p. Controllo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Ch. 4.1 - Rete p. dati"
+              "title": "Struttura di Ch. 4.2 - Rete p. Controllo"
             }
           },
           {
@@ -191,22 +191,23 @@
   },
   "active": "908e27dbace64ec5",
   "lastOpenFiles": [
-    "allegati/Ch. 4.1 - Rete p. dati-1780915334058.png",
-    "allegati/Ch. 4.1 - Rete p. dati-1780913457690.png",
-    "allegati/Ch. 4.1 - Rete p. dati-1780913047858.png",
-    "allegati/Ch. 4.1 - Rete p. dati-1780911900451.png",
-    "allegati/Ch. 4.1 - Rete p. dati-1780911725621.png",
-    "allegati/Ch. 4.1 - Rete p. dati-1780911454043.png",
-    "allegati/Ch. 4.1 - Rete p. dati-1780675989276.png",
-    "allegati/Ch. 4.1 - Rete p. dati-1780675829245.png",
-    "allegati/Ch. 4.1 - Rete p. dati-1780675708244.gif",
-    "Comeback Totale/SOR/R/img/gif DHCP/8.png",
-    "Comeback Totale/SOR/R/img/gif DHCP/Immagine incollata.png",
+    "allegati/Ch. 4.2 - Rete p. Controllo-1780933419431.png",
+    "allegati/Ch. 4.2 - Rete p. Controllo-1780933006571.png",
+    "allegati/Ch. 4.2 - Rete p. Controllo-1780932799910.png",
+    "allegati/Ch. 4.2 - Rete p. Controllo-1780932761440.png",
+    "allegati/Ch. 4.2 - Rete p. Controllo-1780932623556.png",
+    "allegati/Ch. 4.2 - Rete p. Controllo-1780932602532.png",
+    "allegati/Ch. 4.2 - Rete p. Controllo-1780932535489.png",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. dati.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 4.2 - Rete p. Controllo.md",
+    "allegati/Ch. 4.1 - Rete p. dati-1780929466461.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780929351206.png",
+    "allegati/Ch. 4.1 - Rete p. dati-1780929333549.png",
+    "Senza nome.md",
+    "allegati/Ch. 4.1 - Rete p. dati-1780929048931.png",
     "Comeback Totale/SOR/R/img/gif DHCP",
     "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. dati.md",
     "u.md",
-    "Senza nome.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione.md",
     "allegati",
@@ -235,7 +236,6 @@
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/0_Indice.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Lezione 2.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete -  Controllo.md"
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md"
   ]
 }

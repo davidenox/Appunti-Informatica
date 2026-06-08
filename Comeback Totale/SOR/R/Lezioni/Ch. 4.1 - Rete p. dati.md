@@ -352,5 +352,87 @@ Cosa manca (rispetto a IPv4):
 - No frammentazione/riassemblaggio
 - No opzioni
 
-**Flussi IPv6**
-pdf19sl29
+**Etichettatura dei Flussi IPv6**
+L'etichettatura dei pacchetti che appartengono a flussi particolari per i quali il mittente richiede una gestione speciale, come una qualità di servizio diversa da quella di default o un servizio in tempo reale.
+
+**Notazione**
+Gli indirizzi IPv6 128 bit sono scritti nella forma `x:x:x:x:x:x:x:x` dove le `x` rappresentano da 1 a 4 cifre esadecimali. Es:
+`2001:0db8:0000:0000:0000:8a2e:0370:7344`
+Abbreviazioni:
+1. `2001:0db8:0:0:0:8a2e:0370:7344`
+2. `2001:0db8::8a2e:0370:7344`
+
+### Da IPv4 a IPv6
+Non tutti i router possono essere aggiornati contemporaneamente:
+- no 'flag day';
+- come funzionerà la rete con un misto di router IPv4 e IPv6?
+**Tunneling**: Datagramma IPv6 trasportato come *payload* in un datagramma IPv4 tra i router IPv4 (pacchetto nel pacchetto). Viene ampiamente utilizzato in contesti come 4G/5G.![[Ch. 4.1 - Rete p. dati-1780927779692.png]]
+![[Ch. 4.1 - Rete p. dati-1780927808664.png]]![[Ch. 4.1 - Rete p. dati-1780927827901.png]]
+![[Ch. 4.1 - Rete p. dati-1780927847073.png]]
+
+## Inoltro generalizzato, SDN
+
+**Match+Action**
+![[Ch. 4.1 - Rete p. dati-1780928113749.png]]
+Ciascun royter ha una *tabella di inoltro*( o dei flussi).
+Astrazione "**match plus action**": Cerca corrispondenze nei bit dei pacchetti in arrivo, agisce:
+- *Inoltro basato sulla destinazione*: Inoltra in base all'IP del destinatario
+- *Inoltro generalizzato*:
+	- Più campi di intestazione possono determinare l'azione;
+	- Più azioni possibili (scarta/copia/modifica/logga il pacchetto)
+![[Ch. 4.1 - Rete p. dati-1780928247851.png]]
+
+**Tabella dei flussi**
+*Flusso*: Definito dai valori campi di intestazione (a livello di collegamento, rete o trasporto).
+*Inoltro generalizzato*: Semplici regole per la gestione dei pacchetti:
+- *Match*: pattern sui valori dei campi di intestazione;
+- *Actions*: per il pacchetto in cui viene trovata una corrispondenza: scartare(drop), inoltrare (forward), modificare l'intestazione (modify), o inviare al controllore;
+- *Priorità*: Disambigua pattern sovrapposti;
+- *Contatori*: numero di byte e numero di pacchetti, marca temporale ultimo aggiornamento.
+![[Ch. 4.1 - Rete p. dati-1780928498738.png]]
+![[Ch. 4.1 - Rete p. dati-1780928519581.png]]
+
+**OpenFlow**
+![[Ch. 4.1 - Rete p. dati-1780928654173.png]]
+Esempi:
+![[Ch. 4.1 - Rete p. dati-1780928675942.png]]
+
+**Astrazione in OverFlow**
+*Match+Action* astrae dispositivi differenti:
+**Router**:
+- *match*: prefisso IP di destinazione più lungo
+- *action*: inoltro attraverso un collegamento
+**Firewall**:
+- *match*: indirizzi IP e  numeri di porta TCP/UDP
+- *action*: consentire o negare (permit/deny)
+**Switch**:
+- *match*: indirizzo MAC di destinazione
+- *action*: inoltra o inonda
+**NAT**:
+- *match*: indirizzo IP e porta
+- *action*: riscrive indirizzo e porta
+
+## Middlebox
+
+>[!cite] "Qualsiasi box intermedio che svolge *funzioni diverse da quelle normali e standard di un router IP * **sul percorso dei dati tra un host di origine e un host di destinazione"**
+![[Ch. 4.1 - Rete p. dati-1780929048931.png]]
+
+Inizialmente le middlebox erano soluzioni hardware proprietarie (chiuse). Si è passati ad hardware "whitebox" che implementano API aperte, per:
+- abbandonare le soluzioni hardware proprietari;
+- effettuare *azioni locali probammabili* attraverso 'match+action'
+- orientarsi verso innovazione/differenziazione nel software.
+*SDN*: Disaccoppia piano di controllo (centralizzato) dal piano dei dati (distribuito)
+**Network Funcions Virtualization** (VFN): Astrae le funzioni di rete dall'hardware: le funzioni di rete (Es. router, switch, firewall) sono programmate in software ed eseguite su hardware COTS (Commodity Off-The-Shelf) tramite VM o container, sfruttando risorse di calcolo, storage e rete. Sono usate svariate tecniche e tecnologie per migliorare le prestazioni. Possono essere quindi anche eseguite in Cloud.
+
+**Clessidra IP**
+![[Ch. 4.1 - Rete p. dati-1780929333549.png]]
+![[Ch. 4.1 - Rete p. dati-1780929351206.png]]
+
+**Principi architetturali di internet**
+Tre convinzioni fondamentali:
+- Connettività semplice;
+- Protocollo IP
+- Intelligenza, complessità alla periferia della rete.
+
+**Principio end-to-end**
+Alcune funzionalità possono essere implementate nel *nucleo della rete* o nella *periferia della rete*:![[Ch. 4.1 - Rete p. dati-1780929466461.png]]
