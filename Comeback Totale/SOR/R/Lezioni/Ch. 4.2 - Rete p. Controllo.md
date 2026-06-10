@@ -108,3 +108,65 @@ La comunicazione iterativa, le fasi di calcolo diffondono le informazioni attrav
 - Se il DV cambia, avvisa i vicini
 ## Confronto
 ![[Ch. 4.2 - Rete p. Controllo-1781098367812.png]]
+
+# Instradamento interno al sistema autonomo : OSPF
+**Rendere l'instradamento scalabile**
+Fino ad ora è stato idealizzato il router come:
+- Tutti i router sono identici
+- La rete è "piatta"
+Nella praticità è diverso.
+*Scalabilità*: Miliardi di destinazioni:
+- Non può memorizzare tutte le destinazioni nelle tabelle di instradamento;
+- L'invio in broadcast degli aggiornamenti sullo stato dei link otturerebbe i collegamenti;
+- Gli algoritmi DV impiegherebbero tempo enorme per convergere.
+*Autonomia amministrativa*:
+- Internet come una rete di reti;
+- Ogni amministratore di rete può voler controllare l'instradamento nella propria rete o nascondere dettagli della sua struttura interna.
+
+## Approccio di Internet al routing scalabile
+L'idea è di aggregare i router in regioni note come *sistemi autonomi* ( SA, anche detti **domini**), formati di solito da router sottoposti alla stessa amministrazione.
+Un ISP può costituire un unico AS oppure essere partizionato in più AS.
+AS identificati da un Autonomous System Number (ASN).
+**intra-AS** (o *intra-domain*): instradamento interno al sistema autonomo ("rete"):
+- Tutti i router nell'AS devono eseguire lo stesso protocollo di instradamento interno al sistema autonomo;
+- AS differenti possono eseguire differenti protocolli di instradamento interno al sistema autonomo
+- *Router Gateway*: sul "bordo" (*edge*) del proprio AS, connesso a uno o più router in altri AS.
+**inter-AS** (o *inter-domain*): instradamento *tra* sistemi autonomi:
+- I gateway effettuano l'instradamento inter-AS.
+
+![[Ch. 4.2 - Rete p. Controllo-1781100712486.png]]
+![[Ch. 4.2 - Rete p. Controllo-1781100718824.png]]
+![[Ch. 4.2 - Rete p. Controllo-1781100736732.png]]
+
+### Instradamento inter-AS
+Si supponga che un router dentro AS1 riceva un datagramma destinato al di fuori di AS1:
+- Il royter dovrebbe inoltrare il pacchetto ad un router gateway in AS1, ma quale?
+**L'instradamento inter-AS in AS1 deve**:
+1. Imparare quali destinazioni sono raggiungibili attraverso AS2 e quali atttraverso AS3
+2. Propagare queste informazioni di raggiungibilità a tutti i router in AS1:
+![[Ch. 4.2 - Rete p. Controllo-1781100894947.png]]
+### Instradamento intra-AS
+Protocolli di instradamento intra-AS più comuni:
+- **RIP: Routing Information Protocol**
+	- DV classico: DV scambiati ogni 30sec
+	- Non più largamente usato
+- **EIGRP: Enhanced Interior Gateway Routing Protocol**
+	- Basato su DV
+	- Precedentemente di proprietà di CISCO per decenni
+- **OSPF: Open Shortest Path First**
+	- Instradamento link-state
+	- Protocollo IS-IS(ISO standard, non standard RFC) essenzialmente identico a OSPF.
+
+## OSPF
+Disponibile pubblicamente, classico link-state:
+- Ciascun router utilizza il *flooding* per inviare in broadcast (periodicamente, ogni 30min) le informazioni circa lo stato dei collegamenti (direttamente dentro datagrammi IP senza usare TCP/UDP) a tutti gli altri router nell'intero AS;
+- Costo dei collegamenti: inversamente proporzionale alla larghezza di banda;
+- Ogni router dispone di una topologia completa, utilizza l'algoritmo di Dijkstra per calcolare la tabella di inoltro.
+**Sicurezza**: Tutti i messaggi OSPF sono autenticati per prevenire intrusioni dannose.
+
+### ECMP Routing
+	Equal-Cost Multi-Path routing
+L'**instradamento ECMP** consente di instradare i pacchetti verson una stessa destinazione usando molteplici percorsi di uguale costo (verso un certo prefisso) *aumentando la larghezza di banda*.
+Un router che deve inoltrare un pacchetto fa *load balancing* tra i possibili *next hop*:
+
+pdf21sl12
