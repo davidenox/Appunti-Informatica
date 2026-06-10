@@ -63,4 +63,48 @@ A causa di difficoltà sperimentate nell'uso di algoritmi sensibili al carico, a
 - Il messaggio di ogni router attraversa $O(n)$ collegamenti: Complessità complessiva $O(n^2)$.
 
 **Oscillazioni**
-pdf20sl31
+Quando i costi dei collegamenti dipendono dal volume di traffico sono possibili *oscillazioni dei percorsi*. 
+Esempi: 
+- Instradamento verso a: i nodi b, d e c trasmettono rispettivamente con tasso 1,1 e <1
+- Il costo dei collegamenti è direzionale dipendente dal traffico.
+![[Ch. 4.2 - Rete p. Controllo-1781096661227.png]]
+
+## Distance Vector
+Basato sull'equazione di *Bellman-Ford*:$$\begin{align}\\&
+\text{Sia }D_x(y)\text{ il costo del percorso di costo minimo da }x\text{ a }y.\\& 
+\text{Allora:}\\&
+D_x(y)=\min_v\{c_{x,v}+d_v(y)\}
+\end{align}$$
+Dove:
+- $d_v(y)$ è il costo del cammino minimo da v a y
+- $c_{x,v}$ è il costo diretto del cammino da x e v
+- $\min [..]$ è il minimo calcolato su tutti i vicini v di x
+**Intuizione**
+Il secondo nodo lungo qualsiasi cammino da x a y è necessariamente un vicino $v_i$ di x.
+Il costo del primo arco è $c_{x,v_i}$ mentre la parte restante del cammino non può costare meno di $d_{v_i}(y)$ cioè il costo del cammino minimo da $v_i$ ad y, per un totale di $c_{x,v_i}+d_{v_i}(y)$.
+Per trovare il cammino di costo minimo da x ad y è quindi sufficiente trovare il vicino di x che minimizza questa quantità:![[Ch. 4.2 - Rete p. Controllo-1781097164494.png]]
+**Idea chiave**
+- Di tanto in tanto, ogni nodo invia ai vicini il proprio vettore delle distanze (stimate) (*distance vector*);
+- Quando x riceve un DV da un qualsiasi altro vicino, aggiorna la propria DV utilizzando l'equazione BF:$$D_x(y)\leftarrow\min_v\{c_{x,v},D_v(y)\}\forall y\in N$$
+- Sotto certe condizioni minori e naturali, la stima $D_x(y)$ *converge* verso l'effettivo costo minimo $d_x(y)$.
+![[Ch. 4.2 - Rete p. Controllo-1781097444351.png|271]]
+- **Iterativo, asincrono**: Ciascuna iterazione locale causata:
+	- Cambiamento del costo del collegamento locale;
+	- Messaggio di aggiornamento del DV da un vicino.
+- **Distribuito, auto-terminante**: Ciascun nodo notifica i vicini *solo* quando la sua DV cambia
+	- I vicini notificano i loro vicini *solo se necessario*;
+	- Nessuna notifica ricevuta implica nessuna azione intrapresa.
+
+![[Ch. 4.2 - Rete p. Controllo-1781097964288.gif]]
+E così via
+Vediamo ora le *computazioni* iterative ai nodi
+![[Ch. 4.2 - Rete p. Controllo-1781098191171.gif]]
+
+**Diffusione di informazioni sullo stato**
+La comunicazione iterativa, le fasi di calcolo diffondono le informazioni attraverso la rete:![[Ch. 4.2 - Rete p. Controllo-1781098255979.png]]
+**Cambiamento del costo dei collegamenti**
+- Un nodo rileva la modifica del costo del collegamento locale
+- Aggiorna le informazioni di instradamento, ricalcola il DV locale
+- Se il DV cambia, avvisa i vicini
+## Confronto
+![[Ch. 4.2 - Rete p. Controllo-1781098367812.png]]
