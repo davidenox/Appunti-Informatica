@@ -223,3 +223,88 @@ Un **router gateway** potrebbe venire a conoscenza di percorsi *multipli* verso 
 ![[Ch. 4.2 - Rete p. Controllo-1781533863948.png]]
 
 #### Selezione delle rotte BGP
+Un **router** può conoscere più di un percorso verso l'AS di destinazoine, seleziona il percoros in base a:
+- Valore dell'attributo di *preferenza locale*: decisione politica
+- `AS-PATH` più breve
+- Router `NEXT-HOP` più vicino: instradamento a patata bollente
+- Identificatori BGP
+## Implementare le politiche attraverso gli annunci
+![[Ch. 4.2 - Rete p. Controllo-1781535333734.png]]
+L'ISP vuole instradare il traffico solo verso/da le reti dei propri clienti:
+- A annuncia il percorso Aw a B e a C
+- B *sceglie di non annunciare* BAw a C
+	- B non riceve alcuna "entrata" per l'instradamento CBAw, visto che né C, A,w sono clienti di B
+	- C *non* viene a conoscenza del percorso CBAw
+- C instraderà CAw (non usando B) per raggiungere w
+
+### Diversi tipi di instradamento
+Perché esistono diversi instradamenti Intra-AS e Inter-AS?
+1. Politiche
+	- inter-AS: L'amministratore vuole avere il controllo sul modo in cui viene instradato il suo traffico **e** su chi passa attraverso la sua rete
+	- intra-AS: Singolo amministratore, quindi le politiche sono meno rilevanti
+2. Scalabilità
+	- Routing gerarchico: Limita l'ambito delle informazioni topologiche dettagliate al singolo AS
+	- Instradamento BGP verso prefissi per supportare un gran numero di destinazioni
+3. Prestazioni
+	- intra-AS: Può concentrarsi sulle prestazioni
+	- inter-AS: le politiche sono dominanti rispetto alle prestazioni
+
+# Piano di controllo SDN
+**Software Defined Networking**
+Livello di rete di internet: storicamente implementato tramite un approccio di controllo distribuito e per router:
+- Un *router monolitico* contiene l'hardware di commutazione (switching), esegue un'implementazione proprietaria dei protocolli standard di internet in un SO proprietario specializzato per dispositivi di rete
+- "middlebox" differenti per differenti funzioni del livello di rete: firewalls, load balancers, NAT,...
+
+**Piano di controllo per router**
+I singoli componenti dell'algoritmo di instradamento *in ogni router* interagiscono nel piano di controllo.![[Ch. 4.2 - Rete p. Controllo-1781535927867.png]]
+
+**Piano di controllo SDN**
+Il controller remoto calcola ed installa le tabelle di inoltro nei router
+![[Ch. 4.2 - Rete p. Controllo-1781535972041.png]]
+
+*Perché* un piano di controllo *logicamente centralizzato*?
+- Gestione più semplice della rete: evitare errori di configurazione dei router, maggiore flessibilità dei flussi di traffico
+- Inoltro basato sulle tabelle dei flussi, permette la "programmazione" dei router
+	- La programmazione centralizzata è più semplice: calcola le tabelle centralmente e poi le distribuisce
+	- La programmazione distribuita è più difficile: calcolo delle tabelle come risultato di un algoritmo (protocollo) distribuito implementato in ogni singolo router
+- Implementazione aperta (non proprietaria) del piano di controllo
+	- Promuove l'innovazione
+
+## Ingegneria del traffico
+L'**Ingegneria del traffico** (TE) si occupa dell'ottimizzazione delle prestazioni delle reti in esercizio. In generale, comprende l'applicazoine della tecnologia e dei principi scientifici alla misurazione, alla modellazione, alla *caratterizzazione* **e** al *controllo del traffico* Internet, e l'applicazione di tali conoscenze e tecniche per *raggiungere specifici obiettivi di prestazione*.
+
+**Difficile con il routing tradizionale**
+![[Ch. 4.2 - Rete p. Controllo-1781536328704.png]]
+![[Ch. 4.2 - Rete p. Controllo-1781536347694.png]]
+
+### Estensioni in OSPF
+OSPF è stato esteso con la possibilità di annunciare informazioni utili al Traffic Engineering, quali banda disponibile, ritardo, jitter, perdita ecc..
+OSPF però non sfrutta questi dati per ricalcolare i propri percorsi.
+In particolare, tecnologie come MPLS (MultiProtocol Label Switching) possono usare queste informazioni. Anziché limitarsi all'inoltro tradizionale basato solo sui percorsi di destinazione, MPLS-TE permette di instradare i flussi su cammini alternativi. In questo modo si tiene conto della congestione di rete e si massimizzano le prestazioni.
+![[Ch. 4.2 - Rete p. Controllo-1781536550988.png]]
+
+**Switch del piano dei dati**![[Ch. 4.2 - Rete p. Controllo-1781536683940.png|200]]
+
+- Switch veloci e semplici che implementano l'inoltro generalizzato del piano dei dati in hardware
+- Tabella dei flussi (inoltro) calcolata, installata sotto la supervisione del controllore
+- API per il controllo degli switch basato su tabelle
+	- Definisce ciò che è controllabile e ciò che non lo è
+- Protocollo di comunicazione con il controllore
+
+
+**SDN Controller**![[Ch. 4.2 - Rete p. Controllo-1781536859529.png|200]]
+
+- Mantiene le informazioni sullo stato della rete
+- Interagisce con le applicazioni di controllo della rete "in alto" tramite API "northbound"
+- Interagisce con gli switch di rete "in basso" tramite API "southbound"
+- Implementato come sistema distribuito per garantire prestazioni, scalabilità, tolleranza ai guasti, robustezza e sicurezza
+
+**Applicazioni di controllo di rete**![[Ch. 4.2 - Rete p. Controllo-1781536989848.png|200]]
+
+- "Cervelli" di controllo: Implementano le funzioni di controllo utilizzando servizi di livello inferiore attraverso API fornite dal controller SDN
+- *scorporate*: Può essere fornito da terzi (distinto dal dornitore di routing o dal controller SDN)
+
+
+
+**Componenti di un Controller SDN**
+pdf21sl46
