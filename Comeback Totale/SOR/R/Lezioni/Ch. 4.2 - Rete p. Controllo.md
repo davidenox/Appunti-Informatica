@@ -168,5 +168,58 @@ Disponibile pubblicamente, classico link-state:
 	Equal-Cost Multi-Path routing
 L'**instradamento ECMP** consente di instradare i pacchetti verson una stessa destinazione usando molteplici percorsi di uguale costo (verso un certo prefisso) *aumentando la larghezza di banda*.
 Un router che deve inoltrare un pacchetto fa *load balancing* tra i possibili *next hop*:
+- **Per flusso**: Ne segue che tutti i pacchetti che appartengono al medesimo flusso attraversano lo stesso percorso
+- **Per destinazione**: Ne segue che i pacchetti che hanno lo stesso IP di destinazione attraversano lo stesso percorso
+- **Per pacchetto**: Ne segue che ogni pacchetto per una stessa destinazione può seguire un percorso differente. Può creare problemi a TCP a causa di:
+	- Consegna fuori ordine
+	- Variabilità del ritardo
+	- Variabilità della MTU minima
+### OSPF Gerarchico
+**Gerarchia a due livelli**: Area locale, dorsale (backbone)
+- Annunci link-sttae inondati solo in area locale o dorsale
+- Ogni nodo ha una topologia dettagliata dell'area; conosce solo la direzione per raggiugere altre destinazioni.
+![[Ch. 4.2 - Rete p. Controllo-1781532933711.png]]
+# Instradamento tra sistemi autonomi: BGP
+## Instradamento Internet inter-AS: BGP
+**BGP**(*Border Gateway Protocol*): Il protocollo di fatto per l'instradamento inter-domain.
+Permette alla sottorete di pubblicizzare la sua esistenza e le destinazioni che può rggiungere al resto di internet. BGP fornisce a ciascun AS un mezzo per:
+- Ottenere informazioni sulla raggiungibilità dei prefissi di sottorete da parte dei sistemi confinanti (*eBGP*)
+- Determinare le rotte verso altre reti sulla base delle informazioni di raggiungiblità e di politiche
+- Propagare le informazioni di raggiungiblità a tutti i router interni all'AS (*iBGP*)
+- *Annunciare* alle reti confinanti le informazioni sulla raggiungibilità delle destinazioni.
+![[Ch. 4.2 - Rete p. Controllo-1781533228861.png]]
 
-pdf21sl12
+## Nozioni base su BGP
+**Sessione BGP**: Due router BGP (peers) si scambiano messaggi BGP attraverso una connessione TCP semi-permanente:
+- Annunciare *percorsi* verso diversi prefissi di rete
+Quando il gateway 3a di AS3 annuncia il *percorso AS3,X* al gateway di 2c di AS2:
+- AS3 *promette* a AS2 che inoltrerà i datagrammi verso X
+![[Ch. 4.2 - Rete p. Controllo-1781533357421.png]]
+
+### Messaggi BGP
+I messaggi BGP sono scambiati tra peer su connessioni TCP:
+- `OPEN`: Apre la connessione TCP al peer BGP remoto ed autentica il peer BGP mittente
+- `UPDATE`: Annuncia un nuovo percorso (o ritira il vecchio)
+- `KEEPALIVE`: Mantiene attiva la connessione in assenza di `UPDATE`; Inoltre ACK della richiesta `OPEN`
+- `NOTIFICATION`: Segnala gli errori nel messaggio precedente; viene usato anche per chiudere la connessione.
+### Attributi e Rotte
+**Rotta** (route) annunciata da BGP: prefisso + attributi
+- Prefisso: la destinazione che viene annunciata;
+- Due attributi importanti:
+	- `AS-PATH`: Elenco degli AS attraverso i quali è passato l'annuncio del prefisso
+	- `NEXT-HOP`: Indirizzo IP dell'interfaccia del router che inizia l'`AS-PATH`
+**Instradamento basato su politiche**
+Un gatewy che riceve un annuncio di percorso usa una *import policy* per accettare/declinare il percorso. Le politiche dell'AS determinano anche se *annunciare* un percorso ad altri AS vicini.
+
+![[Ch. 4.2 - Rete p. Controllo-1781533713917.png]]
+
+**PERCORSI MULTIPLI**:![[Ch. 4.2 - Rete p. Controllo-1781533766596.png]]
+Un **router gateway** potrebbe venire a conoscenza di percorsi *multipli* verso una certa destinazione.
+
+**Popolare le tabelle di inoltro**
+![[Ch. 4.2 - Rete p. Controllo-1781533826748.png]]
+
+**Instradamento a patata bollente**
+![[Ch. 4.2 - Rete p. Controllo-1781533863948.png]]
+
+#### Selezione delle rotte BGP
