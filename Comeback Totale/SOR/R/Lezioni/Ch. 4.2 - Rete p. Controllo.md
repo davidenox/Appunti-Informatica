@@ -307,4 +307,66 @@ In particolare, tecnologie come MPLS (MultiProtocol Label Switching) possono usa
 
 
 **Componenti di un Controller SDN**
-pdf21sl46
+![[Ch. 4.2 - Rete p. Controllo-1781687108522.png|432]]
+- *Livello di interfaccia con le applicazioni di controllo della rete*: astrazioni/API
+- *Gestione dello stato della rete*: Stato dei collegamenti di rete, degli switch, dei servizi: un **database distribuito**
+- *Comunicazione*: Comunicazione tra il controller SDN e gli switch controllati
+
+## Protocollo OpenFlow
+- Opera tra controllore e switch
+- TCP utilizzato per lo scambio di messaggi
+	- Crittografia opzionale
+- Tre classi di messaggi OpenFlow:
+	- `controller-to-switch`
+	- `asynchronous` (switch to controller)
+	- `symmetric` (misc.)
+- Distinta dall'API OpenFlow
+	- API utilizzata per specificare azioni di inoltro generalizzate
+
+### Messaggi controller-to-switch
+**Messaggi chiave**:![[Ch. 4.2 - Rete p. Controllo-1781687910816.png|292]]
+- `features`: Il controllore interroga le caratteristiche dello switch, lo switch risponde
+- `configure`: Il controllore interroga/imposta i parametri di configurazione dello switch
+- `modify-state`: Aggiungere, eliminare, modificare voci di flusso nelle tabelle OpenFlow
+- `packet-out`: Il controllore può inviare questo pacchetto da una specifica porta dello switch.
+
+### Messaggi switch-to-controller
+**Messaggi chiave**:
+- `packet-in`: Trasferire il pacchetto (e relativo controllo) al controllore. Vedere il messaggio `packet-out` dal controllore
+- `flow-removed`: Voce della tabella di flusso cancellata nello switch
+- `port status`: Informare il controllore di una modifica sulla porta
+Fortunatamente, gli operatori di rete non "programmano" gli switch creando/inviando direttamente messaggi OpenFlow. Utilizzano invece un'astrazione di livello superiore a livello di controller
+
+### Es. Interazione tra piano dati e controllo
+
+![[Ch. 4.2 - Rete p. Controllo-1781690563329.png|307]]
+1. S1, a causa di un guasto del collegamento, utilizza il messaggio di stato della porta OpenFlow per modificare il controllore.
+2. Il controller SDN riceve il messaggio OpenFlow, aggiorna le informazioni sullo stato del collegamento
+3. L'applicazione dell'algoritmo di routing di Dijkstra si è registrata in precedenza per essere richiamata quando lo stato dei collegamenti cambia. Viene chiamata
+4. L'algoritmo di routing di Dijkstra accede alle info sul grafo della rete, alle info sullo stato dei collegamenti nel controllore e calcola nuovi percorsi.
+![[Ch. 4.2 - Rete p. Controllo-1781690795880.png|307]]
+5. L'applicazione di link state routing interagisce con il componente `flow-tabòe-computation` del controller SDN, che calcola le nuove tabelle di flusso necessarie
+6. Il controllore utilizza OpenFlow per installare nuove tabelle negli switch che necessitano di un aggiornamento.
+
+### SDN: Intent-Based Networking (IBN)
+![[Ch. 4.2 - Rete p. Controllo-1781690970264.png|300]]
+1. L'utente (es. amministratore di rete) esprime in *forma dichiarativa* un obiettivo di alto livello (il "cosa"), cioè l'**intento**. Per esempio:
+	- "Garantire latenza < 5ms tra data center A e B"
+	- "Isolare il traffico VoIP dal resto della rete"
+2. Il sistema determina "come" realizzare l'obiettivo richiesto, attraverso l'opportuna allocazione e configurazione delle risorse
+3. Il sistema può garantire che l'obiettivo resti soddisfatto nel tempo, attraverso il monitoraggio della rete ed interventi correttivi automatici.
+#### Sfide selezionate
+- *Hardening* del piano di controllo: sistema distribuito *dependable*, scalabile nelle prestazioni e sicuro.
+	- Robustezza ai guasti: sfruttare la teoria forte dei sistemi distribuiti affidabili per il piano di controllo
+	- *dependability*, sicurezza: "incorporati" sin dall'inizio?
+- Reti, protocolli che soddisfano i requisiti specifici di missione
+	- Es. tempo reale, ultra affidabilità, ultra sicurezza.
+- Restensione oltre ad un singolo AS
+- L'SDN è fondamentali per le reti cellulari 5G.
+
+>[!info] Dependability (Predicibilità)
+>Definita in termini di *availability* (disponibilità: percentuale di tempo in cui un sistema è operativo ed accessibile quando necessario), *reliability*(affidabilità: capacità del sistema di svolgere correttamente le sue funzioni senza interruzioni su un determinato periodo di tempo), *safety* (sicurezza da incidenti) e *security* (sicurezza da intrusioni o accessi indesiderati).
+
+# Internet Control Message Protocol
+
+
