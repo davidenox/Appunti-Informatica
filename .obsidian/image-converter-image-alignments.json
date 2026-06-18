@@ -242,5 +242,25 @@
       "height": "",
       "wrap": false
     }
+  },
+  "Comeback Totale/SOR/R/Lezioni/Ch. 5 - Collegamento.md": {
+    "f34df2c03d8bea312ba6f01a8809beba": {
+      "position": "right",
+      "width": "279px",
+      "height": "286px",
+      "wrap": true
+    },
+    "30f7e832ceb6cb72aa29b1eec1c8076f": {
+      "position": "right",
+      "width": "399px",
+      "height": "454px",
+      "wrap": true
+    },
+    "5a529e47b89af20f590d660ed16353f7": {
+      "position": "center",
+      "width": "",
+      "height": "",
+      "wrap": false
+    }
   }
 }
