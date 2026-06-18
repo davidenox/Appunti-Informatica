@@ -368,5 +368,110 @@ Fortunatamente, gli operatori di rete non "programmano" gli switch creando/invia
 >Definita in termini di *availability* (disponibilità: percentuale di tempo in cui un sistema è operativo ed accessibile quando necessario), *reliability*(affidabilità: capacità del sistema di svolgere correttamente le sue funzioni senza interruzioni su un determinato periodo di tempo), *safety* (sicurezza da incidenti) e *security* (sicurezza da intrusioni o accessi indesiderati).
 
 # Internet Control Message Protocol
+**ICMP**, utilizzato da host e router per comunicare informazioni a livello di rete.
+- Segnalazione di errori (host, rete, porta, protocollo non raggiungibile)
+- Richiesta/risposta `echo` (usato da ping)
+Si trova nel livello di rete "sopra" l'IP:
+- Messaggi ICMP trasportati nei datagrammi IP
+- Non viene considerato un protocollo di trasporto perché non viene usato dalle applicazioni di rete per trasferire i propri messaggi
+![[Ch. 4.2 - Rete p. Controllo-1781773284298.png]]
+![[Ch. 4.2 - Rete p. Controllo-1781773304933.png]]
+![[Ch. 4.2 - Rete p. Controllo-1781773348670.png]]
+![[Ch. 4.2 - Rete p. Controllo-1781773367074.png]]
+![[Ch. 4.2 - Rete p. Controllo-1781773381224.png]]
+![[Ch. 4.2 - Rete p. Controllo-1781773399729.png]]
+## Traceroute e ICMP
+![[Ch. 4.2 - Rete p. Controllo-1781773442691.png]]
+La sorgente invia serie di segmenti UDP alla destinazione (con un numero di porta "improbabile"):
+- 1° insieme ha TTL=1, 2° insieme ha TTL=2,...
+Un datagramma nell'n-esimo insieme arriva all'n-esimo router:
+- Il router scarta il dtagramma ed invia il messaggio ICMP alla sorgente (tipo 11 codice 0)
+	- L'IP del router si trova nel campo indirizzo sorgente dell'intestazione del datagramma che incapsula il messaggio ICMP.
+*Criteri di arresto*:
+- Il segmento UDP arriva eventualmente a destinazione
+	- La destinazione restituisce il messaggio ICMP "port unreachable" (tipo 3 codice 3)
+- La sorgente si ferma
 
+**Quando il messaggio ICMP arriva alla sorgente: registrare gli RTT**
+
+ICMPv6  per IPv6:
+- Nuovi tipi e nuovi codici;
+- Ridefinizione di alcuni tipi e codici esistenti
+Es. "destination unreachable - fragmentation required" sostituito con "packet too big".
+
+# Gestione e configurazione della rete
+**Sistema autonomo** (*Rete*): Migliaia di componenti sw e hw che interagiscono tra loro
+
+>[!note] La **gestione della rete** comprende il funzionamento, l'integrazione ed il coordinamento di HW, SW e personale tecnico per monitorare, verificare, configurare, analizzare, valutare e controllare le risorse della rete affinché soddisfino le funzionalità in tempo reale ed i requisiti di qualità del servizio ad un costo accettabile
+
+## Componenti
+![[Ch. 4.2 - Rete p. Controllo-1781774502506.png]]
+
+### Approcci dell'operatore per gestire la rete
+![[Ch. 4.2 - Rete p. Controllo-1781774774074.png|350]]
+**CLI** (Command Line Interface)
+- L'operatore scrive comandi su una console del dispositivo  o esegue script da remoto, per esempio, attraverso una connessione ssh
+- Molti dispositivi hanno anche una UI web
+**SNMP/MIB**
+- L'operatore interroga/imposta i dati contenuti negli oggetti MIB (*Management Information Base*) utilizzando il *Simple Network Management Protocol* SNMP
+- Usato principalmente per accedere a dati operativi e statistici (di un singolo dispositivo)
+**NETCONF/YANG**
+- Più astratto, a livello di rete, olistico
+- Enfasi sulla gestione della *configurazione multidispositivo*
+- YANG: Linguaggio di modellazione dei dati
+- NETCONF: Comunicare azioni/dati compatibili con YANG a/da/tra dispositivi remoti
+
+## SNMP: MIB
+I dati operativi e le statistiche (nonché alcuni dati di configurazione) del dispositivo gestito sono **modellati** come *managed objects*
+- Raccolti **moduli MIB**
+	- 400 Moduli MIB definiti da RFC; molte più moduli MIB specifici del fornitore
+- **Structure of Management Information** (*SMI*): Linguaggio di definizione dei dati
+- Esempio di MIB per UDP:
+![[Ch. 4.2 - Rete p. Controllo-1781774981245.png]]
+
+![[Ch. 4.2 - Rete p. Controllo-1781776349249.png|256]]
+- Ogni *managed object* ha un OID (Object Identifier) univoco
+- Gerarchico
+- Istanza: Uno specifico valore o misurazione di un oggetto MIB in un dato momento
+- Due tipi di managed object:
+	- Scalari: Singola istanza, identificato come OID.0
+	- Tabulari: Molteplici valori, ciascuno identificato appendendo un indice di riga (a partire da 1) all'OID
+
+
+## Protocollo SNMP
+Due modi per trasmettere le informazioni MIB e comandi
+![[Ch. 4.2 - Rete p. Controllo-1781776597983.png]]
+
+**Tipi di messaggio**
+![[Ch. 4.2 - Rete p. Controllo-1781776619132.png|371]]**Formato dei messaggi**
+![[Ch. 4.2 - Rete p. Controllo-1781777018359.png]]
+
+## NETCONF
+**Obiettivo**: Gestire/*configurare* in maniera attiva dispositici sulla rete. Opera tra il server di gestione ed i dispositivi di rete gestiti.
+- Azioni: `retrieve`, `set`, `modify`, `activate configurations`
+- **Commit atomico** di azioni su molteplici dispositivi
+- Interrogare i dati operativi e le statistiche
+- Sottoscrivere le notifiche dai dispositivi
+Paradigma a chiamata di procedura remota (*remote procedure call*, RPC)
+- Messaggi del protocollo NETCONF codificati in XML
+- Scambiati attraverso un protocollo di trasporto affidabile e sicuro (es. TLS,SSH)
+
+**Inizializzazione, scambio, chiusura**
+![[Ch. 4.2 - Rete p. Controllo-1781777254135.png]]
+
+**Operazioni NETCONF selezionate**
+
+| Operazione                             | Descrizione                                                                                                                                                                                      |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `<get-config>`                         | Recupera tutta o parte di una data configurazione. Un dispositivo può avere più configurazioni. C'è sempre una configurazione `running`, che descrive la configurazione corrente dei dispositivi |
+| `<get>`                                | Recupera tutti o parte dei dati operativi e della configurazione `running`                                                                                                                       |
+| `<edit-config>`                        | Modifica la configurazione (possibilmente in esecuzione) del dispositivo gestito. Quest'ultimo invia un `<rpc-reply>` contenente `<ok>` ; altrimenti viene inviato un `<rpc-error>` con rollback |
+| `<lock>`,`<unlock>`                    | Bloccare/sbloccare il datastore di configurazione sul dispositivo gestito (per bloccare i comandi NETCONF, SNMP o CLI da altre fonti)                                                            |
+| `<create-subscription>`,`notification` | Abilita la sottoscrizione di notifiche di eventi dal dispositivo gestito                                                                                                                         |
+Es.
+![[Ch. 4.2 - Rete p. Controllo-1781777571230.png]]
+
+## YANG
+Linguaggio di modellazione dei dati utilizzato per specificare la struttura, la sintassi e la semantica dei dati di gestione della rete NETCONF (tipi di dati incorporati, come SMI).
+Documento XML che descrive il dispositivo; può essere generato dalla descrizione YANG, e può esprimere vincoli tra i dati che devono essere soddisfatti da una configurazione NETCONF valida (per garantire che le configurazioni NETCONF soddisfino i vincoli di correttezza e di coerenza).![[Ch. 4.2 - Rete p. Controllo-1781777741613.png|337]]![[Ch. 4.2 - Rete p. Controllo-1781777769940.png]]
 
