@@ -153,4 +153,102 @@ Quindi $E(x)$ **non** è divisibile per $G(x)$ e pertanto l'errore sarà sicuram
 Se G ha almeno due bit a 1, esso è in grado di rilevare qualunque errore singolo. Perché?
 Un errore singolo è espresso dal polinomio $x^k$ (cioè $1\space\underbrace{000..0}_{k}$), che è divisibile solo dai polinomi $x^i$ per $i\le k$, essendo $x^k=x^{k-i}\cdot x^i$.
 
-pdf29sl2
+# Protocolli di accesso multiplo
+Due tipi di collegamento:
+- *Punto a punto*: Un trasmittente ad un'estremità del collegamento ed un unico ricevente all'altra estremità
+	- Collegamento punto a punto tra host e switch Ethernet
+	- Protocollo PPP per accesso dial-up
+- **Broadcast**: Un canale (mezzo fisico) broadcast *condiviso* tra più nodi trasmittenti e riceventi, ciascun frame viene ricevuto da tutti i nodi
+	- Ethernet con cavo condiviso
+	- WLAN, 4G/5G, satellite
+
+Singolo canale broadcast condiviso, due o più trasmissioni simultanee dai nodi creano *interferenza*. **Collisione** se un nodo riceve due o più segnali nello stesso istante.
+>[!important] Protocollo di accesso multiplo
+>- Algoritmo distribuito che determina come i nodi condividono il canale, determina quando i nodi possono trasmettere
+>- La comunicazione sulla condivisione del canale deve utilizzare il canale stesso
+>	- Nessun canale fuori banda per il coordinamento
+
+**Protocollo ideale**:
+*Dato*: Un canale ad accesso multiplo (MAC) con velocità di R bps
+*Desiderata*:
+1. Quando un solo nodo vuole trasmettere, può inviare a velocità R
+2. Quando M nodi vogliono trasmettere, ciascuna trasmissione può variare ad una velocità medi adi R/M
+3. Totalmente decentralizzato:
+	- Nessun nodo speciale che coordina le trasmissioni (il cui fallimento potrebbe bloccare il sistema);
+	- Nessuna sincronizzazione degli orologi, slot temporali, ecc..
+4. Semplice
+
+## Tassonomia
+Tre ampie classi:
+- **A suddivisione del canale** (Channel Partitioning)
+	- Divide il canale in "pezzi" più piccoli (slot temporali, bande di frequenza, codici)
+	- Assegna un pezzo a un nodo per uso esclusivo, eliminando le collisioni
+- **Ad accesso casuale** (Random Access)
+	- Canale non diviso, permette le collisioni
+	- Recupera dalle collisioni attraverso ritrasmissioni
+- **A rotazione** ("Taking Turns")
+	- I nodi si avvicendano a turno, ma i nodi con una quantità maggiore di materiale da inviare possono fare turni più lunghi
+
+### Protocolli a suddivisione del canale: TDMA
+**TDMA: Time Division Multiple Access** (accesso multiplo a divisione di tempo)
+- Accesso al canale in "intervalli di tempo"
+- Ciascun intervallo è ulteriormente suddiviso in N slot temporali (time slot), ciascuno assegnato ad uno degli N nodi
+- La durata di uno slot temporale è in genere tale da consentire la trasmissione di un pacchetto a livello di collegamento
+- Gli slot inutilizzati rimangono inutilizzati (idle)
+- Es. LAN con 6 nodi, 1-3-4 hanno pacchetti da inviare, 2-5-6 sono inattivi: ![[Ch. 5 - Collegamento-1781881004288.png]]
+- Nel proprio turno, un nodo trasmette a R bps, ma potendo farlo solo in 1/N della durata dell'intervallo temporale, la sua velocità media è R/N a prescindere dal fatto che ci siano altri nodi che vogliono trasmettere sul canale
+- Un nodo che ha dati da trasmettere deve attendere il proprio turno
+
+Lo spettro del canale è diviso in bande di frequenza, in cui a ciascun nodo viene assegnata una banda di frequenza fissa. Il tempo di trasmissione non utilizzato nelle bande di frequenza resta inutilizzato, Es:
+LAN con 6 nodi, 1-3-4 hanno pacchetti da inviare, le bande 2-5-6 sono inutilizzate
+![[Ch. 5 - Collegamento-1781881266579.png]]
+- Un nodo può *trasmettere nella propria banda di frequenze* appena ha dati da inviare, senza dover attendere turni
+
+### Protocolli ad accesso casuale
+Quando un nodo ha un pacchetto da inviare, lo trasmette alla massima velocità consentita dal canale (R bps), e non c'è alcun coordinamento "a priori" tra i nodi. Ciò vuol dire che se due o più nodi stanno trasmettendo nello stesso momento accade una *collisione*.
+Un **protocollo ad accesso casuale** specifica:
+- Come rilevare le collisioni
+- Come recuperare da esse
+Es: ALOHA, slotted ALOHA, CSMA, CSMA/CD,CSMA/CA
+
+#### Slotted ALOHA
+![[Ch. 5 - Collegamento-1781881622907.png]]
+*Assunzioni*:
+- Tutti i frame hanno la stessa dimensione (L bit)
+- Tempo suddiviso in slot temporali uguali (equivalenti al tempo per trasmettere un frame, L/R)
+- I nodi cominciano la trasmissione soltanto all'inizio degli slot
+- I nodi sono sincronizzati
+- Se 2 o più nodi trasmettono nello stesso slot, tutti i nodi rilevano la collisione prima de termine dello slot
+**Operazioni**:
+Quando un nodo ha un nuovo frame da spedire, lo *trasmette per intero* all'inizio dello slot successivo.
+- *Se non si verifica una collisione* il nodo puù inviare un nuovo frame nello slot successivo
+- *Se si verifica una collisione* il nodo ritrasmette il frame in ciascuno slot successivo con probabilità $p$  finché non ha successo
+	- $p$ - randomizzazione, perché?
+![[Ch. 5 - Collegamento-1781881827022.png]]
+Pro:
+- Un singolo nodo attivo (con dati da trasmettere) può trasmettere continuamente alla massima velocità del canale
+- Altamente decentralizzato: solo gli slot nei nodi devono essere sincronizzati
+- Semplice
+Contro:
+- Collisioni, spreco di slot
+- Slot inutilizzati per causa probabilistica
+- I nodi potrebbero essere in grado di rilevare la collisione in meno del tempo necessario per trasmettere il pacchetto
+- Sincronizzazione degli orologi
+
+##### Efficienza
+**Efficienza**: Frazione a lungo termine di slot riusciti (molti nodi, tutti con molti frame da inviare). 
+Si supponga: N nodi con molti frame da inviare, ciascuno trasmette nello slot con probabilità p (non distinguendo ritrasmissioni di frame o nuove trasmissioni): il numero di nodi che trasmettono in uno slot è una variabile aleatoria binomiale $B(N,p)$
+- Prob. che un dato nodo ha successo in uno slot $=p(1-p)^{N-1}$
+- Prob. che un nodo qualunque abbia successo $=Np(1-p)^{n-1}$
+- Efficienza massima: Trovare $p^*$ che massimizza $Np(1-p)^{N-1}$
+- Per molti nodi, calcolare il limite di $Np^*(1-p^*)^{N-1}$ per N che tende all'infinito, si ottiene: **Efficienza massima** $=1/e=.37$
+- **AL MASSIMO** il canale è usato per la trasmissione utile solo per il 37% del tempo.
+#### ALOHA puro
+'Unslotted' ALOHA: più semplice, nessuna sincronizzazione.
+- Appena arriva un nuovo frame: lo trasmette immediatamente e integralmente
+- Se la trasmissione va in collisione (lo rileva per esempio a causa dell'assenza di ACK): ritrasmette il frame immediatamente (dopo averne completato la trasmissione) con probabilità p, altrimenti attende il tempo di trasmissione di un frame e ripete il processo di attesa casuale, finché non ha successo.
+La probabilità di collisione aumenta in assenza di sincronizzazione:
+- Il frame inviato a $t_0$ collide con altri frame inviati in $[t_0-1,t_0+1]$ ![[Ch. 5 - Collegamento-1781885388437.png]]
+Efficienza massima del protocollo ALOHA puro: 18%.
+
+pdf29sl18
