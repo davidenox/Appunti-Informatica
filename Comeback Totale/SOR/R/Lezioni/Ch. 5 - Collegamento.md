@@ -323,3 +323,61 @@ Usato in FDDI e token ring.
 - TDM upstream: alcuni slot assegnati, alcuni sono contesi
 	- Frame MAP in downstream: assegna i minislot in upstream
 	- Richieste di frame in upstream (e dati) trasmessi con accesso casuale (binary backoff) in slot selezionati
+
+# LAN
+**Local Area Network**: Copre un'area limitata come un'abitazione, una scuola, un ufficio o un edificio. Due tecnologie:
+- Ethernet: IEEE 802.3
+- WiFi: IEEE 802.11
+
+**Indirizzi MAC**
+Indirizzi IP a 32 bit (128 in IPv6):
+- Indirizzi *a livello di rete* per le interfacce
+- Usati per l'inoltro a livello 3 (livello di rete)
+Indirizzi MAC ( o LAN o Fisici o Ethernet):
+- Funzione: *Utilizzati "localmente" per portare i frame da un'interfaccia a un'altra fisicamente connessa (stessa sottorete)*.
+- Indirizzo MAC a 48 bit (per la maggior parte delle LAN) memorizzato nella ROM della NIC, a volte impostabile via software.
+Ciascuna interfaccia in una LAN:
+- Ha un indirizzo *MAC* univoco
+- Ha un indirizzo IP univoco
+![[Ch. 5 - Collegamento-1782130198337.png|center|285]]
+- Allocazione degli indirizzi MAC gestita dall'IEEE
+- I produttori (di schede di rete) comprano porzioni dello spazio di indirizzi MAC (per assicurare l'unicità)
+Analogia:
+- Indirizzi MAC: come il codice fiscale
+- Indirizzo IP: come l'indirizzo postale
+Indirizzo MAC (piatto): portabilità
+- È possibile spostare un'interfaccia da una LAN ad un'altra
+- Indirizzo IP (gerarchico) *non* portabile: dipende dalla sottorete IP alla quale il nodo è connesso.
+## Protocollo per la risoluzione degli indirizzi (ARP)
+	Address Resolution Protocol
+*Domanda*: Come determinare l'indirizzo MAC di un'interfaccia conoscendo il suo indirizzo IP?
+![[Ch. 5 - Collegamento-1782132424622.png|348]]**Tabella ARP**:
+Ogni nodo IP (host, router) sulla LAN ha una tabella (una per ciascuna interfaccia)
+- Corrispondenza tra gli indirizzi IP e MAC per *alcuni nodi* sulla LAN:
+	- `<indirizzo IP; indirizzo MAC, TTL>`
+- TTL (Time To Live): tempo dopo il quale la mappatura degli indirizzi sarà dimenticata.
+![[Ch. 5 - Collegamento-1782134246931.png]]
+![[Ch. 5 - Collegamento-1782134258898.png]]
+![[Ch. 5 - Collegamento-1782134297687.png]]
+
+### ARP Spoofing o ARP Poisoning
+- Un attaccante invia in una LAN risposte ARP contraffatte, inducendo l'associazione di un indirizzo IP a un certo indirizzo MAC
+- Il protocollo ARP è senza stato e un nodo (host o router) aggiorna la proria ARP appena viene ricevuta una risposta ARP (a prescindere che questa faccia seguito ad una effettiva richiesta).
+Alcuni usi:
+- `denial-of-service` (DoS): Associare diversi indirizzi IP allo stesso indirizzo MAC per sovraccaricarlo di traffico;
+- `man-in-the-middle` (MITM): L'attaccante associa il proprio indirizzo MAC all'indirizzo IP di un altro nodo, in modo da intercettare (e magari modificare) il traffico destinato a quest'ultimo, per poi re-inoltrarglielo.
+
+### Come inviare un datagramma a un nodo esterno alla sottorete
+Scenario dettagliato: *invio di un datagramma da A a B passando per R*.
+- Attenzione sugli indirizzi - a livello IP (datagramma) e MAC (frame)
+Assunzioni:
+- A conosce l'indirizzo IP di B
+- A conosce l'indirizzo IP dell'interfaccia di R nella propria sottorete (DHCP)
+- A conosce l'indirizzo MAC dell'interfaccia di R nella propria sottorete (ARP)
+![[Ch. 5 - Collegamento-1782135501907.png]]
+
+- A crea un datagramma IP con sorgente A e destinazione B
+- A crea un frame a livello di collegamento contenente il datagramma IP da A a B
+	- La destinazione del frame è l'indirizzo MAC di R
+![[Ch. 5 - Collegamento-1782135978108.png]]
+pdf30sl14
