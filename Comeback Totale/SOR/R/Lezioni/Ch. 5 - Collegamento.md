@@ -251,4 +251,75 @@ La probabilità di collisione aumenta in assenza di sincronizzazione:
 - Il frame inviato a $t_0$ collide con altri frame inviati in $[t_0-1,t_0+1]$ ![[Ch. 5 - Collegamento-1781885388437.png]]
 Efficienza massima del protocollo ALOHA puro: 18%.
 
-pdf29sl18
+#### CSMA - Accesso multiplo con rilevamento della portante
+**CSMA**: Ascolta prima di ritrasmettere (rilevamento della portante, *carrier sense*):
+- *Se percepisce il canale inattivo*: Trasmette l'intero frame;
+- *Se percepisce il canale occupato*: Differisce la trasmissione.
+	- Analogia umana: non interrompere gli altri
+**CSMA/CD**: CSMA con *rilevamento della collisione* (collision detection):
+- Collisioni rilevate in breve tempo;
+- Le trasmissioni in collisione vengono interrotte, riducendo gli sprechi di canale;
+- Rilevamento delle collisioni facile con il cavo, difficile con il wireless
+	- Analogia umana: se qualcun altro parla con te, smetti di parlare
+
+##### CSMA: Collisioni
+Le collisioni possono *ancora* verificarsi con il rilevamento della portante:
+- Il **ritardo di propagazione** significa che due nodi potrebbero non sentire la trasmissione appena avviata dall'altro
+**Collisione**: spreco dell'intero tempo di trasmissione dei pacchetti:
+- La distanza ed il ritardo di progragazione giocano un ruolo importante nel determinare la probabilità di collisione.
+![[Ch. 5 - Collegamento-1782120235429.png|300]]CSMA/CD riduce la quantità di tempo sprecato nelle collisioni (trasmissione interrotta su rilevamento di collisione)![[Ch. 5 - Collegamento-1782120347053.png|300]]
+##### Algoritmo CSMA/CD di Ethernet
+1. Ethernet riceve un datagramma dal livello di rete, crea un frame;
+2. Se Ethernet ascolta il canale:
+	- *Inutilizzato* (idle): Avvia la trasmissione del frame;
+	- *Occupato* (busy): Aspetta finché il canale è libero, poi trasmette.
+3. Se l'intero frame viene trasmesso senza collisioni: FATTO
+4. Se durante l'invio viene rilevata un'altra trasmissione: Interrompere, inviare il segnale di disturbo (*jam*) 
+5. Dopo aver interrotto, entra nella *binary exponential backoff*:
+	- Dopo la m-esima collisione, scegli K casualmente tra $\{0,1,2,...,2^m-1\}$. Ethernet aspetta il tempo di trasmissione di K512bit, ritorna allo step 2
+	- Più collisioni: maggiore intervallo di backoff (ma $m$ viene limitato a 10).
+
+###### Efficienza
+$d_{prop}=$ massimo ritardo di propagazione tra due schede di rete
+$d_{trasm}=$ tempo necessario per trasmettere un frame di dimensione massima
+$$efficienza=\frac{1}{1+5d_{prop}/d_{trasm}}.$$
+L'efficienza tende a 1 se:
+- $d_{prop}$ tende a 0 (trasmissione interrotta subito il presenza di collisioni, evitando sprechi)
+- $d_{trasm}$ tende ad infinito (un frame, appropriatosi nel canale, lo impegna a lungo)
+Prestazioni migliori di ALOHA: semplice, economico, decentralizzato.
+ESEMPIO
+$d_{prop}=256$ bit time, $d_{trasm}=12.144$ bit time $$efficienza=\frac{1}{1+5d_{prop}/d_{trasm}}\approx90\%$$
+### Protocolli a rotazione
+![[Ch. 5 - Collegamento-1782121341215.png|269]]
+**Polling**: Il controllore centralizzato "invita" (round-robin) gli altri nodi a trasmettere a loro volta (fino ad un massimo di frame per turno).
+- Il controllore determina che il client ha finito osservando la mancanza di segnale
+- Elimina collisioni e slot inutilizzati
+Problemi:
+- *Ritardo di polling*: Il tempo impiegato per notificare a un nodo il permesso di trasmettere $\implies$ anche in presenza di un solo nodo attivo, il controllore deve contattare periodicamente tutti gli altri nodi, determinando un throughput effettivo minore di $R$
+- *Singolo punto di rottura* (master)
+Il Bluetooth usa il polling
+
+**Token passing**: Frame di controllo detto **token** passato esplicitamente da un nodo al successivo, sequenzialmente.![[Ch. 5 - Collegamento-1782121736034.png|240]]
+- Trasmette mentre possiede il token (entro un massimo accordato)
+Problemi:
+- *Overhead associato al token*
+- *Latenza*
+- *Singolo punto di rottura* (token)
+Usato in FDDI e token ring.
+
+
+### Rete di accesso via cavo
+	FDM, TDM, allocazione centralizzata e accesso casuale
+
+![[Ch. 5 - Collegamento-1782121876371.png]]
+- **Molteplici** canali FDM downstream (broadcast): fino a 1.6Gbps/canale
+	- Un solo CMTS trasmette nei canali -> nessun problema di accesso multiplo
+- **Molteplici** canali upstream (fino a 1Gbps/canale)
+	- **Accesso multiplo**: tutti gli utenti si contendono (accesso casuale) determinati slot temporali del canale upstream; agli altri vengono assegnati TDM
+
+![[Ch. 5 - Collegamento-1782122155107.png]]
+**DOCSIS**: Specifiche di interfaccia del servizio dati via cavo
+- FDM su canali di frequenze upstream e downstream
+- TDM upstream: alcuni slot assegnati, alcuni sono contesi
+	- Frame MAP in downstream: assegna i minislot in upstream
+	- Richieste di frame in upstream (e dati) trasmessi con accesso casuale (binary backoff) in slot selezionati
