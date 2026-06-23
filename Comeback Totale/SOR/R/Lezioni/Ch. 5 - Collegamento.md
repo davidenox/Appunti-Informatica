@@ -380,4 +380,72 @@ Assunzioni:
 - A crea un frame a livello di collegamento contenente il datagramma IP da A a B
 	- La destinazione del frame è l'indirizzo MAC di R
 ![[Ch. 5 - Collegamento-1782135978108.png]]
-pdf30sl14
+- Frame inviato da A a R
+- Frame ricevuto da R, datagramma, passato in alto a IP
+![[Ch. 5 - Collegamento-1782228750515.png]]
+
+- R determina l'interfaccia di uscita, passa il datagramma con sorgente IP A e destinazione IP B al livello di collegamento
+- R crea il frame a livello di collegamento contenente il datagramma IP da A a B. Indirizzo di destinazione del frame: indirizzo MAC di B
+![[Ch. 5 - Collegamento-1782228851720.png]]
+
+![[Ch. 5 - Collegamento-1782229213150.png]]
+
+- B riceve il frame, il datagramma IP destinato a sé
+- B passa il datagramma in alto nella pila protocollare a IP
+## Ethernet
+Tecnologia dominante per le LAN cablate.
+
+**Topologia fisica**:
+- *Bus*: tutti i nodi sono nello stesso dominio di collisione
+- *Topologia a stella con hub*: I nodi sono interconnessi da un hub (dispositivo fisico che rigenera i segnali ricevuti su una interfaccia e li ritrasmette su tutte le altre), quindi tutti i nodi sono nello stesso dominio di collisione
+- *Commutata*(Switched): Usata oggi.
+	- **Switch** di livello 2 attivo al centro
+	- Ogni "spoke" esegue un protocollo Ethernet separato (no collisioni).
+### Struttura del frame Ethernet
+L'interfaccia trasmittente incapsula il datagramma IP in *frame Ethernet*.
+![[Ch. 5 - Collegamento-1782229590473.png]]
+**Preambolo**:
+- Usato per "risvegliare" le schede di rete dei riceventi e sincronizzare i loro clock con quello del trasmittente
+- 7 byte di `10101010` seguiti da un bite di `10101011`
+**Indirizzi**: Indirizzi sorgente e destinazione a 6 byte:
+- Se l'adattatore riceve un frame con un indirizzo di destinazione corrispondente o con un indirizzo di broadcast (es. pacchetto ARP), passa i dati nel frame al protocollo di livello superiore
+- Altrimenti, l'adattatore scarta il frame
+**Tipo**: Indica un protocollo di livello superiore (2 byte)
+- *Principalmente IP*, ma sono possibili anche altri protocolli a livello di rete
+- Utilizzato per demultiplexare sul ricevitore
+**CRC**: Controllo di ridondanza ciclica presso il ricevitore(4 byte)
+- Errore rilevato: frame scartato
+**Payload**: Dati passati al protocollo di livello superiore
+- Minimo 46 byte: se più piccolo, deve essere aggiunto del padding; perciò è importante che il protocollo di livello superiore preveda un meccanismo per stabilire la reale dimensoine dei dati
+- Massimo 1500 byte (Salvo estensioni) -> MTU
+La **fine del frame** è determinata a livello fisico dall'assenza di transizioni sulla linea.
+Escludendo il preambolo, la **dimensione di un frame** è compresa tra 64 e 1518 byte. In Gigabit Ethernet lo slot time è in realtà di 512 byte: frame più piccoli richiedono l'aggiunta di padding.
+
+**Ethernet non affidabile e senza connessione**
+- *Senza connessione*: Nessun handshake tra le NIC mittente e ricevente
+- *Non affidabile*: La NIC ricevente non invia ACK o NAK alla NIC mittente
+	- I dati nei frame scartati vengono recuperati solo se il mittente iniziale utilizza un trasferimento dati affidabile di livello superiore (es. TCP), altrimenti vanno persi
+- Protocollo MAC di Ethernet: "Unslotted" *CSMA/CD con binary backoff*.
+
+## Switch
+Dispositivo **a livello di collegamento**: Ha un ruolo *attivo*:
+- Memorizza e inoltra (`store-and-forward`) frame Ethernet
+- Esamina l'indirizzo MAC di destinazione del frame in arrivo, inoltra *selettivamente* il frame in uno o più collegamenti di uscita quando il frame deve essere inoltrato in un segmento, usa CSMA/CD per accedere al segmento
+1. *Trasparente*: Gli host sono inconsapevoli della presenza degli switch.
+2. *Collegamenti eterogenei*: I collegamenti possono operare a velocità diverse ed usare mezzi trasmissivi diversi; utile per evolvere la rete in maniera incrementale.
+3. *Plug-n-Play, autoapprendimento*: Non è necessario configurare gli switch.
+
+![[Ch. 5 - Collegamento-1782231268754.png|381]]
+- Gli host hanno connessioni dedicate, dirette con lo switch
+- Lo switch "bufferizza" i pacchetti
+- Il protocollo Ethernet è utilizzato su ciascun collegamento, così:
+	- full-duplex: una singola coppia di nodi alle estremità del collegamento che possono trasmettere simultaneamente senza collisioni
+	- half-duplex: Il singolo collegamento half-duplex è un dominio di collisione a sé
+- **Switching**: `A-to-A'` e `B-to-B'` possono trasmettere simultaneamente senza collisioni
+	- Maggiore banda aggregata rispetto ad un hub che permette una sola trasmissione per volta.
+- In differenza `A-to-A'` e `C-to-A'` *non* possono accadere simultaneamente
+### Tabella commutazione switch
+Ciascuno switch ha una **tabella di commutazione** (*switch table*), ciascuna voce;
+- `(indirizzo mac del nodo, interfaccia che conduce al nodo, timestamp)`
+- Da non confondere con la tabella ARP in host e router
+pdf30sl33
