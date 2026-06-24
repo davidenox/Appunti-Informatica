@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 5 - Collegamento.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Utility.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ch. 5 - Collegamento"
+              "title": "Utility"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 5 - Collegamento.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Utility.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Ch. 5 - Collegamento"
+              "title": "Struttura di Utility"
             }
           },
           {
@@ -189,8 +189,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "908e27dbace64ec5",
   "lastOpenFiles": [
+    "Comeback Totale/SOR/R/Esercizi/Esercizi Ch. 1.md",
+    "Comeback Totale/SOR/R/Lezioni/Utility.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 5 - Collegamento.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 4.2 - Rete p. Controllo.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. Dati.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione.md",
     "allegati/Ch. 5 - Collegamento-1782293697487.png",
     "allegati/Ch. 5 - Collegamento-1782293634076.png",
     "allegati/Ch. 5 - Collegamento-1782293507463.png",
@@ -201,21 +209,13 @@
     "allegati/Ch. 5 - Collegamento-1782292291227.png",
     "allegati/Ch. 5 - Collegamento-1782231268754.png",
     "allegati/Ch. 5 - Collegamento-1782229590473.png",
-    "allegati/Ch. 5 - Collegamento-1782229213150.png",
     "Comeback Totale/SOR/SO/Lezioni/L3 - Concetti base dei SO.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 5 - Collegamento.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 4.2 - Rete p. Controllo.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. Dati.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione.md",
     "Comeback Totale/SOR/R/img/gif dv2",
     "Comeback Totale/SOR/R/img/gif dv",
     "Senza nome.md",
     "Comeback Totale/SOR/R/img/gif DHCP",
     "u.md",
     "allegati",
-    "Comeback Totale/SOR/R/Esercizi/Esercizi Ch. 1.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione",
     "Comeback Totale/SOR/R/Esercizi",
     "Comeback Totale/SOR/R/img",
