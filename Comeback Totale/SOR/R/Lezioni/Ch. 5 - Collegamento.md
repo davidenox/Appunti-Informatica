@@ -448,4 +448,75 @@ Dispositivo **a livello di collegamento**: Ha un ruolo *attivo*:
 Ciascuno switch ha una **tabella di commutazione** (*switch table*), ciascuna voce;
 - `(indirizzo mac del nodo, interfaccia che conduce al nodo, timestamp)`
 - Da non confondere con la tabella ARP in host e router
-pdf30sl33
+
+**Autoapprendimento**
+Uno switch *impara* quali nodi possono essere raggiunti attraverso quale interfaccia:
+- Quando un frame viene ricevuto, lo switch "impara" la posizione del mittente: Segmento LAN in ingresso
+- Registra la coppia mittente/posizione nella tabella di commutazione
+
+**Filtraggio ed inoltro dei frame**
+Quando uno switch riceve un frame:
+1. Registra il collegamento in ingresso e l'indirizzo MAC dell'host mittente
+2. Indicizza la tabella di commutazione utilizzando l'indirizzo MAC di destinazione
+3. Se viene trovata una voce per la destinazione allora:
+	- Se la destinazione è sul segmento dal quale è arrivato il frame, allora scarta il frame o lo inoltra sull'interfaccia indicata dalla voce
+	- Altrimenti flood (manda il frame in broadcast su tutte le interfacce eccetto quella di arrivo).
+
+Gli switch con autoapprendimento possono essere interconnessi tra loro:
+![[Ch. 5 - Collegamento-1782292291227.png]]
+
+### Switch e router a confronto
+**Entrambi lavorano in** `store-and-forward`:
+- *Router*: Dispositivi a livello di rete
+- *Switch*: Dispositivi a livello di collegamento
+**Entrambi hanno tabelle di inoltro**:
+- *Router*: Calcolano le tabelle utilizzando algoritmi di instradamento, indirizzi IP
+- *Switch*: Autoapprendimento della tabella di inoltro usando il flooding, indirizzi MAC
+**Topologia della rete**
+- *Router*: Gli algoritmi di instradamento possono trovare percorsi ottimali (senza cicli) nonostante cicli nella topologia della rete; Inoltre, il decremento del TTL farebbe scartare i pacchetti incastrati in potenziali instradamenti fisici (Es. dovuti ad errori di configurazione).
+- *Switch*: Gli switch devono essere interconnessi ad albero (anche solo logicamente, grazie al *Spanning Tree Protocol*), per evitare che il traffico broadcast (in assenza di un campo TTL dei frame) resti in circolazione potenzialmente per sempre.
+**Numero di nodi**:
+- *Router*: Instradamento gerarchico, aggregazione degli indirizzi, ecc..
+- *Switch*: Tabelle ARP molto grandi nei nodi, ingente traffico ARP, frame broadcast, ecc..
+**Isolamento del traffico**:
+- Gli *switch* inviano in broadcast i frame il cui indirizzo MAC di destinazione è sconosciuto, con un effetto a valanga in presennza di molteplici switch interconnessi. I frame broadcast sono inoltrati a tutti i nodi nella rete.
+- I *router* inoltrano i pacchetti in accordo a percorsi determinati dalla funzione di instradamento.
+## VLAN
+Che succede quando le dimensioni della LAN aumentano e gli utenti cambiano il punto di attacco?
+![[Ch. 5 - Collegamento-1782292949958.png|261]]
+*Singolo dominio di broadcast*:
+- *Scalabilità*: tutto il traffico boradcast di livello 2 (ARP, DHCP, MAC sconosciuto) deve attraversare l'intera LAN
+- Problemi di inefficienza, sicurezza, privacy.
+*Problemi amministrativi*:
+- Un utente CS si sposta nell'ufficio EE connessio *fisicamente* allo switch EE, ma vuole restare connesso *logicamente* allo switch CS.
+### VLAN basato sulle porte
+
+>[!important] Virtual Local Area Network
+>Gli switch che supportano le funzionalità VLAN possono essere configurati per definire più LAN *virtuali* su un'unica infrastruttura LAN fisica.
+
+**port-based VLAN**: Le porte dello switch raggruppate (tramite SW di gestione dello switch) in modo che un *singolo switch fisico* operi come **molteplici** switch virtuali:
+![[Ch. 5 - Collegamento-1782293179908.png|331]]![[Ch. 5 - Collegamento-1782293190437.png|291x122]]
+- **Isolamento del traffico**: I frame verso/da le reti 1-8 possono raggiungere *soltanto* le porte 1-8.
+	- Si possono definire anche VLAN basate sugli indirizzi MAC degli endpoint, piuttosto che sulle porte.
+- **Appartenenza dinamica**: Le porte possono essere assegnate dinamicamente tra le VLAN
+- **Inoltro tra VLAN**: Fatto tramite un routing (come con switch separati)
+	- In pratica i produttori combinano gli switch con i router
+
+### VLAN che si estendono su più switch
+![[Ch. 5 - Collegamento-1782293432581.png]]
+**Connettere tra di loro due porte appartenenti alla stessa VLAN**:
+- Questa soluzione *non è scalabile*; per connettere N VLAN su due switch fisici, bisognerà sacrificare N porte su ciascuno switch fisico.
+ ![[Ch. 5 - Collegamento-1782293507463.png]]
+ **Porta Trunk**: Trasporta frame tra VLAN definite su più switch fisici.
+ - I frame inoltrati all'interno della VLAN tra gli switch non possono essere frame vannilla 802.3 (devono contenere informazioni sull' ID VLAN)
+ - Il protocollo 802.1Q aggiunge/rimuove campi di intestazione aggiuntivi per i frame inoltrati tra le porte trunk
+
+**Formato del frame VLAN 802.1Q**
+![[Ch. 5 - Collegamento-1782293634076.png]]
+
+### EVPN (VXLAN)
+**Ethernet VPN**
+![[Ch. 5 - Collegamento-1782293697487.png]]
+Switch Ethernet di livello 2 connessi *logicamente* l'un l'altro (es. usando IP come *underlay*)
+- Frame Ethernet trasportati *dentro* a datagrammi IP tra siti
+- "Schema di **tunneling** per **sovrapporre reti Layer 2 a reti Layer 3**.. funziona sull'infrastruttura di rete esistente e fornisce un mezzo per 'allungare' una rete Layer 2".
