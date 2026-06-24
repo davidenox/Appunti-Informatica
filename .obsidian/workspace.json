@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Utility.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Utility"
+              "title": "Ch. 3 - Trasporto"
             }
           }
         ]
@@ -150,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Comeback Totale/SOR/R/Lezioni/Utility.md",
+                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Utility"
+              "title": "Struttura di 1. Introduzione"
             }
           },
           {
@@ -191,14 +191,16 @@
   },
   "active": "908e27dbace64ec5",
   "lastOpenFiles": [
-    "Comeback Totale/SOR/R/Esercizi/Esercizi Ch. 1.md",
     "Comeback Totale/SOR/R/Lezioni/Utility.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 5 - Collegamento.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 4.2 - Rete p. Controllo.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. Dati.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
+    "Comeback Totale/SOR/R/Esercizi/Esercizi Ch. 1.md",
     "allegati/Ch. 5 - Collegamento-1782293697487.png",
     "allegati/Ch. 5 - Collegamento-1782293634076.png",
     "allegati/Ch. 5 - Collegamento-1782293507463.png",
@@ -234,8 +236,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
     "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.1 - Agenti Intelligenti.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/0_Indice.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/Lezione 2.md"
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.2 - Risolvere i problemi con la ricerca.md"
   ]
 }
