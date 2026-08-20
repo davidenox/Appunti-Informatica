@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "Ch. 1 - Intro"
             }
+          },
+          {
+            "id": "2a407378b0c1a8e9",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Comeback Totale/SOR/SO/Riassunti/CAPITOLO 1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "CAPITOLO 1"
+            }
           }
         ]
       }
@@ -41,10 +53,12 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Esplora file"
             }
           },
           {
@@ -150,13 +164,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
+                "file": "Comeback Totale/SOR/SO/Riassunti/Ch. 1 - Intro.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di 1. Introduzione"
+              "title": "Struttura"
             }
           },
           {
@@ -178,10 +192,10 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "switcher:Apri selettore rapido": false,
+      "daily-notes:Apri nota giornaliera": false,
       "bases:Crea nuova Base": false,
-      "switcher:Apri selezione rapida": false,
       "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
       "graph:Apri vista grafo": false,
@@ -189,10 +203,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d1cc2cbf4f940f27",
+  "active": "908e27dbace64ec5",
   "lastOpenFiles": [
-    "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
+    "Comeback Totale/SOR/SO/Riassunti/CAPITOLO 1.pdf",
     "Comeback Totale/SOR/SO/Riassunti/Ch. 1 - Intro.md",
+    "allegati/Ch. 1 - Intro-1787236317910.png",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
     "Comeback Totale/SOR/R/Lezioni/Utility.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 5 - Collegamento.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 4.2 - Rete p. Controllo.md",
@@ -211,7 +227,6 @@
     "allegati/Ch. 5 - Collegamento-1782292949958.png",
     "allegati/Ch. 5 - Collegamento-1782292291227.png",
     "allegati/Ch. 5 - Collegamento-1782231268754.png",
-    "allegati/Ch. 5 - Collegamento-1782229590473.png",
     "Comeback Totale/SOR/SO/Lezioni/L3 - Concetti base dei SO.md",
     "Comeback Totale/SOR/R/img/gif dv2",
     "Comeback Totale/SOR/R/img/gif dv",
@@ -227,7 +242,6 @@
     "Comeback Totale/SOR/SO/Lezioni/Index.md",
     "README.md",
     "Comeback Totale/SOR/SO/img",
-    "Comeback Totale/SOR/SO/Lezioni",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 9 - Virtual Memory.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 10 - Problemi di progettazione e Paging.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 2 - Sistemi Operativi.md",
@@ -235,7 +249,6 @@
     "Primo Anno/Fisica/bozza.md",
     "Primo Anno/Fisica/Formulario finale.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md",
-    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.1 - Agenti Intelligenti.md"
+    "Terzo Anno/Intelligenza Artificiale/Lezioni/Ch.3 - Ricerca in ambienti complessi.md"
   ]
 }
