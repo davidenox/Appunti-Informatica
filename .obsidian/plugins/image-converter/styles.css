@@ -39,6 +39,33 @@ body.image-converter-disable-native-image-selection:not(.is-mobile)
 	pointer-events: none !important;
 }
 
+/* Obsidian 1.13 moved image controls into an always-present toolbar that is
+ * revealed on hover. Hide the whole native toolbar so it cannot overlap the
+ * plugin's resize handles or receive pointer input.
+ */
+body.image-converter-disable-native-image-selection:not(.is-mobile)
+	.markdown-source-view
+	.image-embed
+	.embed-actions,
+body.image-converter-disable-native-image-selection:not(.is-mobile)
+	.markdown-source-view
+	.internal-embed.image-embed
+	.embed-actions {
+	display: none !important;
+	pointer-events: none !important;
+}
+
+/* The native image-reveal tooltip is absolutely positioned and escapes Obsidian's
+ * fixed-height table row. The Markdown link is the useful part of edit mode here.
+ */
+body.image-converter-disable-native-image-selection:not(.is-mobile)
+	.markdown-source-view
+	.cm-table-widget
+	.cm-image-reveal-tooltip {
+	display: none !important;
+	pointer-events: none !important;
+}
+
 body.image-converter-disable-native-image-selection:not(.is-mobile)
 	.markdown-source-view
 	.image-embed
@@ -1503,6 +1530,11 @@ button.image-converter-encoder-detected:hover,
 	box-shadow: var(--shadow-l);
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
+}
+
+.image-converter-annotation-tool-image-annotation-modal .image-converter-annotation-tool-modal-content {
+	padding: 0;
 	overflow: hidden;
 }
 
