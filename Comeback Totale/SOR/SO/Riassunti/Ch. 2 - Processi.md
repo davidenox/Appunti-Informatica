@@ -77,5 +77,68 @@ I thread **risiedono nello stesso spazio degli indirizzi di un singolo processo*
 | `pthread_yield`        | Rilascia la CPU per consentire l'esecuzione di un altro thread |
 | `pthread_attr_init`    | Crea ed inizializza la struttura di attributi di un thread     |
 | `pthread_attr_destroy` | Rimuove la struttura di attributi di un thread                 |
+## Sincronizzazione dei processi
+I processi hanno bisogno di un modo per *comunicare* (condividere dati) e quindi di un modo per **sincronizzarsi** (per tenere conto delle dipendenze e per evitare che si intralcino a vicenda).
+Si introduce il concetto di **race conditions**, ovvero il fenomeno in cui più processi accedono alla stessa risorsa condivisa. La lettura/scrittura di un file deve essere un'operazione *atomica*, altrimenti i processi possono "gareggiare" tra loro e giungere a conclusioni errate.
 
+**Regione critica**
+Requisiti per evitare le race conditions:
+1. Due processi non possono trovarsi contemporaneamente all'interno delle proprie regioni critiche;
+2. Non si possono fare ipotesi su velocità/numero di CPU;
+3. Nessun processo in esecuzione (al di fuori della propria regione critica) può bloccare altri processi;
+4. Nessun processo deve aspettare tempo infinito per entrare nella propria regione critica.
 
+**Mutua esclusione**
+![[Ch. 2 - Processi-1787931007697.png|377]]*Mutua esclusione con Busy Waiting*: i processi o thread attendono in un ciclo attivo (ossia senza far nulla di produttivo) di accedere alla regione critica. Lo fa attraverso:
+- *Disabilitazione degli Interrupt*: Un processo che si trova in regione critica blocca gli interrupt della CPU finché non ha finito. Funziona solo con i sistemi Unicore
+- *Blocco delle variabili*: $0$ se il blocco è libero, $1$ se occupato.
+- *Alternanza stretta*: Variabile `turn` per tenere traccia del turno in cui un processo può entrare nella sua regione critica.
+**NON SOLUZIONE**: Non permette ai processi di entrare nelle loro regioni critiche per due volte di seguito, ma soprattutto *un processo fuori regione critica può effettivamente bloccarne un altro*.
+
+**Algoritmo di Peterson**
+Alice e Bob vogliono usare un'unica postazione computer in un ufficio. Ma ci sono delle regole:
+1. Solo una persona può usare il computer alla volta.
+2. Se entrambi vogliono usarlo contemporaneamente, devono decidere chi va per primo.
+*Idea dell’algoritmo*
+- Alice o Bob devono segnalare il loro interesse a usare il computer.
+- Se l'altro non è interessato, la persona interessata può usarlo subito.
+- Se entrambi mostrano interesse, registrano il loro nome su un foglio. Ma se scrivono quasi allo stesso tempo, l'ultimo nome sul foglio ha la precedenza.
+- La persona che non ha la precedenza aspetta finché l'altra ha finito.
+- Una volta finito, la persona che ha usato il computer segnala che ha finito, e l'altra può iniziare.
+
+L'effettiva **soluzione** è *lasciare che un processo in attesa di entrare nella sua regione critica restituisca volontariamente la CPU allo scheduler*. - `SLEEP` e `WAKEUP`.
+- `sleep()` - Imposta il suo stato su `blocked` e lascia CPU allo scheduler;
+- `wakeup()`- Imposta il suo stato su `ready` e lascia CPU allo scheduler.
+
+### Mutua esclusione - Semafori
+Utilizzati per contare e gestire i `wakeup`.
+**Valori**: può essere $0$ (nessun wakeup) o $n>0$ (num. di wakeup in attesa).
+**Operazioni**:
+- `down`:
+	- Se il valore del semaforo è $\gt0$ allora viene decrementato, ed il processo continua la sua esecuzione.
+	- Se il valore del semaforo è $0$, il processo che ha invocato `down` viene bloccato e messo in una coda di attesa associata al semaforo (in pratica va "a dormire").
+- `up`:
+	- Se il valore del semaforo è $0$ vuol dire che ci sono processi nella coda di attesa, che vengono "svegliati";
+	- In ogni caso, il valore viene incrementato ed il processo continua la sua esecuzione.
+Le operazioni dei semafori sono *atomiche*, perciò indivisibili, per evitare conflitti.
+#### Mutex e pthreads
+**Mutex** - Versione esplicita e semplificata dei semafori, usata per gestire la mutua esclusione di risorse o codice condiviso, quando *non bisogna contare* accessi o altri fenomeni. Due stati:
+- `locked` - bloccato;
+- `unlocked` - sbloccato
+E due procedure principali:
+- `mutex_lock`;
+- `mutex_unlock`;
+Quando un thread vuole accedere ad una regione critica, chiama `mutex_lock`: se il mutex è sbloccato allora il thread può entrare, altrimenti attende. Al termine dell'accesso, il thread chiama `mutex_unlock` per liberare la risorsa.
+**Non c'è busy waiting**, se un thread non può acquisire un lock, chiama `thread_yield` per cedere la CPU ad un altro thread.
+
+| Chiamata                | Descrizione                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
+| `pthread_mutex_init`    | Inizializza un mutex                                                                                      |
+| `pthread_mutex_destroy` | Distrugge un mutex liberando le risorse associato. Solo se il mutex non è detenuto da alcun thread        |
+| `pthread_mutex_lock`    | Blocca un mutex, sospendendo l'operazione del thread chiamante se il mutex è già occupato.                |
+| `pthread_mutex_trylock` | Tenta di bloccare un mutex senza sospendere l'esecuzione.                                                 |
+| `pthread_mutex_unlock`  | Sblocca un mutex, permettendo ad altri thread di acquisirlo. Chiamato solo dal thread che detiene il lock |
+- I semafori possono essere utilizzati sia per la gestione dell'accesso alle risorse condivise che per la sincronizzazione tra thread. Tuttavia, non avendo una semantica di proprietà (qualsiasi thread può incrementarne o decrementarne il valore indipendentemente da chi lo ha modificato l'ultima volta), è preferibile utilizzarli per la sincronizzazione tra thread. 
+- I mutex vengono principalmente utilizzati per la mutua esclusione poiché a differenza dei semafori, avendo la semantica di proprietà, garantiscono che due thread diversi non possono accedere alla stessa regione critica nello stesso istante.
+### Mutua esclusione -Monitor
+pdf6sl52

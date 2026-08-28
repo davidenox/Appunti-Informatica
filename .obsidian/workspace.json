@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "908e27dbace64ec5",
+            "id": "01959ed7d82dcf3b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,12 +22,12 @@
             }
           },
           {
-            "id": "01959ed7d82dcf3b",
+            "id": "f69da4febc4f4d8f",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Comeback Totale/SOR/SO/Riassunti/CAPITOLO 2.pdf"
+                "file": "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 2.pdf"
               },
               "icon": "lucide-file-text",
               "title": "CAPITOLO 2"
@@ -205,9 +205,12 @@
   },
   "active": "6fd9938c4f0479ff",
   "lastOpenFiles": [
-    "Comeback Totale/SOR/SO/Riassunti/CAPITOLO 2.pdf",
+    "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 2.pdf",
     "Comeback Totale/SOR/SO/Riassunti/Ch. 2 - Processi.md",
-    "Comeback Totale/SOR/SO/Riassunti/CAPITOLO 1.pdf",
+    "allegati/Ch. 2 - Processi-1787931007697.png",
+    "Comeback Totale/SOR/SO/Riassunti/Bonus 1 - Programmazione C.md",
+    "Comeback Totale/SOR/SO/Riassunti/old",
+    "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 1.pdf",
     "Comeback Totale/SOR/SO/Riassunti/Ch. 1 - Intro.md",
     "allegati/Ch. 1 - Intro-1787236317910.png",
     "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
@@ -228,7 +231,6 @@
     "allegati/Ch. 5 - Collegamento-1782293179908.png",
     "allegati/Ch. 5 - Collegamento-1782292949958.png",
     "allegati/Ch. 5 - Collegamento-1782292291227.png",
-    "allegati/Ch. 5 - Collegamento-1782231268754.png",
     "Comeback Totale/SOR/SO/Lezioni/L3 - Concetti base dei SO.md",
     "Comeback Totale/SOR/R/img/gif dv2",
     "Comeback Totale/SOR/R/img/gif dv",
@@ -239,7 +241,6 @@
     "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione",
     "Comeback Totale/SOR/R/Esercizi",
     "Comeback Totale/SOR/R/img",
-    "Comeback Totale/SOR/R/Lezioni",
     "Comeback Totale/SOR/SO/Lezioni/L2 - Dalle architetture ai SO.md",
     "Comeback Totale/SOR/SO/Lezioni/Index.md",
     "README.md",
@@ -248,7 +249,6 @@
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 2 - Sistemi Operativi.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 1 - SO/Lezioni/Lezione 1 - Intro.md",
     "Primo Anno/Fisica/bozza.md",
-    "Primo Anno/Fisica/Formulario finale.md",
-    "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/3. Livello di trasporto.md"
+    "Primo Anno/Fisica/Formulario finale.md"
   ]
 }
