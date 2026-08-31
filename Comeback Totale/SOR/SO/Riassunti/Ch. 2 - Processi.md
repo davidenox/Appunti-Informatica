@@ -140,5 +140,22 @@ Quando un thread vuole accedere ad una regione critica, chiama `mutex_lock`: se 
 | `pthread_mutex_unlock`  | Sblocca un mutex, permettendo ad altri thread di acquisirlo. Chiamato solo dal thread che detiene il lock |
 - I semafori possono essere utilizzati sia per la gestione dell'accesso alle risorse condivise che per la sincronizzazione tra thread. Tuttavia, non avendo una semantica di proprietà (qualsiasi thread può incrementarne o decrementarne il valore indipendentemente da chi lo ha modificato l'ultima volta), è preferibile utilizzarli per la sincronizzazione tra thread. 
 - I mutex vengono principalmente utilizzati per la mutua esclusione poiché a differenza dei semafori, avendo la semantica di proprietà, garantiscono che due thread diversi non possono accedere alla stessa regione critica nello stesso istante.
-### Mutua esclusione -Monitor
-pdf6sl52
+### Mutua esclusione - Monitor
+Concetto di sincronizzazione ad alto livello per semplificare la scrittura dei programmi. Un monitor *raggruppa procedure*, variabili e strutture dati. I processi possono chiamare le procedure di un monitor ma non accedere alla sua struttura interna.
+- **Solo un processo può essere attivo in un monitor in un dato momento** - mutua esclusione
+- **Il compilatore gestisce la mutua esclusione dei monitor** - minore probabilità di errori lato umano
+I monitor utilizzano *variabili condizionali* e due operazioni su di esse: `wait` e `signal`, che *non accumulano segnali* (se `signal` viene inviato prima che il thread è in `wait` allora il segnale viene perso)
+
+#### Sincronizzazione e barriere
+Le **barriere** sono utilizzate per sincronizzare i processi in fasi diverse. Quando un processo raggiunge una barriera, attente finché tutti gli altri processi la raggiungono (`pthread_join`)
+
+##### Read-Copy-Update
+Problema dell'**inversione di priorità**:
+- Un thread di alta priorità aspetta una risorsa bloccata da un thread di bassa priorità;
+- Un thread di media priorità, che non ha nulla a che fare un la risorsa, impedisce al thread di bassa priorità di completare il suo lavoro.
+*Risultato*: Il thread di alta priorità non riesce a lavorare anche se teoricamente dovrebbe avere la precedenza su tutti.
+
+Soluzione: L'obiettivo del Read-Copy-Update è di accedere in modo concorrente senza lock, cercando di *evitare l'incosistenza dei dati*. L'idea è di aggiornare strutture dati consentendo letture simulate senza incappare in versioni inconsistenti dei dati. I lettori vedono o la versione vecchia o quella nuova, mai un mix delle due. E' diffuso nel kernel dei sistemi operativi.
+
+# Scheduling
+pdf7

@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Algoritmi e Strutture Dati/Modulo 2/Lezioni/Lezione 14 - Intrattabilità II.md",
+                "file": "Comeback Totale/SOR/SO/Riassunti/Ch. 2 - Processi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a Lezione 14 - Intrattabilità II"
+              "title": "Riferimenti"
             }
           },
           {
@@ -184,7 +184,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -203,7 +203,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6fd9938c4f0479ff",
+  "active": "01959ed7d82dcf3b",
   "lastOpenFiles": [
     "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 2.pdf",
     "Comeback Totale/SOR/SO/Riassunti/Ch. 2 - Processi.md",
