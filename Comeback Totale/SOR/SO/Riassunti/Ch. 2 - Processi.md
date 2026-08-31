@@ -158,4 +158,66 @@ Problema dell'**inversione di priorità**:
 Soluzione: L'obiettivo del Read-Copy-Update è di accedere in modo concorrente senza lock, cercando di *evitare l'incosistenza dei dati*. L'idea è di aggiornare strutture dati consentendo letture simulate senza incappare in versioni inconsistenti dei dati. I lettori vedono o la versione vecchia o quella nuova, mai un mix delle due. E' diffuso nel kernel dei sistemi operativi.
 
 # Scheduling
-pdf7
+Per evitare che processi/thread competano contemporaneamente per la CPU, si introduce lo **scheduler**, che decide quale processo/thread eseguire successivamente seguendo un **algoritmo di scheduling**.
+I processi si possono dividere in:
+- *CPU-bound*: Burst di CPU lunghi, attese di I/O infrequenti;
+- *I/O-bound*: Burst di CPU brevi, attese di I/O frequenti.
+Lo scheduling varia in base al contesto, ed opera in determinate situazioni:
+- *Creazione di un nuovo processo*
+- *Uscita di un processo*
+- *Blocco del processo*
+- *Interrupt I/O*
+A loro volta, gli algoritmi di scheduling si suddividono in:
+- *Non Preemptive* (senza prelazione) - Il processo viene eseguito fino al blocco o al rilascio volontario;
+- *Preemptive* (con prelazione) - Il processo viene eseguito per un tempo fissato per poi essere sospeso
+
+## Ambienti di scheduling
+>**Batch**:
+>- Ideale per attività aziendali periodiche;
+>- Accetta algoritmi senza prelazione;
+>- Priorità a prestazioni efficienti.
+>**Obiettivi**:
+>- Massimizzare il *Throughput* - numero di job completati in un tempo fissato;
+>- Minimizzare il *tempo di Turnaround* - tempo dall'inizio alla fine di un processo;
+>- Mantenere la *CPU costantemente attiva*.
+
+>**Interattivo**:
+>- *Prelazione fondamentale*;
+>- Previene la monopolizzazione della CPU;
+>- Adatto per server ed utenti multipli.
+>**Obiettivi**:
+>- *Tempo di risposta* rapido alle richieste degli utenti;
+>- *Adeguatezza* per soddisfare le aspettative dell'utente in termini di tempi di risposta.
+
+>- **Real-Time**:
+>- I processi spesso si bloccano velocemente sapendo di non poter eseguire a lungo;
+>- Prelazione non sempre necessaria;
+>- Eseguono programmi per specifiche applicazioni.
+>**Obiettivi**:
+>- *Rispetto delle scadenze* per completare i job nei tempi previsti;
+>- *Prevedibilità* per assicurarsi che il funzionamento sia costante per evitare degradi di qualità.
+
+In generale, **tutti i sistemi** devono garantire:
+- *Equità* - equa condivisione della CPU a tutti i processi;
+- *Imposizione della policy* - dichiarata;
+- *Bilanciamento* - mantenere attivi tutti i componenti del sistema
+### Scheduling nei Sistemi Batch
+**First-Come-First-Served**(*FCFS*):
+- Algoritmo di scheduling *senza prelazione*. I processi vengono assegnati alla CPU *nell'ordine di arrivo*. Si tratta di una singola coda di processi `ready`. Il primo job viene eseguito senza interruzioni, mentre quelli bloccati tornano in fondo alla coda.
+- *Vantaggi*: Facile da capire e da programmare, equo in base all'ordine di arrivo.
+- *Svantaggi*: Prestazioni non ottimali, si tramuta in tempi di attesa molto lunghi per processi I/O-bound se presenti anche processi CPU-bound.
+**Shortest Job First**(*SJF*):
+- Algoritmo di scheduling *senza prelazione*. Richiede che i tempi di esecuzione siano noti in anticipo, ed esegue per primo il job più breve.
+- *Vantaggi*: Ottimale per minimizzare il tempo di TurnAround medio quando i job sono tutti disponibili contemporaneamente.
+- *Svantaggi*: Non ottimale se i job arrivano in tempi diversi.
+**Shortest Remaining Time Next**(*SRTN*):
+- Variante di SJF *con prelazione*. Seleziona sempre il processo più corto per completare, ma ad ogni nuovo job confronta il suo tempo di esecuzione con quello del job attivo, e se più corto cambia contesto.
+- *Vantaggi*: Assicura che i job brevi ricevano un servizio rapido.
+- *Svantaggi*: Job più lunghi possono essere "rinviati" spesso.
+
+### Scheduling nei Sistemi Interattivi
+**Round-Robin Scheduling**(*RR*):
+- Ogni processo riceve un "*quanto*" di tempo per l'esecuzione. Se non ha terminato al termine del quanto, torna nella lista come `ready`, mentre se termina prima del quanto allora la CPU è oggetto di prelazione per un altro processo. Per implementarlo basta mantenere una lista dei processi eseguibili, e quando un processo esaurisce il quanto viene soistato alla fine della lista.
+-  La scelta della durata del quanto influisce sull'efficienza, quindi è opportuno scegliere un quanto ragionevole per bilanciare efficienza e reattività.
+**Priority Scheduling**:
+pdf7sl23
