@@ -220,4 +220,36 @@ In generale, **tutti i sistemi** devono garantire:
 - Ogni processo riceve un "*quanto*" di tempo per l'esecuzione. Se non ha terminato al termine del quanto, torna nella lista come `ready`, mentre se termina prima del quanto allora la CPU è oggetto di prelazione per un altro processo. Per implementarlo basta mantenere una lista dei processi eseguibili, e quando un processo esaurisce il quanto viene soistato alla fine della lista.
 -  La scelta della durata del quanto influisce sull'efficienza, quindi è opportuno scegliere un quanto ragionevole per bilanciare efficienza e reattività.
 **Priority Scheduling**:
-pdf7sl23
+- Ogni processo ha una priorità assegnata, e la CPU esegue il processo con la priorità più alta tra quelli pronti. La priorità di un processo attualmente in esecuzione può diminuire col tempo, e se scende sotto quella del processo successivo, avviene un*cambio*.
+- *Priorità statica vs dinamica*:
+	- *Statica*: gerarchie assolute o basate sui costi nel data center;
+	- *Dinamica*: gerarchie basate sull'utilizzo della CPU o sul comportamento I/O.
+- Avviene un *raggruppamemto in classi* di priorità: 4 priorità, finché ci sono processi in priorità 4, si utilizza RR, poi si scende.
+**Shortest Process Next + Aging**(*SPN+*):
+- La sfida è identificare quale tra i processi eseguibili sia effettivamente il più breve.
+- *Aging* - Stima basata sul comportamento passato:
+	- Stima del tempo per un comando $T_0$;
+	- Stima aggiornata dopo nuova esecuzione $T_1$ diventa $\alpha T_0+(1-\alpha)T_1$.
+	- La scelta di $\alpha$ determina il peso delle esecuzioni precedenti nella nuova stima.
+**Guaranteed Scheduling**:
+- Il *concetto principale* è fare promesse concrete sugli standard di prestazione e rispettarle. Se ci sono $n$ processi, ciascuno ottiene $\sim\frac{1}{n}$ della potenza della CPU.
+- Il sistema tiene traccia di quanta CPU ha ricevuto ogni processo dal momento della sua creazione, e calcola quanto tempo di CPU ogni processo dovrebbe avere. Poi valuta il rapporto tra tempo consumato e dovuto, ed esegue il processo con il rapporto più basso finché non supera il suo concorrente più vicino.
+**Lottery Scheduling**:
+- Assegnazione di biglietti della lotteria ai processi per la risorsa del sistema (es. tempo CPU), ed estrazione casuale di un biglietto per decidere quale processo ottiene la risorsa.
+- Avviene una *distribuzione delle probabilità* per la quale vengono assegnati biglietti extra per i processi più importanti, che gli garantiscono maggiore probabilità di vincere.
+- Il sistema è reattivo e permette la *cooperazione tra processi* nello scambiarsi biglietti (utile per processi cooperanti).
+**Fair-Share Scheduling**:
+- Premessa: ogni processo è oggetto di scheduling individualmente.
+- L'approccio fair-share considera le proprietà di ogni processo prima di sceglierlo. Ogni utente riceve una frazione predefinita di CPU, e lo scheduler si assicura che ogni utente riceva la sua frazione, indipendentemente dal numero di processi posseduti.
+
+### Scheduling nei Sistemi Real-Time
+Viene usato nei SO in applicazioni in cui il tempo di risposta è fondamentale, e ritardi o mancati tempi di risposte possono avere gravi implicazioni. Si suddividono in:
+- *Hard Real-Time*: Scadenze assolute da rispettare;
+- *Soft Real-Time*: Leggera tollerabilità.
+I processi sono prevedibili, brevi e noti in anticipo, e possono essere *periodici* o *non periodici*.
+La **condizione di schedulabilità** è regolata dalla capacità della CPU di gestire la somma totale del tempo richiesto dai processi.
+Se ci sono $m$ eventi periodici, l'evento $i$ avviene con un periodi $P_i$ e richiede $C_i$ secondi di tempo della CPU per gestire ogni evento, allora il carico può essere gestito solo se::$$\sum_{i=1}^{m}\frac{C_i}{P_i}\le1$$
+## Scheduling di thread
+Lo scheduling differisce in base al tipo di thread, se sono a livello **utente** o **kernel**. 
+- *Thread a livello utente*: il kernel vede solo il processo ed ignora l'esistenza dei singoli thread che lo compongono (quindi il kernel gestisce solo i processi e non i thread individuali). Esiste uno *scheduler interno* ad ogni processo che decide quale thread eseguire, senza interruzioni del clock del sistema. Poiché il kernel assegna la CPU all'intero processo e non ai singoli thread, un thread a livello utente può consumare tutto il quanto di tempo assegnato al processo. Lo scambio tra thread avviene inoltre molto rapidamente con poche istruzioni, poiché non si deve passare per ogni thread alla modalità kernel.
+- *Thread a livello kernel* : il kernel seleziona il thread specifico per l'esecuzione. Se eccede il quanto, allora viene sospeso. In questo caso il passaggio tra thread richiede un *cambio di contesto* e quindi comporta un passaggio da modalità utente a kernel, ergo tempi di maggiori di esecuzione. Se un thread kernel richiede I/O non sospende stavolta tutto il processo, ma solo il thread in questione.
