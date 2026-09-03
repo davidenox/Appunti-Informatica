@@ -8,7 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "01959ed7d82dcf3b",
+            "id": "f69da4febc4f4d8f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 3.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "CAPITOLO 3"
+            }
+          },
+          {
+            "id": "c68001b7294284f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,20 +32,9 @@
               "icon": "lucide-file",
               "title": "Ch. 3 - Virtual Memory"
             }
-          },
-          {
-            "id": "f69da4febc4f4d8f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 3.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "CAPITOLO 3"
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
