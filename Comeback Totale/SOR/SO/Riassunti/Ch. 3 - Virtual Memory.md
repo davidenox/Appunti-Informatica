@@ -41,4 +41,19 @@ L'idea è quella di creare per il processo l'illusione di uno spazio di indirizz
 I sistemi moderni utilizzano la *paginazione* dividendo la memoria fisica e virtuale in pagine di dimensioni fisse, e traducendo le pagine virtuali in *pagine fisiche* (frame).
 Se un programma fa riferimento ad una pagina non mappata, si verifica un **Page Fault**. Il SO allora gli assegna un frame, spostando eventuali frame raramente usati se serve, con uno specifico criterio. Quindi poi inizializza/carica la pagina richiesta nel frame libero o liberato, ed aggiorna la mappa della MMU per riflettere i cambiamenti.
 La *relazione* tra gli indirizzi di memoria virtuale e fisica è data dalla **Page Table**.
-pdf9sl12
+Le voci di una Page Table sono composti da:
+- *Bit presente/assente* - indica se la pagina virtuale è in memoria.
+- *Bit protezione* - specifica i tipi di accesso consentiti (rwx).
+- *Bit supervisor* - stabilisce se la pagina è accessibile solo al SO o anche ai programmi utente
+- *Bit Modificato e Riferimento* - registrano l'uso della pagina.
+Per velocizzare la paginazione bisogna decidere dove memorizzarla:
+- Nei *Registri HW* : Un registro HW per ogni pagina virtuale, caricato all'avvio del processo. È semplice e non richiede accessi alla memoria durante la mappatura, ma risulta costoso con tabelle di pagine grandi.
+- Nella *Memoria Principale*: Tabella interamente in RAM, con un registro che punta al suo inizio. Facile da cambiare ad ogni cambio di contesto, e richiede solo il caricamento di un registro, ma richiede anche accessi frequenti alla memoria rendendo la mappatura più lenta.
+Si introduce il **Translation Lookaside Buffer** (*TLB*), un dispositivo HW che mappa gli indirizzi virtuali in fisici senza passare per la tabella delle pagine, riducendo gli accessi alla memoria durante la paginazione.
+Il TLB è strutturato come un piccolo numero di voci, ciascuna con numero di pagina virtiaòe, bit modificato, codice di protezione e frame fisico. Alla richiesta di un indirizzo virtuale l'MMU consulta prima il TLB. Se trovato e valido (*TLB HIT*) il frame è prelevato direttamente dal TLB, altrimenti (*TLB MISS*) avviene una ricerca normale nella tabella delle pagine e la voce trovata ne rimpiazza un'altra nel TLB.
+I TLB MISS sono *comuni* a causa del numero limitato di voci nel TLB, al quale però non avrebbe senzo aumentare la dimensione. 
+- *Soft Miss*: La pagina è in memoria ma non nel TLB.
+- *Hard Miss*: La pagina non è neanche in memoria e richiede l'accesso al disco
+
+# Algoritmi di Sostituzione delle pagine
+pdf9sl26
