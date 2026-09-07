@@ -56,4 +56,41 @@ I TLB MISS sono *comuni* a causa del numero limitato di voci nel TLB, al quale p
 - *Hard Miss*: La pagina non è neanche in memoria e richiede l'accesso al disco
 
 # Algoritmi di Sostituzione delle pagine
-pdf9sl26
+Quando una pagina logica non è in memoria il SO deve caricarla in caso di page fault. Quindi un'altra pagina logica potrebbe essere scambiata, ma quale?
+
+**Algoritmo Ottimale**:
+- Il *concetto* è scegliere la pagina con il riferimento più distante nel futuro da rimuovere, per rimuovere *idealmente* la pagina che non sarà utilizzata per il maggior numero di istruzioni future.
+- *Problema*: È impossibile per il SO prevedere il momento del prossimo riferimento per ciascuna pagina.
+
+Ricordiamo: Bit della tabella dele pagine per gli algoritmi di sostituzione:
+- *Modified* (M): Impostato quando una pagina viene modificata;
+- *Referenced* (R): Impostato quando la pagina viene acceduta.
+
+**Not Recently Used**(*NRU*):
+- L'*obiettivo* è trovare le pagine non modificate che non sono state accedute "recentemente" utilizzando i bit di stato R e M.
+- I bit vengono impostati dall'HW ad ogni accesso, ed il bit R viene periodicamente ripulito per identificare pagine non recentemente utilizzate.
+- Le pagine vengono classificate in 4 classi (da 0 a 3) in funzione dell'uso e delle modifiche:
+	- *C0*: Non referenziata, non modificata
+	- *C1*: Non referenziata, modificata
+	- *C2*: Referenziata, non modificata
+	- *C3*: Referenziata, modificata
+- NRU rimuove una pagina casuale della classe più bassa non vuota. L'algoritmo è semplice, efficiente ed offre prestazioni accettabili.
+
+**First-In, First-Out** (*FIFO*):
+- Elimina la pagina *più vecchia* in memoria. Il SO rimuove la pagina in testa alla lista durante un Page Fault, aggiungendo la nuova pagina in coda.
+- Raramente utilizzato nella sua forma più semplice, poiché la pagina più vecchia potrebbe ancora essere frequentemente utilizzata.
+
+**Seconda Chance**:
+- Principalmente si controlla il bit R della pagina più vecchia per decidere la rimozione. Se R=0 la pagina è vecchia e non usata di recente, quindi viene sostituita; se R=1 il bit viene azzerata e la pagina viene reinserita in fondo alla lista.
+
+**Clock**:
+- Lista circolare dei frame di pagina con un puntatore che fa da "lancetta" di un orologio per identificare la pagina più vecchia. 
+- Ad un page fault se il bit R della pagina puntata è 0, la pagina viene rimossa e sostituita con la nuova, poi la lancetta avanza. Se R=1 il bit viene azzerato ed il puntatore si sposta alla pagina successiva. Il concetto di base è ripetere il processo finché non trova una pagina con R=0.
+- Elimina l'inefficienza della continua riallocazione delle pagine lungo la lista. È più performante rispetto a FIFO e Seconda Chance.
+
+**Least Recently Used** (*LRU*):
+- *IN TEORIA* le pagine non usate di recente sono candidate alla sostituzione. La possibile implementazione è una lista delle pagine con quelle più utilizzate in testa e meno utilizzate in coda. Ogni riferimento richiede l'aggiornamento della lista e copia di pagine intere (troppo costoso). 
+- Sebbene tendente all'ottimo, praticamente non efficiente e non utilizzato
+
+**Not Frequently Used**(*NFU*):
+PDF9SL38
