@@ -107,5 +107,87 @@ Ricordiamo: Bit della tabella dele pagine per gli algoritmi di sostituzione:
 Per **Working Set** si intende l'*insieme delle pagine attualmente usate da un processo*. Rappresenta le pagine a cui un processo fa riferimento durante la fase dell'esecuzione.
 - **Demand Paging**: Le pagine sono caricate in memoria "a richiesta", solo quando necessario.
 - Inizialmente si verificano molti PageFault, finché non vengono caricate tutte le pagine necessarie.
+Se il Working Set di un processo è *completamente in memoria* si verificano pochissimi Page Fault, ma se il WS è *più grande* della memoria disponibile, si verificheranno troppi PF (fenomeno noto come *thrashing*).
+**Working Set Model**: 
+- Molti SO cercano di *tracciare il WS* di ogni processo e di mantenerlo in memoria per ridurre i PF;
+- La *pre-paginazione* carica in anticipo le pagine basandosi sul WS del processo.
+Il WS è spesso definito in termini di *tempo*, ovvero le pagine usate negli ultimi $\tau$ secondi di esecuzione.
 
-43
+**Algoritmo di sostituzione basato sul Working Set**:
+- Alla verifica di un PF, si ricerca una pagina fuori dal WorkingSet per rimuoverla
+- Utilizza informazioni come il bit R ed il tempo dell'ultimo utilizzo per determinare quali pagine rimuovere. Durante un PF:
+	- Scansiona le pagine alla ricerca di una pagina da rimuovere
+	- *Controllo del bit R per ogni pagina*:
+		- $R=1$: Aggiornamento del tempo dell'ultimo utilizzo, la pagina è nel WS
+		- $R=0, Età\gt\tau$: La pagina non è nel WS e viene rimossa
+		- $R=0,Età\lt\tau$: La pagina rimane ma si contrassegna come la più vecchia per la possibile rimozione.
+	- Se nessuna pagina è rimovibile, viene selezionata la più vecchia con $R=0$
+		- Altrimenti una a caso.
+
+**Algoritmo WSClock**:
+- Miglioramento dell'algoritmo Clock che integra le info del WS. Semplice e con buone prestazioni;
+- Struttura dati:
+	- Lista circolare di frame (simile al Clock)
+	- Ogni frame nella lista contiene:
+		- Tempo dell'ultimo utilizzo
+		- Bit M
+		- Bit R
+- Ad ogni PF viene esaminata per prima la pagina indicata dalla lancetta. Se $R=1$ la pagina *non è la candidata ideale* alla rimozione. Il ciclo viene quindi impostato a 0
+- La lancetta avanza alla pagina successiva e l'algoritmo viene ripetuto per la nuova pagina. Se la pagina indicata ha $R=0$ e l'età è maggiore di $\tau$:
+	- Se $M=0$ (pagina pulita):
+		- Non è nel WS e ne esiste una copia valida su memoria non volatile
+		- Il frame viene riciclato e vi viene posta la nuova pagina
+	- Se $M=1$ la pagina è sporca:
+		- NON ne esiste una copia valida in memoria non volatile
+		- Non può essere rimossa immediatamente
+- Per evitare rallentamenti la scrittura su memoria non volatile viene schedulata e rimandata
+
+# Problemi di progettazione
+La paginazione è un processo complesso che richiede una comprensione approfondita di molteplici aspetti per una progettazione efficace, come l'*allocazione della memoria*, la *gestione dei PF*, l'*ottimizzazione delle prestazioni* e le *decisioni di progettazione*.
+
+## Allocazione di memoria
+**Allocazione locale**:
+- Ogni processo riceve una porzione fissa della memoria;
+- Semplice da implementare ma può portare a inefficienze.
+
+**Allocazione globale**:
+- Distribuzione dinamica della memoria tra i processi;
+- Più efficace per adattarsi alle esigenze variabili dei processi, ma richiede una gestione più complessa.
+Vantaggi:
+- *Adattabilità degli algoritmi globali* per aumentare l'efficienza quando la dimensione del WS varia nel tempo
+- *Limite degli algoritmi locali* come il thrashing o la memoria sprecata
+- *Gestione dinamica della memoria* tramite i bit di Aging per monitorare la frequenza di accesso alle pagine
+
+### Strategie
+**Allocazione Equa**:
+- Distribuzione uniforme dei frame tra processi, non tiene conto delle diverse esigenze di memoria tra processi di dimensioni varie.
+**Allocazione Proporzionale**:
+- Assegnazione di frame in base alla dimensione del processo
+- Rispecchia meglio le necessità di memoria evitando allocazioni inadeguate
+**Importanza del Limite Minimo di Pagine**:
+- Assicurare che *ogni processo abbia abbastanza pagine* per eseguire le operazioni fondamentali
+- *MA prevenire situazioni* in cui i processi con istruzioni che *attraversano i limiti* delle pagine non possano eseguire.
+
+## Dinamica di allocazione e algoritmo PFF
+**Gestione dinamica dei frame**:
+- Si inizia con un'allocazione proporzionale alla dimensione del processo
+- Aggiornamento dinamico dell'alliocazione in base all'evoluzione delle esigenze durante l'esecuzione
+**Page Fault Frequency**:
+- *Monitoraggio della frequenza di PF per regolare l'allocazione di memoria di un processo*
+- Aumenta i frame se PF troppi frequenti, diminuisce se sono rari.
+
+Anche con il miglior algoritmo, il *thrashing* può purtroppo sempre verificarsi se i WS di tutti i processi eccedono la memoria disponibile. Il PFF può segnalare una richiesta collettiva di più memoria senza che nessun processo possa cedere frame.
+**Mitigazione**:
+- *Out Of Memory Killer*: Processo di sistema che seleziona e termina i processi ad un punteggio di "cattiveria" per liberare memoria (elevato utilizzo o minor importanza)
+- *Swapping*: Sposta i processi su memoria non volatile, liberando le loro pagine per altri processi. Può ridurre la richiesta di memoria senza interrompere l'esecuzione dei processi
+
+**Tecniche di riduzione di memoria**
+- *Scheduling a due livelli*:
+	- Alcuni processi sono in memoria non volatile e solo una parte è scedulata attivamente
+	- Aiuta a gestire meglio il carico di memoria
+	- Utile per ridurre occupazione di memoria di processi in background in sistemi interattivi
+- *Gestione della multiprogrammazione*:
+	- La selezione dei processi da spostare considera anche altre caratteristiche, come la dimensione e/o frequenza di paginazione dei processi e se sono CPU-Bound o I/O-bound
+
+### Dimensione delle pagine
+pdf10sl15
