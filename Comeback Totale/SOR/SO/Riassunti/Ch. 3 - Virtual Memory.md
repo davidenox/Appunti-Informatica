@@ -93,4 +93,19 @@ Ricordiamo: Bit della tabella dele pagine per gli algoritmi di sostituzione:
 - Sebbene tendente all'ottimo, praticamente non efficiente e non utilizzato
 
 **Not Frequently Used**(*NFU*):
-PDF9SL38
+- Associa un contatore ad ogni pagina, incrementato con ogni interrupt del clock in base al bit R - Tanti accessi -> Alto valore di "frequenza" assegnato alla pagina -> minore possibilità di rimozione.
+- Non dimenticando il passato, potrebbe non sostituire una pagina che in un determinato periodo era molto utilizzata ma adesso non lo è più
+- Miglioramento : *Aging*
+	- Numero di bit fisso
+	- Ad ogni interrupt del clock i bit vengono spostati a destra
+	- Prima dello shift dei contatori il bit R viene aggiunto al lato sinistro
+- Emula LRU, dando meno peso agli usi passati e preferendo le pagine meno referenziate di recente.
+- Non distingue l'ordine esatto dei riferimenti recenti ed ha un orizzonte temporale limitato (non per forza un male)
+
+## Concetto di Working Set
+
+Per **Working Set** si intende l'*insieme delle pagine attualmente usate da un processo*. Rappresenta le pagine a cui un processo fa riferimento durante la fase dell'esecuzione.
+- **Demand Paging**: Le pagine sono caricate in memoria "a richiesta", solo quando necessario.
+- Inizialmente si verificano molti PageFault, finché non vengono caricate tutte le pagine necessarie.
+
+43
