@@ -190,4 +190,86 @@ Anche con il miglior algoritmo, il *thrashing* può purtroppo sempre verificarsi
 	- La selezione dei processi da spostare considera anche altre caratteristiche, come la dimensione e/o frequenza di paginazione dei processi e se sono CPU-Bound o I/O-bound
 
 ### Dimensione delle pagine
-pdf10sl15
+I SO possono selezionare la dimensione delle pagine.
+- *Pagine piccole*: Riducono la frammentazione interna e l'utilizzo della memoria, ma richiedono tabelle delle pagine più grandi e possono aumentare tempo e spazio necessari per trasferimento dati e gestione di memoria.
+La **dimensione ottimale** viene determinata equilibrando frammentazione interna e overhead della tabella delle pagine. Alcuni SO utilizzano pagine di diverse dimensioni per parti diverse del sistema.
+*Parametri considerati*:
+- Dimensione media del processo: $s$ byte
+- Dimensione della pagina: $p$ byte (da calcolare)
+- Dimensione di ogni voce nella tabella delle pagine: $e$ byte
+*Calcolo Overhead*:
+- Numero di pagine per processo: $\approx s/p$
+- Spazio occupato nella tabella delle pagine: $s\cdot e / p$ bytes
+- Memoria sprecata per frammentazione interna nell'ultima pagina: $p/2$
+	- *Fenomeno dell'ultima pagina*: Per qualsiasi processo l'ultima pagina di memoria allocata potrebbe non essere completamente riempita.
+**Overhead Totale**: $\frac{s\cdot e}{p}+\frac{p}{2}$:
+- Il primo termine aumenta con pagine più piccole
+- Il secondo aumenta con pagine più grandi
+- L'ottimo si trova *bilanciando questi due fattori*
+
+## Condivisione delle pagine
+È comune che molti utenti eseguano lo stesso programma o utilizzino le stesse librerie. Condividere pagine di memoria tra questi processi è più efficiente che mantenerne copie separate. Le *pagine di sola lettura* sono spesso *condivisibili*, mentre le *pagine di dati* generalmente *no*. È opportuno separare spazi di indirizzo in:
+- *I-Space*: Istruzioni;
+- *D-Space*: Dati.
+Processi *diversi* possono utilizzare la *stessa tabella delle pagine per l'I-Space* ma diverse per il D-Space.
+Tuttavia, la *rimozione di un processo* dalla memoria può causare numerosi PF in un altro processo che condivide le stesse pagine, quindi è cruciale sapere se le pagine sono ancora in uso per evitare la loro liberazione accidentale.
+**Condivisione dei dati**: Più complessa rispetto alla condivisione del codice.
+**Copy On Write** (*Copia in caso di scrittura*): Se un processo modifica i dati, si genera una trap, e viene creata una copia della pagina modificata. Entrambe le copie diventano poi modificabili, ma *si evita la copia di pagine che non vengono mai modificate*.
+### File Mappati in memoria
+**Concetto**: I file mappati in memoria consentono ad un processo di mappare un file all'interno del proprio spazio di indirizzi virtuali. Alla mappatura, *nessuna pagina viene caricata immediatamente*. Quando *il processo termina* o la mappatura è eliminata, *tutte le pagine modificate vengono riscritte sul file*.
+- *Modello I/O alternativo*: Offre un modo diverso di eseguire I/O, permettendo di accedere al file come se fosse un grande array di caratteri in memoria.
+
+**Comunicazione tra processi**: Se più processi mappano lo stesso file contemporaneamente, possono comunicare attraverso questa memoria condivisa
+
+## Gestione dei Page Fault
+**Gestione dei Page Fault**:
+- *Determinare l'indirizzo virtuale* che ha causato il *fault*;
+- *Trovare la pagina necessaria* nella memoria non volatile;
+- *Scegliere un frame disponibile* eventualmente rimuovendo pagine vecchie;
+- *Caricare la pagina nel frame* e ripristinare il contatore del programma.
+**Chiusura del processo**:
+- *Rilasciare la tabella delle pagine*, le pagine in memoria e lo spazio su disco;
+- *Gestire le pagine condivise con altri processo*, rilasciandole solo dopo l'ultimo utilizzo.
+### Page Fault in 10 passi
+**A. Inizio della sequenza**
+1. *Trap nel Kernel da parte dell'HW*
+	- L'HW esegue una trap nel kernel, salvando il contatore del programma nello stack
+	- Informazioni sull'istruzione corrente salvate nei registri speciali della CPU
+2. *Avvio dell'Interrupt Service Routine*
+	- Viene eseguita una routine in assembly per salvare i registri e altre informazioni non volatili
+	- Invocazione del gestore dei Page Fault
+3. *Identificazione della pagina virtuale necessaria*
+	- Il SO determina quale pagina virtuale manca
+	- Se non disponibile dai registri HW, recupero e analisi dell'istruzione dal contatore del programma
+**B. Gestione e risoluzione**
+4. *Verifica validità indirizzo e protezione*
+	- Controllo della validità dell'indirizzo e coerenza della protezione con l'accesso
+	- Se invalide, invio di un segnale di errore o terminazione del processo
+5. *Rilascio di un frame libero*
+	- Se non ci sono frame liberi, esecuzione di un algoritmo di sostituzione delle pagine
+	- Se la pagina è sporca viene schedulata per la scrittura in memoria non volatile ed il processo viene sospeso
+6. *Caricamento pagina richiesta*
+	- Frame libero usato per caricare la pagina necessaria da disco
+	- Durante il caricamento, il processo in PF è ancora sospeso e viene eseguito, se disponibile, un altro processo
+**C. Conclusione e ripresa**
+7. *Aggiornamento delle tabelle delle pagine*
+	- Le tabelle delle pagine vengono aggiornate per riflettere la nuova posizione della pagina
+	- Il frame viene contrassegnato come disponibile
+8. *Ripristino dell'istruzione in errore*
+	- Istruzione riportata allo stato che aveva all'inizio
+	- Il contatore del programma viene ripristinato in modo da puntare a quell'istruzione
+9. *Ripresa del processo in errore*
+	- Processo rischedulato per l'esecuzione
+	- Ritorno alla routine in Assembly che lo aveva interrotto
+10. *Ricarica dei registri e ritorno allo spazio utente*
+	- L'ISR ricarica i registri e le info di stato
+	- Il controllo ritorna allo spazio utente per continuare l'esecuzione da dove era stata interrotta
+## Segmentazione
+Si tratta di un'ulteriore tecnica per la gestione della memoria, che suddivide la memoria in *segmenti logici distinti*. Ciascun segmento ha una sequenza lineare di indirizzi, che possono avere lunghezze diverse e variabili durante l'esecuzione. 
+Questa struttura consente ai segmenti di *crescere o ridursi senza interferire l'uno con l'altro*. Per specificare un indirizzo in memoria si usa un indirizzo a due parti:
+- Numero di segmento
+- Indirizzo nel segmento
+**Vantaggi**:
+- *Flessibilità*: I segmenti possono crescere o ridursi in modo indipendente l'uno dall'altro
+- *Semplificazione del linking*: Se ogni procedura occupa un segmento separato, il linking di procedure diventa molto più semplice poiché in caso di modifiche non è necessario aggiornare gli indirizzi di altre procedure non correlate
+- *Condivisione e protezione*: La segmentazione *facilita la condivisione di risorse* tra processi diversi
