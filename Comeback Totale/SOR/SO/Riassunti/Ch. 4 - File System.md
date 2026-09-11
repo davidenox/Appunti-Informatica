@@ -76,4 +76,54 @@ Per **directory** si intendono file che tengono traccia degli altri file all'int
 *Link simbolici*: Variante degli 'hard link', possono puntare a file locati su dischi o computer diversi.
 
 # Implementazione del File System
-pdf12sl4
+Un disco può essere suddiviso in *più partizioni*, ciascuna con il proprio FS indipendente, ed i metodi di strutturazione del FS variano a seconda dell'epoca del computer, influenzando come i dati vengono gestiti e acceduti.
+
+**Master Boot Record** - vecchio stile
+- MBR nel BIOS, situato nel settore 0 del disco, è essenziale per l'avvio del pc.
+- Contiene la tabella delle partizioni con i dettagli su inizio e fine di ciascuna partizione, ed identifica la partizione attiva da cui avviare il sistema.
+All'avvio:
+- Il BIOS legge MBR per trovare la partizione attiva
+- Carica il *boot block* della partizione attiva per avviare il SO
+Ogni partizione inizia con un boot block seguito da vari elementi di sistema.
+
+**Unified Extensible Firmware Interface**
+UEFI  sostituisce il vecchio BIOS tradizionale.
+- Avvio più veloce, migliore compatibilità
+- Interfaccia utente avanzata
+- Sicurezza
+Inoltre, supporta i dischi moderni con GPT:
+**GUID Partition Table**: Sistema avanzato di gestione delle partizioni
+- Supporta dischi fino a $8ZiB$ e consente un numero illimitato di partizioni
+- Include *backup della tabella delle partizioni* per maggiore sicurezza
+- Utilizza un controllo di integrità (CRC) per prevenire corruzione dei dati.
+**EFI System Partition**: Partizione speciale sui dischi GPT
+- Archivia i file di avvio come bootloader, driver e utility di diagnostica
+- Essenziale per avviare il SO.
+**Secure Boot**: Funzionalità UEFI per impedire l'avvio di SW non autorizzato.
+- Controlla le *firme digitali* di bootloader, driver e SO
+- Avvia solo SW autorizzato e firmato, bloccando malware e rootkit.
+Protegge contro attacchi all'avvio, mantiene l'integrità del SO ed aumenta la sicurezza per utenti domestici e aziende.
+
+## File nei File System
+L'*obiettivo principale* è la gestione dell'associazione tra i file ed i blocchi del disco su cui sono memorizzati. È fondamentale per assicurare l'integrità, l'accesso efficiente e la gestione dello spazio su disco.
+**Allocazione contigua**:
+- File memorizzati come *sequenze contigue di blocchi sul disco*.
+- Semplice da implementare e dispone di un'alta efficienza di lettura.
+Tuttavia, col passare del tempo *i dischi si frammentano* a causa della rimozione di file, e ne sussegue un *problema di allocazione di nuovi file in spazi liberi* frammentati.
+
+**Allocazione a liste concatenate**:
+- File organizzati come *liste concatenate di blocchi su disco*, in cui *ogni blocco contiene una parte di dati ed un puntatore al blocco successivo*.
+- Efficiente utilizzo di tutti i blocchi disponibili sul disco, e minima frammentazione interna.
+- Ogni voce di directory traccia solo l'indirizzo del primo blocco di un file
+L'accesso casuale ai dati però è estremamente lento, ed ogni blocco ha una dimensione effettiva ridotta a causa dello spazio occupato dal puntatore.
+
+**Allocazione a liste concatenate con FAT**
+Ottimizzazione dell'allocazione a liste concatenate che sposta i puntatori in una tabella di memoria (*FAT - File Allocation Table*) in RAM. 
+La FAT deve essere mantenuta *interamente* in memoria, e ne richiede una quantità significativa. Lo spazio e la velocità influenzano la dimensione della voce della FAT, e non risulta ottimale.
+
+**I-Node** - Index Node
+Si tratta di una struttura dati che contiene tutte le informazioni su un file, esclusi nome e contenuto. Include metadati come permessi, proprietario, timestamp ed indirizzi dei blocchi di dati.
+*Ogni file e directory è rappresentato da un I-Node univoco, indicizzato in una tabella di I-Node*. Gli I-Node separano le informazioni sul file dalla sua posizione fisica sul disco, offrono una gestione più dettagliata dei metadati (inclusi permessi e proprietà) e tendono ad essere più efficienti e performanti della FAT, specialmente su dischi di grandi dimensioni.
+
+## Directory Nei File System
+pdf12sl22
