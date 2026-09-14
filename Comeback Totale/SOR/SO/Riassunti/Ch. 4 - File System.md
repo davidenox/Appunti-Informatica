@@ -126,4 +126,90 @@ Si tratta di una struttura dati che contiene tutte le informazioni su un file, e
 *Ogni file e directory è rappresentato da un I-Node univoco, indicizzato in una tabella di I-Node*. Gli I-Node separano le informazioni sul file dalla sua posizione fisica sul disco, offrono una gestione più dettagliata dei metadati (inclusi permessi e proprietà) e tendono ad essere più efficienti e performanti della FAT, specialmente su dischi di grandi dimensioni.
 
 ## Directory Nei File System
-pdf12sl22
+Le directory mappano i nomi ASCII dei file sulle informazioni necessarie per localizzare i dati su disco. I *metodi di allocazione* variano a seconda del SO, includendo indirizzi di blocchi contigui, il primo blocco nelle liste concatenate, o i numeri degli I-Node. Nei moderni sistemi i nomi dei file possono variare con caratteri da 1 a 255. Per gestire questa variabilità, si utilizzano due modi per strutturare le directory:
+- *Struttura con Header di lunghezza fissa* : ogni voce nella directory inizia con un header di lunghezza fissa e termina con il nome del file. Ogni file termina con un carattere speciale, che viene utilizzato anche più volte per "riempire" (padding) il nome affinché questo abbia un numero intero di parole (32 o 63 bit in base al sistema). Questo sistema può tuttavia portare a una Frammentazione Interna, in quanto quando un file viene cancellato il suo spazio potrebbe non poter essere utilizzato in modo efficiente se il nuovo file da inserire non ha la stessa lunghezza (si possono creare piccoli "buchi" inutilizzabili). 
+- *Utilizzo di Heap per i nomi dei file* : i nomi dei file sono salvati in un heap, struttura dati che permette di memorizzarli in modo dinamico e non sequenziale. Quando si aggiunge il nome di un file, lo spazio viene allocato dinamicamente dall'heap, e non è necessario riempire i nomi dei file fino a raggiungere lunghezza fissa.
+In aggiunta ai due metodi principali, per implementare la ricerca dei file all'interno di una directory, è stato introdotto l'uso delle *tabelle hash*. Quando si cerca un file, il suo nome viene *trasformato* attraverso una funzione di hashing in un indice numerico che punta ad una posizione specifica della tabella. Se più file dovessero generare lo stesso indice (collisione) allora viene utilizzata una lista concatenata per collegare i file che hanno generato lo stesso hash. Un'ulteriore ottimizzazione è l'uso di **caching** per memorizzare i risultati delle ricerche precedenti.
+
+### File condivisi e Link
+I **File condivisi** sono essenziali in ambienti collaborativi per permettere a più utenti di lavorare sugli stessi file. Tipi di link:
+- *Hard Link*: Puntano all'I-Node di un file condiviso
+- *Soft Link*: Puntano al nome di un file
+Un file con hard link viene *rimosso solo quando non ci sono più riferimenti ad esso*.
+- Gli Hard Link sono vantaggiosi poiché utilizzano un solo I-Node indipendentemente dal nomero di link, ma allo stesso tempo il file permane fino all'eliminazione degli hard link, potenzialmente creando confusione sulla proprietà del file
+- I Soft Link sono più flessibili, poiché possono riferirsi a nomi di file oltre i confini del file system e su macchine remote, ma sono meno efficienti in termini di spazio, e diventano invalidi alla rimozione del file originale
+# Spazio su disco
+I file sono generalmente memorizzati sul disco, e per farlo si usa:
+- Allocazione contigua
+- Suddivisione in blocchi non contigui.
+L'allocazione contigua richiede spostamenti di file se le loro dimensioni aumentano, mentre i blocchi non contigui spezzettano i file in blocchi di dimensioni fisse, consentendo una maggiore flessibilità ed un migliore utilizzo dello spazio su disco.
+La scelta della dimensione dei blocchi dipende da una considerazione dell'ottimo per bilanciare il tempo di trasferimento e l'efficienza dello spazio:
+- Blocchi più grandi consentono di trasferire più dati in una singola operazione di lettura o scrittura, tuttavia portano ad uno spreco di spazio se i file sono piccoli. 
+- Blocchi piccoli invece riducono lo spreco di spazio poiché è meno probabile che rimangono aree non utilizzate all'interno di un blocco. Tuttavia gestire file su più blocchi può aumentare il tempo necessario per accedere ai dati.
+
+Per tenere traccia dei blocchi liberi su disco si utilizzano:
+1. **Lista concatenata**:
+	- Nella lista ci sono i blocchi liberi, dove ogni blocco contiene numeri di blocchi del disco liberi. Richiede meno spazio solo se il disco è quasi pieno.
+2. **BitMap**:
+	- Un bit per ogni blocco del disco (1 se libero, 0 se già allocato). Richiede meno spazio della lista concatenata, tranne in dischi quasi pieni
+
+*Quote del disco* : Limitazioni gestite dal SO sull'utilizzo dello spazio del disco, imposte sui singoli utenti per evitare l'utilizzo eccessivo di spazio. Due tipi:
+- *Limite Soft*: il limite può essere momentaneamente superato, ma non permanentemente. Se infatti lo spazio utilizzato rimane sopra il limite soft per un certo periodo di tempo ( determinato dal sistema) l'utente non sarà in grado di salvare nuovi dati finché non libera spazio o ottiene una nuova quota. 
+- *Limite Hard*: il limite non può essere superato in nessuna circostanza.
+
+# Performance
+**Velocità di accesso**:
+- *Memoria*: Accesso ultraveloce
+- *Disco magnetico*: Più lento a causa del tempo di ricerca della traccia
+Progettando dei FS con diverse ottimizzazioni per migliorare le prestazioni, considerando le significative differenze nel tempo di accesso e riducendo al minimo il numero di accessi a disco, il tempo di ricerca e l'utilizzo dello spazio, si ottiene una notevole ottimizzazione nel FS.
+- *Buffer Cache*: Utilizzata per ridurre i tempi di accesso al disco, mantenendo i blocchi più usati in memoria
+- *Allocazione dei blocchi e Read Ahead*: Tecniche di allocazione intelligente per le quali blocchi vicini allocati nello stesso cilindro per minimizzare il movimento del braccio del disco, e bitmap in memoria per allocare blocchi adiacenti e migliorare l'efficienza di scrittura sequenziale.
+- *Deframmentazione*: Riorganizza i file per essere contigui e raggruppa lo spazio libero.
+Concetti di *Caching*:
+- *Buffer Cache*: Memorizza i blocchi del disco in RAM per ridurre gli accessi al disco.
+- *Page Cache*: Memorizza le pagine del FS virtuale in RAM prima di passare al driver del dispositivo.
+Per implementare la cache si utilizzano algoritmi che controllano se un blocco necessario è già presente in cache prima di effettuare un accesso al disco. L'algoritmo *LRU* (Least Recently Used) è il più comune, ma può causare problemi di incoerenza se non gestito correttamente, specialmente con blocchi critici come gli I-node. Alcuni SO dividono i blocchi in categorie basate sull'importanza per evitare problemi d'incosistenza.
+- *Compressione*: il processo di ridurre la dimensione di un file eliminando ridondanze o utilizzando metodi di codifica efficienti. Questo permette di risparmiare spazio di archiviazione e di velocizzare il trasferimento dei dati.
+- *Deduplicazione*: utile per eliminare i duplicati di file, può essere eseguita in tempo reale o come processo post-elaborazione, a seconda delle esigenze del sistema e dell'hardware disponibile. 
+- *Posizionamento degli I-node* : la posizione degli I-node influisce significativamente sulle prestazioni del file system: 
+	- *Posizionamento tradizionale* : posizionati vicino all'inizio del disco, porta a tempi di ricerca più lunghi, poiché il braccio del disco deve spostarsi dall'inizio del disco ai blocchi dati sparsi. 
+	- *Centrare gli I-node* : Un'alternativa più efficiente è quella di posizionare gli I-node al centro del disco per ridurre il tempo di ricerca medio. Inoltre si può dividere il disco in gruppi di cilindri, ciascuno con i proprio I-node, blocchi e lista dei blocchi liberi.
+# Affidabilità
+Fondamentale per garantire la protezione dei dati. Le principali minacce includono *guasti del disco*, *interruzioni di energia*, *bug del software*, *errori umani*, *perdite o furti* e *malware*. Nasce la necessità del **backup**, per salvaguardare informazioni importanti come documenti o database.
+- *Backup completo*: Copia totale dei dati;
+- *Backup incrementale*: Copia dei soli file modificati dall'ultimo backup completo, riducendo tempo e spazio richiesti.
+Tipologie di BackUp:
+- *Backup Fisico*: Copia sequenziale di tutti i blocchi del disco
+- *Backup Logico*: Selezione e copia di soli file e directory specifici, ignorando file di sistema e blocchi danneggiati.
+Inoltre:
+- *Comprimere i dati* riduce lo spazio necessario ma aumenta il rischio di perdita di dati a causa di errori di compressione
+- *Backup di file system attivi* richiede l'utilizzo di snapshot per garantire coerenza durante il backup di un sistema in uso
+- *Sicurezza dei backup* incide per prevenire perdite o danni
+## Backup Fisico
+Considerazioni:
+- *Efficienza*: Semplice e veloce, eseguito alla velocità del disco
+- *Gestione dei blocchi danneggiati*: Necessità di evitare blocchi danneggiati per prevenire errori di lettura
+- *File non necessari*: Necessità di evitare la copia di file di sistema come paginazione o ibernazione.
+Manca tuttavia di flessibilità, poiché è difficile saltare directory specifiche o fare backup incrementali, e non è possibile ripristinare file individuali senza un intero ripristino del sistema.
+## Backup Logico
+Funzionamento:
+- Parte dalle *directory specifiche* ed effettua il backup di tutti i file e directory modificati a partire da una data specifica.
+	- Ideale per backup incrementaki
+- *Recupero facilitato*: Consente il ripristino semplice di file o directory specifici grazie alla precisa identificazione dei dati salvati
+- *Algo di backup in UNIX*:
+	- Include file e directory modificati e tutte le directory lungo il percorso verso i file modificati.
+
+### rsync
+`rsync` è un comando utilizzato nei sistemi UNIX per la *sincronizzazione di file/cartelle tra due location differenti*. Ottimizza il trasferimento dati *trasmettendo solo le parti di file modificate*. Risulta idele per backup, ripristino e sincronizzazione di dati in ambienti di rete.
+
+## Coerenza
+Fondamentale per **mantenere l'integrità dei dati**. Problemi di incoerenza possono sorgere a seguito di *crash* durante la scrittura dei blocchi. Tuttavia esistono degli strumenti di *utility* (`fsck` per UNIX o `sfc` per Windows) per verificare la coerenza, eseguite all'avvio, specialmente dopo un crash.
+
+### File System con Journaling
+Il **Journaling** *registra anticipatamente le operazioni da eseguire in un log per garantire la coerenza in caso di crash*. Nello specifico, il **journal** è un registro che *tiene traccia delle modifiche che verranno apportate al file system prima che esse avvengano effettivamente*.
+1. **Fase di registrazione**: Prima di eseguire qualsiasi modifica, il FS scrive un record nel journal. Questo record *descrive l'operazione che verrà eseguita*.
+2. **Fase di esecuzione**: Il FS procede con la modifica effettiva dei dati su disco
+3. **Fase di conferma**: Una volta completata l'operazione, il FS aggiorna il journal per indicare che l'azione è stata completata con successo.
+Se si verifica un crash prima che una modifica sia completata, *al riavvio successivo il FS consulta il journal*, che *se trova operazioni registrate ma non confermate procede a completarle*.
+Il Journaling favorisce l'*integrità dei dati* riducendo la possibilità di corruzione del FS ed il *recupero rapido* dopo un crash.
+pdf12sl69
