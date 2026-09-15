@@ -212,4 +212,48 @@ Il **Journaling** *registra anticipatamente le operazioni da eseguire in un log 
 3. **Fase di conferma**: Una volta completata l'operazione, il FS aggiorna il journal per indicare che l'azione è stata completata con successo.
 Se si verifica un crash prima che una modifica sia completata, *al riavvio successivo il FS consulta il journal*, che *se trova operazioni registrate ma non confermate procede a completarle*.
 Il Journaling favorisce l'*integrità dei dati* riducendo la possibilità di corruzione del FS ed il *recupero rapido* dopo un crash.
-pdf12sl69
+
+**Eliminazione sicura**:
+- La cancellazione standard non rimuove fisicamente i dati dal disco, lasciandoli vulnerabili agli attacchi
+- L'*eliminazione sicura* richiede la distruzione fisica o la sovrascrittura approfondita dei dati
+**Dati Residui**:
+- È consigliato inserire sequenze di 0 e numeri casuali, ripetendo l'operazione almeno 3-7 volte.
+**Cifratura del disco**:
+- La soluzione più efficace per proteggere i dati è cifrare l'intero disco con algoritmi robusti come l'AES
+
+## File System Virtuali
+**Virtual File System** (*VFS*):
+- Struttura che *permette di integrare vari file system in una struttura unificata*
+- Si basa su un livello di codice comune che interagisce con i FS reali sottostanti
+**Interfacce**:
+- *Interfaccia superiore*: Interagisce con le chiamate di sistema POSIX dei processi utente
+- *Interfaccia inferiore*: Composta da decine di funzioni che il VFS può inviare ai FS sottostanti
+### Funzionamento e struttura
+**Superblock**: Descrittore di alto livello di un file system specifico nel VFS:
+- Informazioni cruciali sul FS, come tipo o dimensione
+- Usato per identificare ed interagire con il FS sottostante
+**V-Node**: Astrazione di un file individuale nel VFS, rappresentandone un nodo
+- *Contiene metadati* come permessi, proprietà, dimensione del file e riferimenti ai dati effettivi su disco
+- Sfruttati per *fornire un accesso indipendente dal file system ai file*, permettendo operazioni di lettura, scrittura e gestione dei file.
+**Directory**: Struttura che gestisce organizzazione e mapping dei file e delle sottodirectory nei VFS
+- *Permette al VFS di mappare i nomi dei file ai loro V-Node* corrispondenti
+- Facilita navigazione ed accesso ai file, consentendo agli utenti e ai processi di interagire con un'interfaccia unificata
+
+**Registrazione FS con il VFS**: I File System forniscono un vettore di funzioni richieste dal VFS al momento della registrazione
+- Permette al VFS di sapere come eseguire specifiche operazioni su un FS registrato
+**Montaggio e uso del FS**: Al *montaggio* il FS fornisce informazioni al VFS (es. superblock)
+**Gestione delle richieste I/O**: Tracciamento dei file aperti nei processi utente tramite V-Node e tabelle dei descrittori dei file.
+- Chiamate come `read` seguono il puntatore della tabella dei descrittori ai V-Node e alle funzioni del FS reale
+**Aggiunta di nuovi FS**: Progettisti devono fornire funzioni che rispettino l'interfaccia VFS, che rende possibile la gestione trasparente di FS eterogenei.
+
+## Raid
+
+ **Redundant Array of Inexpensive/Indipendent Disk**, tecnologia che migliora le prestazioni e l'affidabilità della memoria non volatile attraverso la gestione di dischi multipli. Ne esistono di diversi tipi:
+- *RAID di Livello 0* : Utilizza lo *striping*, ossia i dati sono divisi in segmenti più piccoli (stripes) e distribuite simultaneamente su più dischi del RAID. Ciò migliora le prestazioni in quanto i dati possono essere letti e scritti in parallelo. Tuttavia Raid 0 non fornisce alcuna tolleranza agli errori o ridondanza, per cui se un singolo disco fallisce tutti i dati vengono persi. 
+- *RAID di livello 1* : Utilizza il *mirroring*, per cui i dati vengono duplicati su due dischi separati. Ciò offre ridondanza, che migliora la tolleranza agli errori poiché i dati sono mantenuti su copie identiche in entrambi i dischi. Se un disco fallisce, l'altro può continuare senza perdita di dati. 
+- *RAID di livello 2* : Utilizza la *codifica di Hamming* per la correzione degli errori e lo *striping* a livello di bit. Questo tipo di RAID è molto complesso e richiede un gran numero di dischi, motivo per cui è raramente implementato in pratica.
+- *RAID di livello 3* : Utilizza lo *striping a livello di byte* con un *singolo disco dedicato alla parità*, che consente di ricostruire i dati in caso di guasto di un disco. Le unità devono essere sincronizzate poiché i dati sono distribuiti a livello di byte. 
+- *RAID di livello 4* : Simile al RAID 3 ma utilizza lo *striping a livello di blocco* anziché a livello di byte. Un singolo disco è dedicato alla parità, il che può creare un collo di bottiglia durante le operazioni di scrittura poiché tutte le operazioni di parità devono essere scritte su un unico disco. 
+- *RAID di livello 5* : Distribuisce i dati e la parità tra tutti i dischi, eliminando il collo di bottiglia presente in RAID 4. E' una dei livelli RAID più utilizzati poiché offre un buon equilibrio tra prestazioni, capacità e tolleranza agli errori. 
+- *RAID di livello 6* : Simile a RAID 5 ma utilizza *due blocchi di parità distribuiti*, il che consente di tollerare la perdita di due dischi anziché uno solo. Questo migliora ulteriormente l'affidabilità, ma a costo di una maggiore complessità e overhead. 
+- *RAID 0+1* : Combina lo *striping* di RAID 0 con il *mirroring* di RAID 1. Questo offre sia le prestazioni di RAID 0 che la ridondanza di RAID 1, ma richiede un minimo di quattro dischi.
