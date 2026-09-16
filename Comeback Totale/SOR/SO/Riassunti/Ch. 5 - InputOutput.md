@@ -40,4 +40,50 @@ Il SO è cruciale per gestire efficientemente trasferimento dati e controllo dei
 - Necessità di disabilitare selettivamente la cache per alcuni indirizzi
 	- Bisogna identificare con precisione quali pagine sono dedicate ai dispositivi HW
 	- Gli accessi a queste aree non saranno ottimizzati dalla cache, quindi possono essere più lenti
-pdf13sl23
+**Gestione indirizzi e architetture del bus**:
+- *Necessità* per tutti i moduli di memoria e dispositivi I/O di *esaminare ogni riferimento alla memoria*
+- *Problemi con bus della memoria separati in architetture*
+**SOLUZIONI**:
+- *Tentativi sequenziali* (*Memory-First*): Richiesta indirizzata prima alla memoria principale, se fallisce viene inoltrata ad altri bus. È semplice da implementare ma comporta maggiore latenza per accessi I/O
+- *Bus Snooping* ("spia"): Un dispositivo sul bus monitora gli indirizzi e reindirizza quelli destinati ai dispositivi I/O. Porta ad accessi I/O più rapidi ma c'è una maggiore complessità HW.
+**Prestazioni della Memoria**
+- Il bus della memoria è ottimizzato per la velocità, ma deve gestire sia gli accessi alla memoria principale che ai dispositivi.
+- Tentativi sequenziali preservano le prestazioni della memoria
+
+Il Memory-Mapped I/O richiede un bilanciamento tra *prestazioni* e *complessità*.
+
+## Ibrido
+Combina **Port-Mapped I/O** e **Memory-Mapped I/O**:
+- *PMIO*: Utilizza un indirizzamento separato per i dispositivi di I/O con istruzioni dedicate (`IN` e `OUT`)
+- *MMIO*: I registri dei dispositivi sono mappati nello spazio di memoria, accessibili con normali istruzioni di memoria (`Load` e `Store`).
+Funzionamento:
+1. *Configurazione tramite PMIO*:
+	- Configurazione iniziale di dispositivi HW
+	- Usa lo spazio di indirizzi delle porte e istruzioni `IN/OUT`
+2. *Accesso ai dati tramite MMIO*:
+	- Operazioni ad alta velocità come trasferimenti di dati
+	- Dispositivi mappati nello spazio di memoria principale
+
+**Vantaggi**:
+1. *Flessibilità*: PMIO per configrazioni semplici e MMIO per  operazioni rapide
+2. *Ottimizzazione*: MMIO più veloce per trasferimenti dati continui
+3. *Compatibilità Legacy*: PMIO consente di supportare dischi vecchi
+4. *Separazione logica*: Configurazione ed utilizzo gestiti in modi distinti.
+
+**Svantaggi**:
+1. *Aumento della complessità*: Due modalità = logiche HW e SW complesse
+2. *Overhead iniziale*: PMIO può rallentare la configurazione rispetto ad un approccio puramente MMIO
+3. *Limitazioni architetturali*: Alcune CPU moderne non supportano PMIO
+
+# DMA
+**Direct Memory Access**, permette alla CPU di scambiare dati con i controller dei dispositivi bypassando il trasferimento manuale bype per byte, riducendo lo spreco di tempo della CPU e migliorando l'efficienza del trasferimento dati.
+*Configurazione HW*: Presenza di un controller DMA in molti sistemi, che può gestire trasferimenti a più dispositivi. Spesso situato sulla scheda madre.
+*Registri e funzionamento del controller*: Contiene registri per indirizzi di memoria, conteggi di byte e controlli.
+- *Senza DMA* il controller del disco legge i dati e li memorizza nel suo buffer. Dopo aver controllato gli errori, provoca un interrupt ed il SO copia i dati in memoria
+- *Con DMA* :
+1. La CPU imposta il controller DMA e invia un comando al controller del disco 
+2. Il controller DMA richiede la lettura al controller del disco
+3. Scrittura in memoria da parte del controller del disco
+4. Conferma del controller del disco al controller DMA
+Ripetizione dei passi 2-4 fino al completamento del trasferimento. DMA invia un interrupt alla CPU al termine del trasferimento.
+pdf13sl35
