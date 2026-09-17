@@ -86,4 +86,51 @@ Funzionamento:
 3. Scrittura in memoria da parte del controller del disco
 4. Conferma del controller del disco al controller DMA
 Ripetizione dei passi 2-4 fino al completamento del trasferimento. DMA invia un interrupt alla CPU al termine del trasferimento.
-pdf13sl35
+**Variabilità**: *Range* da semplici (un trasferimento alla volta) a complessi (trasferimenti multipli simultanei)
+**Controller DMA complessi**: 
+- Multipli set di registri per canali diversi
+- Ogni canale programmabile per trasferimenti specifici
+- Capacità di gestire contemporaneamente diversi controller di dispositivi
+**Gestione dei trasferimenti multipli**:
+- Selezione del dispositivo successivo post-trasferimento tramite algoritmi prioritari o Round-Robin
+- Linee di conferma separate per ogni canale DMA sul bus
+**Modalità DMA ed interazioni con il bus**:
+- *Cycle Stealing*: DMA trasferisce una parola per volta rubando cicli alla CPU. Rallenta leggermente la CPU ma permette la condivisione del bus
+- *Burst Mode*: DMA ottiene il controllo completo del bus, eseguendo trasferimenti multipli. Efficiente ma può bloccare la CPU per periodi prolungati
+- *Fly-By Mode*: DMA traferisce dati direttamente alla memoria principale senza intermediari, riducendo l'uso del bus ma richiedendo cicli extra per ogni trasferimento
+DMA usa tipicamente **indirizzi fisici**, richiedendo conversione dal SO
+# Interrupt
+Un dispositivo I/O invia un segnale di interrupt alla CPU tramite la linea del bus assegnata. Se non ci sono altri interrupt in corso, il controller gestisce immediatamente l'interrupt, altrimenti il dispositivo è momentaneamente ignorato
+## Gestione degli interrupt
+Il controller assegna un numero alle linee degli indirizzi per specificare il dispositivo che richiede attenzione ed invia un segnale di interruzione alla CPU.
+- La CPU interrompe il suo attuale compito
+- Il *vettore degli interrupt* punta all'inizio della procedura di servizio degli interrupt corrispondente
+- La procedura di servizio *conferma l'interrupt* scrivendo su una porta del controller degli interrupt (per evitare race condition)
+- Il Program Counter deve essere salvato per riavviare i processi interrotti
+- Le informazioni prelevate dai dispositivi I/O sono *salvate nei registri interni o sullo stack* 
+Le moderne CPU utilizzano architetture pipeline e superscalari, complicando la gestione degli interrupt.
+- **Interrupt precisi**: Il sistema può determinare con esattezza quali istruzioni sono state completate al momento dell'interrupt e quali no
+- **Interrupt imprecisi**: Diverse istruzioni vicino al Program Counter si trovano in vari stati di completamento al momento dell'interrupt, rendendo incerto lo stato esatto del programma
+Gli interrupt imprecisi rendono il SO più complesso e lento, ed il salvataggio di molte informazioni rallenta il processo di interrupt e ripristino.
+# Principi del SW di I/O
+Obiettivi:
+- **Indipendenza dal dispositivo**: Permesso di accesso a diversi dispositivi senza specificare il tipo di dispositivo in anticipo
+- **Denominazione Uniforme**: I nomi di file o dispositivi dovrebbero essere stringhe o numeri indipendenti dal dispositivo
+- **Gestione degli errori**: Da gestire *il più vicino possibile all'HW*.
+- **Trasferimenti sincroni/asincroni**: La maggior parte dell'I/O fisico è asincrono, ma molti programmi lo trattano come sincrono (bloccante). 
+- **Buffering**: L'utilizzo può influenzare le presiazioni, ma deve esere garantito
+- **Dispositivi Condivisibili vs Dedicati**: Dischi o SSD sono spesso condivisi da più utenti, mentre altri come stampanti o scanner sono tipicamente dedicati.
+## I/O Programmato
+La CPU gestisce direttamente tutto il processo di trasferimento dati.
+- Il SO copia il buffer in uno spazio del kernel, inviando i caratteri alla stampante uno alla volta, aspettando che questa sia pronta per ogni carattere.
+**Polling o Busy Waiting**: Il SO entra in un ciclo di polling, controllando il registro di stato della stampante ed inviando un carattere alla volta
+L'I/O Programmato è *efficace quando il tempo di elaborazione* di un carattere è *breve*, quindi adatto a sistemi embedded dovela CPU non ha altre attività significative
+## I/O Guidato dagli Interrupt
+Utilizza gli interrupt per segnalare alla CPU quando un dispositivo è pronto per l'elaborazione successiva, riducendo il polling e consentendo alla CPU di eseguire altre operazioni.
+
+## I/O Con DMA
+Il DMA riduce il numero di interrupt, passando da uno per ogni carattere ad uno per buffer. Libera la CPU per eseguire altre attività durante il trasferimento I/O.
+
+# Struttura del SW di I/O
+**Organizzazione a 4 livelli**, in cui ogni livello ha funzioni ed interfacce specifiche
+pdf14sl16
