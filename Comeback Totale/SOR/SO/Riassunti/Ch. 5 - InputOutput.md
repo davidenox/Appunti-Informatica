@@ -133,4 +133,44 @@ Il DMA riduce il numero di interrupt, passando da uno per ogni carattere ad uno 
 
 # Struttura del SW di I/O
 **Organizzazione a 4 livelli**, in cui ogni livello ha funzioni ed interfacce specifiche
-pdf14sl16
+## Gestore degli interrupt
+- **Blocco dei driver**: Durante I/O, i driver vengono bloccati fino al completamento dell'I/O e all'arrivo dell'interrupt
+- **Gestione complessa**: Diversi passaggi, inclusi salvataggio dei registri, impostazione di contesti e conferme al controller degli interrupt
+- **Impatto sulla Memoria Virtuale**: Passaggi aggiuntivi per gestire MMU, TLB e cache, aumentando la complessità e i cicli macchina necessari
+- **Elaborazione non banale**: Numerosi cicli di CPU e varia notevolmente a seconda del sistema e dell'architettura
+1. **Salvataggio dei registri**
+2. **Impostazione del contesto**
+3. **Impostazione dello Stack**
+4. **Conferma al controller degli interrupt**
+5. **Copia dei registri nella tavola dei processi**
+6. **Esecuzione dell'ISR**
+7. **Scelta del processo successivo**
+8. **Impostazione del contesto per il nuovo processo**
+9. **Caricamento dei nuovi registri del processo**
+10. **Avvio del nuovo processo**
+## Driver di dispositivi
+Gestiscono i dispositivi I/O attraverso registri di dispositivi specifici
+- *Diversi per ciascun tipo* di dispositivo, al più gestiscono un tipo o una classe di dispositivi correlati
+- *Ogni dispositivo necessita di un codice specifico*, noto come driver di dispositivo, solitamente fornito dal produttore
+Di solito fanno parte del kernel del SO per poter accedere ai registri del controller del dispositivo.
+- **Interfaccia con il SO**: Permette l'installazione di codice scritto da terze parti (driver)
+- **Classificazione dei driver**: In categorie come dispositivi:
+	- *A blocchi*
+	- *A caratterii*
+- **Caricamento dei driver**: Dinamicamente
+## SW del SO indipendente dal dispositivo
+**Funge da intermediario** tra i driver specifici dei dispositivi e le applicazioni utente. Mira a **semplificare l'interazione con i dispositivi** HW offrendo un'interfaccia uniforme e gestendo operazioni comuni.
+Funzioni chiave:
+1. **Interfaccia uniforme dei Driver dei dispositivi**
+2. **Buffering**
+3. **Segnalazione degli errori**
+4. **Allocazione e rilascio dei dispositivi dedicati**
+5. **Dimensione dei blocchi indipendente dal dispositivo**
+### Uniformità nell'interfaccia
+**Uniformità**:
+- Evita la necessità di modificare il SO ogni volta che viene introdotto un nuovo dispositivo
+- Importante per mantenere la consistenza e l'efficienza del sistema
+- Risolve il problema di *Interfacce diverse* vs *Interfacce standard*
+
+## SW per I/O a livello utente
+ Include librerie di I/O che semplificano le chiamate di sistema per operazioni di I/O come lettura e scrittura, migliorando l'interfaccia tra le applicazioni utente e il SO. È progettato per gestire in modo efficiente l'interazione tra le applicazioni utente e l'hardware del sistema, fornendo un'interfaccia standardizzata e gestendo le operazioni di I/O in modo da massimizzare le prestazioni complessive del sistema informatico.
