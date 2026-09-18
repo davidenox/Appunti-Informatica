@@ -8,19 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c68001b7294284f6",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 5.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "CAPITOLO 5"
-            }
-          },
-          {
-            "id": "77792b565faa5530",
+            "id": "4dcf5c56e94a459e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,8 +21,7 @@
               "title": "Ch. 5 - InputOutput"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,23 +191,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "77792b565faa5530",
+  "active": "4dcf5c56e94a459e",
   "lastOpenFiles": [
-    "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 5.pdf",
+    "Comeback Totale/SOR/SO/Riassunti/new/Ch. 5 - InputOutput.pdf",
+    "Comeback Totale/SOR/SO/Riassunti/Ch. 4 - File System.md",
+    "Comeback Totale/SOR/SO/Riassunti/new/Ch. 4 - File System.pdf",
+    "Comeback Totale/SOR/SO/Riassunti/Ch. 3 - Virtual Memory.md",
+    "Comeback Totale/SOR/SO/Riassunti/new/Ch. 3 - Virtual Memory.pdf",
+    "Comeback Totale/SOR/SO/Riassunti/Ch. 2 - Processi.md",
+    "Comeback Totale/SOR/SO/Riassunti/new/Ch. 2 - Processi.pdf",
+    "Comeback Totale/SOR/SO/Riassunti/Ch. 1 - Intro.md",
+    "Comeback Totale/SOR/SO/Riassunti/new/Ch. 1 - Intro.pdf",
+    "Comeback Totale/SOR/SO/Riassunti/new",
     "Comeback Totale/SOR/SO/Riassunti/Ch. 5 - InputOutput.md",
+    "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 5.pdf",
     "Senza nome 1.md",
     "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 4.pdf",
-    "Comeback Totale/SOR/SO/Riassunti/Ch. 4 - File System.md",
     "Senza nome.md",
     "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 3.pdf",
     "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 2.pdf",
     "Comeback Totale/SOR/SO/Riassunti/old/CAPITOLO 1.pdf",
-    "Comeback Totale/SOR/SO/Riassunti/Ch. 3 - Virtual Memory.md",
-    "Comeback Totale/SOR/SO/Riassunti/Ch. 2 - Processi.md",
-    "Comeback Totale/SOR/SO/Riassunti/Ch. 1 - Intro.md",
     "allegati/Ch. 2 - Processi-1787931007697.png",
     "Comeback Totale/SOR/SO/Riassunti/Bonus 1 - Programmazione C.md",
-    "Comeback Totale/SOR/SO/Riassunti/old",
     "allegati/Ch. 1 - Intro-1787236317910.png",
     "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
     "Comeback Totale/SOR/R/Lezioni/Utility.md",
@@ -241,11 +233,7 @@
     "allegati/Ch. 5 - Collegamento-1782292949958.png",
     "allegati/Ch. 5 - Collegamento-1782292291227.png",
     "Comeback Totale/SOR/SO/Lezioni/L3 - Concetti base dei SO.md",
-    "Comeback Totale/SOR/R/img/gif dv2",
-    "Comeback Totale/SOR/R/img/gif dv",
-    "Comeback Totale/SOR/R/img/gif DHCP",
     "u.md",
-    "allegati",
     "Comeback Totale/SOR/SO/Lezioni/L2 - Dalle architetture ai SO.md",
     "Comeback Totale/SOR/SO/Lezioni/Index.md",
     "README.md",
