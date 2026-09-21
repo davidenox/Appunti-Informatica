@@ -35,3 +35,7 @@ Appunti di:
 N.B. L'ordine degli appunti non rispecchia l'indicizzazione dei libri o dei testi da cui sono tratti, ma l'ordine cronologico in cui sono stati studiati.
  
  :)
+
+## Risorsa complementare
+
+Per approfondire lo sviluppo web con TypeScript, può essere utile anche [The Concise TypeScript Book in italiano](https://gibbok.github.io/typescript-book/it-it/), una guida gratuita e open source.
