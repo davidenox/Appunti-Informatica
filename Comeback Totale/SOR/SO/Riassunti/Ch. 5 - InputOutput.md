@@ -3,7 +3,7 @@ Categorie di **dispositivi I/O**:
 - *Dispositivi a caratteri*: Flusso di caratteri senza struttura a blocchi, non indirizzabili e senza opzioni di ricerca, come stampanti o interfacce di rete.
 - *Altre categorie*: Modelli utili per astrarre alcuni SW di I/O nel SO.
 Il FS gestisce i dispositivi a blocchi astratti mentre i SW di livello inferiore gestiscono le specificità dei dispositivi.
-I dispositivi I/O sono composti da una **parte meccanica** (il dispositivo stesso) ed una parte **elettronica** (*controller*, che viene spesso integrato nella scheda madre o come scheda aggiuntiva su slot PCIe, e che può spesso gestire più dispositivi identici). Il compito del contriller è quello di *convertire il flusso seriale in blocchi di byte, correggere errori, trasferire in memoria principale*.
+I dispositivi I/O sono composti da una **parte meccanica** (il dispositivo stesso) ed una parte **elettronica** (*controller*, che viene spesso integrato nella scheda madre o come scheda aggiuntiva su slot PCIe, e che può spesso gestire più dispositivi identici). Il compito del controller è quello di *convertire il flusso seriale in blocchi di byte, correggere errori, trasferire in memoria principale*.
 Senza il controller il programmatore dovrebbe gestire dettagli complessi. Il controller è inizializzato con parametri essenziali, che gli permettono di gestire autonomamente questi dettagli.
 
 **Porte**:

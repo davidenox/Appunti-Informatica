@@ -18,7 +18,8 @@ Per la gestione del sovraccarico di memoria si utilizzano
 Per tenere traccia dell'utilizzo della memoria esistono due metodi principali:
 - **Bitmap** che tiene traccia di quali blocchi vengono allocati;
 - **Liste concatenate** che tengono traccia della memoria non allocata.
-Vengono spesso scelte le liste concatenate, poiché trovare i blocchi non allocati richiede una scansione lenta. Nella pratica viene spesso usata *una doppia linked list*, che rendei più facile gestire lo spazio libero. 
+
+Vengono spesso scelte le liste concatenate, poiché trovare i blocchi non allocati richiede una scansione lenta. Nella pratica viene spesso usata una *doppia linked list*, che rende più facile gestire lo spazio libero. 
 Schemi di allocazione della memoria:
 - *First Fit*: Seleziona il primo spazio disponibile (più semplice)
 - *Next Fit*: Seleziona il successivo spazio disponibile (più lento)
@@ -46,11 +47,13 @@ Le voci di una Page Table sono composti da:
 - *Bit protezione* - specifica i tipi di accesso consentiti (rwx).
 - *Bit supervisor* - stabilisce se la pagina è accessibile solo al SO o anche ai programmi utente
 - *Bit Modificato e Riferimento* - registrano l'uso della pagina.
+
 Per velocizzare la paginazione bisogna decidere dove memorizzarla:
 - Nei *Registri HW* : Un registro HW per ogni pagina virtuale, caricato all'avvio del processo. È semplice e non richiede accessi alla memoria durante la mappatura, ma risulta costoso con tabelle di pagine grandi.
 - Nella *Memoria Principale*: Tabella interamente in RAM, con un registro che punta al suo inizio. Facile da cambiare ad ogni cambio di contesto, e richiede solo il caricamento di un registro, ma richiede anche accessi frequenti alla memoria rendendo la mappatura più lenta.
+
 Si introduce il **Translation Lookaside Buffer** (*TLB*), un dispositivo HW che mappa gli indirizzi virtuali in fisici senza passare per la tabella delle pagine, riducendo gli accessi alla memoria durante la paginazione.
-Il TLB è strutturato come un piccolo numero di voci, ciascuna con numero di pagina virtiaòe, bit modificato, codice di protezione e frame fisico. Alla richiesta di un indirizzo virtuale l'MMU consulta prima il TLB. Se trovato e valido (*TLB HIT*) il frame è prelevato direttamente dal TLB, altrimenti (*TLB MISS*) avviene una ricerca normale nella tabella delle pagine e la voce trovata ne rimpiazza un'altra nel TLB.
+Il TLB è strutturato come un piccolo numero di voci, ciascuna con numero di pagina virtuale, bit modificato, codice di protezione e frame fisico. Alla richiesta di un indirizzo virtuale l'MMU consulta prima il TLB. Se trovato e valido (*TLB HIT*) il frame è prelevato direttamente dal TLB, altrimenti (*TLB MISS*) avviene una ricerca normale nella tabella delle pagine e la voce trovata ne rimpiazza un'altra nel TLB.
 I TLB MISS sono *comuni* a causa del numero limitato di voci nel TLB, al quale però non avrebbe senzo aumentare la dimensione. 
 - *Soft Miss*: La pagina è in memoria ma non nel TLB.
 - *Hard Miss*: La pagina non è neanche in memoria e richiede l'accesso al disco
@@ -107,6 +110,7 @@ Ricordiamo: Bit della tabella dele pagine per gli algoritmi di sostituzione:
 Per **Working Set** si intende l'*insieme delle pagine attualmente usate da un processo*. Rappresenta le pagine a cui un processo fa riferimento durante la fase dell'esecuzione.
 - **Demand Paging**: Le pagine sono caricate in memoria "a richiesta", solo quando necessario.
 - Inizialmente si verificano molti PageFault, finché non vengono caricate tutte le pagine necessarie.
+
 Se il Working Set di un processo è *completamente in memoria* si verificano pochissimi Page Fault, ma se il WS è *più grande* della memoria disponibile, si verificheranno troppi PF (fenomeno noto come *thrashing*).
 **Working Set Model**: 
 - Molti SO cercano di *tracciare il WS* di ogni processo e di mantenerlo in memoria per ridurre i PF;
@@ -153,6 +157,7 @@ La paginazione è un processo complesso che richiede una comprensione approfondi
 **Allocazione globale**:
 - Distribuzione dinamica della memoria tra i processi;
 - Più efficace per adattarsi alle esigenze variabili dei processi, ma richiede una gestione più complessa.
+
 Vantaggi:
 - *Adattabilità degli algoritmi globali* per aumentare l'efficienza quando la dimensione del WS varia nel tempo
 - *Limite degli algoritmi locali* come il thrashing o la memoria sprecata
@@ -161,9 +166,11 @@ Vantaggi:
 ### Strategie
 **Allocazione Equa**:
 - Distribuzione uniforme dei frame tra processi, non tiene conto delle diverse esigenze di memoria tra processi di dimensioni varie.
+
 **Allocazione Proporzionale**:
 - Assegnazione di frame in base alla dimensione del processo
 - Rispecchia meglio le necessità di memoria evitando allocazioni inadeguate
+
 **Importanza del Limite Minimo di Pagine**:
 - Assicurare che *ogni processo abbia abbastanza pagine* per eseguire le operazioni fondamentali
 - *MA prevenire situazioni* in cui i processi con istruzioni che *attraversano i limiti* delle pagine non possano eseguire.
@@ -171,7 +178,8 @@ Vantaggi:
 ## Dinamica di allocazione e algoritmo PFF
 **Gestione dinamica dei frame**:
 - Si inizia con un'allocazione proporzionale alla dimensione del processo
-- Aggiornamento dinamico dell'alliocazione in base all'evoluzione delle esigenze durante l'esecuzione
+- Aggiornamento dinamico dell'allocazione in base all'evoluzione delle esigenze durante l'esecuzione
+
 **Page Fault Frequency**:
 - *Monitoraggio della frequenza di PF per regolare l'allocazione di memoria di un processo*
 - Aumenta i frame se PF troppi frequenti, diminuisce se sono rari.
@@ -183,7 +191,7 @@ Anche con il miglior algoritmo, il *thrashing* può purtroppo sempre verificarsi
 
 **Tecniche di riduzione di memoria**
 - *Scheduling a due livelli*:
-	- Alcuni processi sono in memoria non volatile e solo una parte è scedulata attivamente
+	- Alcuni processi sono in memoria non volatile e solo una parte è schedulata attivamente
 	- Aiuta a gestire meglio il carico di memoria
 	- Utile per ridurre occupazione di memoria di processi in background in sistemi interattivi
 - *Gestione della multiprogrammazione*:
@@ -192,6 +200,7 @@ Anche con il miglior algoritmo, il *thrashing* può purtroppo sempre verificarsi
 ### Dimensione delle pagine
 I SO possono selezionare la dimensione delle pagine.
 - *Pagine piccole*: Riducono la frammentazione interna e l'utilizzo della memoria, ma richiedono tabelle delle pagine più grandi e possono aumentare tempo e spazio necessari per trasferimento dati e gestione di memoria.
+
 La **dimensione ottimale** viene determinata equilibrando frammentazione interna e overhead della tabella delle pagine. Alcuni SO utilizzano pagine di diverse dimensioni per parti diverse del sistema.
 *Parametri considerati*:
 - Dimensione media del processo: $s$ byte
@@ -227,6 +236,7 @@ Tuttavia, la *rimozione di un processo* dalla memoria può causare numerosi PF i
 - *Trovare la pagina necessaria* nella memoria non volatile;
 - *Scegliere un frame disponibile* eventualmente rimuovendo pagine vecchie;
 - *Caricare la pagina nel frame* e ripristinare il contatore del programma.
+
 **Chiusura del processo**:
 - *Rilasciare la tabella delle pagine*, le pagine in memoria e lo spazio su disco;
 - *Gestire le pagine condivise con altri processo*, rilasciandole solo dopo l'ultimo utilizzo.

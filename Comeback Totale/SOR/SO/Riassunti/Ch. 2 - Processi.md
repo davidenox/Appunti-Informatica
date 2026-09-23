@@ -41,7 +41,7 @@ Meccanismi utilizzati nei SO e nelle applicazioni per gestire eventi asincroni
 **Signal**:
 	Evento di origine HW, generati da un processo o dal SO, come gestore di segnali personalizzati o comportamenti predefiniti. Viene utilizzato per la gestione di condizioni eccezionali nelle applicazioni, e viene inviato asincronicamente ma può essere gestito in modo sincrono.
 
-Per deallocare la CPU a fagore dello scheduler ci si affida alla ISR, che *permette allo scheduler di ottenere periodicamente il controllo*. Si utilizza un *interrupt vector* associato a ciascun dispositivo I/O e linea di interrupt e contenente l'indirizzo iniziale di una procedura interna fornita dal SO.
+Per deallocare la CPU a favore dello scheduler ci si affida alla ISR, che *permette allo scheduler di ottenere periodicamente il controllo*. Si utilizza un *interrupt vector* associato a ciascun dispositivo I/O e linea di interrupt e contenente l'indirizzo iniziale di una procedura interna fornita dal SO.
 
 Al verificarsi di un interrupt:
 1. L'HW impila il Program Counter e le altre info del processo;
@@ -71,7 +71,7 @@ I thread **risiedono nello stesso spazio degli indirizzi di un singolo processo*
 
 | **Thread call**        | **Description**                                                |
 | ---------------------- | -------------------------------------------------------------- |
-| `pthread_cteate`       | Crea un nuovo thread                                           |
+| `pthread_create`       | Crea un nuovo thread                                           |
 | `pthread_exit`         | Termina il thread chiamante                                    |
 | `pthread_join`         | Attende "l'uscita" di uno specifico thread                     |
 | `pthread_yield`        | Rilascia la CPU per consentire l'esecuzione di un altro thread |
@@ -99,6 +99,7 @@ Requisiti per evitare le race conditions:
 Alice e Bob vogliono usare un'unica postazione computer in un ufficio. Ma ci sono delle regole:
 1. Solo una persona può usare il computer alla volta.
 2. Se entrambi vogliono usarlo contemporaneamente, devono decidere chi va per primo.
+
 *Idea dell’algoritmo*
 - Alice o Bob devono segnalare il loro interesse a usare il computer.
 - Se l'altro non è interessato, la persona interessata può usarlo subito.
@@ -124,10 +125,11 @@ Le operazioni dei semafori sono *atomiche*, perciò indivisibili, per evitare co
 #### Mutex e pthreads
 **Mutex** - Versione esplicita e semplificata dei semafori, usata per gestire la mutua esclusione di risorse o codice condiviso, quando *non bisogna contare* accessi o altri fenomeni. Due stati:
 - `locked` - bloccato;
-- `unlocked` - sbloccato
+- `unlocked` - sbloccato;
 E due procedure principali:
 - `mutex_lock`;
 - `mutex_unlock`;
+
 Quando un thread vuole accedere ad una regione critica, chiama `mutex_lock`: se il mutex è sbloccato allora il thread può entrare, altrimenti attende. Al termine dell'accesso, il thread chiama `mutex_unlock` per liberare la risorsa.
 **Non c'è busy waiting**, se un thread non può acquisire un lock, chiama `thread_yield` per cedere la CPU ad un altro thread.
 
@@ -162,11 +164,13 @@ Per evitare che processi/thread competano contemporaneamente per la CPU, si intr
 I processi si possono dividere in:
 - *CPU-bound*: Burst di CPU lunghi, attese di I/O infrequenti;
 - *I/O-bound*: Burst di CPU brevi, attese di I/O frequenti.
+
 Lo scheduling varia in base al contesto, ed opera in determinate situazioni:
 - *Creazione di un nuovo processo*
 - *Uscita di un processo*
 - *Blocco del processo*
 - *Interrupt I/O*
+
 A loro volta, gli algoritmi di scheduling si suddividono in:
 - *Non Preemptive* (senza prelazione) - Il processo viene eseguito fino al blocco o al rilascio volontario;
 - *Preemptive* (con prelazione) - Il processo viene eseguito per un tempo fissato per poi essere sospeso
@@ -206,10 +210,12 @@ In generale, **tutti i sistemi** devono garantire:
 - Algoritmo di scheduling *senza prelazione*. I processi vengono assegnati alla CPU *nell'ordine di arrivo*. Si tratta di una singola coda di processi `ready`. Il primo job viene eseguito senza interruzioni, mentre quelli bloccati tornano in fondo alla coda.
 - *Vantaggi*: Facile da capire e da programmare, equo in base all'ordine di arrivo.
 - *Svantaggi*: Prestazioni non ottimali, si tramuta in tempi di attesa molto lunghi per processi I/O-bound se presenti anche processi CPU-bound.
+
 **Shortest Job First**(*SJF*):
 - Algoritmo di scheduling *senza prelazione*. Richiede che i tempi di esecuzione siano noti in anticipo, ed esegue per primo il job più breve.
 - *Vantaggi*: Ottimale per minimizzare il tempo di TurnAround medio quando i job sono tutti disponibili contemporaneamente.
 - *Svantaggi*: Non ottimale se i job arrivano in tempi diversi.
+
 **Shortest Remaining Time Next**(*SRTN*):
 - Variante di SJF *con prelazione*. Seleziona sempre il processo più corto per completare, ma ad ogni nuovo job confronta il suo tempo di esecuzione con quello del job attivo, e se più corto cambia contesto.
 - *Vantaggi*: Assicura che i job brevi ricevano un servizio rapido.
@@ -217,27 +223,32 @@ In generale, **tutti i sistemi** devono garantire:
 
 ### Scheduling nei Sistemi Interattivi
 **Round-Robin Scheduling**(*RR*):
-- Ogni processo riceve un "*quanto*" di tempo per l'esecuzione. Se non ha terminato al termine del quanto, torna nella lista come `ready`, mentre se termina prima del quanto allora la CPU è oggetto di prelazione per un altro processo. Per implementarlo basta mantenere una lista dei processi eseguibili, e quando un processo esaurisce il quanto viene soistato alla fine della lista.
+- Ogni processo riceve un "*quanto*" di tempo per l'esecuzione. Se non ha terminato al termine del quanto, torna nella lista come `ready`, mentre se termina prima del quanto allora la CPU è oggetto di prelazione per un altro processo. Per implementarlo basta mantenere una lista dei processi eseguibili, e quando un processo esaurisce il quanto viene spostato alla fine della lista.
 -  La scelta della durata del quanto influisce sull'efficienza, quindi è opportuno scegliere un quanto ragionevole per bilanciare efficienza e reattività.
+
 **Priority Scheduling**:
-- Ogni processo ha una priorità assegnata, e la CPU esegue il processo con la priorità più alta tra quelli pronti. La priorità di un processo attualmente in esecuzione può diminuire col tempo, e se scende sotto quella del processo successivo, avviene un*cambio*.
+- Ogni processo ha una priorità assegnata, e la CPU esegue il processo con la priorità più alta tra quelli pronti. La priorità di un processo attualmente in esecuzione può diminuire col tempo, e se scende sotto quella del processo successivo, avviene un *cambio*.
 - *Priorità statica vs dinamica*:
 	- *Statica*: gerarchie assolute o basate sui costi nel data center;
 	- *Dinamica*: gerarchie basate sull'utilizzo della CPU o sul comportamento I/O.
 - Avviene un *raggruppamemto in classi* di priorità: 4 priorità, finché ci sono processi in priorità 4, si utilizza RR, poi si scende.
+
 **Shortest Process Next + Aging**(*SPN+*):
 - La sfida è identificare quale tra i processi eseguibili sia effettivamente il più breve.
 - *Aging* - Stima basata sul comportamento passato:
 	- Stima del tempo per un comando $T_0$;
 	- Stima aggiornata dopo nuova esecuzione $T_1$ diventa $\alpha T_0+(1-\alpha)T_1$.
 	- La scelta di $\alpha$ determina il peso delle esecuzioni precedenti nella nuova stima.
+
 **Guaranteed Scheduling**:
 - Il *concetto principale* è fare promesse concrete sugli standard di prestazione e rispettarle. Se ci sono $n$ processi, ciascuno ottiene $\sim\frac{1}{n}$ della potenza della CPU.
 - Il sistema tiene traccia di quanta CPU ha ricevuto ogni processo dal momento della sua creazione, e calcola quanto tempo di CPU ogni processo dovrebbe avere. Poi valuta il rapporto tra tempo consumato e dovuto, ed esegue il processo con il rapporto più basso finché non supera il suo concorrente più vicino.
+
 **Lottery Scheduling**:
 - Assegnazione di biglietti della lotteria ai processi per la risorsa del sistema (es. tempo CPU), ed estrazione casuale di un biglietto per decidere quale processo ottiene la risorsa.
 - Avviene una *distribuzione delle probabilità* per la quale vengono assegnati biglietti extra per i processi più importanti, che gli garantiscono maggiore probabilità di vincere.
 - Il sistema è reattivo e permette la *cooperazione tra processi* nello scambiarsi biglietti (utile per processi cooperanti).
+
 **Fair-Share Scheduling**:
 - Premessa: ogni processo è oggetto di scheduling individualmente.
 - L'approccio fair-share considera le proprietà di ogni processo prima di sceglierlo. Ogni utente riceve una frazione predefinita di CPU, e lo scheduler si assicura che ogni utente riceva la sua frazione, indipendentemente dal numero di processi posseduti.
@@ -250,6 +261,6 @@ I processi sono prevedibili, brevi e noti in anticipo, e possono essere *periodi
 La **condizione di schedulabilità** è regolata dalla capacità della CPU di gestire la somma totale del tempo richiesto dai processi.
 Se ci sono $m$ eventi periodici, l'evento $i$ avviene con un periodi $P_i$ e richiede $C_i$ secondi di tempo della CPU per gestire ogni evento, allora il carico può essere gestito solo se::$$\sum_{i=1}^{m}\frac{C_i}{P_i}\le1$$
 ## Scheduling di thread
-Lo scheduling differisce in base al tipo di thread, se sono a livello **utente** o **kernel**. 
+Lo scheduling differisce in base al tipo di thread, se sono a livello **utente** o **kernel**
 - *Thread a livello utente*: il kernel vede solo il processo ed ignora l'esistenza dei singoli thread che lo compongono (quindi il kernel gestisce solo i processi e non i thread individuali). Esiste uno *scheduler interno* ad ogni processo che decide quale thread eseguire, senza interruzioni del clock del sistema. Poiché il kernel assegna la CPU all'intero processo e non ai singoli thread, un thread a livello utente può consumare tutto il quanto di tempo assegnato al processo. Lo scambio tra thread avviene inoltre molto rapidamente con poche istruzioni, poiché non si deve passare per ogni thread alla modalità kernel.
 - *Thread a livello kernel* : il kernel seleziona il thread specifico per l'esecuzione. Se eccede il quanto, allora viene sospeso. In questo caso il passaggio tra thread richiede un *cambio di contesto* e quindi comporta un passaggio da modalità utente a kernel, ergo tempi di maggiori di esecuzione. Se un thread kernel richiede I/O non sospende stavolta tutto il processo, ma solo il thread in questione.

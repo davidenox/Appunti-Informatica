@@ -44,7 +44,7 @@ Es. Aprire un file e scrivere:
 ```C
 int fd = open("foo.txt", O_WRONLY | O_CREAT | O_TRUNC);
 char buf[] = "Hi there!";
-write(fd, bufm strlen(buf));
+write(fd, buf, strlen(buf));
 close(fd);
 ```
 Dove:
@@ -58,6 +58,7 @@ Per **directory** si intendono file che tengono traccia degli altri file all'int
 - I file sono organizzati in gruppi correlati mediante directory ramificate
 - Struttura ad albero per separare ed organizzare logicamente i file
 - Ogni utente può avere una directory principale privata in ambienti condivisi
+
  Nasce la necessità quindi di definire i percorsi dei file, tramite i **nomi**:
  - *Nomi di percorso Assoluti*: partono dalla directory principali e conducono al file
  - *Nomi di percorso Relativi*: partono dalla directory di lavoro dell'utente
@@ -72,7 +73,7 @@ Per **directory** si intendono file che tengono traccia degli altri file all'int
 
 **Gestione dei link ed accessi avanzati**
 - `link` crea un 'hard link' collegando un file esistente ad un nuovo percorso, condividendone l'i-node
-- `unlink` rimuove una vocec di directory, cancellando il file se è l'unico link
+- `unlink` rimuove una voce di directory, cancellando il file se è l'unico link
 *Link simbolici*: Variante degli 'hard link', possono puntare a file locati su dischi o computer diversi.
 
 # Implementazione del File System
@@ -96,12 +97,15 @@ Inoltre, supporta i dischi moderni con GPT:
 - Supporta dischi fino a $8ZiB$ e consente un numero illimitato di partizioni
 - Include *backup della tabella delle partizioni* per maggiore sicurezza
 - Utilizza un controllo di integrità (CRC) per prevenire corruzione dei dati.
+
 **EFI System Partition**: Partizione speciale sui dischi GPT
 - Archivia i file di avvio come bootloader, driver e utility di diagnostica
 - Essenziale per avviare il SO.
+
 **Secure Boot**: Funzionalità UEFI per impedire l'avvio di SW non autorizzato.
 - Controlla le *firme digitali* di bootloader, driver e SO
 - Avvia solo SW autorizzato e firmato, bloccando malware e rootkit.
+
 Protegge contro attacchi all'avvio, mantiene l'integrità del SO ed aumenta la sicurezza per utenti domestici e aziende.
 
 ## File nei File System
@@ -109,12 +113,14 @@ L'*obiettivo principale* è la gestione dell'associazione tra i file ed i blocch
 **Allocazione contigua**:
 - File memorizzati come *sequenze contigue di blocchi sul disco*.
 - Semplice da implementare e dispone di un'alta efficienza di lettura.
+
 Tuttavia, col passare del tempo *i dischi si frammentano* a causa della rimozione di file, e ne sussegue un *problema di allocazione di nuovi file in spazi liberi* frammentati.
 
 **Allocazione a liste concatenate**:
 - File organizzati come *liste concatenate di blocchi su disco*, in cui *ogni blocco contiene una parte di dati ed un puntatore al blocco successivo*.
 - Efficiente utilizzo di tutti i blocchi disponibili sul disco, e minima frammentazione interna.
 - Ogni voce di directory traccia solo l'indirizzo del primo blocco di un file
+
 L'accesso casuale ai dati però è estremamente lento, ed ogni blocco ha una dimensione effettiva ridotta a causa dello spazio occupato dal puntatore.
 
 **Allocazione a liste concatenate con FAT**
@@ -127,8 +133,9 @@ Si tratta di una struttura dati che contiene tutte le informazioni su un file, e
 
 ## Directory Nei File System
 Le directory mappano i nomi ASCII dei file sulle informazioni necessarie per localizzare i dati su disco. I *metodi di allocazione* variano a seconda del SO, includendo indirizzi di blocchi contigui, il primo blocco nelle liste concatenate, o i numeri degli I-Node. Nei moderni sistemi i nomi dei file possono variare con caratteri da 1 a 255. Per gestire questa variabilità, si utilizzano due modi per strutturare le directory:
-- *Struttura con Header di lunghezza fissa* : ogni voce nella directory inizia con un header di lunghezza fissa e termina con il nome del file. Ogni file termina con un carattere speciale, che viene utilizzato anche più volte per "riempire" (padding) il nome affinché questo abbia un numero intero di parole (32 o 63 bit in base al sistema). Questo sistema può tuttavia portare a una Frammentazione Interna, in quanto quando un file viene cancellato il suo spazio potrebbe non poter essere utilizzato in modo efficiente se il nuovo file da inserire non ha la stessa lunghezza (si possono creare piccoli "buchi" inutilizzabili). 
+- *Struttura con Header di lunghezza fissa* : ogni voce nella directory inizia con un header di lunghezza fissa e termina con il nome del file. Ogni file termina con un carattere speciale, che viene utilizzato anche più volte per "riempire" (padding) il nome affinché questo abbia un numero intero di parole (32 o 64 bit in base al sistema). Questo sistema può tuttavia portare a una Frammentazione Interna, in quanto quando un file viene cancellato il suo spazio potrebbe non poter essere utilizzato in modo efficiente se il nuovo file da inserire non ha la stessa lunghezza (si possono creare piccoli "buchi" inutilizzabili). 
 - *Utilizzo di Heap per i nomi dei file* : i nomi dei file sono salvati in un heap, struttura dati che permette di memorizzarli in modo dinamico e non sequenziale. Quando si aggiunge il nome di un file, lo spazio viene allocato dinamicamente dall'heap, e non è necessario riempire i nomi dei file fino a raggiungere lunghezza fissa.
+
 In aggiunta ai due metodi principali, per implementare la ricerca dei file all'interno di una directory, è stato introdotto l'uso delle *tabelle hash*. Quando si cerca un file, il suo nome viene *trasformato* attraverso una funzione di hashing in un indice numerico che punta ad una posizione specifica della tabella. Se più file dovessero generare lo stesso indice (collisione) allora viene utilizzata una lista concatenata per collegare i file che hanno generato lo stesso hash. Un'ulteriore ottimizzazione è l'uso di **caching** per memorizzare i risultati delle ricerche precedenti.
 
 ### File condivisi e Link
@@ -142,6 +149,7 @@ Un file con hard link viene *rimosso solo quando non ci sono più riferimenti ad
 I file sono generalmente memorizzati sul disco, e per farlo si usa:
 - Allocazione contigua
 - Suddivisione in blocchi non contigui.
+
 L'allocazione contigua richiede spostamenti di file se le loro dimensioni aumentano, mentre i blocchi non contigui spezzettano i file in blocchi di dimensioni fisse, consentendo una maggiore flessibilità ed un migliore utilizzo dello spazio su disco.
 La scelta della dimensione dei blocchi dipende da una considerazione dell'ottimo per bilanciare il tempo di trasferimento e l'efficienza dello spazio:
 - Blocchi più grandi consentono di trasferire più dati in una singola operazione di lettura o scrittura, tuttavia portano ad uno spreco di spazio se i file sono piccoli. 
@@ -165,9 +173,11 @@ Progettando dei FS con diverse ottimizzazioni per migliorare le prestazioni, con
 - *Buffer Cache*: Utilizzata per ridurre i tempi di accesso al disco, mantenendo i blocchi più usati in memoria
 - *Allocazione dei blocchi e Read Ahead*: Tecniche di allocazione intelligente per le quali blocchi vicini allocati nello stesso cilindro per minimizzare il movimento del braccio del disco, e bitmap in memoria per allocare blocchi adiacenti e migliorare l'efficienza di scrittura sequenziale.
 - *Deframmentazione*: Riorganizza i file per essere contigui e raggruppa lo spazio libero.
+
 Concetti di *Caching*:
 - *Buffer Cache*: Memorizza i blocchi del disco in RAM per ridurre gli accessi al disco.
 - *Page Cache*: Memorizza le pagine del FS virtuale in RAM prima di passare al driver del dispositivo.
+
 Per implementare la cache si utilizzano algoritmi che controllano se un blocco necessario è già presente in cache prima di effettuare un accesso al disco. L'algoritmo *LRU* (Least Recently Used) è il più comune, ma può causare problemi di incoerenza se non gestito correttamente, specialmente con blocchi critici come gli I-node. Alcuni SO dividono i blocchi in categorie basate sull'importanza per evitare problemi d'incosistenza.
 - *Compressione*: il processo di ridurre la dimensione di un file eliminando ridondanze o utilizzando metodi di codifica efficienti. Questo permette di risparmiare spazio di archiviazione e di velocizzare il trasferimento dei dati.
 - *Deduplicazione*: utile per eliminare i duplicati di file, può essere eseguita in tempo reale o come processo post-elaborazione, a seconda delle esigenze del sistema e dell'hardware disponibile. 
@@ -178,6 +188,7 @@ Per implementare la cache si utilizzano algoritmi che controllano se un blocco n
 Fondamentale per garantire la protezione dei dati. Le principali minacce includono *guasti del disco*, *interruzioni di energia*, *bug del software*, *errori umani*, *perdite o furti* e *malware*. Nasce la necessità del **backup**, per salvaguardare informazioni importanti come documenti o database.
 - *Backup completo*: Copia totale dei dati;
 - *Backup incrementale*: Copia dei soli file modificati dall'ultimo backup completo, riducendo tempo e spazio richiesti.
+
 Tipologie di BackUp:
 - *Backup Fisico*: Copia sequenziale di tutti i blocchi del disco
 - *Backup Logico*: Selezione e copia di soli file e directory specifici, ignorando file di sistema e blocchi danneggiati.
@@ -194,7 +205,7 @@ Manca tuttavia di flessibilità, poiché è difficile saltare directory specific
 ## Backup Logico
 Funzionamento:
 - Parte dalle *directory specifiche* ed effettua il backup di tutti i file e directory modificati a partire da una data specifica.
-	- Ideale per backup incrementaki
+	- Ideale per backup incrementali
 - *Recupero facilitato*: Consente il ripristino semplice di file o directory specifici grazie alla precisa identificazione dei dati salvati
 - *Algo di backup in UNIX*:
 	- Include file e directory modificati e tutte le directory lungo il percorso verso i file modificati.
@@ -216,8 +227,10 @@ Il Journaling favorisce l'*integrità dei dati* riducendo la possibilità di cor
 **Eliminazione sicura**:
 - La cancellazione standard non rimuove fisicamente i dati dal disco, lasciandoli vulnerabili agli attacchi
 - L'*eliminazione sicura* richiede la distruzione fisica o la sovrascrittura approfondita dei dati
+
 **Dati Residui**:
 - È consigliato inserire sequenze di 0 e numeri casuali, ripetendo l'operazione almeno 3-7 volte.
+
 **Cifratura del disco**:
 - La soluzione più efficace per proteggere i dati è cifrare l'intero disco con algoritmi robusti come l'AES
 
