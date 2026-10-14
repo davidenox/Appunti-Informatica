@@ -1,7 +1,7 @@
 # Internet
 Inteso come miliardi di *dispositivi* di calcolo connessi: 
 - **host**: sistema periferico (end system);
-- Ospitano ed eseguono le applicazioni di rete nella periferica di internet (**edge**).
+- Ospitano ed eseguono le applicazioni di rete nella periferica di internet (*edge*).
 *Commutatori di pacchetto* (packet switches): inoltrano i pacchetti:
 - router, switch, ...
 *Reti di collegamenti* (commutation link):
@@ -10,9 +10,9 @@ Inteso come miliardi di *dispositivi* di calcolo connessi:
 *Reti*:
 - Collezione di host, commutatori di pacchetto, collegamenti: gestiti da un'organizzazione.
 
-I *protocolli* sono ovunque, e controllano l'invio e la ricezione dei messaggi (es. HTTP, streaming video, Skype, TCP, IP, WiFo, 4/5G, Ethernet).
+I *protocolli* sono ovunque e controllano l'invio e la ricezione dei messaggi (es. HTTP, streaming video, Skype, TCP, IP, WiFo, 4/5G, Ethernet).
 **Standard di internet**:
-- *RCF*: Request ofr Comments;
+- *RCF*: Request for Comments;
 - *IETF*: Internet Engineering Task Force.
 
 ## Servizi

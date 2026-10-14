@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Comeback Totale/SOR/SO/Riassunti/Ch. 5 - InputOutput.md",
+                "file": "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ch. 5 - InputOutput"
+              "title": "Ch. 1 - Intro"
             }
           }
         ]
@@ -172,7 +172,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -193,10 +193,12 @@
   },
   "active": "4dcf5c56e94a459e",
   "lastOpenFiles": [
+    "Comeback Totale/SOR/R/Lezioni/Utility.md",
+    "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
+    "Comeback Totale/SOR/SO/Riassunti/Ch. 5 - InputOutput.md",
     "Comeback Totale/SOR/SO/Riassunti/Ch. 4 - File System.md",
     "Comeback Totale/SOR/SO/Riassunti/Ch. 3 - Virtual Memory.md",
     "Comeback Totale/SOR/SO/Riassunti/Ch. 2 - Processi.md",
-    "Comeback Totale/SOR/SO/Riassunti/Ch. 5 - InputOutput.md",
     "Comeback Totale/SOR/SO/Riassunti/new/Ch. 5 - InputOutput.pdf",
     "Comeback Totale/SOR/SO/Riassunti/new/Ch. 4 - File System.pdf",
     "Comeback Totale/SOR/SO/Riassunti/new/Ch. 3 - Virtual Memory.pdf",
@@ -214,12 +216,10 @@
     "Comeback Totale/SOR/SO/Riassunti/Bonus 1 - Programmazione C.md",
     "allegati/Ch. 1 - Intro-1787236317910.png",
     "Comeback Totale/SOR/R/Lezioni/Ch. 3 - Trasporto.md",
-    "Comeback Totale/SOR/R/Lezioni/Utility.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 5 - Collegamento.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 4.2 - Rete p. Controllo.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 4.1 - Rete p. Dati.md",
     "Comeback Totale/SOR/R/Lezioni/Ch. 2 - Applicazione.md",
-    "Comeback Totale/SOR/R/Lezioni/Ch. 1 - Intro.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/1. Introduzione.md",
     "Secondo Anno/Sistemi Operativi e Reti/Modulo 2 - Reti/Riassunti/4. Livello di rete - Dati.md",
     "Comeback Totale/SOR/R/Esercizi/Esercizi Ch. 1.md",
