@@ -10,7 +10,7 @@ Inteso come miliardi di *dispositivi* di calcolo connessi:
 *Reti*:
 - Collezione di host, commutatori di pacchetto, collegamenti: gestiti da un'organizzazione.
 
-I *protocolli* sono ovunque e controllano l'invio e la ricezione dei messaggi (es. HTTP, streaming video, Skype, TCP, IP, WiFo, 4/5G, Ethernet).
+I *protocolli* sono ovunque e controllano l'invio e la ricezione dei messaggi (es. HTTP, streaming video, Skype, TCP, IP, WiFi, 4/5G, Ethernet).
 **Standard di internet**:
 - *RCF*: Request for Comments;
 - *IETF*: Internet Engineering Task Force.
